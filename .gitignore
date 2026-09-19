@@ -1,0 +1,15 @@
+# Local environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Large model and training artifacts must live in registered artifact paths.
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Local scratch space is never a research result.
+scratch/
+tmp/

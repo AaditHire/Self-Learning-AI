@@ -1,0 +1,50 @@
+# Hypotheses
+
+All thresholds remain unset until their protocol is pre-registered. No result
+may be used to retroactively choose its own success threshold.
+
+## H-001 — Retrieval ceiling
+
+On a frozen unseen GOCO benchmark, a frozen base model supplied with trusted
+GOCO documentation will achieve a higher hidden-test pass@1 than the same base
+model without documentation.
+
+## H-002 — Persistent adaptation
+
+After controlled adapter training, the adapted model without documentation will
+outperform the frozen base model without documentation on unseen GOCO tasks.
+
+## H-003 — Generalization beyond memorization
+
+An adapted model's improvement will persist on structural and compositional
+holdouts that do not share near-identical templates with training examples.
+
+## H-004 — Sequential forgetting
+
+Naive sequential LoRA will produce measurable degradation on at least one
+previous GOCO capability after learning later capabilities.
+
+## H-005 — Replay mitigation
+
+At least one pre-registered replay ratio will reduce average or worst-task
+forgetting relative to naive sequential LoRA while meeting the new-capability
+learning threshold.
+
+## H-006 — Stability gating
+
+A pre-registered promotion gate will reject at least some candidate adapters
+that improve the new capability but exceed an allowed old-capability or general
+behavior regression.
+
+## H-007 — Documentation dependence
+
+As verified parameter learning accumulates, the marginal benefit of trusted
+documentation at evaluation time will decrease for learned capabilities without
+falling to zero for genuinely unlearned concepts.
+
+## H-008 — Later self-directed learning (future)
+
+Given calibrated evaluation signals, the system can identify capability gaps
+better than a fixed or random curriculum and improve them using quarantined,
+externally verified experience. This hypothesis is not authorized for current
+implementation.

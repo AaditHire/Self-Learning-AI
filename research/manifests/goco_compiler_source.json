@@ -1,0 +1,26 @@
+{
+  "artifact_type": "upstream_compiler_source_plan",
+  "extraction_status": "planned_not_executed",
+  "inspected_at": "2026-09-19",
+  "license_path_at_source": "goco-compiler/LICENSE",
+  "source_commit": "6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e",
+  "source_paths": [
+    "goco-compiler/src/main/java",
+    "goco-compiler/LICENSE",
+    "goco-compiler/README.md",
+    "goco-compiler/tests/tests.json"
+  ],
+  "source_remote": "https://github.com/Thryza-creators/GOCO.git",
+  "source_tree_ids": {
+    "goco-compiler": "f51973617cc3da8c78de88c668d8de6959575d6d",
+    "goco-compiler/src/main/java": "415215892c7127df899d59b3bceb99dc8357484b",
+    "goco-compiler/tests/tests.json": "7ad40be14848fa3d03ac02f36066e737000bc401"
+  },
+  "source_worktree_policy": "READ_ONLY",
+  "upstream_test_manifest": {
+    "expected_failure_cases": 43,
+    "expected_success_cases": 45,
+    "sha256": "066938769b639163c0b05c5038d5637106a5bb8849ba06da8f7ac7a500f3ad5f",
+    "total_cases": 88
+  }
+}
