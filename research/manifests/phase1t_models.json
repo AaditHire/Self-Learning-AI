@@ -1,0 +1,34 @@
+{
+  "artifact_type": "phase1t_frozen_model_manifest",
+  "created_at": "2026-09-20",
+  "gradient_policy": "all parameters require_grad=False; model.eval(); torch.inference_mode(); no training or weight writes",
+  "primary": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "parameter_count": 3085938688,
+    "quantization": "bitsandbytes NF4 4-bit; double quantization; FP16 compute",
+    "weight_files": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    }
+  },
+  "secondary_configuration_matched_check": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+    "local_path": ".models/Qwen2.5-Coder-1.5B-Instruct-2e1fd397",
+    "parameter_count": 1543714304,
+    "quantization": "bitsandbytes NF4 4-bit; double quantization; FP16 compute",
+    "weight_files": {
+      "model.safetensors": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8"
+    },
+    "decision_isolation": "Candidate C only; cannot change the preregistered 3B progression decision"
+  },
+  "software": {
+    "python": "3.13.0",
+    "torch": "2.9.0+cu130",
+    "transformers": "4.57.1",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0"
+  }
+}

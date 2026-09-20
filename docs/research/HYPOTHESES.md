@@ -56,3 +56,11 @@ better on recognition and local completion than on structured modification and
 full synthesis, which would localize the primary limitation to composition
 rather than basic syntax recognition. Phase 1S is diagnostic: any observed
 pattern does not authorize parameter adaptation.
+
+## H-010 — 3B documentation-assisted confirmation
+
+On a fresh 64-task synthesis benchmark, the exact frozen 3B NF4 configuration
+with Candidate C will achieve at least 25% hidden-test pass@1, improve by at
+least 15 percentage points over its paired no-documentation condition, and pass
+tasks in at least four semantic families. This is an engineering suitability
+gate, not a causal parameter-count or universal scaling hypothesis.

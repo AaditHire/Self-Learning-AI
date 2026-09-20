@@ -2,8 +2,8 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1S complete; independent review required
-Phase decision: NO-GO for 1.5B training; recommend separate backbone selection
+Current phase: Phase 1T preregistered; frozen 3B confirmation pending
+Phase decision: no parameter adaptation authorized
 
 ## Repository boundaries
 
@@ -163,6 +163,20 @@ for 1.5B. Therefore 1.5B is a NO-GO as the primary backbone, and the only
 recommended next step is a separately preregistered backbone-selection phase.
 No training or backbone change is authorized.
 
+## Phase 1T preregistration
+
+Phase 1T starts from commit
+`56940731b14053677123521093615c73c24604c6`. It uses 64 completely new
+full-synthesis tasks, eight in each semantic family, with 329 hidden cases and
+at least five per task. All reference programs passed. Phase 1/1R/1S tasks are
+consumed and the legacy final-paper holdout remains sealed.
+
+The exact 3B NF4 configuration runs paired no-docs and fixed Candidate C
+conditions. A secondary 1.5B NF4 Candidate C check is frozen but cannot alter
+the 3B gate. The config SHA-256 is
+`4cf19e35b4b937eeba6a89cbf2340e49c83f147b37dddffbb9ebde0946e020d5`.
+No Phase 1T model inference existed at freeze time.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -176,13 +190,13 @@ No training or backbone change is authorized.
 - Completed Phase 1 record: `docs/research/stages/PHASE_01.md`
 - Frozen Phase 1 protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
 - Frozen Phase 1S protocol: `research/protocols/PHASE_1S_FROZEN_DIAGNOSTIC.md`
+- Frozen Phase 1T protocol: `research/protocols/PHASE_1T_FROZEN_CONFIRMATION.md`
 - Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Stop for independent review. Do not start QLoRA, LoRA, Phase 2, backbone
-selection, or any parameter update without a new explicit authorization. Phase
-1, Phase 1R, and Phase 1S tasks are consumed. Do not open the legacy sealed
-holdout.
+Complete only the preregistered frozen Phase 1T evaluations. Do not start
+QLoRA, LoRA, Phase 2, or any parameter update. Phase 1, Phase 1R, and Phase 1S
+tasks are consumed. Do not open the legacy sealed holdout.

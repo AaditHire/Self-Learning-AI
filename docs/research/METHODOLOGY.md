@@ -163,3 +163,18 @@ Phase 1S activated case B for the 1.5B backbone and case C for the frozen 3B
 comparator. The result is a NO-GO for 1.5B as the primary backbone and a
 recommendation for a new, separately preregistered backbone-selection phase;
 it is not a training authorization.
+
+## Phase 1T independent confirmation methodology
+
+Phase 1T uses a fresh 64-task full-synthesis suite, balanced eight per family,
+with at least five hidden executable cases per task. Paired 3B NF4 conditions
+use no GOCO documents versus the exact frozen Candidate C context. All other
+inputs, generation settings, normalization, and scoring are identical. The
+primary paired effect is Candidate-C minus no-docs hidden pass@1 with a paired
+task bootstrap interval; family span and failure transitions are mandatory.
+
+A secondary 1.5B NF4 Candidate C run reduces the Phase 1S precision mismatch
+but is barred from changing the primary 3B gate. Recognition, completion,
+modification, and synthesis are treated as different generation regimes rather
+than a proven monotonic difficulty ladder. No Phase 1T result authorizes
+training automatically.

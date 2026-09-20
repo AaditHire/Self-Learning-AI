@@ -1,0 +1,1091 @@
+[
+  {
+    "task_id": "P1T-EV01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b and print 3*a - 2*b.",
+    "algorithmic_structure": "weighted_linear_combination",
+    "control_flow": "straight_line",
+    "template_lineage": "phase1t-ev01-weighted_linear_combination-v1",
+    "structural_signature": "import>split>convert2>affine>display",
+    "constructs": [
+      "split",
+      "arithmetic"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read price|quantity and print their product after applying a 20 percent discount.",
+    "algorithmic_structure": "two_stage_discount",
+    "control_flow": "straight_line",
+    "template_lineage": "phase1t-ev02-two_stage_discount-v1",
+    "structural_signature": "import>split>convert2>multiply>scale>display",
+    "constructs": [
+      "intermediate_values",
+      "arithmetic"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read hours|minutes and print the total number of minutes.",
+    "algorithmic_structure": "unit_conversion_accumulation",
+    "control_flow": "straight_line_compound_assignment",
+    "template_lineage": "phase1t-ev03-unit_conversion_accumulation-v1",
+    "structural_signature": "import>split>convert2>compound_add>display",
+    "constructs": [
+      "compound_assignment",
+      "conversion"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read one NUMBER x and print x*x + 2*x + 1.",
+    "algorithmic_structure": "quadratic_polynomial",
+    "control_flow": "straight_line",
+    "template_lineage": "phase1t-ev04-quadratic_polynomial-v1",
+    "structural_signature": "input_number>two_intermediates>sum_expression>display",
+    "constructs": [
+      "numeric_input",
+      "polynomial"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read radius|height and print cylinder volume using math.PI * radius * radius * height.",
+    "algorithmic_structure": "cylinder_volume",
+    "control_flow": "straight_line_library_constant",
+    "template_lineage": "phase1t-ev05-cylinder_volume-v1",
+    "structural_signature": "import2>split>convert2>pi_product>display",
+    "constructs": [
+      "math_constant",
+      "multi_factor"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read one NUMBER x and print its distance from 10 using math.ABS.",
+    "algorithmic_structure": "absolute_distance",
+    "control_flow": "straight_line_library_call",
+    "template_lineage": "phase1t-ev06-absolute_distance-v1",
+    "structural_signature": "import_math>input>subtract>abs>display",
+    "constructs": [
+      "math_abs",
+      "intermediate"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c and print their arithmetic mean.",
+    "algorithmic_structure": "three_value_mean",
+    "control_flow": "straight_line_nested_conversion",
+    "template_lineage": "phase1t-ev07-three_value_mean-v1",
+    "structural_signature": "import>split>three_inline_converts>divide>display",
+    "constructs": [
+      "nested_calls",
+      "division"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-EV08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "confirmation",
+    "prompt": "Read value|lower|upper and print value clamped to the inclusive bounds using math.CLAMP.",
+    "algorithmic_structure": "bounded_clamp",
+    "control_flow": "straight_line_ternary_library",
+    "template_lineage": "phase1t-ev08-bounded_clamp-v1",
+    "structural_signature": "import2>split>convert3>clamp>display",
+    "constructs": [
+      "math_clamp",
+      "three_inputs"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read one NUMBER and print NEGATIVE, ZERO, or POSITIVE.",
+    "algorithmic_structure": "sign_classification",
+    "control_flow": "if_elseif_else",
+    "template_lineage": "phase1t-cd01-sign_classification-v1",
+    "structural_signature": "input>if_lt>elseif_eq>else>display_labels",
+    "constructs": [
+      "three_way_branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read one NUMBER score and print A for score >= 90, B for >= 75, C for >= 60, otherwise F.",
+    "algorithmic_structure": "ordered_grade_thresholds",
+    "control_flow": "if_two_elseif_else",
+    "template_lineage": "phase1t-cd02-ordered_grade_thresholds-v1",
+    "structural_signature": "input>descending_threshold_chain4>display",
+    "constructs": [
+      "multiway_branch",
+      "boundary_order"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c as side lengths. Print VALID if all are positive and each pair sums to more than the third; otherwise INVALID.",
+    "algorithmic_structure": "triangle_validity",
+    "control_flow": "compound_if_else",
+    "template_lineage": "phase1t-cd03-triangle_validity-v1",
+    "structural_signature": "split3>six_conjunct_condition>binary_label",
+    "constructs": [
+      "logic_and",
+      "triangle_inequality"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read a whole NUMBER year and print LEAP when divisible by 400 or divisible by 4 but not 100; otherwise COMMON.",
+    "algorithmic_structure": "gregorian_leap_rule",
+    "control_flow": "logic_assignment_then_if",
+    "template_lineage": "phase1t-cd04-gregorian_leap_rule-v1",
+    "structural_signature": "input>boolean_or_nested_and>if_logic>display",
+    "constructs": [
+      "logic_variable",
+      "modulo"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c and print the middle value (the median).",
+    "algorithmic_structure": "median_of_three",
+    "control_flow": "compound_if_elseif_else",
+    "template_lineage": "phase1t-cd05-median_of_three-v1",
+    "structural_signature": "split3>range_membership_a>range_membership_b>else",
+    "constructs": [
+      "logic_or",
+      "ordered_selection"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read one whole NUMBER n. Print POSITIVE EVEN, POSITIVE ODD, or NONPOSITIVE.",
+    "algorithmic_structure": "positive_parity",
+    "control_flow": "nested_if_else",
+    "template_lineage": "phase1t-cd06-positive_parity-v1",
+    "structural_signature": "input>outer_nonpositive>inner_parity>labels",
+    "constructs": [
+      "nested_branch",
+      "modulo"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read one NUMBER temperature and print COLD below 10, MILD from 10 through 25 inclusive, and HOT above 25.",
+    "algorithmic_structure": "bounded_temperature_band",
+    "control_flow": "if_elseif_else",
+    "template_lineage": "phase1t-cd07-bounded_temperature_band-v1",
+    "structural_signature": "input>lower_cut>upper_cut>display3",
+    "constructs": [
+      "interval_classification"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CD08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "confirmation",
+    "prompt": "Read x|y. Print AXIS if either is zero, Q1 if both are positive, Q3 if both are negative, otherwise MIXED.",
+    "algorithmic_structure": "coordinate_region",
+    "control_flow": "if_two_elseif_else",
+    "template_lineage": "phase1t-cd08-coordinate_region-v1",
+    "structural_signature": "split2>axis_or>q1_and>q3_and>else",
+    "constructs": [
+      "logic_composition",
+      "four_way_branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a nonnegative whole NUMBER n and print n factorial using a loop.",
+    "algorithmic_structure": "iterative_factorial",
+    "control_flow": "for_loop_product",
+    "template_lineage": "phase1t-lp01-iterative_factorial-v1",
+    "structural_signature": "input>init_one>for_from2>multiply>display",
+    "constructs": [
+      "loop",
+      "product_accumulator"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a nonnegative whole NUMBER n and print the sum of odd squares from 1 through n.",
+    "algorithmic_structure": "odd_square_series",
+    "control_flow": "for_loop_step_two",
+    "template_lineage": "phase1t-lp02-odd_square_series-v1",
+    "structural_signature": "input>init_zero>for_odd_step2>square_sum>display",
+    "constructs": [
+      "loop",
+      "nonunit_step"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read limit|divisor and print how many whole numbers from 1 through limit are divisible by divisor.",
+    "algorithmic_structure": "divisibility_count",
+    "control_flow": "for_loop_conditional_counter",
+    "template_lineage": "phase1t-lp03-divisibility_count-v1",
+    "structural_signature": "split2>counter>for>mod_if>increment>display",
+    "constructs": [
+      "loop",
+      "conditional_count"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print the first five multiples of n, one per line.",
+    "algorithmic_structure": "fixed_multiplication_table",
+    "control_flow": "for_loop_direct_output",
+    "template_lineage": "phase1t-lp04-fixed_multiplication_table-v1",
+    "structural_signature": "input>fixed_bound_for>product_display_each",
+    "constructs": [
+      "loop",
+      "multi_line_output"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print its decimal digit count.",
+    "algorithmic_structure": "decimal_digit_count",
+    "control_flow": "while_loop_destructive_division",
+    "template_lineage": "phase1t-lp05-decimal_digit_count-v1",
+    "structural_signature": "import_math>input>while_ge1>increment>floor_divide>display",
+    "constructs": [
+      "while_loop",
+      "floor"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a nonnegative whole NUMBER n and print every even number from 0 through n, one per line.",
+    "algorithmic_structure": "even_sequence",
+    "control_flow": "for_loop_step_two_output",
+    "template_lineage": "phase1t-lp06-even_sequence-v1",
+    "structural_signature": "input>for_zero_step2>display_each",
+    "constructs": [
+      "loop",
+      "sequence_output"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-LP07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read rows|columns and print rows lines, each containing columns asterisks. Use loops.",
+    "algorithmic_structure": "rectangle_pattern",
+    "control_flow": "nested_for_loops",
+    "template_lineage": "phase1t-lp07-rectangle_pattern-v1",
+    "structural_signature": "split2>outer_rows>inner_columns>display_star>newline",
+    "constructs": [
+      "nested_loops",
+      "pattern_output"
+    ],
+    "required_regex": [
+      "LOOP[\\s\\S]*LOOP"
+    ]
+  },
+  {
+    "task_id": "P1T-LP08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print the sum 1 - 2 + 3 - 4 and so on through n.",
+    "algorithmic_structure": "alternating_sum",
+    "control_flow": "for_loop_if_else_accumulator",
+    "template_lineage": "phase1t-lp08-alternating_sum-v1",
+    "structural_signature": "input>for>parity_branch>plus_minus_accumulate>display",
+    "constructs": [
+      "loop",
+      "branching_accumulator"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define cube(NUMBER x) returning x*x*x. Read one NUMBER and print cube(input).",
+    "algorithmic_structure": "cube_function",
+    "control_flow": "pure_function_then_call",
+    "template_lineage": "phase1t-fn01-cube_function-v1",
+    "structural_signature": "function1>return_product3>input>call>display",
+    "constructs": [
+      "function",
+      "numeric_return"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define clampValue(NUMBER value, NUMBER low, NUMBER high) using IF statements, returning the bounded value. Read value|low|high and print the result.",
+    "algorithmic_structure": "manual_clamp_function",
+    "control_flow": "function_early_returns",
+    "template_lineage": "phase1t-fn02-manual_clamp_function-v1",
+    "structural_signature": "import>function3>if_return>if_return>return>split>nested_call",
+    "constructs": [
+      "function",
+      "early_return"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define isMultiple(NUMBER value, NUMBER divisor) returning LOGIC. Read value|divisor and print YES when true, otherwise NO.",
+    "algorithmic_structure": "divisibility_predicate",
+    "control_flow": "logic_function_then_branch",
+    "template_lineage": "phase1t-fn03-divisibility_predicate-v1",
+    "structural_signature": "import>function2_logic>split>call_assign>if_else",
+    "constructs": [
+      "function",
+      "logic_return"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define absoluteDifference(NUMBER a, NUMBER b) without math.ABS, returning the nonnegative difference. Read a|b and print it.",
+    "algorithmic_structure": "absolute_difference_function",
+    "control_flow": "function_branch_return",
+    "template_lineage": "phase1t-fn04-absolute_difference_function-v1",
+    "structural_signature": "import>function2>if_return>fallback_return>split>convert>call",
+    "constructs": [
+      "function",
+      "branching_return"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define triangleSum(NUMBER n) that uses a loop and returns the sum from 1 through n. Read n and print the result.",
+    "algorithmic_structure": "summation_function",
+    "control_flow": "function_with_for_loop",
+    "template_lineage": "phase1t-fn05-summation_function-v1",
+    "structural_signature": "function>local_accumulator>for>return>input>call",
+    "constructs": [
+      "function",
+      "loop_inside"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define minTwo(NUMBER a, NUMBER b), then define minThree(NUMBER a, NUMBER b, NUMBER c) using minTwo. Read a|b|c and print minThree.",
+    "algorithmic_structure": "composed_minimum_functions",
+    "control_flow": "ordered_function_composition",
+    "template_lineage": "phase1t-fn06-composed_minimum_functions-v1",
+    "structural_signature": "import>function2_branch>function3_nested_calls>split>call",
+    "constructs": [
+      "two_functions",
+      "nested_call"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define parityLabel(NUMBER n) returning SENTENCE EVEN or ODD. Read a whole number and print the returned label.",
+    "algorithmic_structure": "parity_label_function",
+    "control_flow": "sentence_function_branch",
+    "template_lineage": "phase1t-fn07-parity_label_function-v1",
+    "structural_signature": "function_number_to_sentence>if_return>return>input>call_assign>display",
+    "constructs": [
+      "function",
+      "sentence_return"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-FN08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "confirmation",
+    "prompt": "Define applyRate(NUMBER amount, NUMBER percent) returning amount + amount*percent/100. Read amount|percent and print it.",
+    "algorithmic_structure": "percentage_adjustment_function",
+    "control_flow": "function_local_then_return",
+    "template_lineage": "phase1t-fn08-percentage_adjustment_function-v1",
+    "structural_signature": "import>function2>local_calc>return>split>convert2>call",
+    "constructs": [
+      "function",
+      "local_variable"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read four numbers separated by |, store them in a NUMBER array, and print their product.",
+    "algorithmic_structure": "array_product",
+    "control_flow": "array_for_reduction",
+    "template_lineage": "phase1t-ar01-array_product-v1",
+    "structural_signature": "split4>array_literal>product_init>indexed_for_multiply>display",
+    "constructs": [
+      "array",
+      "loop_reduction"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read five numbers separated by |, store them in a NUMBER array, and print their average using arrays.SUM.",
+    "algorithmic_structure": "array_library_average",
+    "control_flow": "array_library_reduction",
+    "template_lineage": "phase1t-ar02-array_library_average-v1",
+    "structural_signature": "import_strings_arrays>split5>array_literal>sum_divide>display",
+    "constructs": [
+      "array",
+      "arrays_sum"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read five numbers separated by |, store them in an array, and print how many are positive.",
+    "algorithmic_structure": "positive_array_count",
+    "control_flow": "array_loop_conditional_counter",
+    "template_lineage": "phase1t-ar03-positive_array_count-v1",
+    "structural_signature": "split5>array>count>indexed_for>positive_if>increment>display",
+    "constructs": [
+      "array",
+      "conditional_count"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read target|a|b|c|d. Store a,b,c,d in an array and print how many equal target.",
+    "algorithmic_structure": "target_frequency",
+    "control_flow": "array_loop_equality_counter",
+    "template_lineage": "phase1t-ar04-target_frequency-v1",
+    "structural_signature": "split5>target_plus_array>count>indexed_for>equality_if>display",
+    "constructs": [
+      "array",
+      "target_scan"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c|d, store the values in an array, and print d|c|b|a with no spaces.",
+    "algorithmic_structure": "fixed_array_reverse_output",
+    "control_flow": "indexed_multi_output",
+    "template_lineage": "phase1t-ar05-fixed_array_reverse_output-v1",
+    "structural_signature": "split4>array_literal>reverse_index_display_sequence",
+    "constructs": [
+      "array",
+      "formatting"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c|x|y|z. Store the first and last three numbers in two arrays and print their dot product.",
+    "algorithmic_structure": "vector_dot_product",
+    "control_flow": "parallel_array_for_reduction",
+    "template_lineage": "phase1t-ar06-vector_dot_product-v1",
+    "structural_signature": "split6>two_arrays>dot_init>parallel_index_multiply_sum>display",
+    "constructs": [
+      "two_arrays",
+      "loop_reduction"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read four numbers separated by |, store them in an array, and print maximum minus minimum.",
+    "algorithmic_structure": "array_range",
+    "control_flow": "array_loop_dual_branch",
+    "template_lineage": "phase1t-ar07-array_range-v1",
+    "structural_signature": "split4>array>minmax_init>indexed_for>two_if_updates>difference",
+    "constructs": [
+      "array",
+      "dual_extrema"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-AR08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "confirmation",
+    "prompt": "Read a|b|c|d, store them in an array, and print b|c|d|a (a left rotation).",
+    "algorithmic_structure": "in_place_left_rotation",
+    "control_flow": "array_shift_loop_then_output",
+    "template_lineage": "phase1t-ar08-in_place_left_rotation-v1",
+    "structural_signature": "split4>array>save_first>shift_for>restore_last>display4",
+    "constructs": [
+      "array_mutation",
+      "index_shift"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read one SENTENCE, reverse it, convert the result to uppercase, and print it.",
+    "algorithmic_structure": "reverse_then_upper",
+    "control_flow": "sequential_string_transform",
+    "template_lineage": "phase1t-st01-reverse_then_upper-v1",
+    "structural_signature": "import>input_sentence>reverse_assign>upper_display",
+    "constructs": [
+      "strings_reverse",
+      "strings_upper"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read text|needle and print how many times needle occurs in text using strings.COUNT.",
+    "algorithmic_structure": "substring_count",
+    "control_flow": "direct_string_library_reduction",
+    "template_lineage": "phase1t-st02-substring_count-v1",
+    "structural_signature": "import>split2>count_call>display",
+    "constructs": [
+      "strings_count",
+      "split"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read prefix|text|suffix. Print BOTH when text starts with prefix and ends with suffix, otherwise NO.",
+    "algorithmic_structure": "prefix_suffix_predicate",
+    "control_flow": "two_library_predicates_then_if",
+    "template_lineage": "phase1t-st03-prefix_suffix_predicate-v1",
+    "structural_signature": "import>split3>startswith_assign>endswith_assign>and_if",
+    "constructs": [
+      "string_predicates",
+      "logic"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read one SENTENCE, replace every ordinary space with a hyphen, and print it.",
+    "algorithmic_structure": "space_to_hyphen",
+    "control_flow": "string_replace_assignment",
+    "template_lineage": "phase1t-st04-space_to_hyphen-v1",
+    "structural_signature": "import>input>replace_assign>display",
+    "constructs": [
+      "strings_replace"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read text|times and print text repeated times using strings.REPEAT.",
+    "algorithmic_structure": "string_repetition",
+    "control_flow": "split_convert_library_call",
+    "template_lineage": "phase1t-st05-string_repetition-v1",
+    "structural_signature": "import>split2>convert_count>repeat>display",
+    "constructs": [
+      "strings_repeat",
+      "numeric_argument"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read text|index and print the character at the zero-based index using strings.CHARAT.",
+    "algorithmic_structure": "indexed_character",
+    "control_flow": "bounded_index_branch",
+    "template_lineage": "phase1t-st06-indexed_character-v1",
+    "structural_signature": "import>split2>convert_index>length_minus_one>if_bound>charat_display",
+    "constructs": [
+      "strings_charat",
+      "indexing",
+      "branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read text|needle and print FOUND if text contains needle, otherwise MISSING.",
+    "algorithmic_structure": "substring_membership",
+    "control_flow": "library_predicate_if_else",
+    "template_lineage": "phase1t-st07-substring_membership-v1",
+    "structural_signature": "import>split2>contains_condition>display2",
+    "constructs": [
+      "strings_contains",
+      "branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-ST08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "confirmation",
+    "prompt": "Read one SENTENCE, trim ordinary surrounding whitespace, convert it to uppercase, and print it.",
+    "algorithmic_structure": "trim_then_upper",
+    "control_flow": "two_stage_string_transform",
+    "template_lineage": "phase1t-st08-trim_then_upper-v1",
+    "structural_signature": "import>input>trim_assign>upper_assign>display",
+    "constructs": [
+      "strings_trim",
+      "strings_upper"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read city|country and print country: city with exactly one space after the colon.",
+    "algorithmic_structure": "city_country_reformat",
+    "control_flow": "split_three_display",
+    "template_lineage": "phase1t-io01-city_country_reformat-v1",
+    "structural_signature": "import>split2>display_field1>literal>field0_newline",
+    "constructs": [
+      "formatting",
+      "field_reorder"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read key|value and print <key>(value) with no spaces.",
+    "algorithmic_structure": "angle_parenthesis_format",
+    "control_flow": "split_five_display",
+    "template_lineage": "phase1t-io02-angle_parenthesis_format-v1",
+    "structural_signature": "import>split2>literal_field_literal_field_literal",
+    "constructs": [
+      "formatting",
+      "delimiters"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read first|last|id and print id - last, first with spaces around the hyphen and one space after the comma.",
+    "algorithmic_structure": "identifier_name_format",
+    "control_flow": "split_reordered_five_display",
+    "template_lineage": "phase1t-io03-identifier_name_format-v1",
+    "structural_signature": "import>split3>field2>literal>field1>literal>field0",
+    "constructs": [
+      "formatting",
+      "three_fields"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read label|a|b and print label=a+b=result, where result is numeric and there are no spaces.",
+    "algorithmic_structure": "labelled_equation",
+    "control_flow": "split_convert_interleaved_output",
+    "template_lineage": "phase1t-io04-labelled_equation-v1",
+    "structural_signature": "import>split3>convert2>field_literal_number_literal_number_literal_sum",
+    "constructs": [
+      "formatting",
+      "numeric_output"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read word|number and print number lines, each containing word.",
+    "algorithmic_structure": "repeated_line_output",
+    "control_flow": "split_for_display",
+    "template_lineage": "phase1t-io05-repeated_line_output-v1",
+    "structural_signature": "import>split2>convert_count>for>field_display_each",
+    "constructs": [
+      "loop",
+      "multi_line_output"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read left|middle|right and print (left)[middle]{right} with no spaces.",
+    "algorithmic_structure": "multi_bracket_format",
+    "control_flow": "split_seven_display",
+    "template_lineage": "phase1t-io06-multi_bracket_format-v1",
+    "structural_signature": "import>split3>three_bracket_pairs_interleaved",
+    "constructs": [
+      "formatting",
+      "nested_delimiters"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read item|count|price and print countx item @ price exactly, with one space before and after @.",
+    "algorithmic_structure": "invoice_line_format",
+    "control_flow": "split_convert_concat_display",
+    "template_lineage": "phase1t-io07-invoice_line_format-v1",
+    "structural_signature": "import>split3>to_sentence_count>to_sentence_price>concatenate_all>display",
+    "constructs": [
+      "formatting",
+      "string_concatenation"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-IO08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "confirmation",
+    "prompt": "Read title|status. Print [status] on the first line and title on the second line.",
+    "algorithmic_structure": "two_line_status_format",
+    "control_flow": "split_bracket_line_then_field_line",
+    "template_lineage": "phase1t-io08-two_line_status_format-v1",
+    "structural_signature": "import>split2>bracketed_field1_newline>field0_newline",
+    "constructs": [
+      "formatting",
+      "two_line_output"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP01",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print PRIME if it is prime, otherwise COMPOSITE. Treat 1 as COMPOSITE.",
+    "algorithmic_structure": "trial_division_prime",
+    "control_flow": "loop_flag_then_branch",
+    "template_lineage": "phase1t-cp01-trial_division_prime-v1",
+    "structural_signature": "input>prime_flag>sqrt_bound_for>divisor_if_set_false>final_if",
+    "constructs": [
+      "loop",
+      "logic_flag",
+      "branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP02",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print the sum of its decimal digits.",
+    "algorithmic_structure": "decimal_digit_sum",
+    "control_flow": "while_modulo_accumulator",
+    "template_lineage": "phase1t-cp02-decimal_digit_sum-v1",
+    "structural_signature": "import_math>input>sum_init>while>mod_add>floor_divide>display",
+    "constructs": [
+      "while_loop",
+      "digit_processing"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP03",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read one SENTENCE and print PALINDROME if it equals its reverse ignoring case, otherwise DIFFERENT.",
+    "algorithmic_structure": "casefold_palindrome",
+    "control_flow": "string_transform_compare_branch",
+    "template_lineage": "phase1t-cp03-casefold_palindrome-v1",
+    "structural_signature": "import>input>lower>reverse>equals_if>labels",
+    "constructs": [
+      "string_pipeline",
+      "branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP04",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read one SENTENCE and print the number of vowels a,e,i,o,u, ignoring case.",
+    "algorithmic_structure": "vowel_count_reductions",
+    "control_flow": "multiple_string_reductions",
+    "template_lineage": "phase1t-cp04-vowel_count_reductions-v1",
+    "structural_signature": "import>input>lower>five_count_accumulations>display",
+    "constructs": [
+      "strings_count",
+      "compound_assignment"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP05",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n. Sum its positive proper divisors. Print PERFECT if the sum equals n, ABUNDANT if greater, otherwise DEFICIENT.",
+    "algorithmic_structure": "divisor_sum_classification",
+    "control_flow": "loop_reduction_then_three_way_branch",
+    "template_lineage": "phase1t-cp05-divisor_sum_classification-v1",
+    "structural_signature": "input>divisor_sum>for>mod_if>accumulate>compare_chain3",
+    "constructs": [
+      "loop",
+      "classification"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP06",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print POWER OF TWO if repeated division by 2 reaches 1 with no odd intermediate value; otherwise OTHER.",
+    "algorithmic_structure": "power_of_two_reduction",
+    "control_flow": "while_flag_destructive_division",
+    "template_lineage": "phase1t-cp06-power_of_two_reduction-v1",
+    "structural_signature": "import_math>input>flag>while>odd_if_false>floor_half>final_branch",
+    "constructs": [
+      "while_loop",
+      "logic_flag"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP07",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read base|exponent for a nonnegative whole exponent. Compute the power by repeated multiplication, then print EVEN if the result is even, otherwise ODD.",
+    "algorithmic_structure": "power_parity",
+    "control_flow": "loop_product_then_branch",
+    "template_lineage": "phase1t-cp07-power_parity-v1",
+    "structural_signature": "split2>power_init>for_multiply>parity_if",
+    "constructs": [
+      "loop",
+      "postcondition_branch"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P1T-CP08",
+    "split": "phase1t_confirmation",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "confirmation",
+    "prompt": "Read a positive whole NUMBER n and print how many numbers from 1 through n are divisible by 2 or 5 but not both.",
+    "algorithmic_structure": "exclusive_divisibility_count",
+    "control_flow": "for_local_flags_xor_counter",
+    "template_lineage": "phase1t-cp08-exclusive_divisibility_count-v1",
+    "structural_signature": "input>count>for>two_logic_locals>xor_expression_if>increment>display",
+    "constructs": [
+      "loop",
+      "boolean_composition"
+    ],
+    "required_regex": []
+  }
+]

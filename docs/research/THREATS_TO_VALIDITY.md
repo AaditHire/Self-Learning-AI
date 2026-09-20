@@ -80,6 +80,15 @@
 - Simple within-family tasks retain high structural similarity (maximum
   normalized reference similarity 0.963) despite unique lineages and
   signatures. Per-family cells contain only three items per level.
+- Phase 1T's identifier/literal-normalized audit flags 23 reference pairs at or
+  above 0.90, with maximum 0.976. Manual review confirms different semantic
+  targets and signatures, but shared GOCO input/output boilerplate and related
+  control-flow skeletons still induce correlation.
+- The Phase 1T paired conditions differ substantially in context length as well
+  as knowledge content. Any gain is attributable to the configuration change
+  as a whole, not to an isolated documentation component.
+- A single deterministic generation per task estimates exact pass@1 for the
+  frozen protocol but not sampling robustness or uncertainty across prompts.
 
 ## Mitigations
 

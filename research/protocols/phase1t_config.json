@@ -1,0 +1,97 @@
+{
+  "phase": "1T-3b-backbone-confirmation",
+  "frozen_at": "2026-09-20T17:12:56+05:30",
+  "start_commit": "56940731b14053677123521093615c73c24604c6",
+  "benchmark": {
+    "tasks": "benchmark/phase1t/confirmation_tasks.json",
+    "hidden_tests": "benchmark/phase1t/confirmation_hidden_tests.json",
+    "reference_solutions": "benchmark/phase1t/confirmation_references.json",
+    "split": "phase1t_confirmation"
+  },
+  "prompt": {
+    "system": "prompts/phase1t_system.txt",
+    "user_template": "prompts/phase1t_user_template.txt",
+    "candidate_c_context_files": [
+      "prompts/phase1r_syntax_contract_v1.txt",
+      "docs/goco_language_reference_phase1r_v1.md",
+      "prompts/phase1r_canonical_examples_v1.txt"
+    ],
+    "context_construction": "system prompt, then for each Candidate C file in fixed order: two newlines, TRUSTED GOCO KNOWLEDGE header with basename, two newlines, exact file content",
+    "prompt_search": "prohibited"
+  },
+  "normalization": "research/protocols/phase1r_output_normalization_v1.md",
+  "input_file_hashes": {
+    "benchmark/phase1t/confirmation_tasks.json": "a5bfbbef72289ceef6e9591e75aa636702b43b1210b5c8cef21a5929113eb748",
+    "benchmark/phase1t/confirmation_hidden_tests.json": "04eba75a404445faaf92f88ab4695a4b08816e9da0d8b3ec7f07f6fb2f90b24f",
+    "benchmark/phase1t/confirmation_references.json": "82db3ddda890b437c00bd9b66b9f7aa9aec43d43fb01cf0ed1ce2fcd29d3b6d9",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "prompts/phase1r_syntax_contract_v1.txt": "f15894a4d4c4cad4b5e6a5f98540fbb50291bba967fd164d101ad233bc3a964c",
+    "docs/goco_language_reference_phase1r_v1.md": "aa0e7f75804d05f24a8e8f9a70ef25b6ca7caa5b87c9bb2d4bec9833f072bc8d",
+    "prompts/phase1r_canonical_examples_v1.txt": "756086c027f415b0a05898568eb0ef261a0d4f9eaa018a9e9a2f50ef61b4102a",
+    "research/protocols/phase1r_output_normalization_v1.md": "3b3ed11956f00341944849b57a9af6cbe74c9dc7670bcfc7e477c0798e6311e4"
+  },
+  "models": {
+    "qwen_3b": {
+      "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+      "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+      "device": "cuda:0",
+      "quantization": "bitsandbytes_nf4_4bit",
+      "double_quantization": true,
+      "compute_dtype": "float16",
+      "weight_file_sha256": {
+        "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+        "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+      }
+    },
+    "qwen_1p5b_nf4": {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+      "local_path": ".models/Qwen2.5-Coder-1.5B-Instruct-2e1fd397",
+      "device": "cuda:0",
+      "quantization": "bitsandbytes_nf4_4bit",
+      "double_quantization": true,
+      "compute_dtype": "float16",
+      "weight_file_sha256": {
+        "model.safetensors": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8"
+      }
+    }
+  },
+  "model_condition_order": {
+    "qwen_3b": ["NO_DOCS", "CANDIDATE_C"],
+    "qwen_1p5b_nf4": ["CANDIDATE_C"]
+  },
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "stopping": "model EOS or maximum",
+    "retry_policy": "none"
+  },
+  "scoring": {
+    "primary": "task-level hidden-test pass@1; all hidden cases and structural requirements",
+    "secondary": ["parse rate", "compile rate", "execution rate", "family hidden pass", "failure taxonomy", "docs-only wins", "baseline-only wins"],
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "manual_repair": false
+  },
+  "paired_analysis": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260920,
+    "effect_size": "paired risk difference Candidate C minus no docs",
+    "uncertainty": "paired task bootstrap percentile 95% interval",
+    "secondary_test": "two-sided exact McNemar"
+  },
+  "phase2_gate": {
+    "conjunctive": true,
+    "candidate_c_hidden_pass_rate_minimum": 0.25,
+    "absolute_improvement_over_no_docs_minimum": 0.15,
+    "minimum_families_with_at_least_one_candidate_c_pass": 4,
+    "benchmark_integrity_override": "a major integrity problem forces failure regardless of numerical criteria"
+  },
+  "secondary_check_policy": "1.5B NF4 Candidate C is diagnostic only and cannot alter the 3B gate",
+  "seed": 20260920,
+  "prohibitions": ["training", "LoRA", "QLoRA", "adapters", "weight updates", "prompt tuning", "additional model search", "opening the legacy sealed holdout"]
+}

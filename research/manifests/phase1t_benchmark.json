@@ -1,0 +1,53 @@
+{
+  "artifact_type": "phase1t_frozen_confirmation_benchmark",
+  "created_at": "2026-09-20",
+  "split": "phase1t_confirmation",
+  "scientific_use": "independent engineering confirmation of the frozen 3B documentation-assisted baseline; never training data",
+  "task_count": 64,
+  "hidden_case_count": 329,
+  "minimum_hidden_cases_per_task": 5,
+  "family_counts": {
+    "arrays": 8,
+    "composition_algorithms": 8,
+    "conditionals": 8,
+    "expressions_variables": 8,
+    "functions": 8,
+    "input_output": 8,
+    "loops": 8,
+    "strings": 8
+  },
+  "task_regime": "full-program synthesis only",
+  "diversity": {
+    "exact_duplicate_prompts": 0,
+    "unique_algorithmic_structures": 64,
+    "unique_template_lineages": 64,
+    "unique_structural_signatures": 64,
+    "maximum_prompt_token_jaccard": 0.65,
+    "maximum_prompt_pair": ["P1T-AR01", "P1T-AR02"],
+    "maximum_normalized_reference_sequence_similarity": 0.9761904761904762,
+    "maximum_reference_pair": ["P1T-CD01", "P1T-CD07"],
+    "reference_pairs_at_or_above_0p90": 23,
+    "manual_review": "All 23 flagged pairs reviewed before inference; retained with pair-specific dispositions in EXP-0011. Similarity is disclosed and the tasks are not asserted to be statistically independent."
+  },
+  "canonical_hashes": {
+    "tasks": "1fab2e3d04b94859670726918629713e207fb38897e84a7790ee557484049846",
+    "hidden_tests": "f50294a12c37f14ac11ce4577c158c607fd3d71a8336f36df6b317d218016a8d",
+    "references": "cdb797b4c1a5404afafc3ad286ab01abc1481bfb5c5a034085176c1f66219a6a"
+  },
+  "file_hashes": {
+    "benchmark/phase1t/confirmation_tasks.json": "a5bfbbef72289ceef6e9591e75aa636702b43b1210b5c8cef21a5929113eb748",
+    "benchmark/phase1t/confirmation_hidden_tests.json": "04eba75a404445faaf92f88ab4695a4b08816e9da0d8b3ec7f07f6fb2f90b24f",
+    "benchmark/phase1t/confirmation_references.json": "82db3ddda890b437c00bd9b66b9f7aa9aec43d43fb01cf0ed1ce2fcd29d3b6d9"
+  },
+  "reference_validation": {
+    "passed_tasks": 64,
+    "failed_tasks": 0,
+    "passed_hidden_cases": 329,
+    "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+  },
+  "governance": {
+    "phase1_phase1r_phase1s_tasks_consumed": true,
+    "legacy_final_holdout_opened": false,
+    "prompt_tuning_against_phase1t": false
+  }
+}

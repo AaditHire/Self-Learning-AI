@@ -107,8 +107,23 @@ continual-learning claim is currently justified.
   and executable hidden pass 28/72; full synthesis 7/24 across five families.
 - **Possible confounders:** matched-scenario dependence, quantization mismatch,
   model-scale architectural differences, prompt length, and small family cells.
-- **Currently justified:** Under the exact Candidate C protocol and environment,
-  1.5B failure is dominated by syntax assembly and includes weak recognition
-  and zero local-completion passes; the frozen 3B comparator materially changes
-  performance and clears the preregistered engineering indicator. This does not
-  establish a causal capacity mechanism or authorize training.
+- **Currently justified:** Under the fixed Phase 1S protocol, the
+  Qwen2.5-Coder-3B NF4 configuration materially outperformed the
+  Qwen2.5-Coder-1.5B FP16 configuration. The result does not isolate a causal
+  parameter-count effect; precision, parameter count, and generation regime are
+  confounded, and it does not authorize training.
+
+## CLM-008
+
+- **Proposed claim:** The exact frozen 3B NF4 configuration supplies a
+  reproducible documentation-assisted GOCO baseline suitable for a separately
+  controlled parameter-acquisition experiment.
+- **Evidence required:** Fresh paired Phase 1T no-docs/Candidate-C results that
+  pass all three preregistered criteria without a major integrity failure.
+- **Experiment:** EXP-0012; EXP-0013 is secondary context only.
+- **Status:** PREREGISTERED; NOT YET TESTED.
+- **Supporting results:** None at freeze time.
+- **Possible confounders:** fixed-context length, public GOCO exposure,
+  structural correlation, one greedy run, quantization kernels, and benchmark
+  representativeness.
+- **Currently justified:** No.
