@@ -1,0 +1,40 @@
+{
+  "candidate_id": "c0001-phase2a-qlora",
+  "parent": {
+    "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "immutable_before_after": true
+  },
+  "adapter_policy": "versioned PEFT QLoRA adapter; never merged into research base",
+  "adapter_files_sha256": {
+    "adapter_config.json": "05cf957db0c5aa379894c8e789633140aad4d9e140d9e2550989477950ae2fcb",
+    "adapter_model.safetensors": "d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43",
+    "added_tokens.json": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "cfa6b856312b431fb4c3bcfb6dd2afcef0c6bdf4b67ebde75470f2195576b94d",
+    "special_tokens_map.json": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "training_dataset_canonical_sha256": "bb87dce6086d362efbbfa279ad414e82dba9c8bd920ff01855b36eeac9cfdec3",
+  "development_suite_canonical_sha256": "5e09ac6b75ca2e5dccb137478a1b4561baa76edd8e6f73fc25c2e1f9289b37ed",
+  "regression_suite_canonical_sha256": "4ff69bd53009315352e4b098c43f44149271af9f61d6bdcba2f3ee548384f54a",
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "training_config_sha256": "f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2",
+  "random_seed": 20260920,
+  "preregistration_commit": "b5fe9b3b5e8d95d319ebc1e14bd14aa1df492f9b",
+  "results": {
+    "research/results/EXP-0015/smoke.json": "5010e92685457b87f140d4d46384cccc7c963e1058e815bd18ebfbae6d50e105",
+    "research/results/EXP-0016/training.json": "50d88925c409482404f80644b469e1c958086bf7f8f30334457653a60f8fbd24",
+    "research/results/EXP-0017/primary.json": "9bf317843ee4799d8521322ac126242b0e3642634aab41bee2c424f746e42183",
+    "research/results/EXP-0018/training_performance.json": "fa584bdffa73dd161bb6e99d87cba6c918eccb5a946fad379d6f4a0827802c52",
+    "research/results/EXP-0019/regression.json": "911e14fc896839051cdf1398e4fab57bef64c4285c922e5247d556a6582c6ac5"
+  },
+  "decision": "PASS"
+}

@@ -1,10 +1,10 @@
 # Project state
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
-Current phase: Phase 2A preregistered; exploratory QLoRA pilot pending
-Phase decision: Phase 1T gate remains failed; only the separately authorized
-exploratory Phase 2A adapter run is permitted
+Current phase: Phase 2A complete; independent review required before any Phase 2B
+Phase decision: Phase 1T gate remains failed; the separately authorized
+exploratory Phase 2A pilot passed its own frozen engineering criteria
 
 ## Repository boundaries
 
@@ -214,6 +214,30 @@ three-epoch training configuration. The frozen config SHA-256 is
 `f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2`.
 No Phase 2A gradient step or model evaluation existed at freeze time.
 
+## Phase 2A results
+
+The exact preregistration commit is
+`b5fe9b3b5e8d95d319ebc1e14bd14aa1df492f9b`. The local two-step smoke passed,
+and the single fixed three-epoch run completed 75 optimizer steps without OOM
+or non-finite values. Peak full-run GPU allocation was 3,673,793,536 bytes,
+reserved GPU memory 4,102,029,312 bytes, and process RSS 6,030,819,328 bytes.
+The immutable base shard hashes were unchanged; adapter weights remain
+separate with SHA-256 `d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43`.
+
+On the frozen 64-task development suite, base/no-doc scored 0/64 and
+adapter/no-doc 18/64 (28.125%), a +28.125-point paired gain with bootstrap 95%
+interval [+17.1875, +39.0625]. Passes span five families. Training tasks scored
+198/200 (99.0%), leaving a 70.875-point train/held-out gap that must be treated
+as potential memorization and narrow transfer. Regression moved from 18/24 to
+16/24, inside the frozen severe-collapse rule.
+
+All five exploratory success criteria passed. This supports only development-
+set evidence consistent with parameterized GOCO behavioral acquisition in this
+setup. It does not establish continual learning, self-learning, general
+acquisition, or robust retention. Phase 1T remains failed. The Phase 2A suites
+are consumed, Phase 2B was not started, and independent review plus a new
+untouched preregistration are required before any confirmatory work.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -233,10 +257,13 @@ No Phase 2A gradient step or model evaluation existed at freeze time.
 - Phase 2A record: `docs/research/stages/PHASE_2A.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
+- Phase 2A compact summary: `research/results/PHASE_2A/summary.json`
+- Phase 2A adapter lineage: `research/manifests/phase2a_adapter_c0001.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Execute only the frozen Phase 2A smoke, single QLoRA run, and preregistered
-evaluations. Do not tune against results, merge the adapter, train on consumed
-tasks, open the sealed holdout, or begin Phase 2B. Phase 1T remains failed.
+Phase 2A is complete. Do not tune against its consumed development suite,
+merge the adapter, train on consumed tasks, open the sealed holdout, or begin
+Phase 2B. Preserve Phase 1T as a failed gate. The only next step is independent
+review and, if separately authorized, a new untouched confirmatory protocol.

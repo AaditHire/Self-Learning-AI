@@ -112,6 +112,15 @@
 - The 24-task exact-response regression suite is small and format-sensitive.
   Lack of measured collapse does not establish general retention or prevent
   unmeasured capability loss.
+- Phase 2A observed a 99.0% training hidden-pass rate but only 28.125% on the
+  held-out development suite. The 70.875-point gap is compatible with strong
+  memorization plus narrow structural transfer and sharply limits the claim.
+- Eleven of 28 coarse normalized-code flags passed versus seven of 36
+  unflagged tasks. Exact prompts, lineages, algorithm labels, and high prompt
+  similarity were absent, but this enrichment means shared grammar skeletons
+  may account for part of the measured effect.
+- Phase 2A regression fell from 18/24 to 16/24. This passes the frozen severe-
+  collapse rule but is not evidence of zero degradation or robust retention.
 
 ## Mitigations
 

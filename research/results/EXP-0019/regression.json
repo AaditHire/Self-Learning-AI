@@ -1,0 +1,668 @@
+{
+  "phase": "2A",
+  "plan": "regression",
+  "config_sha256": "f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2",
+  "condition_order": [
+    "BASE_NO_DOCS",
+    "ADAPTED_NO_DOCS"
+  ],
+  "adapter_file_hashes": {
+    "adapter_config.json": "05cf957db0c5aa379894c8e789633140aad4d9e140d9e2550989477950ae2fcb",
+    "adapter_model.safetensors": "d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43",
+    "added_tokens.json": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "cfa6b856312b431fb4c3bcfb6dd2afcef0c6bdf4b67ebde75470f2195576b94d",
+    "special_tokens_map.json": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.0",
+    "torch": "2.9.0+cu130",
+    "transformers": "4.57.1",
+    "bitsandbytes": "0.50.2",
+    "peft": "0.17.1",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  },
+  "hardware": {
+    "load_seconds": 10.211479600002349,
+    "peak_gpu_memory_bytes": 2309211136,
+    "peak_process_rss_bytes": 6031261696,
+    "generation_seconds": 17.91785940000409,
+    "output_tokens": 142,
+    "output_tokens_per_second": 7.925053815299365
+  },
+  "conditions": {
+    "BASE_NO_DOCS": [
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-01",
+        "category": "trace",
+        "raw_generation": "11",
+        "normalized_output": "11",
+        "expected": "11",
+        "passed": true,
+        "input_tokens": 55,
+        "output_tokens": 3,
+        "generation_ms": 1159
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-02",
+        "category": "trace",
+        "raw_generation": "'bcde'",
+        "normalized_output": "'bcde'",
+        "expected": "bcd",
+        "passed": false,
+        "input_tokens": 52,
+        "output_tokens": 5,
+        "generation_ms": 386
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-03",
+        "category": "trace",
+        "raw_generation": "4",
+        "normalized_output": "4",
+        "expected": "4",
+        "passed": true,
+        "input_tokens": 60,
+        "output_tokens": 2,
+        "generation_ms": 171
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-04",
+        "category": "trace",
+        "raw_generation": "FALSE",
+        "normalized_output": "FALSE",
+        "expected": "FALSE",
+        "passed": true,
+        "input_tokens": 50,
+        "output_tokens": 2,
+        "generation_ms": 194
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-05",
+        "category": "trace",
+        "raw_generation": "3",
+        "normalized_output": "3",
+        "expected": "2",
+        "passed": false,
+        "input_tokens": 50,
+        "output_tokens": 2,
+        "generation_ms": 167
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-06",
+        "category": "trace",
+        "raw_generation": "15",
+        "normalized_output": "15",
+        "expected": "15",
+        "passed": true,
+        "input_tokens": 51,
+        "output_tokens": 3,
+        "generation_ms": 239
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-07",
+        "category": "trace",
+        "raw_generation": "6",
+        "normalized_output": "6",
+        "expected": "6",
+        "passed": true,
+        "input_tokens": 60,
+        "output_tokens": 2,
+        "generation_ms": 154
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-08",
+        "category": "trace",
+        "raw_generation": "20",
+        "normalized_output": "20",
+        "expected": "20",
+        "passed": true,
+        "input_tokens": 50,
+        "output_tokens": 3,
+        "generation_ms": 244
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-09",
+        "category": "instruction",
+        "raw_generation": "QUIET RIVER",
+        "normalized_output": "QUIET RIVER",
+        "expected": "QUIET RIVER",
+        "passed": true,
+        "input_tokens": 47,
+        "output_tokens": 5,
+        "generation_ms": 411
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-10",
+        "category": "instruction",
+        "raw_generation": "desserts",
+        "normalized_output": "desserts",
+        "expected": "desserts",
+        "passed": true,
+        "input_tokens": 47,
+        "output_tokens": 3,
+        "generation_ms": 230
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-11",
+        "category": "instruction",
+        "raw_generation": "2, 5, 9",
+        "normalized_output": "2, 5, 9",
+        "expected": "2,5,9",
+        "passed": false,
+        "input_tokens": 53,
+        "output_tokens": 8,
+        "generation_ms": 665
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-12",
+        "category": "instruction",
+        "raw_generation": "7",
+        "normalized_output": "7",
+        "expected": "8",
+        "passed": false,
+        "input_tokens": 47,
+        "output_tokens": 2,
+        "generation_ms": 171
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-13",
+        "category": "instruction",
+        "raw_generation": "Small",
+        "normalized_output": "Small",
+        "expected": "small",
+        "passed": false,
+        "input_tokens": 49,
+        "output_tokens": 2,
+        "generation_ms": 159
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-14",
+        "category": "instruction",
+        "raw_generation": "behavior",
+        "normalized_output": "behavior",
+        "expected": "behavior",
+        "passed": true,
+        "input_tokens": 49,
+        "output_tokens": 2,
+        "generation_ms": 166
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-15",
+        "category": "instruction",
+        "raw_generation": "a:b:c",
+        "normalized_output": "a:b:c",
+        "expected": "a:b:c",
+        "passed": true,
+        "input_tokens": 51,
+        "output_tokens": 4,
+        "generation_ms": 304
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-16",
+        "category": "instruction",
+        "raw_generation": "data_set",
+        "normalized_output": "data_set",
+        "expected": "data_set",
+        "passed": true,
+        "input_tokens": 52,
+        "output_tokens": 3,
+        "generation_ms": 290
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-17",
+        "category": "concept",
+        "raw_generation": "stack",
+        "normalized_output": "stack",
+        "expected": "stack",
+        "passed": true,
+        "input_tokens": 46,
+        "output_tokens": 2,
+        "generation_ms": 158
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-18",
+        "category": "concept",
+        "raw_generation": "queue",
+        "normalized_output": "queue",
+        "expected": "queue",
+        "passed": true,
+        "input_tokens": 45,
+        "output_tokens": 2,
+        "generation_ms": 163
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-19",
+        "category": "concept",
+        "raw_generation": "2",
+        "normalized_output": "2",
+        "expected": "2",
+        "passed": true,
+        "input_tokens": 48,
+        "output_tokens": 2,
+        "generation_ms": 157
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-20",
+        "category": "concept",
+        "raw_generation": "GET",
+        "normalized_output": "GET",
+        "expected": "GET",
+        "passed": true,
+        "input_tokens": 52,
+        "output_tokens": 2,
+        "generation_ms": 165
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-21",
+        "category": "concept",
+        "raw_generation": "WHERE",
+        "normalized_output": "WHERE",
+        "expected": "WHERE",
+        "passed": true,
+        "input_tokens": 46,
+        "output_tokens": 2,
+        "generation_ms": 154
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-22",
+        "category": "concept",
+        "raw_generation": "commit",
+        "normalized_output": "commit",
+        "expected": "commit",
+        "passed": true,
+        "input_tokens": 53,
+        "output_tokens": 2,
+        "generation_ms": 182
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-23",
+        "category": "concept",
+        "raw_generation": "O(1)",
+        "normalized_output": "O(1)",
+        "expected": "O(1)",
+        "passed": true,
+        "input_tokens": 55,
+        "output_tokens": 5,
+        "generation_ms": 404
+      },
+      {
+        "condition": "BASE_NO_DOCS",
+        "task_id": "P2A-REG-24",
+        "category": "concept",
+        "raw_generation": "true, false",
+        "normalized_output": "true, false",
+        "expected": "true,false",
+        "passed": false,
+        "input_tokens": 46,
+        "output_tokens": 4,
+        "generation_ms": 336
+      }
+    ],
+    "ADAPTED_NO_DOCS": [
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-01",
+        "category": "trace",
+        "raw_generation": "11",
+        "normalized_output": "11",
+        "expected": "11",
+        "passed": true,
+        "input_tokens": 55,
+        "output_tokens": 3,
+        "generation_ms": 457
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-02",
+        "category": "trace",
+        "raw_generation": "'bcd'.",
+        "normalized_output": "'bcd'.",
+        "expected": "bcd",
+        "passed": false,
+        "input_tokens": 52,
+        "output_tokens": 4,
+        "generation_ms": 620
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-03",
+        "category": "trace",
+        "raw_generation": "4",
+        "normalized_output": "4",
+        "expected": "4",
+        "passed": true,
+        "input_tokens": 60,
+        "output_tokens": 2,
+        "generation_ms": 323
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-04",
+        "category": "trace",
+        "raw_generation": "FALSE.",
+        "normalized_output": "FALSE.",
+        "expected": "FALSE",
+        "passed": false,
+        "input_tokens": 50,
+        "output_tokens": 3,
+        "generation_ms": 451
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-05",
+        "category": "trace",
+        "raw_generation": "3",
+        "normalized_output": "3",
+        "expected": "2",
+        "passed": false,
+        "input_tokens": 50,
+        "output_tokens": 2,
+        "generation_ms": 334
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-06",
+        "category": "trace",
+        "raw_generation": "15",
+        "normalized_output": "15",
+        "expected": "15",
+        "passed": true,
+        "input_tokens": 51,
+        "output_tokens": 3,
+        "generation_ms": 467
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-07",
+        "category": "trace",
+        "raw_generation": "6",
+        "normalized_output": "6",
+        "expected": "6",
+        "passed": true,
+        "input_tokens": 60,
+        "output_tokens": 2,
+        "generation_ms": 302
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-08",
+        "category": "trace",
+        "raw_generation": "28",
+        "normalized_output": "28",
+        "expected": "20",
+        "passed": false,
+        "input_tokens": 50,
+        "output_tokens": 3,
+        "generation_ms": 445
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-09",
+        "category": "instruction",
+        "raw_generation": "QUIET RIVER",
+        "normalized_output": "QUIET RIVER",
+        "expected": "QUIET RIVER",
+        "passed": true,
+        "input_tokens": 47,
+        "output_tokens": 5,
+        "generation_ms": 800
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-10",
+        "category": "instruction",
+        "raw_generation": "desserts",
+        "normalized_output": "desserts",
+        "expected": "desserts",
+        "passed": true,
+        "input_tokens": 47,
+        "output_tokens": 3,
+        "generation_ms": 475
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-11",
+        "category": "instruction",
+        "raw_generation": "2,5,9",
+        "normalized_output": "2,5,9",
+        "expected": "2,5,9",
+        "passed": true,
+        "input_tokens": 53,
+        "output_tokens": 6,
+        "generation_ms": 904
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-12",
+        "category": "instruction",
+        "raw_generation": "7",
+        "normalized_output": "7",
+        "expected": "8",
+        "passed": false,
+        "input_tokens": 47,
+        "output_tokens": 2,
+        "generation_ms": 353
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-13",
+        "category": "instruction",
+        "raw_generation": "Small",
+        "normalized_output": "Small",
+        "expected": "small",
+        "passed": false,
+        "input_tokens": 49,
+        "output_tokens": 2,
+        "generation_ms": 294
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-14",
+        "category": "instruction",
+        "raw_generation": "behavior",
+        "normalized_output": "behavior",
+        "expected": "behavior",
+        "passed": true,
+        "input_tokens": 49,
+        "output_tokens": 2,
+        "generation_ms": 326
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-15",
+        "category": "instruction",
+        "raw_generation": "a:b:c",
+        "normalized_output": "a:b:c",
+        "expected": "a:b:c",
+        "passed": true,
+        "input_tokens": 51,
+        "output_tokens": 4,
+        "generation_ms": 702
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-16",
+        "category": "instruction",
+        "raw_generation": "data_set",
+        "normalized_output": "data_set",
+        "expected": "data_set",
+        "passed": true,
+        "input_tokens": 52,
+        "output_tokens": 3,
+        "generation_ms": 491
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-17",
+        "category": "concept",
+        "raw_generation": "stack",
+        "normalized_output": "stack",
+        "expected": "stack",
+        "passed": true,
+        "input_tokens": 46,
+        "output_tokens": 2,
+        "generation_ms": 356
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-18",
+        "category": "concept",
+        "raw_generation": "queue",
+        "normalized_output": "queue",
+        "expected": "queue",
+        "passed": true,
+        "input_tokens": 45,
+        "output_tokens": 2,
+        "generation_ms": 320
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-19",
+        "category": "concept",
+        "raw_generation": "2",
+        "normalized_output": "2",
+        "expected": "2",
+        "passed": true,
+        "input_tokens": 48,
+        "output_tokens": 2,
+        "generation_ms": 339
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-20",
+        "category": "concept",
+        "raw_generation": "GET",
+        "normalized_output": "GET",
+        "expected": "GET",
+        "passed": true,
+        "input_tokens": 52,
+        "output_tokens": 2,
+        "generation_ms": 329
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-21",
+        "category": "concept",
+        "raw_generation": "WHERE",
+        "normalized_output": "WHERE",
+        "expected": "WHERE",
+        "passed": true,
+        "input_tokens": 46,
+        "output_tokens": 2,
+        "generation_ms": 295
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-22",
+        "category": "concept",
+        "raw_generation": "commit",
+        "normalized_output": "commit",
+        "expected": "commit",
+        "passed": true,
+        "input_tokens": 53,
+        "output_tokens": 2,
+        "generation_ms": 325
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-23",
+        "category": "concept",
+        "raw_generation": "O(1).",
+        "normalized_output": "O(1).",
+        "expected": "O(1)",
+        "passed": false,
+        "input_tokens": 55,
+        "output_tokens": 5,
+        "generation_ms": 764
+      },
+      {
+        "condition": "ADAPTED_NO_DOCS",
+        "task_id": "P2A-REG-24",
+        "category": "concept",
+        "raw_generation": "true, false",
+        "normalized_output": "true, false",
+        "expected": "true,false",
+        "passed": false,
+        "input_tokens": 46,
+        "output_tokens": 4,
+        "generation_ms": 617
+      }
+    ]
+  },
+  "summaries": {
+    "BASE_NO_DOCS": {
+      "correct": 18,
+      "total": 24,
+      "accuracy": 0.75,
+      "by_category": {
+        "concept": {
+          "correct": 7,
+          "total": 8
+        },
+        "instruction": {
+          "correct": 5,
+          "total": 8
+        },
+        "trace": {
+          "correct": 6,
+          "total": 8
+        }
+      }
+    },
+    "ADAPTED_NO_DOCS": {
+      "correct": 16,
+      "total": 24,
+      "accuracy": 0.6666666666666666,
+      "by_category": {
+        "concept": {
+          "correct": 6,
+          "total": 8
+        },
+        "instruction": {
+          "correct": 6,
+          "total": 8
+        },
+        "trace": {
+          "correct": 4,
+          "total": 8
+        }
+      }
+    }
+  },
+  "paired": {
+    "base_only": 3,
+    "adapted_only": 1,
+    "both": 15,
+    "neither": 5,
+    "accuracy_difference": -0.08333333333333337
+  }
+}

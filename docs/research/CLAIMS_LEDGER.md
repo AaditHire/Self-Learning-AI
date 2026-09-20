@@ -143,11 +143,18 @@ continual-learning claim is currently justified.
   lineage-separated tasks, verified targets, training/held-out gap, paired
   outcomes, and non-GOCO regression.
 - **Experiment:** EXP-0015 through EXP-0019.
-- **Status:** PREREGISTERED EXPLORATORY PILOT; NOT YET TESTED.
-- **Supporting results:** None at freeze time. Phase 1T remains failed and is
-  not supporting evidence for parameter adaptation.
+- **Status:** TESTED ONCE; BOUNDED EXPLORATORY CLAIM SUPPORTED.
+- **Supporting results:** EXP-0017: adapted/no-doc 18/64 (28.125%) versus
+  frozen-base/no-doc 0/64, paired gain +28.125 points, bootstrap 95% interval
+  [+17.1875, +39.0625], passes in five families. EXP-0018: training tasks
+  198/200 (99.0%), exposing a 70.875-point train/held-out gap. EXP-0019: base
+  regression 18/24 versus adapter 16/24, below the severe-collapse thresholds.
+  Phase 1T remains failed and is not supporting evidence for adaptation.
 - **Possible confounders:** synthetic-target memorization, family/template
   correlation, one seed/configuration, public GOCO exposure, quantization,
   exact-match regression sensitivity, and development-set selection.
-- **Currently justified:** No parameter-acquisition claim. Even a Phase 2A
-  pass requires a later untouched confirmatory experiment.
+- **Currently justified:** QLoRA can produce development-set evidence
+  consistent with parameterized GOCO behavioral acquisition in this setup.
+  This is a one-seed developmental result, not general acquisition evidence;
+  the large train/held-out gap and coarse structural correlation require a
+  later untouched confirmatory experiment.

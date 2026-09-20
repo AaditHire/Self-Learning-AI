@@ -1,0 +1,221 @@
+{
+  "phase": "2A-exploratory-qlora-feasibility",
+  "scientific_status": "developmental/exploratory; not confirmatory",
+  "start_commit": "00d819c1f38260f6750db70306150bd085422312",
+  "preregistration_commit": "b5fe9b3b5e8d95d319ebc1e14bd14aa1df492f9b",
+  "config_sha256": "f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2",
+  "phase1t_gate_remains": "FAIL",
+  "optional_base_docs_reference": "NOT RUN; optional and barred from checkpoint selection",
+  "smoke": {
+    "passed": true,
+    "optimizer_steps": 2,
+    "peak_gpu_allocated_bytes": 3531969536,
+    "peak_gpu_reserved_bytes": 3781165056,
+    "peak_process_rss_bytes": 6035001344,
+    "supervised_tokens_per_second": 50.54659873011313
+  },
+  "training": {
+    "optimizer_steps": 75,
+    "expected_optimizer_steps": 75,
+    "seconds": 697.7392028999966,
+    "first_logged_mean_micro_loss": 2.239089697599411,
+    "last_logged_mean_micro_loss": 0.0020985516039218055,
+    "all_losses_finite": true,
+    "peak_gpu_allocated_bytes": 3673793536,
+    "peak_gpu_reserved_bytes": 4102029312,
+    "peak_process_rss_bytes": 6030819328,
+    "supervised_tokens_per_second": 43.91612205913527,
+    "base_weight_hashes_unchanged": true
+  },
+  "primary": {
+    "base_no_docs": {
+      "n": 64,
+      "failure_taxonomy": {
+        "lexical": 1,
+        "syntax": 62,
+        "wrong_language": 1
+      },
+      "parse_success_count": 0,
+      "parse_success": 0.0,
+      "compile_success_count": 0,
+      "compile_success": 0.0,
+      "execution_success_count": 0,
+      "execution_success": 0.0,
+      "hidden_pass_count": 0,
+      "hidden_pass": 0.0
+    },
+    "adapted_no_docs": {
+      "n": 64,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 24,
+        "lexical": 2,
+        "runtime": 3,
+        "semantic": 10,
+        "structural_requirement": 1,
+        "success": 18,
+        "syntax": 6
+      },
+      "parse_success_count": 56,
+      "parse_success": 0.875,
+      "compile_success_count": 46,
+      "compile_success": 0.71875,
+      "execution_success_count": 43,
+      "execution_success": 0.671875,
+      "hidden_pass_count": 18,
+      "hidden_pass": 0.28125
+    },
+    "paired": {
+      "n_tasks": 64,
+      "baseline_pass_rate": 0.0,
+      "docs_pass_rate": 0.28125,
+      "paired_risk_difference": 0.28125,
+      "paired_bootstrap_95pct_ci": [
+        0.171875,
+        0.390625
+      ],
+      "docs_only_passes": 18,
+      "baseline_only_passes": 0,
+      "mcnemar_exact_two_sided_p": 7.62939453125e-06,
+      "bootstrap_seed": 20260920,
+      "bootstrap_samples": 10000
+    },
+    "adapted_family_passes": {
+      "arrays": 3,
+      "composition_algorithms": 1,
+      "conditionals": 4,
+      "expressions_variables": 7,
+      "functions": 0,
+      "input_output": 0,
+      "loops": 3,
+      "strings": 0
+    }
+  },
+  "overfitting": {
+    "training_hidden_pass_count": 198,
+    "training_total": 200,
+    "training_hidden_pass_rate": 0.99,
+    "heldout_hidden_pass_rate": 0.28125,
+    "train_minus_heldout_gap": 0.70875,
+    "interpretation": "large gap; potential memorization and narrow transfer"
+  },
+  "structural_audit": {
+    "exact_prompt_reuse": 0,
+    "lineage_overlap": 0,
+    "algorithm_label_overlap": 0,
+    "prompt_flags_at_or_above_0p75": 0,
+    "coarse_code_flags_at_or_above_0p90": 28,
+    "flagged_passes": [
+      "P2A-DEV-CP02",
+      "P2A-DEV-EV01",
+      "P2A-DEV-EV02",
+      "P2A-DEV-EV03",
+      "P2A-DEV-EV04",
+      "P2A-DEV-EV05",
+      "P2A-DEV-EV06",
+      "P2A-DEV-EV07",
+      "P2A-DEV-LP01",
+      "P2A-DEV-LP02",
+      "P2A-DEV-LP04"
+    ],
+    "flagged_pass_rate": 0.39285714285714285,
+    "unflagged_passes": [
+      "P2A-DEV-AR02",
+      "P2A-DEV-AR04",
+      "P2A-DEV-AR08",
+      "P2A-DEV-CD03",
+      "P2A-DEV-CD04",
+      "P2A-DEV-CD05",
+      "P2A-DEV-CD08"
+    ],
+    "unflagged_pass_rate": 0.19444444444444445,
+    "decision": "operational criterion passes after pretraining manual review; coarse structural correlation remains a major limitation"
+  },
+  "regression": {
+    "base": {
+      "correct": 18,
+      "total": 24,
+      "accuracy": 0.75,
+      "by_category": {
+        "concept": {
+          "correct": 7,
+          "total": 8
+        },
+        "instruction": {
+          "correct": 5,
+          "total": 8
+        },
+        "trace": {
+          "correct": 6,
+          "total": 8
+        }
+      }
+    },
+    "adapted": {
+      "correct": 16,
+      "total": 24,
+      "accuracy": 0.6666666666666666,
+      "by_category": {
+        "concept": {
+          "correct": 6,
+          "total": 8
+        },
+        "instruction": {
+          "correct": 6,
+          "total": 8
+        },
+        "trace": {
+          "correct": 4,
+          "total": 8
+        }
+      }
+    },
+    "drop_tasks": 2,
+    "drop_rate": 0.08333333333333337,
+    "paired": {
+      "base_only": 3,
+      "adapted_only": 1,
+      "both": 15,
+      "neither": 5,
+      "accuracy_difference": -0.08333333333333337
+    },
+    "severe_collapse": false
+  },
+  "success_criteria": {
+    "improvement_at_least_15_points": true,
+    "adapted_pass_rate_at_least_20_percent": true,
+    "successes_in_at_least_four_families": true,
+    "not_explained_by_structural_duplication": true,
+    "no_severe_general_regression_collapse": true
+  },
+  "decision": "PASS",
+  "supported_claim": "QLoRA can produce development-set evidence consistent with parameterized GOCO behavioral acquisition in this setup.",
+  "unsupported_claims": [
+    "continual learning",
+    "self-learning",
+    "autonomous learning",
+    "robust retention",
+    "human-like understanding",
+    "general parameterized acquisition"
+  ],
+  "adapter_hashes": {
+    "adapter_config.json": "05cf957db0c5aa379894c8e789633140aad4d9e140d9e2550989477950ae2fcb",
+    "adapter_model.safetensors": "d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43",
+    "added_tokens.json": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "cfa6b856312b431fb4c3bcfb6dd2afcef0c6bdf4b67ebde75470f2195576b94d",
+    "special_tokens_map.json": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "result_file_hashes": {
+    "research/results/EXP-0015/smoke.json": "5010e92685457b87f140d4d46384cccc7c963e1058e815bd18ebfbae6d50e105",
+    "research/results/EXP-0016/training.json": "50d88925c409482404f80644b469e1c958086bf7f8f30334457653a60f8fbd24",
+    "research/results/EXP-0017/primary.json": "9bf317843ee4799d8521322ac126242b0e3642634aab41bee2c424f746e42183",
+    "research/results/EXP-0018/training_performance.json": "fa584bdffa73dd161bb6e99d87cba6c918eccb5a946fad379d6f4a0827802c52",
+    "research/results/EXP-0019/regression.json": "911e14fc896839051cdf1398e4fab57bef64c4285c922e5247d556a6582c6ac5"
+  },
+  "protocol_deviations": [],
+  "unsuccessful_training_runs": []
+}

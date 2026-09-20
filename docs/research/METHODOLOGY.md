@@ -198,3 +198,10 @@ lineage-held-out tasks. Training performance, structural distance, and a
 24-task non-GOCO regression comparison are separate diagnostics. Phase 2A is
 developmental: its suite becomes consumed, and success can motivate but cannot
 replace an untouched confirmatory experiment.
+
+The completed single run passed the exploratory gate: base/no-doc scored 0/64
+and adapter/no-doc 18/64, with successes across five families and a regression
+drop of two tasks. Training-task performance was 198/200, so the 70.875-point
+train/held-out gap is reported as a primary overfitting diagnostic. No
+Candidate C reference, hyperparameter search, checkpoint selection, adapter
+merge, sealed-suite access, or Phase 2B work occurred.

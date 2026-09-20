@@ -77,3 +77,11 @@ the frozen 3B base without documentation, reach at least 20%, pass at least four
 families, avoid explanation by structural duplication, and avoid severe
 general-regression collapse. This is exploratory and cannot establish the final
 parameter-acquisition claim.
+
+**Result:** Supported under the frozen exploratory criteria. Adapted/no-doc
+scored 18/64 (28.125%) versus 0/64, a +28.125-point gain with successes in
+five families. The regression drop was two of 24 tasks / 8.33 points, below
+both severe-collapse limits. The structural-duplication criterion passed its
+predeclared audit, but 11/18 passes occurred among 28 coarse normalized-code
+flags and the 99.0% training versus 28.125% held-out gap is a major
+memorization/generalization limitation. Confirmation remains required.

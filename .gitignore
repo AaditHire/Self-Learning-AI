@@ -6,6 +6,7 @@ __pycache__/
 
 # Large model and training artifacts must live in registered artifact paths.
 *.safetensors
+!research/adapters/**/*.safetensors
 *.ckpt
 *.pt
 *.pth
