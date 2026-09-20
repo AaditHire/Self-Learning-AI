@@ -8,12 +8,16 @@ No claim below is currently justified by experimental evidence.
   performance on unseen GOCO tasks.
 - **Evidence required:** Frozen base + docs/RAG versus frozen base/no docs on the
   same untouched suite with fixed decoding and prompt budgets.
-- **Experiment:** Phase 1, IDs not yet assigned.
-- **Status:** NOT YET TESTED.
-- **Supporting results:** None.
+- **Experiment:** EXP-0003 (`BASE_NO_DOCS`) and EXP-0004
+  (`BASE_WITH_DOCS`).
+- **Status:** TESTED ONCE; NOT SUPPORTED UNDER THE FROZEN PHASE 1 PROTOCOL.
+- **Supporting results:** `research/results/EXP-0003-0004/phase1_evaluation.json`
+  and `summary.json`. Both conditions passed 0/24 tasks.
 - **Possible confounders:** prompt-length effects, retrieval leakage, benchmark
   contamination, decoding variance.
-- **Currently justified:** No.
+- **Currently justified:** No. The all-syntax-error floor makes the comparison
+  non-discriminating; it does not justify a claim that documentation is
+  generally ineffective.
 
 ## CLM-002
 

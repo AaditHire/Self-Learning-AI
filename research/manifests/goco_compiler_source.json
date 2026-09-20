@@ -1,6 +1,6 @@
 {
   "artifact_type": "upstream_compiler_source_plan",
-  "extraction_status": "planned_not_executed",
+  "extraction_status": "extracted_from_pinned_git_object_and_built",
   "inspected_at": "2026-09-19",
   "license_path_at_source": "goco-compiler/LICENSE",
   "source_commit": "6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e",
@@ -16,6 +16,9 @@
     "goco-compiler/src/main/java": "415215892c7127df899d59b3bceb99dc8357484b",
     "goco-compiler/tests/tests.json": "7ad40be14848fa3d03ac02f36066e737000bc401"
   },
+  "evaluated_jar_sha256": "c6f45759930438dd4ae7bfbff298e9c7242604582d29da04210f15377f2be879",
+  "canonical_class_tree_sha256": "68b3ab9e694d3917957a62577a10e658cd60f5103368a17c5c3ae77374c4fb2a",
+  "deterministic_jar_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
   "source_worktree_policy": "READ_ONLY",
   "upstream_test_manifest": {
     "expected_failure_cases": 43,

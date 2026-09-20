@@ -1,0 +1,55 @@
+{
+  "artifact_type": "goco_llm_capability_benchmark",
+  "canonical_hashes": {
+    "hidden_tests_sha256": "20fed5f1f4df72479c7d86776a926fe8572afd72d161857de1f28e44cf49c7fd",
+    "reference_solutions_sha256": "f2cc07b9f798f7a9c58f883519864607312059cbe3ff94f4835bfd0b06e4a74a",
+    "tasks_sha256": "7d317c6baab6746d27b9b6c56bc114c64224957f4f5a28a78789bcdd617be809"
+  },
+  "created_at": "2026-09-20",
+  "families": [
+    "expressions_variables",
+    "conditionals",
+    "loops",
+    "functions",
+    "arrays",
+    "strings",
+    "input_output",
+    "composition_algorithms"
+  ],
+  "file_sha256": {
+    "benchmark/hidden_tests.json": "f81bc8b5d611b5c349694b7a5004018fa50f409299327e5214870fb67684520d",
+    "benchmark/reference_solutions.json": "630740b9039f244c61b822453c7d9946f975f1d60c466095acc0435dd769f9d7",
+    "benchmark/tasks.json": "5f670bf945941a8b45e6bf3f09e5b67ba46a6ac3bd3c02f4003f50ba12f944b1"
+  },
+  "final_paper_policy": "SEALED: routine tools skip this split unless --allow-final-paper is explicitly supplied; Phase 1 model evaluation must not use it",
+  "hidden_cases": {
+    "development": 16,
+    "final_paper": 16,
+    "frozen_evaluation": 72
+  },
+  "leakage_audit": {
+    "exact_duplicate_prompts": 0,
+    "maximum_cross_split_prompt_token_jaccard": 0.8095238095238095,
+    "maximum_pair": ["DEV-LP-001", "EVAL-LP-001"],
+    "method": "unique explicit template IDs, exact prompt comparison, lowercase alphanumeric token-set Jaccard across splits",
+    "reused_template_ids": 0
+  },
+  "scoring": {
+    "primary": "task-level hidden-test pass@1; all hidden cases and declared structural requirements must pass",
+    "secondary": [
+      "parse_success",
+      "semantic_compile_success",
+      "execution_success",
+      "case_exact_output",
+      "error_phase",
+      "family",
+      "difficulty"
+    ]
+  },
+  "splits": {
+    "development": 8,
+    "final_paper": 8,
+    "frozen_evaluation": 24
+  },
+  "status": "FROZEN_BEFORE_MODEL_INFERENCE"
+}

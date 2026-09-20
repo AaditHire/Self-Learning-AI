@@ -1,0 +1,38 @@
+{
+  "compiler": {
+    "canonical_class_tree_sha256": "68b3ab9e694d3917957a62577a10e658cd60f5103368a17c5c3ae77374c4fb2a",
+    "deterministic_artifact_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "evaluated_nondeterministic_jar_sha256": "c6f45759930438dd4ae7bfbff298e9c7242604582d29da04210f15377f2be879",
+    "build_command": "scripts/build_compiler.ps1",
+    "class_file_count": 95,
+    "independent_build_byte_mismatches": 0,
+    "jar_packaging_note": "The JDK jar tool embedded timestamps, so its container hash was not reproducible. The class tree was byte-identical. A deterministic ZIP/JAR packager was added after evaluation and its hash is recorded as deterministic_artifact_sha256.",
+    "main_class": "parser.MyLanguageParser",
+    "runtime_limits": {
+      "heap_megabytes": 256,
+      "metaspace_megabytes": 128,
+      "output_bytes_per_stream": 65536,
+      "timeout_seconds": 3
+    }
+  },
+  "java": {
+    "archive_sha256": "46897db80b6df8fad1f6cccce9e8514210bfd0181085dcd346f5c710a70a0d58",
+    "distribution": "Eclipse Temurin",
+    "download_url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.1%2B8/OpenJDK25U-jdk_x64_windows_hotspot_25.0.1_8.zip",
+    "vendor": "Eclipse Adoptium",
+    "version": "25.0.1+8-LTS"
+  },
+  "javacc": {
+    "artifact_sha256": "a4ea46021ec567d89ca305763eedf738ba8a63601445e1aad08a329a6554502a",
+    "maven_coordinate": "net.java.dev.javacc:javacc:7.0.13",
+    "regeneration_result": "7 generated files: 5 byte-identical; 2 content-identical after Git line-ending normalization",
+    "version": "7.0.13"
+  },
+  "source": {
+    "commit": "6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e",
+    "compiler_tree": "f51973617cc3da8c78de88c668d8de6959575d6d",
+    "extraction_archive_sha256": "ed955331c67393e3f5f7eda4bb55f37360cd52cb31aab3aa7a2468dd1d7c4d4d",
+    "java_source_tree": "415215892c7127df899d59b3bceb99dc8357484b",
+    "remote": "https://github.com/Thryza-creators/GOCO.git"
+  }
+}

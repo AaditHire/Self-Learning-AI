@@ -1,0 +1,2246 @@
+/* MyLanguageParser.jj - ERROR HANDLING FOR 4 SPECIFIC CASES */
+options {
+    STATIC = false;
+    LOOKAHEAD = 3;
+    FORCE_LA_CHECK = true;
+}
+
+PARSER_BEGIN(MyLanguageParser)
+
+package parser;
+
+import java.io.*;
+import java.util.*;
+import java.util.List;
+
+import utils.Debug;
+import ast.nodes.*;
+import ast.nodes.ImportNode;
+import ast.nodes.LibraryCallNode;
+import ast.arrays.*;
+import ast.math.MathLibrary;
+import ast.strings.StringsLibrary;
+
+public class MyLanguageParser {
+
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            Debug.errln("Usage: java MyLanguageParser <filename.goco>");
+            System.exit(1);
+        }
+
+        String filename = args[0];
+        if (!filename.endsWith(".goco")) {
+            Debug.errln("Error: File must have .goco extension");
+            System.exit(1);
+        }
+
+        try {
+            FileInputStream fileStream = new FileInputStream(filename);
+            MyLanguageParser parser = new MyLanguageParser(fileStream);
+
+            // Parse the program and get the root AST node
+            CoreNodes.ASTNode programNode = parser.Program();
+            CoreNodes.Scope globalScope = new CoreNodes.Scope();
+            programNode.validate(globalScope);
+
+            if (programNode.hasErrors()) {
+                Debug.errln("Semantic Errors:");
+                for (String error : programNode.getErrors()) {
+                    Debug.errln(error);
+                }
+                System.exit(1);
+            } else {
+                programNode.execute();
+            }
+
+        } catch (FileNotFoundException e) {
+            Debug.errln("Error: File '" + filename + "' not found");
+            System.exit(1);
+        } catch (ParseException e) {
+            Debug.errln("Syntax Error: " + e.getMessage());
+            System.exit(1);
+        } catch (TokenMgrError e) {
+            Debug.errln("Lexical Error: " + e.getMessage());
+            System.exit(1);
+        } catch (Exception e) {
+            Debug.errln("Runtime Error: " + e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    private static String getExpectedTokens(ParseException e) {
+        if (e.expectedTokenSequences == null || e.expectedTokenSequences.length == 0) {
+            return "valid statement";
+        }
+
+        Set<String> expected = new HashSet<>();
+        for (int[] seq : e.expectedTokenSequences) {
+            if (seq.length > 0) {
+                try {
+                    String tokenImage = MyLanguageParserTokenManager.tokenImage[seq[0]];
+                    // Clean up token images
+                    tokenImage = tokenImage.replace("\"", "").trim();
+                    if (!tokenImage.isEmpty() && !tokenImage.equals("<EOF>")) {
+                        expected.add(tokenImage);
+                    }
+                } catch (ArrayIndexOutOfBoundsException ex) {
+                    // Skip invalid indices
+                }
+            }
+        }
+        return String.join(", ", expected);
+    }
+
+    /**
+    * Process escape sequences in string and character literals
+    */
+    private String processEscapeSequences(String input) {
+        if (input == null || input.length() < 2) {
+            return input;
+        }
+        
+        // Store the quote character
+        char quote = input.charAt(0);
+        String content = input.substring(1, input.length() - 1);
+        
+        StringBuilder result = new StringBuilder();
+        
+        for (int i = 0; i < content.length(); i++) {
+            char c = content.charAt(i);
+            
+            if (c == '\\' && i + 1 < content.length()) {
+                char next = content.charAt(i + 1);
+                switch (next) {
+                    case 'n':
+                        result.append('\n');
+                        i++;
+                        break;
+                    case 't':
+                        result.append('\t');
+                        i++;
+                        break;
+                    case 'r':
+                        result.append('\r');
+                        i++;
+                        break;
+                    case '\\':
+                        result.append('\\');
+                        i++;
+                        break;
+                    case '\'':
+                        result.append('\'');
+                        i++;
+                        break;
+                    case '"':
+                        result.append('"');
+                        i++;
+                        break;
+                    default:
+                        // Not an escape sequence, keep both characters
+                        result.append(c);
+                        break;
+                }
+            } else {
+                result.append(c);
+            }
+        }
+        
+        // For character literals, return just the character (no quotes)
+        if (quote == '\'') {
+            return result.toString();
+        }
+        
+        // For string literals, return with quotes
+        return quote + result.toString() + quote;
+    }
+
+    private boolean isArrayVariable(String varName) {
+        return ArrayCoreNodes.isArray(varName);
+    }
+
+    // Add this method to your parser class (inside PARSER_BEGIN/PARSER_END)
+    private boolean isTypeToken(Token token) {
+        if (token == null)
+            return false;
+        String image = token.image.toUpperCase();
+        return (image.equals("NUMBER") ||
+                image.equals("LETTER") ||
+                image.equals("SENTENCE") ||
+                image.equals("LOGIC"));
+    }
+
+    private ParseException createSyntaxError(String message, int... expectedKinds) {
+        ParseException pe = generateParseException();
+        ParseException custom = new ParseException(message);
+        
+        custom.currentToken = getToken(1);
+        if (custom.currentToken == null) custom.currentToken = getToken(0);
+        
+        if (expectedKinds != null && expectedKinds.length > 0) {
+            int[][] seqs = new int[expectedKinds.length][1];
+            for (int i = 0; i < expectedKinds.length; i++) {
+                seqs[i][0] = expectedKinds[i];
+            }
+            custom.expectedTokenSequences = seqs;
+        } else {
+            custom.expectedTokenSequences = pe.expectedTokenSequences;
+        }
+        custom.tokenImage = pe.tokenImage;
+        return custom;
+    }
+
+    private void checkMatchingSymbol(Token opening, int expectedClosingKind, String symbolName) throws ParseException {
+        Token next = getToken(1);
+        if (next != null && next.kind == expectedClosingKind) {
+            return;
+        }
+        throw createSyntaxError(
+                "Mismatched " + symbolName + ". You opened with '" + opening.image +
+                        "' but closed with '" + (next != null ? next.image : "nothing") + "'. " +
+                        "At line " + opening.beginLine);
+    }
+}
+
+PARSER_END(MyLanguageParser)
+
+SKIP : {
+    " " | "\t" | "\n" | "\r"
+}
+
+SKIP : {
+    < SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* >
+}
+
+SKIP : {
+    < MULTI_LINE_COMMENT: "/*" (~["*"])* ("*" ~["/"] (~["*"])* )* "*/" >
+}
+
+TOKEN : {
+    < IMPORT_KWD: "IMPORT" | "import" | "Import" > |
+    < NUMBER_TYPE: "NUMBER" | "number" | "Number" > |
+    < LETTER_TYPE: "LETTER" | "letter" | "Letter" > |
+    < SENTENCE_TYPE: "SENTENCE" | "sentence" | "Sentence" > |
+    < LOGIC_TYPE: "LOGIC" | "logic" | "Logic" > |
+    < TRUE_VAL: "TRUE" | "True" | "true" > |
+    < FALSE_VAL: "FALSE" | "False" | "false" > |
+    < DO: "do" | "DO" | "Do" > |
+    < LENGTH_FUNC: "LENGTH" | "length" | "Length" > |
+    < PUSH_FUNC: "PUSH" | "push" | "Push" > |
+    < POP_FUNC: "POP" | "pop" | "Pop" > |
+    < NEW: "NEW" | "new" > |
+    < SET_FUNC: "SET" | "set" | "Set" > |
+    < GET_FUNC: "GET" | "get" | "Get" > |
+    < DISPLAY_CMD: "DISPLAY" | "display" | "Display" > |
+    < DISPLAY_NL_CMD: "DISPLAYNL" | "displaynl" | "DisplayNL" | "Displaynl" > |
+    < INPUT_CMD: "INPUT" | "input" | "Input" > |
+    < IF: "if" | "IF" | "If" > |
+    < ELSEIF: "elseif" | "ELSEIF" | "ElseIf" > |
+    < ELSE: "else" | "ELSE" | "Else" > |
+    < LOOP: "loop" | "LOOP" | "Loop" > |
+    < TILL: "TILL" | "till" | "Till" > |
+    < BREAK: "break" | "BREAK" | "Break" > |
+    < CONTINUE: "continue" | "CONTINUE" | "Continue" > |
+    < FUNCTION_KWD: "FUNCTION" | "function" | "Function" > |
+    < RETURN_KWD: "RETURN" | "return" | "Return" > |
+    < RETURNS_KWD: "RETURNS" | "returns" | "Returns" > |
+    < SWITCH: ("switch" | "SWITCH" | "Switch") > |
+    < CASE: ("case" | "CASE" | "Case") > |
+    < DEFAULT_KWD: ("default" | "DEFAULT" | "Default") > |
+    < PLUS : "+" > |
+    < MINUS : "-" > |
+    < MULTIPLY : "*" > |
+    < DIVIDE : "/" > |
+    < MODULUS : "%" > |
+    < LPAREN : "(" > |
+    < RPAREN : ")" > |
+    < LBRACE : "{" > |
+    < RBRACE : "}" > |
+    < LBRACKET : "[" > |
+    < RBRACKET : "]" > |
+    < DOT : "." > |
+    < ASSIGN : "=" > |
+    < PLUSEQ: "+=" > |
+    < MINUSEQ: "-=" > |
+    < MULTEQ: "*=" > |
+    < DIVEQ: "/=" > |
+    < MODEQ: "%=" > |
+    < COMMA: "," > |
+    < GT: ">" > |
+    < LT: "<" > |
+    < GTE: ">=" > |
+    < LTE: "<=" > |
+    < EQ: "==" > |
+    < NEQ: "!=" > |
+    < AND: "&&" | "AND" | "and" | "And" > |
+    < OR: "||" | "OR" | "or" | "Or" > |
+    < NOT: "NOT" | "not" | "Not" > |
+    < BANG: "!" > |
+    < INCREMENT: "++" > |
+    < DECREMENT: "--" > |
+    < ID : ( ["a"-"z","A"-"Z","_"] ) ( ["a"-"z","A"-"Z","0"-"9","_"] )* > |
+    < NUMBER_LITERAL : (["0"-"9"])+ ( "." (["0"-"9"])+ )? > |
+    < CHAR_LITERAL : "'" ( ~["'","\\"] | "\\" ["n","t","r","\\","'","\""] )? "'" > |
+    < STRING_LITERAL : "\"" ( ~["\"","\\"] | "\\" ["n","t","r","\\","'","\""] )* "\"" >
+}
+
+CoreNodes.ASTNode StatementWithRecovery() :
+{
+    CoreNodes.ASTNode statement;
+    Token t;
+}
+{
+    statement = Statement()
+    (
+        <DOT>
+        | // Error recovery: missing dot
+       {
+                throw createSyntaxError("Missing statement terminator '.' at line " +
+                                       getToken(1).beginLine + ", column " + getToken(1).beginColumn);
+            }
+    )
+    {
+        return statement;
+    }
+}
+
+
+CoreNodes.ASTNode Program() :
+{
+    CoreNodes.ProgramNode program = new CoreNodes.ProgramNode();
+    CoreNodes.ASTNode statement;
+}
+{
+    (
+        statement = Statement()
+        {
+            program.addStatement(statement);
+        }
+    )*
+    <EOF>
+    {
+        return program;
+    }
+}
+
+
+CoreNodes.ASTNode Statement() :
+{
+    CoreNodes.ASTNode statement;
+}
+{
+    (
+        LOOKAHEAD(3)
+        statement = IfStatement()
+    |   LOOKAHEAD(2)
+        statement = LoopStatement()
+    |   LOOKAHEAD(2)
+        statement = DoWhileStatement()
+    |
+        statement = SwitchStatement()
+    |   LOOKAHEAD(<FUNCTION_KWD>)
+        statement = FunctionDeclaration()
+    |
+        // IMPORT statement: IMPORT math. / IMPORT strings. / IMPORT arrays.
+        LOOKAHEAD(<IMPORT_KWD>)
+        statement = ImportStatement()
+        (
+            <DOT>
+            |
+            {
+                Token current = getToken(0);
+                throw createSyntaxError("Missing statement terminator '.' at line " +
+                                       current.beginLine + ", column " + current.beginColumn);
+            }
+        )
+    |
+        // Non-control statements need to be terminated with a dot
+          statement = NonControlStatement() 
+         (
+            <DOT>
+            | // ERROR 1: Missing statement terminator '.'
+            {
+                // Get the current token for error location
+                Token current = getToken(0);
+                throw createSyntaxError("Missing statement terminator '.' at line " +
+                                       current.beginLine + ", column " + current.beginColumn);
+            }
+        )
+    )
+    {
+        return statement;
+    }
+}
+
+
+CoreNodes.ASTNode IfStatement() :
+{
+    ExpressionNodes.ExpressionNode condition;
+    ConditionalNodes.IfNode ifNode;
+    CoreNodes.ASTNode statement;
+    ConditionalNodes.ElseIfNode elseIfNode;
+    ConditionalNodes.ElseNode elseNode;
+    Token t;
+}
+{
+     <IF>
+   (
+        <LPAREN>
+        | 
+        {
+            // Check what comes next to give a better error message
+            Token nextToken = getToken(1);
+            if (nextToken != null) {
+                if (nextToken.kind == LBRACE) {
+                    throw createSyntaxError("Missing '\u0028' before IF condition at line " +
+                                           nextToken.beginLine);
+                } else {
+                    throw createSyntaxError("Missing '\u0028' after IF at line " +
+                                           getToken(0).beginLine);
+                }
+            } else {
+                throw createSyntaxError("Missing '\u0028' after IF at line " +
+                                       getToken(0).beginLine);
+            }
+        }
+    )
+     (
+        LOOKAHEAD(2)
+        <RPAREN>
+        {
+            throw createSyntaxError("Missing condition in IF statement at line " +
+                                   getToken(0).beginLine);
+        }
+    )?
+    
+   
+    condition = Expression()
+    (
+        <RPAREN>
+        | // Error: missing closing parenthesis
+        {
+            throw createSyntaxError("Missing '\u0029' after IF condition at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+     (
+        <LBRACE>
+        | // Error: missing opening brace
+        {
+            throw createSyntaxError("Missing '\u007B' after IF condition at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    {
+        ifNode = new ConditionalNodes.IfNode(condition);
+    }
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        {
+            ifNode.addStatement(statement);
+        }
+    )*
+    (
+        <RBRACE>
+        | // Error: missing closing brace
+        {
+            throw createSyntaxError("Missing <RBRACE> at the end of IF block at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    (
+        LOOKAHEAD(2)
+        elseIfNode = ElseIfBlock()
+        {
+            ifNode.addElseIf(elseIfNode);
+        }
+    )*
+    [
+        elseNode = ElseBlock()
+        {
+            ifNode.setElse(elseNode);
+        }
+    ]
+    {
+        return ifNode;
+    }
+}
+
+
+ConditionalNodes.ElseIfNode ElseIfBlock() :
+{
+    ExpressionNodes.ExpressionNode condition;
+    ConditionalNodes.ElseIfNode elseIfNode;
+    CoreNodes.ASTNode statement;
+}
+{
+    <ELSEIF>
+    
+    // Error: Missing opening parenthesis
+    (
+        <LPAREN>
+        | 
+        {
+            throw createSyntaxError("Missing '\u0028' after ELSEIF at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    // Check for empty condition
+    (
+        LOOKAHEAD(2)
+        <RPAREN>
+        {
+            throw createSyntaxError("Missing condition in ELSEIF statement at line " +
+                                   getToken(0).beginLine);
+        }
+    )?
+    
+    condition = Expression()
+    
+    // Error: Missing closing parenthesis
+    (
+        <RPAREN>
+        | 
+        {
+            throw createSyntaxError("Missing '\u0029' after ELSEIF condition at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    // Error: Missing opening brace
+    (
+        <LBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007B' after ELSEIF condition at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    {
+        elseIfNode = new ConditionalNodes.ElseIfNode(condition);
+    }
+    
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        {
+            elseIfNode.addStatement(statement);
+        }
+    )*
+    
+    // Error: Missing closing brace
+    (
+        <RBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007D' at the end of ELSEIF block at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    {
+        return elseIfNode;
+    }
+}
+
+
+ConditionalNodes.ElseNode ElseBlock() :
+{
+    ConditionalNodes.ElseNode elseNode = new ConditionalNodes.ElseNode();
+    CoreNodes.ASTNode statement;
+}
+{
+    <ELSE>
+    
+    // Error: Missing opening brace
+    (
+        <LBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007B' after ELSE at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        {
+            elseNode.addStatement(statement);
+        }
+    )*
+    
+    // Error: Missing closing brace
+    (
+        <RBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007D' at the end of ELSE block at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    
+    {
+        return elseNode;
+    }
+}
+
+
+CoreNodes.ASTNode DoWhileStatement() :
+{
+    ExpressionNodes.ExpressionNode condition;
+    LoopNodes.DoWhileNode doWhileNode = new LoopNodes.DoWhileNode();
+    CoreNodes.ASTNode statement;
+    Token t;
+}
+{
+    <DO>
+    // Error 7: Missing opening brace
+    (
+        <LBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007B' after DO at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        {
+            doWhileNode.addStatement(statement);
+        }
+    )*
+    // Error 8: Missing closing brace
+    (
+        <RBRACE>
+        | 
+        {
+            throw createSyntaxError("Missing '\u007D' at the end of DO block at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    // Error 23: Missing LOOP keyword after DO block
+    (
+        LOOKAHEAD(2)
+        <LPAREN>
+        {
+            throw createSyntaxError(
+                "Missing 'LOOP' keyword after DO block. " +
+                "Remember: DO {...} LOOP(condition). " +
+                "At line " + getToken(0).beginLine
+            );
+        }
+    )?
+    <LOOP>
+    // Error 5: Missing opening parenthesis
+    (
+        <LPAREN>
+        | 
+        {
+            throw createSyntaxError("Missing '\u0028' after LOOP at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    // Error 22: Missing condition in DO-WHILE loop
+    // Check for empty condition
+    (
+        LOOKAHEAD(2)
+        <RPAREN>
+
+        {
+            throw createSyntaxError("Missing condition in DO-WHILE loop at line " +
+                                   getToken(0).beginLine);
+        }
+    )?
+    condition = Expression()
+    // Error 6: Missing closing parenthesis
+    (
+        <RPAREN>
+        | 
+        {
+            throw createSyntaxError("Missing '\u0029' after loop condition at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    <DOT>
+    {
+        doWhileNode.setCondition(condition);
+        return doWhileNode;
+    }
+}
+
+
+CoreNodes.ASTNode LoopStatement() :
+{
+    ExpressionNodes.ExpressionNode condition;
+    CoreNodes.ASTNode initialization = null;
+    CoreNodes.ASTNode update = null;
+    LoopNodes.LoopNode loopNode;
+    CoreNodes.ASTNode statement;
+    Token t;
+}
+{
+    <LOOP>
+    // Error 5: Missing opening parenthesis
+    (
+        <LPAREN>
+        | 
+        {
+            Token nextToken = getToken(1);
+            if (nextToken != null && nextToken.kind == LBRACE) {
+                throw createSyntaxError("Missing '\u0028' before LOOP condition at line " +
+                                       nextToken.beginLine);
+            } else {
+                throw createSyntaxError("Missing '\u0028' after LOOP at line " +
+                                       getToken(0).beginLine);
+            }
+        }
+    )
+    (
+        LOOKAHEAD(2)
+        <RPAREN>
+        {
+            throw createSyntaxError("Missing condition in LOOP statement at line " +
+                                   getToken(0).beginLine);
+        }
+    )?
+    (
+        // For-loop with variable declaration: LOOP(NUMBER i = 0 TILL i < 5, i = i + 1)
+        LOOKAHEAD((<NUMBER_TYPE> | <LETTER_TYPE> | <SENTENCE_TYPE> | <LOGIC_TYPE>) <ID> <ASSIGN>)
+        initialization = ForLoopInit()
+        // Error 18: Missing TILL keyword in for-loop
+        (
+            <TILL>
+            | 
+            {
+                Token nextToken = getToken(1);
+                if (nextToken != null && nextToken.kind == RPAREN) {
+                    throw createSyntaxError("Missing 'TILL' keyword and condition in for-loop at line " +
+                                           nextToken.beginLine);
+                } else {
+                    throw createSyntaxError("Expected 'TILL' after loop initialization at line " +
+                                           getToken(0).beginLine);
+                }
+            }
+        )
+        condition = Expression()
+        (
+            <COMMA>
+            | 
+            {
+                Token nextToken = getToken(1);
+                if (nextToken != null && nextToken.kind == RPAREN) {
+                    throw createSyntaxError("Missing '\u002C' and update statement in for-loop at line " +
+                                           nextToken.beginLine);
+                } else {
+                    throw createSyntaxError("Expected '\u002C' after loop condition at line " +
+                                           getToken(0).beginLine);
+                }
+            }
+        )
+        // Use a separate production for update statement that can handle expressions
+        update = ForLoopUpdate()
+    |
+        // For-loop with existing variable: LOOP(i = 0 TILL i < 5, i = i + 1)
+        LOOKAHEAD(<ID> <ASSIGN>)
+        initialization = ForLoopInit()
+        // Error 18: Missing TILL keyword in for-loop
+        (
+            <TILL>
+            | 
+            {
+                Token nextToken = getToken(1);
+                if (nextToken != null && nextToken.kind == RPAREN) {
+                    throw createSyntaxError("Missing 'TILL' keyword and condition in for-loop at line " +
+                                           nextToken.beginLine);
+                } else {
+                    throw createSyntaxError("Expected 'TILL' after loop initialization at line " +
+                                           getToken(0).beginLine);
+                }
+            }
+        )
+        condition = Expression()
+        (
+            <COMMA>
+            | 
+            {
+                Token nextToken = getToken(1);
+                if (nextToken != null && nextToken.kind == RPAREN) {
+                    throw createSyntaxError("Missing '\u002C' and update statement in for-loop at line " +
+                                           nextToken.beginLine);
+                } else {
+                    throw createSyntaxError("Expected '\u002C' after loop condition at line " +
+                                           getToken(0).beginLine);
+                }
+            }
+        )
+        // Use a separate production for update statement that can handle expressions
+        update = ForLoopUpdate()
+    |
+        // While loop: LOOP(i < 5)
+        condition = Expression()
+    )
+    // Error 6: Missing closing parenthesis
+    (
+        <RPAREN>
+        | 
+        {
+            throw createSyntaxError("Missing '\u0029' after loop parameters at line " + getToken(0).beginLine);
+        }
+    )
+    (
+        <LBRACE>
+        | // Error: missing opening brace
+        {
+            throw createSyntaxError("Missing '\u007B' after loop declaration at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    {
+        loopNode = new LoopNodes.LoopNode(condition, initialization, update);
+    }
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        {
+            loopNode.addStatement(statement);
+        }
+    )*
+    (
+        <RBRACE>
+        | // Error: missing closing brace
+        {
+            throw createSyntaxError("Missing '\u007D' at the end of loop at line " +
+                                   getToken(0).beginLine);
+        }
+    )
+    {
+        return loopNode;
+    }
+}
+
+
+CoreNodes.ASTNode SwitchStatement() :
+{
+    ExpressionNodes.ExpressionNode switchExpr;
+    List<SwitchNodes.CaseNode> caseNodes = new ArrayList<>();
+    SwitchNodes.CaseNode singleCase;
+    SwitchNodes.DefaultNode defaultNode = null;
+    Token t;
+}
+{
+    <SWITCH>
+      (
+        <LPAREN>
+        |
+        {
+            throw createSyntaxError(
+                "Missing '\u0028' after SWITCH at line " +
+                getToken(0).beginLine + ", column " + getToken(0).beginColumn
+            );
+        }
+    )
+    
+    // Error 35: Check for empty switch expression
+    (
+        LOOKAHEAD(2)
+        <RPAREN>
+        {
+            throw createSyntaxError(
+                "SWITCH needs an expression to check. " +
+                "Example: SWITCH(choice) {...} " +
+                "At line " + getToken(0).beginLine
+            );
+        }
+    )?
+    
+    switchExpr = Expression()
+    
+    // Check for missing closing parenthesis
+    (
+        <RPAREN>
+        |
+        {
+            throw createSyntaxError(
+                "Missing '\u0029' after SWITCH expression at line " +
+                getToken(0).beginLine
+            );
+        }
+    )
+    
+    <LBRACE>
+        (
+            LOOKAHEAD(3)
+            singleCase = CaseClause() { caseNodes.add(singleCase); }
+        )+
+        [
+            LOOKAHEAD(3)
+            defaultNode = DefaultClause()
+        ]
+    <RBRACE>
+    {
+        return new SwitchNodes.SwitchNode(switchExpr, caseNodes, defaultNode);
+    }
+}
+
+
+SwitchNodes.CaseNode CaseClause() :
+{
+    ExpressionNodes.ExpressionNode caseExpr;
+    List<CoreNodes.ASTNode> statements = new ArrayList<>();
+    CoreNodes.ASTNode stmt;  // temporary variable
+}
+{
+    <CASE> <LPAREN> caseExpr = Expression() <RPAREN>
+    <LBRACE>
+        (
+            LOOKAHEAD(3)
+            stmt = Statement() { statements.add(stmt); }
+        )*
+    <RBRACE>
+    {
+        return new SwitchNodes.CaseNode(caseExpr, statements);
+    }
+}
+
+
+SwitchNodes.DefaultNode DefaultClause() :
+{
+    List<CoreNodes.ASTNode> statements = new ArrayList<>();
+    CoreNodes.ASTNode stmt;
+}
+{
+    <DEFAULT_KWD>
+    <LBRACE>
+        (
+            LOOKAHEAD(3)
+            stmt = Statement() { statements.add(stmt); }
+        )*
+    <RBRACE>
+    {
+        return new SwitchNodes.DefaultNode(statements);
+    }
+}
+
+
+CoreNodes.ASTNode ForLoopInit() :
+{
+    Token varType, varName;
+    ExpressionNodes.ExpressionNode value;
+}
+{
+    (
+        (
+            (
+                varType = <NUMBER_TYPE>
+            |   varType = <LETTER_TYPE>
+            |   varType = <SENTENCE_TYPE>
+            |   varType = <LOGIC_TYPE>
+            )
+            varName = <ID>
+            <ASSIGN>
+            value = Value()
+            {
+                return new DeclarationNodes.VarDeclarationNode(
+                    varType.image, varName.image, value
+                );
+            }
+        )
+    |
+        (
+            varName = <ID>
+            <ASSIGN>
+            value = Value()
+            {
+                return new DeclarationNodes.AssignmentNode(
+                    varName.image, "=", value
+                );
+            }
+        )
+    )
+}
+
+
+CoreNodes.ASTNode ForLoopUpdate() :
+{
+    Token varName, op;
+    ExpressionNodes.ExpressionNode value;
+    CoreNodes.ASTNode update;
+}
+{
+    (
+        // Handle compound assignment: i += 1, i -= 1, etc.
+        varName = <ID>
+        (
+            op = <PLUSEQ>
+            | op = <MINUSEQ>
+            | op = <MULTEQ>
+            | op = <DIVEQ>
+            | op = <MODEQ>
+        )
+        value = Value()
+        {
+            update = new DeclarationNodes.AssignmentNode(varName.image, op.image, value);
+        }
+    |
+        // Handle post-increment: i++
+        varName = <ID> <INCREMENT>
+        {
+            update = new ExpressionNodes.PostIncrementNode(varName.image);
+        }
+    |
+        // Handle post-decrement: i--
+        varName = <ID> <DECREMENT>
+        {
+            update = new ExpressionNodes.PostDecrementNode(varName.image);
+        }
+    |
+        // Handle pre-increment: ++i
+        <INCREMENT> varName = <ID>
+        {
+            update = new ExpressionNodes.PreIncrementNode(varName.image);
+        }
+    |
+        // Handle pre-decrement: --i
+        <DECREMENT> varName = <ID>
+        {
+            update = new ExpressionNodes.PreDecrementNode(varName.image);
+        }
+    |
+        // Handle regular assignment with expression: i = i + 1
+        varName = <ID>
+        <ASSIGN>
+        value = Value()
+        {
+            update = new DeclarationNodes.AssignmentNode(varName.image, "=", value);
+        }
+    )
+    { return update; }
+}
+
+
+CoreNodes.ASTNode NonControlStatement() :
+{
+    CoreNodes.ASTNode statement;
+    Token t, arrayName, funcName;
+    ExpressionNodes.ExpressionNode index, value;
+    Token libName, libFunc;
+    List<ExpressionNodes.ExpressionNode> libArgs;
+    ExpressionNodes.ExpressionNode libArg;
+}
+{
+    (
+        // Library function call as statement: lib.FUNC(args)
+        LOOKAHEAD(<ID> <DOT> (<ID> | <LENGTH_FUNC> | <PUSH_FUNC> | <POP_FUNC> | <SET_FUNC> | <GET_FUNC>) <LPAREN>)
+        statement = LibraryCallStatement()
+    |
+        LOOKAHEAD(2)
+        t = <ID> <INCREMENT>
+        {
+            statement = new DeclarationNodes.IncrementStatementNode(t.image, false);
+        }
+    |
+        LOOKAHEAD(2)
+        t = <ID> <DECREMENT>
+        {
+            statement = new DeclarationNodes.DecrementStatementNode(t.image, false);
+        }
+    |
+        LOOKAHEAD(2)
+        <INCREMENT> t = <ID>
+        {
+            statement = new DeclarationNodes.IncrementStatementNode(t.image, true);
+        }
+    |
+        LOOKAHEAD(2)
+        <DECREMENT> t = <ID>
+        {
+            statement = new DeclarationNodes.DecrementStatementNode(t.image, true);
+        }
+    |
+        // Fixed LOOKAHEAD to properly handle array declarations
+     LOOKAHEAD(
+            (<NUMBER_TYPE> | <LETTER_TYPE> | <SENTENCE_TYPE> | <LOGIC_TYPE>)
+        )
+        statement = VarDeclaration()
+    |
+        LOOKAHEAD(2)
+      t = <BREAK> { statement = new LoopNodes.BreakNode(); }
+    |
+        LOOKAHEAD(2)
+        t = <CONTINUE> { statement = new LoopNodes.ContinueNode(); }
+    |
+        LOOKAHEAD(<RETURN_KWD>)
+        statement = ReturnStatement()
+    |
+        // Function call as statement: name(args)
+        LOOKAHEAD(<ID> <LPAREN>)
+        statement = FunctionCallStatement()
+    |
+        // Try assignment last (since it starts with ID which could be confused with other things)
+        LOOKAHEAD(3)
+        statement = Assignment()
+    |
+        statement = DisplayStatement()
+    |
+        statement = InputStatement()
+    )
+    {
+        // Don't wrap in StatementNode anymore
+        return statement;
+    }
+}
+
+
+ImportNode ImportStatement() :
+{
+    Token libName;
+}
+{
+    <IMPORT_KWD>
+    (
+        libName = <ID>
+    |   libName = <LENGTH_FUNC>
+    |   libName = <PUSH_FUNC>
+    |   libName = <POP_FUNC>
+    |   libName = <SET_FUNC>
+    |   libName = <GET_FUNC>
+    )
+    {
+        ImportNode node = new ImportNode(libName.image);
+        node.setLineNumber(libName.beginLine);
+        return node;
+    }
+}
+
+
+CoreNodes.ASTNode LibraryCallStatement() :
+{
+    Token libName, funcName;
+    List<ExpressionNodes.ExpressionNode> args;
+    ExpressionNodes.ExpressionNode arg;
+}
+{
+    libName = <ID>
+    <DOT>
+    (
+        funcName = <ID>
+    |   funcName = <LENGTH_FUNC>
+    |   funcName = <PUSH_FUNC>
+    |   funcName = <POP_FUNC>
+    |   funcName = <SET_FUNC>
+    |   funcName = <GET_FUNC>
+    )
+    <LPAREN>
+    {
+        args = new ArrayList<ExpressionNodes.ExpressionNode>();
+    }
+    [
+        arg = Value()
+        { args.add(arg); }
+        (
+            <COMMA>
+            arg = Value()
+            { args.add(arg); }
+        )*
+    ]
+    <RPAREN>
+    {
+        LibraryCallNode.LibraryCallExpressionNode callExpr =
+            new LibraryCallNode.LibraryCallExpressionNode(libName.image, funcName.image, args);
+        callExpr.setLineNumber(libName.beginLine);
+        return new LibraryCallNode.LibraryCallStatementNode(callExpr);
+    }
+}
+
+
+CoreNodes.ASTNode VarDeclaration() :
+{
+    Token varType, varName;
+    ExpressionNodes.ExpressionNode value = null;
+    boolean isArray = false;
+    int arrayDimensions = 0;
+    int line = 0;
+    int column = 0;
+}
+{
+    (
+        varType = <NUMBER_TYPE>
+    |   varType = <LETTER_TYPE>
+    |   varType = <SENTENCE_TYPE>
+    |   varType = <LOGIC_TYPE>
+    )
+    {
+        line = varType.beginLine;
+        column = varType.beginColumn;
+    }
+    // Handle multi-dimensional array declarations
+    (
+        // Parse first bracket
+        <LBRACKET>
+        (
+            <RBRACKET>
+            {
+                arrayDimensions++;
+                isArray = true;
+            }
+            |
+            // Error: missing closing bracket
+            {
+                throw createSyntaxError("Missing '\u005D' in array declaration at line " + line);
+            }
+        )
+        // Parse additional brackets
+        (
+            <LBRACKET>
+            (
+                <RBRACKET>
+                {
+                    arrayDimensions++;
+                }
+                |
+                // Error: missing closing bracket
+                {
+                    throw createSyntaxError("Missing '\u005D' in multi-dimensional array declaration at line " + line);
+                }
+            )
+        )*
+    )?
+    
+    // Variable name
+    (
+        varName = <ID>
+    |
+        // Error handling for missing variable name
+        {
+            Token nextToken = getToken(1);
+            String typeStr = varType.image;
+            if (isArray) {
+                typeStr += "[]".repeat(arrayDimensions);
+            }
+            
+            if (nextToken != null) {
+                throw createSyntaxError(
+                    "Missing variable name after type '" + typeStr + 
+                    "' but found '" + nextToken.image + "' at line " + line + 
+                    ", column " + (column + typeStr.length())
+                );
+            } else {
+                throw createSyntaxError(
+                    "Missing variable name after type at line " + line
+                );
+            }
+        }
+    )
+    
+    // Optional assignment
+    [
+        <ASSIGN>
+        (
+            value = Value()
+        |
+            // ERROR 3: Missing value
+            {
+                throw createSyntaxError("Expected value after '=' at line " + varName.beginLine);
+            }
+        )
+    ]
+    {
+        if (isArray) {
+            ArrayDeclarationNodes.ArrayDeclarationNode declNode = 
+                new ArrayDeclarationNodes.ArrayDeclarationNode(
+                    varType.image, 
+                    varName.image, 
+                    value,
+                    arrayDimensions
+                );
+            declNode.setLineNumber(line);
+            return declNode;
+        } else {
+            DeclarationNodes.VarDeclarationNode declNode = 
+                new DeclarationNodes.VarDeclarationNode(
+                    varType.image, 
+                    varName.image, 
+                    value
+                );
+            declNode.setLineNumber(line);
+            return declNode;
+        }
+    }
+}
+
+
+CoreNodes.ASTNode PureDeclaration() :
+{
+    Token varType, varName;
+    int line = 0;
+}
+{
+    (
+        varType = <NUMBER_TYPE>
+    |   varType = <LETTER_TYPE>
+    |   varType = <SENTENCE_TYPE>
+    |   varType = <LOGIC_TYPE>
+    )
+    { line = varType.beginLine; }
+    
+    // ERROR 2: Missing variable name in declaration
+    (
+        varName = <ID>
+    |
+        // ERROR 2: Missing variable name
+        {
+            throw createSyntaxError("Missing variable name after type declaration at line " + line);
+        }
+    )
+    
+    {
+        return new DeclarationNodes.VarDeclarationNode(varType.image, varName.image, null);
+    }
+}
+
+
+ExpressionNodes.ExpressionNode Value() :
+{
+    ExpressionNodes.ExpressionNode result;
+    Token t, typeToken;
+    ExpressionNodes.ExpressionNode sizeExpr;
+    List<ExpressionNodes.ExpressionNode> elements = new ArrayList<>();
+    ExpressionNodes.ExpressionNode element;
+    Token openBracket;
+}
+{
+    (
+        result = Expression()
+    |   t = <CHAR_LITERAL> { result = new ExpressionNodes.LiteralNode(processEscapeSequences(t.image), true); result.setLineNumber(t.beginLine); }
+    |   t = <STRING_LITERAL> { result = new ExpressionNodes.LiteralNode(processEscapeSequences(t.image), true); result.setLineNumber(t.beginLine); }
+    |   t = <TRUE_VAL> { result = new ExpressionNodes.LiteralNode("true"); result.setLineNumber(t.beginLine); }
+    |   t = <FALSE_VAL> { result = new ExpressionNodes.LiteralNode("false"); result.setLineNumber(t.beginLine); }
+    |
+        openBracket = <LBRACKET>  // Capture the opening bracket token
+        (
+            element = Value()
+            {
+                elements.add(element);
+            }
+            (
+                <COMMA>
+                element = Value()
+                {
+                    elements.add(element);
+                }
+            )*
+        )?
+        (
+            <RBRACKET>
+            | // Error: missing closing bracket
+            {
+                throw createSyntaxError("Missing '\u005D' in array literal at line " +
+                                       getToken(1).beginLine);
+            }
+        )
+        {
+            result = new ArrayDeclarationNodes.ArrayLiteralNode(elements);
+            // Set the line number from the opening bracket
+            result.setLineNumber(openBracket.beginLine);
+            
+            // Also ensure all elements have line numbers set
+            for (ExpressionNodes.ExpressionNode elem : elements) {
+                if (elem.getLineNumber() <= 0) {
+                    elem.setLineNumber(openBracket.beginLine);
+                }
+            }
+        }
+    |
+        <NEW>
+        (
+            typeToken = <NUMBER_TYPE>
+        |   typeToken = <LETTER_TYPE>
+        |   typeToken = <SENTENCE_TYPE>
+        |   typeToken = <LOGIC_TYPE>
+        )
+        (
+            <LBRACKET>
+            | // Error: missing opening bracket
+            {
+                throw createSyntaxError("Missing '\u005B' after NEW at line " +
+                                       getToken(1).beginLine);
+            }
+        )
+        sizeExpr = Expression()
+        (
+            <RBRACKET>
+            | // Error: missing closing bracket
+            {
+                throw createSyntaxError("Missing '\u005D' in NEW array at line " +
+                                       getToken(1).beginLine);
+            }
+        )
+        {
+            // Check for additional dimensions: NEW TYPE[3][] or NEW TYPE[3][4]
+            List<ExpressionNodes.ExpressionNode> valueSizeExprs = new ArrayList<>();
+            valueSizeExprs.add(sizeExpr);
+            int valueDims = 1;
+        }
+        // Parse additional dimensions
+        (
+            <LBRACKET>
+            (
+                sizeExpr = Expression()
+                <RBRACKET>
+                {
+                    valueSizeExprs.add(sizeExpr);
+                    valueDims++;
+                }
+                |
+                // Empty brackets for jagged arrays: []
+                <RBRACKET>
+                {
+                    valueSizeExprs.add(null);
+                    valueDims++;
+                }
+            )
+        )*
+        {
+            if (valueDims == 1) {
+                result = new ArrayDeclarationNodes.DynamicArrayNode(
+                    typeToken.image.toUpperCase(),
+                    valueSizeExprs.get(0)
+                );
+            } else {
+                result = new ArrayDeclarationNodes.MultiDimensionalArrayNode(
+                    typeToken.image.toUpperCase(),
+                    valueSizeExprs,
+                    valueDims
+                );
+            }
+            result.setLineNumber(typeToken.beginLine);
+        }
+    )
+    { return result; }
+}
+
+
+ExpressionNodes.ExpressionNode Expression() :
+{
+    ExpressionNodes.ExpressionNode result;
+}
+{
+    result = OrExpression()
+    { return result; }
+}
+
+
+ExpressionNodes.ExpressionNode OrExpression() :
+{
+    ExpressionNodes.ExpressionNode left, right;
+    Token op;
+}
+{
+    left = AndExpression()
+    (
+        // Look ahead for OR operator (both keyword and symbol)
+        op = <OR>
+        right = AndExpression()
+        {
+            left = new ExpressionNodes.BinaryOperationNode("||", left, right);
+        }
+    )*
+    { return left; }
+}
+
+
+ExpressionNodes.ExpressionNode AndExpression() :
+{
+    ExpressionNodes.ExpressionNode left, right;
+    Token op;
+}
+{
+    left = NotExpression()
+    (
+        // Look ahead for AND operator (both keyword and symbol)
+        op = <AND>
+        right = NotExpression()
+        {
+            left = new ExpressionNodes.BinaryOperationNode("&&", left, right);
+        }
+    )*
+    { return left; }
+}
+
+
+ExpressionNodes.ExpressionNode NotExpression() :
+{
+    ExpressionNodes.ExpressionNode operand;
+    Token notToken = null;
+}
+{
+    // Look ahead for NOT operator (keyword or ! symbol)
+    [ notToken = <NOT> | notToken = <BANG> ]
+    operand = ComparisonExpression()
+    {
+        if (notToken != null) {
+            return new ExpressionNodes.UnaryOperationNode("!", operand);
+        }
+        return operand;
+    }
+}
+
+
+ExpressionNodes.ExpressionNode ComparisonExpression() :
+{
+    ExpressionNodes.ExpressionNode left, right = null;
+    Token op = null;
+}
+{
+    left = ConcatExpression()
+    (
+        ( op = <GT>
+        | op = <LT>
+        | op = <GTE>
+        | op = <LTE>
+        | op = <EQ>
+        | op = <NEQ>
+        )
+        right = ConcatExpression()
+        {
+            left = new ExpressionNodes.BinaryOperationNode(op.image, left, right);
+        }
+    )?
+    {
+        return left;
+    }
+}
+
+
+ExpressionNodes.ExpressionNode ConcatExpression() :
+{
+    ExpressionNodes.ExpressionNode result;
+    ExpressionNodes.ExpressionNode right;
+    Token op;
+}
+{
+    result = ArithmeticExpression()
+    (
+        <PLUS>
+        right = ArithmeticExpression()
+        {
+            result = new ExpressionNodes.StringConcatNode(result, right);
+        }
+    )*
+    { return result; }
+}
+
+
+ExpressionNodes.ExpressionNode ArithmeticExpression() :
+{
+    ExpressionNodes.ExpressionNode result;
+    Token op;
+    ExpressionNodes.ExpressionNode right;
+}
+{
+    result = Term()
+    (
+        (op = <PLUS> | op = <MINUS>)
+        right = Term()
+        {
+            result = new ExpressionNodes.BinaryOperationNode(op.image, result, right);
+        }
+    )*
+    { return result; }
+}
+
+
+ExpressionNodes.ExpressionNode Term() :
+{
+    ExpressionNodes.ExpressionNode result;
+    Token op;
+    ExpressionNodes.ExpressionNode right;
+}
+{
+    result = Factor()
+    (
+        (op = <MULTIPLY> | op = <DIVIDE> | op = <MODULUS>)
+        right = Factor()
+        {
+            result = new ExpressionNodes.BinaryOperationNode(op.image, result, right);
+        }
+    )*
+    { return result; }
+}
+
+
+CoreNodes.ASTNode Assignment() :
+{
+    Token varName, op, typeToken;
+    ExpressionNodes.ExpressionNode value;
+    List<ExpressionNodes.ExpressionNode> indices = new ArrayList<ExpressionNodes.ExpressionNode>();
+    ExpressionNodes.ExpressionNode index;
+    int line = 0;
+    int dimensions = 1;
+    List<ExpressionNodes.ExpressionNode> sizeExpressions = new ArrayList<>();
+}
+{
+    varName = <ID>
+    { line = varName.beginLine; }
+    [
+        // Parse all array indices: arr[i][j][k]...
+        (
+            <LBRACKET>
+            index = Expression()
+            {
+                indices.add(index);
+            }
+            (
+                <RBRACKET>
+                | // Missing closing bracket
+                {
+                    throw createSyntaxError("Missing '\u005D' after array index at line " + getToken(0).beginLine);
+                }
+            )
+        )+
+    ]
+    (
+        <ASSIGN>
+        (
+            LOOKAHEAD(<NEW>)
+            <NEW>
+            (
+                typeToken = <NUMBER_TYPE>
+            |   typeToken = <LETTER_TYPE>
+            |   typeToken = <SENTENCE_TYPE>
+            |   typeToken = <LOGIC_TYPE>
+            )
+            // Parse first dimension
+            <LBRACKET> 
+            index = Expression() 
+            <RBRACKET>
+            { 
+                sizeExpressions.add(index);
+                dimensions = 1;
+            }
+            // Parse additional dimensions
+            (
+                <LBRACKET> 
+                (
+                    index = Expression() 
+                    <RBRACKET>
+                    {
+                        sizeExpressions.add(index);
+                        dimensions++;
+                    }
+                    |
+                    // Empty brackets for jagged arrays
+                    <RBRACKET>
+                    {
+                        sizeExpressions.add(null);
+                        dimensions++;
+                    }
+                )
+            )*
+            {
+                // Create appropriate node based on dimensions
+                ExpressionNodes.ExpressionNode newArray;
+                if (dimensions == 1) {
+                    newArray = new ArrayDeclarationNodes.DynamicArrayNode(
+                        typeToken.image.toUpperCase(),
+                        sizeExpressions.get(0),
+                        1
+                    );
+                } else {
+                    newArray = new ArrayDeclarationNodes.MultiDimensionalArrayNode(
+                        typeToken.image.toUpperCase(),
+                        sizeExpressions,
+                        dimensions
+                    );
+                }
+
+                if (indices.isEmpty()) {
+                    ArrayDeclarationNodes.ArrayAssignmentNode assignNode = 
+                        new ArrayDeclarationNodes.ArrayAssignmentNode(varName.image, newArray);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 1) {
+                    ArrayAccessNodes.ArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.ArrayElementAssignmentNode(varName.image, indices.get(0), newArray);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 2) {
+                    ArrayAccessNodes.MultiDimArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.MultiDimArrayElementAssignmentNode(
+                            varName.image, indices.get(0), indices.get(1), newArray);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 3) {
+                    ArrayAccessNodes.TripleDimArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.TripleDimArrayElementAssignmentNode(
+                            varName.image, indices.get(0), indices.get(1), indices.get(2), newArray);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else {
+                    throw createSyntaxError("Multi-dimensional array assignment with " + indices.size() + 
+                                        " dimensions not supported (only up to 3 dimensions) at line " + line);
+                }
+            }
+        |
+            // ERROR 3: Missing value after assignment operator
+            (
+                value = Value()
+            |
+                // ERROR 3: Missing value
+                {
+                    throw createSyntaxError("Expected value after '=' at line " + line);
+                }
+            )
+            {
+                if (indices.isEmpty()) {
+                    // Check if value is an array type
+                    if (value instanceof ArrayDeclarationNodes.ArrayLiteralNode ||
+                        value instanceof ArrayDeclarationNodes.DynamicArrayNode ||
+                        value instanceof ArrayDeclarationNodes.MultiDimensionalArrayNode) {
+                        ArrayDeclarationNodes.ArrayAssignmentNode assignNode = 
+                            new ArrayDeclarationNodes.ArrayAssignmentNode(varName.image, value);
+                        assignNode.setLineNumber(line);
+                        return assignNode;
+                    } else {
+                        DeclarationNodes.AssignmentNode assignNode = 
+                            new DeclarationNodes.AssignmentNode(varName.image, "=", value);
+                        assignNode.setLineNumber(line);
+                        return assignNode;
+                    }
+                } else if (indices.size() == 1) {
+                    ArrayAccessNodes.ArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.ArrayElementAssignmentNode(varName.image, indices.get(0), value);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 2) {
+                    ArrayAccessNodes.MultiDimArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.MultiDimArrayElementAssignmentNode(varName.image, indices.get(0), indices.get(1), value);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 3) {
+                    ArrayAccessNodes.TripleDimArrayElementAssignmentNode assignNode = 
+                        new ArrayAccessNodes.TripleDimArrayElementAssignmentNode(varName.image, indices.get(0), indices.get(1), indices.get(2), value);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else {
+                    throw createSyntaxError("Multi-dimensional array assignment with " + indices.size() + 
+                                        " dimensions not supported (only up to 3 dimensions) at line " + line);
+                }
+            }
+        )
+    |
+        (
+            op = <PLUSEQ> | op = <MINUSEQ> | op = <MULTEQ> | op = <DIVEQ> | op = <MODEQ>
+        )
+        (
+            value = Value()
+        |
+            // ERROR 3: Missing value
+            {
+                throw createSyntaxError("Expected value after '" + op.image + "' at line " + op.beginLine);
+            }
+        )
+        {
+            if (!indices.isEmpty()) {
+                if (indices.size() == 1) {
+                    ArrayAccessNodes.ArrayElementCompoundAssignmentNode assignNode = 
+                        new ArrayAccessNodes.ArrayElementCompoundAssignmentNode(varName.image, indices.get(0), op.image, value);
+                    assignNode.setLineNumber(line);
+                    return assignNode;
+                } else if (indices.size() == 2) {
+                    // For 2D arrays with compound assignment, we need to fetch the value first
+                    // Create a compound assignment for 2D arrays
+                    throw createSyntaxError("Compound assignment for 2D arrays not yet implemented at line " + line);
+                } else if (indices.size() == 3) {
+                    throw createSyntaxError("Compound assignment for 3D arrays not yet implemented at line " + line);
+                } else {
+                    throw createSyntaxError("Compound assignment for multi-dimensional arrays not supported yet at line " + line);
+                }
+            } else {
+                DeclarationNodes.AssignmentNode assignNode = 
+                    new DeclarationNodes.AssignmentNode(varName.image, op.image, value);
+                assignNode.setLineNumber(line);
+                return assignNode;
+            }
+        }
+    )
+}
+
+
+CoreNodes.ASTNode DisplayStatement() :
+{
+    CoreNodes.ASTNode display;
+    ExpressionNodes.ExpressionNode expr;
+    boolean withNewline = false;
+    ExpressionNodes.ExpressionNode concatenatedExpr = null;
+}
+{
+    (
+        <DISPLAY_CMD> { withNewline = false; }
+        |
+        <DISPLAY_NL_CMD> { withNewline = true; }
+    )
+    <LPAREN>
+    
+    // First argument
+    expr = Expression()
+    {
+        concatenatedExpr = expr;
+    }
+
+    // Additional arguments concatenated with +
+    (
+        <PLUS>
+        expr = Expression()
+        {
+            // Create string concatenation node for each additional expression
+            concatenatedExpr = new ExpressionNodes.StringConcatNode(concatenatedExpr, expr);
+        }
+    )*
+
+    <RPAREN>
+    {
+        if (withNewline) {
+            display = new IONodes.DisplayNLNode(concatenatedExpr);
+        } else {
+            display = new IONodes.DisplayNode(concatenatedExpr);
+        }
+        return display;
+    }
+}
+
+
+CoreNodes.ASTNode InputStatement() :
+{
+    Token varName;
+    ExpressionNodes.ExpressionNode index = null;
+}
+{
+    <INPUT_CMD>
+    (
+        <LPAREN>
+        | // Missing opening parenthesis
+        {
+            throw createSyntaxError("Missing '\u0028' after INPUT at line " + getToken(0).beginLine);
+        }
+    )
+    varName = <ID>
+    [
+        <LBRACKET>
+        index = Expression()
+        (
+            <RBRACKET>
+            | // Missing closing bracket
+            {
+                throw createSyntaxError("Missing '\u005D' in array input at line " + getToken(0).beginLine);
+            }
+        )
+    ]
+    (
+        <RPAREN>
+        | // Missing closing parenthesis
+        {
+            throw createSyntaxError("Missing '\u0029' after input parameter at line " + getToken(0).beginLine);
+        }
+    )
+    {
+        if (index != null) {
+            return new ArrayAccessNodes.ArrayElementInputNode(varName.image, index);
+        } else {
+            return new IONodes.InputNode(varName.image);
+        }
+    }
+}
+
+
+ExpressionNodes.ExpressionNode Factor() :
+{
+    Token t, funcName, arrayName;
+    ExpressionNodes.ExpressionNode result;
+    ExpressionNodes.ExpressionNode inner;
+    ExpressionNodes.ExpressionNode index = null;
+    ExpressionNodes.ExpressionNode param1 = null;
+    Token open;
+    List<ExpressionNodes.ExpressionNode> callArgs;
+    Token libName, libFunc;
+    List<ExpressionNodes.ExpressionNode> libArgs;
+    ExpressionNodes.ExpressionNode libArg;
+}
+{
+    (
+        <MINUS> inner = Factor()
+        {
+            result = new ExpressionNodes.UnaryOperationNode("-", inner);
+            result.setLineNumber(inner.getLineNumber());
+        }
+    |
+        // Handle pre-increment and pre-decrement
+        <INCREMENT> t = <ID> 
+        { 
+            result = new ExpressionNodes.PreIncrementNode(t.image);
+            result.setLineNumber(t.beginLine);
+        }
+    |   
+        <DECREMENT> t = <ID> 
+        { 
+            result = new ExpressionNodes.PreDecrementNode(t.image);
+            result.setLineNumber(t.beginLine);
+        }
+    |   t = <NUMBER_LITERAL> { 
+            result = new ExpressionNodes.LiteralNode(t.image);
+            result.setLineNumber(t.beginLine);
+        }
+    |   t = <STRING_LITERAL> { 
+            result = new ExpressionNodes.LiteralNode(processEscapeSequences(t.image), true);
+            result.setLineNumber(t.beginLine);
+        }
+    |   t = <CHAR_LITERAL> { 
+            result = new ExpressionNodes.LiteralNode(processEscapeSequences(t.image), true);
+            result.setLineNumber(t.beginLine);
+        }
+    |   t = <TRUE_VAL> { 
+            result = new ExpressionNodes.LiteralNode("true");
+            result.setLineNumber(t.beginLine);
+        }
+    |   t = <FALSE_VAL> { 
+            result = new ExpressionNodes.LiteralNode("false");
+            result.setLineNumber(t.beginLine);
+        }
+    |
+        // Handle built-in array functions used standalone: GET(...), SET(...), LENGTH(...), PUSH(...), POP(...)
+        (
+            t = <GET_FUNC>
+        |   t = <SET_FUNC>
+        |   t = <LENGTH_FUNC>
+        |   t = <PUSH_FUNC>
+        |   t = <POP_FUNC>
+        )
+        <LPAREN>
+        {
+            libArgs = new ArrayList<ExpressionNodes.ExpressionNode>();
+        }
+        [
+            libArg = Value()
+            { libArgs.add(libArg); }
+            (
+                <COMMA>
+                libArg = Value()
+                { libArgs.add(libArg); }
+            )*
+        ]
+        <RPAREN>
+        {
+            result = new LibraryCallNode.LibraryCallExpressionNode("arrays", t.image.toUpperCase(), libArgs);
+            result.setLineNumber(t.beginLine);
+        }
+    |
+        // Plain variable, function call, library call, array access, or post-increment/decrement
+        t = <ID>
+        (
+            // Check if it's a library call or variable: lib.FUNC(args) or lib.VAR
+            LOOKAHEAD(<DOT> (<ID> | <LENGTH_FUNC> | <PUSH_FUNC> | <POP_FUNC> | <SET_FUNC> | <GET_FUNC>))
+            <DOT>
+            (
+                libFunc = <ID>
+            |   libFunc = <LENGTH_FUNC>
+            |   libFunc = <PUSH_FUNC>
+            |   libFunc = <POP_FUNC>
+            |   libFunc = <SET_FUNC>
+            |   libFunc = <GET_FUNC>
+            )
+            (
+                // Library function call: lib.FUNC(args)
+                LOOKAHEAD(<LPAREN>)
+                <LPAREN>
+                {
+                    libArgs = new ArrayList<ExpressionNodes.ExpressionNode>();
+                }
+                [
+                    libArg = Value()
+                    { libArgs.add(libArg); }
+                    (
+                        <COMMA>
+                        libArg = Value()
+                        { libArgs.add(libArg); }
+                    )*
+                ]
+                <RPAREN>
+                {
+                    result = new LibraryCallNode.LibraryCallExpressionNode(t.image, libFunc.image, libArgs);
+                    result.setLineNumber(t.beginLine);
+                }
+            |
+                // Library variable access: lib.VAR (e.g., math.PI)
+                {
+                    result = new LibraryCallNode.LibraryVariableNode(t.image, libFunc.image);
+                    result.setLineNumber(t.beginLine);
+                }
+            )
+            |
+            // Check if it's a function call: name(args)
+            LOOKAHEAD(<LPAREN>)
+            <LPAREN>
+            {
+                callArgs = new ArrayList<ExpressionNodes.ExpressionNode>();
+            }
+            [
+                result = Value()
+                { callArgs.add(result); }
+                (
+                    <COMMA>
+                    result = Value()
+                    { callArgs.add(result); }
+                )*
+            ]
+            <RPAREN>
+            {
+                result = new FunctionNodes.FunctionCallNode(t.image, callArgs);
+                result.setLineNumber(t.beginLine);
+            }
+            |
+            // Check if it's followed by array access
+            LOOKAHEAD(<LBRACKET>)
+            <LBRACKET>
+            index = Expression()
+            (
+                <RBRACKET>
+                | // Missing closing bracket
+                {
+                    throw createSyntaxError("Missing '\u005D' in array access at line " + getToken(0).beginLine);
+                }
+            )
+            {
+                result = new ArrayAccessNodes.ArrayAccessNode(t.image, index);
+                result.setLineNumber(t.beginLine);
+            }
+            // Handle additional bracket accesses for multi-dimensional arrays: arr[i][j][k]...
+            (
+                LOOKAHEAD(<LBRACKET>)
+                <LBRACKET>
+                index = Expression()
+                (
+                    <RBRACKET>
+                    | // Missing closing bracket
+                    {
+                        throw createSyntaxError("Missing '\u005D' in multi-dimensional array access at line " + getToken(0).beginLine);
+                    }
+                )
+                {
+                    result = new ArrayAccessNodes.MultiDimArrayAccessNode(result, index);
+                    result.setLineNumber(t.beginLine);
+                }
+            )*
+            |
+            // Check if it's followed by post-increment
+            LOOKAHEAD(<INCREMENT>)
+            <INCREMENT>
+            {
+                result = new ExpressionNodes.PostIncrementNode(t.image);
+                result.setLineNumber(t.beginLine);
+            }
+            |
+            // Check if it's followed by post-decrement
+            LOOKAHEAD(<DECREMENT>)
+            <DECREMENT>
+            {
+                result = new ExpressionNodes.PostDecrementNode(t.image);
+                result.setLineNumber(t.beginLine);
+            }
+            |
+            // Just a plain variable
+            {
+                result = new ExpressionNodes.VariableNode(t.image);
+                result.setLineNumber(t.beginLine);
+            }
+        )
+    |
+        open = <LPAREN>
+        inner = Expression()
+        (
+            <RPAREN>
+            {
+                result = inner;
+                // inner already has its line number from Expression()
+            }
+        |
+            LOOKAHEAD(<RBRACKET>)
+            <RBRACKET>
+            {
+                throw createSyntaxError(
+                    "Mismatched symbols: Expected '\u0029' to match '\u0028' at line " +
+                    open.beginLine + " but found '\u005D' at line " + getToken(0).beginLine
+                );
+            }
+        |
+            LOOKAHEAD(<RBRACE>)
+            <RBRACE>
+            {
+                throw createSyntaxError(
+                    "Mismatched symbols: Expected '\u0029' to match '\u0028' at line " +
+                    open.beginLine + " but found '\u007D' at line " + getToken(0).beginLine
+                );
+            }
+        )
+    |   
+        // Braces with error checking  
+        open = <LBRACE>
+        inner = Expression()
+        (
+            <RBRACE> { 
+                result = inner;
+                // inner already has its line number from Expression()
+            }
+        |
+            LOOKAHEAD(<RPAREN>) <RPAREN>
+            {
+                throw createSyntaxError(
+                    "Mismatched symbols: Expected '\u007D' to match '\u007B' at line " + 
+                    open.beginLine + " but found '\u0029' at line " + getToken(0).beginLine
+                );
+            }
+        |
+            LOOKAHEAD(<RBRACKET>) <RBRACKET>
+            {
+                throw createSyntaxError(
+                    "Mismatched symbols: Expected '\u007D' to match '\u007B' at line " + 
+                    open.beginLine + " but found '\u005D' at line " + getToken(0).beginLine
+                );
+            }
+        
+        )
+    )
+    { return result; }
+}
+
+
+CoreNodes.ASTNode FunctionDeclaration() :
+{
+    Token funcName, paramType, paramName;
+    ExpressionNodes.ExpressionNode defaultValue = null;
+    List<FunctionNodes.FunctionParameter> params = new ArrayList<FunctionNodes.FunctionParameter>();
+    List<CoreNodes.ASTNode> body = new ArrayList<CoreNodes.ASTNode>();
+    CoreNodes.ASTNode statement;
+    String returnType = null;
+    Token returnTypeToken;
+}
+{
+    <FUNCTION_KWD>
+    funcName = <ID>
+    <LPAREN>
+    [
+        // First parameter
+        (
+            paramType = <NUMBER_TYPE>
+        |   paramType = <LETTER_TYPE>
+        |   paramType = <SENTENCE_TYPE>
+        |   paramType = <LOGIC_TYPE>
+        )
+        paramName = <ID>
+        { defaultValue = null; }
+        [
+            <ASSIGN>
+            defaultValue = Value()
+        ]
+        {
+            params.add(new FunctionNodes.FunctionParameter(paramType.image, paramName.image, defaultValue));
+        }
+        // Additional parameters
+        (
+            <COMMA>
+            (
+                paramType = <NUMBER_TYPE>
+            |   paramType = <LETTER_TYPE>
+            |   paramType = <SENTENCE_TYPE>
+            |   paramType = <LOGIC_TYPE>
+            )
+            paramName = <ID>
+            { defaultValue = null; }
+            [
+                <ASSIGN>
+                defaultValue = Value()
+            ]
+            {
+                params.add(new FunctionNodes.FunctionParameter(paramType.image, paramName.image, defaultValue));
+            }
+        )*
+    ]
+    <RPAREN>
+    <LBRACE>
+    (
+        LOOKAHEAD(3)
+        statement = Statement()
+        { body.add(statement); }
+    )*
+    <RBRACE>
+    [
+        <RETURNS_KWD>
+        (
+            returnTypeToken = <NUMBER_TYPE>
+        |   returnTypeToken = <LETTER_TYPE>
+        |   returnTypeToken = <SENTENCE_TYPE>
+        |   returnTypeToken = <LOGIC_TYPE>
+        )
+        { returnType = returnTypeToken.image.toUpperCase(); }
+    ]
+    <DOT>
+    {
+        FunctionNodes.FunctionDeclarationNode funcNode =
+            new FunctionNodes.FunctionDeclarationNode(funcName.image, params, body, returnType);
+        funcNode.setLineNumber(funcName.beginLine);
+        return funcNode;
+    }
+}
+
+
+CoreNodes.ASTNode FunctionCallStatement() :
+{
+    Token funcName;
+    List<ExpressionNodes.ExpressionNode> args = new ArrayList<ExpressionNodes.ExpressionNode>();
+    ExpressionNodes.ExpressionNode arg;
+}
+{
+    funcName = <ID>
+    <LPAREN>
+    [
+        arg = Value()
+        { args.add(arg); }
+        (
+            <COMMA>
+            arg = Value()
+            { args.add(arg); }
+        )*
+    ]
+    <RPAREN>
+    {
+        FunctionNodes.FunctionCallNode callNode = new FunctionNodes.FunctionCallNode(funcName.image, args);
+        callNode.setLineNumber(funcName.beginLine);
+        FunctionNodes.FunctionCallStatementNode stmtNode = new FunctionNodes.FunctionCallStatementNode(callNode);
+        stmtNode.setLineNumber(funcName.beginLine);
+        return stmtNode;
+    }
+}
+
+
+CoreNodes.ASTNode ReturnStatement() :
+{
+    ExpressionNodes.ExpressionNode expr = null;
+    Token t;
+}
+{
+    t = <RETURN_KWD>
+    [
+        LOOKAHEAD(2)
+        expr = Value()
+    ]
+    {
+        FunctionNodes.ReturnNode returnNode = new FunctionNodes.ReturnNode(expr);
+        returnNode.setLineNumber(t.beginLine);
+        return returnNode;
+    }
+}
+

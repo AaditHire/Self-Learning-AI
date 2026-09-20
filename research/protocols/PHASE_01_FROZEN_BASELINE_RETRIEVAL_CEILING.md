@@ -1,7 +1,8 @@
-# Phase 1 protocol draft — Frozen Baseline + Retrieval Ceiling
+# Phase 1 protocol — Frozen Baseline + Documentation Ceiling
 
-Status: **DRAFT / DO NOT EXECUTE**  
-Requires explicit user approval and protocol freeze.
+Status: **FROZEN BEFORE INFERENCE — 2026-09-20T11:55:48+05:30**
+Execution authorized by the user. Machine-readable configuration SHA-256:
+`7a6ab3e3fcd335be8674a22dde74d137b7c04b5632eabea3229b7f9319fc7584`.
 
 ## Objective
 
@@ -29,26 +30,31 @@ cannot be interpreted as persistent learning.
 
 ## Inputs
 
-Planned inputs are a pinned compiler snapshot, a frozen unseen GOCO benchmark,
-a trusted documentation corpus, an immutable base-model snapshot, fixed prompts,
-and fixed inference configurations. None is frozen or executed yet.
+Inputs are the pinned compiler snapshot, the 24-task frozen evaluation split,
+the trusted documentation snapshot, the immutable base-model snapshot, fixed
+prompt files, and `research/protocols/phase1_inference_config.json`.
 
 ## Exact model/revision
 
-Planned model: `Qwen/Qwen2.5-Coder-1.5B-Instruct`. Exact revision and file hashes
-are TODO and must be frozen before experiment IDs are assigned.
+`Qwen/Qwen2.5-Coder-1.5B-Instruct` at Hub commit
+`2e1fd397ee46e1388853d2af2c993145b0f1098a`. The safetensors SHA-256 is
+`c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8`.
+Inference uses unquantized FP16 on CUDA with all gradients disabled.
 
 ## Exact dataset/manifests
 
-TODO. Benchmark, documentation-corpus, prompt, and split manifests must be
-created, audited, hashed, and frozen before execution.
+The benchmark contains 8 development, 24 frozen-evaluation, and 8 sealed
+final-paper tasks across eight families. Exact hashes are in
+`research/manifests/phase1_benchmark.json`. The documentation SHA-256 is
+`e9fca4fc1cea7737923e7429a3c7d46370f1c11bd794e55680813a7536cdc5c4`.
 
 ## Compiler revision
 
 Planned source is GOCO commit
 `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`, compiler Git tree
-`f51973617cc3da8c78de88c668d8de6959575d6d`. The extracted build hash remains
-TODO pending conformance testing.
+`f51973617cc3da8c78de88c668d8de6959575d6d`. The Temurin 25.0.1 runtime JAR
+SHA-256 is
+`c6f45759930438dd4ae7bfbff298e9c7242604582d29da04210f15377f2be879`.
 
 ## Training configuration
 
@@ -102,8 +108,11 @@ The model must never see hidden tests. A compile-only pass is insufficient.
 - paired difference and uncertainty interval between conditions;
 - inference time, prompt tokens, completion tokens, and compiler failure class.
 
-Exact decoding and statistical procedures remain TODO and must be frozen before
-assigning experiment IDs.
+Primary inference is greedy (`do_sample=false`, one beam), with at most 8,192
+input tokens and 512 new tokens, EOS stopping, and no retry. The paired effect
+is the docs-minus-baseline task pass-rate difference. Its 95% interval uses
+10,000 paired task bootstrap resamples with seed 20260920. A two-sided exact
+McNemar test is reported on discordant pairs and interpreted cautiously.
 
 ## Expected outcomes
 

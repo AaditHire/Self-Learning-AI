@@ -1,0 +1,356 @@
+[
+  {
+    "task_id": "DEV-EV-001",
+    "split": "development",
+    "family": "expressions_variables",
+    "difficulty": "basic",
+    "template_id": "rectangle_metrics",
+    "prompt": "Read one SENTENCE containing width and height separated by one space. Use strings.SPLIT and strings.TO_NUMBER to obtain the two NUMBER values. Print the rectangle area on the first line and perimeter on the second line. Print no labels."
+  },
+  {
+    "task_id": "DEV-CD-001",
+    "split": "development",
+    "family": "conditionals",
+    "difficulty": "basic",
+    "template_id": "parity_branch",
+    "prompt": "Read one NUMBER integer. Print EVEN when it is divisible by 2; otherwise print ODD."
+  },
+  {
+    "task_id": "DEV-LP-001",
+    "split": "development",
+    "family": "loops",
+    "difficulty": "basic",
+    "template_id": "sum_squares",
+    "prompt": "Read a nonnegative NUMBER integer n. Using a LOOP, print the sum of the squares from 1 through n. Print only the result. ",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "DEV-FN-001",
+    "split": "development",
+    "family": "functions",
+    "difficulty": "basic",
+    "template_id": "cube_function",
+    "prompt": "Define and use a FUNCTION that returns the cube of a NUMBER. Read one NUMBER and print its cube. Print only the result.",
+    "required_regex": ["\\bFUNCTION\\b", "\\bRETURNS\\s+NUMBER\\b"]
+  },
+  {
+    "task_id": "DEV-AR-001",
+    "split": "development",
+    "family": "arrays",
+    "difficulty": "basic",
+    "template_id": "minimum_three_array",
+    "prompt": "Read one SENTENCE containing three numbers separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER, place them in a NUMBER array, and print the smallest value. Use array indexing and a LOOP.",
+    "required_regex": ["NUMBER\\s*\\[\\s*\\]", "\\bLOOP\\b"]
+  },
+  {
+    "task_id": "DEV-ST-001",
+    "split": "development",
+    "family": "strings",
+    "difficulty": "basic",
+    "template_id": "builtin_reverse",
+    "prompt": "Read one SENTENCE and print it reversed using the strings library. Print only the reversed text.",
+    "required_regex": ["IMPORT\\s+strings", "strings\\.REVERSE"]
+  },
+  {
+    "task_id": "DEV-IO-001",
+    "split": "development",
+    "family": "input_output",
+    "difficulty": "basic",
+    "template_id": "echo_sentence",
+    "prompt": "Read one SENTENCE and print exactly that sentence on one line, with no added label.",
+    "required_regex": ["\\bINPUT\\s*\\(", "\\bDISPLAYNL\\s*\\("]
+  },
+  {
+    "task_id": "DEV-CP-001",
+    "split": "development",
+    "family": "composition_algorithms",
+    "difficulty": "structural",
+    "template_id": "repeated_product",
+    "prompt": "Read a nonnegative NUMBER integer n and compute n factorial using iteration. Print only the result.",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-EV-001",
+    "split": "frozen_evaluation",
+    "family": "expressions_variables",
+    "difficulty": "basic",
+    "template_id": "quadratic_linear_mix",
+    "prompt": "Read one SENTENCE containing x and y separated by one space. Convert both with strings.SPLIT and strings.TO_NUMBER, then print x*x + 3*y. Print only the result."
+  },
+  {
+    "task_id": "EVAL-EV-002",
+    "split": "frozen_evaluation",
+    "family": "expressions_variables",
+    "difficulty": "structural",
+    "template_id": "temperature_transform",
+    "prompt": "Read a NUMBER Celsius temperature and print its Fahrenheit value using c*9/5+32. Print only the result."
+  },
+  {
+    "task_id": "EVAL-EV-003",
+    "split": "frozen_evaluation",
+    "family": "expressions_variables",
+    "difficulty": "compositional",
+    "template_id": "discounted_total",
+    "prompt": "Read one SENTENCE containing price, quantity, and discountPercent separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER, then print price*quantity*(1-discountPercent/100). Print only the result."
+  },
+  {
+    "task_id": "EVAL-CD-001",
+    "split": "frozen_evaluation",
+    "family": "conditionals",
+    "difficulty": "basic",
+    "template_id": "maximum_three",
+    "prompt": "Read one SENTENCE containing three numbers separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER and print the greatest value. Print only the result.",
+    "required_regex": ["\\bIF\\s*\\("]
+  },
+  {
+    "task_id": "EVAL-CD-002",
+    "split": "frozen_evaluation",
+    "family": "conditionals",
+    "difficulty": "structural",
+    "template_id": "sign_classification",
+    "prompt": "Read one NUMBER. Print NEGATIVE if it is below zero, ZERO if it equals zero, and POSITIVE otherwise.",
+    "required_regex": ["\\bIF\\s*\\(", "\\bELSE"]
+  },
+  {
+    "task_id": "EVAL-CD-003",
+    "split": "frozen_evaluation",
+    "family": "conditionals",
+    "difficulty": "compositional",
+    "template_id": "triangle_classification",
+    "prompt": "Read one SENTENCE containing three positive side lengths separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER. If they cannot form a triangle print INVALID. Otherwise print EQUILATERAL, ISOSCELES, or SCALENE. Print exactly one label.",
+    "required_regex": ["\\bIF\\s*\\(", "\\bAND\\b"]
+  },
+  {
+    "task_id": "EVAL-LP-001",
+    "split": "frozen_evaluation",
+    "family": "loops",
+    "difficulty": "basic",
+    "template_id": "sum_even_range",
+    "prompt": "Read a nonnegative NUMBER integer n. Using a LOOP, print the sum of all even integers from 1 through n. Print only the result.",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-LP-002",
+    "split": "frozen_evaluation",
+    "family": "loops",
+    "difficulty": "structural",
+    "template_id": "iterative_power",
+    "prompt": "Read one SENTENCE containing a NUMBER base and nonnegative integer exponent separated by one space. Convert them with strings.SPLIT and strings.TO_NUMBER. Using a LOOP, compute base raised to exponent and print the result.",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-LP-003",
+    "split": "frozen_evaluation",
+    "family": "loops",
+    "difficulty": "compositional",
+    "template_id": "square_sequence",
+    "prompt": "Read a nonnegative NUMBER integer n. Using a LOOP, print i*i on its own line for every integer i from 1 through n. For n=0 print nothing.",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-FN-001",
+    "split": "frozen_evaluation",
+    "family": "functions",
+    "difficulty": "basic",
+    "template_id": "absolute_difference_function",
+    "prompt": "Define and use a FUNCTION that returns the absolute difference of two NUMBER values. Read one SENTENCE containing the two numbers separated by a space, convert them with strings.SPLIT and strings.TO_NUMBER, and print the function result.",
+    "required_regex": ["\\bFUNCTION\\b", "\\bRETURN\\b", "\\bRETURNS\\s+NUMBER\\b"]
+  },
+  {
+    "task_id": "EVAL-FN-002",
+    "split": "frozen_evaluation",
+    "family": "functions",
+    "difficulty": "structural",
+    "template_id": "nested_function_composition",
+    "prompt": "Define a FUNCTION square(x) and a second FUNCTION sumOfSquares(a,b) that calls square for both arguments. Read one SENTENCE containing two numbers separated by a space, convert them with strings.SPLIT and strings.TO_NUMBER, and print sumOfSquares(a,b).",
+    "required_regex": ["\\bFUNCTION\\s+square\\b", "\\bFUNCTION\\s+sumOfSquares\\b", "square\\s*\\(", "\\bRETURNS\\s+NUMBER\\b"]
+  },
+  {
+    "task_id": "EVAL-FN-003",
+    "split": "frozen_evaluation",
+    "family": "functions",
+    "difficulty": "compositional",
+    "template_id": "tax_function",
+    "prompt": "Define and use a FUNCTION totalWithTax(amount, ratePercent) that returns amount*(1+ratePercent/100). Read one SENTENCE containing amount and ratePercent separated by a space, convert them with strings.SPLIT and strings.TO_NUMBER, and print the result.",
+    "required_regex": ["\\bFUNCTION\\b", "\\bRETURN\\b", "\\bRETURNS\\s+NUMBER\\b"]
+  },
+  {
+    "task_id": "EVAL-AR-001",
+    "split": "frozen_evaluation",
+    "family": "arrays",
+    "difficulty": "basic",
+    "template_id": "array_sum_four",
+    "prompt": "Read one SENTENCE containing four numbers separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER, create a NUMBER array, use a LOOP and array indexing to sum its elements, and print the sum.",
+    "required_regex": ["NUMBER\\s*\\[\\s*\\]", "\\bLOOP\\b", "\\[[^]]+\\]"]
+  },
+  {
+    "task_id": "EVAL-AR-002",
+    "split": "frozen_evaluation",
+    "family": "arrays",
+    "difficulty": "structural",
+    "template_id": "array_reverse_three",
+    "prompt": "Read one SENTENCE containing three numbers separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER into an array. Print the values in reverse order, one per line, using array indexing and a LOOP.",
+    "required_regex": ["NUMBER\\s*\\[\\s*\\]", "\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-AR-003",
+    "split": "frozen_evaluation",
+    "family": "arrays",
+    "difficulty": "compositional",
+    "template_id": "array_threshold_count",
+    "prompt": "Read one SENTENCE containing five data numbers and then one threshold, all separated by spaces. Convert them with strings.SPLIT and strings.TO_NUMBER. Put the five data values in an array, then use a LOOP to count how many are strictly greater than the threshold. Print the count.",
+    "required_regex": ["NUMBER\\s*\\[\\s*\\]", "\\bLOOP\\b", "\\bIF\\s*\\("]
+  },
+  {
+    "task_id": "EVAL-ST-001",
+    "split": "frozen_evaluation",
+    "family": "strings",
+    "difficulty": "basic",
+    "template_id": "length_and_upper",
+    "prompt": "Read one SENTENCE. Using the strings library, print its length on the first line and its uppercase form on the second line.",
+    "required_regex": ["IMPORT\\s+strings", "strings\\.LENGTH", "strings\\.UPPER"]
+  },
+  {
+    "task_id": "EVAL-ST-002",
+    "split": "frozen_evaluation",
+    "family": "strings",
+    "difficulty": "structural",
+    "template_id": "palindrome_scan",
+    "prompt": "Read a lowercase SENTENCE with no spaces. Use a LOOP and the strings library to print PALINDROME if it reads the same backward, otherwise print NOT PALINDROME.",
+    "required_regex": ["IMPORT\\s+strings", "\\bLOOP\\b", "strings\\.CHARAT"]
+  },
+  {
+    "task_id": "EVAL-ST-003",
+    "split": "frozen_evaluation",
+    "family": "strings",
+    "difficulty": "compositional",
+    "template_id": "substring_count",
+    "prompt": "Read one SENTENCE in the form text|fragment, with no pipe inside either value. Split at the pipe using the strings library and print how many non-overlapping occurrences of fragment appear in text.",
+    "required_regex": ["IMPORT\\s+strings", "strings\\.COUNT"]
+  },
+  {
+    "task_id": "EVAL-IO-001",
+    "split": "frozen_evaluation",
+    "family": "input_output",
+    "difficulty": "basic",
+    "template_id": "name_age_format",
+    "prompt": "Read one SENTENCE in the form name|age. Split at the pipe, convert age with strings.TO_NUMBER, and print one line in the exact form name:age with no spaces around the colon.",
+    "required_regex": ["\\bINPUT\\s*\\(", "\\bDISPLAYNL\\s*\\("]
+  },
+  {
+    "task_id": "EVAL-IO-002",
+    "split": "frozen_evaluation",
+    "family": "input_output",
+    "difficulty": "structural",
+    "template_id": "swap_sentences",
+    "prompt": "Read one SENTENCE in the form first|second. Split at the pipe, then print second on the first output line and first on the second output line, with no labels.",
+    "required_regex": ["\\bINPUT\\s*\\(", "\\bDISPLAYNL\\s*\\("]
+  },
+  {
+    "task_id": "EVAL-IO-003",
+    "split": "frozen_evaluation",
+    "family": "input_output",
+    "difficulty": "compositional",
+    "template_id": "letter_repeat",
+    "prompt": "Read one SENTENCE in the form character|count, where character is one letter and count is 0 through 5. Split at the pipe, obtain the LETTER with strings.CHARAT and convert count with strings.TO_NUMBER. Print the letter count times on one line with no separators. Use a LOOP.",
+    "required_regex": ["\\bLETTER\\b", "\\bINPUT\\s*\\(", "\\bLOOP\\b"]
+  },
+  {
+    "task_id": "EVAL-CP-001",
+    "split": "frozen_evaluation",
+    "family": "composition_algorithms",
+    "difficulty": "structural",
+    "template_id": "divisor_scan_gcd",
+    "prompt": "Read one SENTENCE containing two positive integers separated by a space. Convert them with strings.SPLIT and strings.TO_NUMBER, use a LOOP to test candidate divisors, and print their greatest common divisor.",
+    "required_regex": ["\\bLOOP\\b", "%"]
+  },
+  {
+    "task_id": "EVAL-CP-002",
+    "split": "frozen_evaluation",
+    "family": "composition_algorithms",
+    "difficulty": "compositional",
+    "template_id": "prime_classification",
+    "prompt": "Read a nonnegative NUMBER integer n. Print PRIME if n is prime and NOT PRIME otherwise. Test divisors with a LOOP.",
+    "required_regex": ["\\bLOOP\\b", "\\bIF\\s*\\(", "%"]
+  },
+  {
+    "task_id": "EVAL-CP-003",
+    "split": "frozen_evaluation",
+    "family": "composition_algorithms",
+    "difficulty": "compositional",
+    "template_id": "decimal_digit_sum",
+    "prompt": "Read a nonnegative NUMBER integer n. Using a LOOP and the math library, print the sum of its decimal digits. For n=0 print 0.",
+    "required_regex": ["IMPORT\\s+math", "\\bLOOP\\b", "math\\.FLOOR"]
+  },
+  {
+    "task_id": "FINAL-EV-001",
+    "split": "final_paper",
+    "family": "expressions_variables",
+    "difficulty": "structural",
+    "template_id": "weighted_average",
+    "prompt": "Read one SENTENCE containing three numbers separated by spaces. Convert them and print 0.2 times the first plus 0.3 times the second plus 0.5 times the third."
+  },
+  {
+    "task_id": "FINAL-CD-001",
+    "split": "final_paper",
+    "family": "conditionals",
+    "difficulty": "compositional",
+    "template_id": "median_three",
+    "prompt": "Read one SENTENCE containing three distinct numbers separated by spaces. Convert them and print the middle value.",
+    "required_regex": ["\\bIF\\s*\\("]
+  },
+  {
+    "task_id": "FINAL-LP-001",
+    "split": "final_paper",
+    "family": "loops",
+    "difficulty": "structural",
+    "template_id": "sum_odd_range",
+    "prompt": "Read a nonnegative NUMBER integer n and use a LOOP to print the sum of odd integers from 1 through n.",
+    "required_regex": ["\\bLOOP\\b"]
+  },
+  {
+    "task_id": "FINAL-FN-001",
+    "split": "final_paper",
+    "family": "functions",
+    "difficulty": "compositional",
+    "template_id": "recursive_sum_to_n",
+    "prompt": "Define and use a FUNCTION that uses a LOOP to return the sum from 1 through a nonnegative integer n. Read n and print the result.",
+    "required_regex": ["\\bFUNCTION\\b", "\\bRETURNS\\s+NUMBER\\b"]
+  },
+  {
+    "task_id": "FINAL-AR-001",
+    "split": "final_paper",
+    "family": "arrays",
+    "difficulty": "compositional",
+    "template_id": "rotate_four",
+    "prompt": "Read one SENTENCE containing four numbers separated by spaces. Convert them into an array and print them rotated left by one position, one per line. Use a LOOP.",
+    "required_regex": ["NUMBER\\s*\\[\\s*\\]", "\\bLOOP\\b"]
+  },
+  {
+    "task_id": "FINAL-ST-001",
+    "split": "final_paper",
+    "family": "strings",
+    "difficulty": "compositional",
+    "template_id": "vowel_count",
+    "prompt": "Read a lowercase SENTENCE and use a LOOP plus the strings library to count and print its vowels.",
+    "required_regex": ["IMPORT\\s+strings", "\\bLOOP\\b", "strings\\.CHARAT"]
+  },
+  {
+    "task_id": "FINAL-IO-001",
+    "split": "final_paper",
+    "family": "input_output",
+    "difficulty": "structural",
+    "template_id": "three_line_rotation",
+    "prompt": "Read one SENTENCE in the form a|b|c. Split at pipes and print c, then a, then b on separate lines.",
+    "required_regex": ["\\bINPUT\\s*\\(", "\\bDISPLAYNL\\s*\\("]
+  },
+  {
+    "task_id": "FINAL-CP-001",
+    "split": "final_paper",
+    "family": "composition_algorithms",
+    "difficulty": "compositional",
+    "template_id": "least_common_multiple",
+    "prompt": "Read one SENTENCE containing two positive integers separated by a space. Convert them and print their least common multiple using iteration.",
+    "required_regex": ["\\bLOOP\\b"]
+  }
+]

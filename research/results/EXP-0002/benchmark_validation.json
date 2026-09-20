@@ -1,0 +1,1746 @@
+{
+  "summary": {
+    "task_count": 40,
+    "split_counts": {
+      "development": 8,
+      "final_paper": 8,
+      "frozen_evaluation": 24
+    },
+    "family_counts": {
+      "arrays": 5,
+      "composition_algorithms": 5,
+      "conditionals": 5,
+      "expressions_variables": 5,
+      "functions": 5,
+      "input_output": 5,
+      "loops": 5,
+      "strings": 5
+    },
+    "reference_failures": 0,
+    "sealed_final_tasks_not_run": 8,
+    "unique_template_ids": 40,
+    "exact_duplicate_prompts": 0,
+    "maximum_cross_split_prompt_token_jaccard": {
+      "left": "DEV-LP-001",
+      "right": "EVAL-LP-001",
+      "prompt_token_jaccard": 0.8095238095238095
+    }
+  },
+  "hashes": {
+    "tasks_canonical_sha256": "7d317c6baab6746d27b9b6c56bc114c64224957f4f5a28a78789bcdd617be809",
+    "hidden_tests_canonical_sha256": "20fed5f1f4df72479c7d86776a926fe8572afd72d161857de1f28e44cf49c7fd",
+    "reference_solutions_canonical_sha256": "f2cc07b9f798f7a9c58f883519864607312059cbe3ff94f4835bfd0b06e4a74a"
+  },
+  "highest_cross_split_similarities": [
+    {
+      "left": "DEV-LP-001",
+      "right": "EVAL-LP-001",
+      "prompt_token_jaccard": 0.8095238095238095
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-AR-001",
+      "prompt_token_jaccard": 0.696969696969697
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-AR-002",
+      "prompt_token_jaccard": 0.6666666666666666
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-CD-001",
+      "prompt_token_jaccard": 0.6451612903225806
+    },
+    {
+      "left": "EVAL-LP-001",
+      "right": "FINAL-LP-001",
+      "prompt_token_jaccard": 0.625
+    },
+    {
+      "left": "DEV-LP-001",
+      "right": "FINAL-LP-001",
+      "prompt_token_jaccard": 0.6086956521739131
+    },
+    {
+      "left": "EVAL-CD-001",
+      "right": "FINAL-CD-001",
+      "prompt_token_jaccard": 0.6
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-AR-003",
+      "prompt_token_jaccard": 0.5348837209302325
+    },
+    {
+      "left": "EVAL-CP-001",
+      "right": "FINAL-CP-001",
+      "prompt_token_jaccard": 0.5151515151515151
+    },
+    {
+      "left": "EVAL-AR-002",
+      "right": "FINAL-AR-001",
+      "prompt_token_jaccard": 0.5135135135135135
+    },
+    {
+      "left": "DEV-LP-001",
+      "right": "FINAL-FN-001",
+      "prompt_token_jaccard": 0.5
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "FINAL-CD-001",
+      "prompt_token_jaccard": 0.5
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-FN-001",
+      "prompt_token_jaccard": 0.48717948717948717
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-LP-002",
+      "prompt_token_jaccard": 0.4864864864864865
+    },
+    {
+      "left": "EVAL-AR-001",
+      "right": "FINAL-AR-001",
+      "prompt_token_jaccard": 0.4857142857142857
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-EV-003",
+      "prompt_token_jaccard": 0.4722222222222222
+    },
+    {
+      "left": "EVAL-LP-001",
+      "right": "FINAL-FN-001",
+      "prompt_token_jaccard": 0.4642857142857143
+    },
+    {
+      "left": "DEV-LP-001",
+      "right": "EVAL-CP-003",
+      "prompt_token_jaccard": 0.46153846153846156
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-FN-003",
+      "prompt_token_jaccard": 0.46153846153846156
+    },
+    {
+      "left": "DEV-AR-001",
+      "right": "EVAL-CP-001",
+      "prompt_token_jaccard": 0.46153846153846156
+    }
+  ],
+  "validation": [
+    {
+      "task_id": "DEV-EV-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-EV-001",
+        "family": "expressions_variables",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 12.0\r\n14.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "12.0\n14.0",
+            "expected_stdout": "12.0\n14.0",
+            "elapsed_ms": 132,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 5.0\r\n9.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "5.0\n9.0",
+            "expected_stdout": "5.0\n9.0",
+            "elapsed_ms": 131,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-CD-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-CD-001",
+        "family": "conditionals",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: EVEN\r\n",
+            "stderr": "",
+            "normalized_stdout": "EVEN",
+            "expected_stdout": "EVEN",
+            "elapsed_ms": 112,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: ODD\r\n",
+            "stderr": "",
+            "normalized_stdout": "ODD",
+            "expected_stdout": "ODD",
+            "elapsed_ms": 108,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-LP-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-LP-001",
+        "family": "loops",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 14.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "14.0",
+            "expected_stdout": "14.0",
+            "elapsed_ms": 113,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 111,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-FN-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-FN-001",
+        "family": "functions",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 27.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "27.0",
+            "expected_stdout": "27.0",
+            "elapsed_ms": 110,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: -8.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-8.0",
+            "expected_stdout": "-8.0",
+            "elapsed_ms": 115,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-AR-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-AR-001",
+        "family": "arrays",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0",
+            "expected_stdout": "1.0",
+            "elapsed_ms": 130,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: -9.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-9.0",
+            "expected_stdout": "-9.0",
+            "elapsed_ms": 129,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-ST-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-ST-001",
+        "family": "strings",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: cba\r\n",
+            "stderr": "",
+            "normalized_stdout": "cba",
+            "expected_stdout": "cba",
+            "elapsed_ms": 111,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: OCOG\r\n",
+            "stderr": "",
+            "normalized_stdout": "OCOG",
+            "expected_stdout": "OCOG",
+            "elapsed_ms": 110,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-IO-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-IO-001",
+        "family": "input_output",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: hello world\r\n",
+            "stderr": "",
+            "normalized_stdout": "hello world",
+            "expected_stdout": "hello world",
+            "elapsed_ms": 109,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: GOCO\r\n",
+            "stderr": "",
+            "normalized_stdout": "GOCO",
+            "expected_stdout": "GOCO",
+            "elapsed_ms": 108,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "DEV-CP-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "DEV-CP-001",
+        "family": "composition_algorithms",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 2,
+        "cases_total": 2,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 120.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "120.0",
+            "expected_stdout": "120.0",
+            "elapsed_ms": 114,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0",
+            "expected_stdout": "1.0",
+            "elapsed_ms": 112,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-EV-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-EV-001",
+        "family": "expressions_variables",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 19.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "19.0",
+            "expected_stdout": "19.0",
+            "elapsed_ms": 130,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 21.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "21.0",
+            "expected_stdout": "21.0",
+            "elapsed_ms": 120,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: -6.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-6.0",
+            "expected_stdout": "-6.0",
+            "elapsed_ms": 129,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-EV-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-EV-002",
+        "family": "expressions_variables",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for c: 32.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "32.0",
+            "expected_stdout": "32.0",
+            "elapsed_ms": 125,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for c: 212.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "212.0",
+            "expected_stdout": "212.0",
+            "elapsed_ms": 110,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for c: -40.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-40.0",
+            "expected_stdout": "-40.0",
+            "elapsed_ms": 108,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-EV-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-EV-003",
+        "family": "expressions_variables",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 15.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "15.0",
+            "expected_stdout": "15.0",
+            "elapsed_ms": 125,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 21.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "21.0",
+            "expected_stdout": "21.0",
+            "elapsed_ms": 127,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 10.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "10.0",
+            "expected_stdout": "10.0",
+            "elapsed_ms": 122,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CD-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CD-001",
+        "family": "conditionals",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 9.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "9.0",
+            "expected_stdout": "9.0",
+            "elapsed_ms": 127,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: -1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-1.0",
+            "expected_stdout": "-1.0",
+            "elapsed_ms": 122,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 4.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "4.0",
+            "expected_stdout": "4.0",
+            "elapsed_ms": 125,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CD-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CD-002",
+        "family": "conditionals",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: NEGATIVE\r\n",
+            "stderr": "",
+            "normalized_stdout": "NEGATIVE",
+            "expected_stdout": "NEGATIVE",
+            "elapsed_ms": 115,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: ZERO\r\n",
+            "stderr": "",
+            "normalized_stdout": "ZERO",
+            "expected_stdout": "ZERO",
+            "elapsed_ms": 115,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: POSITIVE\r\n",
+            "stderr": "",
+            "normalized_stdout": "POSITIVE",
+            "expected_stdout": "POSITIVE",
+            "elapsed_ms": 116,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CD-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CD-003",
+        "family": "conditionals",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: EQUILATERAL\r\n",
+            "stderr": "",
+            "normalized_stdout": "EQUILATERAL",
+            "expected_stdout": "EQUILATERAL",
+            "elapsed_ms": 125,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: ISOSCELES\r\n",
+            "stderr": "",
+            "normalized_stdout": "ISOSCELES",
+            "expected_stdout": "ISOSCELES",
+            "elapsed_ms": 121,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: INVALID\r\n",
+            "stderr": "",
+            "normalized_stdout": "INVALID",
+            "expected_stdout": "INVALID",
+            "elapsed_ms": 131,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-LP-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-LP-001",
+        "family": "loops",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 12.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "12.0",
+            "expected_stdout": "12.0",
+            "elapsed_ms": 114,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 111,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 30.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "30.0",
+            "expected_stdout": "30.0",
+            "elapsed_ms": 113,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-LP-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-LP-002",
+        "family": "loops",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 32.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "32.0",
+            "expected_stdout": "32.0",
+            "elapsed_ms": 124,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0",
+            "expected_stdout": "1.0",
+            "elapsed_ms": 121,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: -8.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "-8.0",
+            "expected_stdout": "-8.0",
+            "elapsed_ms": 123,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-LP-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-LP-003",
+        "family": "loops",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 1.0\r\n4.0\r\n9.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0\n4.0\n9.0",
+            "expected_stdout": "1.0\n4.0\n9.0",
+            "elapsed_ms": 114,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0",
+            "expected_stdout": "1.0",
+            "elapsed_ms": 109,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: ",
+            "stderr": "",
+            "normalized_stdout": "",
+            "expected_stdout": "",
+            "elapsed_ms": 115,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-FN-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-FN-001",
+        "family": "functions",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 5.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "5.0",
+            "expected_stdout": "5.0",
+            "elapsed_ms": 121,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 7.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "7.0",
+            "expected_stdout": "7.0",
+            "elapsed_ms": 137,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 118,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-FN-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-FN-002",
+        "family": "functions",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 25.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "25.0",
+            "expected_stdout": "25.0",
+            "elapsed_ms": 126,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 25.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "25.0",
+            "expected_stdout": "25.0",
+            "elapsed_ms": 122,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 40.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "40.0",
+            "expected_stdout": "40.0",
+            "elapsed_ms": 122,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-FN-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-FN-003",
+        "family": "functions",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 118.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "118.0",
+            "expected_stdout": "118.0",
+            "elapsed_ms": 120,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 50.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "50.0",
+            "expected_stdout": "50.0",
+            "elapsed_ms": 115,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 25.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "25.0",
+            "expected_stdout": "25.0",
+            "elapsed_ms": 126,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-AR-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-AR-001",
+        "family": "arrays",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 10.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "10.0",
+            "expected_stdout": "10.0",
+            "elapsed_ms": 134,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 2.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "2.0",
+            "expected_stdout": "2.0",
+            "elapsed_ms": 123,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 126,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-AR-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-AR-002",
+        "family": "arrays",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 3.0\r\n2.0\r\n1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "3.0\n2.0\n1.0",
+            "expected_stdout": "3.0\n2.0\n1.0",
+            "elapsed_ms": 125,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 5.0\r\n0.0\r\n-1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "5.0\n0.0\n-1.0",
+            "expected_stdout": "5.0\n0.0\n-1.0",
+            "elapsed_ms": 123,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 4.5\r\n3.5\r\n2.5\r\n",
+            "stderr": "",
+            "normalized_stdout": "4.5\n3.5\n2.5",
+            "expected_stdout": "4.5\n3.5\n2.5",
+            "elapsed_ms": 123,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-AR-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-AR-003",
+        "family": "arrays",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 2.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "2.0",
+            "expected_stdout": "2.0",
+            "elapsed_ms": 122,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 132,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 5.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "5.0",
+            "expected_stdout": "5.0",
+            "elapsed_ms": 121,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-ST-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-ST-001",
+        "family": "strings",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: 5.0\r\nHELLO\r\n",
+            "stderr": "",
+            "normalized_stdout": "5.0\nHELLO",
+            "expected_stdout": "5.0\nHELLO",
+            "elapsed_ms": 108,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: 3.0\r\nA B\r\n",
+            "stderr": "",
+            "normalized_stdout": "3.0\nA B",
+            "expected_stdout": "3.0\nA B",
+            "elapsed_ms": 110,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: 4.0\r\nGOCO\r\n",
+            "stderr": "",
+            "normalized_stdout": "4.0\nGOCO",
+            "expected_stdout": "4.0\nGOCO",
+            "elapsed_ms": 109,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-ST-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-ST-002",
+        "family": "strings",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: PALINDROME\r\n",
+            "stderr": "",
+            "normalized_stdout": "PALINDROME",
+            "expected_stdout": "PALINDROME",
+            "elapsed_ms": 108,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: NOT PALINDROME\r\n",
+            "stderr": "",
+            "normalized_stdout": "NOT PALINDROME",
+            "expected_stdout": "NOT PALINDROME",
+            "elapsed_ms": 121,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for text: PALINDROME\r\n",
+            "stderr": "",
+            "normalized_stdout": "PALINDROME",
+            "expected_stdout": "PALINDROME",
+            "elapsed_ms": 110,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-ST-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-ST-003",
+        "family": "strings",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 3.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "3.0",
+            "expected_stdout": "3.0",
+            "elapsed_ms": 126,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 2.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "2.0",
+            "expected_stdout": "2.0",
+            "elapsed_ms": 120,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 123,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-IO-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-IO-001",
+        "family": "input_output",
+        "difficulty": "basic",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: Ada:36.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "Ada:36.0",
+            "expected_stdout": "Ada:36.0",
+            "elapsed_ms": 123,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: Lin:0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "Lin:0.0",
+            "expected_stdout": "Lin:0.0",
+            "elapsed_ms": 123,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: Grace Hopper:85.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "Grace Hopper:85.0",
+            "expected_stdout": "Grace Hopper:85.0",
+            "elapsed_ms": 122,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-IO-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-IO-002",
+        "family": "input_output",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: second\r\nfirst\r\n",
+            "stderr": "",
+            "normalized_stdout": "second\nfirst",
+            "expected_stdout": "second\nfirst",
+            "elapsed_ms": 116,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: green\r\nred blue\r\n",
+            "stderr": "",
+            "normalized_stdout": "green\nred blue",
+            "expected_stdout": "green\nred blue",
+            "elapsed_ms": 115,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: B\r\nA\r\n",
+            "stderr": "",
+            "normalized_stdout": "B\nA",
+            "expected_stdout": "B\nA",
+            "elapsed_ms": 133,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-IO-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-IO-003",
+        "family": "input_output",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: xxx",
+            "stderr": "",
+            "normalized_stdout": "xxx",
+            "expected_stdout": "xxx",
+            "elapsed_ms": 129,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: A",
+            "stderr": "",
+            "normalized_stdout": "A",
+            "expected_stdout": "A",
+            "elapsed_ms": 119,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: ",
+            "stderr": "",
+            "normalized_stdout": "",
+            "expected_stdout": "",
+            "elapsed_ms": 129,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CP-001",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CP-001",
+        "family": "composition_algorithms",
+        "difficulty": "structural",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 6.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "6.0",
+            "expected_stdout": "6.0",
+            "elapsed_ms": 122,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 1.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "1.0",
+            "expected_stdout": "1.0",
+            "elapsed_ms": 125,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for raw: 25.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "25.0",
+            "expected_stdout": "25.0",
+            "elapsed_ms": 126,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CP-002",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CP-002",
+        "family": "composition_algorithms",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: PRIME\r\n",
+            "stderr": "",
+            "normalized_stdout": "PRIME",
+            "expected_stdout": "PRIME",
+            "elapsed_ms": 117,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: PRIME\r\n",
+            "stderr": "",
+            "normalized_stdout": "PRIME",
+            "expected_stdout": "PRIME",
+            "elapsed_ms": 108,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: NOT PRIME\r\n",
+            "stderr": "",
+            "normalized_stdout": "NOT PRIME",
+            "expected_stdout": "NOT PRIME",
+            "elapsed_ms": 116,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "EVAL-CP-003",
+      "status": "PASS",
+      "score": {
+        "task_id": "EVAL-CP-003",
+        "family": "composition_algorithms",
+        "difficulty": "compositional",
+        "parse_success": true,
+        "compile_success": true,
+        "execution_success": true,
+        "hidden_pass": true,
+        "cases_passed": 3,
+        "cases_total": 3,
+        "error_phase": null,
+        "structural_requirements_met": true,
+        "case_results": [
+          {
+            "case_id": "a",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 0.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "0.0",
+            "expected_stdout": "0.0",
+            "elapsed_ms": 116,
+            "passed": true
+          },
+          {
+            "case_id": "b",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 15.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "15.0",
+            "expected_stdout": "15.0",
+            "elapsed_ms": 115,
+            "passed": true
+          },
+          {
+            "case_id": "c",
+            "phase": "success",
+            "exit_code": 0,
+            "stdout": "Enter value for n: 18.0\r\n",
+            "stderr": "",
+            "normalized_stdout": "18.0",
+            "expected_stdout": "18.0",
+            "elapsed_ms": 112,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "FINAL-EV-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-CD-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-LP-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-FN-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-AR-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-ST-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-IO-001",
+      "status": "SEALED_NOT_RUN"
+    },
+    {
+      "task_id": "FINAL-CP-001",
+      "status": "SEALED_NOT_RUN"
+    }
+  ]
+}

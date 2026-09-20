@@ -1,0 +1,33 @@
+{
+  "BASE_NO_DOCS": {
+    "compile_success": 0,
+    "execution_success": 0,
+    "generated_go_package_main": 24,
+    "hidden_pass": 0,
+    "n_tasks": 24,
+    "parse_success": 0,
+    "peak_gpu_memory_bytes": 3115923968,
+    "total_generation_seconds": 137.74,
+    "total_output_tokens": 2751
+  },
+  "BASE_WITH_DOCS": {
+    "compile_success": 0,
+    "execution_success": 0,
+    "generated_unsupported_program_wrapper": 24,
+    "hidden_pass": 0,
+    "n_tasks": 24,
+    "parse_success": 0,
+    "peak_gpu_memory_bytes": 3380366848,
+    "total_generation_seconds": 116.407,
+    "total_output_tokens": 2101
+  },
+  "interpretation": "Both conditions hit a parse-level floor. This protocol provides no evidence of a documentation benefit and cannot estimate a useful retrieval ceiling.",
+  "paired": {
+    "baseline_only_passes": 0,
+    "bootstrap_95pct_ci": [0.0, 0.0],
+    "docs_only_passes": 0,
+    "mcnemar_exact_two_sided_p": 1.0,
+    "paired_risk_difference": 0.0
+  },
+  "raw_result_sha256": "282d2d3f4409ac2cb4374759de710cbe6d82ee0db0a97318c362e0e8b1f565a8"
+}

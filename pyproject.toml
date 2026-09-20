@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-learning-ai-research"
+version = "0.1.0"
+description = "Reproducible GOCO continual-learning research harness"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+evaluation = [
+  "huggingface-hub==0.36.0",
+  "numpy==2.2.6",
+  "safetensors==0.6.2",
+  "scipy==1.16.2",
+  "torch==2.9.0",
+  "transformers==4.57.1",
+]
+test = ["pytest==9.1.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

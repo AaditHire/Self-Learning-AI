@@ -1,0 +1,2829 @@
+{
+  "config": {
+    "condition_order": [
+      "BASE_NO_DOCS",
+      "BASE_WITH_DOCS"
+    ],
+    "conditions": {
+      "BASE_NO_DOCS": {
+        "documentation": null
+      },
+      "BASE_WITH_DOCS": {
+        "context_assembly": "Append the complete trusted documentation snapshot to the unchanged system prompt under a fixed heading; no query-dependent selection or retrieval",
+        "documentation": "docs/goco_language_reference.md"
+      }
+    },
+    "decoding": {
+      "do_sample": false,
+      "max_input_tokens": 8192,
+      "max_new_tokens": 512,
+      "num_beams": 1,
+      "retry_policy": "none",
+      "stopping": "model EOS or max_new_tokens"
+    },
+    "frozen_at": "2026-09-20T11:55:48+05:30",
+    "input_hashes": {
+      "benchmark_hidden_tests_sha256": "f81bc8b5d611b5c349694b7a5004018fa50f409299327e5214870fb67684520d",
+      "benchmark_tasks_sha256": "5f670bf945941a8b45e6bf3f09e5b67ba46a6ac3bd3c02f4003f50ba12f944b1",
+      "documentation_sha256": "e9fca4fc1cea7737923e7429a3c7d46370f1c11bd794e55680813a7536cdc5c4",
+      "model_weights_sha256": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8",
+      "system_prompt_sha256": "dfb2fb36454f5ad11302b3f7fa73b0babf6124f21857af7202a779403ffb3e06",
+      "user_template_sha256": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7"
+    },
+    "model": {
+      "device": "cuda:0",
+      "dtype": "float16",
+      "gradient_state": "all parameters requires_grad=False; torch.inference_mode",
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "quantization": "none",
+      "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a"
+    },
+    "output_extraction": "Trim; if a Markdown fence exists, take the first fenced block mechanically; otherwise use the complete trimmed generation; perform no repair",
+    "paired_analysis": {
+      "bootstrap_samples": 10000,
+      "bootstrap_seed": 20260920,
+      "effect_size": "paired risk difference in task-level hidden pass@1",
+      "hypothesis_test": "two-sided exact McNemar test on discordant task pairs",
+      "uncertainty": "task-resampled paired percentile bootstrap 95% interval"
+    },
+    "primary_metric": "task-level hidden-test pass@1",
+    "prompt_files": {
+      "system": "prompts/phase1_system.txt",
+      "user_template": "prompts/phase1_user_template.txt"
+    },
+    "scoring": {
+      "compiler_timeout_seconds": 3,
+      "exact_output_after_fixed_input_prompt_removal": true,
+      "final_paper_split_allowed": false,
+      "output_limit_bytes_per_stream": 65536,
+      "structural_requirements_must_pass": true
+    },
+    "seed": 20260920,
+    "split": "frozen_evaluation"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.0",
+    "torch": "2.9.0+cu130",
+    "transformers": "4.57.1",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  },
+  "conditions": {
+    "BASE_NO_DOCS": {
+      "records": [
+        {
+          "task_id": "EVAL-EV-001",
+          "family": "expressions_variables",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "19.0",
+              "elapsed_ms": 169,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "21.0",
+              "elapsed_ms": 116,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-6.0",
+              "elapsed_ms": 114,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tx, err := strconv.ParseFloat(parts[0], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\ty, err := strconv.ParseFloat(parts[1], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\tresult := x*x + 3*y\n\tfmt.Println(result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tx, err := strconv.ParseFloat(parts[0], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\ty, err := strconv.ParseFloat(parts[1], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\tresult := x*x + 3*y\n\tfmt.Println(result)\n}",
+          "input_tokens": 122,
+          "output_tokens": 118,
+          "generation_ms": 6450
+        },
+        {
+          "task_id": "EVAL-EV-002",
+          "family": "expressions_variables",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "32.0",
+              "elapsed_ms": 133,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "212.0",
+              "elapsed_ms": 129,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-40.0",
+              "elapsed_ms": 118,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    var temp float64\n    fmt.Print(\"Enter a number Celsius temperature: \")\n    fmt.Scan(&temp)\n\n    fahrenheit := (temp * 9 / 5) + 32\n    fmt.Println(fahrenheit)\n}\n```",
+          "extracted_source": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var temp float64\n    fmt.Print(\"Enter a number Celsius temperature: \")\n    fmt.Scan(&temp)\n\n    fahrenheit := (temp * 9 / 5) + 32\n    fmt.Println(fahrenheit)\n}",
+          "input_tokens": 109,
+          "output_tokens": 65,
+          "generation_ms": 3152
+        },
+        {
+          "task_id": "EVAL-EV-003",
+          "family": "expressions_variables",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "15.0",
+              "elapsed_ms": 136,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "21.0",
+              "elapsed_ms": 134,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "10.0",
+              "elapsed_ms": 139,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tsentence := \"10 5 20\"\n\tparts := strings.Split(sentence, \" \")\n\tprice, err := strconv.ParseFloat(parts[0], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing price:\", err)\n\t\treturn\n\t}\n\tquantity, err := strconv.ParseInt(parts[1], 64, 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing quantity:\", err)\n\t\treturn\n\t}\n\tdiscountPercent, err := strconv.ParseFloat(parts[2], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing discount percent:\", err)\n\t\treturn\n\t}\n\n\tresult := price * float64(quantity) * (1 - discountPercent / 100)\n\tfmt.Printf(\"%.2f\\n\", result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tsentence := \"10 5 20\"\n\tparts := strings.Split(sentence, \" \")\n\tprice, err := strconv.ParseFloat(parts[0], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing price:\", err)\n\t\treturn\n\t}\n\tquantity, err := strconv.ParseInt(parts[1], 64, 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing quantity:\", err)\n\t\treturn\n\t}\n\tdiscountPercent, err := strconv.ParseFloat(parts[2], 64)\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing discount percent:\", err)\n\t\treturn\n\t}\n\n\tresult := price * float64(quantity) * (1 - discountPercent / 100)\n\tfmt.Printf(\"%.2f\\n\", result)\n}",
+          "input_tokens": 131,
+          "output_tokens": 186,
+          "generation_ms": 9148
+        },
+        {
+          "task_id": "EVAL-CD-001",
+          "family": "conditionals",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "9.0",
+              "elapsed_ms": 132,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-1.0",
+              "elapsed_ms": 126,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.0",
+              "elapsed_ms": 116,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tnumbers := strings.Split(sentence, \" \")\n\tmaxValue := 0\n\n\tfor _, numStr := range numbers {\n\t\tnum, err := strconv.Atoi(numStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", numStr)\n\t\t\tcontinue\n\t\t}\n\t\tif num > maxValue {\n\t\t\tmaxValue = num\n\t\t}\n\t}\n\n\tfmt.Println(maxValue)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tnumbers := strings.Split(sentence, \" \")\n\tmaxValue := 0\n\n\tfor _, numStr := range numbers {\n\t\tnum, err := strconv.Atoi(numStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", numStr)\n\t\t\tcontinue\n\t\t}\n\t\tif num > maxValue {\n\t\t\tmaxValue = num\n\t\t}\n\t}\n\n\tfmt.Println(maxValue)\n}",
+          "input_tokens": 116,
+          "output_tokens": 109,
+          "generation_ms": 5201
+        },
+        {
+          "task_id": "EVAL-CD-002",
+          "family": "conditionals",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NEGATIVE",
+              "elapsed_ms": 124,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "ZERO",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "POSITIVE",
+              "elapsed_ms": 122,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar num int\n\tfmt.Print(\"Enter a number: \")\n\tfmt.Scan(&num)\n\n\tif num < 0 {\n\t\tfmt.Println(\"NEGATIVE\")\n\t} else if num == 0 {\n\t\tfmt.Println(\"ZERO\")\n\t} else {\n\t\tfmt.Println(\"POSITIVE\")\n\t}\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar num int\n\tfmt.Print(\"Enter a number: \")\n\tfmt.Scan(&num)\n\n\tif num < 0 {\n\t\tfmt.Println(\"NEGATIVE\")\n\t} else if num == 0 {\n\t\tfmt.Println(\"ZERO\")\n\t} else {\n\t\tfmt.Println(\"POSITIVE\")\n\t}\n}",
+          "input_tokens": 108,
+          "output_tokens": 77,
+          "generation_ms": 3609
+        },
+        {
+          "task_id": "EVAL-CD-003",
+          "family": "conditionals",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "EQUILATERAL",
+              "elapsed_ms": 136,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "ISOSCELES",
+              "elapsed_ms": 120,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "INVALID",
+              "elapsed_ms": 117,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tsides := strings.Split(sentence, \" \")\n\tif len(sides) != 3 {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\ta, b, c := strings.ToNumber(sides[0]), strings.ToNumber(sides[1]), strings.ToNumber(sides[2])\n\n\tif a <= 0 || b <= 0 || c <= 0 {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\tif a+b <= c || a+c <= b || b+c <= a {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\tif a == b && b == c {\n\t\tfmt.Println(\"EQUILATERAL\")\n\t} else if a == b || b == c || a == c {\n\t\tfmt.Println(\"ISOSCELES\")\n\t} else {\n\t\tfmt.Println(\"SCALENE\")\n\t}\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tsides := strings.Split(sentence, \" \")\n\tif len(sides) != 3 {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\ta, b, c := strings.ToNumber(sides[0]), strings.ToNumber(sides[1]), strings.ToNumber(sides[2])\n\n\tif a <= 0 || b <= 0 || c <= 0 {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\tif a+b <= c || a+c <= b || b+c <= a {\n\t\tfmt.Println(\"INVALID\")\n\t\treturn\n\t}\n\n\tif a == b && b == c {\n\t\tfmt.Println(\"EQUILATERAL\")\n\t} else if a == b || b == c || a == c {\n\t\tfmt.Println(\"ISOSCELES\")\n\t} else {\n\t\tfmt.Println(\"SCALENE\")\n\t}\n}",
+          "input_tokens": 139,
+          "output_tokens": 202,
+          "generation_ms": 10274
+        },
+        {
+          "task_id": "EVAL-LP-001",
+          "family": "loops",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "12.0",
+              "elapsed_ms": 125,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 115,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "30.0",
+              "elapsed_ms": 126,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Print(\"Enter a nonnegative number: \")\n\tfmt.Scan(&n)\n\n\tsum := 0\n\tfor i := 2; i <= n; i += 2 {\n\t\tsum += i\n\t}\n\n\tfmt.Println(\"Sum of all even integers from 1 to\", n, \"is:\", sum)\n}\n```",
+          "extracted_source": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Print(\"Enter a nonnegative number: \")\n\tfmt.Scan(&n)\n\n\tsum := 0\n\tfor i := 2; i <= n; i += 2 {\n\t\tsum += i\n\t}\n\n\tfmt.Println(\"Sum of all even integers from 1 to\", n, \"is:\", sum)\n}",
+          "input_tokens": 114,
+          "output_tokens": 83,
+          "generation_ms": 3902
+        },
+        {
+          "task_id": "EVAL-LP-002",
+          "family": "loops",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "32.0",
+              "elapsed_ms": 132,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 123,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-8.0",
+              "elapsed_ms": 122,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input format\")\n\t\treturn\n\t}\n\n\tbaseStr := parts[0]\n\texponentStr := parts[1]\n\n\tbase, err := strconv.Atoi(baseStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid base\")\n\t\treturn\n\t}\n\n\texponent, err := strconv.Atoi(exponentStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid exponent\")\n\t\treturn\n\t}\n\n\tresult := 1\n\tfor i := 0; i < exponent; i++ {\n\t\tresult *= base\n\t}\n\n\tfmt.Println(result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input format\")\n\t\treturn\n\t}\n\n\tbaseStr := parts[0]\n\texponentStr := parts[1]\n\n\tbase, err := strconv.Atoi(baseStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid base\")\n\t\treturn\n\t}\n\n\texponent, err := strconv.Atoi(exponentStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid exponent\")\n\t\treturn\n\t}\n\n\tresult := 1\n\tfor i := 0; i < exponent; i++ {\n\t\tresult *= base\n\t}\n\n\tfmt.Println(result)\n}",
+          "input_tokens": 127,
+          "output_tokens": 160,
+          "generation_ms": 7580
+        },
+        {
+          "task_id": "EVAL-LP-003",
+          "family": "loops",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0\n4.0\n9.0",
+              "elapsed_ms": 143,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 123,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "",
+              "elapsed_ms": 125,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tif n == 0 {\n\t\treturn\n\t}\n\n\tfor i := 1; i <= n; i++ {\n\t\tfmt.Println(i * i)\n\t}\n}\n```",
+          "extracted_source": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tif n == 0 {\n\t\treturn\n\t}\n\n\tfor i := 1; i <= n; i++ {\n\t\tfmt.Println(i * i)\n\t}\n}",
+          "input_tokens": 120,
+          "output_tokens": 59,
+          "generation_ms": 2781
+        },
+        {
+          "task_id": "EVAL-FN-001",
+          "family": "functions",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0",
+              "elapsed_ms": 124,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "7.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 115,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc absDifference(num1, num2 float64) float64 {\n\treturn math.Abs(num1 - num2)\n}\n\nfunc main() {\n\tsentence := \"5 3\"\n\tnums := strings.Split(sentence, \" \")\n\tnum1, err1 := strconv.ParseFloat(nums[0], 64)\n\tnum2, err2 := strconv.ParseFloat(nums[1], 64)\n\n\tif err1 != nil || err2 != nil {\n\t\tfmt.Println(\"Error parsing numbers:\", err1, err2)\n\t\treturn\n\t}\n\n\tresult := absDifference(num1, num2)\n\tfmt.Printf(\"The absolute difference is: %.2f\\n\", result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc absDifference(num1, num2 float64) float64 {\n\treturn math.Abs(num1 - num2)\n}\n\nfunc main() {\n\tsentence := \"5 3\"\n\tnums := strings.Split(sentence, \" \")\n\tnum1, err1 := strconv.ParseFloat(nums[0], 64)\n\tnum2, err2 := strconv.ParseFloat(nums[1], 64)\n\n\tif err1 != nil || err2 != nil {\n\t\tfmt.Println(\"Error parsing numbers:\", err1, err2)\n\t\treturn\n\t}\n\n\tresult := absDifference(num1, num2)\n\tfmt.Printf(\"The absolute difference is: %.2f\\n\", result)\n}",
+          "input_tokens": 129,
+          "output_tokens": 154,
+          "generation_ms": 7418
+        },
+        {
+          "task_id": "EVAL-FN-002",
+          "family": "functions",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 139,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 167,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "40.0",
+              "elapsed_ms": 202,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc square(x int) int {\n\treturn x * x\n}\n\nfunc sumOfSquares(a, b int) int {\n\treturn square(a) + square(b)\n}\n\nfunc main() {\n\tsentence := \"4 5\"\n\tparts := strings.Split(sentence, \" \")\n\ta, err := strconv.Atoi(parts[0])\n\tb, err := strconv.Atoi(parts[1])\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing numbers:\", err)\n\t\treturn\n\t}\n\tresult := sumOfSquares(a, b)\n\tfmt.Println(result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc square(x int) int {\n\treturn x * x\n}\n\nfunc sumOfSquares(a, b int) int {\n\treturn square(a) + square(b)\n}\n\nfunc main() {\n\tsentence := \"4 5\"\n\tparts := strings.Split(sentence, \" \")\n\ta, err := strconv.Atoi(parts[0])\n\tb, err := strconv.Atoi(parts[1])\n\tif err != nil {\n\t\tfmt.Println(\"Error parsing numbers:\", err)\n\t\treturn\n\t}\n\tresult := sumOfSquares(a, b)\n\tfmt.Println(result)\n}",
+          "input_tokens": 140,
+          "output_tokens": 127,
+          "generation_ms": 6549
+        },
+        {
+          "task_id": "EVAL-FN-003",
+          "family": "functions",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "118.0",
+              "elapsed_ms": 125,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "50.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 121,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc totalWithTax(amount string, ratePercent string) float64 {\n\tamountFloat, _ := strconv.ParseFloat(amount, 64)\n\tratePercentFloat, _ := strconv.ParseFloat(ratePercent, 64)\n\treturn amountFloat * (1 + ratePercentFloat / 100)\n}\n\nfunc main() {\n\tsentence := \"100 5\"\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input format\")\n\t\treturn\n\t}\n\tamount := parts[0]\n\tratePercent := parts[1]\n\n\tresult := totalWithTax(amount, ratePercent)\n\tfmt.Printf(\"%.2f\\n\", result)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc totalWithTax(amount string, ratePercent string) float64 {\n\tamountFloat, _ := strconv.ParseFloat(amount, 64)\n\tratePercentFloat, _ := strconv.ParseFloat(ratePercent, 64)\n\treturn amountFloat * (1 + ratePercentFloat / 100)\n}\n\nfunc main() {\n\tsentence := \"100 5\"\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input format\")\n\t\treturn\n\t}\n\tamount := parts[0]\n\tratePercent := parts[1]\n\n\tresult := totalWithTax(amount, ratePercent)\n\tfmt.Printf(\"%.2f\\n\", result)\n}",
+          "input_tokens": 140,
+          "output_tokens": 160,
+          "generation_ms": 8509
+        },
+        {
+          "task_id": "EVAL-AR-001",
+          "family": "arrays",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "10.0",
+              "elapsed_ms": 151,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 132,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 133,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a sentence with four numbers separated by spaces: \")\n\tfmt.Scanln(&sentence)\n\n\tnumbers := strings.Split(sentence, \" \")\n\tsum := 0\n\n\tfor i, numStr := range numbers {\n\t\tnum, err := strconv.Atoi(numStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", numStr)\n\t\t\treturn\n\t\t}\n\t\tsum += num\n\t}\n\n\tfmt.Printf(\"The sum of the numbers is: %d\\n\", sum)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a sentence with four numbers separated by spaces: \")\n\tfmt.Scanln(&sentence)\n\n\tnumbers := strings.Split(sentence, \" \")\n\tsum := 0\n\n\tfor i, numStr := range numbers {\n\t\tnum, err := strconv.Atoi(numStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", numStr)\n\t\t\treturn\n\t\t}\n\t\tsum += num\n\t}\n\n\tfmt.Printf(\"The sum of the numbers is: %d\\n\", sum)\n}",
+          "input_tokens": 127,
+          "output_tokens": 124,
+          "generation_ms": 6558
+        },
+        {
+          "task_id": "EVAL-AR-002",
+          "family": "arrays",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0\n2.0\n1.0",
+              "elapsed_ms": 137,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0\n0.0\n-1.0",
+              "elapsed_ms": 132,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.5\n3.5\n2.5",
+              "elapsed_ms": 122,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tnumbers := strings.Split(sentence, \" \")\n\tfor i := len(numbers) - 1; i >= 0; i-- {\n\t\tfmt.Println(strings.ToNumber(numbers[i]))\n\t}\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tnumbers := strings.Split(sentence, \" \")\n\tfor i := len(numbers) - 1; i >= 0; i-- {\n\t\tfmt.Println(strings.ToNumber(numbers[i]))\n\t}\n}",
+          "input_tokens": 127,
+          "output_tokens": 70,
+          "generation_ms": 3409
+        },
+        {
+          "task_id": "EVAL-AR-003",
+          "family": "arrays",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 141,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 123,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0",
+              "elapsed_ms": 121,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\n\tdata := strings.Split(sentence, \" \")\n\tif len(data) != 6 {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tvar threshold float64\n\tfmt.Scanln(&threshold)\n\n\tcount := 0\n\tfor _, value := range data {\n\t\tnum, err := strconv.ParseFloat(value, 64)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", value)\n\t\t\tcontinue\n\t\t}\n\t\tif num > threshold {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\n\tdata := strings.Split(sentence, \" \")\n\tif len(data) != 6 {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tvar threshold float64\n\tfmt.Scanln(&threshold)\n\n\tcount := 0\n\tfor _, value := range data {\n\t\tnum, err := strconv.ParseFloat(value, 64)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid number:\", value)\n\t\t\tcontinue\n\t\t}\n\t\tif num > threshold {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}",
+          "input_tokens": 141,
+          "output_tokens": 137,
+          "generation_ms": 7081
+        },
+        {
+          "task_id": "EVAL-ST-001",
+          "family": "strings",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0\nHELLO",
+              "elapsed_ms": 150,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0\nA B",
+              "elapsed_ms": 143,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.0\nGOCO",
+              "elapsed_ms": 143,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tsentence := \"Hello, World!\"\n\tfmt.Println(len(sentence))\n\tfmt.Println(strings.ToUpper(sentence))\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tsentence := \"Hello, World!\"\n\tfmt.Println(len(sentence))\n\tfmt.Println(strings.ToUpper(sentence))\n}",
+          "input_tokens": 109,
+          "output_tokens": 41,
+          "generation_ms": 2129
+        },
+        {
+          "task_id": "EVAL-ST-002",
+          "family": "strings",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PALINDROME",
+              "elapsed_ms": 156,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NOT PALINDROME",
+              "elapsed_ms": 152,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PALINDROME",
+              "elapsed_ms": 163,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a lowercase sentence without spaces: \")\n\tfmt.Scanln(&sentence)\n\n\tif isPalindrome(sentence) {\n\t\tfmt.Println(\"PALINDROME\")\n\t} else {\n\t\tfmt.Println(\"NOT PALINDROME\")\n\t}\n}\n\nfunc isPalindrome(s string) bool {\n\tfor i := 0; i < len(s)/2; i++ {\n\t\tif s[i] != s[len(s)-1-i] {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a lowercase sentence without spaces: \")\n\tfmt.Scanln(&sentence)\n\n\tif isPalindrome(sentence) {\n\t\tfmt.Println(\"PALINDROME\")\n\t} else {\n\t\tfmt.Println(\"NOT PALINDROME\")\n\t}\n}\n\nfunc isPalindrome(s string) bool {\n\tfor i := 0; i < len(s)/2; i++ {\n\t\tif s[i] != s[len(s)-1-i] {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}",
+          "input_tokens": 118,
+          "output_tokens": 123,
+          "generation_ms": 6171
+        },
+        {
+          "task_id": "EVAL-ST-003",
+          "family": "strings",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0",
+              "elapsed_ms": 133,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 149,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 118,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tinput := \"Hello world|world\"\n\tparts := strings.Split(input, \"|\")\n\ttext := parts[0]\n\tfragment := parts[1]\n\n\tcount := 0\n\tfor i := 0; i <= len(text)-len(fragment); i++ {\n\t\tif text[i:i+len(fragment)] == fragment {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tinput := \"Hello world|world\"\n\tparts := strings.Split(input, \"|\")\n\ttext := parts[0]\n\tfragment := parts[1]\n\n\tcount := 0\n\tfor i := 0; i <= len(text)-len(fragment); i++ {\n\t\tif text[i:i+len(fragment)] == fragment {\n\t\t\tcount++\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}",
+          "input_tokens": 123,
+          "output_tokens": 97,
+          "generation_ms": 4922
+        },
+        {
+          "task_id": "EVAL-IO-001",
+          "family": "input_output",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Ada:36.0",
+              "elapsed_ms": 139,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Lin:0.0",
+              "elapsed_ms": 130,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Grace Hopper:85.0",
+              "elapsed_ms": 157,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \"|\")\n\tname := parts[0]\n\tageStr := parts[1]\n\tage, err := strings.ToNumber(ageStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid age format:\", ageStr)\n\t\treturn\n\t}\n\tfmt.Printf(\"%s:%d\\n\", name, age)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \"|\")\n\tname := parts[0]\n\tageStr := parts[1]\n\tage, err := strings.ToNumber(ageStr)\n\tif err != nil {\n\t\tfmt.Println(\"Invalid age format:\", ageStr)\n\t\treturn\n\t}\n\tfmt.Printf(\"%s:%d\\n\", name, age)\n}",
+          "input_tokens": 125,
+          "output_tokens": 99,
+          "generation_ms": 5223
+        },
+        {
+          "task_id": "EVAL-IO-002",
+          "family": "input_output",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "second\nfirst",
+              "elapsed_ms": 129,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "green\nred blue",
+              "elapsed_ms": 142,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "B\nA",
+              "elapsed_ms": 152,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tfirst, second := splitSentence(sentence)\n\tfmt.Println(second, first)\n}\n\nfunc splitSentence(sentence string) (string, string) {\n\tparts := strings.Split(sentence, \"|\")\n\treturn parts[1], parts[0]\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tfirst, second := splitSentence(sentence)\n\tfmt.Println(second, first)\n}\n\nfunc splitSentence(sentence string) (string, string) {\n\tparts := strings.Split(sentence, \"|\")\n\treturn parts[1], parts[0]\n}",
+          "input_tokens": 120,
+          "output_tokens": 74,
+          "generation_ms": 3847
+        },
+        {
+          "task_id": "EVAL-IO-003",
+          "family": "input_output",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "xxx",
+              "elapsed_ms": 137,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "A",
+              "elapsed_ms": 130,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "",
+              "elapsed_ms": 130,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a sentence in the form 'character|count': \")\n\tfmt.Scanln(&sentence)\n\n\tfor _, part := range strings.Split(sentence, \"|\") {\n\t\tcharacter := part[0]\n\t\tcountStr := part[1:]\n\t\tcount, err := strconv.Atoi(countStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid count:\", err)\n\t\t\tcontinue\n\t\t}\n\n\t\tfor i := 0; i < count; i++ {\n\t\t\tfmt.Printf(\"%c\", character)\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Print(\"Enter a sentence in the form 'character|count': \")\n\tfmt.Scanln(&sentence)\n\n\tfor _, part := range strings.Split(sentence, \"|\") {\n\t\tcharacter := part[0]\n\t\tcountStr := part[1:]\n\t\tcount, err := strconv.Atoi(countStr)\n\t\tif err != nil {\n\t\t\tfmt.Println(\"Invalid count:\", err)\n\t\t\tcontinue\n\t\t}\n\n\t\tfor i := 0; i < count; i++ {\n\t\t\tfmt.Printf(\"%c\", character)\n\t\t}\n\t\tfmt.Println()\n\t}\n}",
+          "input_tokens": 146,
+          "output_tokens": 137,
+          "generation_ms": 6696
+        },
+        {
+          "task_id": "EVAL-CP-001",
+          "family": "composition_algorithms",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "6.0",
+              "elapsed_ms": 137,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 117,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tnum1, err1 := strconv.Atoi(parts[0])\n\tnum2, err2 := strconv.Atoi(parts[1])\n\tif err1 != nil || err2 != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tgcd := gcd(num1, num2)\n\tfmt.Printf(\"GCD of %d and %d is %d\\n\", num1, num2, gcd)\n}\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar sentence string\n\tfmt.Scanln(&sentence)\n\tparts := strings.Split(sentence, \" \")\n\tif len(parts) != 2 {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tnum1, err1 := strconv.Atoi(parts[0])\n\tnum2, err2 := strconv.Atoi(parts[1])\n\tif err1 != nil || err2 != nil {\n\t\tfmt.Println(\"Invalid input\")\n\t\treturn\n\t}\n\n\tgcd := gcd(num1, num2)\n\tfmt.Printf(\"GCD of %d and %d is %d\\n\", num1, num2, gcd)\n}\n\nfunc gcd(a, b int) int {\n\tfor b != 0 {\n\t\ta, b = b, a%b\n\t}\n\treturn a\n}",
+          "input_tokens": 124,
+          "output_tokens": 174,
+          "generation_ms": 8880
+        },
+        {
+          "task_id": "EVAL-CP-002",
+          "family": "composition_algorithms",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PRIME",
+              "elapsed_ms": 126,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PRIME",
+              "elapsed_ms": 115,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NOT PRIME",
+              "elapsed_ms": 122,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Print(\"Enter a nonnegative number: \")\n\tfmt.Scan(&n)\n\n\tif n < 2 {\n\t\tfmt.Println(\"NOT PRIME\")\n\t\treturn\n\t}\n\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\tfmt.Println(\"NOT PRIME\")\n\t\t\treturn\n\t\t}\n\t}\n\n\tfmt.Println(\"PRIME\")\n}\n```",
+          "extracted_source": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Print(\"Enter a nonnegative number: \")\n\tfmt.Scan(&n)\n\n\tif n < 2 {\n\t\tfmt.Println(\"NOT PRIME\")\n\t\treturn\n\t}\n\n\tfor i := 2; i*i <= n; i++ {\n\t\tif n%i == 0 {\n\t\t\tfmt.Println(\"NOT PRIME\")\n\t\t\treturn\n\t\t}\n\t}\n\n\tfmt.Println(\"PRIME\")\n}",
+          "input_tokens": 112,
+          "output_tokens": 99,
+          "generation_ms": 4651
+        },
+        {
+          "task_id": "EVAL-CP-003",
+          "family": "composition_algorithms",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 143,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "15.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"package \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "18.0",
+              "elapsed_ms": 120,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tsum := 0\n\tfor n > 0 {\n\t\tdigit := int(math.Mod(float64(n), 10))\n\t\tsum += digit\n\t\tn /= 10\n\t}\n\tfmt.Println(sum)\n}\n```",
+          "extracted_source": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\tsum := 0\n\tfor n > 0 {\n\t\tdigit := int(math.Mod(float64(n), 10))\n\t\tsum += digit\n\t\tn /= 10\n\t}\n\tfmt.Println(sum)\n}",
+          "input_tokens": 116,
+          "output_tokens": 76,
+          "generation_ms": 3600
+        }
+      ],
+      "summary": {
+        "n_tasks": 24,
+        "overall": {
+          "parse_success": 0.0,
+          "compile_success": 0.0,
+          "execution_success": 0.0,
+          "hidden_pass": 0.0
+        },
+        "by_family": {
+          "arrays": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "composition_algorithms": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "conditionals": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "expressions_variables": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "functions": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "input_output": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "loops": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "strings": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          }
+        },
+        "by_difficulty": {
+          "basic": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 7
+          },
+          "compositional": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 9
+          },
+          "structural": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 8
+          }
+        },
+        "error_phases": {
+          "syntax": 24
+        }
+      },
+      "peak_gpu_memory_bytes": 3115923968
+    },
+    "BASE_WITH_DOCS": {
+      "records": [
+        {
+          "task_id": "EVAL-EV-001",
+          "family": "expressions_variables",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "19.0",
+              "elapsed_ms": 133,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "21.0",
+              "elapsed_ms": 132,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-6.0",
+              "elapsed_ms": 122,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = INPUT(\"Enter x and y separated by one space: \");\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER x = strings.TO_NUMBER(parts[0]);\n    NUMBER y = strings.TO_NUMBER(parts[1]);\n\n    NUMBER result = x * x + 3 * y;\n    DISPLAY(result);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = INPUT(\"Enter x and y separated by one space: \");\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER x = strings.TO_NUMBER(parts[0]);\n    NUMBER y = strings.TO_NUMBER(parts[1]);\n\n    NUMBER result = x * x + 3 * y;\n    DISPLAY(result);\n}",
+          "input_tokens": 1277,
+          "output_tokens": 85,
+          "generation_ms": 4321
+        },
+        {
+          "task_id": "EVAL-EV-002",
+          "family": "expressions_variables",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "32.0",
+              "elapsed_ms": 131,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "212.0",
+              "elapsed_ms": 146,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-40.0",
+              "elapsed_ms": 167,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT math.\n    NUMBER celsius = INPUT(celsius).\n    NUMBER fahrenheit = celsius * 9 / 5 + 32.\n    DISPLAY(fahrenheit).\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT math.\n    NUMBER celsius = INPUT(celsius).\n    NUMBER fahrenheit = celsius * 9 / 5 + 32.\n    DISPLAY(fahrenheit).\n}",
+          "input_tokens": 1264,
+          "output_tokens": 45,
+          "generation_ms": 2570
+        },
+        {
+          "task_id": "EVAL-EV-003",
+          "family": "expressions_variables",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "15.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "21.0",
+              "elapsed_ms": 114,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "10.0",
+              "elapsed_ms": 128,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER price = strings.TO_NUMBER(parts[0]);\n    NUMBER quantity = strings.TO_NUMBER(parts[1]);\n    NUMBER discountPercent = strings.TO_NUMBER(parts[2]);\n\n    NUMBER result = price * quantity * (1 - discountPercent / 100);\n    DISPLAY(result);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER price = strings.TO_NUMBER(parts[0]);\n    NUMBER quantity = strings.TO_NUMBER(parts[1]);\n    NUMBER discountPercent = strings.TO_NUMBER(parts[2]);\n\n    NUMBER result = price * quantity * (1 - discountPercent / 100);\n    DISPLAY(result);\n}",
+          "input_tokens": 1286,
+          "output_tokens": 94,
+          "generation_ms": 4953
+        },
+        {
+          "task_id": "EVAL-CD-001",
+          "family": "conditionals",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "9.0",
+              "elapsed_ms": 130,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-1.0",
+              "elapsed_ms": 126,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.0",
+              "elapsed_ms": 123,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n    NUMBER num3 = strings.TO_NUMBER(parts[2]);\n    NUMBER maxNum = MAX(num1, MAX(num2, num3));\n    DISPLAY(maxNum);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n    NUMBER num3 = strings.TO_NUMBER(parts[2]);\n    NUMBER maxNum = MAX(num1, MAX(num2, num3));\n    DISPLAY(maxNum);\n}",
+          "input_tokens": 1271,
+          "output_tokens": 86,
+          "generation_ms": 4404
+        },
+        {
+          "task_id": "EVAL-CD-002",
+          "family": "conditionals",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NEGATIVE",
+              "elapsed_ms": 134,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "ZERO",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "POSITIVE",
+              "elapsed_ms": 137,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    NUMBER number = INPUT(number);\n    IF (number < 0) {\n        DISPLAYNL(\"NEGATIVE\");\n    } ELSE IF (number == 0) {\n        DISPLAYNL(\"ZERO\");\n    } ELSE {\n        DISPLAYNL(\"POSITIVE\");\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    NUMBER number = INPUT(number);\n    IF (number < 0) {\n        DISPLAYNL(\"NEGATIVE\");\n    } ELSE IF (number == 0) {\n        DISPLAYNL(\"ZERO\");\n    } ELSE {\n        DISPLAYNL(\"POSITIVE\");\n    }\n}",
+          "input_tokens": 1263,
+          "output_tokens": 62,
+          "generation_ms": 3736
+        },
+        {
+          "task_id": "EVAL-CD-003",
+          "family": "conditionals",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "EQUILATERAL",
+              "elapsed_ms": 130,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "ISOSCELES",
+              "elapsed_ms": 126,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "INVALID",
+              "elapsed_ms": 134,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    INPUT(sentence).\n    SENTENCE sides = strings.SPLIT(sentence, \" \");\n    NUMBER a = strings.TO_NUMBER(sides[0]);\n    NUMBER b = strings.TO_NUMBER(sides[1]);\n    NUMBER c = strings.TO_NUMBER(sides[2]);\n\n    IF (a <= 0 OR b <= 0 OR c <= 0) {\n        DISPLAYNL(\"INVALID\");\n    } ELSE IF ((a == b AND b == c)) {\n        DISPLAYNL(\"EQUILATERAL\");\n    } ELSE IF ((a == b OR a == c OR b == c)) {\n        DISPLAYNL(\"ISOSCELES\");\n    } ELSE {\n        DISPLAYNL(\"SCALENE\");\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    INPUT(sentence).\n    SENTENCE sides = strings.SPLIT(sentence, \" \");\n    NUMBER a = strings.TO_NUMBER(sides[0]);\n    NUMBER b = strings.TO_NUMBER(sides[1]);\n    NUMBER c = strings.TO_NUMBER(sides[2]);\n\n    IF (a <= 0 OR b <= 0 OR c <= 0) {\n        DISPLAYNL(\"INVALID\");\n    } ELSE IF ((a == b AND b == c)) {\n        DISPLAYNL(\"EQUILATERAL\");\n    } ELSE IF ((a == b OR a == c OR b == c)) {\n        DISPLAYNL(\"ISOSCELES\");\n    } ELSE {\n        DISPLAYNL(\"SCALENE\");\n    }\n}",
+          "input_tokens": 1294,
+          "output_tokens": 154,
+          "generation_ms": 8242
+        },
+        {
+          "task_id": "EVAL-LP-001",
+          "family": "loops",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "12.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "30.0",
+              "elapsed_ms": 133,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT math.\n    NUMBER n = INPUT(n).\n    NUMBER sum = 0.\n    LOOP (n > 0) {\n        IF (n % 2 == 0) {\n            sum += n.\n        }\n        n -= 1.\n    }\n    DISPLAYNL(sum).\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT math.\n    NUMBER n = INPUT(n).\n    NUMBER sum = 0.\n    LOOP (n > 0) {\n        IF (n % 2 == 0) {\n            sum += n.\n        }\n        n -= 1.\n    }\n    DISPLAYNL(sum).\n}",
+          "input_tokens": 1269,
+          "output_tokens": 68,
+          "generation_ms": 3680
+        },
+        {
+          "task_id": "EVAL-LP-002",
+          "family": "loops",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "32.0",
+              "elapsed_ms": 131,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 124,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "-8.0",
+              "elapsed_ms": 118,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER base = strings.TO_NUMBER(parts[0]);\n    NUMBER exponent = strings.TO_NUMBER(parts[1]);\n\n    LOOP (NUMBER i = 0 TILL i < exponent, i++) {\n        base *= base;\n    }\n\n    DISPLAYNL(base);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER base = strings.TO_NUMBER(parts[0]);\n    NUMBER exponent = strings.TO_NUMBER(parts[1]);\n\n    LOOP (NUMBER i = 0 TILL i < exponent, i++) {\n        base *= base;\n    }\n\n    DISPLAYNL(base);\n}",
+          "input_tokens": 1282,
+          "output_tokens": 88,
+          "generation_ms": 4632
+        },
+        {
+          "task_id": "EVAL-LP-003",
+          "family": "loops",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0\n4.0\n9.0",
+              "elapsed_ms": 129,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "",
+              "elapsed_ms": 121,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT math.\n    NUMBER n = INPUT(n).\n\n    IF (n == 0) {\n        RETURN.\n    }\n\n    LOOP (i = 1 TILL i <= n, i++) {\n        DISPLAYNL(i * i).\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT math.\n    NUMBER n = INPUT(n).\n\n    IF (n == 0) {\n        RETURN.\n    }\n\n    LOOP (i = 1 TILL i <= n, i++) {\n        DISPLAYNL(i * i).\n    }\n}",
+          "input_tokens": 1275,
+          "output_tokens": 59,
+          "generation_ms": 3226
+        },
+        {
+          "task_id": "EVAL-FN-001",
+          "family": "functions",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0",
+              "elapsed_ms": 163,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "7.0",
+              "elapsed_ms": 175,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 166,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION absDifference(NUMBER x, NUMBER y) {\n        RETURN ABS(x - y).\n    }\n\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n    NUMBER result = absDifference(num1, num2);\n    DISPLAYNL(result);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION absDifference(NUMBER x, NUMBER y) {\n        RETURN ABS(x - y).\n    }\n\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n    NUMBER result = absDifference(num1, num2);\n    DISPLAYNL(result);\n}",
+          "input_tokens": 1284,
+          "output_tokens": 95,
+          "generation_ms": 5824
+        },
+        {
+          "task_id": "EVAL-FN-002",
+          "family": "functions",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 131,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 134,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "40.0",
+              "elapsed_ms": 127,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION square(x) {\n        RETURN x * x.\n    }\n\n    FUNCTION sumOfSquares(a, b) {\n        RETURN square(a) + square(b);\n    }\n\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER a = strings.TO_NUMBER(parts[0]);\n    NUMBER b = strings.TO_NUMBER(parts[1]);\n    NUMBER result = sumOfSquares(a, b);\n    DISPLAYNL(result);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION square(x) {\n        RETURN x * x.\n    }\n\n    FUNCTION sumOfSquares(a, b) {\n        RETURN square(a) + square(b);\n    }\n\n    INPUT(sentence).\n    STRING[] parts = strings.SPLIT(sentence, \" \");\n    NUMBER a = strings.TO_NUMBER(parts[0]);\n    NUMBER b = strings.TO_NUMBER(parts[1]);\n    NUMBER result = sumOfSquares(a, b);\n    DISPLAYNL(result);\n}",
+          "input_tokens": 1295,
+          "output_tokens": 108,
+          "generation_ms": 6167
+        },
+        {
+          "task_id": "EVAL-FN-003",
+          "family": "functions",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "118.0",
+              "elapsed_ms": 148,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "50.0",
+              "elapsed_ms": 128,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 170,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION totalWithTax(NUMBER amount, NUMBER ratePercent) {\n        RETURN amount * (1 + ratePercent / 100).\n    }\n\n    INPUT(line).\n    STRING[] parts = strings.SPLIT(line, \" \");\n    NUMBER amount = strings.TO_NUMBER(parts[0]);\n    NUMBER ratePercent = strings.TO_NUMBER(parts[1]);\n\n    DISPLAY(totalWithTax(amount, ratePercent));\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION totalWithTax(NUMBER amount, NUMBER ratePercent) {\n        RETURN amount * (1 + ratePercent / 100).\n    }\n\n    INPUT(line).\n    STRING[] parts = strings.SPLIT(line, \" \");\n    NUMBER amount = strings.TO_NUMBER(parts[0]);\n    NUMBER ratePercent = strings.TO_NUMBER(parts[1]);\n\n    DISPLAY(totalWithTax(amount, ratePercent));\n}",
+          "input_tokens": 1295,
+          "output_tokens": 97,
+          "generation_ms": 5273
+        },
+        {
+          "task_id": "EVAL-AR-001",
+          "family": "arrays",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "10.0",
+              "elapsed_ms": 146,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 128,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    NUMBER sum = 0;\n    LOOP (NUMBER i = 0; i < numbers.length; i++) {\n        sum += numbers[i];\n    }\n\n    DISPLAYNL(sum);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    NUMBER sum = 0;\n    LOOP (NUMBER i = 0; i < numbers.length; i++) {\n        sum += numbers[i];\n    }\n\n    DISPLAYNL(sum);\n}",
+          "input_tokens": 1282,
+          "output_tokens": 115,
+          "generation_ms": 6525
+        },
+        {
+          "task_id": "EVAL-AR-002",
+          "family": "arrays",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0\n2.0\n1.0",
+              "elapsed_ms": 129,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0\n0.0\n-1.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.5\n3.5\n2.5",
+              "elapsed_ms": 130,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    LOOP (i = numbers.length - 1; i >= 0; i--) {\n        DISPLAY(numbers[i]);\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    LOOP (i = numbers.length - 1; i >= 0; i--) {\n        DISPLAY(numbers[i]);\n    }\n}",
+          "input_tokens": 1282,
+          "output_tokens": 104,
+          "generation_ms": 5544
+        },
+        {
+          "task_id": "EVAL-AR-003",
+          "family": "arrays",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 152,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 133,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0",
+              "elapsed_ms": 133,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    NUMBER threshold = strings.TO_NUMBER(READLINE());\n    NUMBER count = 0;\n\n    LOOP (NUMBER i = 0; i < numbers.length; i++) {\n        IF (numbers[i] > threshold) {\n            count++;\n        }\n    }\n\n    DISPLAY(count);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER[] numbers = new NUMBER[parts.length];\n    FOR (NUMBER i = 0; i < parts.length; i++) {\n        numbers[i] = strings.TO_NUMBER(parts[i]);\n    }\n\n    NUMBER threshold = strings.TO_NUMBER(READLINE());\n    NUMBER count = 0;\n\n    LOOP (NUMBER i = 0; i < numbers.length; i++) {\n        IF (numbers[i] > threshold) {\n            count++;\n        }\n    }\n\n    DISPLAY(count);\n}",
+          "input_tokens": 1296,
+          "output_tokens": 134,
+          "generation_ms": 7545
+        },
+        {
+          "task_id": "EVAL-ST-001",
+          "family": "strings",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "5.0\nHELLO",
+              "elapsed_ms": 143,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0\nA B",
+              "elapsed_ms": 139,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "4.0\nGOCO",
+              "elapsed_ms": 145,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    \n    SENTENCE sentence.\n    INPUT(sentence).\n    \n    DISPLAYNL(strings.LENGTH(sentence));\n    DISPLAYNL(strings.UPPER(sentence));\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    \n    SENTENCE sentence.\n    INPUT(sentence).\n    \n    DISPLAYNL(strings.LENGTH(sentence));\n    DISPLAYNL(strings.UPPER(sentence));\n}",
+          "input_tokens": 1264,
+          "output_tokens": 39,
+          "generation_ms": 2561
+        },
+        {
+          "task_id": "EVAL-ST-002",
+          "family": "strings",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PALINDROME",
+              "elapsed_ms": 134,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NOT PALINDROME",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PALINDROME",
+              "elapsed_ms": 127,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM palindromeChecker {\n    IMPORT strings.\n\n    SENTENCE inputSentence.\n    INPUT(inputSentence).\n\n    LOOP (inputSentence != \"\") {\n        STRING reversedSentence = strings.REVERSE(inputSentence).\n        IF (reversedSentence == inputSentence) {\n            DISPLAYNL(\"PALINDROME\");\n        } ELSE {\n            DISPLAYNL(\"NOT PALINDROME\");\n        }\n        inputSentence = strings.SUB(inputSentence, 1);\n    }\n\n    END.\n}\n```",
+          "extracted_source": "PROGRAM palindromeChecker {\n    IMPORT strings.\n\n    SENTENCE inputSentence.\n    INPUT(inputSentence).\n\n    LOOP (inputSentence != \"\") {\n        STRING reversedSentence = strings.REVERSE(inputSentence).\n        IF (reversedSentence == inputSentence) {\n            DISPLAYNL(\"PALINDROME\");\n        } ELSE {\n            DISPLAYNL(\"NOT PALINDROME\");\n        }\n        inputSentence = strings.SUB(inputSentence, 1);\n    }\n\n    END.\n}",
+          "input_tokens": 1273,
+          "output_tokens": 95,
+          "generation_ms": 5031
+        },
+        {
+          "task_id": "EVAL-ST-003",
+          "family": "strings",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "3.0",
+              "elapsed_ms": 136,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "2.0",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 128,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    \n    SENTENCE input = INPUT().\n    STRING[] parts = strings.SPLIT(input, \"|\").\n    NUMBER count = strings.COUNT(parts[0], parts[1]).\n    DISPLAY(count).\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    \n    SENTENCE input = INPUT().\n    STRING[] parts = strings.SPLIT(input, \"|\").\n    NUMBER count = strings.COUNT(parts[0], parts[1]).\n    DISPLAY(count).\n}",
+          "input_tokens": 1278,
+          "output_tokens": 52,
+          "generation_ms": 2914
+        },
+        {
+          "task_id": "EVAL-IO-001",
+          "family": "input_output",
+          "difficulty": "basic",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Ada:36.0",
+              "elapsed_ms": 135,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Lin:0.0",
+              "elapsed_ms": 121,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "Grace Hopper:85.0",
+              "elapsed_ms": 127,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    INPUT(name | age).\n\n    SENTENCE formattedName = strings.UPPER(name) + \": \" + strings.TO_SENTENCE(age).\n    DISPLAY(formattedName).\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    INPUT(name | age).\n\n    SENTENCE formattedName = strings.UPPER(name) + \": \" + strings.TO_SENTENCE(age).\n    DISPLAY(formattedName).\n}",
+          "input_tokens": 1280,
+          "output_tokens": 46,
+          "generation_ms": 2648
+        },
+        {
+          "task_id": "EVAL-IO-002",
+          "family": "input_output",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "second\nfirst",
+              "elapsed_ms": 135,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "green\nred blue",
+              "elapsed_ms": 131,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "B\nA",
+              "elapsed_ms": 129,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    INPUT(first|second).\n    SENTENCE firstPart = first.\n    SENTENCE secondPart = second.\n    DISPLAY(secondPart).\n    DISPLAY(firstPart).\n}\n```",
+          "extracted_source": "PROGRAM main {\n    INPUT(first|second).\n    SENTENCE firstPart = first.\n    SENTENCE secondPart = second.\n    DISPLAY(secondPart).\n    DISPLAY(firstPart).\n}",
+          "input_tokens": 1275,
+          "output_tokens": 41,
+          "generation_ms": 2394
+        },
+        {
+          "task_id": "EVAL-IO-003",
+          "family": "input_output",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "xxx",
+              "elapsed_ms": 135,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "A",
+              "elapsed_ms": 127,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "",
+              "elapsed_ms": 134,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION splitSentence(sentence) {\n        STRING[] parts = strings.SPLIT(sentence, \"|\");\n        LETTER firstLetter = strings.CHARAT(parts[0], 0);\n        NUMBER count = strings.TO_NUMBER(parts[1]);\n        RETURN firstLetter, count;\n    }\n\n    LOOP (sentence := INPUT()) {\n        LETTER firstLetter, count = splitSentence(sentence);\n        FOR (i := 0; i < count; i++) {\n            DISPLAY(firstLetter);\n        }\n        DISPLAYNL();\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    FUNCTION splitSentence(sentence) {\n        STRING[] parts = strings.SPLIT(sentence, \"|\");\n        LETTER firstLetter = strings.CHARAT(parts[0], 0);\n        NUMBER count = strings.TO_NUMBER(parts[1]);\n        RETURN firstLetter, count;\n    }\n\n    LOOP (sentence := INPUT()) {\n        LETTER firstLetter, count = splitSentence(sentence);\n        FOR (i := 0; i < count; i++) {\n            DISPLAY(firstLetter);\n        }\n        DISPLAYNL();\n    }\n}",
+          "input_tokens": 1301,
+          "output_tokens": 119,
+          "generation_ms": 6254
+        },
+        {
+          "task_id": "EVAL-CP-001",
+          "family": "composition_algorithms",
+          "difficulty": "structural",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "6.0",
+              "elapsed_ms": 137,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "1.0",
+              "elapsed_ms": 130,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "25.0",
+              "elapsed_ms": 133,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n\n    NUMBER gcd = 1;\n    LOOP (NUMBER i = 2 TILL i <= MIN(num1, num2), i++) {\n        IF (num1 % i == 0 AND num2 % i == 0) {\n            gcd = i;\n        }\n    }\n\n    DISPLAYNL(gcd);\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT strings.\n    IMPORT math.\n\n    SENTENCE input = READLINE().\n    STRING[] parts = strings.SPLIT(input, \" \");\n    NUMBER num1 = strings.TO_NUMBER(parts[0]);\n    NUMBER num2 = strings.TO_NUMBER(parts[1]);\n\n    NUMBER gcd = 1;\n    LOOP (NUMBER i = 2 TILL i <= MIN(num1, num2), i++) {\n        IF (num1 % i == 0 AND num2 % i == 0) {\n            gcd = i;\n        }\n    }\n\n    DISPLAYNL(gcd);\n}",
+          "input_tokens": 1279,
+          "output_tokens": 125,
+          "generation_ms": 6809
+        },
+        {
+          "task_id": "EVAL-CP-002",
+          "family": "composition_algorithms",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": true,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PRIME",
+              "elapsed_ms": 142,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "PRIME",
+              "elapsed_ms": 133,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "NOT PRIME",
+              "elapsed_ms": 134,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM primeChecker {\n    INPUT(n).\n    IF (n <= 1) {\n        DISPLAYNL(\"NOT PRIME\").\n    } ELSE {\n        LOOP (i = 2 TILL i * i <= n, i++) {\n            IF (n % i == 0) {\n                DISPLAYNL(\"NOT PRIME\").\n                BREAK.\n            }\n        }\n        IF (i * i > n) {\n            DISPLAYNL(\"PRIME\").\n        }\n    }\n}\n```",
+          "extracted_source": "PROGRAM primeChecker {\n    INPUT(n).\n    IF (n <= 1) {\n        DISPLAYNL(\"NOT PRIME\").\n    } ELSE {\n        LOOP (i = 2 TILL i * i <= n, i++) {\n            IF (n % i == 0) {\n                DISPLAYNL(\"NOT PRIME\").\n                BREAK.\n            }\n        }\n        IF (i * i > n) {\n            DISPLAYNL(\"PRIME\").\n        }\n    }\n}",
+          "input_tokens": 1267,
+          "output_tokens": 100,
+          "generation_ms": 5560
+        },
+        {
+          "task_id": "EVAL-CP-003",
+          "family": "composition_algorithms",
+          "difficulty": "compositional",
+          "parse_success": false,
+          "compile_success": false,
+          "execution_success": false,
+          "hidden_pass": false,
+          "cases_passed": 0,
+          "cases_total": 3,
+          "error_phase": "syntax",
+          "structural_requirements_met": false,
+          "case_results": [
+            {
+              "case_id": "a",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "0.0",
+              "elapsed_ms": 141,
+              "passed": false
+            },
+            {
+              "case_id": "b",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "15.0",
+              "elapsed_ms": 140,
+              "passed": false
+            },
+            {
+              "case_id": "c",
+              "phase": "syntax",
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "Syntax Error: Encountered \" <ID> \"PROGRAM \"\" at line 1, column 1.\r\nWas expecting:\r\n    <EOF> \r\n    \r\n",
+              "normalized_stdout": "",
+              "expected_stdout": "18.0",
+              "elapsed_ms": 140,
+              "passed": false
+            }
+          ],
+          "raw_generation": "```go\nPROGRAM main {\n    IMPORT math.\n    INPUT(n).\n\n    IF (n == 0) {\n        DISPLAYNL(0).\n    } ELSE {\n        NUMBER sum = 0.\n        WHILE (n > 0) {\n            NUMBER digit = math.DIV(n, 10).\n            sum += digit.\n            n = math.MOD(n, 10).\n        }\n        DISPLAYNL(sum).\n    }\n}\n```",
+          "extracted_source": "PROGRAM main {\n    IMPORT math.\n    INPUT(n).\n\n    IF (n == 0) {\n        DISPLAYNL(0).\n    } ELSE {\n        NUMBER sum = 0.\n        WHILE (n > 0) {\n            NUMBER digit = math.DIV(n, 10).\n            sum += digit.\n            n = math.MOD(n, 10).\n        }\n        DISPLAYNL(sum).\n    }\n}",
+          "input_tokens": 1271,
+          "output_tokens": 90,
+          "generation_ms": 5594
+        }
+      ],
+      "summary": {
+        "n_tasks": 24,
+        "overall": {
+          "parse_success": 0.0,
+          "compile_success": 0.0,
+          "execution_success": 0.0,
+          "hidden_pass": 0.0
+        },
+        "by_family": {
+          "arrays": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "composition_algorithms": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "conditionals": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "expressions_variables": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "functions": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "input_output": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "loops": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          },
+          "strings": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 3
+          }
+        },
+        "by_difficulty": {
+          "basic": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 7
+          },
+          "compositional": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 9
+          },
+          "structural": {
+            "parse_success": 0.0,
+            "compile_success": 0.0,
+            "execution_success": 0.0,
+            "hidden_pass": 0.0,
+            "n": 8
+          }
+        },
+        "error_phases": {
+          "syntax": 24
+        }
+      },
+      "peak_gpu_memory_bytes": 3380366848
+    }
+  },
+  "paired_comparison": {
+    "n_tasks": 24,
+    "baseline_pass_rate": 0.0,
+    "docs_pass_rate": 0.0,
+    "paired_risk_difference": 0.0,
+    "paired_bootstrap_95pct_ci": [
+      0.0,
+      0.0
+    ],
+    "docs_only_passes": 0,
+    "baseline_only_passes": 0,
+    "mcnemar_exact_two_sided_p": 1.0,
+    "bootstrap_seed": 20260920,
+    "bootstrap_samples": 10000
+  }
+}

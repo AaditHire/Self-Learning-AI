@@ -49,6 +49,15 @@
 - Windows process timeout and `-Xmx` limits are not a complete sandbox.
 - Hardware, driver, CUDA, quantization kernels, and package versions can alter
   training reproducibility.
+- The Phase 1 documentation snapshot did not explicitly forbid a top-level
+  `PROGRAM` wrapper; the model invented one in every documentation condition.
+- The trusted snapshot incorrectly stated that recursion was supported. The
+  pinned semantic validator rejects self-recursive calls. No frozen-evaluation
+  task required recursion, but the error weakens the document's trusted status.
+- Both Phase 1 conditions hit a parse-level floor, so the paired comparison is
+  unable to distinguish semantic capability or retrieval benefit.
+- GOCO's repeated-`INPUT` buffering behavior forced multi-value benchmark tasks
+  to use delimiter parsing and the strings library, increasing task coupling.
 
 ## Mitigations
 

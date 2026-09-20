@@ -1,0 +1,62 @@
+{
+  "condition_order": [
+    "BASE_NO_DOCS",
+    "BASE_WITH_DOCS"
+  ],
+  "conditions": {
+    "BASE_NO_DOCS": {
+      "documentation": null
+    },
+    "BASE_WITH_DOCS": {
+      "context_assembly": "Append the complete trusted documentation snapshot to the unchanged system prompt under a fixed heading; no query-dependent selection or retrieval",
+      "documentation": "docs/goco_language_reference.md"
+    }
+  },
+  "decoding": {
+    "do_sample": false,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "num_beams": 1,
+    "retry_policy": "none",
+    "stopping": "model EOS or max_new_tokens"
+  },
+  "frozen_at": "2026-09-20T11:55:48+05:30",
+  "input_hashes": {
+    "benchmark_hidden_tests_sha256": "f81bc8b5d611b5c349694b7a5004018fa50f409299327e5214870fb67684520d",
+    "benchmark_tasks_sha256": "5f670bf945941a8b45e6bf3f09e5b67ba46a6ac3bd3c02f4003f50ba12f944b1",
+    "documentation_sha256": "e9fca4fc1cea7737923e7429a3c7d46370f1c11bd794e55680813a7536cdc5c4",
+    "model_weights_sha256": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8",
+    "system_prompt_sha256": "dfb2fb36454f5ad11302b3f7fa73b0babf6124f21857af7202a779403ffb3e06",
+    "user_template_sha256": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7"
+  },
+  "model": {
+    "device": "cuda:0",
+    "dtype": "float16",
+    "gradient_state": "all parameters requires_grad=False; torch.inference_mode",
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "quantization": "none",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a"
+  },
+  "output_extraction": "Trim; if a Markdown fence exists, take the first fenced block mechanically; otherwise use the complete trimmed generation; perform no repair",
+  "paired_analysis": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260920,
+    "effect_size": "paired risk difference in task-level hidden pass@1",
+    "hypothesis_test": "two-sided exact McNemar test on discordant task pairs",
+    "uncertainty": "task-resampled paired percentile bootstrap 95% interval"
+  },
+  "primary_metric": "task-level hidden-test pass@1",
+  "prompt_files": {
+    "system": "prompts/phase1_system.txt",
+    "user_template": "prompts/phase1_user_template.txt"
+  },
+  "scoring": {
+    "compiler_timeout_seconds": 3,
+    "exact_output_after_fixed_input_prompt_removal": true,
+    "final_paper_split_allowed": false,
+    "output_limit_bytes_per_stream": 65536,
+    "structural_requirements_must_pass": true
+  },
+  "seed": 20260920,
+  "split": "frozen_evaluation"
+}

@@ -101,3 +101,25 @@ Real user data is out of scope for early phases. Any later use requires consent,
 privacy filtering, provenance, quarantine, deduplication, verification,
 contribution limits, offline training, frozen evaluation, shadow deployment,
 and explicit promotion.
+
+## Phase 1 frozen baseline implementation
+
+Phase 1 uses the official FP16 weights of
+`Qwen/Qwen2.5-Coder-1.5B-Instruct` at commit
+`2e1fd397ee46e1388853d2af2c993145b0f1098a`. Every parameter has
+`requires_grad=False`, inference runs under `torch.inference_mode`, decoding is
+greedy, and there is no retry. The two paired conditions differ only by the
+complete trusted GOCO documentation snapshot appended to the system context.
+
+Task-level pass@1 requires every hidden case plus any explicit structural
+requirement to pass. Parse, semantic compile, execution, exact output, family,
+difficulty, and first error phase are diagnostics. The paired effect is the
+docs-minus-baseline task pass-rate difference. Phase 1 pre-registers a 10,000-
+resample paired task bootstrap interval and two-sided exact McNemar comparison.
+With zero discordant pairs and a complete floor in both conditions, these
+statistics are descriptive and cannot establish equivalence.
+
+The benchmark uses one physical input line per execution because the pinned
+runtime's repeated `INPUT` implementation loses buffered later lines. Tasks
+needing multiple values explicitly use a delimiter and the strings library.
+This is a language/runtime constraint and a construct-validity limitation.

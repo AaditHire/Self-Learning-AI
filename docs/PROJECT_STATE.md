@@ -1,8 +1,9 @@
 # Project state
 
-Last updated: 2026-09-19  
-Current phase: Phase 0 complete; Phase 1 is drafted but not authorized  
-Phase decision: GO
+Last updated: 2026-09-20
+
+Current phase: Phase 1 complete; no parameter adaptation authorized
+Phase decision: NO-GO for Phase 2
 
 ## Repository boundaries
 
@@ -12,12 +13,12 @@ Phase decision: GO
   `1edb0f5c017302da9054dbb06c82b695612400fd`
 - Main GOCO product repository (**STRICTLY READ ONLY**):
   `C:\Users\Admin\OneDrive\Documents\GitHub\GOCO`
-- GOCO commit inspected and pinned for planning:
+- GOCO commit extracted and pinned for the research instrument:
   `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`
 - GOCO remote: `https://github.com/Thryza-creators/GOCO.git`
-- GOCO status at both start and end of Phase 0: clean, branch `main`, two
-  commits behind `origin/main`. It was not pulled, built, generated into, or
-  modified.
+- The mutable GOCO checkout had advanced to `57acfa52b3ce983572683e612c4cd8e4ba9b47a4`
+  before Phase 1. Phase 1 did not use that working tree content: extraction came
+  from the recorded `6a029b8` Git object. GOCO remained clean and unmodified.
 
 Never write to the GOCO path for this research project. Future integration must
 copy an explicitly pinned source tree into this repository and record its
@@ -76,29 +77,42 @@ will implement a research-owned version against a pinned compiler snapshot.
 - Full machine-readable record:
   `research/manifests/goco_compiler_source.json`
 
-## Environment audit
+## Phase 1 frozen inputs
 
-- Installed Java/Javac: 21.0.12.1 LTS.
-- GOCO compiler README requests Java 25.0.1 only.
-- `javacc` is not available on `PATH`.
-- Python: 3.13.0.
+- Compiler runtime: Eclipse Temurin 25.0.1+8.
+- Parser generator: JavaCC 7.0.13.
+- Evaluated compiler JAR SHA-256: `c6f45759930438dd4ae7bfbff298e9c7242604582d29da04210f15377f2be879`.
+- Canonical class-tree SHA-256: `68b3ab9e694d3917957a62577a10e658cd60f5103368a17c5c3ae77374c4fb2a`.
+- Deterministically packaged reproduction JAR SHA-256:
+  `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb`.
+- Model: `Qwen/Qwen2.5-Coder-1.5B-Instruct` revision
+  `2e1fd397ee46e1388853d2af2c993145b0f1098a`.
+- Model weights SHA-256: `c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8`.
+- Inference config SHA-256: `7a6ab3e3fcd335be8674a22dde74d137b7c04b5632eabea3229b7f9319fc7584`.
+- Python 3.13.0, PyTorch 2.9.0+cu130, Transformers 4.57.1.
 
-Phase 1 must resolve and record the Java-version mismatch before promoting a
-compiler snapshot. The checked-in generated parser makes JavaCC unnecessary for
-an initial compile, but future grammar regeneration must pin JavaCC explicitly.
+Java 21 and the pinned Java 25 runtime produced identical behavior across all 88
+upstream conformance cases, but official results use Java 25.0.1 only.
 
-## Architecture decision
+## Phase 1 results
 
-Phase 1 should extract the minimal complete compiler source subtree from the
-pinned commit into a research-owned vendor location. Preserve license and
-provenance. Compile it into a content-addressed build artifact inside this repo,
-then invoke `parser.MyLanguageParser` through a no-shell subprocess wrapper with
-temporary files, UTF-8, stdin capture, separate stdout/stderr, time and memory
-limits, and normalized result fields. Do not couple to the GOCO checkout.
+- Compiler conformance: 87/88 exact; one explained stale upstream expectation
+  for the automatic `INPUT` prompt; no timeout, crash, or output-limit failure.
+- Wrapper tests: 10/10 passed.
+- Benchmark: 40 tasks, 8 semantic families, 40 unique template IDs; 8
+  development, 24 frozen evaluation, and 8 sealed final-paper tasks.
+- Condition A, frozen base/no docs: 0/24 parse and 0/24 hidden pass. Every output
+  was a Go `package main` program.
+- Condition B, frozen base/full trusted docs: 0/24 parse and 0/24 hidden pass.
+  Every output invented an unsupported `PROGRAM` wrapper.
+- Paired pass-rate difference: 0.000; paired bootstrap 95% interval [0, 0];
+  exact McNemar p=1.0 with zero discordant pairs. This is a floor effect, not an
+  equivalence finding.
 
-Compiler execution must occur in a stronger sandbox before untrusted/generated
-programs are used at scale. A JVM timeout and heap cap alone do not constitute a
-security boundary.
+The compiler exposes no GOCO filesystem, process, network, reflection, or Java
+interop capabilities. Execution nevertheless remains bounded in a no-shell
+subprocess with a temporary directory, controlled stdin, separate capped
+streams, heap/metaspace caps, timeout, and cleanup.
 
 ## Research records
 
@@ -110,11 +124,16 @@ security boundary.
 - Threats: `docs/research/THREATS_TO_VALIDITY.md`
 - Experiment registry: `docs/research/EXPERIMENT_REGISTRY.md`
 - Completed phase record: `docs/research/stages/PHASE_00.md`
-- Draft next protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
+- Completed Phase 1 record: `docs/research/stages/PHASE_01.md`
+- Frozen Phase 1 protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
+- Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Do not start Phase 1 without explicit user approval. On approval, first verify
-both repository states, resolve the pinned Java runtime strategy, and turn the
-draft Phase 1 protocol into a frozen protocol before generating benchmark data
-or invoking a model.
+Do not start QLoRA, LoRA, Phase 2, or any parameter update. Phase 1's NO-GO must
+be independently reviewed. If authorized, the next work should be **Phase 1R —
+Elicitation Protocol Repair and Fresh Frozen Baseline Replication**: use only
+development tasks to make the documentation/prompt produce valid GOCO, correct
+the trusted reference (including its false recursion statement), pre-register a
+new protocol, and evaluate on a newly created frozen suite. Do not tune against
+the completed 24-task Phase 1 evaluation or open the final-paper suite.
