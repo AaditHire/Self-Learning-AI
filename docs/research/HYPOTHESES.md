@@ -68,3 +68,12 @@ gate, not a causal parameter-count or universal scaling hypothesis.
 **Result:** Not supported as a conjunctive hypothesis. Candidate C achieved
 14/64 (21.875%) versus 0/64, a +21.875-point effect, and passed five families.
 The absolute 25% criterion failed; therefore the preregistered gate failed.
+
+## H-011 — Exploratory parameter-acquisition feasibility
+
+On the frozen Phase 2A development suite, the fixed 3B QLoRA adapter without
+GOCO documentation will improve hidden-test pass@1 by at least 15 points over
+the frozen 3B base without documentation, reach at least 20%, pass at least four
+families, avoid explanation by structural duplication, and avoid severe
+general-regression collapse. This is exploratory and cannot establish the final
+parameter-acquisition claim.

@@ -184,3 +184,17 @@ gain and five-family span passed their criteria, but 21.875% missed the 25%
 absolute criterion. The conjunctive gate therefore failed. The secondary 1.5B
 NF4 result was 4/64 and remained interpretive only. These completed tasks are
 now consumed and cannot be reused for protocol selection or confirmation.
+
+## Phase 2A exploratory parameter-acquisition methodology
+
+Phase 2A trains one versioned rank-16 QLoRA adapter on 200 compiler-verified
+GOCO examples balanced across eight families. The immutable 3B base is NF4
+double-quantized with FP16 compute; the adapter is never merged. A fixed local
+hardware smoke precedes the only training configuration. The final epoch is
+selected a priori without development evaluation during training.
+
+Primary evaluation pairs frozen-base/no-doc with adapter/no-doc on 64 new
+lineage-held-out tasks. Training performance, structural distance, and a
+24-task non-GOCO regression comparison are separate diagnostics. Phase 2A is
+developmental: its suite becomes consumed, and success can motivate but cannot
+replace an untouched confirmatory experiment.

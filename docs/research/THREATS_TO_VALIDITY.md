@@ -99,6 +99,19 @@
 - The 3B Phase 1S full-synthesis rate was 7/24 (29.2%), while Phase 1T Candidate
   C reached 14/64 (21.875%). Suite composition and sampling error can explain
   the difference; it should not be attributed post hoc to one task property.
+- Phase 2A training targets are trusted research-generated references, not
+  autonomously discovered experience. Their regular templating can make syntax
+  acquisition easier and can inflate training performance.
+- Phase 2A has one seed, one fixed adapter configuration, and a development-only
+  evaluation. It estimates feasibility, not robustness across seeds or
+  hyperparameters, and cannot support a confirmatory paper claim.
+- Identifier/literal/library-normalized comparison remains coarse: 28 nearest
+  train/evaluation and 23 prior-suite pairs exceed 0.90 after final manual
+  review. Distinct algorithms and signatures mitigate but do not eliminate
+  correlated grammar skeletons.
+- The 24-task exact-response regression suite is small and format-sensitive.
+  Lack of measured collapse does not establish general retention or prevent
+  unmeasured capability loss.
 
 ## Mitigations
 

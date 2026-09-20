@@ -1,0 +1,194 @@
+[
+  {
+    "task_id": "P2A-REG-01",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_python_add",
+    "prompt": "What does this Python expression print: 3 + 4 * 2? Reply with only the number.",
+    "expected": "11"
+  },
+  {
+    "task_id": "P2A-REG-02",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_python_slice",
+    "prompt": "What does Python 'abcdef'[1:4] evaluate to? Reply with only the text.",
+    "expected": "bcd"
+  },
+  {
+    "task_id": "P2A-REG-03",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_python_len",
+    "prompt": "What does len([10, 20, 30, 40]) return? Reply with only the number.",
+    "expected": "4"
+  },
+  {
+    "task_id": "P2A-REG-04",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_python_bool",
+    "prompt": "In Python, what does bool([]) evaluate to? Reply TRUE or FALSE only.",
+    "expected": "FALSE"
+  },
+  {
+    "task_id": "P2A-REG-05",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_js_mod",
+    "prompt": "What is 17 % 5 in JavaScript? Reply with only the number.",
+    "expected": "2"
+  },
+  {
+    "task_id": "P2A-REG-06",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_loop_sum",
+    "prompt": "A loop adds integers 1 through 5 inclusive. Reply with only the final sum.",
+    "expected": "15"
+  },
+  {
+    "task_id": "P2A-REG-07",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_zero_index",
+    "prompt": "For array [8, 6, 4], what value is at zero-based index 1? Reply with only the number.",
+    "expected": "6"
+  },
+  {
+    "task_id": "P2A-REG-08",
+    "split": "phase2a_general_regression",
+    "category": "trace",
+    "template_lineage": "p2a-reg-trace_precedence",
+    "prompt": "Evaluate (2 + 3) * 4. Reply with only the number.",
+    "expected": "20"
+  },
+  {
+    "task_id": "P2A-REG-09",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_upper",
+    "prompt": "Convert 'quiet river' to uppercase. Reply with only the result.",
+    "expected": "QUIET RIVER"
+  },
+  {
+    "task_id": "P2A-REG-10",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_reverse",
+    "prompt": "Reverse the characters in 'stressed'. Reply with only the result.",
+    "expected": "desserts"
+  },
+  {
+    "task_id": "P2A-REG-11",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_sort",
+    "prompt": "Sort 9, 2, 5 ascending. Reply as comma-separated numbers with no spaces.",
+    "expected": "2,5,9"
+  },
+  {
+    "task_id": "P2A-REG-12",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_count",
+    "prompt": "How many letters are in 'compiler'? Reply with only the number.",
+    "expected": "8"
+  },
+  {
+    "task_id": "P2A-REG-13",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_first",
+    "prompt": "Return the first word of 'small reliable system'. Reply with only that word.",
+    "expected": "small"
+  },
+  {
+    "task_id": "P2A-REG-14",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_last",
+    "prompt": "Return the last word of 'tests protect behavior'. Reply with only that word.",
+    "expected": "behavior"
+  },
+  {
+    "task_id": "P2A-REG-15",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_replace",
+    "prompt": "Replace every '-' in 'a-b-c' with ':'. Reply with only the result.",
+    "expected": "a:b:c"
+  },
+  {
+    "task_id": "P2A-REG-16",
+    "split": "phase2a_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2a-reg-instruction_concat",
+    "prompt": "Concatenate 'data' and 'set' with an underscore. Reply with only the result.",
+    "expected": "data_set"
+  },
+  {
+    "task_id": "P2A-REG-17",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_stack",
+    "prompt": "Which data structure is LIFO? Reply with one lowercase word.",
+    "expected": "stack"
+  },
+  {
+    "task_id": "P2A-REG-18",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_queue",
+    "prompt": "Which data structure is FIFO? Reply with one lowercase word.",
+    "expected": "queue"
+  },
+  {
+    "task_id": "P2A-REG-19",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_binary",
+    "prompt": "How many possible values does one bit have? Reply with only the number.",
+    "expected": "2"
+  },
+  {
+    "task_id": "P2A-REG-20",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_http",
+    "prompt": "Which HTTP method is conventionally used to retrieve a resource? Reply with the uppercase method only.",
+    "expected": "GET"
+  },
+  {
+    "task_id": "P2A-REG-21",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_sql",
+    "prompt": "Which SQL keyword filters rows? Reply with the uppercase keyword only.",
+    "expected": "WHERE"
+  },
+  {
+    "task_id": "P2A-REG-22",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_git",
+    "prompt": "Which Git command records staged changes as a new revision? Reply with the command's subcommand only.",
+    "expected": "commit"
+  },
+  {
+    "task_id": "P2A-REG-23",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_complexity",
+    "prompt": "What is the typical lookup complexity of a hash table, using Big-O notation? Reply with only the notation.",
+    "expected": "O(1)"
+  },
+  {
+    "task_id": "P2A-REG-24",
+    "split": "phase2a_general_regression",
+    "category": "concept",
+    "template_lineage": "p2a-reg-concept_json",
+    "prompt": "Which two JSON literals represent boolean values? Reply exactly: true,false",
+    "expected": "true,false"
+  }
+]

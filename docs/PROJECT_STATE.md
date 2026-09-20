@@ -2,8 +2,9 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1T complete; Phase 2 gate failed
-Phase decision: no parameter adaptation authorized
+Current phase: Phase 2A preregistered; exploratory QLoRA pilot pending
+Phase decision: Phase 1T gate remains failed; only the separately authorized
+exploratory Phase 2A adapter run is permitted
 
 ## Repository boundaries
 
@@ -37,8 +38,9 @@ unrestricted recursive self-improvement.
 
 - Hardware: Windows 11, RTX 3060 Laptop GPU (6 GB VRAM), Ryzen 7 6800HS,
   16 GB system RAM.
-- Primary model: `Qwen/Qwen2.5-Coder-1.5B-Instruct`, immutable exact revision
-  to be resolved and frozen before the first model experiment.
+- Phase 1 primary model was `Qwen/Qwen2.5-Coder-1.5B-Instruct`. Phase 2A uses
+  the exact frozen `Qwen/Qwen2.5-Coder-3B-Instruct` Phase 1S/1T revision under
+  a separate exploratory authorization.
 - Training path after baselines: 4-bit QLoRA, LoRA rank initially near 16,
   batch size 1, gradient accumulation, gradient checkpointing, conservative
   sequence lengths.
@@ -193,6 +195,25 @@ QLoRA or Phase 2 parameter adaptation**. The secondary matched-NF4 1.5B check
 scored 4/64 (6.25%) across three families; it is diagnostic only and does not
 alter the gate. No training or parameter update occurred.
 
+## Phase 2A preregistration
+
+Phase 2A starts from final Phase 1T commit
+`00d819c1f38260f6750db70306150bd085422312`. Phase 1T remains a failed gate;
+Phase 2A is a separately authorized developmental pilot and cannot change that
+history.
+
+The frozen pool has 200 verified training examples (25 per family; 600 hidden
+verification cases), 64 structurally held-out development tasks (eight per
+family; 320 hidden cases), and 24 non-GOCO regression tasks. All training
+targets and development references passed. Phase 1/1R/1S/1T tasks are excluded
+from training and the legacy final-paper holdout remains sealed.
+
+The exact 3B base remains immutable. Candidate `c0001-phase2a-qlora` is an
+unmerged rank-16 NF4 QLoRA adapter. A two-step smoke gate precedes the single
+three-epoch training configuration. The frozen config SHA-256 is
+`f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2`.
+No Phase 2A gradient step or model evaluation existed at freeze time.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -209,13 +230,13 @@ alter the gate. No training or parameter update occurred.
 - Frozen Phase 1T protocol: `research/protocols/PHASE_1T_FROZEN_CONFIRMATION.md`
 - Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
 - Completed Phase 1T record: `docs/research/stages/PHASE_1T.md`
+- Phase 2A record: `docs/research/stages/PHASE_2A.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Phase 1T is complete and its Phase 2 gate failed. Do not start QLoRA, LoRA,
-Phase 2, or any parameter update. Phase 1, Phase 1R, Phase 1S, and Phase 1T
-tasks are consumed. Do not open the legacy sealed holdout. Any further model,
-prompt, or benchmark change requires a new preregistered phase.
+Execute only the frozen Phase 2A smoke, single QLoRA run, and preregistered
+evaluations. Do not tune against results, merge the adapter, train on consumed
+tasks, open the sealed holdout, or begin Phase 2B. Phase 1T remains failed.

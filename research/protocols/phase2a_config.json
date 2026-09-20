@@ -1,0 +1,126 @@
+{
+  "phase": "2A-exploratory-qlora-feasibility",
+  "frozen_at": "2026-09-20T22:05:00+05:30",
+  "start_commit": "00d819c1f38260f6750db70306150bd085422312",
+  "scientific_status": "developmental/exploratory; not confirmatory",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapter only; never merge"
+  },
+  "data": {
+    "training_examples": "data/phase2a/training_examples.json",
+    "training_tests": "data/phase2a/training_hidden_tests.json",
+    "development_tasks": "benchmark/phase2a/development_tasks.json",
+    "development_tests": "benchmark/phase2a/development_hidden_tests.json",
+    "development_references": "benchmark/phase2a/development_references.json",
+    "general_regression": "benchmark/phase2a/general_regression.json"
+  },
+  "prompt": {
+    "system": "prompts/phase1t_system.txt",
+    "user_template": "prompts/phase1t_user_template.txt",
+    "training_context": "system plus task prompt only; no Candidate C documentation",
+    "primary_evaluation_context": "same system and task template; no Candidate C documentation",
+    "candidate_c_context_files": [
+      "prompts/phase1r_syntax_contract_v1.txt",
+      "docs/goco_language_reference_phase1r_v1.md",
+      "prompts/phase1r_canonical_examples_v1.txt"
+    ],
+    "prompt_search": "prohibited after freeze"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [0.9, 0.999],
+    "adam_epsilon": 1e-8,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "the final epoch is selected a priori; no development evaluation during training and no hyperparameter search",
+    "adapter_output": "research/adapters/candidates/c0001-phase2a-qlora"
+  },
+  "smoke_gate": {
+    "examples": 16,
+    "examples_per_family": 2,
+    "epochs": 1,
+    "expected_optimizer_steps": 2,
+    "requirements": "completion, finite loss/gradients, no OOM, peak allocated GPU <= 5.5 GiB, peak process RSS <= 12 GiB",
+    "max_allocated_bytes": 5905580032,
+    "max_process_rss_bytes": 12884901888,
+    "fallback_if_failed": "record failed EXP-0015 attempt; preregister a new rank-8/max-length-256 smoke attempt before further gradients"
+  },
+  "evaluation": {
+    "primary_conditions": ["BASE_NO_DOCS", "ADAPTED_NO_DOCS"],
+    "optional_reference": "BASE_DOCS; not used for selection",
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "primary_metric": "task-level hidden-test pass@1",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260920
+  },
+  "success_gate": {
+    "conjunctive": true,
+    "absolute_improvement_minimum": 0.15,
+    "adapted_hidden_pass_rate_minimum": 0.20,
+    "minimum_families_with_success": 4,
+    "structural_duplication_override": "failure if improvement is dominated by rejected or undisclosed structural duplicates",
+    "regression_no_severe_collapse": "adapted regression accuracy may drop by at most 0.20 and at most 4 of 24 tasks relative to base"
+  },
+  "seed": 20260920,
+  "input_file_hashes": {
+    "data/phase2a/training_examples.json": "514c4786694bf628a0b22bd7d60b0d7fac1d38cc4ce9de055aed48e62ab0c37e",
+    "data/phase2a/training_hidden_tests.json": "285d2d866e62ee47c588917323881489fdd13b381bca09755714d77979a36e84",
+    "benchmark/phase2a/development_tasks.json": "34420cbf63dc9900a05c6c3419b737c68fc54f76038c92a0f27a9fd281fd4284",
+    "benchmark/phase2a/development_hidden_tests.json": "e05d2016542adbe25892931c51197a058a8f1a8f567c2e4a4a92668a0c121b20",
+    "benchmark/phase2a/development_references.json": "f28ed5ee5ef55c239961fdba5c00848c3da3b737c138f116b55960f12c2374f4",
+    "benchmark/phase2a/general_regression.json": "305b7b9d79e5b2eb6ce36a76fd05824af3a38496c8d764f83ebe5c97678a3f7f",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "prompts/phase1r_syntax_contract_v1.txt": "f15894a4d4c4cad4b5e6a5f98540fbb50291bba967fd164d101ad233bc3a964c",
+    "docs/goco_language_reference_phase1r_v1.md": "aa0e7f75804d05f24a8e8f9a70ef25b6ca7caa5b87c9bb2d4bec9833f072bc8d",
+    "prompts/phase1r_canonical_examples_v1.txt": "756086c027f415b0a05898568eb0ef261a0d4f9eaa018a9e9a2f50ef61b4102a",
+    "research/protocols/phase1r_output_normalization_v1.md": "3b3ed11956f00341944849b57a9af6cbe74c9dc7670bcfc7e477c0798e6311e4",
+    "research/results/EXP-0014/data_validation.json": "5ff0d6bf81307e2b5fba646cb0c272277c842e41a975b1f2e944818ba4d5e10b",
+    "research/results/EXP-0014/structural_overlap_manual_review.md": "9fbe87d66f4d7e22674ee3c9550829743e690d57da854d2c5ec701b83c1ca2a7",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase2a_evaluation.py": "70c154adfb7e90c1519d4a34fb5297aaa4cc02cc99f7890eeed20d0cebe473bf"
+  },
+  "prohibitions": [
+    "training on Phase 1/1R/1S/1T or sealed tasks",
+    "opening the sealed Phase 1 holdout",
+    "remote training API",
+    "base-weight updates or adapter merge",
+    "checkpoint selection on prior or sealed suites",
+    "unrecorded hyperparameter search",
+    "Phase 2B"
+  ]
+}

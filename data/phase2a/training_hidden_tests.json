@@ -1,0 +1,3402 @@
+{
+  "P2A-TR-EV-LIN-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P2A-TR-EV-LIN-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2A-TR-EV-LIN-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "17.0"
+    }
+  ],
+  "P2A-TR-EV-LIN-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "P2A-TR-EV-LIN-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-19.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "16.0"
+    }
+  ],
+  "P2A-TR-EV-QUAD-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P2A-TR-EV-QUAD-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P2A-TR-EV-QUAD-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-EV-QUAD-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "16.0"
+    }
+  ],
+  "P2A-TR-EV-QUAD-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "20.0"
+    }
+  ],
+  "P2A-TR-EV-WEIGHT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|5\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-EV-WEIGHT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|5\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P2A-TR-EV-WEIGHT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|5\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "P2A-TR-EV-WEIGHT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1\n",
+      "expected_stdout": "18.0"
+    }
+  ],
+  "P2A-TR-EV-WEIGHT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|5\n",
+      "expected_stdout": "-17.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-EV-DISC-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "10|2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|3\n",
+      "expected_stdout": "21.6"
+    }
+  ],
+  "P2A-TR-EV-DISC-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "10|2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|3\n",
+      "expected_stdout": "20.4"
+    }
+  ],
+  "P2A-TR-EV-DISC-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "10|2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|3\n",
+      "expected_stdout": "18.0"
+    }
+  ],
+  "P2A-TR-EV-DISC-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "10|2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|3\n",
+      "expected_stdout": "16.799999999999997"
+    }
+  ],
+  "P2A-TR-EV-DISC-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "10|2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|3\n",
+      "expected_stdout": "14.399999999999999"
+    }
+  ],
+  "P2A-TR-EV-ABS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-EV-ABS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-EV-ABS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-EV-ABS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "6\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "11\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-EV-ABS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "9\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "14\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-CD-SIGN-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "BELOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3\n",
+      "expected_stdout": "EQUAL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "0\n",
+      "expected_stdout": "ABOVE"
+    }
+  ],
+  "P2A-TR-CD-SIGN-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "BELOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "EQUAL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "ABOVE"
+    }
+  ],
+  "P2A-TR-CD-SIGN-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "BELOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "EQUAL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "ABOVE"
+    }
+  ],
+  "P2A-TR-CD-SIGN-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "3\n",
+      "expected_stdout": "BELOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5\n",
+      "expected_stdout": "EQUAL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8\n",
+      "expected_stdout": "ABOVE"
+    }
+  ],
+  "P2A-TR-CD-SIGN-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "8\n",
+      "expected_stdout": "BELOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10\n",
+      "expected_stdout": "EQUAL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "13\n",
+      "expected_stdout": "ABOVE"
+    }
+  ],
+  "P2A-TR-CD-DIV-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "2\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P2A-TR-CD-DIV-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "3\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P2A-TR-CD-DIV-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "4\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "12\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P2A-TR-CD-DIV-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "5\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "6\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "15\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P2A-TR-CD-DIV-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "7\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "8\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "21\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P2A-TR-CD-THR-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-1\n",
+      "expected_stdout": "FAIL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "PASS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8\n",
+      "expected_stdout": "PASS"
+    }
+  ],
+  "P2A-TR-CD-THR-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "9\n",
+      "expected_stdout": "FAIL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10\n",
+      "expected_stdout": "PASS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "18\n",
+      "expected_stdout": "PASS"
+    }
+  ],
+  "P2A-TR-CD-THR-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "24\n",
+      "expected_stdout": "FAIL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "25\n",
+      "expected_stdout": "PASS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "33\n",
+      "expected_stdout": "PASS"
+    }
+  ],
+  "P2A-TR-CD-THR-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "49\n",
+      "expected_stdout": "FAIL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "50\n",
+      "expected_stdout": "PASS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "58\n",
+      "expected_stdout": "PASS"
+    }
+  ],
+  "P2A-TR-CD-THR-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "99\n",
+      "expected_stdout": "FAIL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "100\n",
+      "expected_stdout": "PASS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "108\n",
+      "expected_stdout": "PASS"
+    }
+  ],
+  "P2A-TR-CD-MAX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "LARGER:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|5\n",
+      "expected_stdout": "LARGER:A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|-1\n",
+      "expected_stdout": "LARGER:A"
+    }
+  ],
+  "P2A-TR-CD-MAX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "WINNER:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|5\n",
+      "expected_stdout": "WINNER:A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|-1\n",
+      "expected_stdout": "WINNER:A"
+    }
+  ],
+  "P2A-TR-CD-MAX-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "HIGH:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|5\n",
+      "expected_stdout": "HIGH:A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|-1\n",
+      "expected_stdout": "HIGH:A"
+    }
+  ],
+  "P2A-TR-CD-MAX-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "MAX:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|5\n",
+      "expected_stdout": "MAX:A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|-1\n",
+      "expected_stdout": "MAX:A"
+    }
+  ],
+  "P2A-TR-CD-MAX-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "TOP:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|5\n",
+      "expected_stdout": "TOP:A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|-1\n",
+      "expected_stdout": "TOP:A"
+    }
+  ],
+  "P2A-TR-CD-RANGE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-1\n",
+      "expected_stdout": "OUT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5.0\n",
+      "expected_stdout": "IN"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "11\n",
+      "expected_stdout": "OUT"
+    }
+  ],
+  "P2A-TR-CD-RANGE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "4\n",
+      "expected_stdout": "OUT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10.0\n",
+      "expected_stdout": "IN"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "16\n",
+      "expected_stdout": "OUT"
+    }
+  ],
+  "P2A-TR-CD-RANGE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-6\n",
+      "expected_stdout": "OUT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0.0\n",
+      "expected_stdout": "IN"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "OUT"
+    }
+  ],
+  "P2A-TR-CD-RANGE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "19\n",
+      "expected_stdout": "OUT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "25.0\n",
+      "expected_stdout": "IN"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "31\n",
+      "expected_stdout": "OUT"
+    }
+  ],
+  "P2A-TR-CD-RANGE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "49\n",
+      "expected_stdout": "OUT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "65.0\n",
+      "expected_stdout": "IN"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "81\n",
+      "expected_stdout": "OUT"
+    }
+  ],
+  "P2A-TR-LP-SUM-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P2A-TR-LP-SUM-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "21.0"
+    }
+  ],
+  "P2A-TR-LP-SUM-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "28.0"
+    }
+  ],
+  "P2A-TR-LP-SUM-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P2A-TR-LP-SUM-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "45.0"
+    }
+  ],
+  "P2A-TR-LP-FACTORIAL-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "120.0"
+    }
+  ],
+  "P2A-TR-LP-FACTORIAL-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "720.0"
+    }
+  ],
+  "P2A-TR-LP-FACTORIAL-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "5040.0"
+    }
+  ],
+  "P2A-TR-LP-FACTORIAL-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "120.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "40320.0"
+    }
+  ],
+  "P2A-TR-LP-FACTORIAL-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "720.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "362880.0"
+    }
+  ],
+  "P2A-TR-LP-SQUARES-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "55.0"
+    }
+  ],
+  "P2A-TR-LP-SQUARES-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "91.0"
+    }
+  ],
+  "P2A-TR-LP-SQUARES-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "140.0"
+    }
+  ],
+  "P2A-TR-LP-SQUARES-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "55.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "204.0"
+    }
+  ],
+  "P2A-TR-LP-SQUARES-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "91.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "285.0"
+    }
+  ],
+  "P2A-TR-LP-ODDS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "25.0"
+    }
+  ],
+  "P2A-TR-LP-ODDS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P2A-TR-LP-ODDS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "49.0"
+    }
+  ],
+  "P2A-TR-LP-ODDS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "64.0"
+    }
+  ],
+  "P2A-TR-LP-ODDS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "81.0"
+    }
+  ],
+  "P2A-TR-LP-TRIANGULAR-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "25.0"
+    }
+  ],
+  "P2A-TR-LP-TRIANGULAR-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "33.0"
+    }
+  ],
+  "P2A-TR-LP-TRIANGULAR-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "42.0"
+    }
+  ],
+  "P2A-TR-LP-TRIANGULAR-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "52.0"
+    }
+  ],
+  "P2A-TR-LP-TRIANGULAR-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "63.0"
+    }
+  ],
+  "P2A-TR-FN-SCALE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-FN-SCALE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P2A-TR-FN-SCALE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "18.0"
+    }
+  ],
+  "P2A-TR-FN-SCALE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "24.0"
+    }
+  ],
+  "P2A-TR-FN-SCALE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "P2A-TR-FN-SHIFT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-FN-SHIFT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-FN-SHIFT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P2A-TR-FN-SHIFT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2A-TR-FN-SHIFT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P2A-TR-FN-SQUAREPLUS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "37.0"
+    }
+  ],
+  "P2A-TR-FN-SQUAREPLUS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "38.0"
+    }
+  ],
+  "P2A-TR-FN-SQUAREPLUS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "39.0"
+    }
+  ],
+  "P2A-TR-FN-SQUAREPLUS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P2A-TR-FN-SQUAREPLUS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "41.0"
+    }
+  ],
+  "P2A-TR-FN-DISTANCE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-FN-DISTANCE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2A-TR-FN-DISTANCE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P2A-TR-FN-DISTANCE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2A-TR-FN-DISTANCE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P2A-TR-FN-HALVEPLUS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2A-TR-FN-HALVEPLUS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-FN-HALVEPLUS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-FN-HALVEPLUS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-FN-HALVEPLUS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-AR-SUM3-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-AR-SUM3-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-AR-SUM3-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-AR-SUM3-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-AR-SUM3-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P2A-TR-AR-PRODUCT3-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "P2A-TR-AR-PRODUCT3-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-7.0"
+    }
+  ],
+  "P2A-TR-AR-PRODUCT3-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "P2A-TR-AR-PRODUCT3-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-5.0"
+    }
+  ],
+  "P2A-TR-AR-PRODUCT3-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-4.0"
+    }
+  ],
+  "P2A-TR-AR-MAX3-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2A-TR-AR-MAX3-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-AR-MAX3-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-AR-MAX3-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-AR-MAX3-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-AR-MIN3-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-1.0"
+    }
+  ],
+  "P2A-TR-AR-MIN3-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-2.0"
+    }
+  ],
+  "P2A-TR-AR-MIN3-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "P2A-TR-AR-MIN3-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-4.0"
+    }
+  ],
+  "P2A-TR-AR-MIN3-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2\n",
+      "expected_stdout": "-5.0"
+    }
+  ],
+  "P2A-TR-AR-POSITIVE4-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|-2|3|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|-2|-3|-4\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2|4|6|8\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2A-TR-AR-POSITIVE4-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|-2|3|0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|-2|-3|-4\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2|4|6|8\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-AR-POSITIVE4-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|-2|3|0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|-2|-3|-4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2|4|6|8\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-AR-POSITIVE4-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|-2|3|0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|-2|-3|-4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2|4|6|8\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-AR-POSITIVE4-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|-2|3|0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|-2|-3|-4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2|4|6|8\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-ST-UPPER-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XYZ"
+    }
+  ],
+  "P2A-TR-ST-UPPER-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XYZ"
+    }
+  ],
+  "P2A-TR-ST-UPPER-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XYZ"
+    }
+  ],
+  "P2A-TR-ST-UPPER-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XYZ"
+    }
+  ],
+  "P2A-TR-ST-UPPER-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XYZ"
+    }
+  ],
+  "P2A-TR-ST-LOWER-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "goco"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "xyz"
+    }
+  ],
+  "P2A-TR-ST-LOWER-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "goco"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "xyz"
+    }
+  ],
+  "P2A-TR-ST-LOWER-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "goco"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "xyz"
+    }
+  ],
+  "P2A-TR-ST-LOWER-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "goco"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "xyz"
+    }
+  ],
+  "P2A-TR-ST-LOWER-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "goco"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "xyz"
+    }
+  ],
+  "P2A-TR-ST-REVERSE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "ZyX"
+    }
+  ],
+  "P2A-TR-ST-REVERSE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "ZyX"
+    }
+  ],
+  "P2A-TR-ST-REVERSE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "ZyX"
+    }
+  ],
+  "P2A-TR-ST-REVERSE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "ZyX"
+    }
+  ],
+  "P2A-TR-ST-REVERSE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "ZyX"
+    }
+  ],
+  "P2A-TR-ST-LENGTHPLUS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2A-TR-ST-LENGTHPLUS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2A-TR-ST-LENGTHPLUS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P2A-TR-ST-LENGTHPLUS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2A-TR-ST-LENGTHPLUS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2A-TR-ST-REPEAT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GoCoGoCo"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha betaalpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XyZXyZ"
+    }
+  ],
+  "P2A-TR-ST-REPEAT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GoCoGoCoGoCo"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha betaalpha betaalpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XyZXyZXyZ"
+    }
+  ],
+  "P2A-TR-ST-REPEAT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GoCo"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XyZ"
+    }
+  ],
+  "P2A-TR-ST-REPEAT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GoCoGoCo"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha betaalpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XyZXyZ"
+    }
+  ],
+  "P2A-TR-ST-REPEAT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GoCoGoCoGoCo"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha betaalpha betaalpha beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "XyZ\n",
+      "expected_stdout": "XyZXyZXyZ"
+    }
+  ],
+  "P2A-TR-IO-SWAP-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B:A:1"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue:red:1"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "ok:hello world:1"
+    }
+  ],
+  "P2A-TR-IO-SWAP-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B:A:2"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue:red:2"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "ok:hello world:2"
+    }
+  ],
+  "P2A-TR-IO-SWAP-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B:A:3"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue:red:3"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "ok:hello world:3"
+    }
+  ],
+  "P2A-TR-IO-SWAP-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B:A:4"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue:red:4"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "ok:hello world:4"
+    }
+  ],
+  "P2A-TR-IO-SWAP-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B:A:5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue:red:5"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "ok:hello world:5"
+    }
+  ],
+  "P2A-TR-IO-BRACKET-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "[A]<B>#1"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "[red]<blue>#1"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "[hello world]<ok>#1"
+    }
+  ],
+  "P2A-TR-IO-BRACKET-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "[A]<B>#2"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "[red]<blue>#2"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "[hello world]<ok>#2"
+    }
+  ],
+  "P2A-TR-IO-BRACKET-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "[A]<B>#3"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "[red]<blue>#3"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "[hello world]<ok>#3"
+    }
+  ],
+  "P2A-TR-IO-BRACKET-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "[A]<B>#4"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "[red]<blue>#4"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "[hello world]<ok>#4"
+    }
+  ],
+  "P2A-TR-IO-BRACKET-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "[A]<B>#5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "[red]<blue>#5"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "[hello world]<ok>#5"
+    }
+  ],
+  "P2A-TR-IO-ARROW-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A->B->1"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red->blue->1"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world->ok->1"
+    }
+  ],
+  "P2A-TR-IO-ARROW-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A->B->2"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red->blue->2"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world->ok->2"
+    }
+  ],
+  "P2A-TR-IO-ARROW-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A->B->3"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red->blue->3"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world->ok->3"
+    }
+  ],
+  "P2A-TR-IO-ARROW-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A->B->4"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red->blue->4"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world->ok->4"
+    }
+  ],
+  "P2A-TR-IO-ARROW-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A->B->5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red->blue->5"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world->ok->5"
+    }
+  ],
+  "P2A-TR-IO-SLASH-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "1/A/B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "1/red/blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "1/hello world/ok"
+    }
+  ],
+  "P2A-TR-IO-SLASH-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "2/A/B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "2/red/blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "2/hello world/ok"
+    }
+  ],
+  "P2A-TR-IO-SLASH-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "3/A/B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "3/red/blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "3/hello world/ok"
+    }
+  ],
+  "P2A-TR-IO-SLASH-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "4/A/B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "4/red/blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "4/hello world/ok"
+    }
+  ],
+  "P2A-TR-IO-SLASH-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "5/A/B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "5/red/blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "5/hello world/ok"
+    }
+  ],
+  "P2A-TR-IO-TWOLINE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A-1\nB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red-1\nblue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world-1\nok"
+    }
+  ],
+  "P2A-TR-IO-TWOLINE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A-2\nB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red-2\nblue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world-2\nok"
+    }
+  ],
+  "P2A-TR-IO-TWOLINE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A-3\nB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red-3\nblue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world-3\nok"
+    }
+  ],
+  "P2A-TR-IO-TWOLINE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A-4\nB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red-4\nblue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world-4\nok"
+    }
+  ],
+  "P2A-TR-IO-TWOLINE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A-5\nB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "red-5\nblue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello world|ok\n",
+      "expected_stdout": "hello world-5\nok"
+    }
+  ],
+  "P2A-TR-CP-FILTER-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8\n",
+      "expected_stdout": "20.0"
+    }
+  ],
+  "P2A-TR-CP-FILTER-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "12\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "P2A-TR-CP-FILTER-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "16\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P2A-TR-CP-FILTER-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "20\n",
+      "expected_stdout": "50.0"
+    }
+  ],
+  "P2A-TR-CP-FILTER-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "6\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "24\n",
+      "expected_stdout": "60.0"
+    }
+  ],
+  "P2A-TR-CP-POWER-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "MULTIPLE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|0\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2A-TR-CP-POWER-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|2\n",
+      "expected_stdout": "MULTIPLE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|0\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2A-TR-CP-POWER-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "MULTIPLE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|0\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2A-TR-CP-POWER-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|0\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2A-TR-CP-POWER-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|0\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2A-TR-CP-DIVCOUNT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "25\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P2A-TR-CP-DIVCOUNT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "25\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P2A-TR-CP-DIVCOUNT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "25\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2A-TR-CP-DIVCOUNT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "25\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2A-TR-CP-DIVCOUNT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "25\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2A-TR-CP-SUMCLASS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|10|10\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|1|0\n",
+      "expected_stdout": "LOW"
+    }
+  ],
+  "P2A-TR-CP-SUMCLASS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "LOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|10|10\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|1|0\n",
+      "expected_stdout": "LOW"
+    }
+  ],
+  "P2A-TR-CP-SUMCLASS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "LOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|10|10\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|1|0\n",
+      "expected_stdout": "LOW"
+    }
+  ],
+  "P2A-TR-CP-SUMCLASS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "LOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|10|10\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|1|0\n",
+      "expected_stdout": "LOW"
+    }
+  ],
+  "P2A-TR-CP-SUMCLASS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "LOW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|10|10\n",
+      "expected_stdout": "HIGH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|1|0\n",
+      "expected_stdout": "LOW"
+    }
+  ],
+  "P2A-TR-CP-TEXTCOUNT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "alphabet\n",
+      "expected_stdout": "MANY"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "sky\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "aaa\n",
+      "expected_stdout": "MANY"
+    }
+  ],
+  "P2A-TR-CP-TEXTCOUNT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "alphabet\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "sky\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "eee\n",
+      "expected_stdout": "MANY"
+    }
+  ],
+  "P2A-TR-CP-TEXTCOUNT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "alphabet\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "sky\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "iii\n",
+      "expected_stdout": "MANY"
+    }
+  ],
+  "P2A-TR-CP-TEXTCOUNT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "alphabet\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "sky\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "ooo\n",
+      "expected_stdout": "MANY"
+    }
+  ],
+  "P2A-TR-CP-TEXTCOUNT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "alphabet\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "sky\n",
+      "expected_stdout": "FEW"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "uuu\n",
+      "expected_stdout": "MANY"
+    }
+  ]
+}

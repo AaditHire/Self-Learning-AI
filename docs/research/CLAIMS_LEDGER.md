@@ -132,4 +132,22 @@ continual-learning claim is currently justified.
 - **Currently justified:** The frozen 3B no-doc and Candidate-C baselines are
   reproducible for Phase 1T, and Candidate C materially improves this exact
   configuration. Operational-backbone suitability is not supported because
-  21.875% misses the preregistered 25% criterion. Phase 2 is not authorized.
+  21.875% misses the preregistered 25% criterion. Phase 1T did not authorize
+  Phase 2; the later Phase 2A pilot is a separate exploratory authorization.
+
+## CLM-009
+
+- **Proposed claim:** QLoRA can produce development-set evidence consistent
+  with parameterized GOCO behavioral acquisition in this setup.
+- **Evidence required:** Frozen Phase 2A base/no-doc versus adapter/no-doc on
+  lineage-separated tasks, verified targets, training/held-out gap, paired
+  outcomes, and non-GOCO regression.
+- **Experiment:** EXP-0015 through EXP-0019.
+- **Status:** PREREGISTERED EXPLORATORY PILOT; NOT YET TESTED.
+- **Supporting results:** None at freeze time. Phase 1T remains failed and is
+  not supporting evidence for parameter adaptation.
+- **Possible confounders:** synthetic-target memorization, family/template
+  correlation, one seed/configuration, public GOCO exposure, quantization,
+  exact-match regression sensitivity, and development-set selection.
+- **Currently justified:** No parameter-acquisition claim. Even a Phase 2A
+  pass requires a later untouched confirmatory experiment.

@@ -1,0 +1,898 @@
+[
+  {
+    "task_id": "P2A-DEV-EV01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read x and print x*x*x - 2.",
+    "algorithmic_structure": "cubic_minus_constant",
+    "control_flow": "straight_line",
+    "template_lineage": "p2a-dev-ev-01-cubic_minus_constant",
+    "structural_signature": "input>cube>subtract>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print their arithmetic midpoint.",
+    "algorithmic_structure": "pair_midpoint",
+    "control_flow": "split_convert",
+    "template_lineage": "p2a-dev-ev-02-pair_midpoint",
+    "structural_signature": "split2>sum>divide>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print a*b + a + b.",
+    "algorithmic_structure": "pair_product_plus_sum",
+    "control_flow": "split_convert",
+    "template_lineage": "p2a-dev-ev-03-pair_product_plus_sum",
+    "structural_signature": "split2>product_plus_operands>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read mass|speed and print mass*speed*speed/2.",
+    "algorithmic_structure": "kinetic_proxy",
+    "control_flow": "split_convert",
+    "template_lineage": "p2a-dev-ev-04-kinetic_proxy",
+    "structural_signature": "split2>square_product>divide>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read minutes|seconds and print total seconds.",
+    "algorithmic_structure": "time_to_seconds",
+    "control_flow": "split_convert",
+    "template_lineage": "p2a-dev-ev-05-time_to_seconds",
+    "structural_signature": "split2>unit_scale>add>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read x and print its square root using math.SQRT.",
+    "algorithmic_structure": "square_root",
+    "control_flow": "library_straight_line",
+    "template_lineage": "p2a-dev-ev-06-square_root",
+    "structural_signature": "import_math>input>sqrt>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read x and clamp it to the interval 2 through 8 using math.CLAMP.",
+    "algorithmic_structure": "numeric_clamp",
+    "control_flow": "library_straight_line",
+    "template_lineage": "p2a-dev-ev-07-numeric_clamp",
+    "structural_signature": "import_math>input>clamp>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-EV08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print (a*a + b*b) % 7.",
+    "algorithmic_structure": "squared_pair_remainder",
+    "control_flow": "split_convert",
+    "template_lineage": "p2a-dev-ev-08-squared_pair_remainder",
+    "structural_signature": "split2>squares>sum>modulo>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b|c and print the middle value when the three values are ordered.",
+    "algorithmic_structure": "median_of_three",
+    "control_flow": "compound_if_chain",
+    "template_lineage": "p2a-dev-cd-01-median_of_three",
+    "structural_signature": "split3>median_conditions>numeric_display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print ZERO if either is zero, SAME if they have the same sign, otherwise MIXED.",
+    "algorithmic_structure": "pair_sign_relation",
+    "control_flow": "compound_if_chain",
+    "template_lineage": "p2a-dev-cd-02-pair_sign_relation",
+    "structural_signature": "split2>zero_guard>sign_relation>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read n and print POSITIVE EVEN, POSITIVE ODD, or NONPOSITIVE.",
+    "algorithmic_structure": "nested_sign_parity",
+    "control_flow": "nested_if",
+    "template_lineage": "p2a-dev-cd-03-nested_sign_parity",
+    "structural_signature": "input>sign_if>parity_if>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read n and print BOTH if divisible by 3 and 5, THREE if only 3, FIVE if only 5, else NEITHER.",
+    "algorithmic_structure": "fizzbuzz_classification",
+    "control_flow": "compound_if_chain",
+    "template_lineage": "p2a-dev-cd-04-fizzbuzz_classification",
+    "structural_signature": "input>compound_modulo_chain>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print SUM when a+b is greater than a*b, PRODUCT when a*b is greater, otherwise TIE.",
+    "algorithmic_structure": "sum_product_comparison",
+    "control_flow": "derive_then_chain",
+    "template_lineage": "p2a-dev-cd-05-sum_product_comparison",
+    "structural_signature": "split2>derive_sum_product>compare>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read n and print EVEN-SMALL, EVEN-LARGE, ODD-SMALL, or ODD-LARGE using parity and the boundary 20.",
+    "algorithmic_structure": "nested_parity_magnitude",
+    "control_flow": "nested_if",
+    "template_lineage": "p2a-dev-cd-06-nested_parity_magnitude",
+    "structural_signature": "input>parity_branch>magnitude_branch>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read a|b and print A when abs(a)>abs(b), B when abs(b)>abs(a), else TIE.",
+    "algorithmic_structure": "absolute_magnitude_compare",
+    "control_flow": "library_then_chain",
+    "template_lineage": "p2a-dev-cd-07-absolute_magnitude_compare",
+    "structural_signature": "split2>abs2>three_way_branch>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CD08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read n and print SIX when divisible by 6, TWO when divisible only by 2, THREE when divisible only by 3, otherwise OTHER.",
+    "algorithmic_structure": "divisibility_precedence",
+    "control_flow": "four_way_modulo_chain",
+    "template_lineage": "p2a-dev-cd-08-divisibility_precedence",
+    "structural_signature": "input>ordered_divisibility>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-LP01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute sum fourth powers with a loop.",
+    "algorithmic_structure": "sum_fourth_powers",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-01-sum_fourth_powers",
+    "structural_signature": "input>loop>sum_fourth_powers>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute count odd with a loop.",
+    "algorithmic_structure": "count_odd",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-02-count_odd",
+    "structural_signature": "input>loop>count_odd>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute sum four or seven with a loop.",
+    "algorithmic_structure": "sum_four_or_seven",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-03-sum_four_or_seven",
+    "structural_signature": "input>loop>sum_four_or_seven>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute product evens with a loop.",
+    "algorithmic_structure": "product_evens",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-04-product_evens",
+    "structural_signature": "input>loop>product_evens>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute weighted index sum with a loop.",
+    "algorithmic_structure": "weighted_index_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-05-weighted_index_sum",
+    "structural_signature": "input>loop>weighted_index_sum>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute count nonmultiples five with a loop.",
+    "algorithmic_structure": "count_nonmultiples_five",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-06-count_nonmultiples_five",
+    "structural_signature": "input>loop>count_nonmultiples_five>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute powers two sum with a loop.",
+    "algorithmic_structure": "powers_two_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-07-powers_two_sum",
+    "structural_signature": "input>loop>powers_two_sum>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-LP08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read nonnegative n and compute symmetric pair sum with a loop.",
+    "algorithmic_structure": "symmetric_pair_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2a-dev-lp-08-symmetric_pair_sum",
+    "structural_signature": "input>loop>symmetric_pair_sum>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing quadratic offset function, read x, and print its result.",
+    "algorithmic_structure": "quadratic_offset_function",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-01-quadratic_offset_function",
+    "structural_signature": "function>quadratic_offset_function>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing average three, read a|b|c, and print its result.",
+    "algorithmic_structure": "average_three",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-02-average_three",
+    "structural_signature": "function>average_three>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing triangle area, read base|height, and print its result.",
+    "algorithmic_structure": "triangle_area",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-03-triangle_area",
+    "structural_signature": "function>triangle_area>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing percentage of, read amount|rate, and print its result.",
+    "algorithmic_structure": "percentage_of",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-04-percentage_of",
+    "structural_signature": "function>percentage_of>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing clamp zero ten, read x, and print its result.",
+    "algorithmic_structure": "clamp_zero_ten",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-05-clamp_zero_ten",
+    "structural_signature": "function>clamp_zero_ten>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing minimum three, read a|b|c, and print its result.",
+    "algorithmic_structure": "minimum_three",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-06-minimum_three",
+    "structural_signature": "function>minimum_three>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing positive square else negate, read x, and print its result.",
+    "algorithmic_structure": "positive_square_else_negate",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-07-positive_square_else_negate",
+    "structural_signature": "function>positive_square_else_negate>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-FN08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Define a function implementing weighted pair function, read a|b, and print its result.",
+    "algorithmic_structure": "weighted_pair_function",
+    "control_flow": "function_then_call",
+    "template_lineage": "p2a-dev-fn-08-weighted_pair_function",
+    "structural_signature": "function>weighted_pair_function>input>call>display",
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 4 pipe-delimited numbers into an array and compute range four.",
+    "algorithmic_structure": "range_four",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-01-range_four",
+    "structural_signature": "split>array>range_four>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 4 pipe-delimited numbers into an array and compute average four.",
+    "algorithmic_structure": "average_four",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-02-average_four",
+    "structural_signature": "split>array>average_four>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 5 pipe-delimited numbers into an array and compute count even five.",
+    "algorithmic_structure": "count_even_five",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-03-count_even_five",
+    "structural_signature": "split>array>count_even_five>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 3 pipe-delimited numbers into an array and compute weighted dot three.",
+    "algorithmic_structure": "weighted_dot_three",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-04-weighted_dot_three",
+    "structural_signature": "split>array>weighted_dot_three>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 5 pipe-delimited numbers into an array and compute endpoint sum five.",
+    "algorithmic_structure": "endpoint_sum_five",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-05-endpoint_sum_five",
+    "structural_signature": "split>array>endpoint_sum_five>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 4 pipe-delimited numbers into an array and compute middle product four.",
+    "algorithmic_structure": "middle_product_four",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-06-middle_product_four",
+    "structural_signature": "split>array>middle_product_four>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 5 pipe-delimited numbers into an array and compute negative count five.",
+    "algorithmic_structure": "negative_count_five",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-07-negative_count_five",
+    "structural_signature": "split>array>negative_count_five>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-AR08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read 4 pipe-delimited numbers into an array and compute alternating sum four.",
+    "algorithmic_structure": "alternating_sum_four",
+    "control_flow": "split_array_operation",
+    "template_lineage": "p2a-dev-ar-08-alternating_sum_four",
+    "structural_signature": "split>array>alternating_sum_four>display",
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-ST01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform dual replace exactly.",
+    "algorithmic_structure": "dual_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-01-dual_replace",
+    "structural_signature": "import>input>dual_replace>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform trim spaces exactly.",
+    "algorithmic_structure": "trim_spaces",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-02-trim_spaces",
+    "structural_signature": "import>input>trim_spaces>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform contains go exactly.",
+    "algorithmic_structure": "contains_go",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-03-contains_go",
+    "structural_signature": "import>input>contains_go>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform count a exactly.",
+    "algorithmic_structure": "count_a",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-04-count_a",
+    "structural_signature": "import>input>count_a>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform starts pre exactly.",
+    "algorithmic_structure": "starts_pre",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-05-starts_pre",
+    "structural_signature": "import>input>starts_pre>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform ends ing exactly.",
+    "algorithmic_structure": "ends_ing",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-06-ends_ing",
+    "structural_signature": "import>input>ends_ing>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform first three exactly.",
+    "algorithmic_structure": "first_three",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-07-first_three",
+    "structural_signature": "import>input>first_three>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-ST08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read one sentence and perform double lower exactly.",
+    "algorithmic_structure": "double_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p2a-dev-st-08-double_lower",
+    "structural_signature": "import>input>double_lower>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform numeric double label exactly.",
+    "algorithmic_structure": "numeric_double_label",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-01-numeric_double_label",
+    "structural_signature": "split2>numeric_double_label>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform field lengths exactly.",
+    "algorithmic_structure": "field_lengths",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-02-field_lengths",
+    "structural_signature": "split2>field_lengths>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform upper status trim title exactly.",
+    "algorithmic_structure": "upper_status_trim_title",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-03-upper_status_trim_title",
+    "structural_signature": "split2>upper_status_trim_title>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform reverse and length exactly.",
+    "algorithmic_structure": "reverse_and_length",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-04-reverse_and_length",
+    "structural_signature": "split2>reverse_and_length>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform length suffix exactly.",
+    "algorithmic_structure": "length_suffix",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-05-length_suffix",
+    "structural_signature": "split2>length_suffix>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform upper labels exactly.",
+    "algorithmic_structure": "upper_labels",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-06-upper_labels",
+    "structural_signature": "split2>upper_labels>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform repeat by count exactly.",
+    "algorithmic_structure": "repeat_by_count",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-07-repeat_by_count",
+    "structural_signature": "split2>repeat_by_count>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-IO08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read first|second and perform increment with unit exactly.",
+    "algorithmic_structure": "increment_with_unit",
+    "control_flow": "split_transform_output",
+    "template_lineage": "p2a-dev-io-08-increment_with_unit",
+    "structural_signature": "split2>increment_with_unit>display",
+    "required_regex": []
+  },
+  {
+    "task_id": "P2A-DEV-CP01",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute quadratic sequence classification using loops and conditionals.",
+    "algorithmic_structure": "quadratic_sequence_classification",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-01-quadratic_sequence_classification",
+    "structural_signature": "input>loop>quadratic_sequence_classification>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP02",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute proper divisor sum using loops and conditionals.",
+    "algorithmic_structure": "proper_divisor_sum",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-02-proper_divisor_sum",
+    "structural_signature": "input>loop>proper_divisor_sum>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP03",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute count xor divisibility using loops and conditionals.",
+    "algorithmic_structure": "count_xor_divisibility",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-03-count_xor_divisibility",
+    "structural_signature": "input>loop>count_xor_divisibility>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP04",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute sum then parity using loops and conditionals.",
+    "algorithmic_structure": "sum_then_parity",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-04-sum_then_parity",
+    "structural_signature": "input>loop>sum_then_parity>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP05",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute factorial threshold using loops and conditionals.",
+    "algorithmic_structure": "factorial_threshold",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-05-factorial_threshold",
+    "structural_signature": "input>loop>factorial_threshold>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP06",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute square sum threshold using loops and conditionals.",
+    "algorithmic_structure": "square_sum_threshold",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-06-square_sum_threshold",
+    "structural_signature": "input>loop>square_sum_threshold>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP07",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute divisor parity using loops and conditionals.",
+    "algorithmic_structure": "divisor_parity",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-07-divisor_parity",
+    "structural_signature": "input>loop>divisor_parity>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2A-DEV-CP08",
+    "split": "phase2a_development",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2a_pilot",
+    "prompt": "Read positive n and compute filtered square sum using loops and conditionals.",
+    "algorithmic_structure": "filtered_square_sum",
+    "control_flow": "loop_and_branch",
+    "template_lineage": "p2a-dev-cp-08-filtered_square_sum",
+    "structural_signature": "input>loop>filtered_square_sum>display",
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  }
+]
