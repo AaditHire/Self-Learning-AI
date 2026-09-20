@@ -1,0 +1,6 @@
+{
+  "recognition": "{question} Reply with only A, B, or C.",
+  "local_completion": "Target behavior: {target}\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\n{scaffold}",
+  "structured_modification": "{instruction} Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\n{source}",
+  "full_synthesis": "{problem}"
+}

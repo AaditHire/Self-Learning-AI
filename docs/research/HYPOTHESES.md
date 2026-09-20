@@ -48,3 +48,11 @@ Given calibrated evaluation signals, the system can identify capability gaps
 better than a fixed or random curriculum and improve them using quarantined,
 externally verified experience. This hypothesis is not authorized for current
 implementation.
+
+## H-009 — Syntax-capability localization
+
+Under the fixed Candidate C context, frozen GOCO performance may be materially
+better on recognition and local completion than on structured modification and
+full synthesis, which would localize the primary limitation to composition
+rather than basic syntax recognition. Phase 1S is diagnostic: any observed
+pattern does not authorize parameter adaptation.

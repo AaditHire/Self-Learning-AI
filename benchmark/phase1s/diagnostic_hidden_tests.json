@@ -1,0 +1,1586 @@
+{
+  "SYN-LOC-EV1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3.5\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-MOD-EV1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3.5\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-FULL-EV1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2\n",
+      "expected_stdout": "-11.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3.5\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-LOC-EV2-001": [
+    {
+      "case_id": "a",
+      "stdin": "3|4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|8\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-MOD-EV2-001": [
+    {
+      "case_id": "a",
+      "stdin": "3|4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|8\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-FULL-EV2-001": [
+    {
+      "case_id": "a",
+      "stdin": "3|4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|8\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-LOC-EV3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "273.15"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "373.15"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-273.15\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20.5\n",
+      "expected_stdout": "293.65"
+    }
+  ],
+  "SYN-MOD-EV3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "273.15"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "373.15"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-273.15\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20.5\n",
+      "expected_stdout": "293.65"
+    }
+  ],
+  "SYN-FULL-EV3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "273.15"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "373.15"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-273.15\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20.5\n",
+      "expected_stdout": "293.65"
+    }
+  ],
+  "SYN-LOC-CD1-001": [
+    {
+      "case_id": "a",
+      "stdin": "17\n",
+      "expected_stdout": "MINOR"
+    },
+    {
+      "case_id": "b",
+      "stdin": "18\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "c",
+      "stdin": "40\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "d",
+      "stdin": "0\n",
+      "expected_stdout": "MINOR"
+    }
+  ],
+  "SYN-MOD-CD1-001": [
+    {
+      "case_id": "a",
+      "stdin": "17\n",
+      "expected_stdout": "MINOR"
+    },
+    {
+      "case_id": "b",
+      "stdin": "18\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "c",
+      "stdin": "40\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "d",
+      "stdin": "0\n",
+      "expected_stdout": "MINOR"
+    }
+  ],
+  "SYN-FULL-CD1-001": [
+    {
+      "case_id": "a",
+      "stdin": "17\n",
+      "expected_stdout": "MINOR"
+    },
+    {
+      "case_id": "b",
+      "stdin": "18\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "c",
+      "stdin": "40\n",
+      "expected_stdout": "ADULT"
+    },
+    {
+      "case_id": "d",
+      "stdin": "0\n",
+      "expected_stdout": "MINOR"
+    }
+  ],
+  "SYN-LOC-CD2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "SYN-MOD-CD2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "SYN-FULL-CD2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "SYN-LOC-CD3-001": [
+    {
+      "case_id": "a",
+      "stdin": "6\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "b",
+      "stdin": "12\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "c",
+      "stdin": "8\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "d",
+      "stdin": "9\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "SYN-MOD-CD3-001": [
+    {
+      "case_id": "a",
+      "stdin": "6\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "b",
+      "stdin": "12\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "c",
+      "stdin": "8\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "d",
+      "stdin": "9\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "SYN-FULL-CD3-001": [
+    {
+      "case_id": "a",
+      "stdin": "6\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "b",
+      "stdin": "12\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "c",
+      "stdin": "8\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "d",
+      "stdin": "9\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "SYN-LOC-LP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "225.0"
+    }
+  ],
+  "SYN-MOD-LP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "225.0"
+    }
+  ],
+  "SYN-FULL-LP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "225.0"
+    }
+  ],
+  "SYN-LOC-LP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": ""
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "3.0\n2.0\n1.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0"
+    }
+  ],
+  "SYN-MOD-LP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": ""
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "3.0\n2.0\n1.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0"
+    }
+  ],
+  "SYN-FULL-LP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": ""
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "3.0\n2.0\n1.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0"
+    }
+  ],
+  "SYN-LOC-LP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "10\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "SYN-MOD-LP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "10\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "SYN-FULL-LP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "10\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "SYN-LOC-FN1-001": [
+    {
+      "case_id": "a",
+      "stdin": "8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-5\n",
+      "expected_stdout": "-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3\n",
+      "expected_stdout": "1.5"
+    }
+  ],
+  "SYN-MOD-FN1-001": [
+    {
+      "case_id": "a",
+      "stdin": "8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-5\n",
+      "expected_stdout": "-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3\n",
+      "expected_stdout": "1.5"
+    }
+  ],
+  "SYN-FULL-FN1-001": [
+    {
+      "case_id": "a",
+      "stdin": "8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-5\n",
+      "expected_stdout": "-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3\n",
+      "expected_stdout": "1.5"
+    }
+  ],
+  "SYN-LOC-FN2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "SYN-MOD-FN2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "SYN-FULL-FN2-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|9\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "9|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3|-8\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "SYN-LOC-FN3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "212.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-40\n",
+      "expected_stdout": "-40.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20\n",
+      "expected_stdout": "68.0"
+    }
+  ],
+  "SYN-MOD-FN3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "212.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-40\n",
+      "expected_stdout": "-40.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20\n",
+      "expected_stdout": "68.0"
+    }
+  ],
+  "SYN-FULL-FN3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "100\n",
+      "expected_stdout": "212.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-40\n",
+      "expected_stdout": "-40.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "20\n",
+      "expected_stdout": "68.0"
+    }
+  ],
+  "SYN-LOC-AR1-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-2|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "1.5|2.5|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-1|-2|-3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-MOD-AR1-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-2|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "1.5|2.5|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-1|-2|-3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-FULL-AR1-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-2|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "1.5|2.5|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-1|-2|-3\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "SYN-LOC-AR2-001": [
+    {
+      "case_id": "a",
+      "stdin": "4|1|3|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "-1|-5|0|2\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "7|7|7|7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5|2.1|9|3\n",
+      "expected_stdout": "2.1"
+    }
+  ],
+  "SYN-MOD-AR2-001": [
+    {
+      "case_id": "a",
+      "stdin": "4|1|3|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "-1|-5|0|2\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "7|7|7|7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5|2.1|9|3\n",
+      "expected_stdout": "2.1"
+    }
+  ],
+  "SYN-FULL-AR2-001": [
+    {
+      "case_id": "a",
+      "stdin": "4|1|3|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "-1|-5|0|2\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "7|7|7|7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5|2.1|9|3\n",
+      "expected_stdout": "2.1"
+    }
+  ],
+  "SYN-LOC-AR3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "3.0|1.0|2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-1|5\n",
+      "expected_stdout": "5.0|0.0|-1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4|8\n",
+      "expected_stdout": "8.0|2.5|4.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "7|7|9\n",
+      "expected_stdout": "9.0|7.0|7.0"
+    }
+  ],
+  "SYN-MOD-AR3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "3.0|1.0|2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-1|5\n",
+      "expected_stdout": "5.0|0.0|-1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4|8\n",
+      "expected_stdout": "8.0|2.5|4.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "7|7|9\n",
+      "expected_stdout": "9.0|7.0|7.0"
+    }
+  ],
+  "SYN-FULL-AR3-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "3.0|1.0|2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-1|5\n",
+      "expected_stdout": "5.0|0.0|-1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5|4|8\n",
+      "expected_stdout": "8.0|2.5|4.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "7|7|9\n",
+      "expected_stdout": "9.0|7.0|7.0"
+    }
+  ],
+  "SYN-LOC-ST1-001": [
+    {
+      "case_id": "a",
+      "stdin": "AbC\n",
+      "expected_stdout": "cba"
+    },
+    {
+      "case_id": "b",
+      "stdin": "GOCO\n",
+      "expected_stdout": "ocog"
+    },
+    {
+      "case_id": "c",
+      "stdin": "A b\n",
+      "expected_stdout": "b a"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x\n",
+      "expected_stdout": "x"
+    }
+  ],
+  "SYN-MOD-ST1-001": [
+    {
+      "case_id": "a",
+      "stdin": "AbC\n",
+      "expected_stdout": "cba"
+    },
+    {
+      "case_id": "b",
+      "stdin": "GOCO\n",
+      "expected_stdout": "ocog"
+    },
+    {
+      "case_id": "c",
+      "stdin": "A b\n",
+      "expected_stdout": "b a"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x\n",
+      "expected_stdout": "x"
+    }
+  ],
+  "SYN-FULL-ST1-001": [
+    {
+      "case_id": "a",
+      "stdin": "AbC\n",
+      "expected_stdout": "cba"
+    },
+    {
+      "case_id": "b",
+      "stdin": "GOCO\n",
+      "expected_stdout": "ocog"
+    },
+    {
+      "case_id": "c",
+      "stdin": "A b\n",
+      "expected_stdout": "b a"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x\n",
+      "expected_stdout": "x"
+    }
+  ],
+  "SYN-LOC-ST2-001": [
+    {
+      "case_id": "a",
+      "stdin": "a-b-c\n",
+      "expected_stdout": "a_b_c"
+    },
+    {
+      "case_id": "b",
+      "stdin": "none\n",
+      "expected_stdout": "none"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-x-\n",
+      "expected_stdout": "_x_"
+    },
+    {
+      "case_id": "d",
+      "stdin": "a--b\n",
+      "expected_stdout": "a__b"
+    }
+  ],
+  "SYN-MOD-ST2-001": [
+    {
+      "case_id": "a",
+      "stdin": "a-b-c\n",
+      "expected_stdout": "a_b_c"
+    },
+    {
+      "case_id": "b",
+      "stdin": "none\n",
+      "expected_stdout": "none"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-x-\n",
+      "expected_stdout": "_x_"
+    },
+    {
+      "case_id": "d",
+      "stdin": "a--b\n",
+      "expected_stdout": "a__b"
+    }
+  ],
+  "SYN-FULL-ST2-001": [
+    {
+      "case_id": "a",
+      "stdin": "a-b-c\n",
+      "expected_stdout": "a_b_c"
+    },
+    {
+      "case_id": "b",
+      "stdin": "none\n",
+      "expected_stdout": "none"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-x-\n",
+      "expected_stdout": "_x_"
+    },
+    {
+      "case_id": "d",
+      "stdin": "a--b\n",
+      "expected_stdout": "a__b"
+    }
+  ],
+  "SYN-LOC-ST3-001": [
+    {
+      "case_id": "a",
+      "stdin": "  abc  \n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": " two words \n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "    \n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-MOD-ST3-001": [
+    {
+      "case_id": "a",
+      "stdin": "  abc  \n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": " two words \n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "    \n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-FULL-ST3-001": [
+    {
+      "case_id": "a",
+      "stdin": "  abc  \n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": " two words \n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "    \n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "SYN-LOC-IO1-001": [
+    {
+      "case_id": "a",
+      "stdin": "Ada|L|Lovelace\n",
+      "expected_stdout": "Lovelace, Ada L"
+    },
+    {
+      "case_id": "b",
+      "stdin": "A|B|C\n",
+      "expected_stdout": "C, A B"
+    },
+    {
+      "case_id": "c",
+      "stdin": "one|two words|three\n",
+      "expected_stdout": "three, one two words"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x||z\n",
+      "expected_stdout": "z, x "
+    }
+  ],
+  "SYN-MOD-IO1-001": [
+    {
+      "case_id": "a",
+      "stdin": "Ada|L|Lovelace\n",
+      "expected_stdout": "Lovelace, Ada L"
+    },
+    {
+      "case_id": "b",
+      "stdin": "A|B|C\n",
+      "expected_stdout": "C, A B"
+    },
+    {
+      "case_id": "c",
+      "stdin": "one|two words|three\n",
+      "expected_stdout": "three, one two words"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x||z\n",
+      "expected_stdout": "z, x "
+    }
+  ],
+  "SYN-FULL-IO1-001": [
+    {
+      "case_id": "a",
+      "stdin": "Ada|L|Lovelace\n",
+      "expected_stdout": "Lovelace, Ada L"
+    },
+    {
+      "case_id": "b",
+      "stdin": "A|B|C\n",
+      "expected_stdout": "C, A B"
+    },
+    {
+      "case_id": "c",
+      "stdin": "one|two words|three\n",
+      "expected_stdout": "three, one two words"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x||z\n",
+      "expected_stdout": "z, x "
+    }
+  ],
+  "SYN-LOC-IO2-001": [
+    {
+      "case_id": "a",
+      "stdin": "x|3\n",
+      "expected_stdout": "[x]=3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "score|0\n",
+      "expected_stdout": "[score]=0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "temp|-2.5\n",
+      "expected_stdout": "[temp]=-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|12\n",
+      "expected_stdout": "[A]=12.0"
+    }
+  ],
+  "SYN-MOD-IO2-001": [
+    {
+      "case_id": "a",
+      "stdin": "x|3\n",
+      "expected_stdout": "[x]=3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "score|0\n",
+      "expected_stdout": "[score]=0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "temp|-2.5\n",
+      "expected_stdout": "[temp]=-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|12\n",
+      "expected_stdout": "[A]=12.0"
+    }
+  ],
+  "SYN-FULL-IO2-001": [
+    {
+      "case_id": "a",
+      "stdin": "x|3\n",
+      "expected_stdout": "[x]=3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "score|0\n",
+      "expected_stdout": "[score]=0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "temp|-2.5\n",
+      "expected_stdout": "[temp]=-2.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|12\n",
+      "expected_stdout": "[A]=12.0"
+    }
+  ],
+  "SYN-LOC-IO3-001": [
+    {
+      "case_id": "a",
+      "stdin": "go|2\n",
+      "expected_stdout": "go-2.0-go"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x|0\n",
+      "expected_stdout": "x-0.0-x"
+    },
+    {
+      "case_id": "c",
+      "stdin": "hello|-1\n",
+      "expected_stdout": "hello--1.0-hello"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|3.5\n",
+      "expected_stdout": "A-3.5-A"
+    }
+  ],
+  "SYN-MOD-IO3-001": [
+    {
+      "case_id": "a",
+      "stdin": "go|2\n",
+      "expected_stdout": "go-2.0-go"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x|0\n",
+      "expected_stdout": "x-0.0-x"
+    },
+    {
+      "case_id": "c",
+      "stdin": "hello|-1\n",
+      "expected_stdout": "hello--1.0-hello"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|3.5\n",
+      "expected_stdout": "A-3.5-A"
+    }
+  ],
+  "SYN-FULL-IO3-001": [
+    {
+      "case_id": "a",
+      "stdin": "go|2\n",
+      "expected_stdout": "go-2.0-go"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x|0\n",
+      "expected_stdout": "x-0.0-x"
+    },
+    {
+      "case_id": "c",
+      "stdin": "hello|-1\n",
+      "expected_stdout": "hello--1.0-hello"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|3.5\n",
+      "expected_stdout": "A-3.5-A"
+    }
+  ],
+  "SYN-LOC-CP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3|4\n",
+      "expected_stdout": "81.0"
+    }
+  ],
+  "SYN-MOD-CP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3|4\n",
+      "expected_stdout": "81.0"
+    }
+  ],
+  "SYN-FULL-CP1-001": [
+    {
+      "case_id": "a",
+      "stdin": "2|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2|3\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "3|4\n",
+      "expected_stdout": "81.0"
+    }
+  ],
+  "SYN-LOC-CP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "SYN-MOD-CP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "SYN-FULL-CP2-001": [
+    {
+      "case_id": "a",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "SYN-LOC-CP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "c",
+      "stdin": "16\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "d",
+      "stdin": "15\n",
+      "expected_stdout": "NOT SQUARE"
+    }
+  ],
+  "SYN-MOD-CP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "c",
+      "stdin": "16\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "d",
+      "stdin": "15\n",
+      "expected_stdout": "NOT SQUARE"
+    }
+  ],
+  "SYN-FULL-CP3-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "c",
+      "stdin": "16\n",
+      "expected_stdout": "SQUARE"
+    },
+    {
+      "case_id": "d",
+      "stdin": "15\n",
+      "expected_stdout": "NOT SQUARE"
+    }
+  ]
+}

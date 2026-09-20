@@ -39,6 +39,21 @@ No claim below is currently justified by experimental evidence.
   exposure, prompt drift, cherry-picked seeds.
 - **Currently justified:** No.
 
+## CLM-007
+
+- **Proposed claim:** Frozen-model GOCO failure can be localized to a specific
+  capability level, and a larger frozen backbone may change the synthesis
+  ceiling.
+- **Evidence required:** The preregistered balanced Phase 1S diagnostic under
+  identical Candidate C elicitation, with exact model revisions and per-level,
+  per-family compiler-backed scoring.
+- **Experiment:** EXP-0009 and conditional EXP-0010.
+- **Status:** PREREGISTERED; NOT YET TESTED.
+- **Supporting results:** None at freeze time.
+- **Possible confounders:** matched-scenario dependence, quantization mismatch,
+  model-scale architectural differences, prompt length, and small family cells.
+- **Currently justified:** No.
+
 ## CLM-003
 
 - **Proposed claim:** The observed gain reflects generalization rather than

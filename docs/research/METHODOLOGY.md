@@ -143,3 +143,18 @@ Phase 1R selected the examples-augmented candidate at 3/24 versus 0/24 no-doc,
 but it failed both quantitative gate thresholds. Under the frozen stopping
 rule, no confirmatory suite or A/B run was created. The development suite is now
 consumed and may not be repurposed as unseen evidence.
+
+## Phase 1S frozen diagnostic methodology
+
+Phase 1S uses 96 new diagnostic items balanced across eight families and four
+levels: recognition, local completion, structured modification, and full
+synthesis. The three executable levels use matched scenarios to vary
+composition burden; those matched observations are not treated as independent.
+All 72 executable references must pass four hidden cases each before inference.
+
+Only the already selected Candidate C context is used, in its frozen order,
+with the Phase 1R normalizer, greedy decoding, one attempt, and no repair. The
+primary 1.5B model runs in FP16. An exact-revision 3B comparator runs in NF4
+4-bit only if a preregistered load-and-generation smoke gate passes. Models are
+frozen under inference mode. Metrics are reported by level, family, their
+cross-product, and failure taxonomy; no training follows from this diagnostic.

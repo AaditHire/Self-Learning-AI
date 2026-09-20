@@ -1,0 +1,1586 @@
+[
+  {
+    "task_id": "SYN-REC-EV-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid GOCO declaration? A: NUMBER total = 4. B: INT total = 4. C: NUMBER total = 4; Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-ev-declaration_terminator_type-v1",
+    "structural_signature": "declaration_terminator_type",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "declaration_terminator_type"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-EV-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "prompt": "Which is valid GOCO assignment syntax? A: value := 3. B: value = 3. C: value = 3; Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-ev-assignment_operator_terminator-v1",
+    "structural_signature": "assignment_operator_terminator",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "assignment_operator_terminator"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-EV-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "prompt": "Which uses the valid GOCO text type? A: STRING name. B: str name. C: SENTENCE name. Reply with only A, B, or C.",
+    "answer": "C",
+    "template_lineage": "phase1s-rec-ev-text_type-v1",
+    "structural_signature": "text_type",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "text_type"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CD-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "prompt": "Which keyword is valid for an additional GOCO conditional branch? A: ELSE IF B: ELIF C: ELSEIF Reply with only A, B, or C.",
+    "answer": "C",
+    "template_lineage": "phase1s-rec-cd-elseif_keyword-v1",
+    "structural_signature": "elseif_keyword",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "elseif_keyword"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CD-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid GOCO condition header? A: IF x > 2 { B: IF (x > 2) { C: if x > 2 then Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-cd-if_parentheses-v1",
+    "structural_signature": "if_parentheses",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "if_parentheses"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CD-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "prompt": "Which valid GOCO block needs no period after its closing brace? A: IF (ready) { DISPLAYNL(1). } B: NUMBER x = 1 C: DISPLAYNL(1) Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-cd-control_block_terminator-v1",
+    "structural_signature": "control_block_terminator",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "control_block_terminator"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-LP-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "prompt": "Which begins a valid GOCO while-style loop? A: WHILE (x < 3) { B: LOOP (x < 3) { C: FOR x < 3 { Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-lp-while_loop_keyword-v1",
+    "structural_signature": "while_loop_keyword",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "while_loop_keyword"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-LP-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "prompt": "Which is valid GOCO for-style syntax? A: FOR (i=0; i<3; i++) { B: LOOP (NUMBER i = 0 TILL i < 3, i++) { C: LOOP i FROM 0 TO 3 { Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-lp-for_loop_header-v1",
+    "structural_signature": "for_loop_header",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "for_loop_header"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-LP-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "prompt": "Which is the valid GOCO do-while ending? A: } WHILE (x < 3). B: } LOOP (x < 3). C: } LOOP x < 3 Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-lp-do_loop_ending-v1",
+    "structural_signature": "do_loop_ending",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "do_loop_ending"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-FN-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid GOCO function header? A: func add(a NUMBER) { B: FUNCTION add(NUMBER a) { C: FUNCTION add(a) { Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-fn-typed_function_parameter-v1",
+    "structural_signature": "typed_function_parameter",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "typed_function_parameter"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-FN-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "prompt": "Which correctly ends a returning GOCO function declaration? A: } RETURNS NUMBER. B: } -> NUMBER C: } RETURNS NUMBER Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-fn-function_final_period-v1",
+    "structural_signature": "function_final_period",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "function_final_period"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-FN-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "prompt": "Which return statement is valid inside a GOCO function? A: return(x); B: RETURN x. C: RETURN: x. Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-fn-return_statement-v1",
+    "structural_signature": "return_statement",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "return_statement"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-AR-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid GOCO number-array declaration? A: ARRAY<NUMBER> xs. B: NUMBER[] xs. C: NUMBER xs[]. Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-ar-array_type-v1",
+    "structural_signature": "array_type",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "array_type"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-AR-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "prompt": "Which is valid zero-based GOCO array access? A: values[0] B: values(0) C: values{0} Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-ar-array_index-v1",
+    "structural_signature": "array_index",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "array_index"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-AR-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid GOCO array literal? A: NUMBER[] xs = [1, 2, 3]. B: NUMBER[] xs = {1,2,3}. C: xs := [1,2,3]; Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-ar-array_literal-v1",
+    "structural_signature": "array_literal",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "array_literal"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-ST-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "prompt": "Which valid GOCO call uppercases text after importing strings? A: strings.UPPER(text) B: text.upper() C: UPPER strings text Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-st-string_library_call-v1",
+    "structural_signature": "string_library_call",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "string_library_call"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-ST-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "prompt": "Which is the pinned GOCO trim call? A: strings.TRIM(text) B: strings.TRIM(text, \"\") C: text.TRIM() Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-st-trim_arity-v1",
+    "structural_signature": "trim_arity",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "trim_arity"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-ST-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "prompt": "Which valid GOCO call splits line on |? A: strings.SPLIT(line, \"|\") B: line.split(\"|\") C: SPLIT line BY \"|\" Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-st-split_call-v1",
+    "structural_signature": "split_call",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "split_call"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-IO-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "prompt": "Which is valid GOCO input usage? A: NUMBER x = INPUT(). B: INPUT(\"x\", x). C: NUMBER x. INPUT(x). Reply with only A, B, or C.",
+    "answer": "C",
+    "template_lineage": "phase1s-rec-io-input_statement-v1",
+    "structural_signature": "input_statement",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "input_statement"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-IO-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "prompt": "Which prints a value followed by a newline in GOCO? A: PRINTLN(x). B: DISPLAYNL(x). C: fmt.Println(x) Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-io-display_newline-v1",
+    "structural_signature": "display_newline",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "display_newline"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-IO-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "prompt": "Which reads two values reliably under the pinned runtime? A: two INPUT statements B: one SENTENCE INPUT followed by strings.SPLIT C: READLINE twice Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-io-single_input_constraint-v1",
+    "structural_signature": "single_input_constraint",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "single_input_constraint"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CP-001",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "prompt": "Which is a valid complete GOCO top-level shape? A: PROGRAM main { DISPLAYNL(1). } B: package main; func main(){} C: DISPLAYNL(1). Reply with only A, B, or C.",
+    "answer": "C",
+    "template_lineage": "phase1s-rec-cp-bare_top_level-v1",
+    "structural_signature": "bare_top_level",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "bare_top_level"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CP-002",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "prompt": "Which identifier choice avoids a reserved/built-in name? A: NUMBER number. B: NUMBER totalValue. C: NUMBER length. Reply with only A, B, or C.",
+    "answer": "B",
+    "template_lineage": "phase1s-rec-cp-identifier_collision-v1",
+    "structural_signature": "identifier_collision",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "identifier_collision"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "task_id": "SYN-REC-CP-003",
+    "split": "phase1s_diagnostic",
+    "level": "recognition",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "prompt": "Which loop update belongs in a valid GOCO for-style header? A: i++ in LOOP (..., i++) B: i += 1; after FOR C: NEXT i Reply with only A, B, or C.",
+    "answer": "A",
+    "template_lineage": "phase1s-rec-cp-loop_update_composition-v1",
+    "structural_signature": "loop_update_composition",
+    "control_flow": "recognition_choice",
+    "constructs": [
+      "loop_update_composition"
+    ],
+    "matched_scenario": null
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV1",
+    "control_flow": "straight_line",
+    "constructs": [
+      "affine_numeric_transform"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-EV1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one NUMBER n and print 2*n - 7.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-ev1-v1",
+    "structural_signature": "local::affine_numeric_transform",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV1",
+    "control_flow": "straight_line",
+    "constructs": [
+      "affine_numeric_transform"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-EV1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program so it prints 2*n - 7 instead of n + 7. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nDISPLAYNL(n + 7).",
+    "template_lineage": "phase1s-mod-ev1-v1",
+    "structural_signature": "modification::affine_numeric_transform"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV1",
+    "control_flow": "straight_line",
+    "constructs": [
+      "affine_numeric_transform"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-EV1-001",
+    "level": "full_synthesis",
+    "prompt": "Read one NUMBER n and print 2*n - 7.",
+    "template_lineage": "phase1s-full-ev1-v1",
+    "structural_signature": "full::affine_numeric_transform"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV2",
+    "control_flow": "straight_line",
+    "constructs": [
+      "rectangle_area_from_delimited_input"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-EV2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read width|height on one line and print width*height.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER width = strings.TO_NUMBER(parts[0]).\nNUMBER height = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-ev2-v1",
+    "structural_signature": "local::rectangle_area_from_delimited_input",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER width = strings.TO_NUMBER(parts[0]).\nNUMBER height = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV2",
+    "control_flow": "straight_line",
+    "constructs": [
+      "rectangle_area_from_delimited_input"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-EV2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program to print rectangle area instead of perimeter. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER width = strings.TO_NUMBER(parts[0]).\nNUMBER height = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(2 * width + 2 * height).",
+    "template_lineage": "phase1s-mod-ev2-v1",
+    "structural_signature": "modification::rectangle_area_from_delimited_input"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV2",
+    "control_flow": "straight_line",
+    "constructs": [
+      "rectangle_area_from_delimited_input"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-EV2-001",
+    "level": "full_synthesis",
+    "prompt": "Read width|height on one line and print width*height.",
+    "template_lineage": "phase1s-full-ev2-v1",
+    "structural_signature": "full::rectangle_area_from_delimited_input"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV3",
+    "control_flow": "straight_line",
+    "constructs": [
+      "temperature_offset"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-EV3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one NUMBER representing Celsius and print Celsius + 273.15.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER celsius.\nINPUT(celsius).\nNUMBER kelvin = <MISSING>.\nDISPLAYNL(kelvin).",
+    "template_lineage": "phase1s-loc-ev3-v1",
+    "structural_signature": "local::temperature_offset",
+    "scaffold_prefix": "NUMBER celsius.\nINPUT(celsius).\nNUMBER kelvin = ",
+    "scaffold_suffix": ".\nDISPLAYNL(kelvin)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV3",
+    "control_flow": "straight_line",
+    "constructs": [
+      "temperature_offset"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-EV3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the conversion so it adds 273.15 rather than 32. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER celsius.\nINPUT(celsius).\nNUMBER kelvin = celsius + 32.\nDISPLAYNL(kelvin).",
+    "template_lineage": "phase1s-mod-ev3-v1",
+    "structural_signature": "modification::temperature_offset"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "expressions_variables",
+    "difficulty": "diagnostic",
+    "matched_scenario": "EV3",
+    "control_flow": "straight_line",
+    "constructs": [
+      "temperature_offset"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-EV3-001",
+    "level": "full_synthesis",
+    "prompt": "Read one NUMBER representing Celsius and print Celsius + 273.15.",
+    "template_lineage": "phase1s-full-ev3-v1",
+    "structural_signature": "full::temperature_offset"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD1",
+    "control_flow": "if_else",
+    "constructs": [
+      "adult_threshold_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CD1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one NUMBER age. Print ADULT when age is at least 18, otherwise print MINOR.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER age.\nINPUT(age).\nIF (<MISSING>) {\n    DISPLAYNL(\"ADULT\").\n} ELSE {\n    DISPLAYNL(\"MINOR\").\n}",
+    "template_lineage": "phase1s-loc-cd1-v1",
+    "structural_signature": "local::adult_threshold_classification",
+    "scaffold_prefix": "NUMBER age.\nINPUT(age).\nIF (",
+    "scaffold_suffix": ") {\n    DISPLAYNL(\"ADULT\").\n} ELSE {\n    DISPLAYNL(\"MINOR\").\n}"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD1",
+    "control_flow": "if_else",
+    "constructs": [
+      "adult_threshold_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CD1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the condition so ADULT is printed exactly when age is at least 18. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER age.\nINPUT(age).\nIF (age < 18) {\n    DISPLAYNL(\"ADULT\").\n} ELSE {\n    DISPLAYNL(\"MINOR\").\n}",
+    "template_lineage": "phase1s-mod-cd1-v1",
+    "structural_signature": "modification::adult_threshold_classification"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD1",
+    "control_flow": "if_else",
+    "constructs": [
+      "adult_threshold_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CD1-001",
+    "level": "full_synthesis",
+    "prompt": "Read one NUMBER age. Print ADULT when age is at least 18, otherwise print MINOR.",
+    "template_lineage": "phase1s-full-cd1-v1",
+    "structural_signature": "full::adult_threshold_classification"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD2",
+    "control_flow": "if_else",
+    "constructs": [
+      "minimum_of_two"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CD2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a|b on one line and print the smaller number. Ties print that value.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (<MISSING>) {\n    DISPLAYNL(a).\n} ELSE {\n    DISPLAYNL(b).\n}",
+    "template_lineage": "phase1s-loc-cd2-v1",
+    "structural_signature": "local::minimum_of_two",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (",
+    "scaffold_suffix": ") {\n    DISPLAYNL(a).\n} ELSE {\n    DISPLAYNL(b).\n}"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD2",
+    "control_flow": "if_else",
+    "constructs": [
+      "minimum_of_two"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CD2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program to print the smaller rather than the larger number. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a >= b) {\n    DISPLAYNL(a).\n} ELSE {\n    DISPLAYNL(b).\n}",
+    "template_lineage": "phase1s-mod-cd2-v1",
+    "structural_signature": "modification::minimum_of_two"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD2",
+    "control_flow": "if_else",
+    "constructs": [
+      "minimum_of_two"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CD2-001",
+    "level": "full_synthesis",
+    "prompt": "Read a|b on one line and print the smaller number. Ties print that value.",
+    "template_lineage": "phase1s-full-cd2-v1",
+    "structural_signature": "full::minimum_of_two"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD3",
+    "control_flow": "if_elseif_else",
+    "constructs": [
+      "three_way_divisibility_label"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CD3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a whole NUMBER n. Print BOTH if divisible by 2 and 3, EVEN if only divisible by 2, otherwise OTHER.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nIF (<MISSING>) {\n    DISPLAYNL(\"BOTH\").\n} ELSEIF (n % 2 == 0) {\n    DISPLAYNL(\"EVEN\").\n} ELSE {\n    DISPLAYNL(\"OTHER\").\n}",
+    "template_lineage": "phase1s-loc-cd3-v1",
+    "structural_signature": "local::three_way_divisibility_label",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nIF (",
+    "scaffold_suffix": ") {\n    DISPLAYNL(\"BOTH\").\n} ELSEIF (n % 2 == 0) {\n    DISPLAYNL(\"EVEN\").\n} ELSE {\n    DISPLAYNL(\"OTHER\").\n}"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD3",
+    "control_flow": "if_elseif_else",
+    "constructs": [
+      "three_way_divisibility_label"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CD3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the first branch so BOTH is printed only when n is divisible by both 2 and 3. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nIF (n % 3 == 0) {\n    DISPLAYNL(\"BOTH\").\n} ELSEIF (n % 2 == 0) {\n    DISPLAYNL(\"EVEN\").\n} ELSE {\n    DISPLAYNL(\"OTHER\").\n}",
+    "template_lineage": "phase1s-mod-cd3-v1",
+    "structural_signature": "modification::three_way_divisibility_label"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "conditionals",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CD3",
+    "control_flow": "if_elseif_else",
+    "constructs": [
+      "three_way_divisibility_label"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CD3-001",
+    "level": "full_synthesis",
+    "prompt": "Read a whole NUMBER n. Print BOTH if divisible by 2 and 3, EVEN if only divisible by 2, otherwise OTHER.",
+    "template_lineage": "phase1s-full-cd3-v1",
+    "structural_signature": "full::three_way_divisibility_label"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP1",
+    "control_flow": "for_loop_accumulator",
+    "constructs": [
+      "sum_of_cubes_series"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-LP1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a nonnegative whole NUMBER n and print the sum of cubes from 1 through n.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    total += <MISSING>.\n}\nDISPLAYNL(total).",
+    "template_lineage": "phase1s-loc-lp1-v1",
+    "structural_signature": "local::sum_of_cubes_series",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    total += ",
+    "scaffold_suffix": ".\n}\nDISPLAYNL(total)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP1",
+    "control_flow": "for_loop_accumulator",
+    "constructs": [
+      "sum_of_cubes_series"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-LP1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the loop to sum cubes rather than squares. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    total += i * i.\n}\nDISPLAYNL(total).",
+    "template_lineage": "phase1s-mod-lp1-v1",
+    "structural_signature": "modification::sum_of_cubes_series"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP1",
+    "control_flow": "for_loop_accumulator",
+    "constructs": [
+      "sum_of_cubes_series"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-LP1-001",
+    "level": "full_synthesis",
+    "prompt": "Read a nonnegative whole NUMBER n and print the sum of cubes from 1 through n.",
+    "template_lineage": "phase1s-full-lp1-v1",
+    "structural_signature": "full::sum_of_cubes_series"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP2",
+    "control_flow": "while_loop_output",
+    "constructs": [
+      "descending_sequence"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-LP2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a nonnegative whole NUMBER n and print n down to 1, one number per line. Print nothing for zero.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nLOOP (<MISSING>) {\n    DISPLAYNL(n).\n    n--.\n}",
+    "template_lineage": "phase1s-loc-lp2-v1",
+    "structural_signature": "local::descending_sequence",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nLOOP (",
+    "scaffold_suffix": ") {\n    DISPLAYNL(n).\n    n--.\n}"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP2",
+    "control_flow": "while_loop_output",
+    "constructs": [
+      "descending_sequence"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-LP2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the valid program so it counts downward and terminates rather than incrementing. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nLOOP (n > 0) {\n    DISPLAYNL(n).\n    n++.\n}",
+    "template_lineage": "phase1s-mod-lp2-v1",
+    "structural_signature": "modification::descending_sequence"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP2",
+    "control_flow": "while_loop_output",
+    "constructs": [
+      "descending_sequence"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-LP2-001",
+    "level": "full_synthesis",
+    "prompt": "Read a nonnegative whole NUMBER n and print n down to 1, one number per line. Print nothing for zero.",
+    "template_lineage": "phase1s-full-lp2-v1",
+    "structural_signature": "full::descending_sequence"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP3",
+    "control_flow": "for_loop_with_branch",
+    "constructs": [
+      "filtered_range_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-LP3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a positive whole NUMBER n and print the sum of numbers from 1 through n that are divisible by 3.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    IF (<MISSING>) {\n        total += i.\n    }\n}\nDISPLAYNL(total).",
+    "template_lineage": "phase1s-loc-lp3-v1",
+    "structural_signature": "local::filtered_range_sum",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    IF (",
+    "scaffold_suffix": ") {\n        total += i.\n    }\n}\nDISPLAYNL(total)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP3",
+    "control_flow": "for_loop_with_branch",
+    "constructs": [
+      "filtered_range_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-LP3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the filter to sum multiples of 3 instead of even numbers. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) {\n    IF (i % 2 == 0) {\n        total += i.\n    }\n}\nDISPLAYNL(total).",
+    "template_lineage": "phase1s-mod-lp3-v1",
+    "structural_signature": "modification::filtered_range_sum"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "loops",
+    "difficulty": "diagnostic",
+    "matched_scenario": "LP3",
+    "control_flow": "for_loop_with_branch",
+    "constructs": [
+      "filtered_range_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-LP3-001",
+    "level": "full_synthesis",
+    "prompt": "Read a positive whole NUMBER n and print the sum of numbers from 1 through n that are divisible by 3.",
+    "template_lineage": "phase1s-full-lp3-v1",
+    "structural_signature": "full::filtered_range_sum"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN1",
+    "control_flow": "function_then_call",
+    "constructs": [
+      "single_argument_scaling_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-FN1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Define a function named halfValue taking one NUMBER and returning value/2. Read one NUMBER and print the function result.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nFUNCTION halfValue(NUMBER value) {\n    RETURN <MISSING>.\n} RETURNS NUMBER.\nNUMBER inputValue.\nINPUT(inputValue).\nDISPLAYNL(halfValue(inputValue)).",
+    "template_lineage": "phase1s-loc-fn1-v1",
+    "structural_signature": "local::single_argument_scaling_function",
+    "scaffold_prefix": "FUNCTION halfValue(NUMBER value) {\n    RETURN ",
+    "scaffold_suffix": ".\n} RETURNS NUMBER.\nNUMBER inputValue.\nINPUT(inputValue).\nDISPLAYNL(halfValue(inputValue))."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN1",
+    "control_flow": "function_then_call",
+    "constructs": [
+      "single_argument_scaling_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-FN1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the function to return half the input rather than double it. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nFUNCTION halfValue(NUMBER value) {\n    RETURN value * 2.\n} RETURNS NUMBER.\nNUMBER inputValue.\nINPUT(inputValue).\nDISPLAYNL(halfValue(inputValue)).",
+    "template_lineage": "phase1s-mod-fn1-v1",
+    "structural_signature": "modification::single_argument_scaling_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN1",
+    "control_flow": "function_then_call",
+    "constructs": [
+      "single_argument_scaling_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-FN1-001",
+    "level": "full_synthesis",
+    "prompt": "Define a function named halfValue taking one NUMBER and returning value/2. Read one NUMBER and print the function result.",
+    "template_lineage": "phase1s-full-fn1-v1",
+    "structural_signature": "full::single_argument_scaling_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN2",
+    "control_flow": "function_with_if",
+    "constructs": [
+      "branching_max_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-FN2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Define maxTwo(NUMBER a, NUMBER b) returning the greater value. Read a|b and print maxTwo(a,b).\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nFUNCTION maxTwo(NUMBER a, NUMBER b) {\n    IF (<MISSING>) {\n        RETURN a.\n    }\n    RETURN b.\n} RETURNS NUMBER.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(maxTwo(a, b)).",
+    "template_lineage": "phase1s-loc-fn2-v1",
+    "structural_signature": "local::branching_max_function",
+    "scaffold_prefix": "IMPORT strings.\nFUNCTION maxTwo(NUMBER a, NUMBER b) {\n    IF (",
+    "scaffold_suffix": ") {\n        RETURN a.\n    }\n    RETURN b.\n} RETURNS NUMBER.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(maxTwo(a, b))."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN2",
+    "control_flow": "function_with_if",
+    "constructs": [
+      "branching_max_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-FN2-001",
+    "level": "structured_modification",
+    "prompt": "Modify maxTwo so it returns the greater rather than the smaller value. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nFUNCTION maxTwo(NUMBER a, NUMBER b) {\n    IF (a <= b) {\n        RETURN a.\n    }\n    RETURN b.\n} RETURNS NUMBER.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(maxTwo(a, b)).",
+    "template_lineage": "phase1s-mod-fn2-v1",
+    "structural_signature": "modification::branching_max_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN2",
+    "control_flow": "function_with_if",
+    "constructs": [
+      "branching_max_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-FN2-001",
+    "level": "full_synthesis",
+    "prompt": "Define maxTwo(NUMBER a, NUMBER b) returning the greater value. Read a|b and print maxTwo(a,b).",
+    "template_lineage": "phase1s-full-fn2-v1",
+    "structural_signature": "full::branching_max_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN3",
+    "control_flow": "function_arithmetic",
+    "constructs": [
+      "affine_conversion_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-FN3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Define toFahrenheit(NUMBER c) returning c*9/5+32. Read one NUMBER and print the result.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nFUNCTION toFahrenheit(NUMBER c) {\n    RETURN <MISSING>.\n} RETURNS NUMBER.\nNUMBER celsius.\nINPUT(celsius).\nDISPLAYNL(toFahrenheit(celsius)).",
+    "template_lineage": "phase1s-loc-fn3-v1",
+    "structural_signature": "local::affine_conversion_function",
+    "scaffold_prefix": "FUNCTION toFahrenheit(NUMBER c) {\n    RETURN ",
+    "scaffold_suffix": ".\n} RETURNS NUMBER.\nNUMBER celsius.\nINPUT(celsius).\nDISPLAYNL(toFahrenheit(celsius))."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN3",
+    "control_flow": "function_arithmetic",
+    "constructs": [
+      "affine_conversion_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-FN3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the function to use the Fahrenheit formula c*9/5+32. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nFUNCTION toFahrenheit(NUMBER c) {\n    RETURN c + 32.\n} RETURNS NUMBER.\nNUMBER celsius.\nINPUT(celsius).\nDISPLAYNL(toFahrenheit(celsius)).",
+    "template_lineage": "phase1s-mod-fn3-v1",
+    "structural_signature": "modification::affine_conversion_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "functions",
+    "difficulty": "diagnostic",
+    "matched_scenario": "FN3",
+    "control_flow": "function_arithmetic",
+    "constructs": [
+      "affine_conversion_function"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-FN3-001",
+    "level": "full_synthesis",
+    "prompt": "Define toFahrenheit(NUMBER c) returning c*9/5+32. Read one NUMBER and print the result.",
+    "template_lineage": "phase1s-full-fn3-v1",
+    "structural_signature": "full::affine_conversion_function"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR1",
+    "control_flow": "array_index_arithmetic",
+    "constructs": [
+      "fixed_array_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-AR1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a|b|c on one line, store the values in a NUMBER array, and print their sum.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-ar1-v1",
+    "structural_signature": "local::fixed_array_sum",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR1",
+    "control_flow": "array_index_arithmetic",
+    "constructs": [
+      "fixed_array_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-AR1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program to print the array sum rather than product. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAYNL(values[0] * values[1] * values[2]).",
+    "template_lineage": "phase1s-mod-ar1-v1",
+    "structural_signature": "modification::fixed_array_sum"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR1",
+    "control_flow": "array_index_arithmetic",
+    "constructs": [
+      "fixed_array_sum"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-AR1-001",
+    "level": "full_synthesis",
+    "prompt": "Read a|b|c on one line, store the values in a NUMBER array, and print their sum.",
+    "template_lineage": "phase1s-full-ar1-v1",
+    "structural_signature": "full::fixed_array_sum"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR2",
+    "control_flow": "array_loop_branch",
+    "constructs": [
+      "fixed_array_minimum_scan"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-AR2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read four numbers separated by |, store them in a NUMBER array, and print the smallest.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2]), strings.TO_NUMBER(parts[3])].\nNUMBER smallest = values[0].\nLOOP (NUMBER i = 1 TILL i < 4, i++) {\n    IF (<MISSING>) {\n        smallest = values[i].\n    }\n}\nDISPLAYNL(smallest).",
+    "template_lineage": "phase1s-loc-ar2-v1",
+    "structural_signature": "local::fixed_array_minimum_scan",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2]), strings.TO_NUMBER(parts[3])].\nNUMBER smallest = values[0].\nLOOP (NUMBER i = 1 TILL i < 4, i++) {\n    IF (",
+    "scaffold_suffix": ") {\n        smallest = values[i].\n    }\n}\nDISPLAYNL(smallest)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR2",
+    "control_flow": "array_loop_branch",
+    "constructs": [
+      "fixed_array_minimum_scan"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-AR2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the scan to print the smallest rather than greatest array value. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2]), strings.TO_NUMBER(parts[3])].\nNUMBER smallest = values[0].\nLOOP (NUMBER i = 1 TILL i < 4, i++) {\n    IF (values[i] > smallest) {\n        smallest = values[i].\n    }\n}\nDISPLAYNL(smallest).",
+    "template_lineage": "phase1s-mod-ar2-v1",
+    "structural_signature": "modification::fixed_array_minimum_scan"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR2",
+    "control_flow": "array_loop_branch",
+    "constructs": [
+      "fixed_array_minimum_scan"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-AR2-001",
+    "level": "full_synthesis",
+    "prompt": "Read four numbers separated by |, store them in a NUMBER array, and print the smallest.",
+    "template_lineage": "phase1s-full-ar2-v1",
+    "structural_signature": "full::fixed_array_minimum_scan"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR3",
+    "control_flow": "array_multi_output",
+    "constructs": [
+      "array_reordered_indices"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-AR3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a|b|c on one line, store them in a NUMBER array, and print c|a|b with no spaces.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAY(<MISSING>).\nDISPLAY(\"|\").\nDISPLAY(values[0]).\nDISPLAY(\"|\").\nDISPLAYNL(values[1]).",
+    "template_lineage": "phase1s-loc-ar3-v1",
+    "structural_signature": "local::array_reordered_indices",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAY(",
+    "scaffold_suffix": ").\nDISPLAY(\"|\").\nDISPLAY(values[0]).\nDISPLAY(\"|\").\nDISPLAYNL(values[1])."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR3",
+    "control_flow": "array_multi_output",
+    "constructs": [
+      "array_reordered_indices"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-AR3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the output order from a|b|c to c|a|b. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER[] values = [strings.TO_NUMBER(parts[0]), strings.TO_NUMBER(parts[1]), strings.TO_NUMBER(parts[2])].\nDISPLAY(values[0]).\nDISPLAY(\"|\").\nDISPLAY(values[1]).\nDISPLAY(\"|\").\nDISPLAYNL(values[2]).",
+    "template_lineage": "phase1s-mod-ar3-v1",
+    "structural_signature": "modification::array_reordered_indices"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "arrays",
+    "difficulty": "diagnostic",
+    "matched_scenario": "AR3",
+    "control_flow": "array_multi_output",
+    "constructs": [
+      "array_reordered_indices"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-AR3-001",
+    "level": "full_synthesis",
+    "prompt": "Read a|b|c on one line, store them in a NUMBER array, and print c|a|b with no spaces.",
+    "template_lineage": "phase1s-full-ar3-v1",
+    "structural_signature": "full::array_reordered_indices"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST1",
+    "control_flow": "nested_library_calls",
+    "constructs": [
+      "lowercase_then_reverse"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-ST1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one SENTENCE, convert it to lowercase, reverse it, and print it.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-st1-v1",
+    "structural_signature": "local::lowercase_then_reverse",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST1",
+    "control_flow": "nested_library_calls",
+    "constructs": [
+      "lowercase_then_reverse"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-ST1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program to reverse the lowercase text rather than only lowercase it. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(text)).",
+    "template_lineage": "phase1s-mod-st1-v1",
+    "structural_signature": "modification::lowercase_then_reverse"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST1",
+    "control_flow": "nested_library_calls",
+    "constructs": [
+      "lowercase_then_reverse"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-ST1-001",
+    "level": "full_synthesis",
+    "prompt": "Read one SENTENCE, convert it to lowercase, reverse it, and print it.",
+    "template_lineage": "phase1s-full-st1-v1",
+    "structural_signature": "full::lowercase_then_reverse"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST2",
+    "control_flow": "library_replace",
+    "constructs": [
+      "character_replacement"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-ST2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one SENTENCE and replace every hyphen with an underscore, then print it.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-st2-v1",
+    "structural_signature": "local::character_replacement",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST2",
+    "control_flow": "library_replace",
+    "constructs": [
+      "character_replacement"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-ST2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the replacement so hyphens become underscores rather than slashes. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text, \"-\", \"/\")).",
+    "template_lineage": "phase1s-mod-st2-v1",
+    "structural_signature": "modification::character_replacement"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST2",
+    "control_flow": "library_replace",
+    "constructs": [
+      "character_replacement"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-ST2-001",
+    "level": "full_synthesis",
+    "prompt": "Read one SENTENCE and replace every hyphen with an underscore, then print it.",
+    "template_lineage": "phase1s-full-st2-v1",
+    "structural_signature": "full::character_replacement"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST3",
+    "control_flow": "nested_trim_length",
+    "constructs": [
+      "trimmed_length"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-ST3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read one SENTENCE, trim ordinary surrounding whitespace, and print the remaining length.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-st3-v1",
+    "structural_signature": "local::trimmed_length",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST3",
+    "control_flow": "nested_trim_length",
+    "constructs": [
+      "trimmed_length"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-ST3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program so surrounding whitespace is trimmed before measuring length. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LENGTH(text)).",
+    "template_lineage": "phase1s-mod-st3-v1",
+    "structural_signature": "modification::trimmed_length"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "strings",
+    "difficulty": "diagnostic",
+    "matched_scenario": "ST3",
+    "control_flow": "nested_trim_length",
+    "constructs": [
+      "trimmed_length"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-ST3-001",
+    "level": "full_synthesis",
+    "prompt": "Read one SENTENCE, trim ordinary surrounding whitespace, and print the remaining length.",
+    "template_lineage": "phase1s-full-st3-v1",
+    "structural_signature": "full::trimmed_length"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO1",
+    "control_flow": "split_multi_display",
+    "constructs": [
+      "three_field_reformat"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-IO1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read first|middle|last and print last, first middle with exactly one space after the comma.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(<MISSING>).\nDISPLAY(\", \").\nDISPLAY(parts[0]).\nDISPLAY(\" \").\nDISPLAYNL(parts[1]).",
+    "template_lineage": "phase1s-loc-io1-v1",
+    "structural_signature": "local::three_field_reformat",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(",
+    "scaffold_suffix": ").\nDISPLAY(\", \").\nDISPLAY(parts[0]).\nDISPLAY(\" \").\nDISPLAYNL(parts[1])."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO1",
+    "control_flow": "split_multi_display",
+    "constructs": [
+      "three_field_reformat"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-IO1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the output from first middle last to last, first middle. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(parts[0]).\nDISPLAY(\" \").\nDISPLAY(parts[1]).\nDISPLAY(\" \").\nDISPLAYNL(parts[2]).",
+    "template_lineage": "phase1s-mod-io1-v1",
+    "structural_signature": "modification::three_field_reformat"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO1",
+    "control_flow": "split_multi_display",
+    "constructs": [
+      "three_field_reformat"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-IO1-001",
+    "level": "full_synthesis",
+    "prompt": "Read first|middle|last and print last, first middle with exactly one space after the comma.",
+    "template_lineage": "phase1s-full-io1-v1",
+    "structural_signature": "full::three_field_reformat"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO2",
+    "control_flow": "split_display_format",
+    "constructs": [
+      "labelled_numeric_echo"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-IO2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read label|value and print [label]=value with no extra spaces.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(\"[\").\nDISPLAY(parts[0]).\nDISPLAY(<MISSING>).\nDISPLAYNL(parts[1]).",
+    "template_lineage": "phase1s-loc-io2-v1",
+    "structural_signature": "local::labelled_numeric_echo",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(\"[\").\nDISPLAY(parts[0]).\nDISPLAY(",
+    "scaffold_suffix": ").\nDISPLAYNL(parts[1])."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO2",
+    "control_flow": "split_display_format",
+    "constructs": [
+      "labelled_numeric_echo"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-IO2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the formatting from label:value to [label]=value. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nDISPLAY(parts[0]).\nDISPLAY(\":\").\nDISPLAYNL(parts[1]).",
+    "template_lineage": "phase1s-mod-io2-v1",
+    "structural_signature": "modification::labelled_numeric_echo"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO2",
+    "control_flow": "split_display_format",
+    "constructs": [
+      "labelled_numeric_echo"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-IO2-001",
+    "level": "full_synthesis",
+    "prompt": "Read label|value and print [label]=value with no extra spaces.",
+    "template_lineage": "phase1s-full-io2-v1",
+    "structural_signature": "full::labelled_numeric_echo"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO3",
+    "control_flow": "split_repeated_output",
+    "constructs": [
+      "field_duplication_format"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-IO3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read word|count and print word-count-word with no spaces.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE word = strings.TO_SENTENCE(parts[0]).\nSENTENCE countText = strings.TO_SENTENCE(parts[1]).\nDISPLAYNL(<MISSING>).",
+    "template_lineage": "phase1s-loc-io3-v1",
+    "structural_signature": "local::field_duplication_format",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE word = strings.TO_SENTENCE(parts[0]).\nSENTENCE countText = strings.TO_SENTENCE(parts[1]).\nDISPLAYNL(",
+    "scaffold_suffix": ")."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO3",
+    "control_flow": "split_repeated_output",
+    "constructs": [
+      "field_duplication_format"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-IO3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the final field so the output is word-count-word rather than word-count-count. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE word = strings.TO_SENTENCE(parts[0]).\nSENTENCE countText = strings.TO_SENTENCE(parts[1]).\nDISPLAYNL(word + \"-\" + countText + \"-\" + countText).",
+    "template_lineage": "phase1s-mod-io3-v1",
+    "structural_signature": "modification::field_duplication_format"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "input_output",
+    "difficulty": "diagnostic",
+    "matched_scenario": "IO3",
+    "control_flow": "split_repeated_output",
+    "constructs": [
+      "field_duplication_format"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-IO3-001",
+    "level": "full_synthesis",
+    "prompt": "Read word|count and print word-count-word with no spaces.",
+    "template_lineage": "phase1s-full-io3-v1",
+    "structural_signature": "full::field_duplication_format"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP1",
+    "control_flow": "for_loop_product",
+    "constructs": [
+      "power_by_repeated_multiplication"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CP1-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read base|exponent where exponent is a nonnegative whole number. Compute base raised to exponent using a loop and print it.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER base = strings.TO_NUMBER(parts[0]).\nNUMBER exponent = strings.TO_NUMBER(parts[1]).\nNUMBER result = 1.\nLOOP (NUMBER i = 0 TILL <MISSING>, i++) {\n    result *= base.\n}\nDISPLAYNL(result).",
+    "template_lineage": "phase1s-loc-cp1-v1",
+    "structural_signature": "local::power_by_repeated_multiplication",
+    "scaffold_prefix": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER base = strings.TO_NUMBER(parts[0]).\nNUMBER exponent = strings.TO_NUMBER(parts[1]).\nNUMBER result = 1.\nLOOP (NUMBER i = 0 TILL ",
+    "scaffold_suffix": ", i++) {\n    result *= base.\n}\nDISPLAYNL(result)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP1",
+    "control_flow": "for_loop_product",
+    "constructs": [
+      "power_by_repeated_multiplication"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CP1-001",
+    "level": "structured_modification",
+    "prompt": "Modify the repeated-addition program into repeated multiplication for exponentiation, including the correct initial result. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER base = strings.TO_NUMBER(parts[0]).\nNUMBER exponent = strings.TO_NUMBER(parts[1]).\nNUMBER result = 0.\nLOOP (NUMBER i = 0 TILL i < exponent, i++) {\n    result += base.\n}\nDISPLAYNL(result).",
+    "template_lineage": "phase1s-mod-cp1-v1",
+    "structural_signature": "modification::power_by_repeated_multiplication"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP1",
+    "control_flow": "for_loop_product",
+    "constructs": [
+      "power_by_repeated_multiplication"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CP1-001",
+    "level": "full_synthesis",
+    "prompt": "Read base|exponent where exponent is a nonnegative whole number. Compute base raised to exponent using a loop and print it.",
+    "template_lineage": "phase1s-full-cp1-v1",
+    "structural_signature": "full::power_by_repeated_multiplication"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP2",
+    "control_flow": "for_loop_conditional_count",
+    "constructs": [
+      "proper_divisor_count"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CP2-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a positive whole NUMBER n and print how many positive proper divisors it has (divisors less than n).\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nNUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER candidate = 1 TILL candidate < n, candidate++) {\n    IF (<MISSING>) {\n        count++.\n    }\n}\nDISPLAYNL(count).",
+    "template_lineage": "phase1s-loc-cp2-v1",
+    "structural_signature": "local::proper_divisor_count",
+    "scaffold_prefix": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER candidate = 1 TILL candidate < n, candidate++) {\n    IF (",
+    "scaffold_suffix": ") {\n        count++.\n    }\n}\nDISPLAYNL(count)."
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP2",
+    "control_flow": "for_loop_conditional_count",
+    "constructs": [
+      "proper_divisor_count"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CP2-001",
+    "level": "structured_modification",
+    "prompt": "Modify the program to count proper divisors rather than non-divisors. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nNUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER candidate = 1 TILL candidate < n, candidate++) {\n    IF (n % candidate != 0) {\n        count++.\n    }\n}\nDISPLAYNL(count).",
+    "template_lineage": "phase1s-mod-cp2-v1",
+    "structural_signature": "modification::proper_divisor_count"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP2",
+    "control_flow": "for_loop_conditional_count",
+    "constructs": [
+      "proper_divisor_count"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CP2-001",
+    "level": "full_synthesis",
+    "prompt": "Read a positive whole NUMBER n and print how many positive proper divisors it has (divisors less than n).",
+    "template_lineage": "phase1s-full-cp2-v1",
+    "structural_signature": "full::proper_divisor_count"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP3",
+    "control_flow": "math_then_branch",
+    "constructs": [
+      "perfect_square_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-LOC-CP3-001",
+    "level": "local_completion",
+    "prompt": "Target behavior: Read a nonnegative whole NUMBER n. Print SQUARE if it is a perfect square, otherwise NOT SQUARE.\nSupply only the missing GOCO fragment represented by <MISSING>. Do not return the full program.\n\nIMPORT math.\nNUMBER n.\nINPUT(n).\nNUMBER root = math.FLOOR(math.SQRT(n)).\nIF (<MISSING>) {\n    DISPLAYNL(\"SQUARE\").\n} ELSE {\n    DISPLAYNL(\"NOT SQUARE\").\n}",
+    "template_lineage": "phase1s-loc-cp3-v1",
+    "structural_signature": "local::perfect_square_classification",
+    "scaffold_prefix": "IMPORT math.\nNUMBER n.\nINPUT(n).\nNUMBER root = math.FLOOR(math.SQRT(n)).\nIF (",
+    "scaffold_suffix": ") {\n    DISPLAYNL(\"SQUARE\").\n} ELSE {\n    DISPLAYNL(\"NOT SQUARE\").\n}"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP3",
+    "control_flow": "math_then_branch",
+    "constructs": [
+      "perfect_square_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-MOD-CP3-001",
+    "level": "structured_modification",
+    "prompt": "Modify the condition to correctly recognize perfect squares. Return the complete modified GOCO program.\n\nVALID STARTING PROGRAM:\nIMPORT math.\nNUMBER n.\nINPUT(n).\nNUMBER root = math.FLOOR(math.SQRT(n)).\nIF (root == n) {\n    DISPLAYNL(\"SQUARE\").\n} ELSE {\n    DISPLAYNL(\"NOT SQUARE\").\n}",
+    "template_lineage": "phase1s-mod-cp3-v1",
+    "structural_signature": "modification::perfect_square_classification"
+  },
+  {
+    "split": "phase1s_diagnostic",
+    "family": "composition_algorithms",
+    "difficulty": "diagnostic",
+    "matched_scenario": "CP3",
+    "control_flow": "math_then_branch",
+    "constructs": [
+      "perfect_square_classification"
+    ],
+    "required_regex": [],
+    "task_id": "SYN-FULL-CP3-001",
+    "level": "full_synthesis",
+    "prompt": "Read a nonnegative whole NUMBER n. Print SQUARE if it is a perfect square, otherwise NOT SQUARE.",
+    "template_lineage": "phase1s-full-cp3-v1",
+    "structural_signature": "full::perfect_square_classification"
+  }
+]

@@ -1,0 +1,4453 @@
+{
+  "task_count": 96,
+  "executable_task_count": 72,
+  "recognition_task_count": 24,
+  "hidden_case_count": 288,
+  "level_counts": {
+    "full_synthesis": 24,
+    "local_completion": 24,
+    "recognition": 24,
+    "structured_modification": 24
+  },
+  "family_counts": {
+    "arrays": 12,
+    "composition_algorithms": 12,
+    "conditionals": 12,
+    "expressions_variables": 12,
+    "functions": 12,
+    "input_output": 12,
+    "loops": 12,
+    "strings": 12
+  },
+  "family_by_level": {
+    "full_synthesis": {
+      "arrays": 3,
+      "composition_algorithms": 3,
+      "conditionals": 3,
+      "expressions_variables": 3,
+      "functions": 3,
+      "input_output": 3,
+      "loops": 3,
+      "strings": 3
+    },
+    "local_completion": {
+      "arrays": 3,
+      "composition_algorithms": 3,
+      "conditionals": 3,
+      "expressions_variables": 3,
+      "functions": 3,
+      "input_output": 3,
+      "loops": 3,
+      "strings": 3
+    },
+    "recognition": {
+      "arrays": 3,
+      "composition_algorithms": 3,
+      "conditionals": 3,
+      "expressions_variables": 3,
+      "functions": 3,
+      "input_output": 3,
+      "loops": 3,
+      "strings": 3
+    },
+    "structured_modification": {
+      "arrays": 3,
+      "composition_algorithms": 3,
+      "conditionals": 3,
+      "expressions_variables": 3,
+      "functions": 3,
+      "input_output": 3,
+      "loops": 3,
+      "strings": 3
+    }
+  },
+  "reference_failures": [],
+  "exact_duplicate_prompts": 0,
+  "unique_template_lineages": 96,
+  "unique_structural_signatures": 96,
+  "matched_scenario_design": "Each of 24 scenario lineages has one local-completion, one modification, and one full-synthesis item; recognition uses separate syntax lineages.",
+  "diversity_by_level": {
+    "full_synthesis": {
+      "n": 24,
+      "max_prompt_token_jaccard": {
+        "similarity": 0.6190476190476191,
+        "left": "SYN-FULL-AR1-001",
+        "right": "SYN-FULL-AR3-001"
+      },
+      "unique_lineages": 24,
+      "unique_structural_signatures": 24,
+      "control_flow_distribution": {
+        "array_index_arithmetic": 1,
+        "array_loop_branch": 1,
+        "array_multi_output": 1,
+        "for_loop_accumulator": 1,
+        "for_loop_conditional_count": 1,
+        "for_loop_product": 1,
+        "for_loop_with_branch": 1,
+        "function_arithmetic": 1,
+        "function_then_call": 1,
+        "function_with_if": 1,
+        "if_else": 2,
+        "if_elseif_else": 1,
+        "library_replace": 1,
+        "math_then_branch": 1,
+        "nested_library_calls": 1,
+        "nested_trim_length": 1,
+        "split_display_format": 1,
+        "split_multi_display": 1,
+        "split_repeated_output": 1,
+        "straight_line": 3,
+        "while_loop_output": 1
+      },
+      "max_normalized_reference_sequence_similarity": {
+        "similarity": 0.9629629629629629,
+        "left": "SYN-FULL-ST1-001",
+        "right": "SYN-FULL-ST3-001"
+      }
+    },
+    "local_completion": {
+      "n": 24,
+      "max_prompt_token_jaccard": {
+        "similarity": 0.851063829787234,
+        "left": "SYN-LOC-AR1-001",
+        "right": "SYN-LOC-AR3-001"
+      },
+      "unique_lineages": 24,
+      "unique_structural_signatures": 24,
+      "control_flow_distribution": {
+        "array_index_arithmetic": 1,
+        "array_loop_branch": 1,
+        "array_multi_output": 1,
+        "for_loop_accumulator": 1,
+        "for_loop_conditional_count": 1,
+        "for_loop_product": 1,
+        "for_loop_with_branch": 1,
+        "function_arithmetic": 1,
+        "function_then_call": 1,
+        "function_with_if": 1,
+        "if_else": 2,
+        "if_elseif_else": 1,
+        "library_replace": 1,
+        "math_then_branch": 1,
+        "nested_library_calls": 1,
+        "nested_trim_length": 1,
+        "split_display_format": 1,
+        "split_multi_display": 1,
+        "split_repeated_output": 1,
+        "straight_line": 3,
+        "while_loop_output": 1
+      },
+      "max_normalized_reference_sequence_similarity": {
+        "similarity": 0.9629629629629629,
+        "left": "SYN-LOC-ST1-001",
+        "right": "SYN-LOC-ST3-001"
+      }
+    },
+    "recognition": {
+      "n": 24,
+      "max_prompt_token_jaccard": {
+        "similarity": 0.7368421052631579,
+        "left": "SYN-REC-AR-001",
+        "right": "SYN-REC-AR-003"
+      },
+      "unique_lineages": 24,
+      "unique_structural_signatures": 24,
+      "control_flow_distribution": {
+        "recognition_choice": 24
+      }
+    },
+    "structured_modification": {
+      "n": 24,
+      "max_prompt_token_jaccard": {
+        "similarity": 0.7333333333333333,
+        "left": "SYN-MOD-IO1-001",
+        "right": "SYN-MOD-IO2-001"
+      },
+      "unique_lineages": 24,
+      "unique_structural_signatures": 24,
+      "control_flow_distribution": {
+        "array_index_arithmetic": 1,
+        "array_loop_branch": 1,
+        "array_multi_output": 1,
+        "for_loop_accumulator": 1,
+        "for_loop_conditional_count": 1,
+        "for_loop_product": 1,
+        "for_loop_with_branch": 1,
+        "function_arithmetic": 1,
+        "function_then_call": 1,
+        "function_with_if": 1,
+        "if_else": 2,
+        "if_elseif_else": 1,
+        "library_replace": 1,
+        "math_then_branch": 1,
+        "nested_library_calls": 1,
+        "nested_trim_length": 1,
+        "split_display_format": 1,
+        "split_multi_display": 1,
+        "split_repeated_output": 1,
+        "straight_line": 3,
+        "while_loop_output": 1
+      },
+      "max_normalized_reference_sequence_similarity": {
+        "similarity": 0.9629629629629629,
+        "left": "SYN-MOD-ST1-001",
+        "right": "SYN-MOD-ST3-001"
+      }
+    }
+  },
+  "canonical_hashes": {
+    "tasks": "35c0118f5626f703b8c177740f6c7bc8479b816cfccb1b7fd50d2a186bf89c54",
+    "hidden_tests": "ae49476ef56d4ac35a95d434eb71d1356257ae0874b21fb298ac71a21a383752",
+    "references": "b819f03e64d7b78a189af2453b221de085391e7a6ed9809e7f7e72f6f86ee6c2"
+  },
+  "records": [
+    {
+      "task_id": "SYN-LOC-EV1-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-7.0",
+          "expected_stdout": "-7.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-11.0",
+          "expected_stdout": "-11.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 110,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-EV1-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-7.0",
+          "expected_stdout": "-7.0",
+          "elapsed_ms": 108,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 107,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-11.0",
+          "expected_stdout": "-11.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 114,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-EV1-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-7.0",
+          "expected_stdout": "-7.0",
+          "elapsed_ms": 108,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 119,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: -11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-11.0",
+          "expected_stdout": "-11.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 110,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-EV2-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "12.0",
+          "expected_stdout": "12.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 140,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-EV2-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "12.0",
+          "expected_stdout": "12.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 141,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 134,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-EV2-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "12.0",
+          "expected_stdout": "12.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 120,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-EV3-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 273.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "273.15",
+          "expected_stdout": "273.15",
+          "elapsed_ms": 108,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 373.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "373.15",
+          "expected_stdout": "373.15",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 293.65\r\n",
+          "stderr": "",
+          "normalized_stdout": "293.65",
+          "expected_stdout": "293.65",
+          "elapsed_ms": 107,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-EV3-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 273.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "273.15",
+          "expected_stdout": "273.15",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 373.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "373.15",
+          "expected_stdout": "373.15",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 293.65\r\n",
+          "stderr": "",
+          "normalized_stdout": "293.65",
+          "expected_stdout": "293.65",
+          "elapsed_ms": 116,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-EV3-001",
+      "family": "expressions_variables",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 273.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "273.15",
+          "expected_stdout": "273.15",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 373.15\r\n",
+          "stderr": "",
+          "normalized_stdout": "373.15",
+          "expected_stdout": "373.15",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 293.65\r\n",
+          "stderr": "",
+          "normalized_stdout": "293.65",
+          "expected_stdout": "293.65",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CD1-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CD1-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CD1-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: ADULT\r\n",
+          "stderr": "",
+          "normalized_stdout": "ADULT",
+          "expected_stdout": "ADULT",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for age: MINOR\r\n",
+          "stderr": "",
+          "normalized_stdout": "MINOR",
+          "expected_stdout": "MINOR",
+          "elapsed_ms": 114,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CD2-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CD2-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 119,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CD2-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 131,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 122,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CD3-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: EVEN\r\n",
+          "stderr": "",
+          "normalized_stdout": "EVEN",
+          "expected_stdout": "EVEN",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: OTHER\r\n",
+          "stderr": "",
+          "normalized_stdout": "OTHER",
+          "expected_stdout": "OTHER",
+          "elapsed_ms": 116,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CD3-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: EVEN\r\n",
+          "stderr": "",
+          "normalized_stdout": "EVEN",
+          "expected_stdout": "EVEN",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: OTHER\r\n",
+          "stderr": "",
+          "normalized_stdout": "OTHER",
+          "expected_stdout": "OTHER",
+          "elapsed_ms": 118,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CD3-001",
+      "family": "conditionals",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: BOTH\r\n",
+          "stderr": "",
+          "normalized_stdout": "BOTH",
+          "expected_stdout": "BOTH",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: EVEN\r\n",
+          "stderr": "",
+          "normalized_stdout": "EVEN",
+          "expected_stdout": "EVEN",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: OTHER\r\n",
+          "stderr": "",
+          "normalized_stdout": "OTHER",
+          "expected_stdout": "OTHER",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-LP1-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 36.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "36.0",
+          "expected_stdout": "36.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 225.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "225.0",
+          "expected_stdout": "225.0",
+          "elapsed_ms": 113,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-LP1-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 36.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "36.0",
+          "expected_stdout": "36.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 225.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "225.0",
+          "expected_stdout": "225.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-LP1-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 36.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "36.0",
+          "expected_stdout": "36.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 225.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "225.0",
+          "expected_stdout": "225.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-LP2-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: ",
+          "stderr": "",
+          "normalized_stdout": "",
+          "expected_stdout": "",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0\n2.0\n1.0",
+          "expected_stdout": "3.0\n2.0\n1.0",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n4.0\r\n3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "elapsed_ms": 111,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-LP2-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: ",
+          "stderr": "",
+          "normalized_stdout": "",
+          "expected_stdout": "",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0\n2.0\n1.0",
+          "expected_stdout": "3.0\n2.0\n1.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n4.0\r\n3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-LP2-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: ",
+          "stderr": "",
+          "normalized_stdout": "",
+          "expected_stdout": "",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0\n2.0\n1.0",
+          "expected_stdout": "3.0\n2.0\n1.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n4.0\r\n3.0\r\n2.0\r\n1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "expected_stdout": "5.0\n4.0\n3.0\n2.0\n1.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-LP3-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 18.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "18.0",
+          "expected_stdout": "18.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 30.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "30.0",
+          "expected_stdout": "30.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-LP3-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 107,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 18.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "18.0",
+          "expected_stdout": "18.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 30.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "30.0",
+          "expected_stdout": "30.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-LP3-001",
+      "family": "loops",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 131,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 18.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "18.0",
+          "expected_stdout": "18.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 30.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "30.0",
+          "expected_stdout": "30.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-FN1-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: -2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "-2.5",
+          "expected_stdout": "-2.5",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 1.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.5",
+          "expected_stdout": "1.5",
+          "elapsed_ms": 113,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-FN1-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: -2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "-2.5",
+          "expected_stdout": "-2.5",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 1.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.5",
+          "expected_stdout": "1.5",
+          "elapsed_ms": 111,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-FN1-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: -2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "-2.5",
+          "expected_stdout": "-2.5",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for inputValue: 1.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.5",
+          "expected_stdout": "1.5",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-FN2-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-3.0",
+          "expected_stdout": "-3.0",
+          "elapsed_ms": 123,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-FN2-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-3.0",
+          "expected_stdout": "-3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-FN2-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-3.0",
+          "expected_stdout": "-3.0",
+          "elapsed_ms": 124,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-FN3-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 32.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "32.0",
+          "expected_stdout": "32.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 212.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "212.0",
+          "expected_stdout": "212.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: -40.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-40.0",
+          "expected_stdout": "-40.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 68.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "68.0",
+          "expected_stdout": "68.0",
+          "elapsed_ms": 106,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-FN3-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 32.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "32.0",
+          "expected_stdout": "32.0",
+          "elapsed_ms": 119,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 212.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "212.0",
+          "expected_stdout": "212.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: -40.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-40.0",
+          "expected_stdout": "-40.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 68.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "68.0",
+          "expected_stdout": "68.0",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-FN3-001",
+      "family": "functions",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 32.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "32.0",
+          "expected_stdout": "32.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 212.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "212.0",
+          "expected_stdout": "212.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: -40.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-40.0",
+          "expected_stdout": "-40.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for celsius: 68.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "68.0",
+          "expected_stdout": "68.0",
+          "elapsed_ms": 110,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-AR1-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 130,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 135,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 132,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-AR1-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 132,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 159,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-AR1-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 146,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 150,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-6.0",
+          "expected_stdout": "-6.0",
+          "elapsed_ms": 131,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-AR2-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-5.0",
+          "expected_stdout": "-5.0",
+          "elapsed_ms": 130,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 137,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.1\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.1",
+          "expected_stdout": "2.1",
+          "elapsed_ms": 129,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-AR2-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-5.0",
+          "expected_stdout": "-5.0",
+          "elapsed_ms": 157,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.1\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.1",
+          "expected_stdout": "2.1",
+          "elapsed_ms": 140,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-AR2-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-5.0",
+          "expected_stdout": "-5.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.1\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.1",
+          "expected_stdout": "2.1",
+          "elapsed_ms": 139,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-AR3-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0|1.0|2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0|1.0|2.0",
+          "expected_stdout": "3.0|1.0|2.0",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0|0.0|-1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0|0.0|-1.0",
+          "expected_stdout": "5.0|0.0|-1.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0|2.5|4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0|2.5|4.0",
+          "expected_stdout": "8.0|2.5|4.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0|7.0|7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0|7.0|7.0",
+          "expected_stdout": "9.0|7.0|7.0",
+          "elapsed_ms": 140,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-AR3-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0|1.0|2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0|1.0|2.0",
+          "expected_stdout": "3.0|1.0|2.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0|0.0|-1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0|0.0|-1.0",
+          "expected_stdout": "5.0|0.0|-1.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0|2.5|4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0|2.5|4.0",
+          "expected_stdout": "8.0|2.5|4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0|7.0|7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0|7.0|7.0",
+          "expected_stdout": "9.0|7.0|7.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-AR3-001",
+      "family": "arrays",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0|1.0|2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0|1.0|2.0",
+          "expected_stdout": "3.0|1.0|2.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0|0.0|-1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0|0.0|-1.0",
+          "expected_stdout": "5.0|0.0|-1.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0|2.5|4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0|2.5|4.0",
+          "expected_stdout": "8.0|2.5|4.0",
+          "elapsed_ms": 140,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 9.0|7.0|7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0|7.0|7.0",
+          "expected_stdout": "9.0|7.0|7.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-ST1-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: cba\r\n",
+          "stderr": "",
+          "normalized_stdout": "cba",
+          "expected_stdout": "cba",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: ocog\r\n",
+          "stderr": "",
+          "normalized_stdout": "ocog",
+          "expected_stdout": "ocog",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: b a\r\n",
+          "stderr": "",
+          "normalized_stdout": "b a",
+          "expected_stdout": "b a",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x",
+          "expected_stdout": "x",
+          "elapsed_ms": 120,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-ST1-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: cba\r\n",
+          "stderr": "",
+          "normalized_stdout": "cba",
+          "expected_stdout": "cba",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: ocog\r\n",
+          "stderr": "",
+          "normalized_stdout": "ocog",
+          "expected_stdout": "ocog",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: b a\r\n",
+          "stderr": "",
+          "normalized_stdout": "b a",
+          "expected_stdout": "b a",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x",
+          "expected_stdout": "x",
+          "elapsed_ms": 113,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-ST1-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: cba\r\n",
+          "stderr": "",
+          "normalized_stdout": "cba",
+          "expected_stdout": "cba",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: ocog\r\n",
+          "stderr": "",
+          "normalized_stdout": "ocog",
+          "expected_stdout": "ocog",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: b a\r\n",
+          "stderr": "",
+          "normalized_stdout": "b a",
+          "expected_stdout": "b a",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x",
+          "expected_stdout": "x",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-ST2-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a_b_c\r\n",
+          "stderr": "",
+          "normalized_stdout": "a_b_c",
+          "expected_stdout": "a_b_c",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: none\r\n",
+          "stderr": "",
+          "normalized_stdout": "none",
+          "expected_stdout": "none",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: _x_\r\n",
+          "stderr": "",
+          "normalized_stdout": "_x_",
+          "expected_stdout": "_x_",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a__b\r\n",
+          "stderr": "",
+          "normalized_stdout": "a__b",
+          "expected_stdout": "a__b",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-ST2-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a_b_c\r\n",
+          "stderr": "",
+          "normalized_stdout": "a_b_c",
+          "expected_stdout": "a_b_c",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: none\r\n",
+          "stderr": "",
+          "normalized_stdout": "none",
+          "expected_stdout": "none",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: _x_\r\n",
+          "stderr": "",
+          "normalized_stdout": "_x_",
+          "expected_stdout": "_x_",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a__b\r\n",
+          "stderr": "",
+          "normalized_stdout": "a__b",
+          "expected_stdout": "a__b",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-ST2-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a_b_c\r\n",
+          "stderr": "",
+          "normalized_stdout": "a_b_c",
+          "expected_stdout": "a_b_c",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: none\r\n",
+          "stderr": "",
+          "normalized_stdout": "none",
+          "expected_stdout": "none",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: _x_\r\n",
+          "stderr": "",
+          "normalized_stdout": "_x_",
+          "expected_stdout": "_x_",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: a__b\r\n",
+          "stderr": "",
+          "normalized_stdout": "a__b",
+          "expected_stdout": "a__b",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-ST3-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 131,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-ST3-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-ST3-001",
+      "family": "strings",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for text: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 134,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-IO1-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: Lovelace, Ada L\r\n",
+          "stderr": "",
+          "normalized_stdout": "Lovelace, Ada L",
+          "expected_stdout": "Lovelace, Ada L",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: C, A B\r\n",
+          "stderr": "",
+          "normalized_stdout": "C, A B",
+          "expected_stdout": "C, A B",
+          "elapsed_ms": 130,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: three, one two words\r\n",
+          "stderr": "",
+          "normalized_stdout": "three, one two words",
+          "expected_stdout": "three, one two words",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: z, x \r\n",
+          "stderr": "",
+          "normalized_stdout": "z, x",
+          "expected_stdout": "z, x",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-IO1-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: Lovelace, Ada L\r\n",
+          "stderr": "",
+          "normalized_stdout": "Lovelace, Ada L",
+          "expected_stdout": "Lovelace, Ada L",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: C, A B\r\n",
+          "stderr": "",
+          "normalized_stdout": "C, A B",
+          "expected_stdout": "C, A B",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: three, one two words\r\n",
+          "stderr": "",
+          "normalized_stdout": "three, one two words",
+          "expected_stdout": "three, one two words",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: z, x \r\n",
+          "stderr": "",
+          "normalized_stdout": "z, x",
+          "expected_stdout": "z, x",
+          "elapsed_ms": 120,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-IO1-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: Lovelace, Ada L\r\n",
+          "stderr": "",
+          "normalized_stdout": "Lovelace, Ada L",
+          "expected_stdout": "Lovelace, Ada L",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: C, A B\r\n",
+          "stderr": "",
+          "normalized_stdout": "C, A B",
+          "expected_stdout": "C, A B",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: three, one two words\r\n",
+          "stderr": "",
+          "normalized_stdout": "three, one two words",
+          "expected_stdout": "three, one two words",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: z, x \r\n",
+          "stderr": "",
+          "normalized_stdout": "z, x",
+          "expected_stdout": "z, x",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-IO2-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [x]=3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[x]=3.0",
+          "expected_stdout": "[x]=3.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [score]=0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[score]=0.0",
+          "expected_stdout": "[score]=0.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [temp]=-2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "[temp]=-2.5",
+          "expected_stdout": "[temp]=-2.5",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [A]=12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[A]=12.0",
+          "expected_stdout": "[A]=12.0",
+          "elapsed_ms": 123,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-IO2-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [x]=3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[x]=3.0",
+          "expected_stdout": "[x]=3.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [score]=0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[score]=0.0",
+          "expected_stdout": "[score]=0.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [temp]=-2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "[temp]=-2.5",
+          "expected_stdout": "[temp]=-2.5",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [A]=12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[A]=12.0",
+          "expected_stdout": "[A]=12.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-IO2-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [x]=3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[x]=3.0",
+          "expected_stdout": "[x]=3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [score]=0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[score]=0.0",
+          "expected_stdout": "[score]=0.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [temp]=-2.5\r\n",
+          "stderr": "",
+          "normalized_stdout": "[temp]=-2.5",
+          "expected_stdout": "[temp]=-2.5",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: [A]=12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "[A]=12.0",
+          "expected_stdout": "[A]=12.0",
+          "elapsed_ms": 124,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-IO3-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: go-2.0-go\r\n",
+          "stderr": "",
+          "normalized_stdout": "go-2.0-go",
+          "expected_stdout": "go-2.0-go",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: x-0.0-x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x-0.0-x",
+          "expected_stdout": "x-0.0-x",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: hello--1.0-hello\r\n",
+          "stderr": "",
+          "normalized_stdout": "hello--1.0-hello",
+          "expected_stdout": "hello--1.0-hello",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: A-3.5-A\r\n",
+          "stderr": "",
+          "normalized_stdout": "A-3.5-A",
+          "expected_stdout": "A-3.5-A",
+          "elapsed_ms": 123,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-IO3-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: go-2.0-go\r\n",
+          "stderr": "",
+          "normalized_stdout": "go-2.0-go",
+          "expected_stdout": "go-2.0-go",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: x-0.0-x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x-0.0-x",
+          "expected_stdout": "x-0.0-x",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: hello--1.0-hello\r\n",
+          "stderr": "",
+          "normalized_stdout": "hello--1.0-hello",
+          "expected_stdout": "hello--1.0-hello",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: A-3.5-A\r\n",
+          "stderr": "",
+          "normalized_stdout": "A-3.5-A",
+          "expected_stdout": "A-3.5-A",
+          "elapsed_ms": 123,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-IO3-001",
+      "family": "input_output",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: go-2.0-go\r\n",
+          "stderr": "",
+          "normalized_stdout": "go-2.0-go",
+          "expected_stdout": "go-2.0-go",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: x-0.0-x\r\n",
+          "stderr": "",
+          "normalized_stdout": "x-0.0-x",
+          "expected_stdout": "x-0.0-x",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: hello--1.0-hello\r\n",
+          "stderr": "",
+          "normalized_stdout": "hello--1.0-hello",
+          "expected_stdout": "hello--1.0-hello",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: A-3.5-A\r\n",
+          "stderr": "",
+          "normalized_stdout": "A-3.5-A",
+          "expected_stdout": "A-3.5-A",
+          "elapsed_ms": 122,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CP1-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 81.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "81.0",
+          "expected_stdout": "81.0",
+          "elapsed_ms": 131,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CP1-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 81.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "81.0",
+          "expected_stdout": "81.0",
+          "elapsed_ms": 128,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CP1-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: -8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "-8.0",
+          "expected_stdout": "-8.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 81.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "81.0",
+          "expected_stdout": "81.0",
+          "elapsed_ms": 126,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CP2-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 104,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CP2-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 113,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CP2-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 0.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "0.0",
+          "expected_stdout": "0.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 119,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-LOC-CP3-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: NOT SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "NOT SQUARE",
+          "expected_stdout": "NOT SQUARE",
+          "elapsed_ms": 110,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-MOD-CP3-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 132,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 119,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: NOT SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "NOT SQUARE",
+          "expected_stdout": "NOT SQUARE",
+          "elapsed_ms": 117,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "SYN-FULL-CP3-001",
+      "family": "composition_algorithms",
+      "difficulty": "diagnostic",
+      "parse_success": true,
+      "compile_success": true,
+      "execution_success": true,
+      "hidden_pass": true,
+      "cases_passed": 4,
+      "cases_total": 4,
+      "error_phase": null,
+      "structural_requirements_met": true,
+      "case_results": [
+        {
+          "case_id": "a",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "b",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "c",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "SQUARE",
+          "expected_stdout": "SQUARE",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "d",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: NOT SQUARE\r\n",
+          "stderr": "",
+          "normalized_stdout": "NOT SQUARE",
+          "expected_stdout": "NOT SQUARE",
+          "elapsed_ms": 112,
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

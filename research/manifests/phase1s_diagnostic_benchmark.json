@@ -1,0 +1,57 @@
+{
+  "artifact_type": "phase1s_frozen_diagnostic_benchmark",
+  "created_at": "2026-09-20",
+  "scientific_use": "diagnostic localization and frozen-backbone comparison only; not training data and not confirmatory final-paper evidence",
+  "split": "phase1s_diagnostic",
+  "task_count": 96,
+  "recognition_task_count": 24,
+  "executable_task_count": 72,
+  "hidden_case_count": 288,
+  "levels": {
+    "recognition": 24,
+    "local_completion": 24,
+    "structured_modification": 24,
+    "full_synthesis": 24
+  },
+  "families": {
+    "arrays": 12,
+    "composition_algorithms": 12,
+    "conditionals": 12,
+    "expressions_variables": 12,
+    "functions": 12,
+    "input_output": 12,
+    "loops": 12,
+    "strings": 12
+  },
+  "balance": "three tasks per family at each of four levels",
+  "diversity": {
+    "unique_task_structures": 96,
+    "unique_template_lineages": 96,
+    "exact_duplicate_prompts": 0,
+    "maximum_prompt_token_jaccard_by_level": {
+      "recognition": 0.7368421052631579,
+      "local_completion": 0.851063829787234,
+      "structured_modification": 0.7333333333333333,
+      "full_synthesis": 0.6190476190476191
+    },
+    "maximum_normalized_reference_sequence_similarity": 0.9629629629629629,
+    "maximum_reference_pair": ["SYN-LOC-ST1-001", "SYN-LOC-ST3-001"],
+    "qualification": "Matched scenario lineages across executable levels are intentional. Within-family structural similarity remains high for some simple tasks; unique IDs and labels do not imply statistical independence."
+  },
+  "canonical_hashes": {
+    "tasks": "35c0118f5626f703b8c177740f6c7bc8479b816cfccb1b7fd50d2a186bf89c54",
+    "hidden_tests": "ae49476ef56d4ac35a95d434eb71d1356257ae0874b21fb298ac71a21a383752",
+    "reference_solutions": "b819f03e64d7b78a189af2453b221de085391e7a6ed9809e7f7e72f6f86eee6c2"
+  },
+  "file_hashes": {
+    "benchmark/phase1s/diagnostic_tasks.json": "6b473f1abbe599f74241172ddef6401b99b6ce100bd1c9a15dddcc36b49c70ef",
+    "benchmark/phase1s/diagnostic_hidden_tests.json": "97aa3b840060ad5ba111087e4033fb38156e7e4a0894621fa2de04004bd04e02",
+    "benchmark/phase1s/diagnostic_references.json": "2373d481cade327b460b1fcd6c44c9d472d9b91414a6f366553d64271a50e6ab"
+  },
+  "reference_validation": {
+    "failures": 0,
+    "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+  },
+  "prior_data_policy": "Phase 1 and Phase 1R tasks are consumed historical evidence only. No Phase 1S item was selected from their outcomes.",
+  "legacy_final_holdout_policy": "The eight legacy final-paper tasks remain sealed, uninspected, unevaluated, and unmodified."
+}

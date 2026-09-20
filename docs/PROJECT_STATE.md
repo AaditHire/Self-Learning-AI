@@ -2,8 +2,8 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1R complete; no parameter adaptation authorized
-Phase decision: NO-GO for Phase 2
+Current phase: Phase 1S preregistered; frozen-model diagnostic pending
+Phase decision: NO-GO for Phase 2; no parameter adaptation authorized
 
 ## Repository boundaries
 
@@ -132,6 +132,21 @@ required +15 points. Its three successes did span three families. Therefore no
 new confirmatory suite was created, no confirmatory A/B experiment ran, and
 Phase 2 remains prohibited.
 
+## Phase 1S preregistration
+
+Phase 1S starts from commit
+`2879bbea5a5199eba3df1ead4fe9138916c17937`. It introduces a new diagnostic-only
+suite with 96 items: eight families, four capability levels, and three items
+per family/level. The 72 executable items have 288 hidden cases; all references
+passed before freezing. Phase 1/1R tasks remain consumed, and the legacy final-
+paper holdout remains sealed.
+
+Candidate C is fixed with no prompt search. The primary 1.5B revision remains
+unchanged; a frozen 3B comparator is allowed only in 4-bit after a hardware
+smoke gate. The frozen config SHA-256 is
+`5e7da9fe450cef1561bdeaa9f0642ec88d4e96429eac9c4bf44944b36df20c2a`.
+No Phase 1S inference result existed when this protocol was frozen.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -144,11 +159,11 @@ Phase 2 remains prohibited.
 - Completed phase record: `docs/research/stages/PHASE_00.md`
 - Completed Phase 1 record: `docs/research/stages/PHASE_01.md`
 - Frozen Phase 1 protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
+- Frozen Phase 1S protocol: `research/protocols/PHASE_1S_FROZEN_DIAGNOSTIC.md`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Do not start QLoRA, LoRA, Phase 2, or any parameter update. Phase 1R is complete
-with a NO-GO. The Phase 1R development suite is now consumed for protocol
-selection. Do not tune against it or the completed Phase 1 evaluation, and do
-not open the legacy sealed holdout.
+Complete only the preregistered frozen Phase 1S diagnostic. Do not start QLoRA,
+LoRA, Phase 2, or any parameter update. Do not tune against the consumed Phase
+1/1R evaluations, and do not open the legacy sealed holdout.

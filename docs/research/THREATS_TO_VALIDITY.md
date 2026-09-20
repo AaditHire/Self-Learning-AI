@@ -71,6 +71,15 @@
   interval is wide and all remaining failures were lexical or syntactic, so
   semantic capability outside those isolated successes remains largely
   unmeasured.
+- Phase 1S deliberately matches scenarios across executable levels. This helps
+  localize composition burden but induces dependence across levels and does not
+  create 96 independent observations.
+- Phase 1S compares FP16 1.5B inference with NF4 4-bit 3B inference because of
+  the 6 GB hardware ceiling. Any difference conflates parameter scale with
+  quantization and cannot be interpreted as a clean scaling law.
+- Simple within-family tasks retain high structural similarity (maximum
+  normalized reference similarity 0.963) despite unique lineages and
+  signatures. Per-family cells contain only three items per level.
 
 ## Mitigations
 

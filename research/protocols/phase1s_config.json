@@ -1,0 +1,90 @@
+{
+  "phase": "1S-frozen-syntax-capability-diagnostic",
+  "frozen_at": "2026-09-20T16:11:28+05:30",
+  "start_commit": "2879bbea5a5199eba3df1ead4fe9138916c17937",
+  "benchmark": {
+    "tasks": "benchmark/phase1s/diagnostic_tasks.json",
+    "hidden_tests": "benchmark/phase1s/diagnostic_hidden_tests.json",
+    "reference_solutions": "benchmark/phase1s/diagnostic_references.json",
+    "split": "phase1s_diagnostic"
+  },
+  "prompt": {
+    "system": "prompts/phase1s_system.txt",
+    "templates": "prompts/phase1s_task_templates.json",
+    "condition": "Candidate C only; exact fixed file order; no prompt search",
+    "candidate_c_context_files": [
+      "prompts/phase1r_syntax_contract_v1.txt",
+      "docs/goco_language_reference_phase1r_v1.md",
+      "prompts/phase1r_canonical_examples_v1.txt"
+    ]
+  },
+  "normalization": "research/protocols/phase1r_output_normalization_v1.md",
+  "input_file_hashes": {
+    "benchmark/phase1s/diagnostic_tasks.json": "6b473f1abbe599f74241172ddef6401b99b6ce100bd1c9a15dddcc36b49c70ef",
+    "benchmark/phase1s/diagnostic_hidden_tests.json": "97aa3b840060ad5ba111087e4033fb38156e7e4a0894621fa2de04004bd04e02",
+    "benchmark/phase1s/diagnostic_references.json": "2373d481cade327b460b1fcd6c44c9d472d9b91414a6f366553d64271a50e6ab",
+    "prompts/phase1s_system.txt": "4d2d8fd7e24a31fe9f6b07d0bd0ceebc04984a4a1eead4eb0ed0e02149e306e7",
+    "prompts/phase1s_task_templates.json": "2b7272fbe47866c4b5b5add28963b7024c9e31a9dd12c174d753eb327e48e48e",
+    "prompts/phase1r_syntax_contract_v1.txt": "f15894a4d4c4cad4b5e6a5f98540fbb50291bba967fd164d101ad233bc3a964c",
+    "docs/goco_language_reference_phase1r_v1.md": "aa0e7f75804d05f24a8e8f9a70ef25b6ca7caa5b87c9bb2d4bec9833f072bc8d",
+    "prompts/phase1r_canonical_examples_v1.txt": "756086c027f415b0a05898568eb0ef261a0d4f9eaa018a9e9a2f50ef61b4102a",
+    "research/protocols/phase1r_output_normalization_v1.md": "3b3ed11956f00341944849b57a9af6cbe74c9dc7670bcfc7e477c0798e6311e4"
+  },
+  "models": {
+    "qwen_1p5b": {
+      "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+      "local_path": ".models/Qwen2.5-Coder-1.5B-Instruct-2e1fd397",
+      "device": "cuda:0",
+      "dtype": "float16",
+      "quantization": "none",
+      "weight_file_sha256": {"model.safetensors": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8"}
+    },
+    "qwen_3b": {
+      "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+      "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+      "device": "cuda:0",
+      "dtype": "float16_compute",
+      "quantization": "bitsandbytes_nf4_4bit",
+      "weight_file_sha256": {
+        "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+        "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+      }
+    }
+  },
+  "smoke_gate": {
+    "model": "qwen_3b",
+    "requirements": ["model load succeeds", "at least one token is generated", "no CUDA out-of-memory error", "peak allocated GPU memory does not exceed physical VRAM"],
+    "failure_action": "retain failure artifact and skip the full 3B evaluation; still run the 1.5B diagnostic"
+  },
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens_by_level": {
+      "recognition": 8,
+      "local_completion": 128,
+      "structured_modification": 512,
+      "full_synthesis": 512
+    },
+    "stopping": "model EOS or level maximum",
+    "retry_policy": "none"
+  },
+  "scoring": {
+    "recognition": "exact normalized A, B, or C",
+    "executable": "task-level hidden-test pass@1 requires all four hidden cases and structural requirements",
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "manual_repair": false,
+    "report_slices": ["level", "family", "level_by_family", "failure_taxonomy"]
+  },
+  "decision_logic": {
+    "A": "If 1.5B is strong on recognition/local completion but collapses at structured modification/full synthesis, infer a composition bottleneck; do not authorize training.",
+    "B": "If 1.5B is poor on recognition/local completion, deem the 1.5B backbone unsuitable; no-go.",
+    "C": "If 3B full-synthesis hidden pass@1 is at least 25% and spans at least four families, recommend a separate backbone-selection phase; do not automatically authorize training.",
+    "D": "If both backbones are poor, re-examine task/context/tooling setup; no-go for QLoRA."
+  },
+  "seed": 20260920,
+  "prohibitions": ["training", "LoRA", "QLoRA", "gradient updates", "weight modification", "prompt search", "opening the legacy sealed holdout"]
+}
