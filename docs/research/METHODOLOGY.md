@@ -138,3 +138,8 @@ documentation condition reaching at least 25% hidden pass@1, improving at least
 15 points over its paired no-doc condition, and passing tasks in at least three
 families permits construction of a new 48-task confirmatory suite. Development
 scores are engineering evidence, not confirmatory claims.
+
+Phase 1R selected the examples-augmented candidate at 3/24 versus 0/24 no-doc,
+but it failed both quantitative gate thresholds. Under the frozen stopping
+rule, no confirmatory suite or A/B run was created. The development suite is now
+consumed and may not be repurposed as unseen evidence.

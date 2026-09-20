@@ -15,9 +15,16 @@ No claim below is currently justified by experimental evidence.
   and `summary.json`. Both conditions passed 0/24 tasks.
 - **Possible confounders:** prompt-length effects, retrieval leakage, benchmark
   contamination, decoding variance.
-- **Currently justified:** No. The all-syntax-error floor makes the comparison
-  non-discriminating; it does not justify a claim that documentation is
-  generally ineffective.
+- **Phase 1R development evidence:** EXP-0006 tested three corrected fixed-
+  context candidates on a new engineering-only suite. The best candidate
+  passed 3/24 tasks versus 0/24 without docs, but failed the preregistered 25%
+  assisted-pass and 15-point-improvement gate. No confirmatory suite or A/B run
+  followed.
+- **Currently justified:** No confirmatory claim. Phase 1R supports only the
+  narrower engineering observation that corrected context elicited three
+  executable development successes and eliminated the universal `PROGRAM`
+  wrapper; it does not establish a reliable retrieval ceiling or general
+  documentation benefit.
 
 ## CLM-002
 

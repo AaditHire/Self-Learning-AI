@@ -58,6 +58,19 @@
   unable to distinguish semantic capability or retrieval benefit.
 - GOCO's repeated-`INPUT` buffering behavior forced multi-value benchmark tasks
   to use delimiter parsing and the strings library, increasing task coupling.
+- Phase 1R protocol candidates were additive and therefore differed in both
+  information and prompt length; the contribution of the concise contract and
+  examples cannot be isolated from length/order effects.
+- Phase 1R's 24-task suite was used for engineering selection, not confirmatory
+  inference, and is now consumed. Reusing it for further selection would
+  increase adaptive overfitting.
+- The largest identifier/literal-normalized development reference similarity
+  was 0.952 for two conditional structures despite unique lineages and task
+  labels; structural diversity is improved over ID-only checks but imperfect.
+- The best Phase 1R candidate produced only three passing tasks. The paired
+  interval is wide and all remaining failures were lexical or syntactic, so
+  semantic capability outside those isolated successes remains largely
+  unmeasured.
 
 ## Mitigations
 

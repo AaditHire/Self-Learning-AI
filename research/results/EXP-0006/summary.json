@@ -1,0 +1,70 @@
+{
+  "experiment": "EXP-0006",
+  "scope": "development-only frozen-model elicitation protocol selection",
+  "raw_result_sha256": "fe12dc4f15fef7382952651f20fc4d5aae3f3cd5caf606006f182ce1b7977dcd",
+  "config_sha256": "c5391a6da514303bbf21b637fe89cf69f9476f1d9ab56d3204a406e9bf8ee21d",
+  "conditions": {
+    "DEV_NO_DOCS": {
+      "hidden_passes": 0,
+      "tasks": 24,
+      "pass_rate": 0.0,
+      "parse_rate": 0.0,
+      "compile_rate": 0.0,
+      "execution_rate": 0.0,
+      "families_with_pass": 0,
+      "error_phases": {"syntax": 24}
+    },
+    "DEV_DOCS_A": {
+      "hidden_passes": 2,
+      "tasks": 24,
+      "pass_rate": 0.08333333333333333,
+      "parse_rate": 0.08333333333333333,
+      "compile_rate": 0.08333333333333333,
+      "execution_rate": 0.08333333333333333,
+      "families_with_pass": 2,
+      "error_phases": {"lexical": 12, "syntax": 10}
+    },
+    "DEV_DOCS_B": {
+      "hidden_passes": 2,
+      "tasks": 24,
+      "pass_rate": 0.08333333333333333,
+      "parse_rate": 0.08333333333333333,
+      "compile_rate": 0.08333333333333333,
+      "execution_rate": 0.08333333333333333,
+      "families_with_pass": 2,
+      "error_phases": {"lexical": 7, "syntax": 15}
+    },
+    "DEV_DOCS_C": {
+      "hidden_passes": 3,
+      "tasks": 24,
+      "pass_rate": 0.125,
+      "parse_rate": 0.125,
+      "compile_rate": 0.125,
+      "execution_rate": 0.125,
+      "families_with_pass": 3,
+      "error_phases": {"lexical": 9, "syntax": 12},
+      "paired_risk_difference_vs_no_docs": 0.125,
+      "paired_bootstrap_95pct_ci": [0.0, 0.2916666666666667],
+      "docs_only_passes": 3,
+      "baseline_only_passes": 0,
+      "mcnemar_exact_two_sided_p": 0.25
+    }
+  },
+  "selected_protocol": "DEV_DOCS_C",
+  "selection_reason": "highest pre-registered primary metric: 3/24 hidden passes",
+  "development_gate": {
+    "assisted_pass_rate_requirement": 0.25,
+    "assisted_pass_rate_observed": 0.125,
+    "assisted_pass_rate_passed": false,
+    "absolute_improvement_requirement": 0.15,
+    "absolute_improvement_observed": 0.125,
+    "absolute_improvement_passed": false,
+    "minimum_families_requirement": 3,
+    "families_observed": 3,
+    "family_coverage_passed": true,
+    "overall_passed": false
+  },
+  "confirmatory_suite_created": false,
+  "confirmatory_ab_run": false,
+  "phase2_decision": "NO-GO"
+}
