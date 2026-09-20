@@ -1,0 +1,50 @@
+{
+  "artifact_type": "phase1r_development_only_elicitation_benchmark",
+  "created_at": "2026-09-20",
+  "scientific_use": "engineering protocol selection only; permanently ineligible for confirmatory or final-paper claims",
+  "split": "phase1r_development",
+  "task_count": 24,
+  "hidden_case_count": 97,
+  "families": {
+    "arrays": 3,
+    "composition_algorithms": 3,
+    "conditionals": 3,
+    "expressions_variables": 3,
+    "functions": 3,
+    "input_output": 3,
+    "loops": 3,
+    "strings": 3
+  },
+  "diversity": {
+    "unique_task_structures": 24,
+    "unique_template_lineages": 24,
+    "exact_duplicate_prompts": 0,
+    "maximum_prompt_token_jaccard": 0.6923076923076923,
+    "maximum_prompt_pair": ["RDEV-IO-001", "RDEV-IO-003"],
+    "maximum_normalized_reference_sequence_similarity": 0.9523809523809523,
+    "maximum_reference_pair": ["RDEV-CD-001", "RDEV-CD-003"],
+    "methods": [
+      "exact normalized prompt equality",
+      "lowercase alphanumeric prompt token-set Jaccard",
+      "explicit unique structure labels",
+      "explicit unique template lineage",
+      "identifier/literal-normalized reference token-sequence similarity"
+    ]
+  },
+  "canonical_hashes": {
+    "tasks": "a5163438141ceecf20efe9668305dc09913e618ed4bb41b5636a84ebba2b6a3b",
+    "hidden_tests": "7d6e542cb4f77fd06057da90a110f2db784d7a5d946b050d914aa8241c4a9d47",
+    "reference_solutions": "9aeac8bc0dbf85afa5a8d65cc0063463d8185f5a6dc54db314005fbb8b5d89c8"
+  },
+  "file_hashes": {
+    "benchmark/phase1r/development_tasks.json": "aefc12c6418e525b2bb310d8907496b21e63f462228c088fe09e2be717fee5eb",
+    "benchmark/phase1r/development_hidden_tests.json": "d71d1c7005f77a671281065e49bc1b21996cd67a52efd7369142cda0b7e661b2",
+    "benchmark/phase1r/development_reference_solutions.json": "b6b78573b0009c20818167ae5e0d8c0708169d30f2b5e7c593379f399060f1bc"
+  },
+  "reference_validation": {
+    "failures": 0,
+    "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+  },
+  "legacy_final_holdout_policy": "The eight Phase 1 final-paper tasks remain sealed, uninspected, unevaluated, unmodified, and are reclassified as a legacy sealed holdout."
+}
+

@@ -1,0 +1,75 @@
+{
+  "phase": "1R-development-protocol-selection",
+  "frozen_at": "2026-09-20T12:45:44+05:30",
+  "baseline_condition": "DEV_NO_DOCS",
+  "condition_order": [
+    "DEV_NO_DOCS",
+    "DEV_DOCS_A",
+    "DEV_DOCS_B",
+    "DEV_DOCS_C"
+  ],
+  "conditions": {
+    "DEV_NO_DOCS": {"context_files": []},
+    "DEV_DOCS_A": {"context_files": ["docs/goco_language_reference_phase1r_v1.md"]},
+    "DEV_DOCS_B": {"context_files": ["prompts/phase1r_syntax_contract_v1.txt", "docs/goco_language_reference_phase1r_v1.md"]},
+    "DEV_DOCS_C": {"context_files": ["prompts/phase1r_syntax_contract_v1.txt", "docs/goco_language_reference_phase1r_v1.md", "prompts/phase1r_canonical_examples_v1.txt"]}
+  },
+  "benchmark": {
+    "tasks": "benchmark/phase1r/development_tasks.json",
+    "hidden_tests": "benchmark/phase1r/development_hidden_tests.json",
+    "reference_solutions": "benchmark/phase1r/development_reference_solutions.json",
+    "split": "phase1r_development"
+  },
+  "prompt_files": {
+    "system": "prompts/phase1r_system.txt",
+    "user_template": "prompts/phase1r_user_template.txt"
+  },
+  "normalization": "research/protocols/phase1r_output_normalization_v1.md",
+  "input_file_hashes": {
+    "benchmark/phase1r/development_tasks.json": "aefc12c6418e525b2bb310d8907496b21e63f462228c088fe09e2be717fee5eb",
+    "benchmark/phase1r/development_hidden_tests.json": "d71d1c7005f77a671281065e49bc1b21996cd67a52efd7369142cda0b7e661b2",
+    "benchmark/phase1r/development_reference_solutions.json": "b6b78573b0009c20818167ae5e0d8c0708169d30f2b5e7c593379f399060f1bc",
+    "docs/goco_language_reference_phase1r_v1.md": "aa0e7f75804d05f24a8e8f9a70ef25b6ca7caa5b87c9bb2d4bec9833f072bc8d",
+    "research/protocols/phase1r_output_normalization_v1.md": "3b3ed11956f00341944849b57a9af6cbe74c9dc7670bcfc7e477c0798e6311e4",
+    "prompts/phase1r_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1r_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "prompts/phase1r_syntax_contract_v1.txt": "f15894a4d4c4cad4b5e6a5f98540fbb50291bba967fd164d101ad233bc3a964c",
+    "prompts/phase1r_canonical_examples_v1.txt": "756086c027f415b0a05898568eb0ef261a0d4f9eaa018a9e9a2f50ef61b4102a"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+    "weights_sha256": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8",
+    "device": "cuda:0",
+    "dtype": "float16",
+    "quantization": "none",
+    "gradient_state": "all parameters requires_grad=False; torch.inference_mode"
+  },
+  "decoding": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "stopping": "model EOS or max_new_tokens",
+    "retry_policy": "none"
+  },
+  "scoring": {
+    "primary": "task-level hidden-test pass@1; all hidden cases and structural requirements",
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "manual_repair": false
+  },
+  "selection_rule": "highest hidden pass rate; ties by compile rate, parse rate, then A before B before C",
+  "development_gate": {
+    "selected_docs_hidden_pass_rate_minimum": 0.25,
+    "absolute_improvement_over_no_docs_minimum": 0.15,
+    "minimum_families_with_at_least_one_pass": 3
+  },
+  "paired_analysis": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260920,
+    "effect_size": "paired risk difference",
+    "uncertainty": "paired task bootstrap percentile 95% interval"
+  },
+  "seed": 20260920
+}

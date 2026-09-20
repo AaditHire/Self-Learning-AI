@@ -1,0 +1,46 @@
+CANONICAL COMPLETE GOCO EXAMPLES
+
+Example 1 — one numeric input:
+
+NUMBER value.
+INPUT(value).
+DISPLAYNL(value * value).
+
+Example 2 — two pipe-delimited numbers and a branch:
+
+IMPORT strings.
+SENTENCE line.
+INPUT(line).
+SENTENCE[] parts = strings.SPLIT(line, "|").
+NUMBER left = strings.TO_NUMBER(parts[0]).
+NUMBER right = strings.TO_NUMBER(parts[1]).
+IF (left > right) {
+    DISPLAYNL(left).
+} ELSE {
+    DISPLAYNL(right).
+}
+
+Example 3 — a reliable for-style loop:
+
+NUMBER limit.
+INPUT(limit).
+NUMBER total = 0.
+LOOP (NUMBER i = 1 TILL i <= limit, i++) {
+    total += i.
+}
+DISPLAYNL(total).
+
+Example 4 — a function declared before its call:
+
+FUNCTION doubleValue(NUMBER value) {
+    RETURN value * 2.
+} RETURNS NUMBER.
+NUMBER inputValue.
+INPUT(inputValue).
+DISPLAYNL(doubleValue(inputValue)).
+
+Example 5 — a fixed array and indexing:
+
+NUMBER[] values = [4, 7, 2].
+DISPLAYNL(values[1]).
+

@@ -123,3 +123,18 @@ The benchmark uses one physical input line per execution because the pinned
 runtime's repeated `INPUT` implementation loses buffered later lines. Tasks
 needing multiple values explicitly use a delimiter and the strings library.
 This is a language/runtime constraint and a construct-validity limitation.
+
+## Phase 1R diagnostic recovery methodology
+
+Phase 1R separates engineering selection from confirmatory measurement. It uses
+a new 24-task development-only suite to compare additive corrected-context
+protocols. The consumed Phase 1 suite is not used for selection, and the legacy
+sealed holdout is never loaded by Phase 1R tooling. Output normalization is
+presentation-only and frozen before inference.
+
+The development selection and progression rule is fixed in
+`research/protocols/PHASE_1R_DEVELOPMENT_PROTOCOL_SELECTION.md`. Only a selected
+documentation condition reaching at least 25% hidden pass@1, improving at least
+15 points over its paired no-doc condition, and passing tasks in at least three
+families permits construction of a new 48-task confirmatory suite. Development
+scores are engineering evidence, not confirmatory claims.

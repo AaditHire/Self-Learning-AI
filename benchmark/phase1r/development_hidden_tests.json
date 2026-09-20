@@ -1,0 +1,535 @@
+{
+  "RDEV-EV-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "5\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-4\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5\n",
+      "expected_stdout": "9.5"
+    }
+  ],
+  "RDEV-EV-002": [
+    {
+      "case_id": "a",
+      "stdin": "5|2\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "3|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2|4\n",
+      "expected_stdout": "-12.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "1.5|0.5\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "RDEV-EV-003": [
+    {
+      "case_id": "a",
+      "stdin": "10|3|5\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2.5|4|1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "0|8|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "7|1|10\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "RDEV-CD-001": [
+    {
+      "case_id": "a",
+      "stdin": "-9\n",
+      "expected_stdout": "NEGATIVE"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0\n",
+      "expected_stdout": "ZERO"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2.5\n",
+      "expected_stdout": "POSITIVE"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-0.5\n",
+      "expected_stdout": "NEGATIVE"
+    }
+  ],
+  "RDEV-CD-002": [
+    {
+      "case_id": "a",
+      "stdin": "1|9|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "7|2|7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-1|-8|-3\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5|2.7|2.6\n",
+      "expected_stdout": "2.7"
+    }
+  ],
+  "RDEV-CD-003": [
+    {
+      "case_id": "a",
+      "stdin": "100\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "99.9\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "50\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "0\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "RDEV-LP-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": ""
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "3\n",
+      "expected_stdout": "1.0\n4.0\n9.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "5\n",
+      "expected_stdout": "1.0\n4.0\n9.0\n16.0\n25.0"
+    }
+  ],
+  "RDEV-LP-002": [
+    {
+      "case_id": "a",
+      "stdin": "10|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "10|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "4|9\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "12|4\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "RDEV-LP-003": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "1234\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "90909\n",
+      "expected_stdout": "27.0"
+    }
+  ],
+  "RDEV-FN-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-3\n",
+      "expected_stdout": "-27.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "1.5\n",
+      "expected_stdout": "3.375"
+    }
+  ],
+  "RDEV-FN-002": [
+    {
+      "case_id": "a",
+      "stdin": "8|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-2|-9\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "1.5|1.5\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "RDEV-FN-003": [
+    {
+      "case_id": "a",
+      "stdin": "4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "10\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "11\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-3\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "RDEV-AR-001": [
+    {
+      "case_id": "a",
+      "stdin": "1|4|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "-1|-8|-2|-3\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.2|9.1|0|8\n",
+      "expected_stdout": "9.1"
+    }
+  ],
+  "RDEV-AR-002": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "4.0|3.0|2.0|1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "0|-1|5|2.5\n",
+      "expected_stdout": "2.5|5.0|-1.0|0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "9|9|8|7\n",
+      "expected_stdout": "7.0|8.0|9.0|9.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "-2|-3|-4|-5\n",
+      "expected_stdout": "-5.0|-4.0|-3.0|-2.0"
+    }
+  ],
+  "RDEV-AR-003": [
+    {
+      "case_id": "a",
+      "stdin": "1|2|3|4|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "5|5|5|5|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "-1|0|1|2|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "2.5|3.5|1.5|4.5|3\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "RDEV-ST-001": [
+    {
+      "case_id": "a",
+      "stdin": "  hello  \n",
+      "expected_stdout": "HELLO"
+    },
+    {
+      "case_id": "b",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCO"
+    },
+    {
+      "case_id": "c",
+      "stdin": "  two words\n",
+      "expected_stdout": "TWO WORDS"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x\n",
+      "expected_stdout": "X"
+    }
+  ],
+  "RDEV-ST-002": [
+    {
+      "case_id": "a",
+      "stdin": "abc\n",
+      "expected_stdout": "cba"
+    },
+    {
+      "case_id": "b",
+      "stdin": "racecar\n",
+      "expected_stdout": "racecar"
+    },
+    {
+      "case_id": "c",
+      "stdin": "a b\n",
+      "expected_stdout": "b a"
+    },
+    {
+      "case_id": "d",
+      "stdin": "GOCO\n",
+      "expected_stdout": "OCOG"
+    }
+  ],
+  "RDEV-ST-003": [
+    {
+      "case_id": "a",
+      "stdin": "banana|an\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "aaaa|aa\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "hello|z\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "abcabcabc|abc\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "RDEV-IO-001": [
+    {
+      "case_id": "a",
+      "stdin": "red|blue\n",
+      "expected_stdout": "blue|red"
+    },
+    {
+      "case_id": "b",
+      "stdin": "a|b\n",
+      "expected_stdout": "b|a"
+    },
+    {
+      "case_id": "c",
+      "stdin": "first words|last\n",
+      "expected_stdout": "last|first words"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x|x\n",
+      "expected_stdout": "x|x"
+    }
+  ],
+  "RDEV-IO-002": [
+    {
+      "case_id": "a",
+      "stdin": "ada|10\n",
+      "expected_stdout": "ADA=10.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "Lin|0\n",
+      "expected_stdout": "LIN=0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "two words|7.5\n",
+      "expected_stdout": "TWO WORDS=7.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "x|-2\n",
+      "expected_stdout": "X=-2.0"
+    }
+  ],
+  "RDEV-IO-003": [
+    {
+      "case_id": "a",
+      "stdin": "id|3\n",
+      "expected_stdout": "id:3.0:3.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "x|0\n",
+      "expected_stdout": "x:0.0:0.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "long label|-4.5\n",
+      "expected_stdout": "long label:-4.5:-4.5"
+    },
+    {
+      "case_id": "d",
+      "stdin": "A|12\n",
+      "expected_stdout": "A:12.0:12.0"
+    }
+  ],
+  "RDEV-CP-001": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "c",
+      "stdin": "5\n",
+      "expected_stdout": "120.0"
+    },
+    {
+      "case_id": "d",
+      "stdin": "8\n",
+      "expected_stdout": "40320.0"
+    }
+  ],
+  "RDEV-CP-002": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "NOT PRIME"
+    },
+    {
+      "case_id": "b",
+      "stdin": "1\n",
+      "expected_stdout": "NOT PRIME"
+    },
+    {
+      "case_id": "c",
+      "stdin": "2\n",
+      "expected_stdout": "PRIME"
+    },
+    {
+      "case_id": "d",
+      "stdin": "9\n",
+      "expected_stdout": "NOT PRIME"
+    },
+    {
+      "case_id": "e",
+      "stdin": "17\n",
+      "expected_stdout": "PRIME"
+    }
+  ],
+  "RDEV-CP-003": [
+    {
+      "case_id": "a",
+      "stdin": "0\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "b",
+      "stdin": "7\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "c",
+      "stdin": "123\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "d",
+      "stdin": "9992\n",
+      "expected_stdout": "ODD"
+    }
+  ]
+}

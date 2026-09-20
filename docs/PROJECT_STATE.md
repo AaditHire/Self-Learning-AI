@@ -2,8 +2,8 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1 complete; no parameter adaptation authorized
-Phase decision: NO-GO for Phase 2
+Current phase: Phase 1R development protocol selection authorized; no parameter adaptation authorized
+Phase decision: Phase 2 remains prohibited pending the Phase 1R gates
 
 ## Repository boundaries
 
@@ -114,6 +114,20 @@ interop capabilities. Execution nevertheless remains bounded in a no-shell
 subprocess with a temporary directory, controlled stdin, separate capped
 streams, heap/metaspace caps, timeout, and cleanup.
 
+## Phase 1R status
+
+Phase 1R is a frozen-model diagnostic recovery phase starting from commit
+`e88d49255abd7b9d1a4497d3d89dbdc4d3a8a5ae`. The consumed Phase 1 evaluation
+is excluded from protocol selection. The eight final-paper tasks remain sealed
+and are now classified as a legacy sealed holdout.
+
+A new development-only suite contains 24 tasks, three in each of the eight
+families, with 97 hidden cases. The Phase 1R development protocol compares a
+no-documentation condition with three additive corrected-context candidates.
+Its 25% documentation-assisted pass and 15-point improvement gate was frozen
+before any Phase 1R model inference. Failure of this gate ends the phase without
+creating a confirmatory suite or beginning training.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -130,10 +144,6 @@ streams, heap/metaspace caps, timeout, and cleanup.
 
 ## Resume instructions
 
-Do not start QLoRA, LoRA, Phase 2, or any parameter update. Phase 1's NO-GO must
-be independently reviewed. If authorized, the next work should be **Phase 1R —
-Elicitation Protocol Repair and Fresh Frozen Baseline Replication**: use only
-development tasks to make the documentation/prompt produce valid GOCO, correct
-the trusted reference (including its false recursion statement), pre-register a
-new protocol, and evaluate on a newly created frozen suite. Do not tune against
-the completed 24-task Phase 1 evaluation or open the final-paper suite.
+Do not start QLoRA, LoRA, Phase 2, or any parameter update. Continue Phase 1R
+only according to its frozen development protocol. Do not tune against the
+completed 24-task Phase 1 evaluation or open the legacy sealed holdout.

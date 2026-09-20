@@ -72,6 +72,20 @@ def extract_source(raw_generation: str) -> str:
     return text[start + 1 : end].strip()
 
 
+def extract_source_phase1r(raw_generation: str) -> str:
+    """Phase 1R v1 normalization: extract only one complete fenced block."""
+
+    text = raw_generation.strip()
+    if text.count("```") != 2:
+        return text
+    first = text.find("```")
+    content_start = text.find("\n", first + 3)
+    closing = text.find("```", first + 3)
+    if content_start < 0 or closing < content_start:
+        return text
+    return text[content_start + 1 : closing].strip()
+
+
 def score_source(
     compiler: GocoCompiler,
     task: dict[str, Any],

@@ -1,0 +1,12 @@
+GOCO SOURCE CONTRACT
+
+- Output GOCO, not Go. Never use package, import "...", func, fmt, or strconv.
+- A source file is bare top-level statements. Never use PROGRAM, BEGIN, END, class, or a main wrapper.
+- Use NUMBER, SENTENCE, LETTER, and LOGIC; there is no STRING or INT.
+- End ordinary statements with a period. Use ELSEIF as one word.
+- INPUT is only INPUT(alreadyDeclaredVariable). It is not an expression and has no prompt argument.
+- Use DISPLAY or DISPLAYNL for output. Print no extra text.
+- A function declaration ends with a period after `}` or after `RETURNS TYPE`.
+- Do not use recursion, forward function calls, READLINE, or multiple INPUT statements.
+- For multiple values, read one SENTENCE, use strings.SPLIT, then strings.TO_NUMBER as needed.
+

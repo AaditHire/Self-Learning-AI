@@ -1,0 +1,399 @@
+[
+  {
+    "task_id": "RDEV-EV-001",
+    "split": "phase1r_development",
+    "family": "expressions_variables",
+    "difficulty": "basic",
+    "structure": "affine_expression",
+    "template_lineage": "phase1r-dev-affine-v1",
+    "constructs": [
+      "NUMBER",
+      "INPUT",
+      "arithmetic"
+    ],
+    "input_shape": "one_number",
+    "prompt": "Read one NUMBER n. Print 3*n + 2 as a number.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-EV-002",
+    "split": "phase1r_development",
+    "family": "expressions_variables",
+    "difficulty": "basic",
+    "structure": "difference_of_squares",
+    "template_lineage": "phase1r-dev-two-number-algebra-v1",
+    "constructs": [
+      "SPLIT",
+      "TO_NUMBER",
+      "arithmetic"
+    ],
+    "input_shape": "two_numbers_pipe",
+    "prompt": "Read one SENTENCE containing two numbers x|y. Print (x-y)*(x+y).",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-EV-003",
+    "split": "phase1r_development",
+    "family": "expressions_variables",
+    "difficulty": "basic",
+    "structure": "weighted_total",
+    "template_lineage": "phase1r-dev-three-number-algebra-v1",
+    "constructs": [
+      "SPLIT",
+      "variables",
+      "arithmetic"
+    ],
+    "input_shape": "three_numbers_pipe",
+    "prompt": "Read one SENTENCE containing price|quantity|discount. Print price*quantity-discount.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CD-001",
+    "split": "phase1r_development",
+    "family": "conditionals",
+    "difficulty": "basic",
+    "structure": "three_way_sign",
+    "template_lineage": "phase1r-dev-sign-branch-v1",
+    "constructs": [
+      "IF",
+      "ELSEIF",
+      "ELSE"
+    ],
+    "input_shape": "one_number",
+    "prompt": "Read one NUMBER. Print NEGATIVE, ZERO, or POSITIVE.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CD-002",
+    "split": "phase1r_development",
+    "family": "conditionals",
+    "difficulty": "intermediate",
+    "structure": "maximum_of_three",
+    "template_lineage": "phase1r-dev-max-three-v1",
+    "constructs": [
+      "IF",
+      "assignment",
+      "SPLIT"
+    ],
+    "input_shape": "three_numbers_pipe",
+    "prompt": "Read one SENTENCE containing a|b|c. Print the greatest number. Ties may print the tied value.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CD-003",
+    "split": "phase1r_development",
+    "family": "conditionals",
+    "difficulty": "intermediate",
+    "structure": "tiered_fee",
+    "template_lineage": "phase1r-dev-threshold-fee-v1",
+    "constructs": [
+      "IF",
+      "ELSEIF",
+      "boundary"
+    ],
+    "input_shape": "one_number",
+    "prompt": "Read one NUMBER amount. Print 0 when amount is at least 100, 5 when it is at least 50 but below 100, otherwise print 10.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-LP-001",
+    "split": "phase1r_development",
+    "family": "loops",
+    "difficulty": "basic",
+    "structure": "iterated_sequence_output",
+    "template_lineage": "phase1r-dev-square-sequence-v1",
+    "constructs": [
+      "LOOP",
+      "iterated_output",
+      "arithmetic"
+    ],
+    "input_shape": "one_nonnegative_integer",
+    "prompt": "Read a nonnegative whole NUMBER n. For each whole number from 1 through n, print its square on a separate line. For n=0 print nothing.",
+    "required_regex": [
+      "\\bLOOP\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-LP-002",
+    "split": "phase1r_development",
+    "family": "loops",
+    "difficulty": "intermediate",
+    "structure": "filtered_count",
+    "template_lineage": "phase1r-dev-divisible-count-v1",
+    "constructs": [
+      "LOOP",
+      "IF",
+      "modulo"
+    ],
+    "input_shape": "two_positive_integers_pipe",
+    "prompt": "Read one SENTENCE containing positive whole numbers n|k. Print how many numbers from 1 through n are divisible by k.",
+    "required_regex": [
+      "\\bLOOP\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-LP-003",
+    "split": "phase1r_development",
+    "family": "loops",
+    "difficulty": "intermediate",
+    "structure": "digit_reduction",
+    "template_lineage": "phase1r-dev-digit-sum-v1",
+    "constructs": [
+      "LOOP",
+      "modulo",
+      "math.FLOOR"
+    ],
+    "input_shape": "one_nonnegative_integer",
+    "prompt": "Read a nonnegative whole NUMBER n. Print the sum of its decimal digits. For n=0 print 0.",
+    "required_regex": [
+      "\\bLOOP\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-FN-001",
+    "split": "phase1r_development",
+    "family": "functions",
+    "difficulty": "basic",
+    "structure": "single_numeric_function",
+    "template_lineage": "phase1r-dev-cube-function-v1",
+    "constructs": [
+      "FUNCTION",
+      "RETURN",
+      "call"
+    ],
+    "input_shape": "one_number",
+    "prompt": "Define and use a function named cube that accepts one NUMBER and returns its cube. Read one NUMBER and print cube(input).",
+    "required_regex": [
+      "\\bFUNCTION\\s+cube\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-FN-002",
+    "split": "phase1r_development",
+    "family": "functions",
+    "difficulty": "intermediate",
+    "structure": "two_argument_function",
+    "template_lineage": "phase1r-dev-distance-function-v1",
+    "constructs": [
+      "FUNCTION",
+      "math.ABS",
+      "SPLIT"
+    ],
+    "input_shape": "two_numbers_pipe",
+    "prompt": "Define and use a function named distance that accepts two NUMBER values and returns their absolute difference. Read x|y on one line and print the result.",
+    "required_regex": [
+      "\\bFUNCTION\\s+distance\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-FN-003",
+    "split": "phase1r_development",
+    "family": "functions",
+    "difficulty": "intermediate",
+    "structure": "function_with_branch",
+    "template_lineage": "phase1r-dev-cap-function-v1",
+    "constructs": [
+      "FUNCTION",
+      "IF",
+      "RETURN"
+    ],
+    "input_shape": "one_number",
+    "prompt": "Define and use a function named capAtTen that returns 10 when its NUMBER argument is above 10 and otherwise returns the argument. Read one NUMBER and print the function result.",
+    "required_regex": [
+      "\\bFUNCTION\\s+capAtTen\\b"
+    ]
+  },
+  {
+    "task_id": "RDEV-AR-001",
+    "split": "phase1r_development",
+    "family": "arrays",
+    "difficulty": "intermediate",
+    "structure": "array_scan_maximum",
+    "template_lineage": "phase1r-dev-array-max-four-v1",
+    "constructs": [
+      "array_literal",
+      "indexing",
+      "LOOP"
+    ],
+    "input_shape": "four_numbers_pipe",
+    "prompt": "Read four numbers a|b|c|d on one line, place them in a NUMBER array, and print the greatest element.",
+    "required_regex": [
+      "NUMBER\\s*\\[\\s*\\]"
+    ]
+  },
+  {
+    "task_id": "RDEV-AR-002",
+    "split": "phase1r_development",
+    "family": "arrays",
+    "difficulty": "basic",
+    "structure": "array_reordered_output",
+    "template_lineage": "phase1r-dev-array-reverse-four-v1",
+    "constructs": [
+      "array_literal",
+      "indexing",
+      "DISPLAY"
+    ],
+    "input_shape": "four_numbers_pipe",
+    "prompt": "Read four numbers a|b|c|d on one line, store them in a NUMBER array, and print them in reverse order separated by | with no extra spaces.",
+    "required_regex": [
+      "NUMBER\\s*\\[\\s*\\]"
+    ]
+  },
+  {
+    "task_id": "RDEV-AR-003",
+    "split": "phase1r_development",
+    "family": "arrays",
+    "difficulty": "intermediate",
+    "structure": "array_filtered_count",
+    "template_lineage": "phase1r-dev-array-threshold-count-v1",
+    "constructs": [
+      "array_literal",
+      "LOOP",
+      "IF"
+    ],
+    "input_shape": "five_numbers_pipe",
+    "prompt": "Read five numbers a|b|c|d|threshold. Store a,b,c,d in a NUMBER array and print how many are strictly greater than threshold.",
+    "required_regex": [
+      "NUMBER\\s*\\[\\s*\\]"
+    ]
+  },
+  {
+    "task_id": "RDEV-ST-001",
+    "split": "phase1r_development",
+    "family": "strings",
+    "difficulty": "basic",
+    "structure": "trim_and_uppercase",
+    "template_lineage": "phase1r-dev-string-normalize-v1",
+    "constructs": [
+      "strings.TRIM",
+      "strings.UPPER"
+    ],
+    "input_shape": "one_sentence",
+    "prompt": "Read one SENTENCE. Trim leading and trailing whitespace, convert it to uppercase, and print it.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-ST-002",
+    "split": "phase1r_development",
+    "family": "strings",
+    "difficulty": "basic",
+    "structure": "string_reverse",
+    "template_lineage": "phase1r-dev-string-reverse-v1",
+    "constructs": [
+      "strings.REVERSE"
+    ],
+    "input_shape": "one_sentence",
+    "prompt": "Read one SENTENCE and print its characters in reverse order using the strings library.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-ST-003",
+    "split": "phase1r_development",
+    "family": "strings",
+    "difficulty": "intermediate",
+    "structure": "substring_count",
+    "template_lineage": "phase1r-dev-substring-count-v1",
+    "constructs": [
+      "strings.SPLIT",
+      "strings.COUNT"
+    ],
+    "input_shape": "two_sentences_pipe",
+    "prompt": "Read one SENTENCE containing text|fragment. Print the number of non-overlapping occurrences of fragment in text.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-IO-001",
+    "split": "phase1r_development",
+    "family": "input_output",
+    "difficulty": "basic",
+    "structure": "field_reordering",
+    "template_lineage": "phase1r-dev-io-swap-fields-v1",
+    "constructs": [
+      "INPUT",
+      "DISPLAY",
+      "DISPLAYNL"
+    ],
+    "input_shape": "two_sentences_pipe",
+    "prompt": "Read one SENTENCE containing first|second. Print second|first with no extra spaces.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-IO-002",
+    "split": "phase1r_development",
+    "family": "input_output",
+    "difficulty": "basic",
+    "structure": "formatted_record",
+    "template_lineage": "phase1r-dev-io-record-v1",
+    "constructs": [
+      "INPUT",
+      "strings.UPPER",
+      "multi_display"
+    ],
+    "input_shape": "two_fields_pipe",
+    "prompt": "Read one SENTENCE containing name|score. Print NAME=score where NAME is uppercase and there are no extra spaces.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-IO-003",
+    "split": "phase1r_development",
+    "family": "input_output",
+    "difficulty": "intermediate",
+    "structure": "numeric_and_text_output",
+    "template_lineage": "phase1r-dev-io-repeat-label-v1",
+    "constructs": [
+      "INPUT",
+      "ordered_output"
+    ],
+    "input_shape": "two_fields_pipe",
+    "prompt": "Read one SENTENCE containing label|number. Print label:number:number with no extra spaces.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CP-001",
+    "split": "phase1r_development",
+    "family": "composition_algorithms",
+    "difficulty": "intermediate",
+    "structure": "iterative_factorial",
+    "template_lineage": "phase1r-dev-factorial-v1",
+    "constructs": [
+      "LOOP",
+      "multiplicative_accumulator"
+    ],
+    "input_shape": "one_bounded_integer",
+    "prompt": "Read a whole NUMBER n from 0 through 10. Compute n factorial iteratively and print it.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CP-002",
+    "split": "phase1r_development",
+    "family": "composition_algorithms",
+    "difficulty": "advanced",
+    "structure": "divisor_search_classification",
+    "template_lineage": "phase1r-dev-prime-classification-v1",
+    "constructs": [
+      "LOOP",
+      "modulo",
+      "LOGIC",
+      "classification"
+    ],
+    "input_shape": "one_integer",
+    "prompt": "Read a whole NUMBER n. Print PRIME if n is prime; otherwise print NOT PRIME. Values below 2 are not prime.",
+    "required_regex": []
+  },
+  {
+    "task_id": "RDEV-CP-003",
+    "split": "phase1r_development",
+    "family": "composition_algorithms",
+    "difficulty": "advanced",
+    "structure": "digit_classification",
+    "template_lineage": "phase1r-dev-digit-sum-parity-v1",
+    "constructs": [
+      "LOOP",
+      "digit_reduction",
+      "IF"
+    ],
+    "input_shape": "one_nonnegative_integer",
+    "prompt": "Read a nonnegative whole NUMBER. Sum its decimal digits, then print EVEN if that sum is even and ODD otherwise.",
+    "required_regex": []
+  }
+]
