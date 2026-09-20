@@ -178,3 +178,9 @@ but is barred from changing the primary 3B gate. Recognition, completion,
 modification, and synthesis are treated as different generation regimes rather
 than a proven monotonic difficulty ladder. No Phase 1T result authorizes
 training automatically.
+
+Phase 1T produced 0/64 no-doc and 14/64 Candidate-C hidden passes. The paired
+gain and five-family span passed their criteria, but 21.875% missed the 25%
+absolute criterion. The conjunctive gate therefore failed. The secondary 1.5B
+NF4 result was 4/64 and remained interpretive only. These completed tasks are
+now consumed and cannot be reused for protocol selection or confirmation.

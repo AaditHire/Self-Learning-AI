@@ -89,6 +89,16 @@
   as a whole, not to an isolated documentation component.
 - A single deterministic generation per task estimates exact pass@1 for the
   frozen protocol but not sampling robustness or uncertainty across prompts.
+- Phase 1T Candidate C passed 14 tasks, including both members of one flagged
+  high-similarity pair (LP01/LP02). The other 12 passes were not paired with a
+  passing high-similarity counterpart, so flagged pairs do not dominate the
+  result, but structural correlation still narrows effective diversity.
+- The matched-NF4 3B versus 1.5B diagnostic reduces the precision mismatch but
+  still changes model architecture and parameter count together; its 14/64
+  versus 4/64 result is not a causal scaling estimate.
+- The 3B Phase 1S full-synthesis rate was 7/24 (29.2%), while Phase 1T Candidate
+  C reached 14/64 (21.875%). Suite composition and sampling error can explain
+  the difference; it should not be attributed post hoc to one task property.
 
 ## Mitigations
 

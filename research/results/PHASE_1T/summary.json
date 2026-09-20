@@ -1,0 +1,69 @@
+{
+  "phase": "1T",
+  "start_commit": "56940731b14053677123521093615c73c24604c6",
+  "preregistration_commit": "dd3dd6f2ebcc303bc7ca6fcb1ca35bb2319fee26",
+  "config_sha256": "4cf19e35b4b937eeba6a89cbf2340e49c83f147b37dddffbb9ebde0946e020d5",
+  "benchmark": {
+    "tasks": 64,
+    "families": 8,
+    "tasks_per_family": 8,
+    "hidden_cases": 329,
+    "minimum_cases_per_task": 5,
+    "reference_tasks_passed": 64,
+    "exact_duplicate_prompts": 0,
+    "unique_algorithmic_structures": 64,
+    "unique_control_flow_labels": 60,
+    "unique_template_lineages": 64,
+    "unique_structural_signatures": 64,
+    "maximum_prompt_token_jaccard": 0.65,
+    "maximum_normalized_reference_similarity": 0.9761904761904762,
+    "reference_pairs_manually_reviewed": 23,
+    "major_integrity_problem": false
+  },
+  "qwen_3b": {
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "no_docs": {
+      "parse": 0, "compile": 0, "execute": 0, "hidden_pass": 0, "total": 64,
+      "failure_taxonomy": {"lexical": 3, "syntax": 61}
+    },
+    "candidate_c": {
+      "parse": 35, "compile": 26, "execute": 15, "hidden_pass": 14, "total": 64,
+      "families_with_pass": 5,
+      "family_hidden_pass": {
+        "arrays": 0, "composition_algorithms": 3, "conditionals": 4,
+        "expressions_variables": 1, "functions": 3, "input_output": 0,
+        "loops": 3, "strings": 0
+      },
+      "failure_taxonomy": {
+        "lexical": 21, "syntax": 8, "semantic": 9, "runtime": 11,
+        "hidden_test_semantic": 1, "success": 14
+      }
+    },
+    "paired": {
+      "risk_difference": 0.21875,
+      "bootstrap_95pct_ci": [0.125, 0.328125],
+      "docs_only_passes": 14,
+      "baseline_only_passes": 0,
+      "mcnemar_exact_two_sided_p": 0.0001220703125,
+      "bootstrap_samples": 10000,
+      "bootstrap_seed": 20260920
+    },
+    "raw_sha256": "67ef0c505d9ddb5bbe2b2768065639822c3a136e816661808901f1db91df765c"
+  },
+  "qwen_1p5b_nf4_secondary": {
+    "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+    "parse": 5, "compile": 5, "execute": 4, "hidden_pass": 4, "total": 64,
+    "families_with_pass": 3,
+    "failure_taxonomy": {"lexical": 34, "syntax": 25, "runtime": 1, "success": 4},
+    "raw_sha256": "8bfb09dfed2098d29da13f25984c4272531ad800b724465cc15ad6a9e660d72a"
+  },
+  "gate": {
+    "candidate_c_at_least_25_percent": false,
+    "improvement_at_least_15_points": true,
+    "at_least_4_families": true,
+    "no_major_integrity_problem": true,
+    "conjunctive_result": "FAIL"
+  },
+  "recommendation": "NO-GO for QLoRA or Phase 2 parameter adaptation; analyze the non-replication before changing models, prompts, or benchmarks.",
+  "parameter_updates": 0
+}

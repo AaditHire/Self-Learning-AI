@@ -64,3 +64,7 @@ with Candidate C will achieve at least 25% hidden-test pass@1, improve by at
 least 15 percentage points over its paired no-documentation condition, and pass
 tasks in at least four semantic families. This is an engineering suitability
 gate, not a causal parameter-count or universal scaling hypothesis.
+
+**Result:** Not supported as a conjunctive hypothesis. Candidate C achieved
+14/64 (21.875%) versus 0/64, a +21.875-point effect, and passed five families.
+The absolute 25% criterion failed; therefore the preregistered gate failed.

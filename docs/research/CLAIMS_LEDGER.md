@@ -121,9 +121,15 @@ continual-learning claim is currently justified.
 - **Evidence required:** Fresh paired Phase 1T no-docs/Candidate-C results that
   pass all three preregistered criteria without a major integrity failure.
 - **Experiment:** EXP-0012; EXP-0013 is secondary context only.
-- **Status:** PREREGISTERED; NOT YET TESTED.
-- **Supporting results:** None at freeze time.
+- **Status:** TESTED ONCE; CONJUNCTIVE GATE FAILED.
+- **Supporting results:** EXP-0012: 3B no docs 0/64; Candidate C 14/64
+  (21.875%); paired difference +21.875 points, bootstrap 95% interval
+  [+12.5, +32.8125] points; 14 docs-only and zero baseline-only wins; passes
+  in five families. EXP-0013: matched-NF4 1.5B Candidate C 4/64 (secondary).
 - **Possible confounders:** fixed-context length, public GOCO exposure,
   structural correlation, one greedy run, quantization kernels, and benchmark
   representativeness.
-- **Currently justified:** No.
+- **Currently justified:** The frozen 3B no-doc and Candidate-C baselines are
+  reproducible for Phase 1T, and Candidate C materially improves this exact
+  configuration. Operational-backbone suitability is not supported because
+  21.875% misses the preregistered 25% criterion. Phase 2 is not authorized.

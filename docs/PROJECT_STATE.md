@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1T preregistered; frozen 3B confirmation pending
+Current phase: Phase 1T complete; Phase 2 gate failed
 Phase decision: no parameter adaptation authorized
 
 ## Repository boundaries
@@ -177,6 +177,22 @@ the 3B gate. The config SHA-256 is
 `4cf19e35b4b937eeba6a89cbf2340e49c83f147b37dddffbb9ebde0946e020d5`.
 No Phase 1T model inference existed at freeze time.
 
+## Phase 1T results
+
+The exact preregistration commit is
+`dd3dd6f2ebcc303bc7ca6fcb1ca35bb2319fee26`. On the fresh 64-task suite, the
+3B NF4 no-doc condition scored 0/64 hidden pass and Candidate C scored 14/64
+(21.875%). The paired improvement was +21.875 points with a paired bootstrap
+95% interval of [12.5, 32.8125] points; there were 14 docs-only wins and no
+baseline-only wins. Candidate C passes spanned five families.
+
+The 25% absolute-pass criterion failed, while the +15-point and four-family
+criteria passed. No major benchmark-integrity issue was found. Because the gate
+is conjunctive, Phase 1T is a **FAIL** and the recommendation is **NO-GO for
+QLoRA or Phase 2 parameter adaptation**. The secondary matched-NF4 1.5B check
+scored 4/64 (6.25%) across three families; it is diagnostic only and does not
+alter the gate. No training or parameter update occurred.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -192,11 +208,14 @@ No Phase 1T model inference existed at freeze time.
 - Frozen Phase 1S protocol: `research/protocols/PHASE_1S_FROZEN_DIAGNOSTIC.md`
 - Frozen Phase 1T protocol: `research/protocols/PHASE_1T_FROZEN_CONFIRMATION.md`
 - Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
+- Completed Phase 1T record: `docs/research/stages/PHASE_1T.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
+- Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Complete only the preregistered frozen Phase 1T evaluations. Do not start
-QLoRA, LoRA, Phase 2, or any parameter update. Phase 1, Phase 1R, and Phase 1S
-tasks are consumed. Do not open the legacy sealed holdout.
+Phase 1T is complete and its Phase 2 gate failed. Do not start QLoRA, LoRA,
+Phase 2, or any parameter update. Phase 1, Phase 1R, Phase 1S, and Phase 1T
+tasks are consumed. Do not open the legacy sealed holdout. Any further model,
+prompt, or benchmark change requires a new preregistered phase.
