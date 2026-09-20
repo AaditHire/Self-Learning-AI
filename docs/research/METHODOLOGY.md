@@ -158,3 +158,8 @@ primary 1.5B model runs in FP16. An exact-revision 3B comparator runs in NF4
 4-bit only if a preregistered load-and-generation smoke gate passes. Models are
 frozen under inference mode. Metrics are reported by level, family, their
 cross-product, and failure taxonomy; no training follows from this diagnostic.
+
+Phase 1S activated case B for the 1.5B backbone and case C for the frozen 3B
+comparator. The result is a NO-GO for 1.5B as the primary backbone and a
+recommendation for a new, separately preregistered backbone-selection phase;
+it is not a training authorization.

@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "config_sha256": "5e7da9fe450cef1561bdeaa9f0642ec88d4e96429eac9c4bf44944b36df20c2a",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "device": "cuda:0",
+    "dtype": "float16_compute",
+    "quantization": "bitsandbytes_nf4_4bit",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    }
+  },
+  "input_tokens": 2046,
+  "output_tokens": 11,
+  "generation_seconds": 3.0380740000000515,
+  "tokens_per_second": 3.6207149661265046,
+  "load_seconds": 9.75620759999947,
+  "peak_gpu_memory_bytes": 2872655360,
+  "process_rss_before_bytes": 833384448,
+  "process_rss_after_bytes": 1890095104,
+  "raw_generation": "NUMBER num = 1.\nDISPLAYNL(num)."
+}

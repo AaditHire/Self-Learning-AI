@@ -2,8 +2,8 @@
 
 Last updated: 2026-09-20
 
-Current phase: Phase 1S preregistered; frozen-model diagnostic pending
-Phase decision: NO-GO for Phase 2; no parameter adaptation authorized
+Current phase: Phase 1S complete; independent review required
+Phase decision: NO-GO for 1.5B training; recommend separate backbone selection
 
 ## Repository boundaries
 
@@ -147,6 +147,22 @@ smoke gate. The frozen config SHA-256 is
 `5e7da9fe450cef1561bdeaa9f0642ec88d4e96429eac9c4bf44944b36df20c2a`.
 No Phase 1S inference result existed when this protocol was frozen.
 
+## Phase 1S results
+
+The exact preregistration commit is
+`2e14057ddd9ee622ef123dbc30c1099bf7d31782`. The 1.5B model scored 13/24
+recognition, 0/24 local completion, 4/24 structured modification, and 0/24 full
+synthesis. Its executable funnel was 6/72 parse, 5/72 compile, 5/72 execute,
+and 4/72 hidden pass; 66/72 executable outputs failed lexing or parsing.
+
+The frozen 3B NF4 comparator passed its local smoke gate at 2.87 GB peak GPU
+allocation. It scored 17/24 recognition, 7/24 local completion, 14/24
+structured modification, and 7/24 full synthesis. Full-synthesis passes reached
+29.2% across five families, satisfying preregistered case C. Case B also fires
+for 1.5B. Therefore 1.5B is a NO-GO as the primary backbone, and the only
+recommended next step is a separately preregistered backbone-selection phase.
+No training or backbone change is authorized.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -160,10 +176,13 @@ No Phase 1S inference result existed when this protocol was frozen.
 - Completed Phase 1 record: `docs/research/stages/PHASE_01.md`
 - Frozen Phase 1 protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
 - Frozen Phase 1S protocol: `research/protocols/PHASE_1S_FROZEN_DIAGNOSTIC.md`
+- Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
+- Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Complete only the preregistered frozen Phase 1S diagnostic. Do not start QLoRA,
-LoRA, Phase 2, or any parameter update. Do not tune against the consumed Phase
-1/1R evaluations, and do not open the legacy sealed holdout.
+Stop for independent review. Do not start QLoRA, LoRA, Phase 2, backbone
+selection, or any parameter update without a new explicit authorization. Phase
+1, Phase 1R, and Phase 1S tasks are consumed. Do not open the legacy sealed
+holdout.

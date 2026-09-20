@@ -1,0 +1,9 @@
+model,level,n,recognition_correct,parse_count,compile_count,execution_count,hidden_pass_count
+qwen_1p5b,recognition,24,13,,,,
+qwen_1p5b,local_completion,24,,2,1,1,0
+qwen_1p5b,structured_modification,24,,4,4,4,4
+qwen_1p5b,full_synthesis,24,,0,0,0,0
+qwen_3b,recognition,24,17,,,,
+qwen_3b,local_completion,24,,11,8,8,7
+qwen_3b,structured_modification,24,,17,16,16,14
+qwen_3b,full_synthesis,24,,13,9,7,7

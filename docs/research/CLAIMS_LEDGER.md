@@ -1,6 +1,7 @@
 # Claims ledger
 
-No claim below is currently justified by experimental evidence.
+Claims below are limited to the exact evidence and scope stated. No training or
+continual-learning claim is currently justified.
 
 ## CLM-001
 
@@ -37,21 +38,6 @@ No claim below is currently justified by experimental evidence.
 - **Supporting results:** None.
 - **Possible confounders:** train/test template overlap, base pretraining
   exposure, prompt drift, cherry-picked seeds.
-- **Currently justified:** No.
-
-## CLM-007
-
-- **Proposed claim:** Frozen-model GOCO failure can be localized to a specific
-  capability level, and a larger frozen backbone may change the synthesis
-  ceiling.
-- **Evidence required:** The preregistered balanced Phase 1S diagnostic under
-  identical Candidate C elicitation, with exact model revisions and per-level,
-  per-family compiler-backed scoring.
-- **Experiment:** EXP-0009 and conditional EXP-0010.
-- **Status:** PREREGISTERED; NOT YET TESTED.
-- **Supporting results:** None at freeze time.
-- **Possible confounders:** matched-scenario dependence, quantization mismatch,
-  model-scale architectural differences, prompt length, and small family cells.
 - **Currently justified:** No.
 
 ## CLM-003
@@ -105,3 +91,24 @@ No claim below is currently justified by experimental evidence.
 - **Possible confounders:** evaluator leakage, self-scoring bias, benchmark
   familiarity, selective abstention.
 - **Currently justified:** No.
+
+## CLM-007
+
+- **Proposed claim:** Frozen-model GOCO failure can be localized to a specific
+  capability level, and a larger frozen backbone may change the synthesis
+  ceiling.
+- **Evidence required:** The preregistered balanced Phase 1S diagnostic under
+  identical Candidate C elicitation, with exact model revisions and per-level,
+  per-family compiler-backed scoring.
+- **Experiment:** EXP-0009 and conditional EXP-0010.
+- **Status:** TESTED ONCE; BOUNDED DIAGNOSTIC CLAIM SUPPORTED.
+- **Supporting results:** EXP-0009: 1.5B recognition 13/24 and executable hidden
+  pass 4/72, with 66/72 lexical/syntax failures. EXP-0010: 3B recognition 17/24
+  and executable hidden pass 28/72; full synthesis 7/24 across five families.
+- **Possible confounders:** matched-scenario dependence, quantization mismatch,
+  model-scale architectural differences, prompt length, and small family cells.
+- **Currently justified:** Under the exact Candidate C protocol and environment,
+  1.5B failure is dominated by syntax assembly and includes weak recognition
+  and zero local-completion passes; the frozen 3B comparator materially changes
+  performance and clears the preregistered engineering indicator. This does not
+  establish a causal capacity mechanism or authorize training.

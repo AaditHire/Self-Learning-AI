@@ -1,0 +1,49 @@
+{
+  "phase": "1S",
+  "preregistration_commit": "2e14057ddd9ee622ef123dbc30c1099bf7d31782",
+  "config_sha256": "5e7da9fe450cef1561bdeaa9f0642ec88d4e96429eac9c4bf44944b36df20c2a",
+  "benchmark": {"items": 96, "recognition": 24, "executable": 72, "hidden_cases": 288, "families": 8, "levels": 4},
+  "results": {
+    "qwen_1p5b": {
+      "recognition_correct": 13,
+      "recognition_total": 24,
+      "executable_parse": 6,
+      "executable_compile": 5,
+      "executable_execution": 5,
+      "executable_hidden_pass": 4,
+      "executable_total": 72,
+      "level_hidden_pass": {"local_completion": 0, "structured_modification": 4, "full_synthesis": 0},
+      "raw_sha256": "e4961caf594c7cfeaedcdd3471cb3b8985a74f041887fb263c82e8de4acbce1d"
+    },
+    "qwen_3b": {
+      "recognition_correct": 17,
+      "recognition_total": 24,
+      "executable_parse": 41,
+      "executable_compile": 33,
+      "executable_execution": 31,
+      "executable_hidden_pass": 28,
+      "executable_total": 72,
+      "level_hidden_pass": {"local_completion": 7, "structured_modification": 14, "full_synthesis": 7},
+      "full_synthesis_families_passed": ["composition_algorithms", "conditionals", "expressions_variables", "functions", "loops"],
+      "raw_sha256": "59b85e05cea0895133b0c18957848837b7c4fcf68f67f5dd0ae2cd92a23bdd9f"
+    }
+  },
+  "smoke": {
+    "passed": true,
+    "input_tokens": 2046,
+    "output_tokens": 11,
+    "peak_gpu_memory_bytes": 2872655360,
+    "tokens_per_second": 3.6207149661265046,
+    "raw_sha256": "ee76375fd8fb2f3d89f2b7dc6a7135c58cf0321d855be7fd6d49f1dd9acbb1d4"
+  },
+  "decision": {
+    "case_b": true,
+    "case_c": true,
+    "case_a": false,
+    "case_d": false,
+    "qwen_1p5b_primary_backbone": "NO-GO",
+    "next_phase": "Recommend a separately preregistered backbone-selection phase; do not train automatically."
+  },
+  "optional_code_context_control": "not preregistered and not run",
+  "parameter_updates": 0
+}
