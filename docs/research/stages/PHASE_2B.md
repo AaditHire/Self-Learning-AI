@@ -4,6 +4,8 @@ Status: **PREREGISTERED; EXECUTION NOT YET STARTED**
 
 Starting commit: `06e5db763ad2af2adc51e9b4709916820b0883a6`
 
+Preregistration commit: `4589be9473283d46cff7920fc1a46208dfa911e1`
+
 ## Purpose
 
 Phase 2B tests whether the exploratory Phase 2A no-documentation gain reproduces across three independently trained adapters on fresh training data and a new 128-task confirmatory benchmark with stronger structural separation.

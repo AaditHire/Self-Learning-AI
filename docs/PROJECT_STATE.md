@@ -241,9 +241,9 @@ untouched preregistration are required before any confirmatory work.
 ## Phase 2B preregistration
 
 Phase 2B starts from exact commit
-`06e5db763ad2af2adc51e9b4709916820b0883a6`. The preregistration commit is
-recorded in the stage file and experiment registry immediately after the freeze
-commit. No Phase 2B gradient step or model inference existed at freeze time.
+`06e5db763ad2af2adc51e9b4709916820b0883a6`. The exact preregistration commit is
+`4589be9473283d46cff7920fc1a46208dfa911e1`. No Phase 2B gradient step or model
+inference existed at freeze time.
 
 The fresh pool has 200 verified training examples (25 per family; 600 hidden
 cases), a new 128-task confirmatory suite (16 per family; 640 hidden cases), and
