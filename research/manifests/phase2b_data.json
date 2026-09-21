@@ -1,0 +1,61 @@
+{
+  "artifact_type": "phase2b_frozen_confirmatory_data_manifest",
+  "created_at": "2026-09-21",
+  "training": {
+    "examples": 200,
+    "hidden_cases": 600,
+    "examples_per_family": 25,
+    "canonical_sha256": "6c436e6ca482da60e6fc8520e40735bbb93dc81c254092f6a223eb56e8a19c56",
+    "tests_canonical_sha256": "97d253abf2f4613cee00d7bb5c47fa364bebceb3da57957864c19d47fc0dbf8f",
+    "file_sha256": "6efba3677798e763ee3611dff10825e0e36730d8a44a14c79dfb6a4ad03f96cb",
+    "tests_file_sha256": "61413b89b0e07f35ae4b36043c6ac1f2e2d65714e68108ab876d94492c68f221",
+    "verified_targets": 200,
+    "failed_targets": 0
+  },
+  "confirmatory": {
+    "tasks": 128,
+    "hidden_cases": 640,
+    "tasks_per_family": 16,
+    "minimum_cases_per_task": 5,
+    "tasks_canonical_sha256": "ee803ddba0b60bbfd0ebc8c33bef132216c5c2c8fa071d21d13e248dba2482e2",
+    "tests_canonical_sha256": "1c7f36e4265eb7a22ddbafa80bb15448e8a9e30f7d62c1ed1deb74fee4176bfe",
+    "references_canonical_sha256": "16fec56e5da580382ec0a8881d37a8f3b710187ad92691c11a3cbd2ec47b8531",
+    "tasks_file_sha256": "c77ce376982d3518af17ac4d1854b6d2f81031d775b0bd0580f91befefd6db79",
+    "tests_file_sha256": "410a8d99faf1c932296d5be43965f3186285826beca6e820a3c8b452f7d94213",
+    "references_file_sha256": "e31867ba7ffe0e38b7791fb04b0bc8039648bf7cf3626282322fbab84970f0d8",
+    "verified_references": 128,
+    "failed_references": 0
+  },
+  "regression": {
+    "tasks": 64,
+    "canonical_sha256": "e809896505b0a85e1c573f41257b4285da2578986eb7b30a660178083ca2de2f",
+    "file_sha256": "53bcb1b01b4364ac4f663ecf79cf31fc8c2b509cb11f58f43c3ce98fdbee1ec8"
+  },
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "validation_file_sha256": "b6ecca89e95ed07a9ed706509778dd889d818e6788b446ebdad1d582004d2379",
+  "manual_review_file_sha256": "b25b66dda3e0689acd6712a9e031b8167f4022cae7d2f645c08568738bd40961",
+  "structural_audit": {
+    "exact_train_evaluation_prompt_reuse": 0,
+    "exact_algorithm_overlap": 0,
+    "exact_lineage_overlap": 0,
+    "exact_structural_signature_overlap": 0,
+    "exact_semantic_operation_overlap": 0,
+    "train_evaluation_prompt_flags_at_0p70": 4,
+    "train_evaluation_code_flags_at_0p85": 81,
+    "train_evaluation_code_rejects_at_0p98": 0,
+    "exact_ast_proxy_flags": 25,
+    "distance_buckets": {"far": 3, "medium": 44, "near": 81},
+    "prior_consumed_prompt_flags_at_0p70": 0,
+    "prior_consumed_code_flags_at_0p90": 84,
+    "prior_consumed_code_pairs_at_0p98": 0,
+    "manual_review_completed_before_training": true,
+    "sealed_phase1_holdout_opened": false
+  },
+  "governance": {
+    "fresh_training_only": "data/phase2b/training_examples.json",
+    "confirmatory_only": "benchmark/phase2b/confirmatory_tasks.json",
+    "regression_only": "benchmark/phase2b/general_regression.json",
+    "phase2a_training_and_all_prior_evaluation_excluded": true,
+    "confirmatory_suite_unseen_at_training": true
+  }
+}

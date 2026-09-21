@@ -1,0 +1,18 @@
+{
+  "status": "REJECTED_BEFORE_FREEZE",
+  "reason": "exact prompt reuse from consumed Phase 2A development tasks",
+  "rejected_evaluation_task_ids": [
+    "P2B-EVAL-EV04",
+    "P2B-EVAL-EV05",
+    "P2B-EVAL-IO01",
+    "P2B-EVAL-IO02",
+    "P2B-EVAL-IO03",
+    "P2B-EVAL-IO04",
+    "P2B-EVAL-IO05",
+    "P2B-EVAL-IO06",
+    "P2B-EVAL-IO07",
+    "P2B-EVAL-IO08"
+  ],
+  "training_started": false,
+  "disposition": "replace semantics and regenerate the full dataset before another validation"
+}

@@ -205,3 +205,25 @@ drop of two tasks. Training-task performance was 198/200, so the 70.875-point
 train/held-out gap is reported as a primary overfitting diagnostic. No
 Candidate C reference, hyperparameter search, checkpoint selection, adapter
 merge, sealed-suite access, or Phase 2B work occurred.
+
+## Phase 2B confirmatory parameter-acquisition methodology
+
+Phase 2B uses a fresh 200-example balanced training corpus and a separately
+generated 128-task balanced confirmatory suite with five hidden cases per task.
+Separation combines prompt, normalized-code, algorithm, lineage, control-flow,
+AST-proxy, structural-signature, and semantic-operation audits plus explicit
+manual review. The benchmark is created, verified, hashed, and committed before
+any gradient step; the Phase 1 sealed holdout remains unopened.
+
+Three adapters use the exact Phase 2A training recipe and differ only in the
+preregistered random seed. All adapters are retained and reported; there is no
+best-seed selection. The immutable base/no-doc condition is paired with each
+adapter/no-doc condition on identical tasks. Frozen-base plus Candidate C is a
+descriptive reference only.
+
+Inference remains greedy pass@1 with no retry or repair. Analysis reports each
+seed, mean/range, family results, paired outcomes, failure taxonomies, and a
+task-cluster bootstrap that retains seeds as repeated models inside tasks.
+Training/held-out gaps and base-versus-adapter changes on 64 frozen non-GOCO
+tasks are mandatory. The six scientific thresholds and all-three-run
+feasibility rule are conjunctive and frozen before training.

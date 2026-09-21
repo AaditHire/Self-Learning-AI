@@ -1,0 +1,123 @@
+{
+  "phase": "2B-multiseed-confirmatory-parameter-acquisition",
+  "frozen_at": "2026-09-21T00:00:00+05:30",
+  "start_commit": "06e5db763ad2af2adc51e9b4709916820b0883a6",
+  "scientific_status": "confirmatory follow-up to exploratory Phase 2A; does not revise the failed Phase 1T gate",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "data": {
+    "training_examples": "data/phase2b/training_examples.json",
+    "training_tests": "data/phase2b/training_hidden_tests.json",
+    "confirmatory_tasks": "benchmark/phase2b/confirmatory_tasks.json",
+    "confirmatory_tests": "benchmark/phase2b/confirmatory_hidden_tests.json",
+    "confirmatory_references": "benchmark/phase2b/confirmatory_references.json",
+    "general_regression": "benchmark/phase2b/general_regression.json",
+    "validation": "research/results/EXP-0020/data_validation.json",
+    "manual_review": "research/results/EXP-0020/structural_overlap_manual_review.md"
+  },
+  "prompt": {
+    "system": "prompts/phase1t_system.txt",
+    "user_template": "prompts/phase1t_user_template.txt",
+    "training_context": "system plus task prompt only; no Candidate C documentation",
+    "primary_evaluation_context": "same system and task template; no Candidate C documentation",
+    "candidate_c_context_files": ["prompts/phase1r_syntax_contract_v1.txt", "docs/goco_language_reference_phase1r_v1.md", "prompts/phase1r_canonical_examples_v1.txt"],
+    "prompt_search": "prohibited after freeze"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {"rank": 16, "alpha": 32, "dropout": 0.05, "bias": "none", "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]},
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [0.9, 0.999],
+    "adam_epsilon": 1e-8,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "final epoch selected a priori; no development evaluation, early stopping, hyperparameter search, or best-seed selection",
+    "adapter_outputs": {
+      "20260921": "research/adapters/candidates/c0002-phase2b-seed-20260921",
+      "20261007": "research/adapters/candidates/c0003-phase2b-seed-20261007",
+      "20261103": "research/adapters/candidates/c0004-phase2b-seed-20261103"
+    }
+  },
+  "seeds": [20260921, 20261007, 20261103],
+  "evaluation": {
+    "primary_conditions": ["BASE_NO_DOCS", "ADAPTED_NO_DOCS_SEED_20260921", "ADAPTED_NO_DOCS_SEED_20261007", "ADAPTED_NO_DOCS_SEED_20261103"],
+    "descriptive_reference": "BASE_DOCS with frozen Candidate C; excluded from adapter success decisions",
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "primary_metric": "task-level hidden-test pass@1",
+    "base_seed": 20260921
+  },
+  "analysis": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261201,
+    "unit": "paired confirmatory task; seeds are repeated trained models within tasks, not 384 independent observations",
+    "reporting": "each seed plus arithmetic mean and range; family tables for each seed plus aggregate mean/range",
+    "structural_distance_factor": "far <0.70 normalized-code similarity; medium 0.70-<0.85; near >=0.85",
+    "not_dominated_rule": "pass if at least 50% of successful seed-task instances are medium/far OR mean improvement on medium/far tasks is at least 10 percentage points"
+  },
+  "success_gate": {
+    "conjunctive": true,
+    "mean_adapted_hidden_pass_rate_minimum": 0.20,
+    "mean_absolute_improvement_minimum": 0.15,
+    "each_seed_improvement_minimum": 0.10,
+    "minimum_families_with_success_each_seed": 4,
+    "not_dominated_by_near_duplicates": "analysis.not_dominated_rule",
+    "regression_max_drop": 0.15,
+    "training_feasibility": "all three runs complete expected steps without OOM or non-finite loss/gradient"
+  },
+  "input_file_hashes": {
+    "data/phase2b/training_examples.json": "6efba3677798e763ee3611dff10825e0e36730d8a44a14c79dfb6a4ad03f96cb",
+    "data/phase2b/training_hidden_tests.json": "61413b89b0e07f35ae4b36043c6ac1f2e2d65714e68108ab876d94492c68f221",
+    "benchmark/phase2b/confirmatory_tasks.json": "c77ce376982d3518af17ac4d1854b6d2f81031d775b0bd0580f91befefd6db79",
+    "benchmark/phase2b/confirmatory_hidden_tests.json": "410a8d99faf1c932296d5be43965f3186285826beca6e820a3c8b452f7d94213",
+    "benchmark/phase2b/confirmatory_references.json": "e31867ba7ffe0e38b7791fb04b0bc8039648bf7cf3626282322fbab84970f0d8",
+    "benchmark/phase2b/general_regression.json": "53bcb1b01b4364ac4f663ecf79cf31fc8c2b509cb11f58f43c3ce98fdbee1ec8",
+    "research/results/EXP-0020/data_validation.json": "b6ecca89e95ed07a9ed706509778dd889d818e6788b446ebdad1d582004d2379",
+    "research/results/EXP-0020/structural_overlap_manual_review.md": "b25b66dda3e0689acd6712a9e031b8167f4022cae7d2f645c08568738bd40961",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "prompts/phase1r_syntax_contract_v1.txt": "f15894a4d4c4cad4b5e6a5f98540fbb50291bba967fd164d101ad233bc3a964c",
+    "docs/goco_language_reference_phase1r_v1.md": "aa0e7f75804d05f24a8e8f9a70ef25b6ca7caa5b87c9bb2d4bec9833f072bc8d",
+    "prompts/phase1r_canonical_examples_v1.txt": "756086c027f415b0a05898568eb0ef261a0d4f9eaa018a9e9a2f50ef61b4102a",
+    "research/protocols/phase1r_output_normalization_v1.md": "3b3ed11956f00341944849b57a9af6cbe74c9dc7670bcfc7e477c0798e6311e4",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase2a_evaluation.py": "70c154adfb7e90c1519d4a34fb5297aaa4cc02cc99f7890eeed20d0cebe473bf",
+    "scripts/train_phase2b_qlora.py": "8a09b602681b0276a9276341cf4741658c7e4e8ae45592ae241489d8fd481346",
+    "scripts/run_phase2b_evaluation.py": "c38ab5297c0c31d68d6e733ce3cf2da90d57f7e22e5bf928b6b45a6f4f9a4f4e",
+    "scripts/analyze_phase2b.py": "21b2ba2ffadbf6a1f92a248e532f4c32d6d5668a66a95cac9c71327ca68401bb"
+  },
+  "prohibitions": [
+    "training on any Phase 1/1R/1S/1T/2A evaluation task or Phase 2A training example",
+    "opening the sealed Phase 1 holdout",
+    "remote training API",
+    "base-weight updates or adapter merge",
+    "checkpoint, seed, prompt, or hyperparameter selection on confirmatory results",
+    "claiming continual learning, self-learning, recursive self-improvement, AGI, or Phase 3 authorization"
+  ]
+}

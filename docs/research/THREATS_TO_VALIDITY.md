@@ -121,6 +121,22 @@
   may account for part of the measured effect.
 - Phase 2A regression fell from 18/24 to 16/24. This passes the frozen severe-
   collapse rule but is not evidence of zero degradation or robust retention.
+- Phase 2B increases to three preregistered seeds but still samples only three
+  training trajectories from one model, dataset, recipe, and hardware stack.
+  Seeds are repeated models within paired tasks, not 384 independent trials.
+- Phase 2B's identifier/literal/library-normalized metric remains intentionally
+  coarse. The frozen audit has 81 of 128 train/evaluation pairs at or above
+  0.85, although none reaches the 0.98 rejection threshold and exact algorithm,
+  lineage, structural-signature, and semantic-operation overlaps are zero.
+  Distance-stratified reporting and a predeclared non-domination rule mitigate
+  but cannot eliminate residual grammar-skeleton correlation.
+- The Phase 2B non-GOCO regression suite has 64 exact-response items. It is
+  stronger than Phase 2A's 24 items but remains a narrow proxy for general
+  capability and may count harmless formatting changes as errors.
+- Synthetic verified training targets establish controlled supervision, not
+  autonomous experience acquisition. A high training score or a passing
+  confirmatory result cannot by itself distinguish broad language learning
+  from acquisition of a narrow executable sublanguage distribution.
 
 ## Mitigations
 

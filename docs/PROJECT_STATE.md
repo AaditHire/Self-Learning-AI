@@ -2,9 +2,9 @@
 
 Last updated: 2026-09-21
 
-Current phase: Phase 2A complete; independent review required before any Phase 2B
-Phase decision: Phase 1T gate remains failed; the separately authorized
-exploratory Phase 2A pilot passed its own frozen engineering criteria
+Current phase: Phase 2B preregistered; no Phase 2B training or inference has run
+Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
+Phase 2B is a separately authorized multi-seed confirmation attempt
 
 ## Repository boundaries
 
@@ -238,6 +238,36 @@ acquisition, or robust retention. Phase 1T remains failed. The Phase 2A suites
 are consumed, Phase 2B was not started, and independent review plus a new
 untouched preregistration are required before any confirmatory work.
 
+## Phase 2B preregistration
+
+Phase 2B starts from exact commit
+`06e5db763ad2af2adc51e9b4709916820b0883a6`. The preregistration commit is
+recorded in the stage file and experiment registry immediately after the freeze
+commit. No Phase 2B gradient step or model inference existed at freeze time.
+
+The fresh pool has 200 verified training examples (25 per family; 600 hidden
+cases), a new 128-task confirmatory suite (16 per family; 640 hidden cases), and
+a 64-task non-GOCO regression suite. All training targets and confirmatory
+references pass. Phase 2A training data and all prior consumed evaluation tasks
+are excluded; the legacy sealed holdout remains unopened.
+
+The final structural audit has zero exact train/evaluation prompt, algorithm,
+lineage, structural-signature, or semantic-operation overlap; zero normalized-
+code rejects at 0.98; zero prior-suite prompt flags at 0.70; and manual review
+of every lower-threshold prompt, code, and AST-proxy flag. Frozen distance
+buckets are 3 far, 44 medium, and 81 near.
+
+Three independent rank-16 NF4 QLoRA adapters use the unchanged Phase 2A recipe
+and seeds `20260921`, `20261007`, and `20261103`. Every seed is primary; best-
+seed selection is prohibited. The success gate requires mean adapted pass@1 at
+least 20%, mean gain at least 15 points, every seed gain at least 10 points,
+every seed successes in four families, a frozen structural non-domination rule,
+and no regression drop greater than 15 points. All three training runs must be
+feasible. Candidate C on the immutable base is descriptive only.
+
+No sequential or continual-learning experiment is authorized. Stop after
+Phase 2B reporting and independent review.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -255,6 +285,8 @@ untouched preregistration are required before any confirmatory work.
 - Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
 - Completed Phase 1T record: `docs/research/stages/PHASE_1T.md`
 - Phase 2A record: `docs/research/stages/PHASE_2A.md`
+- Frozen Phase 2B protocol: `research/protocols/PHASE_2B_FROZEN_CONFIRMATORY_EXPERIMENT.md`
+- Phase 2B record: `docs/research/stages/PHASE_2B.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
 - Phase 2A compact summary: `research/results/PHASE_2A/summary.json`

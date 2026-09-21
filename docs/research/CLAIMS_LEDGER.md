@@ -158,3 +158,25 @@ continual-learning claim is currently justified.
   This is a one-seed developmental result, not general acquisition evidence;
   the large train/held-out gap and coarse structural correlation require a
   later untouched confirmatory experiment.
+
+## CLM-010
+
+- **Proposed claim:** Across multiple independently trained QLoRA adapters,
+  adaptation on verified GOCO examples reproducibly improves no-documentation
+  performance on structurally held-out GOCO tasks relative to the frozen base,
+  providing evidence of parameterized behavioral acquisition.
+- **Evidence required:** The frozen Phase 2B 128-task comparison for all three
+  preregistered seeds, task-cluster analysis, structural-distance criterion,
+  per-seed family span, training/held-out gaps, and 64-task regression results.
+- **Experiment:** EXP-0021 through EXP-0026; EXP-0020 establishes instrument
+  integrity.
+- **Status:** PREREGISTERED; NOT YET TESTED.
+- **Supporting results:** None at freeze time. Phase 2A is motivation only and
+  is not confirmatory evidence for this claim.
+- **Possible confounders:** synthetic-data regularity, residual shared grammar
+  skeletons, public GOCO exposure, quantization/kernel nondeterminism, only
+  three seeds, exact-response regression sensitivity, and a potentially large
+  training/held-out gap.
+- **Currently justified:** No. Even a passing result would not justify claims
+  of understanding, self-learning, autonomous learning, continual learning,
+  catastrophic-forgetting prevention, or general-purpose lifelong learning.

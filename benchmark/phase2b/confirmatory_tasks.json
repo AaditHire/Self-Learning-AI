@@ -1,0 +1,2336 @@
+[
+  {
+    "task_id": "P2B-EVAL-EV01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x and print x cubed minus 7.",
+    "algorithmic_structure": "confirm_cubic_minus",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-1-cubic_minus",
+    "structural_signature": "eval_ev>cubic_minus",
+    "ast_proxy_signature": "INPUT>DISPLAYNL>*>*>-",
+    "semantic_operations": [
+      "cubic_minus"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Given two pipe-delimited numbers, emit three times the first minus twice the second plus seven.",
+    "algorithmic_structure": "confirm_weighted_gap",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-2-weighted_gap",
+    "structural_signature": "eval_ev>weighted_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "weighted_gap"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Given p|q, emit (p+2)*(q-3).",
+    "algorithmic_structure": "confirm_shifted_cross_product",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-3-shifted_cross_product",
+    "structural_signature": "eval_ev>shifted_cross_product",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>-",
+    "semantic_operations": [
+      "shifted_cross_product"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Accept mass|speed and emit mass squared plus three times speed.",
+    "algorithmic_structure": "confirm_mass_speed_polynomial",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-4-mass_speed_polynomial",
+    "structural_signature": "eval_ev>mass_speed_polynomial",
+    "ast_proxy_signature": "IMPORT>INPUT>*>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "mass_speed_polynomial"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read hours|minutes and print total minutes plus one.",
+    "algorithmic_structure": "confirm_hours_minutes",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-5-hours_minutes",
+    "structural_signature": "eval_ev>hours_minutes",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "hours_minutes"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x and print sqrt(abs(x))+3.",
+    "algorithmic_structure": "confirm_sqrt_shift",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-6-sqrt_shift",
+    "structural_signature": "eval_ev>sqrt_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "sqrt_shift"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x and print min(10,max(-2,x)).",
+    "algorithmic_structure": "confirm_clamped_expression",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-7-clamped_expression",
+    "structural_signature": "eval_ev>clamped_expression",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>-",
+    "semantic_operations": [
+      "clamped_expression"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "For integers a|b, emit the remainder of 3*a+2*b upon division by 11.",
+    "algorithmic_structure": "confirm_affine_remainder",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-8-affine_remainder",
+    "structural_signature": "eval_ev>affine_remainder",
+    "ast_proxy_signature": "IMPORT>INPUT>*>+>*>DISPLAYNL>%",
+    "semantic_operations": [
+      "affine_remainder"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read Fahrenheit and print Celsius using (f-32)*5/9.",
+    "algorithmic_structure": "confirm_fahrenheit_celsius",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-9-fahrenheit_celsius",
+    "structural_signature": "eval_ev>fahrenheit_celsius",
+    "ast_proxy_signature": "INPUT>DISPLAYNL>->*>/",
+    "semantic_operations": [
+      "fahrenheit_celsius"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read base1|base2|height and print trapezoid area.",
+    "algorithmic_structure": "confirm_trapezoid_area",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-10-trapezoid_area",
+    "structural_signature": "eval_ev>trapezoid_area",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>/",
+    "semantic_operations": [
+      "trapezoid_area"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read four values and print their arithmetic mean.",
+    "algorithmic_structure": "confirm_mean_four",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-11-mean_four",
+    "structural_signature": "eval_ev>mean_four",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+>+>/",
+    "semantic_operations": [
+      "mean_four"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x|y and print x*x+y*y.",
+    "algorithmic_structure": "confirm_squared_origin_distance",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-12-squared_origin_distance",
+    "structural_signature": "eval_ev>squared_origin_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*",
+    "semantic_operations": [
+      "squared_origin_distance"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read integer-like n|d with nonzero d and print n/d+n%d.",
+    "algorithmic_structure": "confirm_quotient_remainder_combo",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-13-quotient_remainder_combo",
+    "structural_signature": "eval_ev>quotient_remainder_combo",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+>%",
+    "semantic_operations": [
+      "quotient_remainder_combo"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Accept value|percent; compute the corresponding percentage amount and emit it.",
+    "algorithmic_structure": "confirm_percentage_of",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-14-percentage_of",
+    "structural_signature": "eval_ev>percentage_of",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>/",
+    "semantic_operations": [
+      "percentage_of"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x|y and print sqrt(x*x+y*y).",
+    "algorithmic_structure": "confirm_hypotenuse",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-15-hypotenuse",
+    "structural_signature": "eval_ev>hypotenuse",
+    "ast_proxy_signature": "IMPORT>IMPORT>INPUT>DISPLAYNL>*>+>*",
+    "semantic_operations": [
+      "hypotenuse"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-EV16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "expressions_variables",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "For scalar x, emit the square of (x squared minus one).",
+    "algorithmic_structure": "confirm_quartic_polynomial",
+    "control_flow": "expression_pipeline",
+    "template_lineage": "p2b-eval-ev-16-quartic_polynomial",
+    "structural_signature": "eval_ev>quartic_polynomial",
+    "ast_proxy_signature": "INPUT>*>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "quartic_polynomial"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-CD01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b|c and print the largest.",
+    "algorithmic_structure": "confirm_three_number_max",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-1-three_number_max",
+    "structural_signature": "eval_cd>three_number_max",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>IF>DISPLAYNL",
+    "semantic_operations": [
+      "three_number_max"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read score and print A for >=80, B for >=60, otherwise C.",
+    "algorithmic_structure": "confirm_grade_band",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-2-grade_band",
+    "structural_signature": "eval_cd>grade_band",
+    "ast_proxy_signature": "INPUT>IF>>=>DISPLAYNL>ELSEIF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "grade_band"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read year and print LEAP if divisible by 4 but not 100, or divisible by 400; else COMMON.",
+    "algorithmic_structure": "confirm_leap_proxy",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-3-leap_proxy",
+    "structural_signature": "eval_cd>leap_proxy",
+    "ast_proxy_signature": "INPUT>IF>%>==>AND>%>!=>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "leap_proxy"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b|c and print VALID if all positive and each pair sum exceeds the third.",
+    "algorithmic_structure": "confirm_triangle_validity",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-4-triangle_validity",
+    "structural_signature": "eval_cd>triangle_validity",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>AND>AND>+>AND>+>AND>+>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "triangle_validity"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x|y and print ORIGIN, AXIS, Q1, Q2, Q3, or Q4.",
+    "algorithmic_structure": "confirm_quadrant_axis",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-5-quadrant_axis",
+    "structural_signature": "eval_cd>quadrant_axis",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>AND>==>DISPLAYNL>ELSEIF>==>OR>==>DISPLAYNL>ELSEIF>AND>DISPLAYNL>ELSEIF>AND>DISPLAYNL>ELSEIF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "quadrant_axis"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Given a|b|c, print POS when at least two are positive, NEG when at least two are negative, otherwise MIX.",
+    "algorithmic_structure": "confirm_majority_sign",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-6-majority_sign",
+    "structural_signature": "eval_cd>majority_sign",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>+=>ELSEIF>+=>IF>+=>ELSEIF>+=>IF>+=>ELSEIF>+=>IF>>=>DISPLAYNL>ELSEIF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "majority_sign"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Classify one number as NEGATIVE, ZERO, POSITIVE_EVEN, or POSITIVE_ODD.",
+    "algorithmic_structure": "confirm_signed_parity_class",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-7-signed_parity_class",
+    "structural_signature": "eval_cd>signed_parity_class",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>==>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "signed_parity_class"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read x and print EDGE at 5 or 15, INSIDE strictly between, otherwise OUTSIDE.",
+    "algorithmic_structure": "confirm_exclusive_range",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-8-exclusive_range",
+    "structural_signature": "eval_cd>exclusive_range",
+    "ast_proxy_signature": "INPUT>IF>==>OR>==>DISPLAYNL>ELSEIF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "exclusive_range"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read n and print BOTH if divisible by 2 and 3, TWO, THREE, or NEITHER.",
+    "algorithmic_structure": "confirm_multiple_class",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-9-multiple_class",
+    "structural_signature": "eval_cd>multiple_class",
+    "ast_proxy_signature": "INPUT>IF>%>==>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_class"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b and print the value closer to zero; print TIE if equally distant.",
+    "algorithmic_structure": "confirm_closest_to_zero",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-10-closest_to_zero",
+    "structural_signature": "eval_cd>closest_to_zero",
+    "ast_proxy_signature": "IMPORT>IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "closest_to_zero"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read weight and print FREE for <=0, LIGHT for <=5, MEDIUM for <=20, HEAVY otherwise.",
+    "algorithmic_structure": "confirm_shipping_band",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-11-shipping_band",
+    "structural_signature": "eval_cd>shipping_band",
+    "ast_proxy_signature": "INPUT>IF><=>DISPLAYNL>ELSEIF><=>DISPLAYNL>ELSEIF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "shipping_band"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read n and print YES only when n is odd and between 10 and 30 inclusive.",
+    "algorithmic_structure": "confirm_odd_in_window",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-12-odd_in_window",
+    "structural_signature": "eval_cd>odd_in_window",
+    "ast_proxy_signature": "INPUT>IF>>=>AND><=>AND>%>!=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "odd_in_window"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b and print SAME if both positive or both negative, otherwise DIFFERENT.",
+    "algorithmic_structure": "confirm_pair_same_sign",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-13-pair_same_sign",
+    "structural_signature": "eval_cd>pair_same_sign",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>OR>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "pair_same_sign"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b and print A if floor(a)>ceil(b), otherwise B.",
+    "algorithmic_structure": "confirm_rounded_compare",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-14-rounded_compare",
+    "structural_signature": "eval_cd>rounded_compare",
+    "ast_proxy_signature": "IMPORT>IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "rounded_compare"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read n and print ACCEPT if 1<=n<=100 and divisible by 7; else REJECT.",
+    "algorithmic_structure": "confirm_bounded_divisible",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-15-bounded_divisible",
+    "structural_signature": "eval_cd>bounded_divisible",
+    "ast_proxy_signature": "INPUT>IF>>=>AND><=>AND>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "bounded_divisible"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CD16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "conditionals",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read a|b|c and print ALL, TWO, or NONE for equality patterns.",
+    "algorithmic_structure": "confirm_three_equality",
+    "control_flow": "branching",
+    "template_lineage": "p2b-eval-cd-16-three_equality",
+    "structural_signature": "eval_cd>three_equality",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>AND>==>DISPLAYNL>ELSEIF>==>OR>==>OR>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "three_equality"
+    ],
+    "required_regex": [
+      "IF\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum i^4 for i=1..n.",
+    "algorithmic_structure": "confirm_fourth_power_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-1-fourth_power_sum",
+    "structural_signature": "eval_lp>fourth_power_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "fourth_power_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and count odd values from 1..n.",
+    "algorithmic_structure": "confirm_odd_counter",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-2-odd_counter",
+    "structural_signature": "eval_lp>odd_counter",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_counter"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum values divisible by 3 or 5.",
+    "algorithmic_structure": "confirm_union_divisor_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-3-union_divisor_sum",
+    "structural_signature": "eval_lp>union_divisor_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>OR>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "union_divisor_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and multiply values from 1..n not divisible by 3.",
+    "algorithmic_structure": "confirm_conditional_product",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-4-conditional_product",
+    "structural_signature": "eval_lp>conditional_product",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>*=>DISPLAYNL",
+    "semantic_operations": [
+      "conditional_product"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum i*(i+1) for i=1..n.",
+    "algorithmic_structure": "confirm_bilinear_index_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-5-bilinear_index_sum",
+    "structural_signature": "eval_lp>bilinear_index_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "bilinear_index_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and count multiples of 4 through n.",
+    "algorithmic_structure": "confirm_multiple_counter",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-6-multiple_counter",
+    "structural_signature": "eval_lp>multiple_counter",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_counter"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum powers 2^i for i=0..n.",
+    "algorithmic_structure": "confirm_power_two_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-7-power_two_sum",
+    "structural_signature": "eval_lp>power_two_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "power_two_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum i*(n-i) for i=0..n.",
+    "algorithmic_structure": "confirm_symmetric_products",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-8-symmetric_products",
+    "structural_signature": "eval_lp>symmetric_products",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->DISPLAYNL",
+    "semantic_operations": [
+      "symmetric_products"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum n down to 1 using n-i.",
+    "algorithmic_structure": "confirm_descending_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-9-descending_sum",
+    "structural_signature": "eval_lp>descending_sum",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>+=>->DISPLAYNL",
+    "semantic_operations": [
+      "descending_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum squares of even values through n.",
+    "algorithmic_structure": "confirm_square_even_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-10-square_even_sum",
+    "structural_signature": "eval_lp>square_even_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "square_even_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and add odd squares and subtract even squares.",
+    "algorithmic_structure": "confirm_alternating_square",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-11-alternating_square",
+    "structural_signature": "eval_lp>alternating_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>*>ELSE>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_square"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and count positive divisors of n.",
+    "algorithmic_structure": "confirm_divisor_count",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-12-divisor_count",
+    "structural_signature": "eval_lp>divisor_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_count"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum positive divisors below n.",
+    "algorithmic_structure": "confirm_proper_divisor_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-13-proper_divisor_sum",
+    "structural_signature": "eval_lp>proper_divisor_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>+=>DISPLAYNL",
+    "semantic_operations": [
+      "proper_divisor_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum i*(i+1)/2 through n.",
+    "algorithmic_structure": "confirm_cumulative_triangles",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-14-cumulative_triangles",
+    "structural_signature": "eval_lp>cumulative_triangles",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>/>DISPLAYNL",
+    "semantic_operations": [
+      "cumulative_triangles"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum values congruent to 2 modulo 5.",
+    "algorithmic_structure": "confirm_residue_two_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-15-residue_two_sum",
+    "structural_signature": "eval_lp>residue_two_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "residue_two_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-LP16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "loops",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n and sum i*(i+1)*(i+2) through n.",
+    "algorithmic_structure": "confirm_rising_cubic_sum",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-eval-lp-16-rising_cubic_sum",
+    "structural_signature": "eval_lp>rising_cubic_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "rising_cubic_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function f(x)=x*x+2*x+3; read a and print the function result.",
+    "algorithmic_structure": "confirm_quadratic_offset",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-1-quadratic_offset",
+    "structural_signature": "eval_fn>quadratic_offset",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>*>+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_offset"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested three-argument average function; read a|b|c and print the function result.",
+    "algorithmic_structure": "confirm_average_three",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-2-average_three",
+    "structural_signature": "eval_fn>average_three",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>+>/>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "average_three"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested two-argument triangle area function; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_triangle_area",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-3-triangle_area",
+    "structural_signature": "eval_fn>triangle_area",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>/>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "triangle_area"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested three-argument minimum function; read a|b|c and print the function result.",
+    "algorithmic_structure": "confirm_min_three",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-4-min_three",
+    "structural_signature": "eval_fn>min_three",
+    "ast_proxy_signature": "IMPORT>FUNCTION>RETURN>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "min_three"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function that clamps x+3 into [0,10]; read a and print the function result.",
+    "algorithmic_structure": "confirm_bounded_shift",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-5-bounded_shift",
+    "structural_signature": "eval_fn>bounded_shift",
+    "ast_proxy_signature": "FUNCTION>+>IF>RETURN>ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "bounded_shift"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested two-argument sum of absolute values; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_absolute_pair_sum",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-6-absolute_pair_sum",
+    "structural_signature": "eval_fn>absolute_pair_sum",
+    "ast_proxy_signature": "IMPORT>FUNCTION>RETURN>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_pair_sum"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function returning (x-1)*x*(x+1); read a and print the function result.",
+    "algorithmic_structure": "confirm_neighbor_product",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-7-neighbor_product",
+    "structural_signature": "eval_fn>neighbor_product",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>*>->RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_product"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function returning 1 for even and 0 for odd; read a and print the function result.",
+    "algorithmic_structure": "confirm_parity_value",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-8-parity_value",
+    "structural_signature": "eval_fn>parity_value",
+    "ast_proxy_signature": "FUNCTION>IF>%>==>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "parity_value"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested functions g(x)=2*x and f(x)=g(x)+5; read a and print the function result.",
+    "algorithmic_structure": "confirm_two_stage_offset",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-9-two_stage_offset",
+    "structural_signature": "eval_fn>two_stage_offset",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>RETURNS>FUNCTION>RETURN>+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_stage_offset"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested two-argument perimeter function; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_rectangle_perimeter",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-10-rectangle_perimeter",
+    "structural_signature": "eval_fn>rectangle_perimeter",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "rectangle_perimeter"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function returning larger minus smaller; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_safe_difference",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-11-safe_difference",
+    "structural_signature": "eval_fn>safe_difference",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>->ELSE>RETURN>->RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "safe_difference"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested three-argument weighted function a+2b+3c; read a|b|c and print the function result.",
+    "algorithmic_structure": "confirm_weighted_three",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-12-weighted_three",
+    "structural_signature": "eval_fn>weighted_three",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "weighted_three"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested compose square and half functions; read a and print the function result.",
+    "algorithmic_structure": "confirm_square_then_half",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-13-square_then_half",
+    "structural_signature": "eval_fn>square_then_half",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>RETURNS>FUNCTION>RETURN>/>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "square_then_half"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested function returning 10 above 5 and -10 otherwise; read a and print the function result.",
+    "algorithmic_structure": "confirm_threshold_return",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-14-threshold_return",
+    "structural_signature": "eval_fn>threshold_return",
+    "ast_proxy_signature": "FUNCTION>IF>RETURN>ELSE>RETURN>->RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "threshold_return"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested two-argument function returning a modulo b; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_remainder_function",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-15-remainder_function",
+    "structural_signature": "eval_fn>remainder_function",
+    "ast_proxy_signature": "FUNCTION>RETURN>%>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "remainder_function"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-FN16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "functions",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Define the requested two-argument Euclidean distance function; read a|b and print the function result.",
+    "algorithmic_structure": "confirm_distance_origin",
+    "control_flow": "function_call",
+    "template_lineage": "p2b-eval-fn-16-distance_origin",
+    "structural_signature": "eval_fn>distance_origin",
+    "ast_proxy_signature": "IMPORT>FUNCTION>RETURN>*>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "distance_origin"
+    ],
+    "required_regex": [
+      "FUNCTION\\s+"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and sum five entries; print the result.",
+    "algorithmic_structure": "confirm_sum_five",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-1-sum_five",
+    "structural_signature": "eval_ar>sum_five",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL",
+    "semantic_operations": [
+      "sum_five"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and product of four entries; print the result.",
+    "algorithmic_structure": "confirm_product_four",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-2-product_four",
+    "structural_signature": "eval_ar>product_four",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>*>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "product_four"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and maximum of five entries; print the result.",
+    "algorithmic_structure": "confirm_maximum_five",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-3-maximum_five",
+    "structural_signature": "eval_ar>maximum_five",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>DISPLAYNL",
+    "semantic_operations": [
+      "maximum_five"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and minimum of four entries; print the result.",
+    "algorithmic_structure": "confirm_minimum_four",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-4-minimum_four",
+    "structural_signature": "eval_ar>minimum_four",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>DISPLAYNL",
+    "semantic_operations": [
+      "minimum_four"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and count negative entries; print the result.",
+    "algorithmic_structure": "confirm_negative_count",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-5-negative_count",
+    "structural_signature": "eval_ar>negative_count",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_count"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and sum odd entries; print the result.",
+    "algorithmic_structure": "confirm_odd_sum",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-6-odd_sum",
+    "structural_signature": "eval_ar>odd_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_sum"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and first minus last entry; print the result.",
+    "algorithmic_structure": "confirm_first_last_difference",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-7-first_last_difference",
+    "structural_signature": "eval_ar>first_last_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>->DISPLAYNL",
+    "semantic_operations": [
+      "first_last_difference"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and sum absolute adjacent differences; print the result.",
+    "algorithmic_structure": "confirm_adjacent_difference_sum",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-8-adjacent_difference_sum",
+    "structural_signature": "eval_ar>adjacent_difference_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>IMPORT>LOOP>+>+>+=>->->DISPLAYNL",
+    "semantic_operations": [
+      "adjacent_difference_sum"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and count entries above their average; print the result.",
+    "algorithmic_structure": "confirm_above_average_count",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-9-above_average_count",
+    "structural_signature": "eval_ar>above_average_count",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>/>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "above_average_count"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and v0-v1+v2-v3+v4; print the result.",
+    "algorithmic_structure": "confirm_alternating_sum",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-10-alternating_sum",
+    "structural_signature": "eval_ar>alternating_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>->+>->+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_sum"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and sum squares of four entries; print the result.",
+    "algorithmic_structure": "confirm_square_sum",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-11-square_sum",
+    "structural_signature": "eval_ar>square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "square_sum"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and count zero entries; print the result.",
+    "algorithmic_structure": "confirm_zero_count",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-12-zero_count",
+    "structural_signature": "eval_ar>zero_count",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "zero_count"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and maximum minus minimum; print the result.",
+    "algorithmic_structure": "confirm_range_five",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-13-range_five",
+    "structural_signature": "eval_ar>range_five",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>IF>->DISPLAYNL",
+    "semantic_operations": [
+      "range_five"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and v0*v1+v2*v3; print the result.",
+    "algorithmic_structure": "confirm_pair_products",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-14-pair_products",
+    "structural_signature": "eval_ar>pair_products",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>*>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "pair_products"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 5 pipe-delimited numbers into an array and sum entries between -2 and 5 inclusive; print the result.",
+    "algorithmic_structure": "confirm_bounded_sum",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-15-bounded_sum",
+    "structural_signature": "eval_ar>bounded_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>IF>>=>->AND><=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "bounded_sum"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-AR16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "arrays",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read 4 pipe-delimited numbers into an array and sum (i+1)*values[i] for four entries; print the result.",
+    "algorithmic_structure": "confirm_weighted_positions",
+    "control_flow": "array_algorithm",
+    "template_lineage": "p2b-eval-ar-16-weighted_positions",
+    "structural_signature": "eval_ar>weighted_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "weighted_positions"
+    ],
+    "required_regex": [
+      "NUMBER\\[\\]"
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-ST01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and uppercase, reverse, and prefix R=; print only the result.",
+    "algorithmic_structure": "confirm_labeled_upper_reverse",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-1-labeled_upper_reverse",
+    "structural_signature": "eval_st>labeled_upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "labeled_upper_reverse"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and lowercase text followed by its length separated by colon; print only the result.",
+    "algorithmic_structure": "confirm_lower_length",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-2-lower_length",
+    "structural_signature": "eval_st>lower_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lower_length"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and replace a with @ and e with 3; print only the result.",
+    "algorithmic_structure": "confirm_dual_replace",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-3-dual_replace",
+    "structural_signature": "eval_st>dual_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "dual_replace"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print first and last characters separated by dash; print only the result.",
+    "algorithmic_structure": "confirm_first_last_chars",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-4-first_last_chars",
+    "structural_signature": "eval_st>first_last_chars",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->-",
+    "semantic_operations": [
+      "first_last_chars"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print how many lowercase go substrings occur; print only the result.",
+    "algorithmic_structure": "confirm_count_go",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-5-count_go",
+    "structural_signature": "eval_st>count_go",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "count_go"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and trim spaces, reverse, and prefix T=; print only the result.",
+    "algorithmic_structure": "confirm_labeled_trim_reverse",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-6-labeled_trim_reverse",
+    "structural_signature": "eval_st>labeled_trim_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "labeled_trim_reverse"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print YES if lowercase text starts with pre; print only the result.",
+    "algorithmic_structure": "confirm_starts_pre",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-7-starts_pre",
+    "structural_signature": "eval_st>starts_pre",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "starts_pre"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print YES if lowercase text ends with ing; print only the result.",
+    "algorithmic_structure": "confirm_ends_ing",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-8-ends_ing",
+    "structural_signature": "eval_st>ends_ing",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "ends_ing"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print count(a)+count(e); print only the result.",
+    "algorithmic_structure": "confirm_count_a_e",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-9-count_a_e",
+    "structural_signature": "eval_st>count_a_e",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "count_a_e"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and reverse text, repeat twice, and prefix D=; print only the result.",
+    "algorithmic_structure": "confirm_labeled_repeat_reverse",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-10-labeled_repeat_reverse",
+    "structural_signature": "eval_st>labeled_repeat_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "labeled_repeat_reverse"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print character at floor(length/2); print only the result.",
+    "algorithmic_structure": "confirm_middle_char",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-11-middle_char",
+    "structural_signature": "eval_st>middle_char",
+    "ast_proxy_signature": "IMPORT>IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "middle_char"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and replace spaces with underscores; print only the result.",
+    "algorithmic_structure": "confirm_replace_spaces",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-12-replace_spaces",
+    "structural_signature": "eval_st>replace_spaces",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace_spaces"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print SHORT below 5, MEDIUM through 10, LONG otherwise; print only the result.",
+    "algorithmic_structure": "confirm_length_band",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-13-length_band",
+    "structural_signature": "eval_st>length_band",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSEIF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "length_band"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print PAL if text equals its reverse; print only the result.",
+    "algorithmic_structure": "confirm_palindrome",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-14-palindrome",
+    "structural_signature": "eval_st>palindrome",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "palindrome"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and print first, third, and last characters separated by colons; print only the result.",
+    "algorithmic_structure": "confirm_first_third_last",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-15-first_third_last",
+    "structural_signature": "eval_st>first_third_last",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>-",
+    "semantic_operations": [
+      "first_third_last"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-ST16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "strings",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read one sentence and uppercase lowercase text, otherwise lowercase mixed text; print only the result.",
+    "algorithmic_structure": "confirm_case_swap_proxy",
+    "control_flow": "string_algorithm",
+    "template_lineage": "p2b-eval-st-16-case_swap_proxy",
+    "structural_signature": "eval_st>case_swap_proxy",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "case_swap_proxy"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Accept a text tag followed by a numeric field, separated by |; emit tag#(three times the number).",
+    "algorithmic_structure": "confirm_numeric_triple_tag",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-1-numeric_triple_tag",
+    "structural_signature": "eval_io>numeric_triple_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "numeric_triple_tag"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Given left|right text fields, emit length(left)-length(right).",
+    "algorithmic_structure": "confirm_length_difference",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-2-length_difference",
+    "structural_signature": "eval_io>length_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>->DISPLAYNL",
+    "semantic_operations": [
+      "length_difference"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Transform left|right into PAIR=lower(left)~upper(right).",
+    "algorithmic_structure": "confirm_lower_upper_tilde",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-3-lower_upper_tilde",
+    "structural_signature": "eval_io>lower_upper_tilde",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lower_upper_tilde"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "For left|right, emit REV= followed by reversed right, ::, then reversed left.",
+    "algorithmic_structure": "confirm_double_reverse",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-4-double_reverse",
+    "structural_signature": "eval_io>double_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "double_reverse"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Given two text fields separated by |, emit the sum of their squared lengths.",
+    "algorithmic_structure": "confirm_length_square_sum",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-5-length_square_sum",
+    "structural_signature": "eval_io>length_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>*>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "length_square_sum"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Parse left|right and emit two lines labeled left: and right: after lowercasing each value.",
+    "algorithmic_structure": "confirm_lower_labels",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-6-lower_labels",
+    "structural_signature": "eval_io>lower_labels",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "lower_labels"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Treat the second field as a count; prefix R= and repeat the first field count+1 times.",
+    "algorithmic_structure": "confirm_repeat_plus_one",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-7-repeat_plus_one",
+    "structural_signature": "eval_io>repeat_plus_one",
+    "ast_proxy_signature": "IMPORT>INPUT>+>DISPLAYNL",
+    "semantic_operations": [
+      "repeat_plus_one"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Parse number|unit, subtract one from the number, and emit result:unit.",
+    "algorithmic_structure": "confirm_decrement_with_unit",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-8-decrement_with_unit",
+    "structural_signature": "eval_io>decrement_with_unit",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>-",
+    "semantic_operations": [
+      "decrement_with_unit"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Render left|right as {left}(right).",
+    "algorithmic_structure": "confirm_braced_fields",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-9-braced_fields",
+    "structural_signature": "eval_io>braced_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "braced_fields"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Emit MIX=lower(left)|upper(right) for two pipe-delimited text fields.",
+    "algorithmic_structure": "confirm_lower_pipe_upper",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-10-lower_pipe_upper",
+    "structural_signature": "eval_io>lower_pipe_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lower_pipe_upper"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "For first|second, emit second on line one and first on line two.",
+    "algorithmic_structure": "confirm_reverse_order_lines",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-11-reverse_order_lines",
+    "structural_signature": "eval_io>reverse_order_lines",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "reverse_order_lines"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Emit LEN= followed by the combined length of two pipe-delimited fields.",
+    "algorithmic_structure": "confirm_combined_length_label",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-12-combined_length_label",
+    "structural_signature": "eval_io>combined_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "combined_length_label"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Emit the first character from each of two nonempty fields with no separator.",
+    "algorithmic_structure": "confirm_first_chars",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-13-first_chars",
+    "structural_signature": "eval_io>first_chars",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "first_chars"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Emit last(left):last(right) for two nonempty pipe-delimited fields.",
+    "algorithmic_structure": "confirm_last_chars",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-14-last_chars",
+    "structural_signature": "eval_io>last_chars",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->-",
+    "semantic_operations": [
+      "last_chars"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Parse two numeric fields and emit SUM= followed by their sum.",
+    "algorithmic_structure": "confirm_numeric_sum_label",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-15-numeric_sum_label",
+    "structural_signature": "eval_io>numeric_sum_label",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "numeric_sum_label"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-IO16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "input_output",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Render left|right as left::right::left.",
+    "algorithmic_structure": "confirm_repeat_separator",
+    "control_flow": "formatted_io",
+    "template_lineage": "p2b-eval-io-16-repeat_separator",
+    "structural_signature": "eval_io>repeat_separator",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "repeat_separator"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-CP01",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum proper divisors and print PERFECT if the sum equals n, and print the requested result.",
+    "algorithmic_structure": "confirm_proper_divisor_class",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-1-proper_divisor_class",
+    "structural_signature": "eval_cp>proper_divisor_class",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>IF>%>==>+=>IF>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "proper_divisor_class"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP02",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, count divisors and print PRIME when count is two, and print the requested result.",
+    "algorithmic_structure": "confirm_prime_proxy",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-2-prime_proxy",
+    "structural_signature": "eval_cp>prime_proxy",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "prime_proxy"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP03",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum squares through n then print EVEN or ODD, and print the requested result.",
+    "algorithmic_structure": "confirm_square_sum_parity",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-3-square_sum_parity",
+    "structural_signature": "eval_cp>square_sum_parity",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>IF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "square_sum_parity"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP04",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum squares divisible by 3, and print the requested result.",
+    "algorithmic_structure": "confirm_filtered_square_sum",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-4-filtered_square_sum",
+    "structural_signature": "eval_cp>filtered_square_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "filtered_square_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP05",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, count divisors and print EVENCOUNT or ODDCOUNT, and print the requested result.",
+    "algorithmic_structure": "confirm_divisor_parity",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-5-divisor_parity",
+    "structural_signature": "eval_cp>divisor_parity",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_parity"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP06",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, compute n*(n+1)/2 and print OVER if above 20, and print the requested result.",
+    "algorithmic_structure": "confirm_triangular_threshold",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-6-triangular_threshold",
+    "structural_signature": "eval_cp>triangular_threshold",
+    "ast_proxy_signature": "INPUT>*>+>/>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "triangular_threshold"
+    ],
+    "required_regex": []
+  },
+  {
+    "task_id": "P2B-EVAL-CP07",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum cubes of odd values through n, and print the requested result.",
+    "algorithmic_structure": "confirm_odd_cube_sum",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-7-odd_cube_sum",
+    "structural_signature": "eval_cp>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "odd_cube_sum"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP08",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum multiples of 2 minus multiples of 3, and print the requested result.",
+    "algorithmic_structure": "confirm_multiple_difference",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-8-multiple_difference",
+    "structural_signature": "eval_cp>multiple_difference",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>%>==>-=>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_difference"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP09",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, multiply positive even values through n and print LARGE when at least 1000, and print the requested result.",
+    "algorithmic_structure": "confirm_even_product_class",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-9-even_product_class",
+    "structural_signature": "eval_cp>even_product_class",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*=>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "even_product_class"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP10",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, use a square-plus-one function in a loop, then classify total modulo 3, and print the requested result.",
+    "algorithmic_structure": "confirm_sum_function_class",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-10-sum_function_class",
+    "structural_signature": "eval_cp>sum_function_class",
+    "ast_proxy_signature": "INPUT>FUNCTION>RETURN>*>+>RETURNS>LOOP><=>+>+>+=>IF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sum_function_class"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP11",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum i*(i+2) through n and print its parity, and print the requested result.",
+    "algorithmic_structure": "confirm_polynomial_sum_parity",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-11-polynomial_sum_parity",
+    "structural_signature": "eval_cp>polynomial_sum_parity",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>IF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "polynomial_sum_parity"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP12",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, alternately add and subtract 1..n then compare with zero, and print the requested result.",
+    "algorithmic_structure": "confirm_alternating_threshold",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-12-alternating_threshold",
+    "structural_signature": "eval_cp>alternating_threshold",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_threshold"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP13",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, count values divisible by exactly one of 2 and 5, and print the requested result.",
+    "algorithmic_structure": "confirm_count_two_or_five",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-13-count_two_or_five",
+    "structural_signature": "eval_cp>count_two_or_five",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>OR>%>!=>AND>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "count_two_or_five"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP14",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum 12 modulo i for i=1..n, and print the requested result.",
+    "algorithmic_structure": "confirm_remainder_accumulation",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-14-remainder_accumulation",
+    "structural_signature": "eval_cp>remainder_accumulation",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>%>DISPLAYNL",
+    "semantic_operations": [
+      "remainder_accumulation"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP15",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, sum i*j for 1<=j<=i<=n, and print the requested result.",
+    "algorithmic_structure": "confirm_nested_small_products",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-15-nested_small_products",
+    "structural_signature": "eval_cp>nested_small_products",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>LOOP><=>+>+>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "nested_small_products"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  },
+  {
+    "task_id": "P2B-EVAL-CP16",
+    "split": "phase2b_confirmatory_eval",
+    "level": "full_synthesis",
+    "family": "composition_algorithms",
+    "difficulty": "phase2b_confirmatory",
+    "prompt": "Read positive n, count primes from 2 through n using nested divisor counts, and print the requested result.",
+    "algorithmic_structure": "confirm_range_prime_count",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-eval-cp-16-range_prime_count",
+    "structural_signature": "eval_cp>range_prime_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>LOOP><=>+>+>IF>%>==>+=>IF>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "range_prime_count"
+    ],
+    "required_regex": [
+      "LOOP\\s*\\("
+    ]
+  }
+]

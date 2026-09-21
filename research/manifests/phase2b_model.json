@@ -1,0 +1,21 @@
+{
+  "artifact_type": "phase2b_multiseed_adapter_lineage_manifest",
+  "created_at": "2026-09-21",
+  "immutable_base": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "policy": "immutable; never merge adapters"
+  },
+  "lineages": [
+    {"seed": 20260921, "parent_adapter": null, "candidate": "c0002-phase2b-seed-20260921", "output_path": "research/adapters/candidates/c0002-phase2b-seed-20260921", "status_at_freeze": "not trained"},
+    {"seed": 20261007, "parent_adapter": null, "candidate": "c0003-phase2b-seed-20261007", "output_path": "research/adapters/candidates/c0003-phase2b-seed-20261007", "status_at_freeze": "not trained"},
+    {"seed": 20261103, "parent_adapter": null, "candidate": "c0004-phase2b-seed-20261103", "output_path": "research/adapters/candidates/c0004-phase2b-seed-20261103", "status_at_freeze": "not trained"}
+  ],
+  "selection_policy": "all three preregistered seeds are reported; no best-seed or checkpoint selection",
+  "software": {"python": "3.13.0", "torch": "2.9.0+cu130", "transformers": "4.57.1", "bitsandbytes": "0.50.2", "accelerate": "1.15.0", "peft": "0.17.1"}
+}

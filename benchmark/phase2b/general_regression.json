@@ -1,0 +1,514 @@
+[
+  {
+    "task_id": "P2B-REG-001",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_python_arithmetic",
+    "prompt": "What does Python print for 7 + 3 * 4? Reply only with the number.",
+    "expected": "19"
+  },
+  {
+    "task_id": "P2B-REG-002",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_python_slice",
+    "prompt": "What does Python 'abcdefgh'[2:6] evaluate to? Reply only with the text.",
+    "expected": "cdef"
+  },
+  {
+    "task_id": "P2B-REG-003",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_python_negative_index",
+    "prompt": "For Python list [2,4,6], what is items[-1]? Reply only with the number.",
+    "expected": "6"
+  },
+  {
+    "task_id": "P2B-REG-004",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_python_floor_div",
+    "prompt": "What is 17 // 5 in Python? Reply only with the number.",
+    "expected": "3"
+  },
+  {
+    "task_id": "P2B-REG-005",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_python_bool",
+    "prompt": "What does bool([0]) evaluate to in Python? Reply TRUE or FALSE only.",
+    "expected": "TRUE"
+  },
+  {
+    "task_id": "P2B-REG-006",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_js_strict_equal",
+    "prompt": "In JavaScript, does 3 === '3' evaluate true? Reply TRUE or FALSE only.",
+    "expected": "FALSE"
+  },
+  {
+    "task_id": "P2B-REG-007",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_loop_sum",
+    "prompt": "A loop sums integers 2 through 6 inclusive. Reply only with the total.",
+    "expected": "20"
+  },
+  {
+    "task_id": "P2B-REG-008",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_loop_product",
+    "prompt": "A loop multiplies integers 1 through 4 inclusive. Reply only with the product.",
+    "expected": "24"
+  },
+  {
+    "task_id": "P2B-REG-009",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_precedence",
+    "prompt": "Evaluate 10 - 2 * 3. Reply only with the number.",
+    "expected": "4"
+  },
+  {
+    "task_id": "P2B-REG-010",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_parentheses",
+    "prompt": "Evaluate (10 - 2) * 3. Reply only with the number.",
+    "expected": "24"
+  },
+  {
+    "task_id": "P2B-REG-011",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_array_index",
+    "prompt": "For zero-based array [9,7,5,3], what is index 2? Reply only with the number.",
+    "expected": "5"
+  },
+  {
+    "task_id": "P2B-REG-012",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_string_len",
+    "prompt": "What is the length of 'adapter'? Reply only with the number.",
+    "expected": "7"
+  },
+  {
+    "task_id": "P2B-REG-013",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_modulo",
+    "prompt": "What is 29 modulo 6? Reply only with the number.",
+    "expected": "5"
+  },
+  {
+    "task_id": "P2B-REG-014",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_binary",
+    "prompt": "Convert binary 1010 to decimal. Reply only with the number.",
+    "expected": "10"
+  },
+  {
+    "task_id": "P2B-REG-015",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_boolean_and",
+    "prompt": "Evaluate TRUE AND FALSE. Reply TRUE or FALSE only.",
+    "expected": "FALSE"
+  },
+  {
+    "task_id": "P2B-REG-016",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_min",
+    "prompt": "What is min(8,-2,5)? Reply only with the number.",
+    "expected": "-2"
+  },
+  {
+    "task_id": "P2B-REG-017",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_max",
+    "prompt": "What is max(8,-2,5)? Reply only with the number.",
+    "expected": "8"
+  },
+  {
+    "task_id": "P2B-REG-018",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_power",
+    "prompt": "What is 3 squared? Reply only with the number.",
+    "expected": "9"
+  },
+  {
+    "task_id": "P2B-REG-019",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_list_count",
+    "prompt": "How many elements are in [1,1,2,3,5]? Reply only with the number.",
+    "expected": "5"
+  },
+  {
+    "task_id": "P2B-REG-020",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_range_count",
+    "prompt": "How many integers are in 4 through 9 inclusive? Reply only with the number.",
+    "expected": "6"
+  },
+  {
+    "task_id": "P2B-REG-021",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_dict_lookup",
+    "prompt": "Given mapping a:2,b:5, what is the value for b? Reply only with the number.",
+    "expected": "5"
+  },
+  {
+    "task_id": "P2B-REG-022",
+    "split": "phase2b_general_regression",
+    "category": "trace",
+    "template_lineage": "p2b-reg-trace_string_concat",
+    "prompt": "Concatenate 'micro' and 'service' without a separator. Reply only with the result.",
+    "expected": "microservice"
+  },
+  {
+    "task_id": "P2B-REG-023",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_upper",
+    "prompt": "Convert 'stable system' to uppercase. Reply only with the result.",
+    "expected": "STABLE SYSTEM"
+  },
+  {
+    "task_id": "P2B-REG-024",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_lower",
+    "prompt": "Convert 'Mixed CASE' to lowercase. Reply only with the result.",
+    "expected": "mixed case"
+  },
+  {
+    "task_id": "P2B-REG-025",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_reverse",
+    "prompt": "Reverse characters in 'drawer'. Reply only with the result.",
+    "expected": "reward"
+  },
+  {
+    "task_id": "P2B-REG-026",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_sort",
+    "prompt": "Sort 8,1,6,3 ascending. Reply as comma-separated numbers without spaces.",
+    "expected": "1,3,6,8"
+  },
+  {
+    "task_id": "P2B-REG-027",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_replace",
+    "prompt": "Replace every slash in 'a/b/c' with a dash. Reply only with the result.",
+    "expected": "a-b-c"
+  },
+  {
+    "task_id": "P2B-REG-028",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_first_word",
+    "prompt": "Return the first word of 'careful tests matter'. Reply only with that word.",
+    "expected": "careful"
+  },
+  {
+    "task_id": "P2B-REG-029",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_last_word",
+    "prompt": "Return the last word of 'models need evidence'. Reply only with that word.",
+    "expected": "evidence"
+  },
+  {
+    "task_id": "P2B-REG-030",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_count_letters",
+    "prompt": "How many letters are in 'validation'? Reply only with the number.",
+    "expected": "10"
+  },
+  {
+    "task_id": "P2B-REG-031",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_dedupe",
+    "prompt": "Remove repeated adjacent characters from 'bookkeeper'. Reply only with the result.",
+    "expected": "bokeper"
+  },
+  {
+    "task_id": "P2B-REG-032",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_join",
+    "prompt": "Join red,green,blue with vertical bars. Reply only with the result.",
+    "expected": "red|green|blue"
+  },
+  {
+    "task_id": "P2B-REG-033",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_prefix",
+    "prompt": "Return the first three characters of 'compiler'. Reply only with the result.",
+    "expected": "com"
+  },
+  {
+    "task_id": "P2B-REG-034",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_suffix",
+    "prompt": "Return the last four characters of 'learning'. Reply only with the result.",
+    "expected": "ning"
+  },
+  {
+    "task_id": "P2B-REG-035",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_title",
+    "prompt": "Capitalize the first letter of 'reliable'. Reply only with the result.",
+    "expected": "Reliable"
+  },
+  {
+    "task_id": "P2B-REG-036",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_count_words",
+    "prompt": "How many words are in 'small models learn patterns'? Reply only with the number.",
+    "expected": "4"
+  },
+  {
+    "task_id": "P2B-REG-037",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_remove_spaces",
+    "prompt": "Remove spaces from 'a b c d'. Reply only with the result.",
+    "expected": "abcd"
+  },
+  {
+    "task_id": "P2B-REG-038",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_repeat",
+    "prompt": "Repeat 'go' three times with no separator. Reply only with the result.",
+    "expected": "gogogo"
+  },
+  {
+    "task_id": "P2B-REG-039",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_numeric_order",
+    "prompt": "Order -1,5,0 ascending. Reply exactly as -1,0,5",
+    "expected": "-1,0,5"
+  },
+  {
+    "task_id": "P2B-REG-040",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_extract_digits",
+    "prompt": "Return only the digits from 'a1b2c3'. Reply only with the result.",
+    "expected": "123"
+  },
+  {
+    "task_id": "P2B-REG-041",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_swap_case",
+    "prompt": "Swap case in 'AbC'. Reply only with the result.",
+    "expected": "aBc"
+  },
+  {
+    "task_id": "P2B-REG-042",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_colon_join",
+    "prompt": "Join key and value with a colon. Reply exactly key:value",
+    "expected": "key:value"
+  },
+  {
+    "task_id": "P2B-REG-043",
+    "split": "phase2b_general_regression",
+    "category": "instruction",
+    "template_lineage": "p2b-reg-instruction_boolean_format",
+    "prompt": "Write the lowercase JSON boolean for false. Reply only with the token.",
+    "expected": "false"
+  },
+  {
+    "task_id": "P2B-REG-044",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_lifo",
+    "prompt": "Which data structure is LIFO? Reply with one lowercase word.",
+    "expected": "stack"
+  },
+  {
+    "task_id": "P2B-REG-045",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_fifo",
+    "prompt": "Which data structure is FIFO? Reply with one lowercase word.",
+    "expected": "queue"
+  },
+  {
+    "task_id": "P2B-REG-046",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_http_get",
+    "prompt": "Which HTTP method retrieves a resource? Reply with the uppercase method.",
+    "expected": "GET"
+  },
+  {
+    "task_id": "P2B-REG-047",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_http_create",
+    "prompt": "Which HTTP method conventionally creates a resource? Reply with the uppercase method.",
+    "expected": "POST"
+  },
+  {
+    "task_id": "P2B-REG-048",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_sql_filter",
+    "prompt": "Which SQL keyword filters rows? Reply with the uppercase keyword.",
+    "expected": "WHERE"
+  },
+  {
+    "task_id": "P2B-REG-049",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_sql_sort",
+    "prompt": "Which SQL clause sorts query results? Reply exactly ORDER BY",
+    "expected": "ORDER BY"
+  },
+  {
+    "task_id": "P2B-REG-050",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_git_commit",
+    "prompt": "Which Git subcommand records staged changes? Reply only with the subcommand.",
+    "expected": "commit"
+  },
+  {
+    "task_id": "P2B-REG-051",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_git_branch",
+    "prompt": "Which Git subcommand lists branches? Reply only with the subcommand.",
+    "expected": "branch"
+  },
+  {
+    "task_id": "P2B-REG-052",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_hash_lookup",
+    "prompt": "Typical average hash-table lookup complexity? Reply only with Big-O notation.",
+    "expected": "O(1)"
+  },
+  {
+    "task_id": "P2B-REG-053",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_binary_search",
+    "prompt": "Binary-search time complexity? Reply only with Big-O notation.",
+    "expected": "O(log n)"
+  },
+  {
+    "task_id": "P2B-REG-054",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_json_null",
+    "prompt": "Which JSON literal represents no value? Reply only with the literal.",
+    "expected": "null"
+  },
+  {
+    "task_id": "P2B-REG-055",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_json_array",
+    "prompt": "Which characters delimit a JSON array? Reply exactly []",
+    "expected": "[]"
+  },
+  {
+    "task_id": "P2B-REG-056",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_bit_values",
+    "prompt": "How many possible values does one bit have? Reply only with the number.",
+    "expected": "2"
+  },
+  {
+    "task_id": "P2B-REG-057",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_byte_bits",
+    "prompt": "How many bits are in a conventional byte? Reply only with the number.",
+    "expected": "8"
+  },
+  {
+    "task_id": "P2B-REG-058",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_recursion_base",
+    "prompt": "What kind of case stops recursion? Reply with two lowercase words.",
+    "expected": "base case"
+  },
+  {
+    "task_id": "P2B-REG-059",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_immutable",
+    "prompt": "Which Python built-in sequence is immutable: list or tuple? Reply one lowercase word.",
+    "expected": "tuple"
+  },
+  {
+    "task_id": "P2B-REG-060",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_set_unique",
+    "prompt": "Which common collection stores unique elements: list or set? Reply one lowercase word.",
+    "expected": "set"
+  },
+  {
+    "task_id": "P2B-REG-061",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_tcp",
+    "prompt": "Which transport protocol is connection-oriented: TCP or UDP? Reply uppercase.",
+    "expected": "TCP"
+  },
+  {
+    "task_id": "P2B-REG-062",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_boolean_values",
+    "prompt": "List JSON boolean literals exactly as true,false",
+    "expected": "true,false"
+  },
+  {
+    "task_id": "P2B-REG-063",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_merge_sort",
+    "prompt": "Typical merge-sort time complexity? Reply only with Big-O notation.",
+    "expected": "O(n log n)"
+  },
+  {
+    "task_id": "P2B-REG-064",
+    "split": "phase2b_general_regression",
+    "category": "concept",
+    "template_lineage": "p2b-reg-concept_primary_key",
+    "prompt": "What database key uniquely identifies a row? Reply with two lowercase words.",
+    "expected": "primary key"
+  }
+]

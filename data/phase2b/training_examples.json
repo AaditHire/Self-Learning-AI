@@ -1,0 +1,3212 @@
+[
+  {
+    "example_id": "P2B-TR-EV-QUOTIENT_SHIFT-01",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print x divided by 2, then add 1.",
+    "target": "NUMBER x.\nINPUT(x).\nNUMBER q = x / 2.\nDISPLAYNL(q + 1).",
+    "algorithmic_structure": "quotient_shift_1",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-quotient_shift-1",
+    "structural_signature": "input>divide>offset>display",
+    "ast_proxy_signature": "INPUT>/>DISPLAYNL>+",
+    "semantic_operations": [
+      "division",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-QUOTIENT_SHIFT-02",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print x divided by 3, then add 2.",
+    "target": "NUMBER x.\nINPUT(x).\nNUMBER q = x / 3.\nDISPLAYNL(q + 2).",
+    "algorithmic_structure": "quotient_shift_2",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-quotient_shift-2",
+    "structural_signature": "input>divide>offset>display",
+    "ast_proxy_signature": "INPUT>/>DISPLAYNL>+",
+    "semantic_operations": [
+      "division",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-QUOTIENT_SHIFT-03",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print x divided by 4, then add 3.",
+    "target": "NUMBER x.\nINPUT(x).\nNUMBER q = x / 4.\nDISPLAYNL(q + 3).",
+    "algorithmic_structure": "quotient_shift_3",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-quotient_shift-3",
+    "structural_signature": "input>divide>offset>display",
+    "ast_proxy_signature": "INPUT>/>DISPLAYNL>+",
+    "semantic_operations": [
+      "division",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-QUOTIENT_SHIFT-04",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print x divided by 5, then add 4.",
+    "target": "NUMBER x.\nINPUT(x).\nNUMBER q = x / 5.\nDISPLAYNL(q + 4).",
+    "algorithmic_structure": "quotient_shift_4",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-quotient_shift-4",
+    "structural_signature": "input>divide>offset>display",
+    "ast_proxy_signature": "INPUT>/>DISPLAYNL>+",
+    "semantic_operations": [
+      "division",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-QUOTIENT_SHIFT-05",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print x divided by 6, then add 5.",
+    "target": "NUMBER x.\nINPUT(x).\nNUMBER q = x / 6.\nDISPLAYNL(q + 5).",
+    "algorithmic_structure": "quotient_shift_5",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-quotient_shift-5",
+    "structural_signature": "input>divide>offset>display",
+    "ast_proxy_signature": "INPUT>/>DISPLAYNL>+",
+    "semantic_operations": [
+      "division",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-DIFFERENCE_OF_SQUARES-01",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b and print (a-b)*(a+b) plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER left = a - b.\nNUMBER right = a + b.\nDISPLAYNL(left * right + 1).",
+    "algorithmic_structure": "difference_of_squares_1",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-difference_of_squares-1",
+    "structural_signature": "split2>two_intermediates>multiply>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>->+>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "pair_split",
+      "difference_of_squares"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-DIFFERENCE_OF_SQUARES-02",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b and print (a-b)*(a+b) plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER left = a - b.\nNUMBER right = a + b.\nDISPLAYNL(left * right + 2).",
+    "algorithmic_structure": "difference_of_squares_2",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-difference_of_squares-2",
+    "structural_signature": "split2>two_intermediates>multiply>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>->+>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "pair_split",
+      "difference_of_squares"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-DIFFERENCE_OF_SQUARES-03",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b and print (a-b)*(a+b) plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER left = a - b.\nNUMBER right = a + b.\nDISPLAYNL(left * right + 3).",
+    "algorithmic_structure": "difference_of_squares_3",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-difference_of_squares-3",
+    "structural_signature": "split2>two_intermediates>multiply>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>->+>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "pair_split",
+      "difference_of_squares"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-DIFFERENCE_OF_SQUARES-04",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b and print (a-b)*(a+b) plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER left = a - b.\nNUMBER right = a + b.\nDISPLAYNL(left * right + 4).",
+    "algorithmic_structure": "difference_of_squares_4",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-difference_of_squares-4",
+    "structural_signature": "split2>two_intermediates>multiply>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>->+>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "pair_split",
+      "difference_of_squares"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-DIFFERENCE_OF_SQUARES-05",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b and print (a-b)*(a+b) plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER left = a - b.\nNUMBER right = a + b.\nDISPLAYNL(left * right + 5).",
+    "algorithmic_structure": "difference_of_squares_5",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-difference_of_squares-5",
+    "structural_signature": "split2>two_intermediates>multiply>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>->+>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "pair_split",
+      "difference_of_squares"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-CEILING_SCALE-01",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print ceil(x/3) plus 1.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(math.CEIL(x / 3) + 1).",
+    "algorithmic_structure": "ceiling_scale_1",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-ceiling_scale-1",
+    "structural_signature": "import_math>input>divide>ceil>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+",
+    "semantic_operations": [
+      "ceil",
+      "division"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-CEILING_SCALE-02",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print ceil(x/4) plus 2.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(math.CEIL(x / 4) + 2).",
+    "algorithmic_structure": "ceiling_scale_2",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-ceiling_scale-2",
+    "structural_signature": "import_math>input>divide>ceil>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+",
+    "semantic_operations": [
+      "ceil",
+      "division"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-CEILING_SCALE-03",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print ceil(x/5) plus 3.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(math.CEIL(x / 5) + 3).",
+    "algorithmic_structure": "ceiling_scale_3",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-ceiling_scale-3",
+    "structural_signature": "import_math>input>divide>ceil>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+",
+    "semantic_operations": [
+      "ceil",
+      "division"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-CEILING_SCALE-04",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print ceil(x/6) plus 4.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(math.CEIL(x / 6) + 4).",
+    "algorithmic_structure": "ceiling_scale_4",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-ceiling_scale-4",
+    "structural_signature": "import_math>input>divide>ceil>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+",
+    "semantic_operations": [
+      "ceil",
+      "division"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-CEILING_SCALE-05",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read x and print ceil(x/7) plus 5.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(math.CEIL(x / 7) + 5).",
+    "algorithmic_structure": "ceiling_scale_5",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-ceiling_scale-5",
+    "structural_signature": "import_math>input>divide>ceil>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>+",
+    "semantic_operations": [
+      "ceil",
+      "division"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-TRIPLE_PRODUCT_ADJUST-01",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b|c and print a*b-c plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER product = a * b.\nDISPLAYNL(product - c + 1).",
+    "algorithmic_structure": "triple_product_adjust_1",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-triple_product_adjust-1",
+    "structural_signature": "split3>product>subtract>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>->+",
+    "semantic_operations": [
+      "triple_split",
+      "product",
+      "subtraction"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-TRIPLE_PRODUCT_ADJUST-02",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b|c and print a*b-c plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER product = a * b.\nDISPLAYNL(product - c + 2).",
+    "algorithmic_structure": "triple_product_adjust_2",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-triple_product_adjust-2",
+    "structural_signature": "split3>product>subtract>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>->+",
+    "semantic_operations": [
+      "triple_split",
+      "product",
+      "subtraction"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-TRIPLE_PRODUCT_ADJUST-03",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b|c and print a*b-c plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER product = a * b.\nDISPLAYNL(product - c + 3).",
+    "algorithmic_structure": "triple_product_adjust_3",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-triple_product_adjust-3",
+    "structural_signature": "split3>product>subtract>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>->+",
+    "semantic_operations": [
+      "triple_split",
+      "product",
+      "subtraction"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-TRIPLE_PRODUCT_ADJUST-04",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b|c and print a*b-c plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER product = a * b.\nDISPLAYNL(product - c + 4).",
+    "algorithmic_structure": "triple_product_adjust_4",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-triple_product_adjust-4",
+    "structural_signature": "split3>product>subtract>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>->+",
+    "semantic_operations": [
+      "triple_split",
+      "product",
+      "subtraction"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-TRIPLE_PRODUCT_ADJUST-05",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read a|b|c and print a*b-c plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER product = a * b.\nDISPLAYNL(product - c + 5).",
+    "algorithmic_structure": "triple_product_adjust_5",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-triple_product_adjust-5",
+    "structural_signature": "split3>product>subtract>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>*>DISPLAYNL>->+",
+    "semantic_operations": [
+      "triple_split",
+      "product",
+      "subtraction"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-REMAINDER_SCALE-01",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read integer-like n and print (n modulo 3) times 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER remainder = n % 3.\nDISPLAYNL(remainder * 2).",
+    "algorithmic_structure": "remainder_scale_1",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-remainder_scale-1",
+    "structural_signature": "input>modulo>scale>display",
+    "ast_proxy_signature": "INPUT>%>DISPLAYNL>*",
+    "semantic_operations": [
+      "modulo",
+      "scale"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-REMAINDER_SCALE-02",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read integer-like n and print (n modulo 4) times 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER remainder = n % 4.\nDISPLAYNL(remainder * 3).",
+    "algorithmic_structure": "remainder_scale_2",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-remainder_scale-2",
+    "structural_signature": "input>modulo>scale>display",
+    "ast_proxy_signature": "INPUT>%>DISPLAYNL>*",
+    "semantic_operations": [
+      "modulo",
+      "scale"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-REMAINDER_SCALE-03",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read integer-like n and print (n modulo 5) times 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER remainder = n % 5.\nDISPLAYNL(remainder * 4).",
+    "algorithmic_structure": "remainder_scale_3",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-remainder_scale-3",
+    "structural_signature": "input>modulo>scale>display",
+    "ast_proxy_signature": "INPUT>%>DISPLAYNL>*",
+    "semantic_operations": [
+      "modulo",
+      "scale"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-REMAINDER_SCALE-04",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read integer-like n and print (n modulo 6) times 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER remainder = n % 6.\nDISPLAYNL(remainder * 5).",
+    "algorithmic_structure": "remainder_scale_4",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-remainder_scale-4",
+    "structural_signature": "input>modulo>scale>display",
+    "ast_proxy_signature": "INPUT>%>DISPLAYNL>*",
+    "semantic_operations": [
+      "modulo",
+      "scale"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-EV-REMAINDER_SCALE-05",
+    "split": "phase2b_train",
+    "family": "expressions_variables",
+    "prompt": "Read integer-like n and print (n modulo 7) times 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER remainder = n % 7.\nDISPLAYNL(remainder * 6).",
+    "algorithmic_structure": "remainder_scale_5",
+    "control_flow": "straight_line_expression",
+    "template_lineage": "p2b-tr-ev-remainder_scale-5",
+    "structural_signature": "input>modulo>scale>display",
+    "ast_proxy_signature": "INPUT>%>DISPLAYNL>*",
+    "semantic_operations": [
+      "modulo",
+      "scale"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-SMALLER_WITH_TIE-01",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read a|b. Print TIE if equal; otherwise print the smaller number plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a == b) { DISPLAYNL(\"TIE\"). } ELSEIF (a < b) { DISPLAYNL(a + 1). } ELSE { DISPLAYNL(b + 1). }",
+    "algorithmic_structure": "smaller_with_tie_1",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-smaller_with_tie-1",
+    "structural_signature": "split2>equality>less_than>numeric_display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>+>ELSE>DISPLAYNL>+",
+    "semantic_operations": [
+      "pair_compare",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-PARITY_SIGN-01",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print NEG when negative, EVEN1 when nonnegative even, otherwise ODD1.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n < 0) { DISPLAYNL(\"NEG\"). } ELSEIF (n % 2 == 0) { DISPLAYNL(\"EVEN1\"). } ELSE { DISPLAYNL(\"ODD1\"). }",
+    "algorithmic_structure": "parity_sign_1",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-parity_sign-1",
+    "structural_signature": "input>negative_branch>modulo_branch>display",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sign",
+      "parity",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-OUTSIDE_INTERVAL-01",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print OUT when x is below -1 or above 5; otherwise print IN.",
+    "target": "NUMBER x.\nINPUT(x).\nIF (x < -1 OR x > 5) { DISPLAYNL(\"OUT\"). } ELSE { DISPLAYNL(\"IN\"). }",
+    "algorithmic_structure": "outside_interval_1",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-outside_interval-1",
+    "structural_signature": "input>or_exterior_branch>display",
+    "ast_proxy_signature": "INPUT>IF>->OR>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "or_condition",
+      "open_exterior"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-EITHER_DIVISOR-01",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print MATCH if divisible by 2 or 4, else MISS.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n % 2 == 0 OR n % 4 == 0) { DISPLAYNL(\"MATCH\"). } ELSE { DISPLAYNL(\"MISS\"). }",
+    "algorithmic_structure": "either_divisor_1",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-either_divisor-1",
+    "structural_signature": "input>dual_modulo_or>display",
+    "ast_proxy_signature": "INPUT>IF>%>==>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "dual_divisibility",
+      "or_condition"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-ABSOLUTE_BAND-01",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print NEAR if abs(x) <= 3, otherwise FAR.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nIF (math.ABS(x) <= 3) { DISPLAYNL(\"NEAR\"). } ELSE { DISPLAYNL(\"FAR\"). }",
+    "algorithmic_structure": "absolute_band_1",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-absolute_band-1",
+    "structural_signature": "import_math>input>abs_threshold_branch>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_value",
+      "threshold"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-SMALLER_WITH_TIE-02",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read a|b. Print TIE if equal; otherwise print the smaller number plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a == b) { DISPLAYNL(\"TIE\"). } ELSEIF (a < b) { DISPLAYNL(a + 2). } ELSE { DISPLAYNL(b + 2). }",
+    "algorithmic_structure": "smaller_with_tie_2",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-smaller_with_tie-2",
+    "structural_signature": "split2>equality>less_than>numeric_display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>+>ELSE>DISPLAYNL>+",
+    "semantic_operations": [
+      "pair_compare",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-PARITY_SIGN-02",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print NEG when negative, EVEN2 when nonnegative even, otherwise ODD2.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n < 0) { DISPLAYNL(\"NEG\"). } ELSEIF (n % 2 == 0) { DISPLAYNL(\"EVEN2\"). } ELSE { DISPLAYNL(\"ODD2\"). }",
+    "algorithmic_structure": "parity_sign_2",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-parity_sign-2",
+    "structural_signature": "input>negative_branch>modulo_branch>display",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sign",
+      "parity",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-OUTSIDE_INTERVAL-02",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print OUT when x is below -2 or above 7; otherwise print IN.",
+    "target": "NUMBER x.\nINPUT(x).\nIF (x < -2 OR x > 7) { DISPLAYNL(\"OUT\"). } ELSE { DISPLAYNL(\"IN\"). }",
+    "algorithmic_structure": "outside_interval_2",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-outside_interval-2",
+    "structural_signature": "input>or_exterior_branch>display",
+    "ast_proxy_signature": "INPUT>IF>->OR>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "or_condition",
+      "open_exterior"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-EITHER_DIVISOR-02",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print MATCH if divisible by 3 or 5, else MISS.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n % 3 == 0 OR n % 5 == 0) { DISPLAYNL(\"MATCH\"). } ELSE { DISPLAYNL(\"MISS\"). }",
+    "algorithmic_structure": "either_divisor_2",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-either_divisor-2",
+    "structural_signature": "input>dual_modulo_or>display",
+    "ast_proxy_signature": "INPUT>IF>%>==>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "dual_divisibility",
+      "or_condition"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-ABSOLUTE_BAND-02",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print NEAR if abs(x) <= 4, otherwise FAR.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nIF (math.ABS(x) <= 4) { DISPLAYNL(\"NEAR\"). } ELSE { DISPLAYNL(\"FAR\"). }",
+    "algorithmic_structure": "absolute_band_2",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-absolute_band-2",
+    "structural_signature": "import_math>input>abs_threshold_branch>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_value",
+      "threshold"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-SMALLER_WITH_TIE-03",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read a|b. Print TIE if equal; otherwise print the smaller number plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a == b) { DISPLAYNL(\"TIE\"). } ELSEIF (a < b) { DISPLAYNL(a + 3). } ELSE { DISPLAYNL(b + 3). }",
+    "algorithmic_structure": "smaller_with_tie_3",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-smaller_with_tie-3",
+    "structural_signature": "split2>equality>less_than>numeric_display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>+>ELSE>DISPLAYNL>+",
+    "semantic_operations": [
+      "pair_compare",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-PARITY_SIGN-03",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print NEG when negative, EVEN3 when nonnegative even, otherwise ODD3.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n < 0) { DISPLAYNL(\"NEG\"). } ELSEIF (n % 2 == 0) { DISPLAYNL(\"EVEN3\"). } ELSE { DISPLAYNL(\"ODD3\"). }",
+    "algorithmic_structure": "parity_sign_3",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-parity_sign-3",
+    "structural_signature": "input>negative_branch>modulo_branch>display",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sign",
+      "parity",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-OUTSIDE_INTERVAL-03",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print OUT when x is below -3 or above 9; otherwise print IN.",
+    "target": "NUMBER x.\nINPUT(x).\nIF (x < -3 OR x > 9) { DISPLAYNL(\"OUT\"). } ELSE { DISPLAYNL(\"IN\"). }",
+    "algorithmic_structure": "outside_interval_3",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-outside_interval-3",
+    "structural_signature": "input>or_exterior_branch>display",
+    "ast_proxy_signature": "INPUT>IF>->OR>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "or_condition",
+      "open_exterior"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-EITHER_DIVISOR-03",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print MATCH if divisible by 4 or 6, else MISS.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n % 4 == 0 OR n % 6 == 0) { DISPLAYNL(\"MATCH\"). } ELSE { DISPLAYNL(\"MISS\"). }",
+    "algorithmic_structure": "either_divisor_3",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-either_divisor-3",
+    "structural_signature": "input>dual_modulo_or>display",
+    "ast_proxy_signature": "INPUT>IF>%>==>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "dual_divisibility",
+      "or_condition"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-ABSOLUTE_BAND-03",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print NEAR if abs(x) <= 5, otherwise FAR.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nIF (math.ABS(x) <= 5) { DISPLAYNL(\"NEAR\"). } ELSE { DISPLAYNL(\"FAR\"). }",
+    "algorithmic_structure": "absolute_band_3",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-absolute_band-3",
+    "structural_signature": "import_math>input>abs_threshold_branch>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_value",
+      "threshold"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-SMALLER_WITH_TIE-04",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read a|b. Print TIE if equal; otherwise print the smaller number plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a == b) { DISPLAYNL(\"TIE\"). } ELSEIF (a < b) { DISPLAYNL(a + 4). } ELSE { DISPLAYNL(b + 4). }",
+    "algorithmic_structure": "smaller_with_tie_4",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-smaller_with_tie-4",
+    "structural_signature": "split2>equality>less_than>numeric_display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>+>ELSE>DISPLAYNL>+",
+    "semantic_operations": [
+      "pair_compare",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-PARITY_SIGN-04",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print NEG when negative, EVEN4 when nonnegative even, otherwise ODD4.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n < 0) { DISPLAYNL(\"NEG\"). } ELSEIF (n % 2 == 0) { DISPLAYNL(\"EVEN4\"). } ELSE { DISPLAYNL(\"ODD4\"). }",
+    "algorithmic_structure": "parity_sign_4",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-parity_sign-4",
+    "structural_signature": "input>negative_branch>modulo_branch>display",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sign",
+      "parity",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-OUTSIDE_INTERVAL-04",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print OUT when x is below -4 or above 11; otherwise print IN.",
+    "target": "NUMBER x.\nINPUT(x).\nIF (x < -4 OR x > 11) { DISPLAYNL(\"OUT\"). } ELSE { DISPLAYNL(\"IN\"). }",
+    "algorithmic_structure": "outside_interval_4",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-outside_interval-4",
+    "structural_signature": "input>or_exterior_branch>display",
+    "ast_proxy_signature": "INPUT>IF>->OR>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "or_condition",
+      "open_exterior"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-EITHER_DIVISOR-04",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print MATCH if divisible by 5 or 7, else MISS.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n % 5 == 0 OR n % 7 == 0) { DISPLAYNL(\"MATCH\"). } ELSE { DISPLAYNL(\"MISS\"). }",
+    "algorithmic_structure": "either_divisor_4",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-either_divisor-4",
+    "structural_signature": "input>dual_modulo_or>display",
+    "ast_proxy_signature": "INPUT>IF>%>==>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "dual_divisibility",
+      "or_condition"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-ABSOLUTE_BAND-04",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print NEAR if abs(x) <= 6, otherwise FAR.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nIF (math.ABS(x) <= 6) { DISPLAYNL(\"NEAR\"). } ELSE { DISPLAYNL(\"FAR\"). }",
+    "algorithmic_structure": "absolute_band_4",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-absolute_band-4",
+    "structural_signature": "import_math>input>abs_threshold_branch>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_value",
+      "threshold"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-SMALLER_WITH_TIE-05",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read a|b. Print TIE if equal; otherwise print the smaller number plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nIF (a == b) { DISPLAYNL(\"TIE\"). } ELSEIF (a < b) { DISPLAYNL(a + 5). } ELSE { DISPLAYNL(b + 5). }",
+    "algorithmic_structure": "smaller_with_tie_5",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-smaller_with_tie-5",
+    "structural_signature": "split2>equality>less_than>numeric_display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>==>DISPLAYNL>ELSEIF>DISPLAYNL>+>ELSE>DISPLAYNL>+",
+    "semantic_operations": [
+      "pair_compare",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-PARITY_SIGN-05",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print NEG when negative, EVEN5 when nonnegative even, otherwise ODD5.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n < 0) { DISPLAYNL(\"NEG\"). } ELSEIF (n % 2 == 0) { DISPLAYNL(\"EVEN5\"). } ELSE { DISPLAYNL(\"ODD5\"). }",
+    "algorithmic_structure": "parity_sign_5",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-parity_sign-5",
+    "structural_signature": "input>negative_branch>modulo_branch>display",
+    "ast_proxy_signature": "INPUT>IF>DISPLAYNL>ELSEIF>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "sign",
+      "parity",
+      "three_way_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-OUTSIDE_INTERVAL-05",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print OUT when x is below -5 or above 13; otherwise print IN.",
+    "target": "NUMBER x.\nINPUT(x).\nIF (x < -5 OR x > 13) { DISPLAYNL(\"OUT\"). } ELSE { DISPLAYNL(\"IN\"). }",
+    "algorithmic_structure": "outside_interval_5",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-outside_interval-5",
+    "structural_signature": "input>or_exterior_branch>display",
+    "ast_proxy_signature": "INPUT>IF>->OR>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "or_condition",
+      "open_exterior"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-EITHER_DIVISOR-05",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read n. Print MATCH if divisible by 6 or 8, else MISS.",
+    "target": "NUMBER n.\nINPUT(n).\nIF (n % 6 == 0 OR n % 8 == 0) { DISPLAYNL(\"MATCH\"). } ELSE { DISPLAYNL(\"MISS\"). }",
+    "algorithmic_structure": "either_divisor_5",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-either_divisor-5",
+    "structural_signature": "input>dual_modulo_or>display",
+    "ast_proxy_signature": "INPUT>IF>%>==>OR>%>==>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "dual_divisibility",
+      "or_condition"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CD-ABSOLUTE_BAND-05",
+    "split": "phase2b_train",
+    "family": "conditionals",
+    "prompt": "Read x. Print NEAR if abs(x) <= 7, otherwise FAR.",
+    "target": "IMPORT math.\nNUMBER x.\nINPUT(x).\nIF (math.ABS(x) <= 7) { DISPLAYNL(\"NEAR\"). } ELSE { DISPLAYNL(\"FAR\"). }",
+    "algorithmic_structure": "absolute_band_5",
+    "control_flow": "conditional",
+    "template_lineage": "p2b-tr-cd-absolute_band-5",
+    "structural_signature": "import_math>input>abs_threshold_branch>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF><=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "absolute_value",
+      "threshold"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-LINEAR_TERM_SUM-01",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and sum 3*i+1 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 1. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "linear_term_sum_1",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-linear_term_sum-1",
+    "structural_signature": "input>loop>affine_sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "affine_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-NONMULTIPLE_COUNT-01",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 3 != 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "nonmultiple_count_1",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-nonmultiple_count-1",
+    "structural_signature": "input>loop>modulo_if>count>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "nondivisibility",
+      "count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-SHIFTED_PRODUCT-01",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and multiply i+1 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { product *= i + 1. }\nDISPLAYNL(product).",
+    "algorithmic_structure": "shifted_product_1",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-shifted_product-1",
+    "structural_signature": "input>loop>shifted_product>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-EVEN_MINUS_ODD-01",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "even_minus_odd_1",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-even_minus_odd-1",
+    "structural_signature": "input>loop>parity_if>add_subtract>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_branch",
+      "alternating_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-CUBIC_OFFSET_SUM-01",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "cubic_offset_sum_1",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-cubic_offset_sum-1",
+    "structural_signature": "input>loop>cube_accumulate>offset>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "cubic_sum",
+      "offset_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-LINEAR_TERM_SUM-02",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and sum 3*i+2 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 2. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "linear_term_sum_2",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-linear_term_sum-2",
+    "structural_signature": "input>loop>affine_sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "affine_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-NONMULTIPLE_COUNT-02",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 4 != 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "nonmultiple_count_2",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-nonmultiple_count-2",
+    "structural_signature": "input>loop>modulo_if>count>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "nondivisibility",
+      "count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-SHIFTED_PRODUCT-02",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and multiply i+2 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { product *= i + 2. }\nDISPLAYNL(product).",
+    "algorithmic_structure": "shifted_product_2",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-shifted_product-2",
+    "structural_signature": "input>loop>shifted_product>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-EVEN_MINUS_ODD-02",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 2.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "even_minus_odd_2",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-even_minus_odd-2",
+    "structural_signature": "input>loop>parity_if>add_subtract>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_branch",
+      "alternating_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-CUBIC_OFFSET_SUM-02",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 2.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "cubic_offset_sum_2",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-cubic_offset_sum-2",
+    "structural_signature": "input>loop>cube_accumulate>offset>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "cubic_sum",
+      "offset_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-LINEAR_TERM_SUM-03",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and sum 3*i+3 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 3. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "linear_term_sum_3",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-linear_term_sum-3",
+    "structural_signature": "input>loop>affine_sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "affine_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-NONMULTIPLE_COUNT-03",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 != 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "nonmultiple_count_3",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-nonmultiple_count-3",
+    "structural_signature": "input>loop>modulo_if>count>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "nondivisibility",
+      "count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-SHIFTED_PRODUCT-03",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and multiply i+3 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { product *= i + 3. }\nDISPLAYNL(product).",
+    "algorithmic_structure": "shifted_product_3",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-shifted_product-3",
+    "structural_signature": "input>loop>shifted_product>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-EVEN_MINUS_ODD-03",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "even_minus_odd_3",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-even_minus_odd-3",
+    "structural_signature": "input>loop>parity_if>add_subtract>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_branch",
+      "alternating_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-CUBIC_OFFSET_SUM-03",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "cubic_offset_sum_3",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-cubic_offset_sum-3",
+    "structural_signature": "input>loop>cube_accumulate>offset>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "cubic_sum",
+      "offset_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-LINEAR_TERM_SUM-04",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and sum 3*i+4 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "linear_term_sum_4",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-linear_term_sum-4",
+    "structural_signature": "input>loop>affine_sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "affine_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-NONMULTIPLE_COUNT-04",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 6 != 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "nonmultiple_count_4",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-nonmultiple_count-4",
+    "structural_signature": "input>loop>modulo_if>count>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "nondivisibility",
+      "count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-SHIFTED_PRODUCT-04",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and multiply i+4 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { product *= i + 4. }\nDISPLAYNL(product).",
+    "algorithmic_structure": "shifted_product_4",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-shifted_product-4",
+    "structural_signature": "input>loop>shifted_product>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-EVEN_MINUS_ODD-04",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 4.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "even_minus_odd_4",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-even_minus_odd-4",
+    "structural_signature": "input>loop>parity_if>add_subtract>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_branch",
+      "alternating_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-CUBIC_OFFSET_SUM-04",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 4.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "cubic_offset_sum_4",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-cubic_offset_sum-4",
+    "structural_signature": "input>loop>cube_accumulate>offset>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "cubic_sum",
+      "offset_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-LINEAR_TERM_SUM-05",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and sum 3*i+5 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 5. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "linear_term_sum_5",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-linear_term_sum-5",
+    "structural_signature": "input>loop>affine_sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "affine_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-NONMULTIPLE_COUNT-05",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 7.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 7 != 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "nonmultiple_count_5",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-nonmultiple_count-5",
+    "structural_signature": "input>loop>modulo_if>count>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "nondivisibility",
+      "count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-SHIFTED_PRODUCT-05",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n and multiply i+5 for i=1..n.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { product *= i + 5. }\nDISPLAYNL(product).",
+    "algorithmic_structure": "shifted_product_5",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-shifted_product-5",
+    "structural_signature": "input>loop>shifted_product>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>+>DISPLAYNL",
+    "semantic_operations": [
+      "counted_loop",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-EVEN_MINUS_ODD-05",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 5.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "even_minus_odd_5",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-even_minus_odd-5",
+    "structural_signature": "input>loop>parity_if>add_subtract>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_branch",
+      "alternating_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-LP-CUBIC_OFFSET_SUM-05",
+    "split": "phase2b_train",
+    "family": "loops",
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 5.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+    "algorithmic_structure": "cubic_offset_sum_5",
+    "control_flow": "counted_loop",
+    "template_lineage": "p2b-tr-lp-cubic_offset_sum-5",
+    "structural_signature": "input>loop>cube_accumulate>offset>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>*>DISPLAYNL",
+    "semantic_operations": [
+      "cubic_sum",
+      "offset_accumulation"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-WEIGHTED_PAIR-01",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning a+1*b. Read a|b and print it.",
+    "target": "FUNCTION combine(NUMBER a, NUMBER b) { RETURN a + 1 * b. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(combine(a,b)).",
+    "algorithmic_structure": "weighted_pair_1",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-weighted_pair-1",
+    "structural_signature": "function2>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-COMPOSED_FUNCTIONS-01",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define inc and scale functions; print scale(inc(x)) using constants 1 and 2.",
+    "target": "FUNCTION inc(NUMBER x) { RETURN x + 1. } RETURNS NUMBER.\nFUNCTION scale(NUMBER x) { RETURN x * 2. } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(scale(inc(x))).",
+    "algorithmic_structure": "composed_functions_1",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-composed_functions-1",
+    "structural_signature": "function>function>input>nested_call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>RETURNS>FUNCTION>RETURN>*>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_composition",
+      "nested_call"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CONDITIONAL_FUNCTION-01",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function returning x when nonnegative and -x+1 otherwise; read x and print it.",
+    "target": "FUNCTION adjust(NUMBER x) { IF (x >= 0) { RETURN x. } ELSE { RETURN 0 - x + 1. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(adjust(x)).",
+    "algorithmic_structure": "conditional_function_1",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-conditional_function-1",
+    "structural_signature": "function_if_returns>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>ELSE>RETURN>->+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_branch",
+      "return"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-SQUARED_DISTANCE-01",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning (a-b)^2 plus 1; read a|b and print it.",
+    "target": "FUNCTION distance2(NUMBER a, NUMBER b) { NUMBER d = a - b. RETURN d * d + 1. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(distance2(a,b)).",
+    "algorithmic_structure": "squared_distance_1",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-squared_distance-1",
+    "structural_signature": "function2>local>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>->RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "squared_distance"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CLAMP_FUNCTION-01",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function clamping x to [-1,2], then read x and print it.",
+    "target": "FUNCTION clamp(NUMBER x) { IF (x < -1) { RETURN -1. } ELSEIF (x > 2) { RETURN 2. } ELSE { RETURN x. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(clamp(x)).",
+    "algorithmic_structure": "clamp_function_1",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-clamp_function-1",
+    "structural_signature": "function_three_return>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>->RETURN>->ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_three_way_branch",
+      "clamp"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-WEIGHTED_PAIR-02",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning a+2*b. Read a|b and print it.",
+    "target": "FUNCTION combine(NUMBER a, NUMBER b) { RETURN a + 2 * b. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(combine(a,b)).",
+    "algorithmic_structure": "weighted_pair_2",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-weighted_pair-2",
+    "structural_signature": "function2>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-COMPOSED_FUNCTIONS-02",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define inc and scale functions; print scale(inc(x)) using constants 2 and 3.",
+    "target": "FUNCTION inc(NUMBER x) { RETURN x + 2. } RETURNS NUMBER.\nFUNCTION scale(NUMBER x) { RETURN x * 3. } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(scale(inc(x))).",
+    "algorithmic_structure": "composed_functions_2",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-composed_functions-2",
+    "structural_signature": "function>function>input>nested_call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>RETURNS>FUNCTION>RETURN>*>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_composition",
+      "nested_call"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CONDITIONAL_FUNCTION-02",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function returning x when nonnegative and -x+2 otherwise; read x and print it.",
+    "target": "FUNCTION adjust(NUMBER x) { IF (x >= 0) { RETURN x. } ELSE { RETURN 0 - x + 2. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(adjust(x)).",
+    "algorithmic_structure": "conditional_function_2",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-conditional_function-2",
+    "structural_signature": "function_if_returns>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>ELSE>RETURN>->+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_branch",
+      "return"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-SQUARED_DISTANCE-02",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning (a-b)^2 plus 2; read a|b and print it.",
+    "target": "FUNCTION distance2(NUMBER a, NUMBER b) { NUMBER d = a - b. RETURN d * d + 2. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(distance2(a,b)).",
+    "algorithmic_structure": "squared_distance_2",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-squared_distance-2",
+    "structural_signature": "function2>local>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>->RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "squared_distance"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CLAMP_FUNCTION-02",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function clamping x to [-2,4], then read x and print it.",
+    "target": "FUNCTION clamp(NUMBER x) { IF (x < -2) { RETURN -2. } ELSEIF (x > 4) { RETURN 4. } ELSE { RETURN x. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(clamp(x)).",
+    "algorithmic_structure": "clamp_function_2",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-clamp_function-2",
+    "structural_signature": "function_three_return>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>->RETURN>->ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_three_way_branch",
+      "clamp"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-WEIGHTED_PAIR-03",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning a+3*b. Read a|b and print it.",
+    "target": "FUNCTION combine(NUMBER a, NUMBER b) { RETURN a + 3 * b. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(combine(a,b)).",
+    "algorithmic_structure": "weighted_pair_3",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-weighted_pair-3",
+    "structural_signature": "function2>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-COMPOSED_FUNCTIONS-03",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define inc and scale functions; print scale(inc(x)) using constants 3 and 4.",
+    "target": "FUNCTION inc(NUMBER x) { RETURN x + 3. } RETURNS NUMBER.\nFUNCTION scale(NUMBER x) { RETURN x * 4. } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(scale(inc(x))).",
+    "algorithmic_structure": "composed_functions_3",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-composed_functions-3",
+    "structural_signature": "function>function>input>nested_call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>RETURNS>FUNCTION>RETURN>*>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_composition",
+      "nested_call"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CONDITIONAL_FUNCTION-03",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function returning x when nonnegative and -x+3 otherwise; read x and print it.",
+    "target": "FUNCTION adjust(NUMBER x) { IF (x >= 0) { RETURN x. } ELSE { RETURN 0 - x + 3. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(adjust(x)).",
+    "algorithmic_structure": "conditional_function_3",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-conditional_function-3",
+    "structural_signature": "function_if_returns>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>ELSE>RETURN>->+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_branch",
+      "return"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-SQUARED_DISTANCE-03",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning (a-b)^2 plus 3; read a|b and print it.",
+    "target": "FUNCTION distance2(NUMBER a, NUMBER b) { NUMBER d = a - b. RETURN d * d + 3. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(distance2(a,b)).",
+    "algorithmic_structure": "squared_distance_3",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-squared_distance-3",
+    "structural_signature": "function2>local>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>->RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "squared_distance"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CLAMP_FUNCTION-03",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function clamping x to [-3,6], then read x and print it.",
+    "target": "FUNCTION clamp(NUMBER x) { IF (x < -3) { RETURN -3. } ELSEIF (x > 6) { RETURN 6. } ELSE { RETURN x. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(clamp(x)).",
+    "algorithmic_structure": "clamp_function_3",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-clamp_function-3",
+    "structural_signature": "function_three_return>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>->RETURN>->ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_three_way_branch",
+      "clamp"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-WEIGHTED_PAIR-04",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning a+4*b. Read a|b and print it.",
+    "target": "FUNCTION combine(NUMBER a, NUMBER b) { RETURN a + 4 * b. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(combine(a,b)).",
+    "algorithmic_structure": "weighted_pair_4",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-weighted_pair-4",
+    "structural_signature": "function2>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-COMPOSED_FUNCTIONS-04",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define inc and scale functions; print scale(inc(x)) using constants 4 and 5.",
+    "target": "FUNCTION inc(NUMBER x) { RETURN x + 4. } RETURNS NUMBER.\nFUNCTION scale(NUMBER x) { RETURN x * 5. } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(scale(inc(x))).",
+    "algorithmic_structure": "composed_functions_4",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-composed_functions-4",
+    "structural_signature": "function>function>input>nested_call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>RETURNS>FUNCTION>RETURN>*>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_composition",
+      "nested_call"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CONDITIONAL_FUNCTION-04",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function returning x when nonnegative and -x+4 otherwise; read x and print it.",
+    "target": "FUNCTION adjust(NUMBER x) { IF (x >= 0) { RETURN x. } ELSE { RETURN 0 - x + 4. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(adjust(x)).",
+    "algorithmic_structure": "conditional_function_4",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-conditional_function-4",
+    "structural_signature": "function_if_returns>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>ELSE>RETURN>->+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_branch",
+      "return"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-SQUARED_DISTANCE-04",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning (a-b)^2 plus 4; read a|b and print it.",
+    "target": "FUNCTION distance2(NUMBER a, NUMBER b) { NUMBER d = a - b. RETURN d * d + 4. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(distance2(a,b)).",
+    "algorithmic_structure": "squared_distance_4",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-squared_distance-4",
+    "structural_signature": "function2>local>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>->RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "squared_distance"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CLAMP_FUNCTION-04",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function clamping x to [-4,8], then read x and print it.",
+    "target": "FUNCTION clamp(NUMBER x) { IF (x < -4) { RETURN -4. } ELSEIF (x > 8) { RETURN 8. } ELSE { RETURN x. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(clamp(x)).",
+    "algorithmic_structure": "clamp_function_4",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-clamp_function-4",
+    "structural_signature": "function_three_return>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>->RETURN>->ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_three_way_branch",
+      "clamp"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-WEIGHTED_PAIR-05",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning a+5*b. Read a|b and print it.",
+    "target": "FUNCTION combine(NUMBER a, NUMBER b) { RETURN a + 5 * b. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(combine(a,b)).",
+    "algorithmic_structure": "weighted_pair_5",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-weighted_pair-5",
+    "structural_signature": "function2>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>*>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-COMPOSED_FUNCTIONS-05",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define inc and scale functions; print scale(inc(x)) using constants 5 and 6.",
+    "target": "FUNCTION inc(NUMBER x) { RETURN x + 5. } RETURNS NUMBER.\nFUNCTION scale(NUMBER x) { RETURN x * 6. } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(scale(inc(x))).",
+    "algorithmic_structure": "composed_functions_5",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-composed_functions-5",
+    "structural_signature": "function>function>input>nested_call>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>+>RETURNS>FUNCTION>RETURN>*>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_composition",
+      "nested_call"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CONDITIONAL_FUNCTION-05",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function returning x when nonnegative and -x+5 otherwise; read x and print it.",
+    "target": "FUNCTION adjust(NUMBER x) { IF (x >= 0) { RETURN x. } ELSE { RETURN 0 - x + 5. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(adjust(x)).",
+    "algorithmic_structure": "conditional_function_5",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-conditional_function-5",
+    "structural_signature": "function_if_returns>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>>=>RETURN>ELSE>RETURN>->+>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_branch",
+      "return"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-SQUARED_DISTANCE-05",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a two-number function returning (a-b)^2 plus 5; read a|b and print it.",
+    "target": "FUNCTION distance2(NUMBER a, NUMBER b) { NUMBER d = a - b. RETURN d * d + 5. } RETURNS NUMBER.\nIMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nDISPLAYNL(distance2(a,b)).",
+    "algorithmic_structure": "squared_distance_5",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-squared_distance-5",
+    "structural_signature": "function2>local>split2>call>display",
+    "ast_proxy_signature": "FUNCTION>->RETURN>*>+>RETURNS>IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "two_argument_function",
+      "squared_distance"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-FN-CLAMP_FUNCTION-05",
+    "split": "phase2b_train",
+    "family": "functions",
+    "prompt": "Define a function clamping x to [-5,10], then read x and print it.",
+    "target": "FUNCTION clamp(NUMBER x) { IF (x < -5) { RETURN -5. } ELSEIF (x > 10) { RETURN 10. } ELSE { RETURN x. } } RETURNS NUMBER.\nNUMBER x.\nINPUT(x).\nDISPLAYNL(clamp(x)).",
+    "algorithmic_structure": "clamp_function_5",
+    "control_flow": "function_definition_call",
+    "template_lineage": "p2b-tr-fn-clamp_function-5",
+    "structural_signature": "function_three_return>input>call>display",
+    "ast_proxy_signature": "FUNCTION>IF>->RETURN>->ELSEIF>RETURN>ELSE>RETURN>RETURNS>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "function_three_way_branch",
+      "clamp"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-WEIGHTED_FOUR-01",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+1*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 1 * values[3]).",
+    "algorithmic_structure": "weighted_four_1",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-weighted_four-1",
+    "structural_signature": "split4>array>weighted_indices>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>+>*>+>*",
+    "semantic_operations": [
+      "array_literal",
+      "weighted_indexing"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-COUNT_EVEN_FIVE-01",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read five numbers into an array, count even entries, then add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=1.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "count_even_five_1",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-count_even_five-1",
+    "structural_signature": "split5>array>loop>modulo_if>count>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "parity_count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-ABSOLUTE_SUM_THREE-01",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<3, i++) { total += math.ABS(values[i]). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "absolute_sum_three_1",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-absolute_sum_three-1",
+    "structural_signature": "split3>array>loop>abs_sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-RANGE_THREE-01",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print max-min plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+1).",
+    "algorithmic_structure": "range_three_1",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-range_three-1",
+    "structural_signature": "split3>array>nested_minmax>subtract>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_index",
+      "nested_minmax",
+      "range"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-DOT_THREE-01",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read six numbers as two arrays of three and print their dot product plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER f = strings.TO_NUMBER(parts[5]).\nNUMBER[] left=[a,b,c].\nNUMBER[] right=[d,e,f].\nDISPLAYNL(left[0]*right[0]+left[1]*right[1]+left[2]*right[2]+1).",
+    "algorithmic_structure": "dot_three_1",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-dot_three-1",
+    "structural_signature": "split6>two_arrays>dot_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+>*>+",
+    "semantic_operations": [
+      "two_arrays",
+      "dot_product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-WEIGHTED_FOUR-02",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+2*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 2 * values[3]).",
+    "algorithmic_structure": "weighted_four_2",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-weighted_four-2",
+    "structural_signature": "split4>array>weighted_indices>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>+>*>+>*",
+    "semantic_operations": [
+      "array_literal",
+      "weighted_indexing"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-COUNT_EVEN_FIVE-02",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read five numbers into an array, count even entries, then add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=2.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "count_even_five_2",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-count_even_five-2",
+    "structural_signature": "split5>array>loop>modulo_if>count>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "parity_count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-ABSOLUTE_SUM_THREE-02",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<3, i++) { total += math.ABS(values[i]). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "absolute_sum_three_2",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-absolute_sum_three-2",
+    "structural_signature": "split3>array>loop>abs_sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-RANGE_THREE-02",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print max-min plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+2).",
+    "algorithmic_structure": "range_three_2",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-range_three-2",
+    "structural_signature": "split3>array>nested_minmax>subtract>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_index",
+      "nested_minmax",
+      "range"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-DOT_THREE-02",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read six numbers as two arrays of three and print their dot product plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER f = strings.TO_NUMBER(parts[5]).\nNUMBER[] left=[a,b,c].\nNUMBER[] right=[d,e,f].\nDISPLAYNL(left[0]*right[0]+left[1]*right[1]+left[2]*right[2]+2).",
+    "algorithmic_structure": "dot_three_2",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-dot_three-2",
+    "structural_signature": "split6>two_arrays>dot_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+>*>+",
+    "semantic_operations": [
+      "two_arrays",
+      "dot_product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-WEIGHTED_FOUR-03",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+3*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 3 * values[3]).",
+    "algorithmic_structure": "weighted_four_3",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-weighted_four-3",
+    "structural_signature": "split4>array>weighted_indices>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>+>*>+>*",
+    "semantic_operations": [
+      "array_literal",
+      "weighted_indexing"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-COUNT_EVEN_FIVE-03",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read five numbers into an array, count even entries, then add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=3.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "count_even_five_3",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-count_even_five-3",
+    "structural_signature": "split5>array>loop>modulo_if>count>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "parity_count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-ABSOLUTE_SUM_THREE-03",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<3, i++) { total += math.ABS(values[i]). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "absolute_sum_three_3",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-absolute_sum_three-3",
+    "structural_signature": "split3>array>loop>abs_sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-RANGE_THREE-03",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print max-min plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+3).",
+    "algorithmic_structure": "range_three_3",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-range_three-3",
+    "structural_signature": "split3>array>nested_minmax>subtract>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_index",
+      "nested_minmax",
+      "range"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-DOT_THREE-03",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read six numbers as two arrays of three and print their dot product plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER f = strings.TO_NUMBER(parts[5]).\nNUMBER[] left=[a,b,c].\nNUMBER[] right=[d,e,f].\nDISPLAYNL(left[0]*right[0]+left[1]*right[1]+left[2]*right[2]+3).",
+    "algorithmic_structure": "dot_three_3",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-dot_three-3",
+    "structural_signature": "split6>two_arrays>dot_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+>*>+",
+    "semantic_operations": [
+      "two_arrays",
+      "dot_product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-WEIGHTED_FOUR-04",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+4*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 4 * values[3]).",
+    "algorithmic_structure": "weighted_four_4",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-weighted_four-4",
+    "structural_signature": "split4>array>weighted_indices>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>+>*>+>*",
+    "semantic_operations": [
+      "array_literal",
+      "weighted_indexing"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-COUNT_EVEN_FIVE-04",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read five numbers into an array, count even entries, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=4.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "count_even_five_4",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-count_even_five-4",
+    "structural_signature": "split5>array>loop>modulo_if>count>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "parity_count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-ABSOLUTE_SUM_THREE-04",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<3, i++) { total += math.ABS(values[i]). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "absolute_sum_three_4",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-absolute_sum_three-4",
+    "structural_signature": "split3>array>loop>abs_sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-RANGE_THREE-04",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print max-min plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+4).",
+    "algorithmic_structure": "range_three_4",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-range_three-4",
+    "structural_signature": "split3>array>nested_minmax>subtract>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_index",
+      "nested_minmax",
+      "range"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-DOT_THREE-04",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read six numbers as two arrays of three and print their dot product plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER f = strings.TO_NUMBER(parts[5]).\nNUMBER[] left=[a,b,c].\nNUMBER[] right=[d,e,f].\nDISPLAYNL(left[0]*right[0]+left[1]*right[1]+left[2]*right[2]+4).",
+    "algorithmic_structure": "dot_three_4",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-dot_three-4",
+    "structural_signature": "split6>two_arrays>dot_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+>*>+",
+    "semantic_operations": [
+      "two_arrays",
+      "dot_product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-WEIGHTED_FOUR-05",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+5*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 5 * values[3]).",
+    "algorithmic_structure": "weighted_four_5",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-weighted_four-5",
+    "structural_signature": "split4>array>weighted_indices>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>*>+>*>+>*",
+    "semantic_operations": [
+      "array_literal",
+      "weighted_indexing"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-COUNT_EVEN_FIVE-05",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read five numbers into an array, count even entries, then add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=5.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+    "algorithmic_structure": "count_even_five_5",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-count_even_five-5",
+    "structural_signature": "split5>array>loop>modulo_if>count>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "parity_count"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-ABSOLUTE_SUM_THREE-05",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<3, i++) { total += math.ABS(values[i]). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "absolute_sum_three_5",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-absolute_sum_three-5",
+    "structural_signature": "split3>array>loop>abs_sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-RANGE_THREE-05",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read three numbers into an array and print max-min plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+5).",
+    "algorithmic_structure": "range_three_5",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-range_three-5",
+    "structural_signature": "split3>array>nested_minmax>subtract>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_index",
+      "nested_minmax",
+      "range"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-AR-DOT_THREE-05",
+    "split": "phase2b_train",
+    "family": "arrays",
+    "prompt": "Read six numbers as two arrays of three and print their dot product plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER f = strings.TO_NUMBER(parts[5]).\nNUMBER[] left=[a,b,c].\nNUMBER[] right=[d,e,f].\nDISPLAYNL(left[0]*right[0]+left[1]*right[1]+left[2]*right[2]+5).",
+    "algorithmic_structure": "dot_three_5",
+    "control_flow": "array_processing",
+    "template_lineage": "p2b-tr-ar-dot_three-5",
+    "structural_signature": "split6>two_arrays>dot_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+>*>+",
+    "semantic_operations": [
+      "two_arrays",
+      "dot_product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-REPLACE_VOWEL-01",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and replace every 'a' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"a\",\"#\")).",
+    "algorithmic_structure": "replace_vowel_1",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-replace_vowel-1",
+    "structural_signature": "input>replace>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-COUNT_LETTER-01",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print how many times 'a' occurs, plus 1.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"a\")+1).",
+    "algorithmic_structure": "count_letter_1",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-count_letter-1",
+    "structural_signature": "input>count>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CHAR_AT-01",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text of length at least 6 and print the character at zero-based index 1.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CHARAT(text,1)).",
+    "algorithmic_structure": "char_at_1",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-char_at-1",
+    "structural_signature": "input>charat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "character_index"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-TRIM_MARKER-01",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and trim '1' characters from both ends.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.TRIM(text,\"1\")).",
+    "algorithmic_structure": "trim_marker_1",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-trim_marker-1",
+    "structural_signature": "input>trim>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim_character_set"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CONTAINS_LABEL-01",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print HAS1 if it contains 'aa', otherwise NO1.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"aa\")) { DISPLAYNL(\"HAS1\"). } ELSE { DISPLAYNL(\"NO1\"). }",
+    "algorithmic_structure": "contains_label_1",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-contains_label-1",
+    "structural_signature": "input>contains_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "contains",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-REPLACE_VOWEL-02",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and replace every 'e' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"e\",\"#\")).",
+    "algorithmic_structure": "replace_vowel_2",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-replace_vowel-2",
+    "structural_signature": "input>replace>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-COUNT_LETTER-02",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print how many times 'e' occurs, plus 2.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"e\")+2).",
+    "algorithmic_structure": "count_letter_2",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-count_letter-2",
+    "structural_signature": "input>count>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CHAR_AT-02",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text of length at least 6 and print the character at zero-based index 2.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CHARAT(text,2)).",
+    "algorithmic_structure": "char_at_2",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-char_at-2",
+    "structural_signature": "input>charat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "character_index"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-TRIM_MARKER-02",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and trim '2' characters from both ends.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.TRIM(text,\"2\")).",
+    "algorithmic_structure": "trim_marker_2",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-trim_marker-2",
+    "structural_signature": "input>trim>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim_character_set"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CONTAINS_LABEL-02",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print HAS2 if it contains 'ee', otherwise NO2.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"ee\")) { DISPLAYNL(\"HAS2\"). } ELSE { DISPLAYNL(\"NO2\"). }",
+    "algorithmic_structure": "contains_label_2",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-contains_label-2",
+    "structural_signature": "input>contains_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "contains",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-REPLACE_VOWEL-03",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and replace every 'i' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"i\",\"#\")).",
+    "algorithmic_structure": "replace_vowel_3",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-replace_vowel-3",
+    "structural_signature": "input>replace>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-COUNT_LETTER-03",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print how many times 'i' occurs, plus 3.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"i\")+3).",
+    "algorithmic_structure": "count_letter_3",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-count_letter-3",
+    "structural_signature": "input>count>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CHAR_AT-03",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text of length at least 6 and print the character at zero-based index 3.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CHARAT(text,3)).",
+    "algorithmic_structure": "char_at_3",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-char_at-3",
+    "structural_signature": "input>charat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "character_index"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-TRIM_MARKER-03",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and trim '3' characters from both ends.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.TRIM(text,\"3\")).",
+    "algorithmic_structure": "trim_marker_3",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-trim_marker-3",
+    "structural_signature": "input>trim>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim_character_set"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CONTAINS_LABEL-03",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print HAS3 if it contains 'ii', otherwise NO3.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"ii\")) { DISPLAYNL(\"HAS3\"). } ELSE { DISPLAYNL(\"NO3\"). }",
+    "algorithmic_structure": "contains_label_3",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-contains_label-3",
+    "structural_signature": "input>contains_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "contains",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-REPLACE_VOWEL-04",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and replace every 'o' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"o\",\"#\")).",
+    "algorithmic_structure": "replace_vowel_4",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-replace_vowel-4",
+    "structural_signature": "input>replace>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-COUNT_LETTER-04",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print how many times 'o' occurs, plus 4.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"o\")+4).",
+    "algorithmic_structure": "count_letter_4",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-count_letter-4",
+    "structural_signature": "input>count>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CHAR_AT-04",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text of length at least 6 and print the character at zero-based index 4.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CHARAT(text,4)).",
+    "algorithmic_structure": "char_at_4",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-char_at-4",
+    "structural_signature": "input>charat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "character_index"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-TRIM_MARKER-04",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and trim '4' characters from both ends.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.TRIM(text,\"4\")).",
+    "algorithmic_structure": "trim_marker_4",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-trim_marker-4",
+    "structural_signature": "input>trim>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim_character_set"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CONTAINS_LABEL-04",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print HAS4 if it contains 'oo', otherwise NO4.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"oo\")) { DISPLAYNL(\"HAS4\"). } ELSE { DISPLAYNL(\"NO4\"). }",
+    "algorithmic_structure": "contains_label_4",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-contains_label-4",
+    "structural_signature": "input>contains_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "contains",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-REPLACE_VOWEL-05",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and replace every 'u' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"u\",\"#\")).",
+    "algorithmic_structure": "replace_vowel_5",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-replace_vowel-5",
+    "structural_signature": "input>replace>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-COUNT_LETTER-05",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print how many times 'u' occurs, plus 5.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"u\")+5).",
+    "algorithmic_structure": "count_letter_5",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-count_letter-5",
+    "structural_signature": "input>count>offset>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CHAR_AT-05",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text of length at least 6 and print the character at zero-based index 5.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CHARAT(text,5)).",
+    "algorithmic_structure": "char_at_5",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-char_at-5",
+    "structural_signature": "input>charat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "character_index"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-TRIM_MARKER-05",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and trim '5' characters from both ends.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.TRIM(text,\"5\")).",
+    "algorithmic_structure": "trim_marker_5",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-trim_marker-5",
+    "structural_signature": "input>trim>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim_character_set"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-ST-CONTAINS_LABEL-05",
+    "split": "phase2b_train",
+    "family": "strings",
+    "prompt": "Read text and print HAS5 if it contains 'uu', otherwise NO5.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"uu\")) { DISPLAYNL(\"HAS5\"). } ELSE { DISPLAYNL(\"NO5\"). }",
+    "algorithmic_structure": "contains_label_5",
+    "control_flow": "string_operation",
+    "template_lineage": "p2b-tr-st-contains_label-5",
+    "structural_signature": "input>contains_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "contains",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TAGGED_PAIR-01",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print <1:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<1:\", first), \">[\"), second), \"]\")).",
+    "algorithmic_structure": "tagged_pair_1",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-tagged_pair-1",
+    "structural_signature": "split2>tagged_concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TWO_LABELED_LINES-01",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print X1=first then Y1=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X1=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y1=\",second)).",
+    "algorithmic_structure": "two_labeled_lines_1",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-two_labeled_lines-1",
+    "structural_signature": "split2>two_labeled_displays",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "two_line_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-CASE_PAIR-01",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/1\")).",
+    "algorithmic_structure": "case_pair_1",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-case_pair-1",
+    "structural_signature": "split2>upper_lower>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>/",
+    "semantic_operations": [
+      "case_transform",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-REVERSED_FIELDS-01",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print reverse(second)|reverse(first)|1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(second), \"|\"), strings.REVERSE(first)), \"|1\")).",
+    "algorithmic_structure": "reversed_fields_1",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-reversed_fields-1",
+    "structural_signature": "split2>reverse_both>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_reverse",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-LENGTH_PRODUCT-01",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print the product of their lengths plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+1).",
+    "algorithmic_structure": "length_product_1",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-length_product-1",
+    "structural_signature": "split2>length_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "field_lengths",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TAGGED_PAIR-02",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print <2:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<2:\", first), \">[\"), second), \"]\")).",
+    "algorithmic_structure": "tagged_pair_2",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-tagged_pair-2",
+    "structural_signature": "split2>tagged_concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TWO_LABELED_LINES-02",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print X2=first then Y2=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X2=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y2=\",second)).",
+    "algorithmic_structure": "two_labeled_lines_2",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-two_labeled_lines-2",
+    "structural_signature": "split2>two_labeled_displays",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "two_line_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-CASE_PAIR-02",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/2\")).",
+    "algorithmic_structure": "case_pair_2",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-case_pair-2",
+    "structural_signature": "split2>upper_lower>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>/",
+    "semantic_operations": [
+      "case_transform",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-REVERSED_FIELDS-02",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print reverse(second)|reverse(first)|2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(second), \"|\"), strings.REVERSE(first)), \"|2\")).",
+    "algorithmic_structure": "reversed_fields_2",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-reversed_fields-2",
+    "structural_signature": "split2>reverse_both>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_reverse",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-LENGTH_PRODUCT-02",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print the product of their lengths plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+2).",
+    "algorithmic_structure": "length_product_2",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-length_product-2",
+    "structural_signature": "split2>length_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "field_lengths",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TAGGED_PAIR-03",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print <3:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<3:\", first), \">[\"), second), \"]\")).",
+    "algorithmic_structure": "tagged_pair_3",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-tagged_pair-3",
+    "structural_signature": "split2>tagged_concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TWO_LABELED_LINES-03",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print X3=first then Y3=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X3=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y3=\",second)).",
+    "algorithmic_structure": "two_labeled_lines_3",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-two_labeled_lines-3",
+    "structural_signature": "split2>two_labeled_displays",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "two_line_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-CASE_PAIR-03",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/3\")).",
+    "algorithmic_structure": "case_pair_3",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-case_pair-3",
+    "structural_signature": "split2>upper_lower>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>/",
+    "semantic_operations": [
+      "case_transform",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-REVERSED_FIELDS-03",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print reverse(second)|reverse(first)|3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(second), \"|\"), strings.REVERSE(first)), \"|3\")).",
+    "algorithmic_structure": "reversed_fields_3",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-reversed_fields-3",
+    "structural_signature": "split2>reverse_both>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_reverse",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-LENGTH_PRODUCT-03",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print the product of their lengths plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+3).",
+    "algorithmic_structure": "length_product_3",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-length_product-3",
+    "structural_signature": "split2>length_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "field_lengths",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TAGGED_PAIR-04",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print <4:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<4:\", first), \">[\"), second), \"]\")).",
+    "algorithmic_structure": "tagged_pair_4",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-tagged_pair-4",
+    "structural_signature": "split2>tagged_concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TWO_LABELED_LINES-04",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print X4=first then Y4=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X4=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y4=\",second)).",
+    "algorithmic_structure": "two_labeled_lines_4",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-two_labeled_lines-4",
+    "structural_signature": "split2>two_labeled_displays",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "two_line_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-CASE_PAIR-04",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/4\")).",
+    "algorithmic_structure": "case_pair_4",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-case_pair-4",
+    "structural_signature": "split2>upper_lower>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>/",
+    "semantic_operations": [
+      "case_transform",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-REVERSED_FIELDS-04",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print reverse(second)|reverse(first)|4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(second), \"|\"), strings.REVERSE(first)), \"|4\")).",
+    "algorithmic_structure": "reversed_fields_4",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-reversed_fields-4",
+    "structural_signature": "split2>reverse_both>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_reverse",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-LENGTH_PRODUCT-04",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print the product of their lengths plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+4).",
+    "algorithmic_structure": "length_product_4",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-length_product-4",
+    "structural_signature": "split2>length_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "field_lengths",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TAGGED_PAIR-05",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print <5:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<5:\", first), \">[\"), second), \"]\")).",
+    "algorithmic_structure": "tagged_pair_5",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-tagged_pair-5",
+    "structural_signature": "split2>tagged_concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-TWO_LABELED_LINES-05",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print X5=first then Y5=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X5=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y5=\",second)).",
+    "algorithmic_structure": "two_labeled_lines_5",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-two_labeled_lines-5",
+    "structural_signature": "split2>two_labeled_displays",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>DISPLAYNL",
+    "semantic_operations": [
+      "two_line_format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-CASE_PAIR-05",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/5\")).",
+    "algorithmic_structure": "case_pair_5",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-case_pair-5",
+    "structural_signature": "split2>upper_lower>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/>/",
+    "semantic_operations": [
+      "case_transform",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-REVERSED_FIELDS-05",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print reverse(second)|reverse(first)|5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(second), \"|\"), strings.REVERSE(first)), \"|5\")).",
+    "algorithmic_structure": "reversed_fields_5",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-reversed_fields-5",
+    "structural_signature": "split2>reverse_both>concat>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "field_reverse",
+      "format"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-IO-LENGTH_PRODUCT-05",
+    "split": "phase2b_train",
+    "family": "input_output",
+    "prompt": "Read first|second and print the product of their lengths plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+5).",
+    "algorithmic_structure": "length_product_5",
+    "control_flow": "input_output_format",
+    "template_lineage": "p2b-tr-io-length_product-5",
+    "structural_signature": "split2>length_product>display",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "field_lengths",
+      "product"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-INCLUDE_EXCLUDE_SUM-01",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n; sum values 1..n divisible by 2 but not by 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0 AND i%3!=0) { total+=i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "include_exclude_sum_1",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-include_exclude_sum-1",
+    "structural_signature": "input>loop>and_modulo_if>sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "dual_modulo",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FACTORIAL_CLASS-01",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n, compute n!, and print BIG1 if it exceeds 20, else SMALL1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { product*=i. }\nIF (product>20) { DISPLAYNL(\"BIG1\"). } ELSE { DISPLAYNL(\"SMALL1\"). }",
+    "algorithmic_structure": "factorial_class_1",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-factorial_class-1",
+    "structural_signature": "input>product_loop>threshold_if>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "factorial",
+      "threshold_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-ARRAY_POSITIVE_SUM-01",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read four numbers into an array; sum positive values and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "array_positive_sum_1",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-array_positive_sum-1",
+    "structural_signature": "split4>array>loop>positive_if>sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "positive_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-STRING_LENGTH_CLASS-01",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read text; lowercase it and print LONG1 if length is at least 5, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=5) { DISPLAYNL(\"LONG1\"). } ELSE { DISPLAYNL(low). }",
+    "algorithmic_structure": "string_length_class_1",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-string_length_class-1",
+    "structural_signature": "input>lower>length_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "length_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FUNCTION_LOOP_SUM-01",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Define a function returning x*x+1; read n and sum the function over 1..n.",
+    "target": "FUNCTION term(NUMBER x) { RETURN x*x+1. } RETURNS NUMBER.\nNUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=term(i). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "function_loop_sum_1",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-function_loop_sum-1",
+    "structural_signature": "function>input>loop>call_accumulate>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "function",
+      "loop",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-INCLUDE_EXCLUDE_SUM-02",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n; sum values 1..n divisible by 3 but not by 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==0 AND i%4!=0) { total+=i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "include_exclude_sum_2",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-include_exclude_sum-2",
+    "structural_signature": "input>loop>and_modulo_if>sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "dual_modulo",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FACTORIAL_CLASS-02",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n, compute n!, and print BIG2 if it exceeds 40, else SMALL2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { product*=i. }\nIF (product>40) { DISPLAYNL(\"BIG2\"). } ELSE { DISPLAYNL(\"SMALL2\"). }",
+    "algorithmic_structure": "factorial_class_2",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-factorial_class-2",
+    "structural_signature": "input>product_loop>threshold_if>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "factorial",
+      "threshold_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-ARRAY_POSITIVE_SUM-02",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read four numbers into an array; sum positive values and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "array_positive_sum_2",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-array_positive_sum-2",
+    "structural_signature": "split4>array>loop>positive_if>sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "positive_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-STRING_LENGTH_CLASS-02",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read text; lowercase it and print LONG2 if length is at least 6, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=6) { DISPLAYNL(\"LONG2\"). } ELSE { DISPLAYNL(low). }",
+    "algorithmic_structure": "string_length_class_2",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-string_length_class-2",
+    "structural_signature": "input>lower>length_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "length_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FUNCTION_LOOP_SUM-02",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Define a function returning x*x+2; read n and sum the function over 1..n.",
+    "target": "FUNCTION term(NUMBER x) { RETURN x*x+2. } RETURNS NUMBER.\nNUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=term(i). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "function_loop_sum_2",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-function_loop_sum-2",
+    "structural_signature": "function>input>loop>call_accumulate>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "function",
+      "loop",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-INCLUDE_EXCLUDE_SUM-03",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n; sum values 1..n divisible by 4 but not by 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0 AND i%5!=0) { total+=i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "include_exclude_sum_3",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-include_exclude_sum-3",
+    "structural_signature": "input>loop>and_modulo_if>sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "dual_modulo",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FACTORIAL_CLASS-03",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n, compute n!, and print BIG3 if it exceeds 60, else SMALL3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { product*=i. }\nIF (product>60) { DISPLAYNL(\"BIG3\"). } ELSE { DISPLAYNL(\"SMALL3\"). }",
+    "algorithmic_structure": "factorial_class_3",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-factorial_class-3",
+    "structural_signature": "input>product_loop>threshold_if>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "factorial",
+      "threshold_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-ARRAY_POSITIVE_SUM-03",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read four numbers into an array; sum positive values and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "array_positive_sum_3",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-array_positive_sum-3",
+    "structural_signature": "split4>array>loop>positive_if>sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "positive_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-STRING_LENGTH_CLASS-03",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read text; lowercase it and print LONG3 if length is at least 7, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=7) { DISPLAYNL(\"LONG3\"). } ELSE { DISPLAYNL(low). }",
+    "algorithmic_structure": "string_length_class_3",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-string_length_class-3",
+    "structural_signature": "input>lower>length_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "length_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FUNCTION_LOOP_SUM-03",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Define a function returning x*x+3; read n and sum the function over 1..n.",
+    "target": "FUNCTION term(NUMBER x) { RETURN x*x+3. } RETURNS NUMBER.\nNUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=term(i). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "function_loop_sum_3",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-function_loop_sum-3",
+    "structural_signature": "function>input>loop>call_accumulate>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "function",
+      "loop",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-INCLUDE_EXCLUDE_SUM-04",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n; sum values 1..n divisible by 5 but not by 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%5==0 AND i%6!=0) { total+=i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "include_exclude_sum_4",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-include_exclude_sum-4",
+    "structural_signature": "input>loop>and_modulo_if>sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "dual_modulo",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FACTORIAL_CLASS-04",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n, compute n!, and print BIG4 if it exceeds 80, else SMALL4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { product*=i. }\nIF (product>80) { DISPLAYNL(\"BIG4\"). } ELSE { DISPLAYNL(\"SMALL4\"). }",
+    "algorithmic_structure": "factorial_class_4",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-factorial_class-4",
+    "structural_signature": "input>product_loop>threshold_if>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "factorial",
+      "threshold_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-ARRAY_POSITIVE_SUM-04",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read four numbers into an array; sum positive values and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "array_positive_sum_4",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-array_positive_sum-4",
+    "structural_signature": "split4>array>loop>positive_if>sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "positive_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-STRING_LENGTH_CLASS-04",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read text; lowercase it and print LONG4 if length is at least 8, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=8) { DISPLAYNL(\"LONG4\"). } ELSE { DISPLAYNL(low). }",
+    "algorithmic_structure": "string_length_class_4",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-string_length_class-4",
+    "structural_signature": "input>lower>length_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "length_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FUNCTION_LOOP_SUM-04",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Define a function returning x*x+4; read n and sum the function over 1..n.",
+    "target": "FUNCTION term(NUMBER x) { RETURN x*x+4. } RETURNS NUMBER.\nNUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=term(i). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "function_loop_sum_4",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-function_loop_sum-4",
+    "structural_signature": "function>input>loop>call_accumulate>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "function",
+      "loop",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-INCLUDE_EXCLUDE_SUM-05",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n; sum values 1..n divisible by 6 but not by 7.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%6==0 AND i%7!=0) { total+=i. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "include_exclude_sum_5",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-include_exclude_sum-5",
+    "structural_signature": "input>loop>and_modulo_if>sum>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>AND>%>!=>+=>DISPLAYNL",
+    "semantic_operations": [
+      "loop_filter",
+      "dual_modulo",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FACTORIAL_CLASS-05",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read n, compute n!, and print BIG5 if it exceeds 100, else SMALL5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { product*=i. }\nIF (product>100) { DISPLAYNL(\"BIG5\"). } ELSE { DISPLAYNL(\"SMALL5\"). }",
+    "algorithmic_structure": "factorial_class_5",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-factorial_class-5",
+    "structural_signature": "input>product_loop>threshold_if>display",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*=>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "factorial",
+      "threshold_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-ARRAY_POSITIVE_SUM-05",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read four numbers into an array; sum positive values and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]. } }\nDISPLAYNL(total).",
+    "algorithmic_structure": "array_positive_sum_5",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-array_positive_sum-5",
+    "structural_signature": "split4>array>loop>positive_if>sum>display",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "array_loop",
+      "positive_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-STRING_LENGTH_CLASS-05",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Read text; lowercase it and print LONG5 if length is at least 9, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=9) { DISPLAYNL(\"LONG5\"). } ELSE { DISPLAYNL(low). }",
+    "algorithmic_structure": "string_length_class_5",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-string_length_class-5",
+    "structural_signature": "input>lower>length_if>display",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>>=>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "length_branch"
+    ]
+  },
+  {
+    "example_id": "P2B-TR-CP-FUNCTION_LOOP_SUM-05",
+    "split": "phase2b_train",
+    "family": "composition_algorithms",
+    "prompt": "Define a function returning x*x+5; read n and sum the function over 1..n.",
+    "target": "FUNCTION term(NUMBER x) { RETURN x*x+5. } RETURNS NUMBER.\nNUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=term(i). }\nDISPLAYNL(total).",
+    "algorithmic_structure": "function_loop_sum_5",
+    "control_flow": "composed_algorithm",
+    "template_lineage": "p2b-tr-cp-function_loop_sum-5",
+    "structural_signature": "function>input>loop>call_accumulate>display",
+    "ast_proxy_signature": "FUNCTION>RETURN>*>+>RETURNS>INPUT>LOOP><=>+>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "function",
+      "loop",
+      "sum"
+    ]
+  }
+]

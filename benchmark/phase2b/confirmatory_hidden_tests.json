@@ -1,0 +1,3458 @@
+{
+  "P2B-EVAL-EV01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-34.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "118.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "722.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "16\n",
+      "expected_stdout": "4089.0"
+    }
+  ],
+  "P2B-EVAL-EV02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "37.0"
+    }
+  ],
+  "P2B-EVAL-EV03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "-40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P2B-EVAL-EV04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "61.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "153.0"
+    }
+  ],
+  "P2B-EVAL-EV05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "63.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-175.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "480.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "724.0"
+    }
+  ],
+  "P2B-EVAL-EV06": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "4.732050807568877"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "5.23606797749979"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "16\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2B-EVAL-EV07": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "16\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2B-EVAL-EV08": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P2B-EVAL-EV09": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-19.444444444444443"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-17.77777777777778"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "-15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "-12.777777777777779"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "16\n",
+      "expected_stdout": "-8.88888888888889"
+    }
+  ],
+  "P2B-EVAL-EV10": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "4.5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|6|2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|5|4\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|3|7\n",
+      "expected_stdout": "10.5"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|-2|5\n",
+      "expected_stdout": "20.0"
+    }
+  ],
+  "P2B-EVAL-EV11": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "2.5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|0|5|1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "0.5"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|20|30|40\n",
+      "expected_stdout": "25.0"
+    }
+  ],
+  "P2B-EVAL-EV12": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "65.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "153.0"
+    }
+  ],
+  "P2B-EVAL-EV13": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "1.5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-3.75"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2B-EVAL-EV14": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "0.02"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-0.12"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "-0.08"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "0.36"
+    }
+  ],
+  "P2B-EVAL-EV15": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "2.23606797749979"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "8.06225774829855"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "12.36931687685298"
+    }
+  ],
+  "P2B-EVAL-EV16": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "64.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "576.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "6400.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "16\n",
+      "expected_stdout": "65025.0"
+    }
+  ],
+  "P2B-EVAL-CD01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|3|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|5|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3|4|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "1|2|8\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2B-EVAL-CD02": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "C"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "C"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "C"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "C"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "A"
+    }
+  ],
+  "P2B-EVAL-CD03": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "COMMON"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "LEAP"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "COMMON"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "COMMON"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "COMMON"
+    }
+  ],
+  "P2B-EVAL-CD04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "INVALID"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|3|3\n",
+      "expected_stdout": "VALID"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|5|2\n",
+      "expected_stdout": "VALID"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3|4|5\n",
+      "expected_stdout": "VALID"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "1|2|8\n",
+      "expected_stdout": "INVALID"
+    }
+  ],
+  "P2B-EVAL-CD05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0\n",
+      "expected_stdout": "ORIGIN"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|-1\n",
+      "expected_stdout": "Q4"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2\n",
+      "expected_stdout": "Q3"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "4|9\n",
+      "expected_stdout": "Q1"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8|8\n",
+      "expected_stdout": "Q1"
+    }
+  ],
+  "P2B-EVAL-CD06": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "POS"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|3|3\n",
+      "expected_stdout": "POS"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|5|2\n",
+      "expected_stdout": "POS"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3|4|5\n",
+      "expected_stdout": "POS"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "1|2|8\n",
+      "expected_stdout": "POS"
+    }
+  ],
+  "P2B-EVAL-CD07": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "NEGATIVE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "ZERO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "POSITIVE_ODD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "POSITIVE_ODD"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "POSITIVE_EVEN"
+    }
+  ],
+  "P2B-EVAL-CD08": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "OUTSIDE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "OUTSIDE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "INSIDE"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "EDGE"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "OUTSIDE"
+    }
+  ],
+  "P2B-EVAL-CD09": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "NEITHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "BOTH"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "NEITHER"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "THREE"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "TWO"
+    }
+  ],
+  "P2B-EVAL-CD10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0\n",
+      "expected_stdout": "TIE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|-1\n",
+      "expected_stdout": "TIE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "4|9\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8|8\n",
+      "expected_stdout": "TIE"
+    }
+  ],
+  "P2B-EVAL-CD11": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "FREE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "FREE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "HEAVY"
+    }
+  ],
+  "P2B-EVAL-CD12": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "NO"
+    }
+  ],
+  "P2B-EVAL-CD13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0\n",
+      "expected_stdout": "DIFFERENT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|-1\n",
+      "expected_stdout": "DIFFERENT"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2\n",
+      "expected_stdout": "SAME"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "4|9\n",
+      "expected_stdout": "SAME"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8|8\n",
+      "expected_stdout": "SAME"
+    }
+  ],
+  "P2B-EVAL-CD14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0\n",
+      "expected_stdout": "B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|-1\n",
+      "expected_stdout": "A"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2\n",
+      "expected_stdout": "B"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "4|9\n",
+      "expected_stdout": "B"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8|8\n",
+      "expected_stdout": "B"
+    }
+  ],
+  "P2B-EVAL-CD15": [
+    {
+      "case_id": "case-1",
+      "stdin": "-5\n",
+      "expected_stdout": "REJECT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "REJECT"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "ACCEPT"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "REJECT"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "100\n",
+      "expected_stdout": "REJECT"
+    }
+  ],
+  "P2B-EVAL-CD16": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "NONE"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|3|3\n",
+      "expected_stdout": "ALL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|5|2\n",
+      "expected_stdout": "TWO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3|4|5\n",
+      "expected_stdout": "NONE"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "1|2|8\n",
+      "expected_stdout": "NONE"
+    }
+  ],
+  "P2B-EVAL-LP01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "354.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "2275.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "25333.0"
+    }
+  ],
+  "P2B-EVAL-LP02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2B-EVAL-LP03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "33.0"
+    }
+  ],
+  "P2B-EVAL-LP04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "22400.0"
+    }
+  ],
+  "P2B-EVAL-LP05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "112.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "440.0"
+    }
+  ],
+  "P2B-EVAL-LP06": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2B-EVAL-LP07": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "127.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "2047.0"
+    }
+  ],
+  "P2B-EVAL-LP08": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "165.0"
+    }
+  ],
+  "P2B-EVAL-LP09": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "55.0"
+    }
+  ],
+  "P2B-EVAL-LP10": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "56.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "220.0"
+    }
+  ],
+  "P2B-EVAL-LP11": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "-21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "-55.0"
+    }
+  ],
+  "P2B-EVAL-LP12": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P2B-EVAL-LP13": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P2B-EVAL-LP14": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "56.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "220.0"
+    }
+  ],
+  "P2B-EVAL-LP15": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P2B-EVAL-LP16": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "210.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "756.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "4290.0"
+    }
+  ],
+  "P2B-EVAL-FN01": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "51.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "123.0"
+    }
+  ],
+  "P2B-EVAL-FN02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|6|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|5|4\n",
+      "expected_stdout": "2.3333333333333335"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|3|7\n",
+      "expected_stdout": "3.3333333333333335"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|-2|5\n",
+      "expected_stdout": "4.333333333333333"
+    }
+  ],
+  "P2B-EVAL-FN03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "18.0"
+    }
+  ],
+  "P2B-EVAL-FN04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|6|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|5|4\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|3|7\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|-2|5\n",
+      "expected_stdout": "-2.0"
+    }
+  ],
+  "P2B-EVAL-FN05": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2B-EVAL-FN06": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P2B-EVAL-FN07": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-24.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "210.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "990.0"
+    }
+  ],
+  "P2B-EVAL-FN08": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P2B-EVAL-FN09": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "25.0"
+    }
+  ],
+  "P2B-EVAL-FN10": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "P2B-EVAL-FN11": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P2B-EVAL-FN12": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|6|2\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|5|4\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|3|7\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|-2|5\n",
+      "expected_stdout": "21.0"
+    }
+  ],
+  "P2B-EVAL-FN13": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "4.5"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "50.0"
+    }
+  ],
+  "P2B-EVAL-FN14": [
+    {
+      "case_id": "case-1",
+      "stdin": "-3\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2B-EVAL-FN15": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P2B-EVAL-FN16": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2\n",
+      "expected_stdout": "2.23606797749979"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-3|4\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|-1\n",
+      "expected_stdout": "8.06225774829855"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12|3\n",
+      "expected_stdout": "12.36931687685298"
+    }
+  ],
+  "P2B-EVAL-AR01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P2B-EVAL-AR02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "-700.0"
+    }
+  ],
+  "P2B-EVAL-AR03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P2B-EVAL-AR04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "-5.0"
+    }
+  ],
+  "P2B-EVAL-AR05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P2B-EVAL-AR06": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P2B-EVAL-AR07": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P2B-EVAL-AR08": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "27.0"
+    }
+  ],
+  "P2B-EVAL-AR09": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2B-EVAL-AR10": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "P2B-EVAL-AR11": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "178.0"
+    }
+  ],
+  "P2B-EVAL-AR12": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P2B-EVAL-AR13": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P2B-EVAL-AR14": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "-15.0"
+    }
+  ],
+  "P2B-EVAL-AR15": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4|5\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1|-4\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7|1\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P2B-EVAL-AR16": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|2|3|4\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|1|5|1\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4|-1|2|-3\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|2|-5|7\n",
+      "expected_stdout": "27.0"
+    }
+  ],
+  "P2B-EVAL-ST01": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "R=EDOCOG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "R=ATEB AHPLA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "R=WEIVERP"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "R=GNITSET"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "R=LEVEL"
+    }
+  ],
+  "P2B-EVAL-ST02": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "gocode:6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha beta:10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "preview:7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "testing:7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "level:5.0"
+    }
+  ],
+  "P2B-EVAL-ST03": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "GoCod3"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "@lph@ b3t@"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "PREvi3w"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "t3sting"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "l3v3l"
+    }
+  ],
+  "P2B-EVAL-ST04": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "G-e"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "a-a"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "P-w"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "t-g"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "l-l"
+    }
+  ],
+  "P2B-EVAL-ST05": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P2B-EVAL-ST06": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "T=edoCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "T=ateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "T=weivERP"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "T=gnitset"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "T=level"
+    }
+  ],
+  "P2B-EVAL-ST07": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "NO"
+    }
+  ],
+  "P2B-EVAL-ST08": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "NO"
+    }
+  ],
+  "P2B-EVAL-ST09": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P2B-EVAL-ST10": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "D=edoCoGedoCoG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "D=ateb ahplaateb ahpla"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "D=weivERPweivERP"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "D=gnitsetgnitset"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "D=levellevel"
+    }
+  ],
+  "P2B-EVAL-ST11": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "o"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": " "
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "v"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "t"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "v"
+    }
+  ],
+  "P2B-EVAL-ST12": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "GoCode"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "alpha_beta"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "PREview"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "testing"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "level"
+    }
+  ],
+  "P2B-EVAL-ST13": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "MEDIUM"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "MEDIUM"
+    }
+  ],
+  "P2B-EVAL-ST14": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "PAL"
+    }
+  ],
+  "P2B-EVAL-ST15": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "G:C:e"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "a:p:a"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "P:E:w"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "t:s:g"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "l:v:l"
+    }
+  ],
+  "P2B-EVAL-ST16": [
+    {
+      "case_id": "case-1",
+      "stdin": "GoCode\n",
+      "expected_stdout": "gocode"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "alpha beta\n",
+      "expected_stdout": "ALPHA BETA"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "PREview\n",
+      "expected_stdout": "preview"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "testing\n",
+      "expected_stdout": "TESTING"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "level\n",
+      "expected_stdout": "LEVEL"
+    }
+  ],
+  "P2B-EVAL-IO01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|2\n",
+      "expected_stdout": "A#6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|3.5\n",
+      "expected_stdout": "mass#10.5"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|0\n",
+      "expected_stdout": "zero#0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "neg|-2\n",
+      "expected_stdout": "neg#-6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "x|10\n",
+      "expected_stdout": "x#30.0"
+    }
+  ],
+  "P2B-EVAL-IO02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P2B-EVAL-IO03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "PAIR=a~B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "PAIR=mass~UNIT"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "PAIR=zero~NIL"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "PAIR=hello~WORLD"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "PAIR=two words~OK"
+    }
+  ],
+  "P2B-EVAL-IO04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "REV=B::A"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "REV=tinu::ssam"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "REV=lin::orez"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "REV=dlrow::olleh"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "REV=ko::sdrow owt"
+    }
+  ],
+  "P2B-EVAL-IO05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "50.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "85.0"
+    }
+  ],
+  "P2B-EVAL-IO06": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "left:a\nright:b"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "left:mass\nright:unit"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "left:zero\nright:nil"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "left:hello\nright:world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "left:two words\nright:ok"
+    }
+  ],
+  "P2B-EVAL-IO07": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|3\n",
+      "expected_stdout": "R=aaaa"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "Go|2\n",
+      "expected_stdout": "R=GoGoGo"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "x|1\n",
+      "expected_stdout": "R=xx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "z|0\n",
+      "expected_stdout": "R=z"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ab|4\n",
+      "expected_stdout": "R=ababababab"
+    }
+  ],
+  "P2B-EVAL-IO08": [
+    {
+      "case_id": "case-1",
+      "stdin": "1|kg\n",
+      "expected_stdout": "0.0:kg"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "0|m\n",
+      "expected_stdout": "-1.0:m"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-2|C\n",
+      "expected_stdout": "-3.0:C"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3.5|s\n",
+      "expected_stdout": "2.5:s"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|items\n",
+      "expected_stdout": "9.0:items"
+    }
+  ],
+  "P2B-EVAL-IO09": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "{A}(B)"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "{mass}(unit)"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "{zero}(nil)"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "{hello}(world)"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "{two words}(ok)"
+    }
+  ],
+  "P2B-EVAL-IO10": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "MIX=a|B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "MIX=mass|UNIT"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "MIX=zero|NIL"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "MIX=hello|WORLD"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "MIX=two words|OK"
+    }
+  ],
+  "P2B-EVAL-IO11": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "B\nA"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "unit\nmass"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "nil\nzero"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "world\nhello"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "ok\ntwo words"
+    }
+  ],
+  "P2B-EVAL-IO12": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "LEN=2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "LEN=8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "LEN=7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "LEN=10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "LEN=11.0"
+    }
+  ],
+  "P2B-EVAL-IO13": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "AB"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "rb"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hw"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|z\n",
+      "expected_stdout": "xz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "to"
+    }
+  ],
+  "P2B-EVAL-IO14": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|blue\n",
+      "expected_stdout": "d:e"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "o:d"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|z\n",
+      "expected_stdout": "x:z"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "s:k"
+    }
+  ],
+  "P2B-EVAL-IO15": [
+    {
+      "case_id": "case-1",
+      "stdin": "2|3\n",
+      "expected_stdout": "SUM=5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|4\n",
+      "expected_stdout": "SUM=5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "0|2\n",
+      "expected_stdout": "SUM=2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|1\n",
+      "expected_stdout": "SUM=6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "3|2\n",
+      "expected_stdout": "SUM=5.0"
+    }
+  ],
+  "P2B-EVAL-IO16": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A::B::A"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "mass|unit\n",
+      "expected_stdout": "mass::unit::mass"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "zero|nil\n",
+      "expected_stdout": "zero::nil::zero"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello::world::hello"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "two words|ok\n",
+      "expected_stdout": "two words::ok::two words"
+    }
+  ],
+  "P2B-EVAL-CP01": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "PERFECT"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2B-EVAL-CP02": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "PRIME"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2B-EVAL-CP03": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "ODD"
+    }
+  ],
+  "P2B-EVAL-CP04": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "45.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "126.0"
+    }
+  ],
+  "P2B-EVAL-CP05": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "ODDCOUNT"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "EVENCOUNT"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "ODDCOUNT"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "EVENCOUNT"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "EVENCOUNT"
+    }
+  ],
+  "P2B-EVAL-CP06": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "UNDER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "UNDER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "UNDER"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "OVER"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "OVER"
+    }
+  ],
+  "P2B-EVAL-CP07": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "153.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "1225.0"
+    }
+  ],
+  "P2B-EVAL-CP08": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P2B-EVAL-CP09": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "SMALL"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "SMALL"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "SMALL"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "SMALL"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "LARGE"
+    }
+  ],
+  "P2B-EVAL-CP10": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "OTHER"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "OTHER"
+    }
+  ],
+  "P2B-EVAL-CP11": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "EVEN"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "ODD"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "ODD"
+    }
+  ],
+  "P2B-EVAL-CP12": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "NONNEG"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "NEG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "NEG"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "NEG"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "NEG"
+    }
+  ],
+  "P2B-EVAL-CP13": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P2B-EVAL-CP14": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "16.0"
+    }
+  ],
+  "P2B-EVAL-CP15": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "65.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "266.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "1705.0"
+    }
+  ],
+  "P2B-EVAL-CP16": [
+    {
+      "case_id": "case-1",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "4.0"
+    }
+  ]
+}

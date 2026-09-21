@@ -85,3 +85,14 @@ both severe-collapse limits. The structural-duplication criterion passed its
 predeclared audit, but 11/18 passes occurred among 28 coarse normalized-code
 flags and the 99.0% training versus 28.125% held-out gap is a major
 memorization/generalization limitation. Confirmation remains required.
+
+## H-012 — Multi-seed confirmatory parameter acquisition
+
+On the fresh Phase 2B confirmatory suite, three independently seeded adapters
+trained with the unchanged Phase 2A recipe will reproducibly improve over the
+immutable 3B base without documentation. The conjunctive rule requires mean
+adapted pass@1 of at least 20%, mean gain of at least 15 points, at least a
+10-point gain and four-family span for every seed, no domination by frozen
+structural near-duplicates, and no regression drop greater than 15 points.
+
+**Status:** PREREGISTERED; NOT YET TESTED.
