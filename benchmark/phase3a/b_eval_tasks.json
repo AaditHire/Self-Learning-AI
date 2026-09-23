@@ -1,0 +1,634 @@
+[
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-01",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'a'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-1",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-01",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'a' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-1",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'a'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-1",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-01",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'a' and right contains 'a'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-1",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-02",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'b'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-2",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-02",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'b' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-2",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-02",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'b'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-2",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-02",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'b' and right contains 'b'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-2",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-03",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'c'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-3",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-03",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'c' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-3",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-03",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'c'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-3",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-03",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'c' and right contains 'c'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-3",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-04",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'd'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-4",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-04",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'd' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-4",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-04",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'd'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-4",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-04",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'd' and right contains 'd'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-4",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-05",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'e'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-5",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-05",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'e' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-5",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-05",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'e'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-5",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-05",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'e' and right contains 'e'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-5",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-06",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'f'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-6",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-06",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'f' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-6",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-06",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'f'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-6",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-06",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'f' and right contains 'f'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-6",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-07",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'g'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-7",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-07",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'g' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-7",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-07",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'g'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-7",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-07",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'g' and right contains 'g'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-7",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-08",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'h'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_trim_lower_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-trim_lower_suffix-8",
+    "structural_signature": "B>eval>trim_lower_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "trim",
+      "lowercase",
+      "suffix"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-ST-REVERSE_REPLACE-08",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read text. Reverse it, then replace each 'h' with '!'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_reverse_replace",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-eval-reverse_replace-8",
+    "structural_signature": "B>eval>reverse_replace",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "replace"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CASE_JOIN-08",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'h'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_case_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-case_join-8",
+    "structural_signature": "B>eval>case_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "case_transform",
+      "join"
+    ]
+  },
+  {
+    "task_id": "P3A-B-EVAL-FI-CONTAINS_BRANCH-08",
+    "split": "phase3a_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read left|right as text fields. Print YES if left contains 'h' and right contains 'h'; otherwise print NO.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_eval_contains_branch",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-eval-contains_branch-8",
+    "structural_signature": "B>eval>contains_branch",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>AND>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "dual_contains",
+      "branch"
+    ]
+  }
+]

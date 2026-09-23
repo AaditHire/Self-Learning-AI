@@ -1,0 +1,866 @@
+{
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphaa"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoa"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyza"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worlda"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "aa"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "!hpl!"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "aaZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:ba"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:bluea"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worlda"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:ya"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:doga"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "a|a\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|a\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "aa|ab\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphab"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocob"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzb"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldb"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ab"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "bbZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bb"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:blueb"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldb"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yb"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogb"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "b|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "b|b\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|b\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ba|bb\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-03": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphac"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gococ"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzc"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldc"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ac"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ccZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bc"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:bluec"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldc"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yc"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogc"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "c|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "c|c\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|c\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ca|cb\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-04": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphad"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocod"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzd"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldd"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ad"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "!lrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ddZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bd"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:blued"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldd"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yd"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogd"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "d|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "d|d\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|d\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "da|db\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-05": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphae"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoe"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyze"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worlde"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ae"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow oll!H"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "eeZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:be"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:bluee"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worlde"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:ye"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:doge"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "e|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "e|e\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|e\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ea|eb\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-06": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphaf"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocof"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzf"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldf"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "af"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ffZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bf"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:bluef"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldf"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yf"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogf"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "f|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "f|f\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|f\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "fa|fb\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-07": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphag"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocog"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzg"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldg"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ag"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ggZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bg"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:blueg"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldg"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yg"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogg"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "g|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "g|g\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|g\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ga|gb\n",
+      "expected_stdout": "YES"
+    }
+  ],
+  "P3A-B-EVAL-ST-TRIM_LOWER_SUFFIX-08": [
+    {
+      "case_id": "case-1",
+      "stdin": " Alpha \n",
+      "expected_stdout": "alphah"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoh"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "  xyz\n",
+      "expected_stdout": "xyzh"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world  \n",
+      "expected_stdout": "hello worldh"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " a \n",
+      "expected_stdout": "ah"
+    }
+  ],
+  "P3A-B-EVAL-ST-REVERSE_REPLACE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "alpha\n",
+      "expected_stdout": "a!pla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "Hello world\n",
+      "expected_stdout": "dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "hhZ\n",
+      "expected_stdout": "Z!!"
+    }
+  ],
+  "P3A-B-EVAL-FI-CASE_JOIN-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "A|B\n",
+      "expected_stdout": "A:bh"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "RED:blueh"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "HELLO:worldh"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|y\n",
+      "expected_stdout": "X:yh"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "Cat|Dog\n",
+      "expected_stdout": "CAT:dogh"
+    }
+  ],
+  "P3A-B-EVAL-FI-CONTAINS_BRANCH-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "h|x\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "h|h\n",
+      "expected_stdout": "YES"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|h\n",
+      "expected_stdout": "NO"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ha|hb\n",
+      "expected_stdout": "YES"
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+[
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-01",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 1.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-1",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-01",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 1+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-1",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-01",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 1.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-1",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-01",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 1.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-1",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-02",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 2.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-2",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-02",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 2+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-2",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-02",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 2.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-2",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-02",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 2.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-2",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-03",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 3.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-3",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-03",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 3+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-3",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-03",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 3.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-3",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-03",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 3.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-3",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-04",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 4.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-4",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-04",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 4+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-4",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-04",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 4.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-4",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-04",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 4.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-4",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-05",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 5.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-5",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-05",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 5+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-5",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-05",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 5.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-5",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-05",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 5.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-5",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-06",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 6.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-6",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-06",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 6+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-6",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-06",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 6.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-6",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-06",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 6.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-6",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-07",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 7.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-7",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-07",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 7+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-7",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-07",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 7.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-7",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-07",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 7.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-7",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-ODD_CUBE_SUM-08",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 8.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_odd_cube_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-odd_cube_sum-8",
+    "structural_signature": "A>eval>odd_cube_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>*>*>IF>%>!=>+=>DISPLAYNL>-",
+    "semantic_operations": [
+      "odd_cube_filter",
+      "sum",
+      "subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-NU-DESCENDING_PRODUCT-08",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read nonnegative n. Multiply the values 8+i for i from 0 up to but not including n; print the product minus n.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_descending_product",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-eval-descending_product-8",
+    "structural_signature": "A>eval>descending_product",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*=>+>DISPLAYNL>-",
+    "semantic_operations": [
+      "offset_product",
+      "length_subtraction"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-NEGATIVE_SQUARE-08",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 8.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_negative_square",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-negative_square-8",
+    "structural_signature": "A>eval>negative_square",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_negative_filter",
+      "squared_sum"
+    ]
+  },
+  {
+    "task_id": "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-08",
+    "split": "phase3a_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3a_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 8.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_eval_pairwise_products",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-eval-pairwise_products-8",
+    "structural_signature": "A>eval>pairwise_products",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>*>+",
+    "semantic_operations": [
+      "array_pairwise_products",
+      "offset"
+    ]
+  }
+]

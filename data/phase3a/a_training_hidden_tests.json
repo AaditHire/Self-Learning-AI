@@ -1,0 +1,1622 @@
+{
+  "P3A-A-TR-NU-SQUARE_STRIDE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "46.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9\n",
+      "expected_stdout": "127.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "61.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1|2|-2|4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6|3|2|0\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-2.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "6\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "9\n",
+      "expected_stdout": "82.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "12\n",
+      "expected_stdout": "226.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "44.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "92.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2|3|-2|5\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7|4|3|1\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "128.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "15\n",
+      "expected_stdout": "353.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "59.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "123.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "3|4|-2|6\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8|5|4|2\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "6\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "8\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "13\n",
+      "expected_stdout": "184.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "18\n",
+      "expected_stdout": "508.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "74.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "154.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|5|-2|7\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9|6|5|3\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "19.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "7\n",
+      "expected_stdout": "54.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "9\n",
+      "expected_stdout": "54.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "15\n",
+      "expected_stdout": "250.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "21\n",
+      "expected_stdout": "691.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "41.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "89.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "185.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "5|6|-2|8\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "10|7|6|4\n",
+      "expected_stdout": "46.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "26.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "8\n",
+      "expected_stdout": "70.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "10\n",
+      "expected_stdout": "70.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "17\n",
+      "expected_stdout": "326.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "24\n",
+      "expected_stdout": "902.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "48.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "104.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "216.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "6|7|-2|9\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "11|8|7|5\n",
+      "expected_stdout": "52.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "33.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "9\n",
+      "expected_stdout": "88.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "11\n",
+      "expected_stdout": "88.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "19\n",
+      "expected_stdout": "412.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "27\n",
+      "expected_stdout": "1141.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "55.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "119.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "247.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "7|8|-2|10\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "12|9|8|6\n",
+      "expected_stdout": "58.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10\n",
+      "expected_stdout": "108.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "12\n",
+      "expected_stdout": "108.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "21\n",
+      "expected_stdout": "508.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "30\n",
+      "expected_stdout": "1408.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "62.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "134.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "278.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "8|9|-2|11\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "13|10|9|7\n",
+      "expected_stdout": "64.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "47.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "11\n",
+      "expected_stdout": "130.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "13\n",
+      "expected_stdout": "130.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "23\n",
+      "expected_stdout": "614.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "33\n",
+      "expected_stdout": "1703.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "69.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "149.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "309.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "9|10|-2|12\n",
+      "expected_stdout": "44.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "14|11|10|8\n",
+      "expected_stdout": "70.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "54.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12\n",
+      "expected_stdout": "154.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "14\n",
+      "expected_stdout": "154.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "25\n",
+      "expected_stdout": "730.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "36\n",
+      "expected_stdout": "2026.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "76.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "164.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "340.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "10|11|-2|13\n",
+      "expected_stdout": "48.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "15|12|11|9\n",
+      "expected_stdout": "76.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-16.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "61.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "13\n",
+      "expected_stdout": "180.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "15\n",
+      "expected_stdout": "180.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "27\n",
+      "expected_stdout": "856.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "39\n",
+      "expected_stdout": "2377.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "83.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "179.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "371.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "11|12|-2|14\n",
+      "expected_stdout": "52.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "16|13|12|10\n",
+      "expected_stdout": "82.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-18.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "68.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "14\n",
+      "expected_stdout": "208.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "16\n",
+      "expected_stdout": "208.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "29\n",
+      "expected_stdout": "992.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "42\n",
+      "expected_stdout": "2756.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "90.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "194.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "402.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "12|13|-2|15\n",
+      "expected_stdout": "56.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "17|14|13|11\n",
+      "expected_stdout": "88.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-20.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "75.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "15\n",
+      "expected_stdout": "238.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "17\n",
+      "expected_stdout": "238.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "31\n",
+      "expected_stdout": "1138.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "45\n",
+      "expected_stdout": "3163.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "41.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "97.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "209.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "433.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "13|14|-2|16\n",
+      "expected_stdout": "60.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "18|15|14|12\n",
+      "expected_stdout": "94.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-22.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "82.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "16\n",
+      "expected_stdout": "270.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "18\n",
+      "expected_stdout": "270.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "33\n",
+      "expected_stdout": "1294.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "48\n",
+      "expected_stdout": "3598.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "44.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "104.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "224.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "464.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "14|15|-2|17\n",
+      "expected_stdout": "64.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "19|16|15|13\n",
+      "expected_stdout": "100.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-24.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "89.0"
+    }
+  ],
+  "P3A-A-TR-NU-SQUARE_STRIDE-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "17\n",
+      "expected_stdout": "304.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "19\n",
+      "expected_stdout": "304.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "35\n",
+      "expected_stdout": "1460.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "51\n",
+      "expected_stdout": "4061.0"
+    }
+  ],
+  "P3A-A-TR-NU-AFFINE_RECURRENCE-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "47.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "111.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "239.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "4\n",
+      "expected_stdout": "495.0"
+    }
+  ],
+  "P3A-A-TR-AR-THRESHOLD_WEIGHTED-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "15|16|-2|18\n",
+      "expected_stdout": "68.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "20|17|16|14\n",
+      "expected_stdout": "106.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "-4|-3|-2|-1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10|0|10|0\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3A-A-TR-AR-INDEXED_DIFFERENCE-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "-26.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "96.0"
+    }
+  ]
+}

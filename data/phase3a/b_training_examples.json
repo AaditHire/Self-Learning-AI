@@ -1,0 +1,1067 @@
+[
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-01",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'a'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"a\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-1",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-01",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'a' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"a\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-1",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-01",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'a'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"a\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-1",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-01",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'a' in each field and print the total plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"a\")+strings.COUNT(right,\"a\")+1).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-1",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-02",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'b'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"b\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-2",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-02",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'b' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"b\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-2",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-02",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'b'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"b\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-2",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-02",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'b' in each field and print the total plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"b\")+strings.COUNT(right,\"b\")+2).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-2",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-03",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'c'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"c\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-3",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-03",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'c' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"c\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-3",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-03",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'c'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"c\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-3",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-03",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'c' in each field and print the total plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"c\")+strings.COUNT(right,\"c\")+3).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-3",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-04",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'd'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"d\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-4",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-04",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'd' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-4",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-04",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'd'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"d\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-4",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-04",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'd' in each field and print the total plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"d\")+strings.COUNT(right,\"d\")+4).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-4",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-05",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'e'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-5",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-05",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'e' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"e\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-5",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-05",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'e'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"e\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-5",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-05",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'e' in each field and print the total plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"e\")+strings.COUNT(right,\"e\")+5).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-5",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-06",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'f'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"f\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-6",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-06",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'f' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"f\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-6",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-06",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'f'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"f\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-6",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-06",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'f' in each field and print the total plus 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"f\")+strings.COUNT(right,\"f\")+6).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-6",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-07",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'g'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"g\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-7",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-07",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'g' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-7",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-07",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'g'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"g\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-7",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-07",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'g' in each field and print the total plus 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"g\")+strings.COUNT(right,\"g\")+7).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-7",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-08",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'h'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"h\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-8",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-08",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'h' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"h\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-8",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-08",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'h'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"h\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-8",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-08",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'h' in each field and print the total plus 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"h\")+strings.COUNT(right,\"h\")+8).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-8",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-09",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'i'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"i\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-9",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-09",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'i' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"i\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-9",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-09",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'i'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"i\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-9",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-09",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'i' in each field and print the total plus 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"i\")+strings.COUNT(right,\"i\")+9).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-9",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-10",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'j'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-10",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-10",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'j' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"j\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-10",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-10",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'j'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"j\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-10",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-10",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'j' in each field and print the total plus 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"j\")+strings.COUNT(right,\"j\")+10).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-10",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-11",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'k'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"k\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-11",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-11",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'k' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"k\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-11",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-11",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'k'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"k\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-11",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-11",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'k' in each field and print the total plus 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"k\")+strings.COUNT(right,\"k\")+11).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-11",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-12",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"l\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-12",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-12",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'l' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"l\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-12",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-12",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'l'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"l\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-12",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-12",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'l' in each field and print the total plus 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"l\")+strings.COUNT(right,\"l\")+12).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-12",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-13",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'm'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"m\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-13",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-13",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'm' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"m\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-13",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-13",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'm'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"m\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-13",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-13",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'm' in each field and print the total plus 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"m\")+strings.COUNT(right,\"m\")+13).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-13",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-14",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"n\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-14",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-14",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'n' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"n\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-14",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-14",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'n'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"n\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-14",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-14",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'n' in each field and print the total plus 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"n\")+strings.COUNT(right,\"n\")+14).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-14",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-UPPER_REVERSE-15",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'o'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"o\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_upper_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-upper_reverse-15",
+    "structural_signature": "B>train>upper_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-ST-REPLACE_LOWER-15",
+    "split": "phase3a_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Replace every 'o' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"o\",\"#\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_replace_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3a-b-train-replace_lower-15",
+    "structural_signature": "B>train>replace_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "replace",
+      "lowercase"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-SWAP_TAG-15",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'o'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"o\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_swap_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-swap_tag-15",
+    "structural_signature": "B>train>swap_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>/",
+    "semantic_operations": [
+      "split_fields",
+      "reorder",
+      "tag"
+    ]
+  },
+  {
+    "example_id": "P3A-B-TR-FI-COUNT_FIELDS-15",
+    "split": "phase3a_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right as text fields. Count 'o' in each field and print the total plus 15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"o\")+strings.COUNT(right,\"o\")+15).",
+    "capability": "B",
+    "algorithmic_structure": "p3a_b_train_count_fields",
+    "control_flow": "field_processing",
+    "template_lineage": "p3a-b-train-count_fields-15",
+    "structural_signature": "B>train>count_fields",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "substring_count",
+      "offset"
+    ]
+  }
+]

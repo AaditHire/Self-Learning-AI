@@ -2,9 +2,25 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 2B complete; confirmatory PASS; stopped for independent review
+Current phase: Phase 3A authorized; two-stage naive sequential-learning baseline preregistered; no Phase 3A training yet
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
-Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition
+Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
+Phase 3A is now authorized solely to measure A-to-B sequential acquisition and A forgetting,
+not to test replay or any anti-forgetting method.
+
+## Phase 3A recovery pointer
+
+Starting commit: `1ded323e036cd93813ab165210e0c3dcf32616df`.
+Preregistration: `research/protocols/phase3a_protocol.md` and
+`research/protocols/phase3a_config.json` (SHA-256 `3fb940a6b9a65311904db13f2a834a2729f60826c12c250d966420aaa356a715`).
+Three frozen seeds: `20260923`, `20261011`, `20261117`. A is numeric
+iteration/array reduction; B is string transformation/field processing.
+Data: 60 training examples and 32 evaluation tasks per capability, five
+semantic cases each. All 184 references/targets pass; see
+`research/results/EXP-0027/data_validation.json` and manual review.
+The sealed final-paper holdout remains unopened. Next: record the
+preregistration Git commit, evaluate base, then train/evaluate A before
+training B for each seed. STOP after Phase 3A report and independent review.
 
 ## Repository boundaries
 

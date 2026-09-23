@@ -1,0 +1,193 @@
+{
+  "phase": "3A-two-stage-naive-sequential-learning-forgetting-baseline",
+  "start_commit": "1ded323e036cd93813ab165210e0c3dcf32616df",
+  "scientific_status": "sequential acquisition/forgetting baseline; not an anti-forgetting intervention",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "capabilities": {
+    "A": {
+      "definition": "numeric iterative and array-reduction GOCO programs",
+      "subskills": [
+        "numeric_iteration",
+        "array_reduction"
+      ]
+    },
+    "B": {
+      "definition": "string transformations and delimited-field processing GOCO programs",
+      "subskills": [
+        "string_transform",
+        "field_processing"
+      ]
+    }
+  },
+  "data": {
+    "a_training_examples": "data/phase3a/a_training_examples.json",
+    "a_training_tests": "data/phase3a/a_training_hidden_tests.json",
+    "b_training_examples": "data/phase3a/b_training_examples.json",
+    "b_training_tests": "data/phase3a/b_training_hidden_tests.json",
+    "eval_a_tasks": "benchmark/phase3a/a_eval_tasks.json",
+    "eval_a_tests": "benchmark/phase3a/a_eval_hidden_tests.json",
+    "eval_a_references": "benchmark/phase3a/a_eval_references.json",
+    "eval_b_tasks": "benchmark/phase3a/b_eval_tasks.json",
+    "eval_b_tests": "benchmark/phase3a/b_eval_hidden_tests.json",
+    "eval_b_references": "benchmark/phase3a/b_eval_references.json",
+    "general_regression": "benchmark/phase2b/general_regression.json",
+    "validation": "research/results/EXP-0027/data_validation.json"
+  },
+  "prompt": {
+    "system": "prompts/phase1t_system.txt",
+    "user_template": "prompts/phase1t_user_template.txt",
+    "context": "same no-documentation prompt at all stages; no search"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "Final epoch a priori for both stages; no performance-based selection",
+    "adapter_outputs": {
+      "20260923": {
+        "A": "research/adapters/candidates/c0005-phase3a-a-seed-20260923",
+        "B": "research/adapters/candidates/c0006-phase3a-a-to-b-seed-20260923"
+      },
+      "20261011": {
+        "A": "research/adapters/candidates/c0007-phase3a-a-seed-20261011",
+        "B": "research/adapters/candidates/c0008-phase3a-a-to-b-seed-20261011"
+      },
+      "20261117": {
+        "A": "research/adapters/candidates/c0009-phase3a-a-seed-20261117",
+        "B": "research/adapters/candidates/c0010-phase3a-a-to-b-seed-20261117"
+      }
+    },
+    "record_outputs": {
+      "20260923": {
+        "A": "research/results/EXP-0028/training.json",
+        "B": "research/results/EXP-0029/training.json"
+      },
+      "20261011": {
+        "A": "research/results/EXP-0030/training.json",
+        "B": "research/results/EXP-0031/training.json"
+      },
+      "20261117": {
+        "A": "research/results/EXP-0032/training.json",
+        "B": "research/results/EXP-0033/training.json"
+      }
+    },
+    "stage_b_policy": "Continue the exact seed-matched A LoRA weights, fresh optimizer and scheduler, B examples only; no A replay"
+  },
+  "seeds": [
+    20260923,
+    20261011,
+    20261117
+  ],
+  "evaluation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "primary_metric": "task-level hidden-test pass@1",
+    "base_seed": 20260923,
+    "required_conditions": [
+      "base_eval_a",
+      "a_eval_a",
+      "a_eval_b",
+      "a_to_b_eval_b",
+      "a_to_b_eval_a",
+      "base_regression",
+      "a_regression",
+      "a_to_b_regression"
+    ]
+  },
+  "analysis": {
+    "primary_forgetting": "A EVAL_A pass@1 immediately after A training minus seed-matched A->B EVAL_A pass@1",
+    "absolute_forgetting_unit": "percentage points",
+    "relative_retention": "A->B EVAL_A pass rate divided by A EVAL_A pass rate, undefined if denominator zero",
+    "paired_transitions": [
+      "pass->pass",
+      "pass->fail",
+      "fail->pass",
+      "fail->fail"
+    ],
+    "unit": "32 paired EVAL_A tasks per seed; report each seed, mean and range; seeds are not independent task instances",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261219,
+    "measurable_forgetting_rule": "descriptive: mean paired drop > 0 and paired task bootstrap 95% CI lower bound > 0; also report individual seed directions; if A acquisition is zero, forgetting is not interpretable",
+    "stronger_wording": "catastrophic only for large systematic degradation with substantial A acquisition, not for every negative change"
+  },
+  "input_file_hashes": {
+    "data/phase3a/a_training_examples.json": "35568a9de247653513d261390848e46c4ff11de00f76d4f0ace9a02729a74959",
+    "data/phase3a/a_training_hidden_tests.json": "11094a0839ef4d1b7d7f67718e7d18bf3d08ecca0cb771b018e891ee90cb0276",
+    "data/phase3a/b_training_examples.json": "84a7a69a668b87990c0edf266fdd1b03fa5dd99153b5e5e3d2f24f52597ca110",
+    "data/phase3a/b_training_hidden_tests.json": "23e81aac278bf86916013a58541a47e6d7dc0c4761a9fce64278649785e38d1a",
+    "benchmark/phase3a/a_eval_tasks.json": "cf61e84a82ee39599b5e16f869eaaec2169e7393d7f86acdbea69e1005ac1b5a",
+    "benchmark/phase3a/a_eval_hidden_tests.json": "3207c60b1fc5ea3b8c825d83e36ebb7cad9af034f79c846a64c5889892a961e9",
+    "benchmark/phase3a/a_eval_references.json": "a2c9bf563dcf730a91f7fb35351dfca51fb15046d9e2371f2148fd201b832c23",
+    "benchmark/phase3a/b_eval_tasks.json": "c48d4d58de32bf104aec7a8ecdae90cff76ef629442b9465d9ac46227e69d199",
+    "benchmark/phase3a/b_eval_hidden_tests.json": "4dd4e0b07f274ed11383f81ab1b28ac3857cba6ded62c350fcad738e10d6953d",
+    "benchmark/phase3a/b_eval_references.json": "cd47d4892fe6ee64ab5242d99f348723e11532070bc1d63961d54d85c002a944",
+    "benchmark/phase2b/general_regression.json": "53bcb1b01b4364ac4f663ecf79cf31fc8c2b509cb11f58f43c3ce98fdbee1ec8",
+    "research/results/EXP-0027/data_validation.json": "aad4eb5c0c720957fe0cad5bc9acd219049140c931bf611eda154032db4c50bd",
+    "research/results/EXP-0027/structural_overlap_manual_review.md": "839eb7eadcadd02406c4345bf020ac0db0b58599703474ca76c119bf31debccc",
+    "research/protocols/phase3a_protocol.md": "da08ed0a6fa095e7c78202ac8a3766d9159c417bf6c1f85529ec1eecd12346c6",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "scripts/build_phase3a_data.py": "e275dd219b23ba73c500d9a7ca57fd5afe50f45033441fe2dd703f56840b3e1b",
+    "scripts/validate_phase3a_data.py": "d2662f95ba58900385cf1220076ea9d1b24eaa96f9f2a6089821f59ce08fc817",
+    "scripts/train_phase3a_qlora.py": "a40a528314b073b3c57634f866dc92b0e1baa1281f54231278190847b496fb29",
+    "scripts/run_phase3a_evaluation.py": "2cf99505593d681f2d9cbca97aa1266fb7b20cd32c67b488dee12a4f4660baeb",
+    "scripts/analyze_phase3a.py": "e35fa88d8fe7416e54cbf65c947047657a302b12da1fec107faf0ed2db90d2db",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase2a_evaluation.py": "70c154adfb7e90c1519d4a34fb5297aaa4cc02cc99f7890eeed20d0cebe473bf"
+  },
+  "prohibitions": [
+    "A examples in B stage",
+    "replay, EWC, adapter isolation, STABLE, NoRA, gating or other anti-forgetting interventions",
+    "base-weight modification or adapter merge",
+    "post-freeze data, prompt, seed, hyperparameter or checkpoint selection using evaluation results",
+    "sealed final-paper holdout access"
+  ]
+}

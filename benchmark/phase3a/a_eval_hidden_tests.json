@@ -1,0 +1,866 @@
+{
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "152.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "495.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "115.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "26.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-9.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "151.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "494.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "715.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "27.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-8.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "150.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "493.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "57.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "2515.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "28.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-7.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "149.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "492.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "117.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "6715.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "29.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-6.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "148.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "491.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "207.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "15115.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "30.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "37.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-5.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "147.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "490.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "333.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "30235.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "31.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-4.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "146.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "489.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "54.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "501.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "55435.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "37.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "32.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "39.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-ODD_CUBE_SUM-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "-8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "-7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "145.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "488.0"
+    }
+  ],
+  "P3A-A-EVAL-NU-DESCENDING_PRODUCT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "70.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "3\n",
+      "expected_stdout": "717.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "5\n",
+      "expected_stdout": "95035.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-NEGATIVE_SQUARE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-1|0|-2|4\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-3|-2|-1|-4\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5|5|5|5\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "0|-5|0|2\n",
+      "expected_stdout": "33.0"
+    }
+  ],
+  "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "4|0|-2|8\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "-5|3|3|-2\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|1|1|1\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "9|-2|5|0\n",
+      "expected_stdout": "-2.0"
+    }
+  ]
+}

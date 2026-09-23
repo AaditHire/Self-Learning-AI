@@ -1,0 +1,1022 @@
+[
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-01",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 3; print the total plus 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-1",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-01",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 1; repeat n times: double x and add 3. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+3. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-1",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-01",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 1; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>1) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-1",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-01",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 1 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+1*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-1",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-02",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 4; print the total plus 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-2",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-02",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 2; repeat n times: double x and add 4. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=2.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+4. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-2",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-02",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 2; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>2) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-2",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-02",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 2 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+2*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-2",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-03",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 5; print the total plus 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%5==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-3",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-03",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 3; repeat n times: double x and add 5. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-3",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-03",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 3; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>3) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-3",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-03",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 3 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+3*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-3",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-04",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 6; print the total plus 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%6==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-4",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-04",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 4; repeat n times: double x and add 6. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=4.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+6. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-4",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-04",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 4; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>4) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-4",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-04",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 4 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+4*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-4",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-05",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 7; print the total plus 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=5.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%7==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-5",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-05",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 5; repeat n times: double x and add 7. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=5.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+7. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-5",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-05",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 5; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>5) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-5",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-05",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 5 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+5*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-5",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-06",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 8; print the total plus 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-6",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-06",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 6; repeat n times: double x and add 8. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=6.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+8. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-6",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-06",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 6; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-6",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-06",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 6 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+6*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-6",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-07",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 9; print the total plus 7.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=7.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%9==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-7",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-07",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 7; repeat n times: double x and add 9. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=7.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+9. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-7",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-07",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 7; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>7) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-7",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-07",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 7 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+7*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-7",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-08",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 10; print the total plus 8.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%10==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-8",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-08",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 8; repeat n times: double x and add 10. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=8.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+10. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-8",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-08",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 8; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>8) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-8",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-08",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 8 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+8*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-8",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-09",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 11; print the total plus 9.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=9.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%11==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-9",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-09",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 9; repeat n times: double x and add 11. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=9.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+11. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-9",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-09",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 9; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>9) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-9",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-09",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 9 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+9*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-9",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-10",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 12; print the total plus 10.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=10.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%12==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-10",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-10",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 10; repeat n times: double x and add 12. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=10.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+12. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-10",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-10",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 10; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-10",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-10",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 10 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+10*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-10",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-11",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 13; print the total plus 11.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=11.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%13==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-11",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-11",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 11; repeat n times: double x and add 13. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=11.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+13. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-11",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-11",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 11; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>11) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-11",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-11",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 11 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+11*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-11",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-12",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 14; print the total plus 12.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=12.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%14==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-12",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-12",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 12; repeat n times: double x and add 14. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=12.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+14. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-12",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-12",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 12; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>12) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-12",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-12",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 12 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+12*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-12",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-13",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 15; print the total plus 13.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=13.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%15==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-13",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-13",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 13; repeat n times: double x and add 15. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=13.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+15. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-13",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-13",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 13; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>13) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-13",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-13",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 13 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+13*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-13",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-14",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 16; print the total plus 14.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=14.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%16==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-14",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-14",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 14; repeat n times: double x and add 16. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-14",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-14",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 14; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>14) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-14",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-14",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 14 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+14*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-14",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-SQUARE_STRIDE-15",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 17; print the total plus 15.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=15.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%17==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_square_stride",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-square_stride-15",
+    "structural_signature": "A>train>square_stride",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "squared_divisible_filter",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-NU-AFFINE_RECURRENCE-15",
+    "split": "phase3a_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Start x at 15; repeat n times: double x and add 17. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=15.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+17. }\nDISPLAYNL(x).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_affine_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3a-a-train-affine_recurrence-15",
+    "structural_signature": "A>train>affine_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP>+>+>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "affine_recurrence",
+      "iteration"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-THRESHOLD_WEIGHTED-15",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 15; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>15) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_threshold_weighted",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-threshold_weighted-15",
+    "structural_signature": "A>train>threshold_weighted",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "array_threshold",
+      "weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3A-A-TR-AR-INDEXED_DIFFERENCE-15",
+    "split": "phase3a_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 15 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+15*(values[2]-values[1])).",
+    "capability": "A",
+    "algorithmic_structure": "p3a_a_train_indexed_difference",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3a-a-train-indexed_difference-15",
+    "structural_signature": "A>train>indexed_difference",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>->+>*>-",
+    "semantic_operations": [
+      "array_indexed_differences",
+      "weighted_gap"
+    ]
+  }
+]
