@@ -214,3 +214,35 @@ continual-learning claim is currently justified.
   forgetting prevention, broad GOCO erasure, autonomous learning, or general
   lifelong learning. Replay or other interventions remain unauthorized pending
   independent review.
+
+## CLM-012
+
+- **Proposed claim:** A single fixed-budget 20% A-example replay schedule
+  improves net post-B A performance over a fresh seed-matched zero-replay
+  A→B control without destroying measured B acquisition.
+- **Evidence required:** Three preregistered paired branches from each identical
+  A parent; fresh structurally audited A/B task suites; 24-step parity;
+  per-task A transitions; B acquisition; frozen non-GOCO regression.
+- **Experiment:** EXP-0036 through EXP-0047; preregistered at
+  `002395e5dc7916e827eeed3e4806417d27bb5419`.
+- **Status:** NUMERICAL ENGINEERING GATE PASS; TASK-LEVEL PRESERVATION NOT
+  SUPPORTED.
+- **Supporting results:** Naive post-B A 0/32 in every seed; replay 15/32,
+  16/32, 16/32, a 48.96-point mean advantage (descriptive paired task-cluster
+  bootstrap 95% interval 31.25–65.625). Naive B 8/32 each; replay 9/32,
+  8/32, 8/32. Non-GOCO base 47/64; replay 48/64, 47/64, 49/64.
+- **Critical counter-evidence:** A-only checkpoints passed 8/32 per seed,
+  but both naive **and replay** lost all 24 previously passed A seed-tasks.
+  Replay's 47 A passes came entirely from formerly failed tasks. Thus the
+  experiment does **not** show preservation of previously acquired A successes,
+  even though the preregistered aggregate post-B A gate passed.
+- **Possible confounders:** Synthetic correlated archetype variants, compact
+  GOCO program boilerplate, 24/32 A train-code neighbors and 24/32 B train-code
+  neighbors at the 0.85 threshold, initial A acquisition limited to one
+  array-reduction archetype, zero B string-transform passes, one model/recipe/
+  order and three seeds, and a narrow 64-item non-GOCO control.
+- **Currently justified:** Replay improved *net* post-B A pass@1 in this
+  bounded distribution with no measured B or general-control collapse. It
+  does not establish task-level forgetting prevention, broad continual
+  learning, optimal replay ratio, self-learning, or lifelong learning. Full
+  record: `research/results/PHASE_3B/report.md`.

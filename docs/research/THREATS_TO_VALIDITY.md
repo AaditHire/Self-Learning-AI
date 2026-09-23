@@ -174,6 +174,30 @@
   conditional on these synthetic tasks and the fixed recipe; it is not a
   population interval over arbitrary capabilities or model initializations.
 
+### Phase 3B replay-specific threats
+
+- The fixed 20% replay comparison passed its preregistered *aggregate*
+  post-B A gate, but **zero of 24 A seed-task successes before B survived
+  either naive or replay training**. Replay produced 47 formerly failed A
+  seed-task successes instead. Calling this preservation of acquired task
+  behavior would conflate net A score gain with actual task-level retention.
+- A-only Phase 3B acquisition was only 8/32 in each seed and confined to
+  pair-product-gap array tasks; numeric iteration had 0/16 passes. The replay
+  gain shifted to divisor-pair-sum and extrema-spread archetypes. Aggregate
+  A pass@1 can therefore hide wholesale replacement of the successful slice.
+- All B checkpoints passed zero string-transformation tasks. B mean pass@1
+  near 25% reflects one field-processing archetype, not balanced B capability.
+- Phase 3B's fresh synthetic tasks avoided exact consumed-prompt reuse and
+  >=0.98 reference-code near duplicates, but 24/32 A and 24/32 B evaluation
+  references remain >=0.85 similar to training targets. Compact boilerplate,
+  archetype variants, and 24 coarse B AST-proxy matches restrict external
+  validity and the effective number of independent tasks.
+- One fixed replay ratio, one order, one model/recipe, three seeds, and a
+  64-item exact-response non-GOCO control do not establish optimality,
+  general safety, or a mechanism. The paired task-cluster bootstrap interval
+  measures variability across these 32 correlated task IDs, not a population
+  of arbitrary programming problems.
+
 ## Mitigations
 
 Pin all inputs; separate task families and templates; freeze protocols before

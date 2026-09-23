@@ -1,0 +1,516 @@
+{
+  "phase": "3B",
+  "config_sha256": "52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f",
+  "seeds": [
+    20260924,
+    20261012,
+    20261118
+  ],
+  "base_counts": {
+    "A": 0,
+    "B": 0,
+    "regression": 47
+  },
+  "per_seed_counts": {
+    "20260924": {
+      "A": {
+        "A": 8,
+        "B": 0,
+        "regression": 48
+      },
+      "naive": {
+        "A": 0,
+        "B": 8,
+        "regression": 47
+      },
+      "replay": {
+        "A": 15,
+        "B": 9,
+        "regression": 48
+      }
+    },
+    "20261012": {
+      "A": {
+        "A": 8,
+        "B": 0,
+        "regression": 46
+      },
+      "naive": {
+        "A": 0,
+        "B": 8,
+        "regression": 49
+      },
+      "replay": {
+        "A": 16,
+        "B": 8,
+        "regression": 47
+      }
+    },
+    "20261118": {
+      "A": {
+        "A": 8,
+        "B": 0,
+        "regression": 47
+      },
+      "naive": {
+        "A": 0,
+        "B": 8,
+        "regression": 47
+      },
+      "replay": {
+        "A": 16,
+        "B": 8,
+        "regression": 49
+      }
+    }
+  },
+  "mean_pass_rates": {
+    "A": {
+      "A": 0.25,
+      "B": 0.0,
+      "regression": 0.734375
+    },
+    "naive": {
+      "A": 0.0,
+      "B": 0.25,
+      "regression": 0.7447916666666666
+    },
+    "replay": {
+      "A": 0.4895833333333333,
+      "B": 0.2604166666666667,
+      "regression": 0.75
+    }
+  },
+  "primary_a_gain_pp": 48.95833333333333,
+  "b_fraction_of_naive": 1.0416666666666667,
+  "gate_components": {
+    "a_gain_at_least_20pp": true,
+    "naive_b_positive_and_replay_at_least_75pct": true,
+    "non_goco_no_severe_regression": true
+  },
+  "decision": "PASS",
+  "a_forgetting_and_retention": {
+    "20260924": {
+      "naive": {
+        "a_before_count": 8,
+        "a_after_count": 0,
+        "absolute_forgetting_pp": 25.0,
+        "relative_retention": 0.0,
+        "b_acquisition_count": 8
+      },
+      "replay": {
+        "a_before_count": 8,
+        "a_after_count": 15,
+        "absolute_forgetting_pp": -21.875,
+        "relative_retention": 1.875,
+        "b_acquisition_count": 9
+      }
+    },
+    "20261012": {
+      "naive": {
+        "a_before_count": 8,
+        "a_after_count": 0,
+        "absolute_forgetting_pp": 25.0,
+        "relative_retention": 0.0,
+        "b_acquisition_count": 8
+      },
+      "replay": {
+        "a_before_count": 8,
+        "a_after_count": 16,
+        "absolute_forgetting_pp": -25.0,
+        "relative_retention": 2.0,
+        "b_acquisition_count": 8
+      }
+    },
+    "20261118": {
+      "naive": {
+        "a_before_count": 8,
+        "a_after_count": 0,
+        "absolute_forgetting_pp": 25.0,
+        "relative_retention": 0.0,
+        "b_acquisition_count": 8
+      },
+      "replay": {
+        "a_before_count": 8,
+        "a_after_count": 16,
+        "absolute_forgetting_pp": -25.0,
+        "relative_retention": 2.0,
+        "b_acquisition_count": 8
+      }
+    }
+  },
+  "a_task_transitions": {
+    "20260924": {
+      "naive": {
+        "fail->fail": 24,
+        "pass->fail": 8
+      },
+      "replay": {
+        "fail->fail": 9,
+        "fail->pass": 15,
+        "pass->fail": 8
+      }
+    },
+    "20261012": {
+      "naive": {
+        "fail->fail": 24,
+        "pass->fail": 8
+      },
+      "replay": {
+        "fail->fail": 8,
+        "fail->pass": 16,
+        "pass->fail": 8
+      }
+    },
+    "20261118": {
+      "naive": {
+        "fail->fail": 24,
+        "pass->fail": 8
+      },
+      "replay": {
+        "fail->fail": 8,
+        "fail->pass": 16,
+        "pass->fail": 8
+      }
+    }
+  },
+  "subskill_counts": {
+    "20260924": {
+      "A": {
+        "A": {
+          "array_reduction": {
+            "pass": 8,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 0,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "naive": {
+        "A": {
+          "array_reduction": {
+            "pass": 0,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 8,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "replay": {
+        "A": {
+          "array_reduction": {
+            "pass": 7,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 8,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 9,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      }
+    },
+    "20261012": {
+      "A": {
+        "A": {
+          "array_reduction": {
+            "pass": 8,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 0,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "naive": {
+        "A": {
+          "array_reduction": {
+            "pass": 0,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 8,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "replay": {
+        "A": {
+          "array_reduction": {
+            "pass": 8,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 8,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 8,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      }
+    },
+    "20261118": {
+      "A": {
+        "A": {
+          "array_reduction": {
+            "pass": 8,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 0,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "naive": {
+        "A": {
+          "array_reduction": {
+            "pass": 0,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 0,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 8,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      },
+      "replay": {
+        "A": {
+          "array_reduction": {
+            "pass": 8,
+            "total": 16
+          },
+          "numeric_iteration": {
+            "pass": 8,
+            "total": 16
+          }
+        },
+        "B": {
+          "field_processing": {
+            "pass": 8,
+            "total": 16
+          },
+          "string_transform": {
+            "pass": 0,
+            "total": 16
+          }
+        }
+      }
+    }
+  },
+  "failure_taxonomy": {
+    "20260924": {
+      "A": {
+        "A": {
+          "hidden_test_semantic": 16,
+          "success": 8,
+          "syntax": 8
+        },
+        "B": {
+          "semantic": 6,
+          "syntax": 26
+        }
+      },
+      "naive": {
+        "A": {
+          "hidden_test_semantic": 6,
+          "semantic": 23,
+          "syntax": 3
+        },
+        "B": {
+          "hidden_test_semantic": 9,
+          "semantic": 8,
+          "success": 8,
+          "syntax": 7
+        }
+      },
+      "replay": {
+        "A": {
+          "hidden_test_semantic": 2,
+          "semantic": 14,
+          "success": 15,
+          "syntax": 1
+        },
+        "B": {
+          "hidden_test_semantic": 7,
+          "semantic": 5,
+          "success": 9,
+          "syntax": 11
+        }
+      }
+    },
+    "20261012": {
+      "A": {
+        "A": {
+          "hidden_test_semantic": 16,
+          "success": 8,
+          "syntax": 8
+        },
+        "B": {
+          "semantic": 16,
+          "syntax": 16
+        }
+      },
+      "naive": {
+        "A": {
+          "hidden_test_semantic": 2,
+          "runtime": 6,
+          "semantic": 20,
+          "syntax": 4
+        },
+        "B": {
+          "hidden_test_semantic": 1,
+          "semantic": 20,
+          "success": 8,
+          "syntax": 3
+        }
+      },
+      "replay": {
+        "A": {
+          "hidden_test_semantic": 2,
+          "semantic": 14,
+          "success": 16
+        },
+        "B": {
+          "semantic": 23,
+          "success": 8,
+          "syntax": 1
+        }
+      }
+    },
+    "20261118": {
+      "A": {
+        "A": {
+          "hidden_test_semantic": 16,
+          "success": 8,
+          "syntax": 8
+        },
+        "B": {
+          "semantic": 10,
+          "syntax": 22
+        }
+      },
+      "naive": {
+        "A": {
+          "runtime": 17,
+          "semantic": 14,
+          "syntax": 1
+        },
+        "B": {
+          "hidden_test_semantic": 2,
+          "semantic": 9,
+          "success": 8,
+          "syntax": 13
+        }
+      },
+      "replay": {
+        "A": {
+          "hidden_test_semantic": 10,
+          "semantic": 6,
+          "success": 16
+        },
+        "B": {
+          "hidden_test_semantic": 2,
+          "semantic": 6,
+          "success": 8,
+          "syntax": 16
+        }
+      }
+    }
+  },
+  "task_cluster_bootstrap_95pct_a_gain_pp": [
+    31.25,
+    65.625
+  ],
+  "bootstrap_draws": 10000,
+  "matched_compute": {
+    "b_micro_examples_per_epoch": 60,
+    "b_optimizer_steps_each": 24,
+    "naive_b_per_epoch": 60,
+    "replay_b_per_epoch": 48,
+    "replay_a_per_epoch": 12
+  },
+  "sealed_holdout_opened": false
+}

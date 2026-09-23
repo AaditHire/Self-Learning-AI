@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 3B fixed-budget 20% experience replay preregistered; execution pending
+Current phase: Phase 3B fixed-budget 20% experience replay complete; numerical gate PASS with task-level retention caveat; STOP for independent review
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
 Phase 3A was authorized solely to measure A-to-B sequential acquisition and A
@@ -12,18 +12,31 @@ against a fresh matched 0% naive branch; no other method is authorized.
 ## Phase 3B recovery pointer
 
 Starting from clean Phase 3A final commit `000311f724155d0a643d99bff22c6cac848a15be`.
+Preregistration Git commit: `002395e5dc7916e827eeed3e4806417d27bb5419`.
 Read `research/protocols/phase3b_protocol.md` and
 `research/protocols/phase3b_config.json` (SHA-256
 `52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f`)
 before execution. Three seeds are 20260924, 20261012, 20261118. Fresh data
 and evaluation are in `data/phase3b/` and `benchmark/phase3b/`; the reference
 and overlap audit is `research/results/EXP-0036/`. The deterministic schedule
-is `research/protocols/phase3b_replay_schedule.json`. Before any gradients,
-freeze these and the scripts in a Git preregistration commit; record its hash
-below after committing. All mutable adapters, checkpoints, generations, and
+is `research/protocols/phase3b_replay_schedule.json`. All inputs and method
+scripts were committed before gradients. All mutable adapters, checkpoints, generations, and
 partial results live only in gitignored `.runtime/phase3b/` (not LFS). Only
 final immutable compact results are published in `research/results/`. The
 sealed final-paper holdout is unopened. The GOCO product checkout is read-only.
+
+All three A adapters scored 8/32 on fresh EVAL_A, with B-before-B 0/32.
+Fresh matched naive B-only continuations scored post-B A 0/32 each and B
+8/32 each. Fixed-budget replay continuations scored post-B A 15/32, 16/32,
+16/32 and B 9/32, 8/32, 8/32. The mean post-B A advantage was 48.96 points;
+B was 104.17% of naive mean. Non-GOCO replay scores were 48/64, 47/64,
+49/64 versus base 47/64, so the preregistered three-part gate **PASSed**.
+However, paired transitions show **0/24** A seed-tasks passed before B remained
+passing under replay: all 47 replay post-B A successes were formerly failed
+tasks. This is improved net A score, **not demonstrated preservation of
+previously acquired A tasks**. Full report and compact evidence:
+`research/results/PHASE_3B/`. No additional replay ratio or continual-learning
+method is authorized or started. STOP for independent review.
 
 ## Phase 3A recovery pointer
 

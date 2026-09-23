@@ -91,6 +91,22 @@ The following records are frozen before Phase 3B gradients or model evaluation. 
 
 Completion records will be appended without altering these preregistered rows.
 
+### Phase 3B completion records
+
+The nine training records and 30 evaluations completed without post-freeze
+methodological deviation. Full compact result and source hashes:
+`research/results/PHASE_3B/`; formal gate **PASS**, with zero preservation
+of the A tasks passed before B.
+
+| ID | Result | Status |
+|---|---|---|
+| EXP-0036 | 184/184 reference programs and 920/920 cases pass; zero >=0.98 code rejects; lower-threshold flags disclosed | COMPLETE / PRE-TRAINING PASS |
+| EXP-0037–EXP-0039 | A training, three seeds; 24/24 steps each; A-only EVAL_A 8/32 each | COMPLETE |
+| EXP-0040–EXP-0042 | Naive B-only, three seeds; 24/24 steps each; post-B A 0/32 and B 8/32 each | COMPLETE |
+| EXP-0043–EXP-0045 | Fixed 20% A replay replacing B slots, three seeds; 24/24 steps each; post-B A 15/32, 16/32, 16/32 and B 9/32, 8/32, 8/32 | COMPLETE |
+| EXP-0046 | Fresh base/A/naive/replay EVAL_A and EVAL_B; replay mean post-B A +48.96 pp versus matched naive, but 0/24 pre-B A successes retained | COMPLETE / NUMERICAL GATE PASS; TASK-LEVEL RETENTION FAIL |
+| EXP-0047 | Frozen non-GOCO regression: base 47/64; replay 48/64, 47/64, 49/64; worst matched replay deficit 2 items | COMPLETE / NO SEVERE MEASURED REGRESSION |
+
 ## Required fields for future entries
 
 Before an experiment runs, assign its ID and freeze its purpose, exact commit,
