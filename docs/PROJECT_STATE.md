@@ -5,9 +5,9 @@ Last updated: 2026-09-23
 Current phase: Phase 3B fixed-budget 20% experience replay complete; numerical gate PASS with task-level retention caveat; STOP for independent review
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
-Phase 3A was authorized solely to measure A-to-B sequential acquisition and A
-forgetting. Phase 3B now separately authorizes one fixed 20% A replay branch
-against a fresh matched 0% naive branch; no other method is authorized.
+Phase 3A measured A-to-B sequential acquisition and A forgetting. Phase 3B
+separately tested one fixed 20% A replay branch against a fresh matched 0%
+naive branch. Both are complete; no further method is authorized.
 
 ## Phase 3B recovery pointer
 
@@ -373,6 +373,10 @@ autonomous learning, human-like understanding, or general lifelong learning.
 - Phase 2A record: `docs/research/stages/PHASE_2A.md`
 - Frozen Phase 2B protocol: `research/protocols/PHASE_2B_FROZEN_CONFIRMATORY_EXPERIMENT.md`
 - Phase 2B record: `docs/research/stages/PHASE_2B.md`
+- Phase 3A stage pointer: `docs/research/stages/PHASE_3A.md`
+- Phase 3B stage pointer: `docs/research/stages/PHASE_3B.md`
+- Stage index: `docs/research/stages/README.md`
+- Infrastructure checkpoint: `docs/research/RESEARCH_INFRASTRUCTURE_CHECKPOINT.md`
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
 - Phase 2A compact summary: `research/results/PHASE_2A/summary.json`
@@ -383,10 +387,12 @@ autonomous learning, human-like understanding, or general lifelong learning.
 
 ## Resume instructions
 
-Phase 3A is complete. Preserve Phase 1T as a failed gate, Phase 2A as an
-exploratory pilot, and Phase 2B as bounded confirmatory acquisition evidence.
-Do not tune against consumed suites, select a best seed, merge an adapter,
-train on consumed tasks, or open the sealed holdout. Do not begin replay, EWC,
-adapter isolation, STABLE, NoRA, gating, or any other anti-forgetting method.
-The only next step is independent Phase 3A review. Any later experiment
-requires explicit new authorization and a new preregistration.
+Phase 3B is complete and stopped for independent review. Preserve Phase 1T as
+a failed gate, Phase 2A as an exploratory pilot, Phase 2B as bounded
+confirmatory acquisition evidence, Phase 3A as the naive forgetting baseline,
+and Phase 3B as a numerical replay-gate pass with zero preservation of the
+24 previously passed A seed-tasks. Do not tune against consumed suites, select
+a best seed, merge an adapter, train on consumed tasks, or open the sealed
+holdout. Do not begin Phase 3C, another replay ratio, EWC, adapter isolation,
+STABLE, NoRA, gating, or any other method. Any later experiment requires
+explicit new authorization and a new preregistration.

@@ -212,8 +212,9 @@ continual-learning claim is currently justified.
 - **Currently justified:** Severe, reproducible A-specific forgetting is
   observed under this exact naive sequential baseline. This does not show
   forgetting prevention, broad GOCO erasure, autonomous learning, or general
-  lifelong learning. Replay or other interventions remain unauthorized pending
-  independent review.
+  lifelong learning. A separately preregistered Phase 3B replay comparison
+  was subsequently completed; see CLM-012. This Phase 3A result alone does
+  not establish forgetting prevention.
 
 ## CLM-012
 

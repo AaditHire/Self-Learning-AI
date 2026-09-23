@@ -1,0 +1,242 @@
+{
+  "checkpoint_source_commit": "38a0de06c6329f9805cd211157fdaca7a01aa9eb",
+  "scope": "metadata_and_byte_hashes_only; no scientific evaluation",
+  "phase3b_config_sha256": "52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f",
+  "frozen_input_count": 24,
+  "frozen_input_total_bytes": 927034,
+  "runtime_source_count": 39,
+  "runtime_source_total_bytes": 2407849,
+  "phase3b_adapters": [
+    {
+      "path": ".runtime/phase3b/adapters/20260924/A/adapter_model.safetensors",
+      "sha256": "da19fbc47112673cf8898c049318245d031b5023c7b3e7ddee0431c1d6abfe61",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20260924-A-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0037",
+      "seed": 20260924,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261012/A/adapter_model.safetensors",
+      "sha256": "af82d9b62deec728077b6c15ef48b79f338168123209fb1fd9f5a3d487fd5ebc",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261012-A-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0038",
+      "seed": 20261012,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261118/A/adapter_model.safetensors",
+      "sha256": "150a7229c25378a2c2fc4c5ea16beab3963ff8bd788e94da7c7a03ab3af950ce",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261118-A-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0039",
+      "seed": 20261118,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20260924/naive/adapter_model.safetensors",
+      "sha256": "65689e8bbf16a5cfe5ca86b49baabda0458eec9a75a9060f4ab38f95dd7c950d",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20260924-naive-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0040",
+      "seed": 20260924,
+      "lineage_parent": "phase3b-20260924-A-adapter"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261012/naive/adapter_model.safetensors",
+      "sha256": "17ad522801c670b55fb15514921c1fc18c36fbab145fc518878851ff87d7d1e5",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261012-naive-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0041",
+      "seed": 20261012,
+      "lineage_parent": "phase3b-20261012-A-adapter"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261118/naive/adapter_model.safetensors",
+      "sha256": "684ca8dcc6b7707680ca1a362aa2683be3f650333240b6b83682b4aef50ad4b0",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261118-naive-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0042",
+      "seed": 20261118,
+      "lineage_parent": "phase3b-20261118-A-adapter"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20260924/replay/adapter_model.safetensors",
+      "sha256": "f2d27f84f373ec4e51c00633eeb75510a791848c98164cbbf77768eb44b00038",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20260924-replay-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0043",
+      "seed": 20260924,
+      "lineage_parent": "phase3b-20260924-A-adapter"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261012/replay/adapter_model.safetensors",
+      "sha256": "b0769e63de45bfc407d34c3da1340fae131fcad5babfe892f5227e5025fd9a49",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261012-replay-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0044",
+      "seed": 20261012,
+      "lineage_parent": "phase3b-20261012-A-adapter"
+    },
+    {
+      "path": ".runtime/phase3b/adapters/20261118/replay/adapter_model.safetensors",
+      "sha256": "c9f66244d96f0663eb205eeb7d44b9cecf6b9b9c0e93716b6475a13c17b4316a",
+      "size_bytes": 119801528,
+      "artifact_id": "phase3b-20261118-replay-adapter",
+      "storage": "ignored_local_runtime_only",
+      "producing_experiment": "EXP-0045",
+      "seed": 20261118,
+      "lineage_parent": "phase3b-20261118-A-adapter"
+    }
+  ],
+  "historical_lfs_adapters": [
+    {
+      "path": "research/adapters/candidates/c0001-phase2a-qlora/adapter_model.safetensors",
+      "sha256": "d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43",
+      "size_bytes": 119801528,
+      "artifact_id": "c0001-phase2a-qlora",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0016",
+      "seed": 20260920,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0002-phase2b-seed-20260921/adapter_model.safetensors",
+      "sha256": "1968cb0d503c502dbe31a1f53a3c70528c7dd5d478e5e50062d2e212e76e03ee",
+      "size_bytes": 119801528,
+      "artifact_id": "c0002-phase2b-seed-20260921",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0021",
+      "seed": 20260921,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0003-phase2b-seed-20261007/adapter_model.safetensors",
+      "sha256": "ac3f5f1ed1162874d9bacf9a0ebffebb1d44a930be6daf77801f2760cab86010",
+      "size_bytes": 119801528,
+      "artifact_id": "c0003-phase2b-seed-20261007",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0022",
+      "seed": 20261007,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0004-phase2b-seed-20261103/adapter_model.safetensors",
+      "sha256": "502a6ce0176f8e6371a7fddb0b8e3b32ee5af7673008a48b1f63277c7f2384f7",
+      "size_bytes": 119801528,
+      "artifact_id": "c0004-phase2b-seed-20261103",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0023",
+      "seed": 20261103,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0005-phase3a-a-seed-20260923/adapter_model.safetensors",
+      "sha256": "f54a3dbedd60eb0dea57473cface474161a27187959e88baacd71403b18e0cfd",
+      "size_bytes": 119801528,
+      "artifact_id": "c0005-phase3a-a-seed-20260923",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0028",
+      "seed": 20260923,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0006-phase3a-a-to-b-seed-20260923/adapter_model.safetensors",
+      "sha256": "cdb38ef9d79e4372fed59f9498a272e0576222c8c6c72feae6fa011d66debb75",
+      "size_bytes": 119801528,
+      "artifact_id": "c0006-phase3a-a-to-b-seed-20260923",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0029",
+      "seed": 20260923,
+      "lineage_parent": "c0005-phase3a-a-seed-20260923"
+    },
+    {
+      "path": "research/adapters/candidates/c0007-phase3a-a-seed-20261011/adapter_model.safetensors",
+      "sha256": "77de3d413d771c4bbb03675cfca52bcfe631b2489b3e826b5a091daa2aa2ee50",
+      "size_bytes": 119801528,
+      "artifact_id": "c0007-phase3a-a-seed-20261011",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0030",
+      "seed": 20261011,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0008-phase3a-a-to-b-seed-20261011/adapter_model.safetensors",
+      "sha256": "547823b271f0368643c9330f4966275b0e2fffeef0dc3b6f6023a7a04a61510b",
+      "size_bytes": 119801528,
+      "artifact_id": "c0008-phase3a-a-to-b-seed-20261011",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0031",
+      "seed": 20261011,
+      "lineage_parent": "c0007-phase3a-a-seed-20261011"
+    },
+    {
+      "path": "research/adapters/candidates/c0009-phase3a-a-seed-20261117/adapter_model.safetensors",
+      "sha256": "05f820084d85a11796898e6f4929c45692b3d7cc331c363e000c8b7c103d8e61",
+      "size_bytes": 119801528,
+      "artifact_id": "c0009-phase3a-a-seed-20261117",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0032",
+      "seed": 20261117,
+      "lineage_parent": "pinned_3b_base"
+    },
+    {
+      "path": "research/adapters/candidates/c0010-phase3a-a-to-b-seed-20261117/adapter_model.safetensors",
+      "sha256": "d34f744d2db0812390327e7c2cf73560547ae35dbf1534574fbe42050c8a7757",
+      "size_bytes": 119801528,
+      "artifact_id": "c0010-phase3a-a-to-b-seed-20261117",
+      "storage": "git_lfs",
+      "producing_experiment": "EXP-0033",
+      "seed": 20261117,
+      "lineage_parent": "c0009-phase3a-a-seed-20261117"
+    }
+  ],
+  "base_model_shards": [
+    {
+      "path": ".models/Qwen2.5-Coder-3B-Instruct-488639f/model-00001-of-00002.safetensors",
+      "sha256": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "size_bytes": 4957560304,
+      "storage": "ignored_local_model_cache_only",
+      "model_revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5"
+    },
+    {
+      "path": ".models/Qwen2.5-Coder-3B-Instruct-488639f/model-00002-of-00002.safetensors",
+      "sha256": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068",
+      "size_bytes": 1214366696,
+      "storage": "ignored_local_model_cache_only",
+      "model_revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5"
+    }
+  ],
+  "compiler_jar": {
+    "path": ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar",
+    "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "size_bytes": 212005,
+    "storage": "ignored_local_build_artifact_only"
+  },
+  "sealed_v1_container_hashes": [
+    {
+      "path": "benchmark/hidden_tests.json",
+      "sha256": "f81bc8b5d611b5c349694b7a5004018fa50f409299327e5214870fb67684520d",
+      "size_bytes": 7702
+    },
+    {
+      "path": "benchmark/reference_solutions.json",
+      "sha256": "630740b9039f244c61b822453c7d9946f975f1d60c466095acc0435dd769f9d7",
+      "size_bytes": 9869
+    },
+    {
+      "path": "benchmark/tasks.json",
+      "sha256": "5f670bf945941a8b45e6bf3f09e5b67ba46a6ac3bd3c02f4003f50ba12f944b1",
+      "size_bytes": 16140
+    }
+  ]
+}
