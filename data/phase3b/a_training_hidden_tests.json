@@ -1,0 +1,1622 @@
+{
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "124.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "24.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "41.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "128.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "24.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "42.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "132.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "24.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "43.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "136.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "20.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "44.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "140.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "45.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "144.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "46.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "148.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "47.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "152.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "28.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "48.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "156.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "48.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "49.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "160.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "48.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "50.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "42.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "164.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "48.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "51.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "37.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "37.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "44.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "168.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "52.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "38.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "46.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "172.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "60.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "53.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "39.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "39.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "16.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "48.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "176.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "60.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "54.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "40.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "17.0"
+    }
+  ],
+  "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "50.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "180.0"
+    }
+  ],
+  "P3B-A-TR-NU-SHIFTED_MOD_SUM-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "4\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "7\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "11\n",
+      "expected_stdout": "60.0"
+    }
+  ],
+  "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "55.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "41.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P3B-A-TR-AR-ADJACENT_DISTANCE-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "41.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "18.0"
+    }
+  ]
+}

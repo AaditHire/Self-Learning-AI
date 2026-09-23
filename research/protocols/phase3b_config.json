@@ -1,0 +1,167 @@
+{
+  "phase": "3B-fixed-budget-20-percent-experience-replay",
+  "start_commit": "000311f724155d0a643d99bff22c6cac848a15be",
+  "preregistration_status": "frozen before gradients/evaluations",
+  "runtime_root": ".runtime/phase3b",
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "model": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "capabilities": {
+    "A": {
+      "definition": "numeric iterative and array-reduction GOCO programs",
+      "subskills": [
+        "numeric_iteration",
+        "array_reduction"
+      ]
+    },
+    "B": {
+      "definition": "string transformations and delimited-field processing GOCO programs",
+      "subskills": [
+        "string_transform",
+        "field_processing"
+      ]
+    }
+  },
+  "data": {
+    "a_training_examples": "data/phase3b/a_training_examples.json",
+    "a_training_tests": "data/phase3b/a_training_hidden_tests.json",
+    "b_training_examples": "data/phase3b/b_training_examples.json",
+    "b_training_tests": "data/phase3b/b_training_hidden_tests.json",
+    "eval_a_tasks": "benchmark/phase3b/a_eval_tasks.json",
+    "eval_a_tests": "benchmark/phase3b/a_eval_hidden_tests.json",
+    "eval_a_references": "benchmark/phase3b/a_eval_references.json",
+    "eval_b_tasks": "benchmark/phase3b/b_eval_tasks.json",
+    "eval_b_tests": "benchmark/phase3b/b_eval_hidden_tests.json",
+    "eval_b_references": "benchmark/phase3b/b_eval_references.json",
+    "general_regression": "benchmark/phase2b/general_regression.json",
+    "replay_schedule": "research/protocols/phase3b_replay_schedule.json",
+    "validation": "research/results/EXP-0036/data_validation.json"
+  },
+  "prompt": {
+    "system": "prompts/phase1t_system.txt",
+    "user_template": "prompts/phase1t_user_template.txt",
+    "context": "same no-documentation prompt at all stages; no search"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "Final epoch a priori, no performance-based selection",
+    "stage_b_policy": "Naive and 20% replay branch from same seed-matched A adapter; fresh optimizer and scheduler, fixed 60 examples and 24 optimizer steps per branch"
+  },
+  "seeds": [
+    20260924,
+    20261012,
+    20261118
+  ],
+  "evaluation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536,
+    "primary_metric": "task-level hidden-test pass@1",
+    "base_seed": 20260924,
+    "required_conditions": [
+      "base_A",
+      "base_B",
+      "base_regression",
+      "A_A",
+      "A_B",
+      "A_regression",
+      "naive_A",
+      "naive_B",
+      "naive_regression",
+      "replay_A",
+      "replay_B",
+      "replay_regression"
+    ]
+  },
+  "analysis": {
+    "primary_metric": "unweighted three-seed mean replay post-B EVAL_A pass@1 minus naive post-B EVAL_A pass@1",
+    "pass_a_gain_pp": 20,
+    "minimum_b_fraction_of_naive": 0.75,
+    "require_naive_b_positive": true,
+    "max_regression_drop_items_each_seed_against_naive_and_base": 9,
+    "task_cluster_bootstrap_draws": 10000,
+    "task_cluster_bootstrap_seed": 20261220
+  },
+  "input_file_hashes": {
+    "data/phase3b/a_training_examples.json": "f967c3c504bafc442cd479b8974f7ae3787f1bfd08bd17e3c38cd6f70d8afec3",
+    "data/phase3b/a_training_hidden_tests.json": "77bb72f2cdfdd9f2919fe391a93da4e0d8ded256de2a05ada4b542fca6848eaf",
+    "data/phase3b/b_training_examples.json": "9fa51f7d4008e71f79562d7619384f1a57db763c2b558642976c775e37dedd32",
+    "data/phase3b/b_training_hidden_tests.json": "ce2bb8bf4b94285d68fccc59af4cea20fb129e490e67c13e55e9072823ee2941",
+    "benchmark/phase3b/a_eval_tasks.json": "89e205345ee238aac4214b96d8f1732b9f29d9aef4c9774c3e2bd11e191eefbe",
+    "benchmark/phase3b/a_eval_hidden_tests.json": "4a370c3427d2e04a4072c4e1ada64cc552112ac32b926ad5de037fb7289faf30",
+    "benchmark/phase3b/a_eval_references.json": "296503ff5f74477b51c1ba630c08e6e0361da3ba833cbd60925287c11c3831ef",
+    "benchmark/phase3b/b_eval_tasks.json": "553ca558a3836751a982f920e97c183423d00037b9d8b11eac0ac25b518a13ec",
+    "benchmark/phase3b/b_eval_hidden_tests.json": "d63b39aaca5bce1c1ce5715f434d69ba8ec6a6495b4a6365c3d4861ad646226a",
+    "benchmark/phase3b/b_eval_references.json": "2c667d7cf3142be152bdc68ae6423e1e1dbac9dcc1763daa84dc97f69cce1a2b",
+    "benchmark/phase2b/general_regression.json": "53bcb1b01b4364ac4f663ecf79cf31fc8c2b509cb11f58f43c3ce98fdbee1ec8",
+    "research/protocols/phase3b_replay_schedule.json": "9d90f557243bd42d70aa869360224f60197797380867bf0d592670b535c8a5f0",
+    "research/results/EXP-0036/data_validation.json": "d60d22e9f0e42980302292ee510f2f625f20038853c41b35878f8b4e964ca98c",
+    "research/results/EXP-0036/structural_overlap_manual_review.md": "59bbf0ce4cd8d80a7c7ac468825f3305948bfc928062f55348611320c16cfd7d",
+    "research/protocols/phase3b_protocol.md": "49d15fc8489e3352da6270684446db752d99f3d33194da5e5165747699a630cc",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "scripts/build_phase3b_data.py": "35d6abb9ae1e44fe87bfe82e7ff07b11815829f8ca24ab4ea3a62451650772c6",
+    "scripts/validate_phase3b_data.py": "b471187c075686924550d7b6ce22ffff0c65ca24d961277ab110b84d60a04413",
+    "scripts/build_phase3b_schedule.py": "63b589984db34c65e170f5dda99bc2cb7e45f7c1d70bfefee96f2a4d8470c584",
+    "scripts/train_phase3b_qlora.py": "633637fd09dffcd3e6f32e675b3fe0fa323876e121cc5b009c230f35335a8ead",
+    "scripts/run_phase3b_evaluation.py": "3012c75f7aa21de92a2a7c6fcc9b23c4c36af270dcbafb143f175e0bced81c2a",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase2a_evaluation.py": "70c154adfb7e90c1519d4a34fb5297aaa4cc02cc99f7890eeed20d0cebe473bf"
+  },
+  "prohibitions": [
+    "post-freeze data, seed, example mix, prompt, hyperparameter, checkpoint or gate changes using model results",
+    "EWC, NoRA, adapter isolation, gating, STABLE or any other method",
+    "base-weight modification or adapter merge",
+    "sealed final-paper holdout access",
+    "writes to GOCO product repository",
+    "mutable runtime under Git/LFS"
+  ]
+}

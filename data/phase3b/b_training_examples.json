@@ -1,0 +1,1112 @@
+[
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-01",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'a'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"a\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-1",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-01",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'a' with '!', and prefix 'a:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"a:\",strings.REPLACE(strings.LOWER(text),\"a\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-1",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-01",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG1 if the left field is longer, otherwise SHORT1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG1\"). } ELSE { DISPLAYNL(\"SHORT1\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-1",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-01",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'a'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"a\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-1",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-02",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'b'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"b\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-2",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-02",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'b' with '!', and prefix 'b:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"b:\",strings.REPLACE(strings.LOWER(text),\"b\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-2",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-02",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG2 if the left field is longer, otherwise SHORT2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG2\"). } ELSE { DISPLAYNL(\"SHORT2\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-2",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-02",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'b'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"b\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-2",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-03",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'c'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"c\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-3",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-03",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'c' with '!', and prefix 'c:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"c:\",strings.REPLACE(strings.LOWER(text),\"c\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-3",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-03",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG3 if the left field is longer, otherwise SHORT3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG3\"). } ELSE { DISPLAYNL(\"SHORT3\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-3",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-03",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'c'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"c\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-3",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-04",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'd'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"d\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-4",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-04",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'd' with '!', and prefix 'd:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"d:\",strings.REPLACE(strings.LOWER(text),\"d\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-4",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-04",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG4 if the left field is longer, otherwise SHORT4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG4\"). } ELSE { DISPLAYNL(\"SHORT4\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-4",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-04",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'd'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"d\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-4",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-05",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'e'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"e\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-5",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-05",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'e' with '!', and prefix 'e:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"e:\",strings.REPLACE(strings.LOWER(text),\"e\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-5",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-05",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG5 if the left field is longer, otherwise SHORT5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG5\"). } ELSE { DISPLAYNL(\"SHORT5\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-5",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-05",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'e'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"e\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-5",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-06",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'f'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"f\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-6",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-06",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'f' with '!', and prefix 'f:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"f:\",strings.REPLACE(strings.LOWER(text),\"f\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-6",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-06",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG6 if the left field is longer, otherwise SHORT6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG6\"). } ELSE { DISPLAYNL(\"SHORT6\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-6",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-06",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'f'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"f\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-6",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-07",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'g'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"g\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-7",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-07",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'g' with '!', and prefix 'g:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"g:\",strings.REPLACE(strings.LOWER(text),\"g\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-7",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-07",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG7 if the left field is longer, otherwise SHORT7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG7\"). } ELSE { DISPLAYNL(\"SHORT7\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-7",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-07",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'g'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"g\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-7",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-08",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'h'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"h\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-8",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-08",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'h' with '!', and prefix 'h:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"h:\",strings.REPLACE(strings.LOWER(text),\"h\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-8",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-08",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG8 if the left field is longer, otherwise SHORT8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG8\"). } ELSE { DISPLAYNL(\"SHORT8\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-8",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-08",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'h'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"h\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-8",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-09",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'i'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"i\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-9",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-09",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'i' with '!', and prefix 'i:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"i:\",strings.REPLACE(strings.LOWER(text),\"i\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-9",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-09",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG9 if the left field is longer, otherwise SHORT9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG9\"). } ELSE { DISPLAYNL(\"SHORT9\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-9",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-09",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'i'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"i\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-9",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-10",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'j'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"j\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-10",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-10",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'j' with '!', and prefix 'j:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"j:\",strings.REPLACE(strings.LOWER(text),\"j\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-10",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-10",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG10 if the left field is longer, otherwise SHORT10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG10\"). } ELSE { DISPLAYNL(\"SHORT10\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-10",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-10",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'j'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"j\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-10",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-11",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'k'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"k\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-11",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-11",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'k' with '!', and prefix 'k:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"k:\",strings.REPLACE(strings.LOWER(text),\"k\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-11",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-11",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG11 if the left field is longer, otherwise SHORT11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG11\"). } ELSE { DISPLAYNL(\"SHORT11\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-11",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-11",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'k'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"k\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-11",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-12",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"l\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-12",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-12",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'l' with '!', and prefix 'l:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"l:\",strings.REPLACE(strings.LOWER(text),\"l\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-12",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-12",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG12 if the left field is longer, otherwise SHORT12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG12\"). } ELSE { DISPLAYNL(\"SHORT12\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-12",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-12",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'l'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"l\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-12",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-13",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'm'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"m\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-13",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-13",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'm' with '!', and prefix 'm:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"m:\",strings.REPLACE(strings.LOWER(text),\"m\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-13",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-13",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG13 if the left field is longer, otherwise SHORT13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(\"SHORT13\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-13",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-13",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'm'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"m\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-13",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-14",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"n\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-14",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-14",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'n' with '!', and prefix 'n:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"n:\",strings.REPLACE(strings.LOWER(text),\"n\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-14",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-14",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG14 if the left field is longer, otherwise SHORT14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG14\"). } ELSE { DISPLAYNL(\"SHORT14\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-14",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-14",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'n'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"n\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-14",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-TRIM_REVERSE_UPPER-15",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces at both ends, reverse the result, uppercase it, then append 'o'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(strings.TRIM(text,\" \"))),\"o\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_trim_reverse_upper",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-trim_reverse_upper-15",
+    "structural_signature": "B>training>trim_reverse_upper",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "uppercase",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-ST-LOWER_REPLACE_PREFIX-15",
+    "split": "phase3b_b_train",
+    "family": "string_transform",
+    "prompt": "Read text. Lowercase it, replace 'o' with '!', and prefix 'o:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"o:\",strings.REPLACE(strings.LOWER(text),\"o\",\"!\"))).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_lower_replace_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-training-lower_replace_prefix-15",
+    "structural_signature": "B>training>lower_replace_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "lowercase",
+      "replace",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-FIELD_LENGTH_LABEL-15",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print LONG15 if the left field is longer, otherwise SHORT15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(\"LONG15\"). } ELSE { DISPLAYNL(\"SHORT15\"). }",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_field_length_label",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-field_length_label-15",
+    "structural_signature": "B>training>field_length_label",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_compare",
+      "branch"
+    ]
+  },
+  {
+    "example_id": "P3B-B-TR-FI-REVERSE_UPPER_JOIN-15",
+    "split": "phase3b_b_train",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print reversed right, a colon, uppercase left, then 'o'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.REVERSE(right),\":\"),strings.UPPER(left)),\"o\")).",
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_training_reverse_upper_join",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-training-reverse_upper_join-15",
+    "structural_signature": "B>training>reverse_upper_join",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "reverse_right",
+      "uppercase_left",
+      "join"
+    ]
+  }
+]

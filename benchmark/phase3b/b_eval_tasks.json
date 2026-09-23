@@ -1,0 +1,642 @@
+[
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-01",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'A' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-1",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-01",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'a'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-1",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-01",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'a', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-1",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-01",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'a' twice in left and once in right; print that weighted count plus 1.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-1",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-02",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'B' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-2",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-02",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'b'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-2",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-02",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'b', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-2",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-02",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'b' twice in left and once in right; print that weighted count plus 2.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-2",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-03",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'C' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-3",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-03",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'c'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-3",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-03",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'c', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-3",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-03",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'c' twice in left and once in right; print that weighted count plus 3.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-3",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-04",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'D' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-4",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-04",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'd'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-4",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-04",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'd', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-4",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-04",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'd' twice in left and once in right; print that weighted count plus 4.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-4",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-05",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'E' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-5",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-05",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'e'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-5",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-05",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'e', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-5",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-05",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'e' twice in left and once in right; print that weighted count plus 5.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-5",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-06",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'F' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-6",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-06",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'f'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-6",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-06",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'f', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-6",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-06",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'f' twice in left and once in right; print that weighted count plus 6.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-6",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-07",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'G' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-7",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-07",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'g'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-7",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-07",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'g', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-7",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-07",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'g' twice in left and once in right; print that weighted count plus 7.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-7",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-08",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Uppercase it, replace every 'H' with '?', then reverse the result.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_upper_replace_reverse",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-upper_replace_reverse-8",
+    "structural_signature": "B>eval>upper_replace_reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "reverse"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-08",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "string_transform",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read text. Trim spaces, lowercase the result, and print it twice separated by 'h'.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_trim_duplicate_lower",
+    "control_flow": "string_transform",
+    "template_lineage": "p3b-b-eval-trim_duplicate_lower-8",
+    "structural_signature": "B>eval>trim_duplicate_lower",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "lowercase",
+      "duplicate"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-CONTAINS_SELECT-08",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. If left contains 'h', print uppercase right; otherwise print lowercase left.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_contains_select",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-contains_select-8",
+    "structural_signature": "B>eval>contains_select",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "contains_branch",
+      "case_select"
+    ]
+  },
+  {
+    "task_id": "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-08",
+    "split": "phase3b_eval_b",
+    "level": "full_synthesis",
+    "family": "field_processing",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read left|right text fields. Count 'h' twice in left and once in right; print that weighted count plus 8.",
+    "required_regex": [],
+    "capability": "B",
+    "algorithmic_structure": "p3b_b_eval_weighted_field_count",
+    "control_flow": "field_processing",
+    "template_lineage": "p3b-b-eval-weighted_field_count-8",
+    "structural_signature": "B>eval>weighted_field_count",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*>+>+",
+    "semantic_operations": [
+      "split_fields",
+      "weighted_substring_count",
+      "offset"
+    ]
+  }
+]

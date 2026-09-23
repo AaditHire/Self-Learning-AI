@@ -1,0 +1,1022 @@
+[
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-01",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+1. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+1. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-1",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-01",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+1 to a total only when i+1 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+1)%4==0) { total+=i+1. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-1",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-01",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-1",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-01",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-1",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-02",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+2. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+2. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-2",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-02",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+2 to a total only when i+2 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+2)%4==0) { total+=i+2. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-2",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-02",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-2",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-02",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-2",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-03",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+3. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+3. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-3",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-03",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+3 to a total only when i+3 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+3)%4==0) { total+=i+3. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-3",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-03",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-3",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-03",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-3",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-04",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+4. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-4",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-04",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+4 to a total only when i+4 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+4)%4==0) { total+=i+4. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-4",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-04",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-4",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-04",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-4",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-05",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+5. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+5. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-5",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-05",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+5 to a total only when i+5 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+5)%4==0) { total+=i+5. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-5",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-05",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-5",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-05",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-5",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-06",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+6. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+6. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-6",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-06",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+6 to a total only when i+6 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+6)%4==0) { total+=i+6. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-6",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-06",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-6",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-06",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-6",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-07",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+7. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+7. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-7",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-07",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+7 to a total only when i+7 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+7)%4==0) { total+=i+7. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-7",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-07",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=7.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-7",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-07",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=7.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-7",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-08",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+8. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+8. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-8",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-08",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+8 to a total only when i+8 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+8)%4==0) { total+=i+8. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-8",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-08",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-8",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-08",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-8",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-09",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+9. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+9. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-9",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-09",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+9 to a total only when i+9 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+9)%4==0) { total+=i+9. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-9",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-09",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=9.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-9",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-09",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=9.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-9",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-10",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+10. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+10. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-10",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-10",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+10 to a total only when i+10 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+10)%4==0) { total+=i+10. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-10",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-10",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=10.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-10",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-10",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=10.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-10",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-11",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+11. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+11. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-11",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-11",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+11 to a total only when i+11 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+11)%4==0) { total+=i+11. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-11",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-11",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=11.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-11",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-11",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=11.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-11",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-12",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+12. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+12. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-12",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-12",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+12 to a total only when i+12 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+12)%4==0) { total+=i+12. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-12",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-12",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=12.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-12",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-12",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=12.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-12",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-13",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+13. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+13. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-13",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-13",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+13 to a total only when i+13 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+13)%4==0) { total+=i+13. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-13",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-13",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=13.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-13",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-13",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=13.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-13",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-14",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+14. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+14. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-14",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-14",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+14 to a total only when i+14 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+14)%4==0) { total+=i+14. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-14",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-14",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=14.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-14",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-14",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=14.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-14",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-EVEN_SQUARE_OFFSET-15",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each even i from 1 through n, add i*i+15. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i*i+15. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_even_square_offset",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-even_square_offset-15",
+    "structural_signature": "A>training>even_square_offset",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "even_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-NU-SHIFTED_MOD_SUM-15",
+    "split": "phase3b_a_train",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For i=1..n, add i+15 to a total only when i+15 is divisible by 4. Print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF ((i+15)%4==0) { total+=i+15. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_shifted_mod_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-training-shifted_mod_sum-15",
+    "structural_signature": "A>training>shifted_mod_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>+>%>==>+=>+>DISPLAYNL",
+    "semantic_operations": [
+      "shifted_modulo_filter",
+      "value_sum"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-POSITIVE_POSITION_WEIGHT-15",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Add (position+1)*value for positive entries, then add 15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=15.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=(i+1)*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_positive_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-positive_position_weight-15",
+    "structural_signature": "A>training>positive_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>+>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "position_weight"
+    ]
+  },
+  {
+    "example_id": "P3B-A-TR-AR-ADJACENT_DISTANCE-15",
+    "split": "phase3b_a_train",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum absolute differences between adjacent entries and add 15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nIMPORT math.\nNUMBER[] values=[a,b,c,d].\nNUMBER total=15.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=math.ABS(values[i+1]-values[i]). }\nDISPLAYNL(total).",
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_training_adjacent_distance",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-training-adjacent_distance-15",
+    "structural_signature": "A>training>adjacent_distance",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>LOOP>+>+>+=>+>->DISPLAYNL",
+    "semantic_operations": [
+      "array_adjacent_difference",
+      "absolute_sum"
+    ]
+  }
+]

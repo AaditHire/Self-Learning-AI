@@ -70,6 +70,27 @@ There were no failed model runs or post-freeze methodological deviations.
 Full report: `research/results/PHASE_3A/report.md`; paired analysis:
 `research/results/PHASE_3A/analysis.json`. No anti-forgetting method was run.
 
+## Phase 3B preregistered records
+
+The following records are frozen before Phase 3B gradients or model evaluation. Starting commit: `000311f724155d0a643d99bff22c6cac848a15be`. Config SHA-256: `52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f`. The config records all input hashes, model revision/base weight hashes, and pinned compiler hash; the frozen replay schedule lists every exposure. All mutable outputs are under gitignored `.runtime/phase3b/`, with compact final records to be published under `research/results/PHASE_3B/`. Hardware: same RTX 3060 Laptop 6 GB host. No Phase 3A evaluation record is reused.
+
+| ID | Purpose | Seed(s) | Parent → output | Frozen output/status |
+|---|---|---|---|---|
+| EXP-0036 | Fresh A/B data and structural/reference audit | none | none | `research/results/EXP-0036/`; COMPLETE / PRE-TRAINING PASS |
+| EXP-0037 | Train A from immutable base | 20260924 | base → runtime A | `.runtime/phase3b/training/20260924/A.json`; PREREGISTERED |
+| EXP-0038 | Train A from immutable base | 20261012 | base → runtime A | `.runtime/phase3b/training/20261012/A.json`; PREREGISTERED |
+| EXP-0039 | Train A from immutable base | 20261118 | base → runtime A | `.runtime/phase3b/training/20261118/A.json`; PREREGISTERED |
+| EXP-0040 | Naive B-only, fixed 60 slots/epoch | 20260924 | same-seed A → runtime naive | `.runtime/phase3b/training/20260924/naive.json`; PREREGISTERED |
+| EXP-0041 | Naive B-only, fixed 60 slots/epoch | 20261012 | same-seed A → runtime naive | `.runtime/phase3b/training/20261012/naive.json`; PREREGISTERED |
+| EXP-0042 | Naive B-only, fixed 60 slots/epoch | 20261118 | same-seed A → runtime naive | `.runtime/phase3b/training/20261118/naive.json`; PREREGISTERED |
+| EXP-0043 | B with fixed 20% A replay replacing B slots | 20260924 | same-seed A → runtime replay | `.runtime/phase3b/training/20260924/replay.json`; PREREGISTERED |
+| EXP-0044 | B with fixed 20% A replay replacing B slots | 20261012 | same-seed A → runtime replay | `.runtime/phase3b/training/20261012/replay.json`; PREREGISTERED |
+| EXP-0045 | B with fixed 20% A replay replacing B slots | 20261118 | same-seed A → runtime replay | `.runtime/phase3b/training/20261118/replay.json`; PREREGISTERED |
+| EXP-0046 | Fresh EVAL_A/EVAL_B base, A, naive, replay | all three | frozen adapters | `.runtime/phase3b/evaluations/`; PREREGISTERED |
+| EXP-0047 | Frozen 64-item non-GOCO regression | all three | frozen adapters | `.runtime/phase3b/evaluations/`; PREREGISTERED |
+
+Completion records will be appended without altering these preregistered rows.
+
 ## Required fields for future entries
 
 Before an experiment runs, assign its ID and freeze its purpose, exact commit,

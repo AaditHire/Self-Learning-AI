@@ -1,0 +1,866 @@
+{
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ?HPL? "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " ??? "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-01": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphaaalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoagoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzaxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldahello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaaaaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "B"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "DOG"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-02": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphabalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocobgoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzbxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldbhello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaabaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-03": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "O?OG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-03": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphacalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gococgoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzcxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldchello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaacaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "DOG"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-04": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " ?LROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-04": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphadalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocodgoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzdxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worlddhello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaadaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "BLUE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-05": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLL?H "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-05": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphaealpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoegoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzexyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldehello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaaeaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "BLUE"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-06": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-06": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphafalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocofgoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzfxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldfhello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaafaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-07": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " AHPLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCO?"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLEH "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-07": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphagalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocoggoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzgxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldghello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaagaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "hello"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3B-B-EVAL-ST-UPPER_REPLACE_REVERSE-08": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " A?PLA "
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "OCOG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "ZYX"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " DLROW OLLE? "
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": " AAA "
+    }
+  ],
+  "P3B-B-EVAL-ST-TRIM_DUPLICATE_LOWER-08": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "alphahalpha"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "gocohgoco"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "xyzhxyz"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "hello worldhhello world"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "aaahaaa"
+    }
+  ],
+  "P3B-B-EVAL-FI-CONTAINS_SELECT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "red"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "x"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "cat"
+    }
+  ],
+  "P3B-B-EVAL-FI-WEIGHTED_FIELD_COUNT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "a|b\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "red|BLUE\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|world\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|XYZ\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cat|dog\n",
+      "expected_stdout": "8.0"
+    }
+  ]
+}

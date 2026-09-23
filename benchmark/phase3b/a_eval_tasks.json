@@ -1,0 +1,610 @@
+[
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+1; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-1",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-01",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=1. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-1",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-01",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+1.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-1",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-01",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 1.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-1",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-02",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+2; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-2",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-02",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=2. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-2",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-02",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+2.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-2",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-02",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 2.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-2",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-03",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+3; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-3",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-03",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=3. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-3",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-03",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+3.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-3",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-03",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 3.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-3",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-04",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+4; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-4",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-04",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=4. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-4",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-04",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+4.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-4",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-04",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 4.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-4",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-05",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+5; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-5",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-05",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=5. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-5",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-05",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+5.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-5",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-05",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 5.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-5",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-06",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+6; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-6",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-06",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=6. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-6",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-06",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+6.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-6",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-06",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 6.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-6",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-07",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+7; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-7",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-07",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=7. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-7",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-07",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+7.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-7",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-07",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 7.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-7",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-08",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. For every positive divisor i of n, add i*i+8; print the sum.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_divisor_pair_sum",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-divisor_pair_sum-8",
+    "structural_signature": "A>eval>divisor_pair_sum",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_filter",
+      "square_offset_sum"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-NU-ODD_STEP_RECURRENCE-08",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read nonnegative n. Start x=8. On each step i, double x, then add i if odd or subtract i if even. Print x.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_odd_step_recurrence",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3b-a-eval-odd_step_recurrence-8",
+    "structural_signature": "A>eval>odd_step_recurrence",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>*>->ELSE>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "alternating_doubling_recurrence",
+      "indexed_offset"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-EXTREMA_SPREAD-08",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Find the largest and smallest via a loop, print largest-smallest+8.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_extrema_spread",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-extrema_spread-8",
+    "structural_signature": "A>eval>extrema_spread",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_extrema_loop",
+      "spread"
+    ]
+  },
+  {
+    "task_id": "P3B-A-EVAL-AR-PAIR_PRODUCT_GAP-08",
+    "split": "phase3b_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3b_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference of the first pair's product and the last pair's product, plus 8.",
+    "required_regex": [],
+    "capability": "A",
+    "algorithmic_structure": "p3b_a_eval_pair_product_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3b-a-eval-pair_product_gap-8",
+    "structural_signature": "A>eval>pair_product_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>*>->*>+",
+    "semantic_operations": [
+      "array_pair_products",
+      "absolute_gap"
+    ]
+  }
+]

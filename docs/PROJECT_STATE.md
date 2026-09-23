@@ -2,11 +2,28 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 3A complete; naive sequential baseline shows measurable severe A forgetting; stopped for independent review
+Current phase: Phase 3B fixed-budget 20% experience replay preregistered; execution pending
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
 Phase 3A was authorized solely to measure A-to-B sequential acquisition and A
-forgetting. No replay or other anti-forgetting method was tested or authorized.
+forgetting. Phase 3B now separately authorizes one fixed 20% A replay branch
+against a fresh matched 0% naive branch; no other method is authorized.
+
+## Phase 3B recovery pointer
+
+Starting from clean Phase 3A final commit `000311f724155d0a643d99bff22c6cac848a15be`.
+Read `research/protocols/phase3b_protocol.md` and
+`research/protocols/phase3b_config.json` (SHA-256
+`52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f`)
+before execution. Three seeds are 20260924, 20261012, 20261118. Fresh data
+and evaluation are in `data/phase3b/` and `benchmark/phase3b/`; the reference
+and overlap audit is `research/results/EXP-0036/`. The deterministic schedule
+is `research/protocols/phase3b_replay_schedule.json`. Before any gradients,
+freeze these and the scripts in a Git preregistration commit; record its hash
+below after committing. All mutable adapters, checkpoints, generations, and
+partial results live only in gitignored `.runtime/phase3b/` (not LFS). Only
+final immutable compact results are published in `research/results/`. The
+sealed final-paper holdout is unopened. The GOCO product checkout is read-only.
 
 ## Phase 3A recovery pointer
 

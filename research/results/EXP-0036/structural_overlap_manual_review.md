@@ -1,0 +1,7 @@
+# Phase 3B structural-overlap review (pre-training)
+
+The fresh Phase 3B validation compiled and passed all five hidden semantic cases for all 184 training/evaluation reference programs. The first two pre-training validation attempts rejected two near-duplicate A evaluation templates; those templates were revised based solely on structural audit, before any model gradients/evaluation. Attempt 3 passes the 0.98 code-similarity rejection threshold. No exact train/evaluation metadata or prompt overlap and no consumed prior-evaluation prompt reuse were found.
+
+The retained lower-threshold flags are material. Of 32 EVAL_A tasks, 24 have reference-code similarity ≥0.85 to a new training target and 24 ≥0.90 to a previously consumed reference; maxima are 0.9394 and 0.9722. Of 32 EVAL_B tasks, 24 and 32 have those respective flags; maxima are 0.9697 and 0.9448. The coarse AST proxy matches 24 EVAL_B tasks to training targets. The largest new-training prompt similarity is 0.4737 for A and 0.5333 for B, below the 0.70 flag threshold. These are compact programs sharing GOCO input/output scaffolding and primitive string operations; the held-out semantic compositions and test inputs differ, but the tasks should not be represented as wholly novel syntax or independent program families. A successful result would support narrow within-family retention, not broad transfer.
+
+The complete per-task audit, reference verification, and exact file hashes are recorded in the frozen validation artifact. No sealed final-paper holdout was opened.
