@@ -38,6 +38,15 @@ previously acquired A tasks**. Full report and compact evidence:
 `research/results/PHASE_3B/`. No additional replay ratio or continual-learning
 method is authorized or started. STOP for independent review.
 
+The nine final Phase 3B adapter weights and 39 raw runtime records were
+subsequently copied to the existing GitHub remote (Git LFS for adapters,
+ordinary Git for records) without changing the originals. All 48 were
+restored from a fresh remote clone and matched their recorded SHA-256 and
+size. Preservation evidence: `research/artifacts/PHASE3B_PRESERVATION.md`
+and `research/manifests/phase3b_remote_restore_verification.json`. This
+infrastructure action does not alter the Phase 3B scientific result or
+authorize Phase 3C.
+
 ## Phase 3A recovery pointer
 
 Starting commit: `1ded323e036cd93813ab165210e0c3dcf32616df`.

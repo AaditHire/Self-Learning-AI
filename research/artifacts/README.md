@@ -22,3 +22,10 @@ previous `.git/lfs/tmp` growth risk. An external versioned object store is
 preferable for large raw generations and checkpoints. No remote artifact
 store, independent backup, or verified off-machine copy was established by
 this checkpoint. OneDrive location alone is not evidence of completed sync.
+
+The subsequent Phase 3B preservation task used the existing GitHub remote
+with Git LFS for nine final adapters and Git for 39 compact raw records.
+See `PHASE3B_PRESERVATION.md` and the two Phase 3B preservation/restore
+manifests for the verified remote recovery. The prospective store policy
+above remains guidance for future experiments; it does not change the
+historical checkpoint record.
