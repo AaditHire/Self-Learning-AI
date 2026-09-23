@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 3C retention-valid fixed-budget replay DESIGN / PREREGISTRATION complete; STOP for independent scientific review before model execution
+Current phase: Phase 3C pre-execution implementation and protocol verification complete; STOP for independent scientific review before model execution
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
 Phase 3A measured A-to-B sequential acquisition and A forgetting. Phase 3B
@@ -63,6 +63,16 @@ B training. Exact acquired-task retention and aggregate post-B A are
 co-primary. No Phase 3C gradients or confirmatory model evaluations have run;
 the final-paper holdout remains unopened. Execution is not authorized by this
 design artifact; STOP for independent review.
+
+The subsequent pre-execution verification is recorded in
+`research/results/PHASE_3C_PREEXECUTION/verification.md`. Future execution
+scripts and their support/tokenizer hashes are frozen by
+`research/protocols/phase3c_execution_manifest.json`; a machine-generated
+separation audit confirms all replay examples come from the frozen A training
+set. Synthetic tests passed without model inference or gradients. The current
+host's hardware/package snapshot is preflight information and will be
+captured again during any later authorized run. No Phase 3C model execution
+has begun, and off-machine backup of future model artifacts remains pending.
 
 ## Phase 3A recovery pointer
 

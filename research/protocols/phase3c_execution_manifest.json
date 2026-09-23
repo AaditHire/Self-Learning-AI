@@ -1,0 +1,35 @@
+{
+  "phase": "3C",
+  "status": "pre_execution_implementation_frozen_no_model_run",
+  "frozen_design_commit": "a2fb247d090d3d2b00e7fcc4a4f71325723b7086",
+  "frozen_config_sha256": "3d9b1d05d55a5fdfe69a25a4a376b3174f7323e86a5a3a936442d5499b4fe679",
+  "code_git_text_sha256": {
+    ".gitattributes": "ce8947d65053dc3c3745bcfe98d57f68ea045f6cd9922e29a7a0b0276745d7c4",
+    "scripts/phase3c_contract.py": "fff6cabf9a6439865b2423e91b3ea203ee6a1d19b0e55828a7a80b1ee515223b",
+    "scripts/train_phase3c_qlora.py": "f3e9d890124c77074c87b3c90d5b3bb032c0af43b5e867c6bdc31a1c583923f5",
+    "scripts/run_phase3c_evaluation.py": "9d940acd6d2640965dd00d84fdbd57f4cde2aaee692f0cfd7eea6dc2a0dbc83d",
+    "scripts/run_phase3c.py": "2351dcf2df57f3e9b2aef3123c0a612e99a7c74b9cd188862020b3374b950be3",
+    "scripts/analyze_phase3c.py": "13398ae80bc86ed3b3587dd43e77f15eb9c4a7f44a78dba2e1f9df4bef2b9a34",
+    "scripts/finalize_phase3c_artifacts.py": "a48068b936020dde39280042846ffcbea6649b14eb3c3ae8d5295b74f6f55601",
+    "scripts/capture_phase3c_environment.py": "8fb0804824c66167d039a6dfc22652472f160e26f07ec9b5e123b04cc259d75e",
+    "scripts/preserve_phase3c_artifacts.py": "44f566d3d4fbd0723fa70d2d1f1f0c00a975e1f29322e9d373e117b7e7b516c6",
+    "scripts/verify_phase3c_remote_restore.py": "a9bb96196488f9c045f50641cc146ea8fe6e91e100b617aabb523f214b3eb0e2",
+    "scripts/audit_phase3c_train_eval_separation.py": "5538de1d892b553b6893014ecc8e4a3a82b675d0c822304bcf34264dff260146",
+    "scripts/freeze_phase3c_execution_manifest.py": "898f000c9e565cb31df7aced9d6ca042efd3dcca5a51257516a008abafa43c09",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase2a_evaluation.py": "70c154adfb7e90c1519d4a34fb5297aaa4cc02cc99f7890eeed20d0cebe473bf",
+    "src/self_learning_ai/benchmark.py": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+    "src/self_learning_ai/compiler.py": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+    "tests/test_phase3c_execution_contract.py": "e514582fdf5e621950eefd3e860a69f5840c5c83b466da2b7833711a8fec54a5"
+  },
+  "model_support_file_sha256": {
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/config.json": "8f85440a3222d18772e964b1ef0b4b1574a1c5e6260c99aa23fcddd05c28b8ae",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/generation_config.json": "fdaccbcb02f3e1e7914ccb0f69ebe899071ffd27cf825166d823163e156870f2",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/model.safetensors.index.json": "7b85f79fd7612df2e5d7f03d7f92d65c8967f790a331146ca7f45658823060d3",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+    ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+  },
+  "required_action_before_training": "independent scientific review and explicit future authorization"
+}

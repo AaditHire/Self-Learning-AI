@@ -1,0 +1,20 @@
+{
+  "phase": "3C",
+  "status": "PASS_pre_model_train_eval_separation",
+  "a_training_ids": 60,
+  "evaluation_ids": 64,
+  "replay_a_slots_all_seeds": 108,
+  "replay_ids_outside_a_training": 0,
+  "evaluation_ids_in_replay": 0,
+  "exact_eval_prompt_in_replay": 0,
+  "exact_eval_reference_in_replay": 0,
+  "schedule": {
+    "seeds": 3,
+    "epochs_per_seed": 3,
+    "slots_per_branch_seed": 180,
+    "optimizer_steps_per_branch_seed": 24,
+    "replay_slots_per_branch_seed": 36,
+    "evaluation_ids_in_schedule": 0
+  },
+  "causal_boundary": "Only pre-B PASS/FAIL flags may enter the hard eligibility gate; fixed replay IDs and order come exclusively from preregistered schedule and A training examples."
+}
