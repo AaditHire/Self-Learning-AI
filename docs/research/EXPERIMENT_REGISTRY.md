@@ -1,5 +1,10 @@
 # Experiment registry
 
+Phase 3A EXP-0027 through EXP-0035 were preregistered at Git commit
+`18c4c1065bf1e63bb0cdac91a33e01ec1c6a37e6`. The “prereg commit pending”
+markers below are frozen pre-commit table text; this follow-up resolves them
+before the first Phase 3A model run.
+
 Experiment IDs are immutable. Failed, rejected, and superseded experiments are
 never deleted. Phase planning documents do not receive IDs until execution is
 authorized and inputs are frozen.

@@ -13,13 +13,13 @@ not to test replay or any anti-forgetting method.
 Starting commit: `1ded323e036cd93813ab165210e0c3dcf32616df`.
 Preregistration: `research/protocols/phase3a_protocol.md` and
 `research/protocols/phase3a_config.json` (SHA-256 `3fb940a6b9a65311904db13f2a834a2729f60826c12c250d966420aaa356a715`).
+Preregistration Git commit: `18c4c1065bf1e63bb0cdac91a33e01ec1c6a37e6`.
 Three frozen seeds: `20260923`, `20261011`, `20261117`. A is numeric
 iteration/array reduction; B is string transformation/field processing.
 Data: 60 training examples and 32 evaluation tasks per capability, five
 semantic cases each. All 184 references/targets pass; see
 `research/results/EXP-0027/data_validation.json` and manual review.
-The sealed final-paper holdout remains unopened. Next: record the
-preregistration Git commit, evaluate base, then train/evaluate A before
+The sealed final-paper holdout remains unopened. Next: evaluate base, then train/evaluate A before
 training B for each seed. STOP after Phase 3A report and independent review.
 
 ## Repository boundaries
