@@ -152,6 +152,27 @@
 - Two adapters lost 10.94 and 9.38 points on the regression suite while the
   third gained 1.56 points. The severe-collapse rule passed, but seed-dependent
   smaller degradation is real and prevents a claim of zero regression.
+- Phase 3A is a small, synthetic two-capability A→B sequence, not an estimate
+  of general lifelong-learning performance. Only one capability order, one
+  QLoRA recipe, one model revision, one hardware stack, and three seeds were
+  tested. The B acquisition range (8–19/32) shows seed sensitivity.
+- All 32 EVAL_A tasks are normalized-code near neighbors (>=0.85) of A
+  training references, reflecting compact GOCO syntax and archetype reuse.
+  Distinct algorithms, zero >=0.98 rejects, hidden tests, and manual review
+  help prevent direct leakage but do not remove grammar-skeleton correlation.
+  The high pre-B A score should not be generalized to distant algorithms.
+- Post-B A reached 0/32 in all seeds, but the result is distribution-specific.
+  B-style string scaffolding on some numeric tasks supports an interference
+  interpretation, not a proof of the parameter-level forgetting mechanism or
+  erasure of every A-related weight. No A-training-task retest, B→A reversal,
+  longer sequence, or independent real-world GOCO suite was included.
+- The reused 64-item non-GOCO exact-response control stayed at 47/64 base,
+  48/64 after A, and 49/64 after B for each seed. It rules out collapse on
+  that measured proxy only, not unmeasured general-capability degradation.
+- The Phase 3A task bootstrap resamples 32 paired task clusters and carries
+  three seed outcomes together. Its 85.42–100-point forgetting interval is
+  conditional on these synthetic tasks and the fixed recipe; it is not a
+  population interval over arbitrary capabilities or model initializations.
 
 ## Mitigations
 

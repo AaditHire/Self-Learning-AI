@@ -1,0 +1,59 @@
+{
+  "phase": "3A",
+  "config_sha256": "3fb940a6b9a65311904db13f2a834a2729f60826c12c250d966420aaa356a715",
+  "frozen_input_hashes_verified": 23,
+  "base_weight_shards_verified": 2,
+  "training_runs_verified": 6,
+  "evaluation_conditions_verified": 20,
+  "seeds": [
+    {
+      "seed": 20260923,
+      "a_before": 29,
+      "a_after": 0,
+      "b_before": 0,
+      "b_after": 19,
+      "regression_base": 47,
+      "regression_a": 48,
+      "regression_a_to_b": 49,
+      "transitions": {
+        "fail->fail": 3,
+        "pass->fail": 29
+      },
+      "adapter_parent_verified": true,
+      "base_verified": true
+    },
+    {
+      "seed": 20261011,
+      "a_before": 31,
+      "a_after": 0,
+      "b_before": 0,
+      "b_after": 16,
+      "regression_base": 47,
+      "regression_a": 48,
+      "regression_a_to_b": 49,
+      "transitions": {
+        "pass->fail": 31,
+        "fail->fail": 1
+      },
+      "adapter_parent_verified": true,
+      "base_verified": true
+    },
+    {
+      "seed": 20261117,
+      "a_before": 30,
+      "a_after": 0,
+      "b_before": 0,
+      "b_after": 8,
+      "regression_base": 47,
+      "regression_a": 48,
+      "regression_a_to_b": 49,
+      "transitions": {
+        "pass->fail": 30,
+        "fail->fail": 2
+      },
+      "adapter_parent_verified": true,
+      "base_verified": true
+    }
+  ],
+  "all_checks_passed": true
+}

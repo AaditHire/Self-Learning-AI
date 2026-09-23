@@ -2,11 +2,11 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 3A authorized; two-stage naive sequential-learning baseline preregistered; no Phase 3A training yet
+Current phase: Phase 3A complete; naive sequential baseline shows measurable severe A forgetting; stopped for independent review
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
-Phase 3A is now authorized solely to measure A-to-B sequential acquisition and A forgetting,
-not to test replay or any anti-forgetting method.
+Phase 3A was authorized solely to measure A-to-B sequential acquisition and A
+forgetting. No replay or other anti-forgetting method was tested or authorized.
 
 ## Phase 3A recovery pointer
 
@@ -19,8 +19,16 @@ iteration/array reduction; B is string transformation/field processing.
 Data: 60 training examples and 32 evaluation tasks per capability, five
 semantic cases each. All 184 references/targets pass; see
 `research/results/EXP-0027/data_validation.json` and manual review.
-The sealed final-paper holdout remains unopened. Next: evaluate base, then train/evaluate A before
-training B for each seed. STOP after Phase 3A report and independent review.
+The sealed final-paper holdout remains unopened. All six training runs and all
+required evaluations completed. EVAL_A: base 0/32, A 29/32, 31/32, 30/32,
+and A→B 0/32 in every seed. EVAL_B: A-only 0/32 in every seed, A→B 19/32,
+16/32, 8/32. Mean A forgetting 93.75 points (task-bootstrap 95% interval
+85.42–100), relative retention 0%. Frozen non-GOCO regression: base 47/64,
+all A checkpoints 48/64, all A→B checkpoints 49/64. Full report:
+`research/results/PHASE_3A/report.md`; analysis:
+`research/results/PHASE_3A/analysis.json`; independent verification:
+`research/results/PHASE_3A/completion_verification.json`. STOP for
+independent review.
 
 ## Repository boundaries
 
@@ -281,8 +289,8 @@ every seed successes in four families, a frozen structural non-domination rule,
 and no regression drop greater than 15 points. All three training runs must be
 feasible. Candidate C on the immutable base is descriptive only.
 
-No sequential or continual-learning experiment is authorized. Stop after
-Phase 2B reporting and independent review.
+At the Phase 2B stop boundary no sequential experiment was authorized; the
+later explicit Phase 3A request separately authorized this naive baseline only.
 
 ## Phase 2B results
 
@@ -313,6 +321,11 @@ autonomous learning, human-like understanding, or general lifelong learning.
 
 ## Research records
 
+- Phase 3A final report: `research/results/PHASE_3A/report.md`
+- Phase 3A paired analysis: `research/results/PHASE_3A/analysis.json`
+- Phase 3A frozen protocol and config: `research/protocols/phase3a_protocol.md`,
+  `research/protocols/phase3a_config.json`
+
 - Research question: `docs/research/RESEARCH_QUESTION.md`
 - Hypotheses: `docs/research/HYPOTHESES.md`
 - Methodology and reproducibility: `docs/research/METHODOLOGY.md`
@@ -340,8 +353,10 @@ autonomous learning, human-like understanding, or general lifelong learning.
 
 ## Resume instructions
 
-Phase 2B is complete. Preserve Phase 1T as a failed gate and Phase 2A as an
-exploratory pilot. Do not tune against consumed suites, select a best Phase 2B
-seed, merge an adapter, train on consumed tasks, open the sealed holdout, or
-begin continual-learning work. The only next step is independent review. Any
-later phase requires explicit new authorization and a new preregistration.
+Phase 3A is complete. Preserve Phase 1T as a failed gate, Phase 2A as an
+exploratory pilot, and Phase 2B as bounded confirmatory acquisition evidence.
+Do not tune against consumed suites, select a best seed, merge an adapter,
+train on consumed tasks, or open the sealed holdout. Do not begin replay, EWC,
+adapter isolation, STABLE, NoRA, gating, or any other anti-forgetting method.
+The only next step is independent Phase 3A review. Any later experiment
+requires explicit new authorization and a new preregistration.

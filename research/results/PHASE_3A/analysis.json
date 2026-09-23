@@ -1,0 +1,394 @@
+{
+  "phase": "3A",
+  "config_sha256": "3fb940a6b9a65311904db13f2a834a2729f60826c12c250d966420aaa356a715",
+  "seeds": [
+    20260923,
+    20261011,
+    20261117
+  ],
+  "by_seed": [
+    {
+      "seed": 20260923,
+      "base_eval_a": 0.0,
+      "a_eval_a": 0.90625,
+      "a_eval_b": 0.0,
+      "a_to_b_eval_b": 0.59375,
+      "a_to_b_eval_a": 0.0,
+      "forgetting_pp": 90.625,
+      "relative_retention": 0.0,
+      "b_gain_pp": 59.375,
+      "paired_transitions": {
+        "fail->fail": 3,
+        "pass->fail": 29
+      },
+      "by_family": {
+        "numeric_iteration": {
+          "before": 13,
+          "after": 0,
+          "lost": 13,
+          "gained": 0,
+          "n": 16
+        },
+        "array_reduction": {
+          "before": 16,
+          "after": 0,
+          "lost": 16,
+          "gained": 0,
+          "n": 16
+        }
+      },
+      "failure_taxonomy": {
+        "a_eval_a": {
+          "hidden_test_semantic": 3,
+          "success": 29
+        },
+        "a_eval_b": {
+          "semantic": 5,
+          "syntax": 27
+        },
+        "a_to_b_eval_a": {
+          "hidden_test_semantic": 8,
+          "semantic": 8,
+          "syntax": 16
+        },
+        "a_to_b_eval_b": {
+          "hidden_test_semantic": 8,
+          "lexical": 1,
+          "semantic": 4,
+          "success": 19
+        }
+      },
+      "regression": {
+        "base": {
+          "correct": 47,
+          "total": 64,
+          "accuracy": 0.734375,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 11,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a": {
+          "correct": 48,
+          "total": 64,
+          "accuracy": 0.75,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a_to_b": {
+          "correct": 49,
+          "total": 64,
+          "accuracy": 0.765625,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 19,
+              "total": 22
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261011,
+      "base_eval_a": 0.0,
+      "a_eval_a": 0.96875,
+      "a_eval_b": 0.0,
+      "a_to_b_eval_b": 0.5,
+      "a_to_b_eval_a": 0.0,
+      "forgetting_pp": 96.875,
+      "relative_retention": 0.0,
+      "b_gain_pp": 50.0,
+      "paired_transitions": {
+        "pass->fail": 31,
+        "fail->fail": 1
+      },
+      "by_family": {
+        "numeric_iteration": {
+          "before": 15,
+          "after": 0,
+          "lost": 15,
+          "gained": 0,
+          "n": 16
+        },
+        "array_reduction": {
+          "before": 16,
+          "after": 0,
+          "lost": 16,
+          "gained": 0,
+          "n": 16
+        }
+      },
+      "failure_taxonomy": {
+        "a_eval_a": {
+          "hidden_test_semantic": 1,
+          "success": 31
+        },
+        "a_eval_b": {
+          "semantic": 6,
+          "syntax": 26
+        },
+        "a_to_b_eval_a": {
+          "lexical": 1,
+          "runtime": 11,
+          "semantic": 4,
+          "syntax": 16
+        },
+        "a_to_b_eval_b": {
+          "hidden_test_semantic": 8,
+          "semantic": 3,
+          "success": 16,
+          "syntax": 5
+        }
+      },
+      "regression": {
+        "base": {
+          "correct": 47,
+          "total": 64,
+          "accuracy": 0.734375,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 11,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a": {
+          "correct": 48,
+          "total": 64,
+          "accuracy": 0.75,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a_to_b": {
+          "correct": 49,
+          "total": 64,
+          "accuracy": 0.765625,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 19,
+              "total": 22
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261117,
+      "base_eval_a": 0.0,
+      "a_eval_a": 0.9375,
+      "a_eval_b": 0.0,
+      "a_to_b_eval_b": 0.25,
+      "a_to_b_eval_a": 0.0,
+      "forgetting_pp": 93.75,
+      "relative_retention": 0.0,
+      "b_gain_pp": 25.0,
+      "paired_transitions": {
+        "pass->fail": 30,
+        "fail->fail": 2
+      },
+      "by_family": {
+        "numeric_iteration": {
+          "before": 14,
+          "after": 0,
+          "lost": 14,
+          "gained": 0,
+          "n": 16
+        },
+        "array_reduction": {
+          "before": 16,
+          "after": 0,
+          "lost": 16,
+          "gained": 0,
+          "n": 16
+        }
+      },
+      "failure_taxonomy": {
+        "a_eval_a": {
+          "hidden_test_semantic": 2,
+          "success": 30
+        },
+        "a_eval_b": {
+          "semantic": 6,
+          "syntax": 26
+        },
+        "a_to_b_eval_a": {
+          "runtime": 1,
+          "semantic": 17,
+          "syntax": 14
+        },
+        "a_to_b_eval_b": {
+          "hidden_test_semantic": 11,
+          "lexical": 5,
+          "semantic": 8,
+          "success": 8
+        }
+      },
+      "regression": {
+        "base": {
+          "correct": 47,
+          "total": 64,
+          "accuracy": 0.734375,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 11,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a": {
+          "correct": 48,
+          "total": 64,
+          "accuracy": 0.75,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 18,
+              "total": 22
+            }
+          }
+        },
+        "a_to_b": {
+          "correct": 49,
+          "total": 64,
+          "accuracy": 0.765625,
+          "by_category": {
+            "concept": {
+              "correct": 18,
+              "total": 21
+            },
+            "instruction": {
+              "correct": 12,
+              "total": 21
+            },
+            "trace": {
+              "correct": 19,
+              "total": 22
+            }
+          }
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "mean_forgetting_pp": 93.75,
+    "range_forgetting_pp": [
+      90.625,
+      96.875
+    ],
+    "paired_task_bootstrap_95_ci_pp": [
+      85.41666666666666,
+      100
+    ],
+    "measurable_forgetting_by_preregistered_rule": true,
+    "mean_a_acquisition_pp": 93.75,
+    "mean_b_acquisition_pp": 44.791666666666664,
+    "mean_relative_retention": 0.0,
+    "task_level_mean_deltas": {
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-01": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-02": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-03": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-04": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-05": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-06": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-07": 1,
+      "P3A-A-EVAL-AR-NEGATIVE_SQUARE-08": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-01": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-02": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-03": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-04": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-05": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-06": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-07": 1,
+      "P3A-A-EVAL-AR-PAIRWISE_PRODUCTS-08": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-01": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-02": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-03": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-04": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-05": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-06": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-07": 1,
+      "P3A-A-EVAL-NU-DESCENDING_PRODUCT-08": 1,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-01": 0.6666666666666666,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-02": 1,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-03": 1,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-04": 1,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-05": 0.3333333333333333,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-06": 1,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-07": 0,
+      "P3A-A-EVAL-NU-ODD_CUBE_SUM-08": 1
+    }
+  }
+}

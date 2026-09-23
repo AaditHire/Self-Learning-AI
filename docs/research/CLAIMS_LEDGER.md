@@ -188,3 +188,29 @@ continual-learning claim is currently justified.
   claims of understanding, self-learning, autonomous learning, continual
   learning, catastrophic-forgetting prevention, or general-purpose lifelong
   learning.
+
+## CLM-011
+
+- **Proposed claim:** Naive sequential QLoRA on distinct bounded GOCO
+  capabilities acquires A then B but measurably forgets A on frozen EVAL_A.
+- **Evidence required:** Three preregistered base→A→A→B trajectories, verified
+  structurally audited EVAL_A/EVAL_B, before/after paired A outcomes, B
+  acquisition, immutable adapter lineage, and non-GOCO regression.
+- **Experiment:** EXP-0027 through EXP-0035; preregistered at
+  `18c4c1065bf1e63bb0cdac91a33e01ec1c6a37e6`.
+- **Status:** SUPPORTED FOR THE BOUNDED PHASE 3A DISTRIBUTIONS.
+- **Supporting results:** Base EVAL_A 0/32; A adapters 29/32, 31/32, 30/32;
+  after B-only continuation all 0/32. Mean absolute A forgetting 93.75
+  points (task-cluster bootstrap 95% interval 85.42–100), relative retention
+  0%; 90 pass→fail seed-task transitions. B rose from 0/32 pre-B in every seed
+  to 19/32, 16/32, 8/32. Regression was 47/64 base, 48/64 after A, and
+  49/64 after B in each seed. Full record:
+  `research/results/PHASE_3A/report.md`.
+- **Possible confounders:** All 32 EVAL_A tasks are normalized-code near
+  neighbors of training targets; synthetic archetype/boilerplate correlation,
+  one A→B order, one recipe/model, three seeds, and narrow regression.
+- **Currently justified:** Severe, reproducible A-specific forgetting is
+  observed under this exact naive sequential baseline. This does not show
+  forgetting prevention, broad GOCO erasure, autonomous learning, or general
+  lifelong learning. Replay or other interventions remain unauthorized pending
+  independent review.

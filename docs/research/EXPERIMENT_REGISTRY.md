@@ -49,6 +49,27 @@ authorized and inputs are frozen.
 | EXP-0034 | Phase 3A base/A/A→B EVAL_A/EVAL_B paired evaluation | 2026-09-23 | Prereg commit pending | Same | `c0005`–`c0010` | A eval `1ed9e5d1…2075`; B eval `ecbe1074…158b9` | `42478b35…b2a2fb` | `3fb940a6…6a715` | Greedy; three seeds | Same host | `research/results/EXP-0034/` | Pending | PREREGISTERED | N/A |
 | EXP-0035 | Phase 3A frozen non-GOCO base/A/A→B regression | 2026-09-23 | Prereg commit pending | Same | `c0005`–`c0010` | Phase 2B regression canonical `e8098965…de2f` | None | `3fb940a6…6a715` | Greedy; three seeds | Same host | `research/results/EXP-0035/` | Pending | PREREGISTERED | N/A |
 
+## Phase 3A completion records
+
+The preregistered EXP-0028–EXP-0035 rows above remain immutable planning
+records. These completion records resolve their “Pending” result/status fields.
+There were no failed model runs or post-freeze methodological deviations.
+
+| ID | Result | Status |
+|---|---|---|
+| EXP-0027 | 60 A + 60 B training examples and 32 A + 32 B evaluation tasks; all 184 programs pass five semantic cases; zero >=0.98 train/eval or consumed-reference code rejects; construction attempts retained | COMPLETE / PRE-TRAINING PASS |
+| EXP-0028 | A seed 20260923, 24/24 finite steps, 186.4 s; adapter SHA-256 `f54a3dbe…e0cfd`; base unchanged | COMPLETE / PASS |
+| EXP-0029 | B-only continuation of EXP-0028, 24/24 finite steps, 179.4 s; adapter `cdb38ef9…bb75`; A parent and base unchanged | COMPLETE / PASS |
+| EXP-0030 | A seed 20261011, 24/24 finite steps, 228.9 s; adapter `77de3d41…ee50`; base unchanged | COMPLETE / PASS |
+| EXP-0031 | B-only continuation of EXP-0030, 24/24 finite steps, 222.7 s; adapter `547823b2…510b`; A parent and base unchanged | COMPLETE / PASS |
+| EXP-0032 | A seed 20261117, 24/24 finite steps, 260.0 s; adapter `05f82008…8e61`; base unchanged | COMPLETE / PASS |
+| EXP-0033 | B-only continuation of EXP-0032, 24/24 finite steps, 225.1 s; adapter `d34f744d…757`; A parent and base unchanged | COMPLETE / PASS |
+| EXP-0034 | Base EVAL_A 0/32; A seeds 29/32, 31/32, 30/32; A→B EVAL_A 0/32 each; A EVAL_B 0/32 each; A→B EVAL_B 19/32, 16/32, 8/32. Mean A forgetting 93.75 pp, task-bootstrap 95% interval 85.42–100 pp; 90 pass→fail transitions | COMPLETE / MEASURABLE SEVERE FORGETTING |
+| EXP-0035 | Frozen non-GOCO exact-response regression: base 47/64, A 48/64 each, A→B 49/64 each | COMPLETE / NO MEASURED COLLAPSE |
+
+Full report: `research/results/PHASE_3A/report.md`; paired analysis:
+`research/results/PHASE_3A/analysis.json`. No anti-forgetting method was run.
+
 ## Required fields for future entries
 
 Before an experiment runs, assign its ID and freeze its purpose, exact commit,
