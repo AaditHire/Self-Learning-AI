@@ -12,9 +12,9 @@
     "policy": "immutable; never merge adapters"
   },
   "lineages": [
-    {"seed": 20260921, "parent_adapter": null, "candidate": "c0002-phase2b-seed-20260921", "output_path": "research/adapters/candidates/c0002-phase2b-seed-20260921", "status_at_freeze": "not trained"},
-    {"seed": 20261007, "parent_adapter": null, "candidate": "c0003-phase2b-seed-20261007", "output_path": "research/adapters/candidates/c0003-phase2b-seed-20261007", "status_at_freeze": "not trained"},
-    {"seed": 20261103, "parent_adapter": null, "candidate": "c0004-phase2b-seed-20261103", "output_path": "research/adapters/candidates/c0004-phase2b-seed-20261103", "status_at_freeze": "not trained"}
+    {"seed": 20260921, "parent_adapter": null, "candidate": "c0002-phase2b-seed-20260921", "output_path": "research/adapters/candidates/c0002-phase2b-seed-20260921", "status_at_freeze": "not trained", "final_status": "trained and evaluated", "adapter_config_sha256": "6220e621def9765567eb77e3838a1e7445e5ab5d2388a106934e8a397e0f7ad2", "adapter_model_sha256": "1968cb0d503c502dbe31a1f53a3c70528c7dd5d478e5e50062d2e212e76e03ee"},
+    {"seed": 20261007, "parent_adapter": null, "candidate": "c0003-phase2b-seed-20261007", "output_path": "research/adapters/candidates/c0003-phase2b-seed-20261007", "status_at_freeze": "not trained", "final_status": "trained and evaluated", "adapter_config_sha256": "3ac4bb50163af5f523739942d8c8eab2e148044fe4e91609bf89a36577789c4d", "adapter_model_sha256": "ac3f5f1ed1162874d9bacf9a0ebffebb1d44a930be6daf77801f2760cab86010"},
+    {"seed": 20261103, "parent_adapter": null, "candidate": "c0004-phase2b-seed-20261103", "output_path": "research/adapters/candidates/c0004-phase2b-seed-20261103", "status_at_freeze": "not trained", "final_status": "trained and evaluated", "adapter_config_sha256": "101165c3d2994e63c842e3c55c24c384aead140e2459a97f970b69bff74fec85", "adapter_model_sha256": "502a6ce0176f8e6371a7fddb0b8e3b32ee5af7673008a48b1f63277c7f2384f7"}
   ],
   "selection_policy": "all three preregistered seeds are reported; no best-seed or checkpoint selection",
   "software": {"python": "3.13.0", "torch": "2.9.0+cu130", "transformers": "4.57.1", "bitsandbytes": "0.50.2", "accelerate": "1.15.0", "peft": "0.17.1"}

@@ -1,0 +1,395 @@
+{
+  "phase": "2B",
+  "analysis_policy": "paired task analysis; task-cluster bootstrap; seeds are repeated trained models and are not counted as 384 independent observations",
+  "seeds": [
+    20260921,
+    20261007,
+    20261103
+  ],
+  "primary": {
+    "base": {
+      "passed": 0,
+      "total": 128,
+      "rate": 0
+    },
+    "base_docs_descriptive": {
+      "passed": 22,
+      "total": 128,
+      "rate": 0.171875
+    },
+    "adapter_by_seed": [
+      {
+        "seed": 20260921,
+        "passed": 65,
+        "total": 128,
+        "rate": 0.5078125,
+        "improvement": 0.5078125,
+        "families_with_success": 8,
+        "paired": {
+          "base_only": 0,
+          "adapted_only": 65,
+          "both": 0,
+          "neither": 63
+        },
+        "by_family": {
+          "arrays": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "composition_algorithms": {
+            "passed": 3,
+            "total": 16,
+            "rate": 0.1875
+          },
+          "conditionals": {
+            "passed": 11,
+            "total": 16,
+            "rate": 0.6875
+          },
+          "expressions_variables": {
+            "passed": 11,
+            "total": 16,
+            "rate": 0.6875
+          },
+          "functions": {
+            "passed": 11,
+            "total": 16,
+            "rate": 0.6875
+          },
+          "input_output": {
+            "passed": 4,
+            "total": 16,
+            "rate": 0.25
+          },
+          "loops": {
+            "passed": 11,
+            "total": 16,
+            "rate": 0.6875
+          },
+          "strings": {
+            "passed": 2,
+            "total": 16,
+            "rate": 0.125
+          }
+        }
+      },
+      {
+        "seed": 20261007,
+        "passed": 70,
+        "total": 128,
+        "rate": 0.546875,
+        "improvement": 0.546875,
+        "families_with_success": 8,
+        "paired": {
+          "base_only": 0,
+          "adapted_only": 70,
+          "both": 0,
+          "neither": 58
+        },
+        "by_family": {
+          "arrays": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "composition_algorithms": {
+            "passed": 3,
+            "total": 16,
+            "rate": 0.1875
+          },
+          "conditionals": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "expressions_variables": {
+            "passed": 13,
+            "total": 16,
+            "rate": 0.8125
+          },
+          "functions": {
+            "passed": 10,
+            "total": 16,
+            "rate": 0.625
+          },
+          "input_output": {
+            "passed": 6,
+            "total": 16,
+            "rate": 0.375
+          },
+          "loops": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "strings": {
+            "passed": 2,
+            "total": 16,
+            "rate": 0.125
+          }
+        }
+      },
+      {
+        "seed": 20261103,
+        "passed": 70,
+        "total": 128,
+        "rate": 0.546875,
+        "improvement": 0.546875,
+        "families_with_success": 8,
+        "paired": {
+          "base_only": 0,
+          "adapted_only": 70,
+          "both": 0,
+          "neither": 58
+        },
+        "by_family": {
+          "arrays": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "composition_algorithms": {
+            "passed": 2,
+            "total": 16,
+            "rate": 0.125
+          },
+          "conditionals": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "expressions_variables": {
+            "passed": 13,
+            "total": 16,
+            "rate": 0.8125
+          },
+          "functions": {
+            "passed": 10,
+            "total": 16,
+            "rate": 0.625
+          },
+          "input_output": {
+            "passed": 7,
+            "total": 16,
+            "rate": 0.4375
+          },
+          "loops": {
+            "passed": 12,
+            "total": 16,
+            "rate": 0.75
+          },
+          "strings": {
+            "passed": 2,
+            "total": 16,
+            "rate": 0.125
+          }
+        }
+      }
+    ],
+    "adapter_mean_rate": 0.5338541666666666,
+    "adapter_rate_range": [
+      0.5078125,
+      0.546875
+    ],
+    "mean_improvement": 0.5338541666666666,
+    "family_aggregate": {
+      "arrays": {
+        "mean": 0.75,
+        "range": [
+          0.75,
+          0.75
+        ],
+        "seed_rates": {
+          "20260921": 0.75,
+          "20261007": 0.75,
+          "20261103": 0.75
+        }
+      },
+      "composition_algorithms": {
+        "mean": 0.16666666666666666,
+        "range": [
+          0.125,
+          0.1875
+        ],
+        "seed_rates": {
+          "20260921": 0.1875,
+          "20261007": 0.1875,
+          "20261103": 0.125
+        }
+      },
+      "conditionals": {
+        "mean": 0.7291666666666666,
+        "range": [
+          0.6875,
+          0.75
+        ],
+        "seed_rates": {
+          "20260921": 0.6875,
+          "20261007": 0.75,
+          "20261103": 0.75
+        }
+      },
+      "expressions_variables": {
+        "mean": 0.7708333333333334,
+        "range": [
+          0.6875,
+          0.8125
+        ],
+        "seed_rates": {
+          "20260921": 0.6875,
+          "20261007": 0.8125,
+          "20261103": 0.8125
+        }
+      },
+      "functions": {
+        "mean": 0.6458333333333334,
+        "range": [
+          0.625,
+          0.6875
+        ],
+        "seed_rates": {
+          "20260921": 0.6875,
+          "20261007": 0.625,
+          "20261103": 0.625
+        }
+      },
+      "input_output": {
+        "mean": 0.3541666666666667,
+        "range": [
+          0.25,
+          0.4375
+        ],
+        "seed_rates": {
+          "20260921": 0.25,
+          "20261007": 0.375,
+          "20261103": 0.4375
+        }
+      },
+      "loops": {
+        "mean": 0.7291666666666666,
+        "range": [
+          0.6875,
+          0.75
+        ],
+        "seed_rates": {
+          "20260921": 0.6875,
+          "20261007": 0.75,
+          "20261103": 0.75
+        }
+      },
+      "strings": {
+        "mean": 0.125,
+        "range": [
+          0.125,
+          0.125
+        ],
+        "seed_rates": {
+          "20260921": 0.125,
+          "20261007": 0.125,
+          "20261103": 0.125
+        }
+      }
+    },
+    "task_cluster_bootstrap": {
+      "unit": "paired task cluster; three seeds treated as repeated models within task",
+      "samples": 10000,
+      "seed": 20261201,
+      "observed": 0.5338541666666666,
+      "ci_95": [
+        0.4557291666666667,
+        0.6119791666666666
+      ]
+    }
+  },
+  "structural_distance_analysis": {
+    "nonnear_tasks": 47,
+    "successful_seed_task_instances": 205,
+    "nonnear_successful_instances": 69,
+    "nonnear_share_of_successes": 0.33658536585365856,
+    "nonnear_mean_improvement": 0.48936170212765956,
+    "passed": true
+  },
+  "training_diagnostics": [
+    {
+      "seed": 20260921,
+      "training_pass_rate": 1.0,
+      "confirmatory_pass_rate": 0.5078125,
+      "generalization_gap": 0.4921875
+    },
+    {
+      "seed": 20261007,
+      "training_pass_rate": 0.98,
+      "confirmatory_pass_rate": 0.546875,
+      "generalization_gap": 0.433125
+    },
+    {
+      "seed": 20261103,
+      "training_pass_rate": 0.975,
+      "confirmatory_pass_rate": 0.546875,
+      "generalization_gap": 0.428125
+    }
+  ],
+  "training_feasibility": [
+    {
+      "seed": 20260921,
+      "completed": true,
+      "all_losses_and_gradients_finite": true,
+      "optimizer_steps": 75,
+      "peak_gpu_allocated_bytes": 3480380928,
+      "peak_process_rss_bytes": 6028582912
+    },
+    {
+      "seed": 20261007,
+      "completed": true,
+      "all_losses_and_gradients_finite": true,
+      "optimizer_steps": 75,
+      "peak_gpu_allocated_bytes": 3480667648,
+      "peak_process_rss_bytes": 6021156864
+    },
+    {
+      "seed": 20261103,
+      "completed": true,
+      "all_losses_and_gradients_finite": true,
+      "optimizer_steps": 75,
+      "peak_gpu_allocated_bytes": 3480380928,
+      "peak_process_rss_bytes": 6023499776
+    }
+  ],
+  "regression": [
+    {
+      "seed": 20260921,
+      "base_accuracy": 0.734375,
+      "adapted_accuracy": 0.625,
+      "change": -0.109375,
+      "drop": 0.109375,
+      "severe_collapse": false
+    },
+    {
+      "seed": 20261007,
+      "base_accuracy": 0.734375,
+      "adapted_accuracy": 0.640625,
+      "change": -0.09375,
+      "drop": 0.09375,
+      "severe_collapse": false
+    },
+    {
+      "seed": 20261103,
+      "base_accuracy": 0.734375,
+      "adapted_accuracy": 0.75,
+      "change": 0.015625,
+      "drop": -0.015625,
+      "severe_collapse": false
+    }
+  ],
+  "success_criteria": {
+    "mean_adapted_at_least_20pct": true,
+    "mean_improvement_at_least_15pp": true,
+    "each_seed_gain_at_least_10pp": true,
+    "each_seed_at_least_four_families": true,
+    "not_dominated_by_near_duplicates": true,
+    "no_severe_regression_collapse": true,
+    "all_three_training_runs_feasible": true
+  },
+  "overall_success": true
+}

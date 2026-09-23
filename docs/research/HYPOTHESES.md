@@ -95,4 +95,10 @@ adapted pass@1 of at least 20%, mean gain of at least 15 points, at least a
 10-point gain and four-family span for every seed, no domination by frozen
 structural near-duplicates, and no regression drop greater than 15 points.
 
-**Status:** PREREGISTERED; NOT YET TESTED.
+**Status:** SUPPORTED UNDER THE PREREGISTERED PROJECT CRITERIA. The three seeds
+scored 50.78%, 54.69%, and 54.69% versus 0% for frozen base/no-docs; mean gain
+was 53.39 points with task-cluster bootstrap 95% interval 45.57–61.20 points.
+Every seed succeeded in all eight families, the medium/far improvement was
+48.94 points, no regression drop exceeded 15 points, and all training runs
+were feasible. The large 42.81–49.22 point train/held-out gaps limit the result
+to narrow parameterized behavioral acquisition rather than broad mastery.

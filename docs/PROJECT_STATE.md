@@ -1,10 +1,10 @@
 # Project state
 
-Last updated: 2026-09-21
+Last updated: 2026-09-23
 
-Current phase: Phase 2B preregistered; no Phase 2B training or inference has run
+Current phase: Phase 2B complete; confirmatory PASS; stopped for independent review
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
-Phase 2B is a separately authorized multi-seed confirmation attempt
+Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition
 
 ## Repository boundaries
 
@@ -268,6 +268,33 @@ feasible. Candidate C on the immutable base is descriptive only.
 No sequential or continual-learning experiment is authorized. Stop after
 Phase 2B reporting and independent review.
 
+## Phase 2B results
+
+All three frozen QLoRA runs completed 75/75 optimizer steps with finite losses
+and gradients, no OOM, separately saved adapters, and unchanged immutable base
+shard hashes. Seeds `20260921`, `20261007`, and `20261103` reached final losses
+0.000665, 0.002141, and 0.001394.
+
+On the untouched 128-task confirmatory suite, frozen base/no-doc scored 0/128.
+The three adapter/no-doc conditions scored 65/128 (50.78%), 70/128 (54.69%),
+and 70/128 (54.69%): mean 53.39%, range 50.78%–54.69%. Every seed succeeded
+in all eight families. The paired task-cluster bootstrap 95% interval for mean
+improvement is 45.57–61.20 points. Medium/far tasks improved by 48.94 points on
+average, so the preregistered structural non-domination rule passed. Frozen
+base plus Candidate C documentation scored 22/128 (17.19%) and is descriptive
+only.
+
+Training performance was 200/200, 196/200, and 195/200, leaving large
+train/held-out gaps of 49.22, 43.31, and 42.81 points. Regression was 47/64 for
+base and 40/64, 41/64, and 48/64 for adapters; no seed crossed the greater-than-
+15-point severe-collapse rule, though the first two had measurable drops.
+
+All seven conjunctive confirmatory criteria passed. There were no post-freeze
+protocol deviations and no failed training or evaluation runs. Phase 2B is a
+confirmatory PASS and a GO for independent review of the bounded acquisition
+claim. It does not authorize or establish continual learning, self-learning,
+autonomous learning, human-like understanding, or general lifelong learning.
+
 ## Research records
 
 - Research question: `docs/research/RESEARCH_QUESTION.md`
@@ -290,12 +317,15 @@ Phase 2B reporting and independent review.
 - Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
 - Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
 - Phase 2A compact summary: `research/results/PHASE_2A/summary.json`
+- Phase 2B compact summary: `research/results/PHASE_2B/summary.json`
+- Phase 2B final report: `research/results/PHASE_2B/report.md`
 - Phase 2A adapter lineage: `research/manifests/phase2a_adapter_c0001.json`
 - Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
 
 ## Resume instructions
 
-Phase 2A is complete. Do not tune against its consumed development suite,
-merge the adapter, train on consumed tasks, open the sealed holdout, or begin
-Phase 2B. Preserve Phase 1T as a failed gate. The only next step is independent
-review and, if separately authorized, a new untouched confirmatory protocol.
+Phase 2B is complete. Preserve Phase 1T as a failed gate and Phase 2A as an
+exploratory pilot. Do not tune against consumed suites, select a best Phase 2B
+seed, merge an adapter, train on consumed tasks, open the sealed holdout, or
+begin continual-learning work. The only next step is independent review. Any
+later phase requires explicit new authorization and a new preregistration.

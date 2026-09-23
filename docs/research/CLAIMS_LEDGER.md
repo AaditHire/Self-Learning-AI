@@ -170,13 +170,21 @@ continual-learning claim is currently justified.
   per-seed family span, training/held-out gaps, and 64-task regression results.
 - **Experiment:** EXP-0021 through EXP-0026; EXP-0020 establishes instrument
   integrity.
-- **Status:** PREREGISTERED; NOT YET TESTED.
-- **Supporting results:** None at freeze time. Phase 2A is motivation only and
-  is not confirmatory evidence for this claim.
+- **Status:** SUPPORTED WITH EXPLICIT SCOPE LIMITS.
+- **Supporting results:** Frozen base/no-doc 0/128; three adapted/no-doc seeds
+  65/128, 70/128, and 70/128; mean 53.39% and task-cluster bootstrap 95%
+  interval 45.57–61.20 points. Every seed spans all eight families. Medium/far
+  mean improvement is 48.94 points. Regression changes are -10.94, -9.38, and
+  +1.56 points, with no severe collapse. EXP-0020 through EXP-0026 and
+  `research/results/PHASE_2B/report.md` provide the full record.
 - **Possible confounders:** synthetic-data regularity, residual shared grammar
   skeletons, public GOCO exposure, quantization/kernel nondeterminism, only
   three seeds, exact-response regression sensitivity, and a potentially large
   training/held-out gap.
-- **Currently justified:** No. Even a passing result would not justify claims
-  of understanding, self-learning, autonomous learning, continual learning,
-  catastrophic-forgetting prevention, or general-purpose lifelong learning.
+- **Currently justified:** The proposed bounded multi-seed parameterized-
+  acquisition claim is justified. Large 42.81–49.22 point train/held-out gaps,
+  weak strings/composition results, residual grammar-skeleton similarity, and
+  smaller regression drops constrain its scope. The result does not justify
+  claims of understanding, self-learning, autonomous learning, continual
+  learning, catastrophic-forgetting prevention, or general-purpose lifelong
+  learning.

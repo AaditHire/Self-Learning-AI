@@ -1,6 +1,6 @@
 # Phase 2B — Multi-seed confirmatory parameter acquisition
 
-Status: **PREREGISTERED; EXECUTION NOT YET STARTED**
+Status: **COMPLETE — CONFIRMATORY PASS; GO FOR INDEPENDENT REVIEW**
 
 Starting commit: `06e5db763ad2af2adc51e9b4709916820b0883a6`
 
@@ -29,25 +29,31 @@ The full rule is in `research/protocols/PHASE_2B_FROZEN_CONFIRMATORY_EXPERIMENT.
 
 EXP-0020 verifies all 200 training targets over 600 cases and all 128 confirmatory references over 640 cases. There are zero execution failures, zero exact train/evaluation prompt/algorithm/lineage/structural-signature/semantic-operation overlaps, zero normalized-code rejects at 0.98, and zero prior-suite prompt flags at 0.70. The final distance buckets are 3 far, 44 medium, and 81 near. All lower-threshold train/evaluation and prior-suite code/AST flags were manually reviewed. The legacy sealed holdout was not opened.
 
-## Planned records
+## Experiment records
 
 | Record | Purpose | Status |
 |---|---|---|
 | EXP-0020 | Data construction, verification, overlap audit | Complete / pre-training pass |
-| EXP-0021 | Train seed 20260921 | Not started |
-| EXP-0022 | Train seed 20261007 | Not started |
-| EXP-0023 | Train seed 20261103 | Not started |
-| EXP-0024 | Confirmatory base/adapters/docs evaluation | Not started |
-| EXP-0025 | Training-set performance and gaps | Not started |
-| EXP-0026 | Non-GOCO regression | Not started |
+| EXP-0021 | Train seed 20260921 | Complete / pass |
+| EXP-0022 | Train seed 20261007 | Complete / pass |
+| EXP-0023 | Train seed 20261103 | Complete / pass |
+| EXP-0024 | Confirmatory base/adapters/docs evaluation | Complete / confirmatory pass |
+| EXP-0025 | Training-set performance and gaps | Complete / diagnostic |
+| EXP-0026 | Non-GOCO regression | Complete / no severe collapse |
 
 ## Results
 
-To be populated after frozen execution. Required reporting includes every seed, mean/range, family results, train/evaluation gaps, failure taxonomies, paired task analysis, task-cluster bootstrap, structural-distance analysis, regression deltas, protocol deviations, and the conjunctive PASS/FAIL decision.
+The frozen base/no-doc condition passed 0/128. The three adapted/no-doc seeds passed 65/128 (50.78%), 70/128 (54.69%), and 70/128 (54.69%), for a 53.39% mean and 50.78%–54.69% range. Every seed succeeded in all eight families. Frozen base plus Candidate C documentation passed 22/128 (17.19%) and remained descriptive only.
+
+Training-set hidden pass was 200/200, 196/200, and 195/200, leaving held-out gaps of 49.22, 43.31, and 42.81 points. Non-GOCO regression was 47/64 for base and 40/64, 41/64, and 48/64 for the adapters; no drop exceeded the frozen 15-point severe-collapse boundary.
+
+The paired task-cluster bootstrap mean improvement was 53.39 points with a 95% interval of 45.57–61.20 points. Medium/far tasks improved by 48.94 points on average, satisfying the alternative branch of the structural non-domination rule. Every conjunctive criterion passed. There were no post-preregistration protocol deviations or failed training/evaluation runs.
+
+The complete tables, failure comparison, limitations, hashes, and decision are in `research/results/PHASE_2B/report.md`; the machine-readable analysis is `research/results/PHASE_2B/summary.json`.
 
 ## Reproduction commands
 
-Commands will use `scripts/train_phase2b_qlora.py`, `scripts/run_phase2b_evaluation.py`, and `scripts/analyze_phase2b.py` against the frozen configuration. Exact executed commands and output paths will be recorded here after execution.
+Commands used `scripts/train_phase2b_qlora.py`, `scripts/run_phase2b_evaluation.py`, and `scripts/analyze_phase2b.py` against `research/protocols/phase2b_config.json`. Exact output paths and the aggregate analysis command are recorded in `research/results/PHASE_2B/report.md`. Raw generations, compiler outputs, hidden tests, checkpoints, hardware records, and curves are preserved in EXP-0021 through EXP-0026.
 
 ## Boundary
 

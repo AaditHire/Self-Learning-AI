@@ -137,6 +137,21 @@
   autonomous experience acquisition. A high training score or a passing
   confirmatory result cannot by itself distinguish broad language learning
   from acquisition of a narrow executable sublanguage distribution.
+- Phase 2B passed its frozen gate, but training accuracy of 97.5%–100% versus
+  held-out accuracy of 50.78%–54.69% leaves gaps of 42.81–49.22 points. These
+  gaps are smaller than Phase 2A's 70.875 points but remain compatible with
+  substantial memorization plus narrow transfer.
+- Phase 2B family means range from 12.5% for strings and 16.67% for
+  composition/algorithms to 77.08% for expressions/variables. Broad family
+  coverage therefore does not imply uniform or complete GOCO competence.
+- The structural non-domination rule passed through its alternative branch:
+  only 33.66% of successful seed-task instances were medium/far, but mean
+  improvement over the 47 medium/far tasks was 48.94 points. Residual near-
+  task correlation remains a limitation even though it cannot explain away
+  the preregistered result.
+- Two adapters lost 10.94 and 9.38 points on the regression suite while the
+  third gained 1.56 points. The severe-collapse rule passed, but seed-dependent
+  smaller degradation is real and prevents a claim of zero regression.
 
 ## Mitigations
 
