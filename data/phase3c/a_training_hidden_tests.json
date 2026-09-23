@@ -1,0 +1,1622 @@
+{
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "81.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "75.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "40.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "82.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "76.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "44.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "83.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "77.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "48.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "16.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "84.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "78.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "52.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "17.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "85.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "79.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "36.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "56.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "18.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "86.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "80.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "39.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "60.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "19.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "87.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "81.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "42.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "64.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "20.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "22.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "88.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "82.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "45.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "68.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "21.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "23.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "89.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "83.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "48.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "72.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "22.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "24.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "90.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "84.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "51.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "76.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "23.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "25.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "91.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "85.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "54.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "80.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "24.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "26.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "92.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "86.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "57.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "84.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "19.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "25.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "27.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "93.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "87.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "60.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "88.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "20.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "26.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "94.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "88.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "14.0"
+    }
+  ],
+  "P3C-A-TR-NU-ODD_LINEAR_BONUS-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "63.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "92.0"
+    }
+  ],
+  "P3C-A-TR-NU-EVEN_COUNT_SHIFT-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "21.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "27.0"
+    }
+  ],
+  "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "95.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "89.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "15.0"
+    }
+  ],
+  "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "15.0"
+    }
+  ]
+}

@@ -1,0 +1,1142 @@
+[
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-01",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'A' with '*', then append 'a'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"A\",\"*\"),\"a\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-1",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-01",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'a:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"a:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-1",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-01",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'a' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"a\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-1",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-01",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'a:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"a:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"a:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-1",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-02",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'B' with '*', then append 'b'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"B\",\"*\"),\"b\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-2",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-02",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'b:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"b:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-2",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-02",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'b' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"b\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-2",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-02",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'b:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"b:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"b:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-2",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-03",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'C' with '*', then append 'c'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"C\",\"*\"),\"c\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-3",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-03",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'c:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"c:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-3",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-03",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'c' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"c\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-3",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-03",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'c:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"c:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"c:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-3",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-04",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'D' with '*', then append 'd'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"D\",\"*\"),\"d\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-4",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-04",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'd:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"d:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-4",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-04",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'd' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"d\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-4",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-04",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'd:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"d:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"d:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-4",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-05",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'E' with '*', then append 'e'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"E\",\"*\"),\"e\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-5",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-05",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'e:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"e:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-5",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-05",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'e' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"e\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-5",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-05",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'e:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"e:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"e:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-5",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-06",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'F' with '*', then append 'f'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"F\",\"*\"),\"f\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-6",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-06",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'f:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"f:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-6",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-06",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'f' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"f\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-6",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-06",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'f:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"f:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"f:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-6",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-07",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'G' with '*', then append 'g'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"G\",\"*\"),\"g\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-7",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-07",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'g:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"g:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-7",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-07",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'g' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"g\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-7",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-07",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'g:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"g:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"g:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-7",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-08",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'H' with '*', then append 'h'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"H\",\"*\"),\"h\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-8",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-08",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'h:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"h:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-8",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-08",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'h' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"h\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-8",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-08",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'h:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"h:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"h:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-8",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-09",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'I' with '*', then append 'i'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"I\",\"*\"),\"i\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-9",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-09",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'i:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"i:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-9",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-09",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'i' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"i\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-9",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-09",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'i:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"i:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"i:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-9",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-10",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'J' with '*', then append 'j'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"J\",\"*\"),\"j\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-10",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-10",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'j:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"j:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-10",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-10",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'j' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"j\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-10",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-10",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'j:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"j:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"j:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-10",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-11",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'K' with '*', then append 'k'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"K\",\"*\"),\"k\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-11",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-11",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'k:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"k:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-11",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-11",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'k' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"k\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-11",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-11",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'k:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"k:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"k:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-11",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-12",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'L' with '*', then append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"L\",\"*\"),\"l\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-12",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-12",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'l:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"l:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-12",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-12",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'l' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"l\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-12",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-12",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'l:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"l:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"l:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-12",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-13",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'M' with '*', then append 'm'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"M\",\"*\"),\"m\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-13",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-13",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'm:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"m:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-13",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-13",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'm' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"m\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-13",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-13",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'm:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"m:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"m:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-13",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-14",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'N' with '*', then append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"N\",\"*\"),\"n\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-14",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-14",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'n:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"n:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-14",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-14",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'n' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"n\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-14",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-14",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'n:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"n:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"n:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-14",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-15",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Uppercase it, replace each 'O' with '*', then append 'o'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.REPLACE(strings.UPPER(text),\"O\",\"*\"),\"o\")).",
+    "capability": "B",
+    "archetype": "upper_replace_suffix",
+    "algorithmic_structure": "p3c_b_training_upper_replace_suffix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-upper_replace_suffix-15",
+    "structural_signature": "B>training>upper_replace_suffix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>*",
+    "semantic_operations": [
+      "uppercase",
+      "replace",
+      "suffix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-15",
+    "split": "phase3c_b_training",
+    "family": "string_transform",
+    "prompt": "Read text. Trim spaces, reverse it, then prefix 'o:'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(\"o:\",strings.REVERSE(strings.TRIM(text,\" \")))).",
+    "capability": "B",
+    "archetype": "trim_reverse_prefix",
+    "algorithmic_structure": "p3c_b_training_trim_reverse_prefix",
+    "control_flow": "string_transform",
+    "template_lineage": "p3c-b-training-trim_reverse_prefix-15",
+    "structural_signature": "B>training>trim_reverse_prefix",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL",
+    "semantic_operations": [
+      "space_trim",
+      "reverse",
+      "prefix"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-15",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Count 'o' in right and add the length of left; print the number.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nNUMBER count=strings.COUNT(right,\"o\").\nDISPLAYNL(count+strings.LENGTH(left)).",
+    "capability": "B",
+    "archetype": "right_count_left_length",
+    "algorithmic_structure": "p3c_b_training_right_count_left_length",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-right_count_left_length-15",
+    "structural_signature": "B>training>right_count_left_length",
+    "ast_proxy_signature": "IMPORT>INPUT>DISPLAYNL>+",
+    "semantic_operations": [
+      "split_fields",
+      "right_substring_count",
+      "left_length_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-B-TR-FI-LONGER_FIELD_TAG-15",
+    "split": "phase3c_b_training",
+    "family": "field_processing",
+    "prompt": "Read left|right text fields. Print 'o:' followed by the longer field; choose right on a tie.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.LENGTH(left)>strings.LENGTH(right)) { DISPLAYNL(strings.CONCAT(\"o:\",left)). } ELSE { DISPLAYNL(strings.CONCAT(\"o:\",right)). }",
+    "capability": "B",
+    "archetype": "longer_field_tag",
+    "algorithmic_structure": "p3c_b_training_longer_field_tag",
+    "control_flow": "field_processing",
+    "template_lineage": "p3c-b-training-longer_field_tag-15",
+    "structural_signature": "B>training>longer_field_tag",
+    "ast_proxy_signature": "IMPORT>INPUT>IF>DISPLAYNL>ELSE>DISPLAYNL",
+    "semantic_operations": [
+      "split_fields",
+      "length_branch",
+      "selected_field"
+    ]
+  }
+]

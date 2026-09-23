@@ -1,0 +1,642 @@
+[
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-01",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 1. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-1",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-01",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 1; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-1",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-01",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 1.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-1",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-01",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 1.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-1",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-02",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 2. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-2",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-02",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 2; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-2",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-02",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 2.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-2",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-02",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 2.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-2",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-03",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 3. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-3",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-03",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 3; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-3",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-03",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 3.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-3",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-03",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 3.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-3",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-04",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 4. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-4",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-04",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 4; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-4",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-04",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 4.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-4",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-04",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 4.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-4",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-05",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 5. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-5",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-05",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 5; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-5",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-05",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 5.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-5",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-05",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 5.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-5",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-06",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 6. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-6",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-06",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 6; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-6",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-06",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 6.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-6",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-06",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 6.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-6",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-07",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 7. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-7",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-07",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 7; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-7",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-07",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 7.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-7",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-07",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 7.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-7",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-08",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 8. Print the answer.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "triangular_milestones",
+    "algorithmic_structure": "p3c_a_eval_triangular_milestones",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-triangular_milestones-8",
+    "structural_signature": "A>eval>triangular_milestones",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "running_triangular",
+      "multiple_of_three_milestone"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-08",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "numeric_iteration",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read nonnegative n. Start total at 8; from i=1 through n add odd i and subtract even i; print total.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "alternating_accumulator",
+    "algorithmic_structure": "p3c_a_eval_alternating_accumulator",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-eval-alternating_accumulator-8",
+    "structural_signature": "A>eval>alternating_accumulator",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "alternating_sum"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-08",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 8.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "negative_position_weight",
+    "algorithmic_structure": "p3c_a_eval_negative_position_weight",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-negative_position_weight-8",
+    "structural_signature": "A>eval>negative_position_weight",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+    "semantic_operations": [
+      "negative_array_filter",
+      "position_weighted_magnitude"
+    ]
+  },
+  {
+    "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-08",
+    "split": "phase3c_eval_a",
+    "level": "full_synthesis",
+    "family": "array_reduction",
+    "difficulty": "phase3c_frozen",
+    "prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 8.",
+    "required_regex": [],
+    "capability": "A",
+    "archetype": "outer_inner_gap",
+    "algorithmic_structure": "p3c_a_eval_outer_inner_gap",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-eval-outer_inner_gap-8",
+    "structural_signature": "A>eval>outer_inner_gap",
+    "ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+    "semantic_operations": [
+      "outer_inner_pair_sums",
+      "absolute_gap"
+    ]
+  }
+]

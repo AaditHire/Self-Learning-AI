@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-23
 
-Current phase: Phase 3B fixed-budget 20% experience replay complete; numerical gate PASS with task-level retention caveat; STOP for independent review
+Current phase: Phase 3C retention-valid fixed-budget replay DESIGN / PREREGISTRATION complete; STOP for independent scientific review before model execution
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
 Phase 3A measured A-to-B sequential acquisition and A forgetting. Phase 3B
@@ -46,6 +46,23 @@ size. Preservation evidence: `research/artifacts/PHASE3B_PRESERVATION.md`
 and `research/manifests/phase3b_remote_restore_verification.json`. This
 infrastructure action does not alter the Phase 3B scientific result or
 authorize Phase 3C.
+
+## Phase 3C design pointer
+
+Proposed frozen protocol: `research/protocols/phase3c_protocol.md` and
+`research/protocols/phase3c_config.json`. Fresh deterministic A/B construction
+is in `scripts/build_phase3c_data.py`, with 60 training examples and 32
+evaluation tasks per capability. Pinned-compiler pre-model audit:
+`research/results/EXP-0048/data_validation.json` and
+`structural_overlap_manual_review.md`; all 920 reference semantic cases pass.
+The three-seed 20% matched replay schedule is
+`research/protocols/phase3c_replay_schedule.json`. The pre-B A acquisition
+gate requires, in every seed, at least 24/32 overall, 10/16 in each A
+subskill, and 2/8 in each A evaluation archetype. Failure requires STOP before
+B training. Exact acquired-task retention and aggregate post-B A are
+co-primary. No Phase 3C gradients or confirmatory model evaluations have run;
+the final-paper holdout remains unopened. Execution is not authorized by this
+design artifact; STOP for independent review.
 
 ## Phase 3A recovery pointer
 

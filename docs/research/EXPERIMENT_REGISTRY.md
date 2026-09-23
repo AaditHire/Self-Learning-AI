@@ -107,6 +107,28 @@ of the A tasks passed before B.
 | EXP-0046 | Fresh base/A/naive/replay EVAL_A and EVAL_B; replay mean post-B A +48.96 pp versus matched naive, but 0/24 pre-B A successes retained | COMPLETE / NUMERICAL GATE PASS; TASK-LEVEL RETENTION FAIL |
 | EXP-0047 | Frozen non-GOCO regression: base 47/64; replay 48/64, 47/64, 49/64; worst matched replay deficit 2 items | COMPLETE / NO SEVERE MEASURED REGRESSION |
 
+## Phase 3C proposed records — execution on hold
+
+Protocol and exact criteria: `research/protocols/phase3c_protocol.md`;
+design config: `research/protocols/phase3c_config.json` (local-byte SHA-256
+`3d9b1d05d55a5fdfe69a25a4a376b3174f7323e86a5a3a936442d5499b4fe679`). All entries below
+remain **PROPOSED / NOT EXECUTED** except the reference/structural audit.
+Independent scientific review is required before any model run. If the
+every-seed A acquisition gate fails, EXP-0052 through EXP-0059 STOP without
+B training or post-B evaluation.
+
+| ID | Purpose | Seed(s) | Status |
+|---|---|---|---|
+| EXP-0048 | Fresh A/B data, 920 compiler reference cases, structural audit | none | COMPLETE / PRE-MODEL AUDIT PASS |
+| EXP-0049–EXP-0051 | Fixed-recipe A acquisition from immutable base | 20260925, 20261013, 20261119 respectively | PROPOSED / NOT EXECUTED |
+| EXP-0052–EXP-0054 | Matched naive B continuation, 60 B slots/epoch | same respective seeds | PROPOSED / NOT EXECUTED |
+| EXP-0055–EXP-0057 | Matched 20% A replay B continuation, 12 replacements/epoch | same respective seeds | PROPOSED / NOT EXECUTED |
+| EXP-0058 | Base, pre-B, post-naive, post-replay frozen A/B evaluations and transitions | all three | PROPOSED / NOT EXECUTED |
+| EXP-0059 | Frozen 64-item non-GOCO regression at all conditions | all three | PROPOSED / NOT EXECUTED |
+
+Phase 3C model execution code, hardware record, and per-run artifact lineage
+must be frozen and independently reviewed before those proposed records run.
+
 ## Required fields for future entries
 
 Before an experiment runs, assign its ID and freeze its purpose, exact commit,

@@ -1,0 +1,1622 @@
+{
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " *LPH* a"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOa"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZa"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD a"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "aaZ\n",
+      "expected_stdout": "**Za"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "a:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "a:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "a:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "a:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "a:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "ax|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|aZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "aa|a\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "ax|red\n",
+      "expected_stdout": "a:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|aZ\n",
+      "expected_stdout": "a:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "a:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "a:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "aa|a\n",
+      "expected_stdout": "a:aa"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA b"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOb"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZb"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD b"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "bbZ\n",
+      "expected_stdout": "**Zb"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "b:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "b:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "b:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "b:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "b:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "bx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|bZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "bb|b\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "bx|red\n",
+      "expected_stdout": "b:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|bZ\n",
+      "expected_stdout": "b:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "b:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "b:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "bb|b\n",
+      "expected_stdout": "b:bb"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-03": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA c"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GO*Oc"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZc"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD c"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ccZ\n",
+      "expected_stdout": "**Zc"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-03": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "c:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "c:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "c:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "c:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "c:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "cx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|cZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cc|c\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "cx|red\n",
+      "expected_stdout": "c:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|cZ\n",
+      "expected_stdout": "c:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "c:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "c:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "cc|c\n",
+      "expected_stdout": "c:cc"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-04": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA d"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOd"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZd"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORL* d"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ddZ\n",
+      "expected_stdout": "**Zd"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-04": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "d:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "d:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "d:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "d:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "d:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "dx|red\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|dZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "dd|d\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "dx|red\n",
+      "expected_stdout": "d:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|dZ\n",
+      "expected_stdout": "d:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "d:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "d:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "dd|d\n",
+      "expected_stdout": "d:dd"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-05": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA e"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOe"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZe"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " H*LLO WORLD e"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "eeZ\n",
+      "expected_stdout": "**Ze"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-05": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "e:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "e:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "e:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "e:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "e:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "ex|red\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|eZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ee|e\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "ex|red\n",
+      "expected_stdout": "e:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|eZ\n",
+      "expected_stdout": "e:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "e:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "e:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ee|e\n",
+      "expected_stdout": "e:ee"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-06": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA f"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOf"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZf"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD f"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ffZ\n",
+      "expected_stdout": "**Zf"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-06": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "f:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "f:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "f:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "f:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "f:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "fx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|fZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ff|f\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "fx|red\n",
+      "expected_stdout": "f:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|fZ\n",
+      "expected_stdout": "f:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "f:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "f:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ff|f\n",
+      "expected_stdout": "f:ff"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-07": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA g"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "*OCOg"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZg"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD g"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ggZ\n",
+      "expected_stdout": "**Zg"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-07": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "g:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "g:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "g:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "g:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "g:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "gx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|gZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "gg|g\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "gx|red\n",
+      "expected_stdout": "g:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|gZ\n",
+      "expected_stdout": "g:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "g:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "g:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "gg|g\n",
+      "expected_stdout": "g:gg"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-08": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALP*A h"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOh"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZh"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " *ELLO WORLD h"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "hhZ\n",
+      "expected_stdout": "**Zh"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-08": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "h:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "h:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "h:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "h:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "h:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "hx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|hZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "hh|h\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "hx|red\n",
+      "expected_stdout": "h:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|hZ\n",
+      "expected_stdout": "h:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "h:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "h:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "hh|h\n",
+      "expected_stdout": "h:hh"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-09": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA i"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOi"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZi"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD i"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "iiZ\n",
+      "expected_stdout": "**Zi"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-09": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "i:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "i:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "i:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "i:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "i:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "ix|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|iZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ii|i\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-09": [
+    {
+      "case_id": "case-1",
+      "stdin": "ix|red\n",
+      "expected_stdout": "i:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|iZ\n",
+      "expected_stdout": "i:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "i:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "i:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ii|i\n",
+      "expected_stdout": "i:ii"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-10": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA j"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOj"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZj"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD j"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "jjZ\n",
+      "expected_stdout": "**Zj"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-10": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "j:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "j:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "j:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "j:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "j:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "jx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|jZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "jj|j\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-10": [
+    {
+      "case_id": "case-1",
+      "stdin": "jx|red\n",
+      "expected_stdout": "j:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|jZ\n",
+      "expected_stdout": "j:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "j:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "j:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "jj|j\n",
+      "expected_stdout": "j:jj"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-11": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA k"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOk"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZk"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD k"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "kkZ\n",
+      "expected_stdout": "**Zk"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-11": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "k:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "k:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "k:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "k:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "k:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "kx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|kZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "kk|k\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-11": [
+    {
+      "case_id": "case-1",
+      "stdin": "kx|red\n",
+      "expected_stdout": "k:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|kZ\n",
+      "expected_stdout": "k:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "k:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "k:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "kk|k\n",
+      "expected_stdout": "k:kk"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-12": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " A*PHA l"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOl"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZl"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HE**O WOR*D l"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "llZ\n",
+      "expected_stdout": "**Zl"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-12": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "l:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "l:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "l:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "l:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "l:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "lx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|lZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ll|l\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-12": [
+    {
+      "case_id": "case-1",
+      "stdin": "lx|red\n",
+      "expected_stdout": "l:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|lZ\n",
+      "expected_stdout": "l:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "l:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "l:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ll|l\n",
+      "expected_stdout": "l:ll"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-13": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA m"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOm"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZm"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD m"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "mmZ\n",
+      "expected_stdout": "**Zm"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-13": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "m:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "m:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "m:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "m:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "m:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "mx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|mZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "mm|m\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-13": [
+    {
+      "case_id": "case-1",
+      "stdin": "mx|red\n",
+      "expected_stdout": "m:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|mZ\n",
+      "expected_stdout": "m:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "m:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "m:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "mm|m\n",
+      "expected_stdout": "m:mm"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-14": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA n"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "GOCOn"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZn"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELLO WORLD n"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "nnZ\n",
+      "expected_stdout": "**Zn"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-14": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "n:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "n:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "n:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "n:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "n:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "nx|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|nZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "nn|n\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-14": [
+    {
+      "case_id": "case-1",
+      "stdin": "nx|red\n",
+      "expected_stdout": "n:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|nZ\n",
+      "expected_stdout": "n:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "n:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "n:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "nn|n\n",
+      "expected_stdout": "n:nn"
+    }
+  ],
+  "P3C-B-TR-ST-UPPER_REPLACE_SUFFIX-15": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": " ALPHA o"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "G*C*o"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "XYZo"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": " HELL* W*RLD o"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "ooZ\n",
+      "expected_stdout": "**Zo"
+    }
+  ],
+  "P3C-B-TR-ST-TRIM_REVERSE_PREFIX-15": [
+    {
+      "case_id": "case-1",
+      "stdin": " alpha \n",
+      "expected_stdout": "o:ahpla"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "GoCo\n",
+      "expected_stdout": "o:oCoG"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "xyz\n",
+      "expected_stdout": "o:zyx"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": " Hello world \n",
+      "expected_stdout": "o:dlrow olleH"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": " aAa \n",
+      "expected_stdout": "o:aAa"
+    }
+  ],
+  "P3C-B-TR-FI-RIGHT_COUNT_LEFT_LENGTH-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "ox|red\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|oZ\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "oo|o\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-B-TR-FI-LONGER_FIELD_TAG-15": [
+    {
+      "case_id": "case-1",
+      "stdin": "ox|red\n",
+      "expected_stdout": "o:red"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "blue|oZ\n",
+      "expected_stdout": "o:blue"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "hello|WORLD\n",
+      "expected_stdout": "o:WORLD"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "x|xyz\n",
+      "expected_stdout": "o:xyz"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "oo|o\n",
+      "expected_stdout": "o:oo"
+    }
+  ]
+}

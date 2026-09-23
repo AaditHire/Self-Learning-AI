@@ -1,0 +1,352 @@
+{
+  "phase": "3C",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "rejected_before_model_execution",
+      "reference_failures": 0,
+      "consumed_prompt_reuse": [],
+      "prior_code_rejects_0p98": [
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-02",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-03",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-04",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-05",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-06",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-07",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-08",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-09",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-10",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-11",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-12",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-13",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-14",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-15",
+          "prior_item_id": "P2B-EVAL-CP07",
+          "similarity": 0.992
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-01",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-02",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-03",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-04",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-05",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-06",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-07",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-08",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 0.9918032786885246
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-01",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-02",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-03",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-04",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-05",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-06",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-07",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-08",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-09",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-10",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-11",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-12",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-13",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-14",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-B-TR-FI-SWAP_CASE_JOIN-15",
+          "prior_item_id": "P3A-B-EVAL-FI-CASE_JOIN-01",
+          "similarity": 1.0
+        }
+      ],
+      "train_eval_code_rejects_0p98": []
+    },
+    {
+      "attempt": 2,
+      "status": "rejected_before_model_execution",
+      "reference_failures": 0,
+      "consumed_prompt_reuse": [],
+      "prior_code_rejects_0p98": [
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-01",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-02",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-03",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-04",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-05",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-06",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-07",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-08",
+          "prior_item_id": "P3B-A-EVAL-NU-DIVISOR_PAIR_SUM-01",
+          "similarity": 0.9890909090909091
+        }
+      ],
+      "train_eval_code_rejects_0p98": []
+    },
+    {
+      "attempt": 3,
+      "status": "rejected_before_model_execution",
+      "reference_failures": 0,
+      "consumed_prompt_reuse": [],
+      "prior_code_rejects_0p98": [],
+      "train_eval_code_rejects_0p98": [
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-01",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-02",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-03",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-04",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-05",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-06",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-07",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        },
+        {
+          "task_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-08",
+          "nearest_train": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "similarity": 0.9853658536585366
+        }
+      ]
+    },
+    {
+      "attempt": 4,
+      "status": "rejected_before_model_execution",
+      "reference_failures": 0,
+      "consumed_prompt_reuse": [],
+      "prior_code_rejects_0p98": [
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-01",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-02",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-03",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-04",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-05",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-06",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-07",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        },
+        {
+          "item_id": "P3C-A-EVAL-NU-MULTIPLE_LINEAR_SUM-08",
+          "prior_item_id": "P2B-EVAL-LP10",
+          "similarity": 1.0
+        }
+      ],
+      "train_eval_code_rejects_0p98": []
+    }
+  ],
+  "accepted_attempt": 5
+}

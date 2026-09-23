@@ -1,0 +1,1112 @@
+[
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+1; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+1. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-1",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+1).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-1",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-1",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 1; print count plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>1) { count+=1. } }\nDISPLAYNL(count+1).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-1",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-02",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+2; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+2. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-2",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-02",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+2).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-2",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-02",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-2",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-02",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 2; print count plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>2) { count+=1. } }\nDISPLAYNL(count+2).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-2",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-03",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+3; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+3. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-3",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-03",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+3).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-3",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-03",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-3",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-03",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 3; print count plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>3) { count+=1. } }\nDISPLAYNL(count+3).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-3",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-04",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+4; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+4. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-4",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-04",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+4).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-4",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-04",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-4",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-04",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 4; print count plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>4) { count+=1. } }\nDISPLAYNL(count+4).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-4",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-05",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+5; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+5. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-5",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-05",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+5).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-5",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-05",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-5",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-05",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 5; print count plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>5) { count+=1. } }\nDISPLAYNL(count+5).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-5",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-06",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+6; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+6. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-6",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-06",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+6).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-6",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-06",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-6",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-06",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 6; print count plus 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { count+=1. } }\nDISPLAYNL(count+6).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-6",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-07",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+7; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+7. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-7",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-07",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 7.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+7).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-7",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-07",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=7.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-7",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-07",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 7; print count plus 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>7) { count+=1. } }\nDISPLAYNL(count+7).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-7",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-08",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+8; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+8. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-8",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-08",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 8.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+8).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-8",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-08",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-8",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-08",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 8; print count plus 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>8) { count+=1. } }\nDISPLAYNL(count+8).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-8",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-09",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+9; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+9. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-9",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-09",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 9.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+9).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-9",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-09",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=9.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-9",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-09",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 9; print count plus 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>9) { count+=1. } }\nDISPLAYNL(count+9).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-9",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-10",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+10; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+10. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-10",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-10",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 10.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+10).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-10",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-10",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=10.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-10",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-10",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 10; print count plus 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { count+=1. } }\nDISPLAYNL(count+10).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-10",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-11",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+11; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+11. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-11",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-11",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 11.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+11).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-11",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-11",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=11.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-11",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-11",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 11; print count plus 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>11) { count+=1. } }\nDISPLAYNL(count+11).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-11",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-12",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+12; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+12. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-12",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-12",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 12.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+12).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-12",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-12",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=12.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-12",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-12",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 12; print count plus 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>12) { count+=1. } }\nDISPLAYNL(count+12).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-12",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-13",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+13; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+13. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-13",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-13",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 13.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+13).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-13",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-13",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=13.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-13",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-13",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 13; print count plus 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>13) { count+=1. } }\nDISPLAYNL(count+13).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-13",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-14",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+14; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+14. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-14",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-14",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 14.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+14).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-14",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-14",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=14.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-14",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-14",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 14; print count plus 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>14) { count+=1. } }\nDISPLAYNL(count+14).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-14",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-15",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+15; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=1.\nLOOP (i<=n) { total+=2*i+15. i+=2. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "odd_linear_bonus",
+    "algorithmic_structure": "p3c_a_training_odd_linear_bonus",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-odd_linear_bonus-15",
+    "structural_signature": "A>training>odd_linear_bonus",
+    "ast_proxy_signature": "INPUT>LOOP><=>+=>*>+>+=>DISPLAYNL",
+    "semantic_operations": [
+      "odd_index_filter",
+      "linear_weighted_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-15",
+    "split": "phase3c_a_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count even integers from 1 through n; print three times the count plus 15.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { count+=1. } }\nDISPLAYNL(3*count+15).",
+    "capability": "A",
+    "archetype": "even_count_shift",
+    "algorithmic_structure": "p3c_a_training_even_count_shift",
+    "control_flow": "numeric_iteration",
+    "template_lineage": "p3c-a-training-even_count_shift-15",
+    "structural_signature": "A>training>even_count_shift",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "even_index_filter",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-15",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=15.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_square_sum",
+    "algorithmic_structure": "p3c_a_training_positive_square_sum",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-positive_square_sum-15",
+    "structural_signature": "A>training>positive_square_sum",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "positive_array_filter",
+      "square_sum"
+    ]
+  },
+  {
+    "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-15",
+    "split": "phase3c_a_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers into an array. Count entries strictly above 15; print count plus 15.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>15) { count+=1. } }\nDISPLAYNL(count+15).",
+    "capability": "A",
+    "archetype": "count_above_shift",
+    "algorithmic_structure": "p3c_a_training_count_above_shift",
+    "control_flow": "array_reduction",
+    "template_lineage": "p3c-a-training-count_above_shift-15",
+    "structural_signature": "A>training>count_above_shift",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "semantic_operations": [
+      "array_threshold",
+      "count",
+      "offset"
+    ]
+  }
+]

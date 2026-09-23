@@ -1,0 +1,866 @@
+{
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "28.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "73.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "0.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "-3.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "31.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "29.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "74.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "-2.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "32.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "30.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "75.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "-1.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "33.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "31.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "76.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "0.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "34.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "32.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "77.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "1.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "15.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "35.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-05": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "12.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "33.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "78.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "16.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "36.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-06": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "13.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "34.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "79.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "17.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "37.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-07": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "3\n",
+      "expected_stdout": "14.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "6\n",
+      "expected_stdout": "35.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "10\n",
+      "expected_stdout": "80.0"
+    }
+  ],
+  "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "1\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "2\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "5\n",
+      "expected_stdout": "11.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "8\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "18.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "38.0"
+    }
+  ],
+  "P3C-A-EVAL-AR-OUTER_INNER_GAP-08": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|1|2|3\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-2|4|0|8\n",
+      "expected_stdout": "10.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-3|7|-1\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "2|2|2|2\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-5|-4|-3|-2\n",
+      "expected_stdout": "8.0"
+    }
+  ]
+}
