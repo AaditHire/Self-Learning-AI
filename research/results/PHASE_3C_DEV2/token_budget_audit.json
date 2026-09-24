@@ -1,0 +1,514 @@
+{
+  "phase": "3C-DEV2",
+  "status": "PRE_GRADIENT_TOKEN_AUDIT",
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "prompt_template_sha256": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+  "max_length": 320,
+  "conditions": {
+    "isolated": {
+      "examples": 60,
+      "max_full_tokens": 277,
+      "one_epoch_full_tokens": 14235,
+      "one_epoch_supervised_tokens": 6630,
+      "by_example": {
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-01": {
+          "full_tokens": 203,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-02": {
+          "full_tokens": 203,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-03": {
+          "full_tokens": 203,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-04": {
+          "full_tokens": 203,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-05": {
+          "full_tokens": 203,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-01": {
+          "full_tokens": 200,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-02": {
+          "full_tokens": 200,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-03": {
+          "full_tokens": 200,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-04": {
+          "full_tokens": 200,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-05": {
+          "full_tokens": 200,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-01": {
+          "full_tokens": 203,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-02": {
+          "full_tokens": 203,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-03": {
+          "full_tokens": 203,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-04": {
+          "full_tokens": 203,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-05": {
+          "full_tokens": 203,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-01": {
+          "full_tokens": 204,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-02": {
+          "full_tokens": 204,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-03": {
+          "full_tokens": 204,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-04": {
+          "full_tokens": 204,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-05": {
+          "full_tokens": 204,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-01": {
+          "full_tokens": 207,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-02": {
+          "full_tokens": 207,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-03": {
+          "full_tokens": 207,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-04": {
+          "full_tokens": 207,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-05": {
+          "full_tokens": 207,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-01": {
+          "full_tokens": 203,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-02": {
+          "full_tokens": 203,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-03": {
+          "full_tokens": 203,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-04": {
+          "full_tokens": 203,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-05": {
+          "full_tokens": 203,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-01": {
+          "full_tokens": 266,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-02": {
+          "full_tokens": 266,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-03": {
+          "full_tokens": 266,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-04": {
+          "full_tokens": 266,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-05": {
+          "full_tokens": 266,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-01": {
+          "full_tokens": 269,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-02": {
+          "full_tokens": 269,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-03": {
+          "full_tokens": 269,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-04": {
+          "full_tokens": 269,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-05": {
+          "full_tokens": 269,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-01": {
+          "full_tokens": 267,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-02": {
+          "full_tokens": 267,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-03": {
+          "full_tokens": 267,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-04": {
+          "full_tokens": 267,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-05": {
+          "full_tokens": 267,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-01": {
+          "full_tokens": 275,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-02": {
+          "full_tokens": 275,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-03": {
+          "full_tokens": 275,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-04": {
+          "full_tokens": 275,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-05": {
+          "full_tokens": 275,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-01": {
+          "full_tokens": 273,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-02": {
+          "full_tokens": 273,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-03": {
+          "full_tokens": 273,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-04": {
+          "full_tokens": 273,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-05": {
+          "full_tokens": 273,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-01": {
+          "full_tokens": 277,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-02": {
+          "full_tokens": 277,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-03": {
+          "full_tokens": 277,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-04": {
+          "full_tokens": 277,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-05": {
+          "full_tokens": 277,
+          "supervised_tokens": 147
+        }
+      },
+      "dataset_sha256": "72169b1c5cd5ddaadd6ab7187f5db1666ba17946617b51248ead23b991eee640"
+    },
+    "composition": {
+      "examples": 60,
+      "max_full_tokens": 285,
+      "one_epoch_full_tokens": 14620,
+      "one_epoch_supervised_tokens": 6630,
+      "by_example": {
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR1-01": {
+          "full_tokens": 208,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR1-02": {
+          "full_tokens": 208,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR1-03": {
+          "full_tokens": 208,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR1-04": {
+          "full_tokens": 208,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05": {
+          "full_tokens": 208,
+          "supervised_tokens": 78
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR2-01": {
+          "full_tokens": 205,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR2-02": {
+          "full_tokens": 205,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR2-03": {
+          "full_tokens": 205,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR2-04": {
+          "full_tokens": 205,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05": {
+          "full_tokens": 205,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR3-01": {
+          "full_tokens": 208,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR3-02": {
+          "full_tokens": 208,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR3-03": {
+          "full_tokens": 208,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR3-04": {
+          "full_tokens": 208,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR3-05": {
+          "full_tokens": 208,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR4-01": {
+          "full_tokens": 213,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR4-02": {
+          "full_tokens": 213,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR4-03": {
+          "full_tokens": 213,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR4-04": {
+          "full_tokens": 213,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05": {
+          "full_tokens": 213,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR5-01": {
+          "full_tokens": 216,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR5-02": {
+          "full_tokens": 216,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR5-03": {
+          "full_tokens": 216,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR5-04": {
+          "full_tokens": 216,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05": {
+          "full_tokens": 216,
+          "supervised_tokens": 77
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR6-01": {
+          "full_tokens": 210,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR6-02": {
+          "full_tokens": 210,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR6-03": {
+          "full_tokens": 210,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR6-04": {
+          "full_tokens": 210,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-COMPOSITION-TR-NU-PAIR6-05": {
+          "full_tokens": 210,
+          "supervised_tokens": 75
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR1-01": {
+          "full_tokens": 271,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR1-02": {
+          "full_tokens": 271,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR1-03": {
+          "full_tokens": 271,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR1-04": {
+          "full_tokens": 271,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05": {
+          "full_tokens": 271,
+          "supervised_tokens": 142
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR2-01": {
+          "full_tokens": 274,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR2-02": {
+          "full_tokens": 274,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR2-03": {
+          "full_tokens": 274,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR2-04": {
+          "full_tokens": 274,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05": {
+          "full_tokens": 274,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR3-01": {
+          "full_tokens": 272,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR3-02": {
+          "full_tokens": 272,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR3-03": {
+          "full_tokens": 272,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR3-04": {
+          "full_tokens": 272,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05": {
+          "full_tokens": 272,
+          "supervised_tokens": 140
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR4-01": {
+          "full_tokens": 282,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR4-02": {
+          "full_tokens": 282,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR4-03": {
+          "full_tokens": 282,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR4-04": {
+          "full_tokens": 282,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05": {
+          "full_tokens": 282,
+          "supervised_tokens": 148
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR5-01": {
+          "full_tokens": 280,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR5-02": {
+          "full_tokens": 280,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR5-03": {
+          "full_tokens": 280,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR5-04": {
+          "full_tokens": 280,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05": {
+          "full_tokens": 280,
+          "supervised_tokens": 144
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR6-01": {
+          "full_tokens": 285,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR6-02": {
+          "full_tokens": 285,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR6-03": {
+          "full_tokens": 285,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR6-04": {
+          "full_tokens": 285,
+          "supervised_tokens": 147
+        },
+        "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05": {
+          "full_tokens": 285,
+          "supervised_tokens": 147
+        }
+      },
+      "dataset_sha256": "a28aa75a038dd065ef7e2f7ba6b5e23e552fa235961452a4b0ef497092033053"
+    }
+  },
+  "full_token_relative_difference_from_isolated": 0.02704601334738321,
+  "supervised_token_relative_difference_from_isolated": 0.0,
+  "prospective_materiality_threshold": 0.1,
+  "compute_gate": "PASS"
+}

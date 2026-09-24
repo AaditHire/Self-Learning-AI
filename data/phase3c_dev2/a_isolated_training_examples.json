@@ -1,0 +1,962 @@
+[
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read nonnegative n. Separately count odd index and index with remainder two modulo three; add the two counts and 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "count(odd_index)+count(residue_two); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read nonnegative n. Separately count odd index and index with remainder two modulo three; add the two counts and 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "count(odd_index)+count(residue_two); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read nonnegative n. Separately count odd index and index with remainder two modulo three; add the two counts and 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "count(odd_index)+count(residue_two); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read nonnegative n. Separately count odd index and index with remainder two modulo three; add the two counts and 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "count(odd_index)+count(residue_two); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read nonnegative n. Separately count odd index and index with remainder two modulo three; add the two counts and 5.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "count(odd_index)+count(residue_two); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 5.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 5.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and positive divisor of n; add the two counts and 1.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "count(residue_two)+count(divisor_index); redundant inner residue_two guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and positive divisor of n; add the two counts and 2.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "count(residue_two)+count(divisor_index); redundant inner residue_two guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and positive divisor of n; add the two counts and 3.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "count(residue_two)+count(divisor_index); redundant inner residue_two guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and positive divisor of n; add the two counts and 4.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "count(residue_two)+count(divisor_index); redundant inner residue_two guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and positive divisor of n; add the two counts and 5.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "count(residue_two)+count(divisor_index); redundant inner residue_two guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and index in the first half through n; add the two counts and 1.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(residue_two)+count(first_half); redundant inner residue_two guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and index in the first half through n; add the two counts and 2.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(residue_two)+count(first_half); redundant inner residue_two guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and index in the first half through n; add the two counts and 3.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(residue_two)+count(first_half); redundant inner residue_two guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and index in the first half through n; add the two counts and 4.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(residue_two)+count(first_half); redundant inner residue_two guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read nonnegative n. Separately count index with remainder two modulo three and index in the first half through n; add the two counts and 5.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(residue_two)+count(first_half); redundant inner residue_two guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>*><=>+=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (i%3==2) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 1.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*><=>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 2.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*><=>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 3.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*><=>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 4.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*><=>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 5.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*><=>+=>-=>DISPLAYNL>+",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and even-valued entry; add the two counts and 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "count(negative_value)+count(even_value); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and even-valued entry; add the two counts and 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "count(negative_value)+count(even_value); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and even-valued entry; add the two counts and 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "count(negative_value)+count(even_value); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and even-valued entry; add the two counts and 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "count(negative_value)+count(even_value); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair1",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and even-valued entry; add the two counts and 5.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "count(negative_value)+count(even_value); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>%>==>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry whose square exceeds four; add the two counts and 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(negative_value)+count(large_magnitude); redundant inner negative_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry whose square exceeds four; add the two counts and 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(negative_value)+count(large_magnitude); redundant inner negative_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry whose square exceeds four; add the two counts and 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(negative_value)+count(large_magnitude); redundant inner negative_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry whose square exceeds four; add the two counts and 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(negative_value)+count(large_magnitude); redundant inner negative_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair2",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry whose square exceeds four; add the two counts and 5.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(negative_value)+count(large_magnitude); redundant inner negative_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry greater than its zero-based position; add the two counts and 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value)+count(value_exceeds_index); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry greater than its zero-based position; add the two counts and 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value)+count(value_exceeds_index); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry greater than its zero-based position; add the two counts and 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value)+count(value_exceeds_index); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry greater than its zero-based position; add the two counts and 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value)+count(value_exceeds_index); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair3",
+    "prompt": "Read four pipe-separated numbers. Separately count negative entry and entry greater than its zero-based position; add the two counts and 5.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value)+count(value_exceeds_index); redundant inner negative_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]<0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 1.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 2.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 3.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 4.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair4",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 5.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>*>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry greater than its zero-based position; add the two counts and 1.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(even_value)+count(value_exceeds_index); redundant inner even_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>%>==>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry greater than its zero-based position; add the two counts and 2.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(even_value)+count(value_exceeds_index); redundant inner even_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>%>==>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry greater than its zero-based position; add the two counts and 3.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(even_value)+count(value_exceeds_index); redundant inner even_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>%>==>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry greater than its zero-based position; add the two counts and 4.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(even_value)+count(value_exceeds_index); redundant inner even_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>%>==>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair5",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry greater than its zero-based position; add the two counts and 5.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(even_value)+count(value_exceeds_index); redundant inner even_value guard",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>%>==>+=>IF>+=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-01",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read four pipe-separated numbers. Separately count entry whose square exceeds four and entry greater than its zero-based position; add the two counts and 1.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(large_magnitude)+count(value_exceeds_index); redundant inner large_magnitude guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>*>IF>*>+=>IF>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]>i) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-02",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read four pipe-separated numbers. Separately count entry whose square exceeds four and entry greater than its zero-based position; add the two counts and 2.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(large_magnitude)+count(value_exceeds_index); redundant inner large_magnitude guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>*>IF>*>+=>IF>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]>i) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-03",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read four pipe-separated numbers. Separately count entry whose square exceeds four and entry greater than its zero-based position; add the two counts and 3.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(large_magnitude)+count(value_exceeds_index); redundant inner large_magnitude guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>*>IF>*>+=>IF>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]>i) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-04",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read four pipe-separated numbers. Separately count entry whose square exceeds four and entry greater than its zero-based position; add the two counts and 4.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(large_magnitude)+count(value_exceeds_index); redundant inner large_magnitude guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>*>IF>*>+=>IF>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]>i) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  },
+  {
+    "example_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+    "split": "phase3c_dev2_isolated_training",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "pair6",
+    "prompt": "Read four pipe-separated numbers. Separately count entry whose square exceeds four and entry greater than its zero-based position; add the two counts and 5.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(large_magnitude)+count(value_exceeds_index); redundant inner large_magnitude guard",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>*>IF>*>+=>IF>+=>-=>DISPLAYNL>+",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]>i) { right+=1. } i-=1. }\nDISPLAYNL(left+right)."
+  }
+]

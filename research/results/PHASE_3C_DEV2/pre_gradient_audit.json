@@ -1,0 +1,5270 @@
+{
+  "phase": "3C-DEV2",
+  "status": "PRE_GRADIENT_REFERENCE_AND_STRUCTURE_AUDIT",
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "input_sha256": {
+    "data/phase3c_dev2/a_isolated_training_examples.json": "72169b1c5cd5ddaadd6ab7187f5db1666ba17946617b51248ead23b991eee640",
+    "data/phase3c_dev2/a_isolated_training_references.json": "60c85eaa4cad08c18f281f600e26d7a16979506066379c2791d3a222d1b3b233",
+    "data/phase3c_dev2/a_isolated_training_hidden_tests.json": "d065bdff1bdbbe3aa51eb8680bebabf9aa78d80923dbec671ec4ec91c394aada",
+    "data/phase3c_dev2/a_composition_training_examples.json": "a28aa75a038dd065ef7e2f7ba6b5e23e552fa235961452a4b0ef497092033053",
+    "data/phase3c_dev2/a_composition_training_references.json": "c1c639a0f811e827a5b21c0e6982855c6f8bcda693c1b10d886816a5da521a3a",
+    "data/phase3c_dev2/a_composition_training_hidden_tests.json": "9eca958c9f85bcbf3ed39b125b401067f25d122e7aee04274a079f0872391f7e",
+    "benchmark/phase3c_dev2/a_development_eval_tasks.json": "a1603a223950f187c9b1083f2fd34b1d74596fa9f3080389c683ad2b326c555a",
+    "benchmark/phase3c_dev2/a_development_eval_references.json": "7471f96e42efe04dd9819232ee132b72800d58b5388b9a88991a5f6160022d38",
+    "benchmark/phase3c_dev2/a_development_eval_hidden_tests.json": "cf420410a8742f71628b88d57bd4e84fe9d326ebdf4ec15430d43b79f64771a7"
+  },
+  "historical_exact_reuse": {
+    "prior_prompt_exact": 0,
+    "prior_reference_exact": 0,
+    "train_eval_prompt_exact": 0,
+    "train_eval_reference_exact": 0
+  },
+  "prospective_matching_tolerance": {
+    "primitive_presence": "exact",
+    "primitive_example_frequency": "exact",
+    "primitive_reference_occurrence": "exact",
+    "api_construct_occurrence": "exact",
+    "subskill_counts": "30 per condition per subskill"
+  },
+  "primitive_frequency": [
+    {
+      "subskill": "numeric_iteration",
+      "primitive": "odd_index",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 30,
+          "archetypes": [
+            "pair1",
+            "pair2",
+            "pair3"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 30,
+          "archetypes": [
+            "pair1",
+            "pair2",
+            "pair3"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "numeric_iteration",
+      "primitive": "residue_two",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 25,
+          "archetypes": [
+            "pair1",
+            "pair4",
+            "pair5"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 25,
+          "archetypes": [
+            "pair1",
+            "pair4",
+            "pair5"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "numeric_iteration",
+      "primitive": "divisor_index",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 20,
+          "archetypes": [
+            "pair2",
+            "pair4",
+            "pair6"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 20,
+          "archetypes": [
+            "pair2",
+            "pair4",
+            "pair6"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "numeric_iteration",
+      "primitive": "first_half",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 15,
+          "archetypes": [
+            "pair3",
+            "pair5",
+            "pair6"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 15,
+          "archetypes": [
+            "pair3",
+            "pair5",
+            "pair6"
+          ],
+          "associated_api": [
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "array_reduction",
+      "primitive": "negative_value",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 30,
+          "archetypes": [
+            "pair1",
+            "pair2",
+            "pair3"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 30,
+          "archetypes": [
+            "pair1",
+            "pair2",
+            "pair3"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "array_reduction",
+      "primitive": "even_value",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 25,
+          "archetypes": [
+            "pair1",
+            "pair4",
+            "pair5"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 25,
+          "archetypes": [
+            "pair1",
+            "pair4",
+            "pair5"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "array_reduction",
+      "primitive": "large_magnitude",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 20,
+          "archetypes": [
+            "pair2",
+            "pair4",
+            "pair6"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 20,
+          "archetypes": [
+            "pair2",
+            "pair4",
+            "pair6"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    },
+    {
+      "subskill": "array_reduction",
+      "primitive": "value_exceeds_index",
+      "conditions": {
+        "isolated": {
+          "examples_containing": 15,
+          "reference_occurrences": 15,
+          "archetypes": [
+            "pair3",
+            "pair5",
+            "pair6"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        },
+        "composition": {
+          "examples_containing": 15,
+          "reference_occurrences": 15,
+          "archetypes": [
+            "pair3",
+            "pair5",
+            "pair6"
+          ],
+          "associated_api": [
+            "IMPORT strings",
+            "strings.SPLIT",
+            "strings.TO_NUMBER",
+            "array_index",
+            "IF",
+            "LOOP"
+          ]
+        }
+      }
+    }
+  ],
+  "api_syntax_frequency": [
+    {
+      "construct": "IMPORT_strings",
+      "literal_proxy": "IMPORT strings.",
+      "reference_occurrences": {
+        "isolated": 30,
+        "composition": 30
+      }
+    },
+    {
+      "construct": "SPLIT",
+      "literal_proxy": "strings.SPLIT",
+      "reference_occurrences": {
+        "isolated": 30,
+        "composition": 30
+      }
+    },
+    {
+      "construct": "TO_NUMBER",
+      "literal_proxy": "strings.TO_NUMBER",
+      "reference_occurrences": {
+        "isolated": 120,
+        "composition": 120
+      }
+    },
+    {
+      "construct": "array_index",
+      "literal_proxy": "values[",
+      "reference_occurrences": {
+        "isolated": 110,
+        "composition": 110
+      }
+    },
+    {
+      "construct": "IF",
+      "literal_proxy": "IF (",
+      "reference_occurrences": {
+        "isolated": 180,
+        "composition": 180
+      }
+    },
+    {
+      "construct": "LOOP",
+      "literal_proxy": "LOOP (",
+      "reference_occurrences": {
+        "isolated": 60,
+        "composition": 60
+      }
+    },
+    {
+      "construct": "descending_loop",
+      "literal_proxy": "i-=1.",
+      "reference_occurrences": {
+        "isolated": 30,
+        "composition": 30
+      }
+    },
+    {
+      "construct": "nested_IF",
+      "literal_proxy": "{ IF (",
+      "reference_occurrences": {
+        "isolated": 120,
+        "composition": 120
+      }
+    }
+  ],
+  "central_coverage_proof": [
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-41",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-42",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-43",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-44",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-41",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-42",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-43",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-44",
+      "group": "novel_composition",
+      "required_primitives": [
+        "divisor_index",
+        "first_half",
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-51",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-52",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-53",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-54",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-51",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "divisor_index",
+        "odd_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-52",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "divisor_index",
+        "odd_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-53",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "divisor_index",
+        "odd_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-54",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "divisor_index",
+        "odd_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-41",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-42",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-43",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-44",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-41",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-42",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-43",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-44",
+      "group": "novel_composition",
+      "required_primitives": [
+        "even_value",
+        "large_magnitude",
+        "negative_value",
+        "value_exceeds_index"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-51",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "even_value",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-52",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "even_value",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-53",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "even_value",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-54",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "even_value",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-51",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "large_magnitude",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-52",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "large_magnitude",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-53",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "large_magnitude",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-54",
+      "group": "structural_transfer",
+      "required_primitives": [
+        "large_magnitude",
+        "negative_value"
+      ],
+      "missing_in_isolated": [],
+      "missing_in_composition": [],
+      "exact_composition_in_isolated": false,
+      "exact_composition_in_composition": false
+    }
+  ],
+  "reference_validation": {
+    "isolated": {
+      "references": 60,
+      "cases": 300,
+      "passed": 60,
+      "rows": [
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR4-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        }
+      ]
+    },
+    "composition": {
+      "references": 60,
+      "cases": 300,
+      "passed": 60,
+      "rows": [
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR6-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR6-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR6-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR6-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-NU-PAIR6-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-01",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-02",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-03",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-04",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        }
+      ]
+    },
+    "eval": {
+      "references": 48,
+      "cases": 240,
+      "passed": 48,
+      "rows": [
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY1-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY1-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY2-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY2-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY3-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY3-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY4-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-SANITY4-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-41",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-42",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-43",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-44",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-41",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-42",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-43",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-44",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-51",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-52",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-53",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-54",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-51",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-52",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-53",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-54",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY1-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY1-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY2-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY2-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY3-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY3-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY4-31",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-SANITY4-32",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-41",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-42",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-43",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-44",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-41",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-42",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-43",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-44",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-51",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-52",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-53",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-54",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-51",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-52",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-53",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        },
+        {
+          "id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-54",
+          "parse_success": true,
+          "compile_success": true,
+          "execution_success": true,
+          "hidden_pass": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "error_phase": null,
+          "first_case_stderr": ""
+        }
+      ]
+    }
+  },
+  "structural_nearest": [
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY1-31",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index"
+      ],
+      "composition_signature": "count(odd_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.42105263157894735,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY1-32",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index"
+      ],
+      "composition_signature": "count(odd_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.42105263157894735,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY2-31",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "residue_two"
+      ],
+      "composition_signature": "count(residue_two)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.631578947368421,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY2-32",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "residue_two"
+      ],
+      "composition_signature": "count(residue_two)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.631578947368421,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY3-31",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "divisor_index"
+      ],
+      "composition_signature": "count(divisor_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.47368421052631576,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY3-32",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "divisor_index"
+      ],
+      "composition_signature": "count(divisor_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.47368421052631576,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY4-31",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "first_half"
+      ],
+      "composition_signature": "count(first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-05",
+          "nearest_prompt_jaccard": 0.631578947368421,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 20,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-SANITY4-32",
+      "group": "primitive_sanity",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "first_half"
+      ],
+      "composition_signature": "count(first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-05",
+          "nearest_prompt_jaccard": 0.631578947368421,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.7906976744186046,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR3-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 20,
+          "code_pairs_at_least_0p85": 0,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-41",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two",
+        "divisor_index",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-42",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two",
+        "divisor_index",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-43",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two",
+        "divisor_index",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-44",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two",
+        "divisor_index",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9016393442622951,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true,
+            "divisor_index": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-41",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index",
+        "residue_two",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-42",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index",
+        "residue_two",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-43",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index",
+        "residue_two",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-44",
+      "group": "novel_composition",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index",
+        "residue_two",
+        "first_half"
+      ],
+      "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.5862068965517241,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9005524861878453,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_prompt_jaccard": 0.75,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true,
+            "residue_two": true,
+            "first_half": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-51",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "composition_signature": "descending count(odd_index AND residue_two)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5416666666666666,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6956521739130435,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 10,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-52",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "composition_signature": "descending count(odd_index AND residue_two)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5416666666666666,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6956521739130435,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 10,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-53",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "composition_signature": "descending count(odd_index AND residue_two)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5416666666666666,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6956521739130435,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 10,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-54",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "residue_two"
+      ],
+      "composition_signature": "descending count(odd_index AND residue_two)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5416666666666666,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.8607594936708861,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6956521739130435,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 10,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "residue_two": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-51",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index"
+      ],
+      "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5909090909090909,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 5,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 25,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-52",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index"
+      ],
+      "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5909090909090909,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 5,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 25,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-53",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index"
+      ],
+      "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5909090909090909,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 5,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 25,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-54",
+      "group": "structural_transfer",
+      "subskill": "numeric_iteration",
+      "required_primitives": [
+        "odd_index",
+        "divisor_index"
+      ],
+      "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5909090909090909,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 5,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.8527131782945736,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 25,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "odd_index": true,
+            "divisor_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY1-31",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value"
+      ],
+      "composition_signature": "count(negative_value)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5263157894736842,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY1-32",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value"
+      ],
+      "composition_signature": "count(negative_value)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5263157894736842,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY2-31",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "even_value"
+      ],
+      "composition_signature": "count(even_value)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8998505231689088,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5789473684210527,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8998505231689088,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.55,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY2-32",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "even_value"
+      ],
+      "composition_signature": "count(even_value)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8998505231689088,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5789473684210527,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.8998505231689088,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.55,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY3-31",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "large_magnitude"
+      ],
+      "composition_signature": "count(large_magnitude)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.907185628742515,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.6,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.907185628742515,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY3-32",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "large_magnitude"
+      ],
+      "composition_signature": "count(large_magnitude)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.907185628742515,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.6,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.907185628742515,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5714285714285714,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY4-31",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_prompt_jaccard": 0.6521739130434783,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-SANITY4-32",
+      "group": "primitive_sanity",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_prompt_jaccard": 0.6521739130434783,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.8986384266263238,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR3-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-41",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value",
+        "large_magnitude",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.912751677852349,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9176788124156545,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-42",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value",
+        "large_magnitude",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.912751677852349,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9176788124156545,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-43",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value",
+        "large_magnitude",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.912751677852349,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9176788124156545,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-44",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value",
+        "large_magnitude",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+      "control_flow": "forward",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.912751677852349,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_code_archetype": "pair1",
+          "nearest_code_similarity": 0.9176788124156545,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 15,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true,
+            "large_magnitude": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-41",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude",
+        "even_value",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9265687583444593,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9386666666666666,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-42",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude",
+        "even_value",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9265687583444593,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9386666666666666,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-43",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude",
+        "even_value",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9265687583444593,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9386666666666666,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-44",
+      "group": "novel_composition",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude",
+        "even_value",
+        "value_exceeds_index"
+      ],
+      "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_code_archetype": "pair6",
+          "nearest_code_similarity": 0.9265687583444593,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.5806451612903226,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9386666666666666,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+          "nearest_prompt_jaccard": 0.7857142857142857,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true,
+            "even_value": true,
+            "value_exceeds_index": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-51",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value"
+      ],
+      "composition_signature": "descending count(negative_value AND even_value)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9124820659971306,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_code_archetype": "pair2",
+          "nearest_code_similarity": 0.9114658925979681,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6818181818181818,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-52",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value"
+      ],
+      "composition_signature": "descending count(negative_value AND even_value)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9124820659971306,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_code_archetype": "pair2",
+          "nearest_code_similarity": 0.9114658925979681,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6818181818181818,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-53",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value"
+      ],
+      "composition_signature": "descending count(negative_value AND even_value)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9124820659971306,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_code_archetype": "pair2",
+          "nearest_code_similarity": 0.9114658925979681,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6818181818181818,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-54",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "even_value"
+      ],
+      "composition_signature": "descending count(negative_value AND even_value)",
+      "control_flow": "reverse",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+          "nearest_code_archetype": "pair4",
+          "nearest_code_similarity": 0.9124820659971306,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.5,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_code_archetype": "pair2",
+          "nearest_code_similarity": 0.9114658925979681,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+          "nearest_prompt_jaccard": 0.6818181818181818,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 20,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "even_value": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-51",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude"
+      ],
+      "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.9163346613545816,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9014454664914586,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5384615384615384,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-52",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude"
+      ],
+      "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.9163346613545816,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9014454664914586,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5384615384615384,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-53",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude"
+      ],
+      "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.9163346613545816,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9014454664914586,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5384615384615384,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-54",
+      "group": "structural_transfer",
+      "subskill": "array_reduction",
+      "required_primitives": [
+        "negative_value",
+        "large_magnitude"
+      ],
+      "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+      "control_flow": "two_pass",
+      "goco_api": [
+        "IMPORT strings",
+        "strings.SPLIT",
+        "strings.TO_NUMBER",
+        "array_index",
+        "IF",
+        "LOOP"
+      ],
+      "conditions": {
+        "isolated": {
+          "nearest_code_id": "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+          "nearest_code_archetype": "pair3",
+          "nearest_code_similarity": 0.9163346613545816,
+          "nearest_prompt_id": "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.625,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        },
+        "composition": {
+          "nearest_code_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-05",
+          "nearest_code_archetype": "pair5",
+          "nearest_code_similarity": 0.9014454664914586,
+          "nearest_prompt_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR2-05",
+          "nearest_prompt_jaccard": 0.5384615384615384,
+          "ast_proxy_exact_pair_count": 0,
+          "code_pairs_at_least_0p70": 30,
+          "code_pairs_at_least_0p85": 15,
+          "code_pairs_at_least_0p95": 0,
+          "code_pairs_at_least_0p98": 0,
+          "primitive_coverage": {
+            "negative_value": true,
+            "large_magnitude": true
+          },
+          "exact_composition_in_training": false
+        }
+      }
+    }
+  ],
+  "structural_pair_count": 5760,
+  "similarity_interpretation": "Prompt Jaccard, normalized reference SequenceMatcher, and coarse AST proxy are descriptive. All pairs, including those below 0.98, are published. No distance independence is established by a single threshold."
+}

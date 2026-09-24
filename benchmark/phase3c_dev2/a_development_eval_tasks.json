@@ -1,0 +1,882 @@
+[
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY1-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity1",
+    "prompt": "Read nonnegative n. Count odd index and then add 31.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "count(odd_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY1-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity1",
+    "prompt": "Read nonnegative n. Count odd index and then add 32.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "count(odd_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY2-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity2",
+    "prompt": "Read nonnegative n. Count index with remainder two modulo three and then add 31.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "count(residue_two)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY2-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity2",
+    "prompt": "Read nonnegative n. Count index with remainder two modulo three and then add 32.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "count(residue_two)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY3-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity3",
+    "prompt": "Read nonnegative n. Count positive divisor of n and then add 31.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "count(divisor_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY3-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity3",
+    "prompt": "Read nonnegative n. Count positive divisor of n and then add 32.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "count(divisor_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY4-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity4",
+    "prompt": "Read nonnegative n. Count index in the first half through n and then add 31.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "count(first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-SANITY4-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "sanity4",
+    "prompt": "Read nonnegative n. Count index in the first half through n and then add 32.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "count(first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-41",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count items satisfying both positive divisor of n and index in the first half through n. Add 41.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-42",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count items satisfying both positive divisor of n and index in the first half through n. Add 42.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-43",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count items satisfying both positive divisor of n and index in the first half through n. Add 43.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-44",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count items satisfying both positive divisor of n and index in the first half through n. Add 44.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-41",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and positive divisor of n; also count items satisfying both index with remainder two modulo three and index in the first half through n. Add 41.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-42",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and positive divisor of n; also count items satisfying both index with remainder two modulo three and index in the first half through n. Add 42.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-43",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and positive divisor of n; also count items satisfying both index with remainder two modulo three and index in the first half through n. Add 43.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-44",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and positive divisor of n; also count items satisfying both index with remainder two modulo three and index in the first half through n. Add 44.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>IF>%>==>IF>*><=>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-51",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read nonnegative n. Traverse indices downward and count items satisfying both odd index and index with remainder two modulo three; add 51.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "descending count(odd_index AND residue_two)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-52",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read nonnegative n. Traverse indices downward and count items satisfying both odd index and index with remainder two modulo three; add 52.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "descending count(odd_index AND residue_two)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-53",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read nonnegative n. Traverse indices downward and count items satisfying both odd index and index with remainder two modulo three; add 53.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "descending count(odd_index AND residue_two)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER1-54",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read nonnegative n. Traverse indices downward and count items satisfying both odd index and index with remainder two modulo three; add 54.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "descending count(odd_index AND residue_two)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-51",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read nonnegative n. In two separate traversals count odd index and positive divisor of n, then add their counts and 51.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-52",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read nonnegative n. In two separate traversals count odd index and positive divisor of n, then add their counts and 52.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-53",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read nonnegative n. In two separate traversals count odd index and positive divisor of n, then add their counts and 53.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-NU-STRUCTURAL_TRANSFER2-54",
+    "split": "phase3c_dev2_development_eval",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read nonnegative n. In two separate traversals count odd index and positive divisor of n, then add their counts and 54.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "composition_signature": "two_pass count(odd_index)+count(divisor_index)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY1-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity1",
+    "prompt": "Read four pipe-separated numbers. Count negative entry and then add 31.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "count(negative_value)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY1-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity1",
+    "prompt": "Read four pipe-separated numbers. Count negative entry and then add 32.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "count(negative_value)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY2-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity2",
+    "prompt": "Read four pipe-separated numbers. Count even-valued entry and then add 31.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "count(even_value)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY2-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity2",
+    "prompt": "Read four pipe-separated numbers. Count even-valued entry and then add 32.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "count(even_value)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY3-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity3",
+    "prompt": "Read four pipe-separated numbers. Count entry whose square exceeds four and then add 31.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "count(large_magnitude)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY3-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity3",
+    "prompt": "Read four pipe-separated numbers. Count entry whose square exceeds four and then add 32.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "count(large_magnitude)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY4-31",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity4",
+    "prompt": "Read four pipe-separated numbers. Count entry greater than its zero-based position and then add 31.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-SANITY4-32",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "sanity4",
+    "prompt": "Read four pipe-separated numbers. Count entry greater than its zero-based position and then add 32.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "development_group": "primitive_sanity",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-41",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and even-valued entry; also count items satisfying both entry whose square exceeds four and entry greater than its zero-based position. Add 41.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>+=>IF>*>IF>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-42",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and even-valued entry; also count items satisfying both entry whose square exceeds four and entry greater than its zero-based position. Add 42.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>+=>IF>*>IF>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-43",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and even-valued entry; also count items satisfying both entry whose square exceeds four and entry greater than its zero-based position. Add 43.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>+=>IF>*>IF>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-44",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition1",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and even-valued entry; also count items satisfying both entry whose square exceeds four and entry greater than its zero-based position. Add 44.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+    "control_flow": "forward",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>+=>IF>*>IF>+=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-41",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and entry whose square exceeds four; also count items satisfying both even-valued entry and entry greater than its zero-based position. Add 41.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>*>+=>IF>%>==>IF>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-42",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and entry whose square exceeds four; also count items satisfying both even-valued entry and entry greater than its zero-based position. Add 42.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>*>+=>IF>%>==>IF>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-43",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and entry whose square exceeds four; also count items satisfying both even-valued entry and entry greater than its zero-based position. Add 43.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>*>+=>IF>%>==>IF>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-44",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "novel_composition2",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and entry whose square exceeds four; also count items satisfying both even-valued entry and entry greater than its zero-based position. Add 44.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>*>+=>IF>%>==>IF>+=>-=>DISPLAYNL",
+    "development_group": "novel_composition",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-51",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read four pipe-separated numbers. Traverse indices downward and count items satisfying both negative entry and even-valued entry; add 51.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "descending count(negative_value AND even_value)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-52",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read four pipe-separated numbers. Traverse indices downward and count items satisfying both negative entry and even-valued entry; add 52.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "descending count(negative_value AND even_value)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-53",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read four pipe-separated numbers. Traverse indices downward and count items satisfying both negative entry and even-valued entry; add 53.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "descending count(negative_value AND even_value)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER1-54",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer1",
+    "prompt": "Read four pipe-separated numbers. Traverse indices downward and count items satisfying both negative entry and even-valued entry; add 54.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "descending count(negative_value AND even_value)",
+    "control_flow": "reverse",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>>=>IF>IF>%>==>+=>-=>DISPLAYNL",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-51",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read four pipe-separated numbers. In two separate traversals count negative entry and entry whose square exceeds four, then add their counts and 51.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>*>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-52",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read four pipe-separated numbers. In two separate traversals count negative entry and entry whose square exceeds four, then add their counts and 52.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>*>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-53",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read four pipe-separated numbers. In two separate traversals count negative entry and entry whose square exceeds four, then add their counts and 53.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>*>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  },
+  {
+    "task_id": "P3CDEV2-EVAL-AR-STRUCTURAL_TRANSFER2-54",
+    "split": "phase3c_dev2_development_eval",
+    "family": "array_reduction",
+    "capability": "A",
+    "archetype": "structural_transfer2",
+    "prompt": "Read four pipe-separated numbers. In two separate traversals count negative entry and entry whose square exceeds four, then add their counts and 54.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "two_pass count(negative_value)+count(large_magnitude)",
+    "control_flow": "two_pass",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>*>+=>DISPLAYNL>+",
+    "development_group": "structural_transfer",
+    "level": "full_synthesis",
+    "required_regex": []
+  }
+]

@@ -2,7 +2,22 @@
 
 Last updated: 2026-09-24
 
-Current phase: Phase 3C-DEV1-DIAG2 post-hoc development audit complete; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+Current phase: Phase 3C-DEV2 A-only design frozen; STOP for independent review before model execution. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+
+## Phase 3C-DEV2 design boundary
+
+The proposed primitive-matched ISOLATED versus COMPOSITION development study
+is frozen in `research/protocols/phase3c_dev2_protocol.md` and its manifest.
+Each condition has 60 fresh training examples; a fresh 48-task development
+suite has Primitive Sanity, Novel Composition and Structural Transfer groups.
+The eight essential predicates and audited GOCO construct counts match across
+conditions. All 168 references passed 840 pinned-compiler semantic cases;
+the pre-gradient audit retains all 5,760 training/development structural
+pairs. The token audit passes the prospective 10% limit. These compiler
+checks validate reference programs, not model performance. No gradients or
+scientific model evaluation have run for DEV2. The consumed Phase 3C and DEV1
+suites remain consumed, and the sealed final-paper holdout remains untouched.
+Independent review is required before any DEV2 training or evaluation.
 
 ## Phase 3C-DEV1-DIAG2 diagnostic boundary
 

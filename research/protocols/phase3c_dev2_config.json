@@ -1,0 +1,91 @@
+{
+  "phase": "3C-DEV2",
+  "status": "FROZEN_DESIGN_NO_MODEL_EXECUTION",
+  "purpose": "A-only primitive-matched composition generalization development study",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "conditions": [
+    "isolated",
+    "composition"
+  ],
+  "base_weights": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "Final epoch a priori, no performance-based selection"
+  },
+  "evaluation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536
+  },
+  "compiler": {
+    "path": ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar",
+    "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "java": ".tools/jdk-25.0.1+8/bin/java.exe"
+  },
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "prompt_system_template": "prompts/phase1t_system.txt",
+  "dataset_paths": {
+    "isolated": "data/phase3c_dev2/a_isolated_training_examples.json",
+    "composition": "data/phase3c_dev2/a_composition_training_examples.json",
+    "development": "benchmark/phase3c_dev2/a_development_eval_tasks.json"
+  },
+  "schedule_path": "research/protocols/phase3c_dev2_schedule.json",
+  "model_execution_authorized": false,
+  "stage_b_authorized": false
+}

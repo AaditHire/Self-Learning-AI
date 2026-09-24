@@ -1,0 +1,73 @@
+{
+  "phase": "3C-DEV2",
+  "status": "FROZEN_DESIGN_PROPOSAL_NO_MODEL_EXECUTION",
+  "source_checkpoint_commit": "c0281953ab19eeca863157a99402d3b7162a09db",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "conditions": [
+    "isolated",
+    "composition"
+  ],
+  "counts": {
+    "isolated_training": 60,
+    "composition_training": 60,
+    "development": 48,
+    "reference_cases_validated": 840,
+    "structural_pairs": 5760,
+    "slots_per_seed_condition": 180,
+    "optimizer_steps_per_seed_condition": 24
+  },
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "base_weights": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "environment_at_design_freeze": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "python": "3.13.0",
+      "torch": "2.9.0+cu130",
+      "transformers": "4.57.1",
+      "bitsandbytes": "0.50.2",
+      "peft": "0.17.1"
+    }
+  },
+  "file_normalized_sha256": {
+    "research/protocols/phase3c_dev2_protocol.md": "6fff85ecc95c2ef4c8a1efbf1f6e3715d8222f350080cd4a9537dc3cdc351f18",
+    "research/protocols/phase3c_dev2_config.json": "ee339166b64cea6f17614866e6cab92d424cf261a4e82cbd2a5f166b84f34136",
+    "research/protocols/phase3c_dev2_schedule.json": "7fd81095ae7b0fab255660892800c1288729f5a59daea364ce2cff1040c71d95",
+    "scripts/build_phase3c_dev2_data.py": "e7e6feeeafb2ebc615ca1ce4e2d3f213a02e8a1c2b7b31ff3c337af532a3a29f",
+    "scripts/build_phase3c_dev2_schedule.py": "a06c41d0b0a8bfc8218b25d32e5f253fd1111f044161539a93d4530f2c157288",
+    "scripts/audit_phase3c_dev2.py": "e194b35e8dffea3abcd5a6e27d8d5baf46e74e628408136259448332c8fa2948",
+    "scripts/audit_phase3c_dev2_tokens.py": "8cc31c065a871cbc263b29d9e1e9f3014aa487368c37b0d31230ec849333f558",
+    "scripts/freeze_phase3c_dev2_manifest.py": "f7d59ed9b4891bd10d8f4e575eff823720e6c6cb1736071855aa5e5ac1a27eb6",
+    "data/phase3c_dev2/a_isolated_training_examples.json": "2bf65aa0c48486829c215e0ccaff3d9126a4d18cfb76bee9e1caa5df30b410d1",
+    "data/phase3c_dev2/a_isolated_training_references.json": "d25670f3f05d31290786250deba747e7ff74f104b33f57891a7b8a6b49981dcc",
+    "data/phase3c_dev2/a_isolated_training_hidden_tests.json": "3bee6679b6313f012e9ee198afed17fb74ee30da07be58d55ad35e133910e643",
+    "data/phase3c_dev2/a_composition_training_examples.json": "1a91cd780cbe8d6938ad6e2dfca5742e41e45e4c867c941e587f9260372d1dcc",
+    "data/phase3c_dev2/a_composition_training_references.json": "afd8642a3f2a5e818805758d5a98ab8d31bd48acf6a00e92397b8181769f71bb",
+    "data/phase3c_dev2/a_composition_training_hidden_tests.json": "fc8e1b7646d71ffb6daf316e96dc430a53056b84f4272bf186436ed206d780ea",
+    "benchmark/phase3c_dev2/a_development_eval_tasks.json": "c30eca0de0f07071af3313c8a2bf4efe4d97b5f18c2627d187e22eceff856667",
+    "benchmark/phase3c_dev2/a_development_eval_references.json": "d4fe776f0a68ab9d8101cec03662b7aa6d84444ed7468179e2697bda5b0d4f83",
+    "benchmark/phase3c_dev2/a_development_eval_hidden_tests.json": "0921901fd99d6b5c0fc42dcc14210d984c49cf6af09a652a9cc4067e83bbfc50",
+    "research/results/PHASE_3C_DEV2/pre_gradient_audit.json": "a8edc68a8d3eaa6bae81292788847aa30563f7a544a5bc110369a918e5f69146",
+    "research/results/PHASE_3C_DEV2/structural_pairs.json": "d9a52e665c68227d73d9c56e4a303d4ade2696d073a784f1e1bc1ec99ffdb849",
+    "research/results/PHASE_3C_DEV2/token_budget_audit.json": "ad688e3020acd0260ab4f19d77037c54c0b088fd6ebc594dd4875c71b9b43176"
+  },
+  "hash_policy": "SHA-256 of file bytes with CRLF normalized to LF for Git text portability; model and compiler binaries use raw hashes",
+  "model_execution_authorized": false,
+  "sealed_holdout_accessed": false
+}
