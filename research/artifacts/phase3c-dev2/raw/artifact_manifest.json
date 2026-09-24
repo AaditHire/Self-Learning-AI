@@ -1,0 +1,489 @@
+{
+  "phase": "3C-DEV2",
+  "status": "PARTIAL_STOP_SOURCE_INVENTORY",
+  "artifacts": [
+    {
+      "original_path": ".runtime/phase3c_dev2/preflight.json",
+      "relative_runtime_path": "preflight.json",
+      "filename": "preflight.json",
+      "size_bytes": 19746,
+      "sha256": "6774a38589e11b9f72bc7f46f4a91142306d245260459fcabb042f8efc36a48a"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/incident.json",
+      "relative_runtime_path": "incident.json",
+      "filename": "incident.json",
+      "size_bytes": 1642,
+      "sha256": "d8fa1af5d7a18fa08867481d8303b8d775390f75d4883398c42b98d214cd05bb"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_config.json",
+      "relative_runtime_path": "adapters/20270925/isolated/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "836d6a8b31221db6195af5829cd5607f9715ae4a0e473019f58b4aa3b7fd5743"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20270925/isolated/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/added_tokens.json",
+      "relative_runtime_path": "adapters/20270925/isolated/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/chat_template.jinja",
+      "relative_runtime_path": "adapters/20270925/isolated/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/merges.txt",
+      "relative_runtime_path": "adapters/20270925/isolated/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/README.md",
+      "relative_runtime_path": "adapters/20270925/isolated/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20270925/isolated/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/tokenizer.json",
+      "relative_runtime_path": "adapters/20270925/isolated/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20270925/isolated/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/isolated/vocab.json",
+      "relative_runtime_path": "adapters/20270925/isolated/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20270925/isolated.json",
+      "relative_runtime_path": "training/20270925/isolated.json",
+      "filename": "isolated.json",
+      "size_bytes": 16813,
+      "sha256": "05f09d52eded84682b19ac8b96011d01e5fbbe69d742be9b3a0a063041caaa96"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_config.json",
+      "relative_runtime_path": "adapters/20270925/composition/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "8fef37e392d8fd436da0ac4cf099d9e471d2fc133e4ab919f9d34feb5ae352e8"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20270925/composition/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/added_tokens.json",
+      "relative_runtime_path": "adapters/20270925/composition/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/chat_template.jinja",
+      "relative_runtime_path": "adapters/20270925/composition/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/merges.txt",
+      "relative_runtime_path": "adapters/20270925/composition/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/README.md",
+      "relative_runtime_path": "adapters/20270925/composition/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20270925/composition/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/tokenizer.json",
+      "relative_runtime_path": "adapters/20270925/composition/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20270925/composition/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20270925/composition/vocab.json",
+      "relative_runtime_path": "adapters/20270925/composition/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20270925/composition.json",
+      "relative_runtime_path": "training/20270925/composition.json",
+      "filename": "composition.json",
+      "size_bytes": 17354,
+      "sha256": "feb083232659e464b516f5c7837f024bef32140ada769f2c5653a72b177f709f"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_config.json",
+      "relative_runtime_path": "adapters/20271013/isolated/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "c37e523eb505ad14f6d8177b2c855fbdfe30ac050f8b623d89fc3db4a64c0bf1"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20271013/isolated/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/added_tokens.json",
+      "relative_runtime_path": "adapters/20271013/isolated/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/chat_template.jinja",
+      "relative_runtime_path": "adapters/20271013/isolated/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/merges.txt",
+      "relative_runtime_path": "adapters/20271013/isolated/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/README.md",
+      "relative_runtime_path": "adapters/20271013/isolated/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20271013/isolated/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/tokenizer.json",
+      "relative_runtime_path": "adapters/20271013/isolated/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20271013/isolated/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/isolated/vocab.json",
+      "relative_runtime_path": "adapters/20271013/isolated/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20271013/isolated.json",
+      "relative_runtime_path": "training/20271013/isolated.json",
+      "filename": "isolated.json",
+      "size_bytes": 16811,
+      "sha256": "26964a82dd04a07c48b5f4f4accb36b2b599ecb95209625a62f51d8a7aa53913"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_config.json",
+      "relative_runtime_path": "adapters/20271013/composition/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "46e703df5c0e6491142cd32e6f2df1df6ef12f341dcb640a804aa3343267fe72"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20271013/composition/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/added_tokens.json",
+      "relative_runtime_path": "adapters/20271013/composition/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/chat_template.jinja",
+      "relative_runtime_path": "adapters/20271013/composition/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/merges.txt",
+      "relative_runtime_path": "adapters/20271013/composition/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/README.md",
+      "relative_runtime_path": "adapters/20271013/composition/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20271013/composition/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/tokenizer.json",
+      "relative_runtime_path": "adapters/20271013/composition/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20271013/composition/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271013/composition/vocab.json",
+      "relative_runtime_path": "adapters/20271013/composition/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20271013/composition.json",
+      "relative_runtime_path": "training/20271013/composition.json",
+      "filename": "composition.json",
+      "size_bytes": 17346,
+      "sha256": "f9207629f4713a2ca487847744e06bc3c33640a3709ca349119a3338f8a7de3c"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_config.json",
+      "relative_runtime_path": "adapters/20271119/isolated/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "e0b56984cf0e7392a7e353171ba2d0e783c8d9b41251bfef45f875b8457462f1"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20271119/isolated/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/added_tokens.json",
+      "relative_runtime_path": "adapters/20271119/isolated/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/chat_template.jinja",
+      "relative_runtime_path": "adapters/20271119/isolated/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/merges.txt",
+      "relative_runtime_path": "adapters/20271119/isolated/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/README.md",
+      "relative_runtime_path": "adapters/20271119/isolated/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20271119/isolated/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/tokenizer.json",
+      "relative_runtime_path": "adapters/20271119/isolated/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20271119/isolated/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/isolated/vocab.json",
+      "relative_runtime_path": "adapters/20271119/isolated/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20271119/isolated.json",
+      "relative_runtime_path": "training/20271119/isolated.json",
+      "filename": "isolated.json",
+      "size_bytes": 16803,
+      "sha256": "b9ed535033c47c48cfbb8592fd3164ffddff9403cbe35c231916698d2e5953a6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_config.json",
+      "relative_runtime_path": "adapters/20271119/composition/adapter_config.json",
+      "filename": "adapter_config.json",
+      "size_bytes": 1060,
+      "sha256": "3b121be55d53b5b1890fdf9b25f3d9ffd8d5835aa94775950a50c3fa63e07e01"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+      "relative_runtime_path": "adapters/20271119/composition/adapter_model.safetensors",
+      "filename": "adapter_model.safetensors",
+      "size_bytes": 119801528,
+      "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/added_tokens.json",
+      "relative_runtime_path": "adapters/20271119/composition/added_tokens.json",
+      "filename": "added_tokens.json",
+      "size_bytes": 629,
+      "sha256": "f0acedf99e19ec0a5b797ffbd0b94328172ccd90f7f385bbc521cda2701b03ab"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/chat_template.jinja",
+      "relative_runtime_path": "adapters/20271119/composition/chat_template.jinja",
+      "filename": "chat_template.jinja",
+      "size_bytes": 2561,
+      "sha256": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/merges.txt",
+      "relative_runtime_path": "adapters/20271119/composition/merges.txt",
+      "filename": "merges.txt",
+      "size_bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/README.md",
+      "relative_runtime_path": "adapters/20271119/composition/README.md",
+      "filename": "README.md",
+      "size_bytes": 5352,
+      "sha256": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/special_tokens_map.json",
+      "relative_runtime_path": "adapters/20271119/composition/special_tokens_map.json",
+      "filename": "special_tokens_map.json",
+      "size_bytes": 521,
+      "sha256": "890efa1686cf49870d5018b948316d11c6d9ce121a942803eeb4224dcc7db3f0"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/tokenizer.json",
+      "relative_runtime_path": "adapters/20271119/composition/tokenizer.json",
+      "filename": "tokenizer.json",
+      "size_bytes": 11421896,
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/tokenizer_config.json",
+      "relative_runtime_path": "adapters/20271119/composition/tokenizer_config.json",
+      "filename": "tokenizer_config.json",
+      "size_bytes": 4889,
+      "sha256": "d8d74d7a394c90e08730a7fe9ea93cbd4bc0767890a8ca21345e7fbee5da5614"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/adapters/20271119/composition/vocab.json",
+      "relative_runtime_path": "adapters/20271119/composition/vocab.json",
+      "filename": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/training/20271119/composition.json",
+      "relative_runtime_path": "training/20271119/composition.json",
+      "filename": "composition.json",
+      "size_bytes": 17362,
+      "sha256": "08af1face981e7c7ac4ead5344e2b449cd0043fd2427eaf6acbd7c2eb392a49f"
+    },
+    {
+      "original_path": ".runtime/phase3c_dev2/evaluations/20270925/isolated_training.json",
+      "relative_runtime_path": "evaluations/20270925/isolated_training.json",
+      "filename": "isolated_training.json",
+      "size_bytes": 203952,
+      "sha256": "a9bc00cc45c2eb28b116dee5f9652d00b45bf7c496924d4d8b31d519bb0563de"
+    }
+  ]
+}

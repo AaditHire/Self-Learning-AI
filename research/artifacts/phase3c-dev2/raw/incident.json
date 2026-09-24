@@ -1,0 +1,34 @@
+{
+  "phase": "3C-DEV2",
+  "status": "STOP_EVALUATION_CODE_DEFECT_NO_RETRY",
+  "frozen_design_commit": "886cf3c69c2babb3f735776ab7b28ce36b2de62d",
+  "execution_code_commit": "80e5897",
+  "failure_point": {
+    "seed": 20270925,
+    "condition": "isolated",
+    "suite": "development",
+    "task_id": "P3CDEV2-EVAL-NU-SANITY1-31",
+    "stage": "after one greedy generation and five compiler case executions; before result serialization",
+    "exception_type": "KeyError",
+    "exception_message": "'difficulty'",
+    "cause": "Frozen DEV2 development task rows omit difficulty; evaluate_phase3c_dev2.py passed the row directly to score_source, which accesses task[\"difficulty\"].",
+    "raw_generation_persisted": false,
+    "case_results_persisted": false,
+    "checkpoint_created": false,
+    "development_output_created": false
+  },
+  "scientific_boundary": {
+    "all_six_training_runs_complete": true,
+    "own_training_evaluations_complete": 1,
+    "own_training_first_cell_passed": 60,
+    "own_training_first_cell_total": 60,
+    "development_cells_complete": 0,
+    "development_suite_status": "DEVELOPMENT_CONSUMED_FROM_ATTEMPT",
+    "primary_development_comparison_available": false,
+    "further_generation_authorized_under_frozen_one_pass_protocol": false,
+    "no_B_training_or_replay": true,
+    "sealed_final_paper_holdout_touched": false
+  },
+  "available_own_training_record_sha256": "a9bc00cc45c2eb28b116dee5f9652d00b45bf7c496924d4d8b31d519bb0563de",
+  "required_action": "STOP for independent review. Do not rerun the failed development task or silently repair the committed evaluator."
+}

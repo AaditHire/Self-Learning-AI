@@ -1,0 +1,576 @@
+{
+  "phase": "3C-DEV2",
+  "status": "PASS_PREGRADIENT_CONTRACT",
+  "frozen_design_commit": "886cf3c69c2babb3f735776ab7b28ce36b2de62d",
+  "current_head": "80e58979ceb4c587eb7d9954dba29b2507de0b48",
+  "git_status_at_preflight": "",
+  "manifest_sha256": "239c25e83a29bb35c3570fc5c949a9ad6547e8c0d5e1def3e5e4f47746175e3e",
+  "execution_code_sha256": {
+    "preflight": "eba93d786238f36998f955a70ab503b0ad0b2859994f01c9ff869033cf025330",
+    "train": "3263993bbf2a4e3a51ca32321078af0dc7639c706e23ab943e91e19feb9514f5",
+    "evaluate": "0240c9f42f783c2940f52944ff8f27feea6185cade959b39f96438725dcdcf6a",
+    "analyze": "25597f153a3154a33ec030dd930cf9419ea8d63060a9ce28f168deaeb7ac8999"
+  },
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "base_weight_sha256": {
+    "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+    "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+  },
+  "packages": {
+    "python": "3.13.0",
+    "torch": "2.9.0+cu130",
+    "transformers": "4.57.1",
+    "bitsandbytes": "0.50.2",
+    "peft": "0.17.1"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 610.74, 6144 MiB, 4367 MiB",
+  "java": "openjdk version \"25.0.1\" 2025-10-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.1+8 (build 25.0.1+8-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.1+8 (build 25.0.1+8-LTS, mixed mode, sharing)",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "reference_validation": {
+    "references": 168,
+    "cases": 840,
+    "all_pass": true
+  },
+  "composition_novelty": {
+    "status": "PASS_ALL_16",
+    "task_records": [
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-41",
+        "signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "residue_two"
+          ],
+          [
+            "divisor_index",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-42",
+        "signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "residue_two"
+          ],
+          [
+            "divisor_index",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-43",
+        "signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "residue_two"
+          ],
+          [
+            "divisor_index",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION1-44",
+        "signature": "count(odd_index AND residue_two)+count(divisor_index AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "residue_two"
+          ],
+          [
+            "divisor_index",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-41",
+        "signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "divisor_index"
+          ],
+          [
+            "residue_two",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-42",
+        "signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "divisor_index"
+          ],
+          [
+            "residue_two",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-43",
+        "signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "divisor_index"
+          ],
+          [
+            "residue_two",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-NU-NOVEL_COMPOSITION2-44",
+        "signature": "count(odd_index AND divisor_index)+count(residue_two AND first_half)",
+        "ordered_intersections": [
+          [
+            "odd_index",
+            "divisor_index"
+          ],
+          [
+            "residue_two",
+            "first_half"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-41",
+        "signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "even_value"
+          ],
+          [
+            "large_magnitude",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-42",
+        "signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "even_value"
+          ],
+          [
+            "large_magnitude",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-43",
+        "signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "even_value"
+          ],
+          [
+            "large_magnitude",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION1-44",
+        "signature": "count(negative_value AND even_value)+count(large_magnitude AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "even_value"
+          ],
+          [
+            "large_magnitude",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-41",
+        "signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "large_magnitude"
+          ],
+          [
+            "even_value",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-42",
+        "signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "large_magnitude"
+          ],
+          [
+            "even_value",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-43",
+        "signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "large_magnitude"
+          ],
+          [
+            "even_value",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      },
+      {
+        "task_id": "P3CDEV2-EVAL-AR-NOVEL_COMPOSITION2-44",
+        "signature": "count(negative_value AND large_magnitude)+count(even_value AND value_exceeds_index)",
+        "ordered_intersections": [
+          [
+            "negative_value",
+            "large_magnitude"
+          ],
+          [
+            "even_value",
+            "value_exceeds_index"
+          ]
+        ],
+        "reference_body_verified": true,
+        "conditions": {
+          "isolated": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          },
+          "composition": {
+            "all_primitives_present": true,
+            "same_composition_training_ids": [],
+            "same_two_intersection_structure_present": false
+          }
+        }
+      }
+    ]
+  },
+  "primitive_frequency_match": "PASS_EXACT_EIGHT_PRIMITIVES",
+  "api_syntax_frequency_match": "PASS_EXACT_EIGHT_CONSTRUCTS",
+  "central_primitive_coverage": "PASS_ALL_32_BOTH_CONDITIONS",
+  "residual_confound": {
+    "one_epoch_full_tokens": {
+      "isolated": 14235,
+      "composition": 14620
+    },
+    "composition_minus_isolated_full_tokens": 385,
+    "composition_minus_isolated_full_fraction": 0.02704601334738321,
+    "one_epoch_supervised_tokens": {
+      "isolated": 6630,
+      "composition": 6630
+    },
+    "supervised_fraction_difference": 0.0,
+    "redundant_nested_guard_example_ids": {
+      "isolated": [
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR1-05",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR3-05",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR4-05",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR5-05",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-01",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-02",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-03",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-04",
+        "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR1-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR2-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR3-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR4-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR5-05",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-01",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-02",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-03",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-04",
+        "P3CDEV2-ISOLATED-TR-AR-PAIR6-05"
+      ],
+      "composition": []
+    },
+    "other": "Matched audited API counts; different prompt semantics and conditional relation. COMPOSITION has 2.70% more full tokens."
+  },
+  "exposure": {
+    "isolated": {
+      "one_epoch_full_tokens": 14235,
+      "one_epoch_supervised_tokens": 6630,
+      "three_epoch_full_tokens": 42705,
+      "three_epoch_supervised_tokens": 19890,
+      "max_sequence_tokens": 277
+    },
+    "composition": {
+      "one_epoch_full_tokens": 14620,
+      "one_epoch_supervised_tokens": 6630,
+      "three_epoch_full_tokens": 43860,
+      "three_epoch_supervised_tokens": 19890,
+      "max_sequence_tokens": 285
+    }
+  },
+  "token_gate": "PASS",
+  "no_model_inference_or_gradients": true
+}

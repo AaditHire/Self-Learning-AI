@@ -2,7 +2,23 @@
 
 Last updated: 2026-09-24
 
-Current phase: Phase 3C-DEV2 A-only design frozen; STOP for independent review before model execution. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+Current phase: Phase 3C-DEV2 A-only execution stopped after an evaluator-code defect; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+
+## Phase 3C-DEV2 execution STOP
+
+Independent review authorized DEV2 execution. Preflight passed the frozen
+hashes, reference/case validation, 16-task composition-novelty assertion,
+primitive/API matching, paired schedules and token rule. All six A-only
+adapters completed 180 exposure slots and 24 optimizer steps with unchanged
+base weights. The first own-training evaluation scored 60/60 for seed
+20270925 ISOLATED. The first development evaluation generated one task and
+ran its five compiler cases, then stopped because the committed evaluator
+passed a DEV2 task without the `difficulty` field required by the scorer.
+No development outcome or generation was saved. The frozen one-pass/no-retry
+rule prevents a silent repair or repeat. DEV2 development is marked consumed
+from attempted use; its primary comparison and other development outcomes
+are unavailable. See `research/results/PHASE_3C_DEV2_EXECUTION_STOP/report.md`.
+No B, replay, retention test, or sealed final-paper holdout access occurred.
 
 ## Phase 3C-DEV2 design boundary
 
