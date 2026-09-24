@@ -2,7 +2,18 @@
 
 Last updated: 2026-09-24
 
-Current phase: Phase 3C-DEV1 exploratory development execution complete; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+Current phase: Phase 3C-DEV1-DIAG2 post-hoc development audit complete; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+
+## Phase 3C-DEV1-DIAG2 diagnostic boundary
+
+The post-hoc operation inventory, 36-task primitive-coverage matrix, and
+per-outcome audit of all 144 saved COMPOSITIONAL/FAR failures are in
+`research/results/PHASE_3C_DEV1_DIAG2/`. The diagnostic finds a mix of
+missing FAR primitives, unsolved composition of separately trained
+primitives, and GOCO syntax/compiler errors. This is descriptive evidence
+from the consumed DEV1 suite, not a new gate or an intervention result. No
+model generation, gradients, new data, B training, replay, or sealed holdout
+access occurred. Independent review is required before any new study design.
 
 ## Phase 3C-DEV1 completed development boundary
 

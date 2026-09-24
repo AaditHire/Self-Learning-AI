@@ -1,0 +1,138 @@
+[
+  {
+    "condition": "dense",
+    "distance_group": "compositional",
+    "subskill": "array_reduction",
+    "archetype": "range_neighbor_mix",
+    "failure_category": "syntax",
+    "count": 18
+  },
+  {
+    "condition": "dense",
+    "distance_group": "compositional",
+    "subskill": "numeric_iteration",
+    "archetype": "nontriple_divisor_mix",
+    "failure_category": "semantic",
+    "count": 11
+  },
+  {
+    "condition": "dense",
+    "distance_group": "compositional",
+    "subskill": "numeric_iteration",
+    "archetype": "nontriple_divisor_mix",
+    "failure_category": "syntax",
+    "count": 7
+  },
+  {
+    "condition": "dense",
+    "distance_group": "far",
+    "subskill": "array_reduction",
+    "archetype": "positive_run_length",
+    "failure_category": "hidden_test_semantic",
+    "count": 12
+  },
+  {
+    "condition": "dense",
+    "distance_group": "far",
+    "subskill": "array_reduction",
+    "archetype": "positive_run_length",
+    "failure_category": "syntax",
+    "count": 6
+  },
+  {
+    "condition": "dense",
+    "distance_group": "far",
+    "subskill": "numeric_iteration",
+    "archetype": "square_threshold_crossing",
+    "failure_category": "syntax",
+    "count": 18
+  },
+  {
+    "condition": "dense",
+    "distance_group": "near",
+    "subskill": "array_reduction",
+    "archetype": "negative_tally_unrolled",
+    "failure_category": "success",
+    "count": 18
+  },
+  {
+    "condition": "dense",
+    "distance_group": "near",
+    "subskill": "numeric_iteration",
+    "archetype": "fourth_square_step",
+    "failure_category": "syntax",
+    "count": 18
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "compositional",
+    "subskill": "array_reduction",
+    "archetype": "range_neighbor_mix",
+    "failure_category": "hidden_test_semantic",
+    "count": 13
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "compositional",
+    "subskill": "array_reduction",
+    "archetype": "range_neighbor_mix",
+    "failure_category": "syntax",
+    "count": 5
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "compositional",
+    "subskill": "numeric_iteration",
+    "archetype": "nontriple_divisor_mix",
+    "failure_category": "semantic",
+    "count": 12
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "compositional",
+    "subskill": "numeric_iteration",
+    "archetype": "nontriple_divisor_mix",
+    "failure_category": "syntax",
+    "count": 6
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "far",
+    "subskill": "array_reduction",
+    "archetype": "positive_run_length",
+    "failure_category": "hidden_test_semantic",
+    "count": 13
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "far",
+    "subskill": "array_reduction",
+    "archetype": "positive_run_length",
+    "failure_category": "semantic",
+    "count": 5
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "far",
+    "subskill": "numeric_iteration",
+    "archetype": "square_threshold_crossing",
+    "failure_category": "syntax",
+    "count": 18
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "near",
+    "subskill": "array_reduction",
+    "archetype": "negative_tally_unrolled",
+    "failure_category": "success",
+    "count": 18
+  },
+  {
+    "condition": "diverse",
+    "distance_group": "near",
+    "subskill": "numeric_iteration",
+    "archetype": "fourth_square_step",
+    "failure_category": "success",
+    "count": 18
+  }
+]

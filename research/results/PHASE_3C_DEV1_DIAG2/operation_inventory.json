@@ -1,0 +1,640 @@
+{
+  "source_hashes": {
+    "data/phase3c_dev1/a_dense_training_examples.json": "9ff6e5f7e1b8cbd4b14de881d1c77b76fe815691ef4068918a4d4e17f1aea2f5",
+    "data/phase3c_dev1/a_diverse_training_examples.json": "4c165e28d74a772dad0f9185cd4229a2444e3e4f88faeb1cc5f52d874e4bb05e",
+    "data/phase3c_dev1/a_dense_training_references.json": "9217881358b4347b232fc4e76537c11d08af51d4807cdff91da7983c84d1519a",
+    "data/phase3c_dev1/a_diverse_training_references.json": "991d4d5fd46d1c04f55ac71873d8505fc77ee7b6c22864a885cfd4e04d42788d",
+    "benchmark/phase3c_dev1/a_development_eval_tasks.json": "cb7d0e4c07b8f1959aaaad7dd67b878573625dd546202092f5058d563a468f6e",
+    "benchmark/phase3c_dev1/a_development_eval_references.json": "1bc5a1d2e3e31f9d2dd15b7690adb92d47d707fbb3d0c731c5a3b59fdc858327",
+    "research/artifacts/phase3c-dev1/raw/analysis.json": "fc78af2666fe0fdc66269038b47fbc08b65e732fb4e6015c9ee8639acbff8edd",
+    "research/results/PHASE_3C_DEV1/structural_audit.json": "899bd462e8b1e726f6baf6ca36a729d1b9ed5e7ac496e7fdd967111831b4636a",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20270925/dense_development.json": "9d6671a73143103e6aa8ebfba72688efdeac3b8318f8b3bdd8e161eff651755f",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20270925/diverse_development.json": "22d40e21d33b7310a595e08bb868ba5d5ef93e3548f9003b92cdd49903b4082c",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20271013/dense_development.json": "574fa669782b4518a707aa52e4db3a64db3a193e6bfb64a2d07ae151c09df2ba",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20271013/diverse_development.json": "9c17b56717e95cdf65ee9d095bb53102e4329da612a086261f6f13e2e5c68db1",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20271119/dense_development.json": "17695b4e42a0371f97dc81bacfef05c59eb08cceb88bb45bf2c1958078067548",
+    "research/artifacts/phase3c-dev1/raw/evaluations/20271119/diverse_development.json": "402166a875fb8583c1969ee3519157376f37580fda4e4ef8a32bc152e22a68fa"
+  },
+  "training": {
+    "dense": [
+      {
+        "archetype": "fourth_square",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with one filter",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "multiple_four",
+          "square_accumulate"
+        ],
+        "composition_order": "filter multiples of four, accumulate squared indices",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-01",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-02",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-03",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-04",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-05",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-06",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-07",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-08",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-09",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-10",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-11",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-12",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-13",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-14",
+          "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15"
+        ],
+        "representative_prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 1.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "negative_tally",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with one filter",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "negative_filter",
+          "count"
+        ],
+        "composition_order": "parse four values, count negatives",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-01",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-02",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-03",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-04",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-05",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-06",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-07",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-08",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-09",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-10",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-11",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-12",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-13",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-14",
+          "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count)."
+      },
+      {
+        "archetype": "neighbor_products",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "neighbor_product",
+          "array_accumulate"
+        ],
+        "composition_order": "sum products of adjacent array elements",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-01",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-02",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-03",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-04",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-05",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-06",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-07",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-08",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-09",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-10",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-11",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-12",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-13",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-14",
+          "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "nontriple_count",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with one filter",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "not_multiple_three",
+          "count"
+        ],
+        "composition_order": "count indices not divisible by three; affine output",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-02",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-03",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-04",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-05",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-06",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-07",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-08",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-09",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-10",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-11",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-12",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-13",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-14",
+          "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15"
+        ],
+        "representative_prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 1.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+1)."
+      }
+    ],
+    "diverse": [
+      {
+        "archetype": "alternating_positions",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with IF/ELSE",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "parity_branch",
+          "signed_accumulate",
+          "array_accumulate"
+        ],
+        "composition_order": "alternating index-parity add and subtract",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-01",
+          "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-02",
+          "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-03",
+          "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-04",
+          "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "alternating_weight",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with IF/ELSE",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "parity_branch",
+          "position_weight",
+          "signed_accumulate"
+        ],
+        "composition_order": "add weighted odd positions and subtract even positions",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-01",
+          "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-02",
+          "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-03",
+          "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-04",
+          "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05"
+        ],
+        "representative_prompt": "Read nonnegative n. From 1 through n, add 1 times odd indices and subtract even indices; print the total.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1*i. } ELSE { total-=i. } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "descending_odd",
+        "subskill": "numeric_iteration",
+        "control_flow": "condition-controlled descending loop",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "descending_loop",
+          "odd_filter",
+          "affine_accumulate"
+        ],
+        "composition_order": "filter odd descending indices and sum offset values",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-02",
+          "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-03",
+          "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-04",
+          "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05"
+        ],
+        "representative_prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 1; print the sum.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+1. } i-=1. }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "divisor_tally",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with one filter",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "divisor_test",
+          "count"
+        ],
+        "composition_order": "count divisors of the input",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-01",
+          "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-02",
+          "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-03",
+          "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-04",
+          "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-05"
+        ],
+        "representative_prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 1.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER count=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count)."
+      },
+      {
+        "archetype": "even_square_total",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with one filter",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "even_value_filter",
+          "square_accumulate",
+          "array_accumulate"
+        ],
+        "composition_order": "filter even values and sum squares",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-01",
+          "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-02",
+          "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-03",
+          "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-04",
+          "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "fourth_square",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with one filter",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "multiple_four",
+          "square_accumulate"
+        ],
+        "composition_order": "filter multiples of four, accumulate squared indices",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-01",
+          "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-02",
+          "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-03",
+          "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-04",
+          "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05"
+        ],
+        "representative_prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 1.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "negative_tally",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with one filter",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "negative_filter",
+          "count"
+        ],
+        "composition_order": "parse four values, count negatives",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-01",
+          "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-02",
+          "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-03",
+          "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-04",
+          "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count)."
+      },
+      {
+        "archetype": "neighbor_products",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "neighbor_product",
+          "array_accumulate"
+        ],
+        "composition_order": "sum products of adjacent array elements",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-01",
+          "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-02",
+          "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-03",
+          "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-04",
+          "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "nontriple_count",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop with one filter",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "not_multiple_three",
+          "count"
+        ],
+        "composition_order": "count indices not divisible by three; affine output",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-02",
+          "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-03",
+          "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-04",
+          "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05"
+        ],
+        "representative_prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 1.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+1)."
+      },
+      {
+        "archetype": "positive_position",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with one filter",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "positive_filter",
+          "position_weight",
+          "array_accumulate"
+        ],
+        "composition_order": "filter positive values, weight by index plus one",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-01",
+          "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-02",
+          "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-03",
+          "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-04",
+          "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "quadratic_balance",
+        "subskill": "numeric_iteration",
+        "control_flow": "bounded ascending loop",
+        "data_structure": "scalar",
+        "required_primitives": [
+          "square_accumulate",
+          "linear_subtract"
+        ],
+        "composition_order": "accumulate quadratic term minus linear term",
+        "goco_api": [],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-01",
+          "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-02",
+          "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-03",
+          "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-04",
+          "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05"
+        ],
+        "representative_prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 1 times the index; print the result.",
+        "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-1*i. }\nDISPLAYNL(total)."
+      },
+      {
+        "archetype": "range_span",
+        "subskill": "array_reduction",
+        "control_flow": "indexed loop with two filters",
+        "data_structure": "four-element array",
+        "required_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "composition_order": "track min and max, subtract at output",
+        "goco_api": [
+          "strings.SPLIT",
+          "strings.TO_NUMBER"
+        ],
+        "example_ids": [
+          "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-01",
+          "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-02",
+          "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-03",
+          "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-04",
+          "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05"
+        ],
+        "representative_prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 1.",
+        "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+1)."
+      }
+    ]
+  },
+  "development": {
+    "fourth_square_step": {
+      "archetype": "fourth_square_step",
+      "subskill": "numeric_iteration",
+      "control_flow": "bounded step-index loop",
+      "data_structure": "scalar",
+      "required_primitives": [
+        "multiple_four",
+        "square_accumulate"
+      ],
+      "composition_order": "reindex multiples of four, accumulate equivalent squares",
+      "goco_api": [],
+      "task_ids": [
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-21",
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-22",
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-23",
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-24",
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-25",
+        "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-26"
+      ],
+      "representative_prompt": "Read nonnegative n. Starting at four, visit multiples of four no greater than n. Add each visited index squared, then print the sum plus 21.",
+      "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=21.\nLOOP (NUMBER step=1 TILL 4*step<=n, step++) { total+=16*step*step. }\nDISPLAYNL(total)."
+    },
+    "nontriple_divisor_mix": {
+      "archetype": "nontriple_divisor_mix",
+      "subskill": "numeric_iteration",
+      "control_flow": "one bounded loop with two independent IFs",
+      "data_structure": "scalar",
+      "required_primitives": [
+        "not_multiple_three",
+        "divisor_test",
+        "count"
+      ],
+      "composition_order": "sum nonmultiple-three and divisor counts in one loop",
+      "goco_api": [],
+      "task_ids": [
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-21",
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-22",
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-23",
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-24",
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-25",
+        "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-26"
+      ],
+      "representative_prompt": "Read nonnegative n. Count indices from 1 to n not divisible by three, and also count n's positive divisors. Print their combined count plus 21.",
+      "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=21.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { total+=1. } IF (n%i==0) { total+=1. } }\nDISPLAYNL(total)."
+    },
+    "square_threshold_crossing": {
+      "archetype": "square_threshold_crossing",
+      "subskill": "numeric_iteration",
+      "control_flow": "accumulator-controlled loop",
+      "data_structure": "scalar",
+      "required_primitives": [
+        "square_accumulate",
+        "threshold_termination",
+        "first_crossing"
+      ],
+      "composition_order": "add consecutive squares until cumulative threshold crossed; output first crossing index",
+      "goco_api": [],
+      "task_ids": [
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-21",
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-22",
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-23",
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-24",
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-25",
+        "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-26"
+      ],
+      "representative_prompt": "Read nonnegative threshold n. Find the smallest positive index whose cumulative sum of squares reaches at least n plus 21; print the index.",
+      "representative_reference": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=0.\nLOOP (total<n+21) { i+=1. total+=i*i. }\nDISPLAYNL(i)."
+    },
+    "negative_tally_unrolled": {
+      "archetype": "negative_tally_unrolled",
+      "subskill": "array_reduction",
+      "control_flow": "four unrolled IFs",
+      "data_structure": "four-element array",
+      "required_primitives": [
+        "negative_filter",
+        "count"
+      ],
+      "composition_order": "parse array; independently test each of four values",
+      "goco_api": [
+        "strings.SPLIT",
+        "strings.TO_NUMBER"
+      ],
+      "task_ids": [
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-21",
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-22",
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-23",
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-24",
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-25",
+        "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-26"
+      ],
+      "representative_prompt": "Read a pipe-separated array of four numbers. Check each position for a negative value and print how many are negative, plus 21.",
+      "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=21.\nIF (a<0) { count+=1. }\nIF (b<0) { count+=1. }\nIF (c<0) { count+=1. }\nIF (d<0) { count+=1. }\nDISPLAYNL(count)."
+    },
+    "range_neighbor_mix": {
+      "archetype": "range_neighbor_mix",
+      "subskill": "array_reduction",
+      "control_flow": "two indexed loops",
+      "data_structure": "four-element array",
+      "required_primitives": [
+        "neighbor_product",
+        "array_accumulate",
+        "minimum_track",
+        "maximum_track",
+        "range_combine"
+      ],
+      "composition_order": "sum neighbor products, then track extrema, then combine",
+      "goco_api": [
+        "strings.SPLIT",
+        "strings.TO_NUMBER"
+      ],
+      "task_ids": [
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-21",
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-22",
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-23",
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-24",
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-25",
+        "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-26"
+      ],
+      "representative_prompt": "Read four pipe-delimited numbers as an array. Add the product of each neighboring pair and the array's maximum-minus-minimum range, then add 21.",
+      "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nNUMBER total=21.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nLOOP (NUMBER j=1 TILL j<4, j++) { IF (values[j]<lo) { lo=values[j]. } IF (values[j]>hi) { hi=values[j]. } }\nDISPLAYNL(total+hi-lo)."
+    },
+    "positive_run_length": {
+      "archetype": "positive_run_length",
+      "subskill": "array_reduction",
+      "control_flow": "indexed loop with nested IF and ELSE reset",
+      "data_structure": "four-element array",
+      "required_primitives": [
+        "positive_filter",
+        "run_increment",
+        "run_reset",
+        "maximum_track"
+      ],
+      "composition_order": "carry and reset positive-run length; track maximum segment",
+      "goco_api": [
+        "strings.SPLIT",
+        "strings.TO_NUMBER"
+      ],
+      "task_ids": [
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-21",
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-22",
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-23",
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-24",
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-25",
+        "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-26"
+      ],
+      "representative_prompt": "Read four pipe-delimited numbers as an array. Find the length of its longest consecutive run of strictly positive entries and add 21.",
+      "representative_reference": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER run=0.\nNUMBER best=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { run+=1. IF (run>best) { best=run. } } ELSE { run=0. } }\nDISPLAYNL(best+21)."
+    }
+  },
+  "primitive_vocabulary": [
+    "affine_accumulate",
+    "array_accumulate",
+    "count",
+    "descending_loop",
+    "divisor_test",
+    "even_value_filter",
+    "first_crossing",
+    "linear_subtract",
+    "maximum_track",
+    "minimum_track",
+    "multiple_four",
+    "negative_filter",
+    "neighbor_product",
+    "not_multiple_three",
+    "odd_filter",
+    "parity_branch",
+    "position_weight",
+    "positive_filter",
+    "range_combine",
+    "run_increment",
+    "run_reset",
+    "signed_accumulate",
+    "square_accumulate",
+    "threshold_termination"
+  ],
+  "interpretation": "Essential primitives are manually curated from frozen prompt/reference behavior; output-token signatures are separate weak observations.",
+  "training_coverage": {
+    "dense": [
+      "array_accumulate",
+      "count",
+      "multiple_four",
+      "negative_filter",
+      "neighbor_product",
+      "not_multiple_three",
+      "square_accumulate"
+    ],
+    "diverse": [
+      "affine_accumulate",
+      "array_accumulate",
+      "count",
+      "descending_loop",
+      "divisor_test",
+      "even_value_filter",
+      "linear_subtract",
+      "maximum_track",
+      "minimum_track",
+      "multiple_four",
+      "negative_filter",
+      "neighbor_product",
+      "not_multiple_three",
+      "odd_filter",
+      "parity_branch",
+      "position_weight",
+      "positive_filter",
+      "range_combine",
+      "signed_accumulate",
+      "square_accumulate"
+    ]
+  }
+}

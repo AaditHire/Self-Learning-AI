@@ -1,0 +1,3044 @@
+[
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-21",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-22",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-23",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-24",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-25",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-26",
+    "archetype": "fourth_square_step",
+    "subskill": "numeric_iteration",
+    "distance_group": "near",
+    "required_primitives": [
+      "multiple_four",
+      "square_accumulate"
+    ],
+    "control_flow": "bounded step-index loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8917748917748918,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.2903225806451613,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "multiple_four": true,
+          "square_accumulate": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "fourth_square",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_code_similarity": 0.9724770642201835,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-21",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-22",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-23",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-24",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-25",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-26",
+    "archetype": "nontriple_divisor_mix",
+    "subskill": "numeric_iteration",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "not_multiple_three",
+      "divisor_test",
+      "count"
+    ],
+    "control_flow": "one bounded loop with two independent IFs",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": false,
+          "count": true
+        },
+        "missing_primitives": [
+          "divisor_test"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.8955223880597015,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "not_multiple_three": true,
+          "divisor_test": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+          "nearest_code_similarity": 0.9122807017543859,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+          "nearest_prompt_jaccard": 0.5185185185185185,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+          "nearest_semantic_operation_jaccard": 0.4,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "semantic",
+          "20271119": "semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-21",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-22",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-23",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-24",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-25",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-26",
+    "archetype": "square_threshold_crossing",
+    "subskill": "numeric_iteration",
+    "distance_group": "far",
+    "required_primitives": [
+      "square_accumulate",
+      "threshold_termination",
+      "first_crossing"
+    ],
+    "control_flow": "accumulator-controlled loop",
+    "data_structure": "scalar",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_code_similarity": 0.7911111111111111,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "square_accumulate": true,
+          "threshold_termination": false,
+          "first_crossing": false
+        },
+        "missing_primitives": [
+          "threshold_termination",
+          "first_crossing"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+          "nearest_code_similarity": 0.8699551569506726,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+          "nearest_prompt_jaccard": 0.27586206896551724,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-21",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-22",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-23",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-24",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-25",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-26",
+    "archetype": "negative_tally_unrolled",
+    "subskill": "array_reduction",
+    "distance_group": "near",
+    "required_primitives": [
+      "negative_filter",
+      "count"
+    ],
+    "control_flow": "four unrolled IFs",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "negative_filter": true,
+          "count": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": true,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": "negative_tally",
+        "novelty_labels": [
+          "NEW_CONTROL_OR_DATA_STRUCTURE",
+          "NEAR_STRUCTURAL_ANALOGUE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.8231511254019293,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.2413793103448276,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_semantic_operation_jaccard": 1.0,
+          "passes_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "success",
+          "20271013": "success",
+          "20271119": "success"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-21",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-22",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-23",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-24",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-25",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-26",
+    "archetype": "range_neighbor_mix",
+    "subskill": "array_reduction",
+    "distance_group": "compositional",
+    "required_primitives": [
+      "neighbor_product",
+      "array_accumulate",
+      "minimum_track",
+      "maximum_track",
+      "range_combine"
+    ],
+    "control_flow": "two indexed loops",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": false,
+          "maximum_track": false,
+          "range_combine": false
+        },
+        "missing_primitives": [
+          "minimum_track",
+          "maximum_track",
+          "range_combine"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_code_similarity": 0.79890560875513,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_prompt_jaccard": 0.4444444444444444,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+          "nearest_semantic_operation_jaccard": 0.14285714285714285,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "syntax",
+          "20271013": "syntax",
+          "20271119": "syntax"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "neighbor_product": true,
+          "array_accumulate": true,
+          "minimum_track": true,
+          "maximum_track": true,
+          "range_combine": true
+        },
+        "missing_primitives": [],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "KNOWN_PRIMITIVES_NOVEL_COMPOSITION",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_code_similarity": 0.890840652446675,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_prompt_jaccard": 0.5,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+          "nearest_semantic_operation_jaccard": 0.5,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-21",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-22",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-23",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-24",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-25",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  },
+  {
+    "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-26",
+    "archetype": "positive_run_length",
+    "subskill": "array_reduction",
+    "distance_group": "far",
+    "required_primitives": [
+      "positive_filter",
+      "run_increment",
+      "run_reset",
+      "maximum_track"
+    ],
+    "control_flow": "indexed loop with nested IF and ELSE reset",
+    "data_structure": "four-element array",
+    "conditions": {
+      "dense": {
+        "primitive_present_in_training": {
+          "positive_filter": false,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": false
+        },
+        "missing_primitives": [
+          "positive_filter",
+          "run_increment",
+          "run_reset",
+          "maximum_track"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "hidden_test_semantic",
+          "20271013": "syntax",
+          "20271119": "hidden_test_semantic"
+        }
+      },
+      "diverse": {
+        "primitive_present_in_training": {
+          "positive_filter": true,
+          "run_increment": false,
+          "run_reset": false,
+          "maximum_track": true
+        },
+        "missing_primitives": [
+          "run_increment",
+          "run_reset"
+        ],
+        "semantic_combination_present": false,
+        "exact_control_flow_present": false,
+        "direct_structural_analogue": null,
+        "novelty_labels": [
+          "MISSING_PRIMITIVE",
+          "NEW_CONTROL_OR_DATA_STRUCTURE"
+        ],
+        "frozen_nearest_training": {
+          "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_code_similarity": 0.9065849923430321,
+          "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+          "nearest_prompt_jaccard": 0.48,
+          "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+          "nearest_semantic_operation_jaccard": 0.0,
+          "passes_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "observed_by_seed": {
+          "20270925": "semantic",
+          "20271013": "hidden_test_semantic",
+          "20271119": "hidden_test_semantic"
+        }
+      }
+    }
+  }
+]
