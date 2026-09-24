@@ -18,6 +18,9 @@ No development outcome or generation was saved. The frozen one-pass/no-retry
 rule prevents a silent repair or repeat. DEV2 development is marked consumed
 from attempted use; its primary comparison and other development outcomes
 are unavailable. See `research/results/PHASE_3C_DEV2_EXECUTION_STOP/report.md`.
+All 70 available artifacts, including six adapters, were pushed through Git/
+Git LFS and restored from a fresh remote clone with matching size and SHA-256;
+see `research/manifests/phase3c_dev2_partial_remote_restore_verification.json`.
 No B, replay, retention test, or sealed final-paper holdout access occurred.
 
 ## Phase 3C-DEV2 design boundary
