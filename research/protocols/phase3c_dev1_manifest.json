@@ -1,0 +1,162 @@
+{
+  "phase": "3C-DEV1",
+  "status": "FROZEN_DESIGN_PROPOSAL_NO_MODEL_EXECUTION",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "counts": {
+    "dense_training": 60,
+    "diverse_training": 60,
+    "fresh_development_eval": 36,
+    "semantic_cases_validated": 780,
+    "structural_pairs_audited": 4320,
+    "slots_per_seed_condition": 180,
+    "optimizer_steps_per_seed_condition": 24
+  },
+  "base_weights": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "Final epoch a priori, no performance-based selection",
+    "stage_b_policy": "Naive and 20% replay branch from same seed-matched A adapter; fresh optimizer and scheduler, fixed 60 examples and 24 optimizer steps per branch"
+  },
+  "evaluation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536
+  },
+  "compiler": {
+    "path": ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar",
+    "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "java": ".tools/jdk-25.0.1+8/bin/java.exe"
+  },
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "file_sha256": {
+    "research/protocols/phase3c_dev1_protocol.md": "142694d87921813633b0cd7c690e0fec2b7e20d3c4a7c6acb568fb5317667cbb",
+    "research/protocols/phase3c_dev1_schedule.json": "c0f009a3f1981ba166288f3c2477a9db9f8317fe04dfd6d56a76b0c62359f49f",
+    "research/results/PHASE_3C_DEV1/reference_validation.json": "bfdd3e9923305bf9f8c2a6e1df313f784197a8901d39cee47aa08aa7c9b4fc16",
+    "research/results/PHASE_3C_DEV1/structural_audit.json": "899bd462e8b1e726f6baf6ca36a729d1b9ed5e7ac496e7fdd967111831b4636a",
+    "research/results/PHASE_3C_DEV1/token_budget_audit.json": "816216fd46d4b6b676e9259c632a0b073e022ddc96d9b603ed71adf54138fe0c",
+    "data/phase3c_dev1/a_dense_training_examples.json": "9ff6e5f7e1b8cbd4b14de881d1c77b76fe815691ef4068918a4d4e17f1aea2f5",
+    "data/phase3c_dev1/a_dense_training_references.json": "9217881358b4347b232fc4e76537c11d08af51d4807cdff91da7983c84d1519a",
+    "data/phase3c_dev1/a_dense_training_hidden_tests.json": "3f8e47ded4cef15fda55a058eb029456498b658de4a0ac7ee2e67815bea09720",
+    "data/phase3c_dev1/a_diverse_training_examples.json": "4c165e28d74a772dad0f9185cd4229a2444e3e4f88faeb1cc5f52d874e4bb05e",
+    "data/phase3c_dev1/a_diverse_training_references.json": "991d4d5fd46d1c04f55ac71873d8505fc77ee7b6c22864a885cfd4e04d42788d",
+    "data/phase3c_dev1/a_diverse_training_hidden_tests.json": "2e436556d76e5d60e29d258835fa1a762a9f53ff9965aa15bc57c79c119bf281",
+    "benchmark/phase3c_dev1/a_development_eval_tasks.json": "cb7d0e4c07b8f1959aaaad7dd67b878573625dd546202092f5058d563a468f6e",
+    "benchmark/phase3c_dev1/a_development_eval_references.json": "1bc5a1d2e3e31f9d2dd15b7690adb92d47d707fbb3d0c731c5a3b59fdc858327",
+    "benchmark/phase3c_dev1/a_development_eval_hidden_tests.json": "29b981359428c2161a191cb4aecf7ba02a82f386d47faece09821f77985b74e8",
+    "scripts/build_phase3c_dev1_data.py": "c7a555a7c2c929e51b505f43477e399fe571f8de7697b6045e450564ac50ce53",
+    "scripts/validate_phase3c_dev1_data.py": "0f20bdf6914b73abeba98f14e1e04f1c49673b31ebb91098797308ef91728880",
+    "scripts/audit_phase3c_dev1_structure.py": "81cc96ea0bb90ffbcd4ca02dc05ef31944216c486b32c5f1195cec14e2ab2cb9",
+    "scripts/audit_phase3c_dev1_tokens.py": "12fa105ea7682a67a52826723cbb2d896959c0b2edd66215a039c759d52f0c2a",
+    "scripts/build_phase3c_dev1_schedule.py": "0b0b8d8a31431781d3430791a5bcc230c1ea6684b7b04edb1102d8c9656c0523",
+    "scripts/freeze_phase3c_dev1_manifest.py": "be3e38474b7f11e07be2839d0f2413182643a4223552abf56d4cdcb3bf478357",
+    "scripts/train_phase3b_qlora.py": "633637fd09dffcd3e6f32e675b3fe0fa323876e121cc5b009c230f35335a8ead",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase3c_evaluation.py": "9d940acd6d2640965dd00d84fdbd57f4cde2aaee692f0cfd7eea6dc2a0dbc83d",
+    "src/self_learning_ai/benchmark.py": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+    "src/self_learning_ai/compiler.py": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+    "research/protocols/phase3c_config.json": "3d9b1d05d55a5fdfe69a25a4a376b3174f7323e86a5a3a936442d5499b4fe679",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7"
+  },
+  "lf_normalized_text_sha256": {
+    "research/protocols/phase3c_dev1_protocol.md": "142694d87921813633b0cd7c690e0fec2b7e20d3c4a7c6acb568fb5317667cbb",
+    "research/protocols/phase3c_dev1_schedule.json": "fca16eb32e1ef46d46b8395b82ae5f31351a4d39e92d7270c9913d4e741eb394",
+    "research/results/PHASE_3C_DEV1/reference_validation.json": "5a567b864f299fb8930af8993a84ddbbcaa0fad0fb5870e1d87e71a61325a266",
+    "research/results/PHASE_3C_DEV1/structural_audit.json": "64034ffa3e6542071bd9426b2785876a7534b6237e6f6f9cd68b03568d7ca146",
+    "research/results/PHASE_3C_DEV1/token_budget_audit.json": "7f4edae733176ffa2d3d2f650e829fcde56320ae9fe93e39a495cba6575ed85f",
+    "data/phase3c_dev1/a_dense_training_examples.json": "a261f387fa2deb97f9e5735f1049e36c61f7ca2684887cce3267ac3e0a9a27e4",
+    "data/phase3c_dev1/a_dense_training_references.json": "006fa73250a6e965dce4843ac8b2d9da8283de80318ea676a4d76e486aaa7706",
+    "data/phase3c_dev1/a_dense_training_hidden_tests.json": "dd51478672d16699529dee61a0ac283e9b97f8ae2a66be397df2531dbc4abc8e",
+    "data/phase3c_dev1/a_diverse_training_examples.json": "3751049ffcc33ea40321604297cad972e219f7ba7b95dc1b49ef245ed500f870",
+    "data/phase3c_dev1/a_diverse_training_references.json": "ecfbdef33182a9092247efe0b11b8066c20ee9a020cb61d0f1d927e5ecaa6f73",
+    "data/phase3c_dev1/a_diverse_training_hidden_tests.json": "2527c042edece03b70b4a0bb2c25d162172a2e78e994d5f9318bc3c10092f6f0",
+    "benchmark/phase3c_dev1/a_development_eval_tasks.json": "35c2d5df2d95254fda71032dbdff988749576322b38ba0b86f5ff215b86e01b5",
+    "benchmark/phase3c_dev1/a_development_eval_references.json": "1b73defacc26f3a0bdfbe055b56b3ac072339eecca59007f31eea49284990f6b",
+    "benchmark/phase3c_dev1/a_development_eval_hidden_tests.json": "3dc15b8aa1f950550a990648976204b04141361a556024daec32cd54feda78ea",
+    "scripts/build_phase3c_dev1_data.py": "c7a555a7c2c929e51b505f43477e399fe571f8de7697b6045e450564ac50ce53",
+    "scripts/validate_phase3c_dev1_data.py": "0f20bdf6914b73abeba98f14e1e04f1c49673b31ebb91098797308ef91728880",
+    "scripts/audit_phase3c_dev1_structure.py": "81cc96ea0bb90ffbcd4ca02dc05ef31944216c486b32c5f1195cec14e2ab2cb9",
+    "scripts/audit_phase3c_dev1_tokens.py": "12fa105ea7682a67a52826723cbb2d896959c0b2edd66215a039c759d52f0c2a",
+    "scripts/build_phase3c_dev1_schedule.py": "0b0b8d8a31431781d3430791a5bcc230c1ea6684b7b04edb1102d8c9656c0523",
+    "scripts/freeze_phase3c_dev1_manifest.py": "be3e38474b7f11e07be2839d0f2413182643a4223552abf56d4cdcb3bf478357",
+    "scripts/train_phase3b_qlora.py": "633637fd09dffcd3e6f32e675b3fe0fa323876e121cc5b009c230f35335a8ead",
+    "scripts/train_phase2a_qlora.py": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+    "scripts/run_phase3c_evaluation.py": "9d940acd6d2640965dd00d84fdbd57f4cde2aaee692f0cfd7eea6dc2a0dbc83d",
+    "src/self_learning_ai/benchmark.py": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+    "src/self_learning_ai/compiler.py": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+    "research/protocols/phase3c_config.json": "1f8e812df853ae64740ca0b693e6928e2b9dae6303fcadd44b374e7fd0c729d8",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7"
+  },
+  "environment_at_design_freeze": {
+    "python": "3.13.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.9.0+cu130",
+      "transformers": "4.57.1",
+      "peft": "0.17.1",
+      "bitsandbytes": "0.50.2",
+      "accelerate": "1.15.0",
+      "numpy": "2.2.6",
+      "safetensors": "0.6.2"
+    }
+  },
+  "future_archive_policy": "Versioned off-machine adapters and raw evaluation records; retrieve from fresh clone and verify every SHA-256 before declaring archived.",
+  "execution_authorization": "STOP_FOR_INDEPENDENT_REVIEW"
+}

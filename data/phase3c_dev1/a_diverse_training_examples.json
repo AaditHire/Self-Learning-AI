@@ -1,0 +1,1137 @@
+[
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "fourth_square",
+    "algorithmic_structure": "dev1_training_fourth_square",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-fourth_square-1",
+    "structural_signature": "A>training>fourth_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_of_four",
+      "square_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "fourth_square",
+    "algorithmic_structure": "dev1_training_fourth_square",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-fourth_square-2",
+    "structural_signature": "A>training>fourth_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_of_four",
+      "square_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "fourth_square",
+    "algorithmic_structure": "dev1_training_fourth_square",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-fourth_square-3",
+    "structural_signature": "A>training>fourth_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_of_four",
+      "square_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "fourth_square",
+    "algorithmic_structure": "dev1_training_fourth_square",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-fourth_square-4",
+    "structural_signature": "A>training>fourth_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_of_four",
+      "square_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Sum the squares of positive indices divisible by four up to n, then add 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=5.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%4==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "fourth_square",
+    "algorithmic_structure": "dev1_training_fourth_square",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-fourth_square-5",
+    "structural_signature": "A>training>fourth_square",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "multiple_of_four",
+      "square_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+1).",
+    "capability": "A",
+    "archetype": "nontriple_count",
+    "algorithmic_structure": "dev1_training_nontriple_count",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-nontriple_count-1",
+    "structural_signature": "A>training>nontriple_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "not_multiple_three",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+2).",
+    "capability": "A",
+    "archetype": "nontriple_count",
+    "algorithmic_structure": "dev1_training_nontriple_count",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-nontriple_count-2",
+    "structural_signature": "A>training>nontriple_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "not_multiple_three",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+3).",
+    "capability": "A",
+    "archetype": "nontriple_count",
+    "algorithmic_structure": "dev1_training_nontriple_count",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-nontriple_count-3",
+    "structural_signature": "A>training>nontriple_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "not_multiple_three",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+4).",
+    "capability": "A",
+    "archetype": "nontriple_count",
+    "algorithmic_structure": "dev1_training_nontriple_count",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-nontriple_count-4",
+    "structural_signature": "A>training>nontriple_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "not_multiple_three",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive indices up to n that are not divisible by three; print twice the count plus 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3!=0) { count+=1. } }\nDISPLAYNL(2*count+5).",
+    "capability": "A",
+    "archetype": "nontriple_count",
+    "algorithmic_structure": "dev1_training_nontriple_count",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-nontriple_count-5",
+    "structural_signature": "A>training>nontriple_count",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>!=>+=>DISPLAYNL>*>+",
+    "semantic_operations": [
+      "not_multiple_three",
+      "count",
+      "affine_output"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. From 1 through n, add 1 times odd indices and subtract even indices; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1*i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_weight",
+    "algorithmic_structure": "dev1_training_alternating_weight",
+    "control_flow": "loop_if_else",
+    "template_lineage": "dev1-training-alternating_weight-1",
+    "structural_signature": "A>training>alternating_weight",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "weighted_alternation"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. From 1 through n, add 2 times odd indices and subtract even indices; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=2*i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_weight",
+    "algorithmic_structure": "dev1_training_alternating_weight",
+    "control_flow": "loop_if_else",
+    "template_lineage": "dev1-training-alternating_weight-2",
+    "structural_signature": "A>training>alternating_weight",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "weighted_alternation"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. From 1 through n, add 3 times odd indices and subtract even indices; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=3*i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_weight",
+    "algorithmic_structure": "dev1_training_alternating_weight",
+    "control_flow": "loop_if_else",
+    "template_lineage": "dev1-training-alternating_weight-3",
+    "structural_signature": "A>training>alternating_weight",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "weighted_alternation"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. From 1 through n, add 4 times odd indices and subtract even indices; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=4*i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_weight",
+    "algorithmic_structure": "dev1_training_alternating_weight",
+    "control_flow": "loop_if_else",
+    "template_lineage": "dev1-training-alternating_weight-4",
+    "structural_signature": "A>training>alternating_weight",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "weighted_alternation"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. From 1 through n, add 5 times odd indices and subtract even indices; print the total.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=5*i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_weight",
+    "algorithmic_structure": "dev1_training_alternating_weight",
+    "control_flow": "loop_if_else",
+    "template_lineage": "dev1-training-alternating_weight-5",
+    "structural_signature": "A>training>alternating_weight",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>*>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "parity_branch",
+      "weighted_alternation"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 1.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "divisor_tally",
+    "algorithmic_structure": "dev1_training_divisor_tally",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-divisor_tally-1",
+    "structural_signature": "A>training>divisor_tally",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_test",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 2.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=2.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "divisor_tally",
+    "algorithmic_structure": "dev1_training_divisor_tally",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-divisor_tally-2",
+    "structural_signature": "A>training>divisor_tally",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_test",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 3.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "divisor_tally",
+    "algorithmic_structure": "dev1_training_divisor_tally",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-divisor_tally-3",
+    "structural_signature": "A>training>divisor_tally",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_test",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 4.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=4.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "divisor_tally",
+    "algorithmic_structure": "dev1_training_divisor_tally",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-divisor_tally-4",
+    "structural_signature": "A>training>divisor_tally",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_test",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count positive divisors of n from 1 through n and add 5.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER count=5.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%i==0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "divisor_tally",
+    "algorithmic_structure": "dev1_training_divisor_tally",
+    "control_flow": "loop_if",
+    "template_lineage": "dev1-training-divisor_tally-5",
+    "structural_signature": "A>training>divisor_tally",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "semantic_operations": [
+      "divisor_test",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 1; print the sum.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+1. } i-=1. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "descending_odd",
+    "algorithmic_structure": "dev1_training_descending_odd",
+    "control_flow": "descending_loop_if",
+    "template_lineage": "dev1-training-descending_odd-1",
+    "structural_signature": "A>training>descending_odd",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>+=>+>-=>DISPLAYNL",
+    "semantic_operations": [
+      "descending_loop",
+      "odd_index_filter",
+      "affine_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 2; print the sum.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+2. } i-=1. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "descending_odd",
+    "algorithmic_structure": "dev1_training_descending_odd",
+    "control_flow": "descending_loop_if",
+    "template_lineage": "dev1-training-descending_odd-2",
+    "structural_signature": "A>training>descending_odd",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>+=>+>-=>DISPLAYNL",
+    "semantic_operations": [
+      "descending_loop",
+      "odd_index_filter",
+      "affine_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 3; print the sum.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+3. } i-=1. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "descending_odd",
+    "algorithmic_structure": "dev1_training_descending_odd",
+    "control_flow": "descending_loop_if",
+    "template_lineage": "dev1-training-descending_odd-3",
+    "structural_signature": "A>training>descending_odd",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>+=>+>-=>DISPLAYNL",
+    "semantic_operations": [
+      "descending_loop",
+      "odd_index_filter",
+      "affine_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 4; print the sum.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+4. } i-=1. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "descending_odd",
+    "algorithmic_structure": "dev1_training_descending_odd",
+    "control_flow": "descending_loop_if",
+    "template_lineage": "dev1-training-descending_odd-4",
+    "structural_signature": "A>training>descending_odd",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>+=>+>-=>DISPLAYNL",
+    "semantic_operations": [
+      "descending_loop",
+      "odd_index_filter",
+      "affine_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Walk downward from n to 1 and add each odd index plus 5; print the sum.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { total+=i+5. } i-=1. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "descending_odd",
+    "algorithmic_structure": "dev1_training_descending_odd",
+    "control_flow": "descending_loop_if",
+    "template_lineage": "dev1-training-descending_odd-5",
+    "structural_signature": "A>training>descending_odd",
+    "ast_proxy_signature": "INPUT>LOOP>>=>IF>%>==>+=>+>-=>DISPLAYNL",
+    "semantic_operations": [
+      "descending_loop",
+      "odd_index_filter",
+      "affine_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 1 times the index; print the result.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-1*i. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "quadratic_balance",
+    "algorithmic_structure": "dev1_training_quadratic_balance",
+    "control_flow": "loop_arithmetic",
+    "template_lineage": "dev1-training-quadratic_balance-1",
+    "structural_signature": "A>training>quadratic_balance",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->*>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_term",
+      "linear_term",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 2 times the index; print the result.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-2*i. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "quadratic_balance",
+    "algorithmic_structure": "dev1_training_quadratic_balance",
+    "control_flow": "loop_arithmetic",
+    "template_lineage": "dev1-training-quadratic_balance-2",
+    "structural_signature": "A>training>quadratic_balance",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->*>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_term",
+      "linear_term",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 3 times the index; print the result.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-3*i. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "quadratic_balance",
+    "algorithmic_structure": "dev1_training_quadratic_balance",
+    "control_flow": "loop_arithmetic",
+    "template_lineage": "dev1-training-quadratic_balance-3",
+    "structural_signature": "A>training>quadratic_balance",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->*>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_term",
+      "linear_term",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 4 times the index; print the result.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-4*i. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "quadratic_balance",
+    "algorithmic_structure": "dev1_training_quadratic_balance",
+    "control_flow": "loop_arithmetic",
+    "template_lineage": "dev1-training-quadratic_balance-4",
+    "structural_signature": "A>training>quadratic_balance",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->*>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_term",
+      "linear_term",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. For every index 1 through n, add its square and subtract 5 times the index; print the result.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total+=i*i-5*i. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "quadratic_balance",
+    "algorithmic_structure": "dev1_training_quadratic_balance",
+    "control_flow": "loop_arithmetic",
+    "template_lineage": "dev1-training-quadratic_balance-5",
+    "structural_signature": "A>training>quadratic_balance",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>*>->*>DISPLAYNL",
+    "semantic_operations": [
+      "quadratic_term",
+      "linear_term",
+      "sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "negative_tally",
+    "algorithmic_structure": "dev1_training_negative_tally",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-negative_tally-1",
+    "structural_signature": "A>training>negative_tally",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_filter",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "negative_tally",
+    "algorithmic_structure": "dev1_training_negative_tally",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-negative_tally-2",
+    "structural_signature": "A>training>negative_tally",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_filter",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "negative_tally",
+    "algorithmic_structure": "dev1_training_negative_tally",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-negative_tally-3",
+    "structural_signature": "A>training>negative_tally",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_filter",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "negative_tally",
+    "algorithmic_structure": "dev1_training_negative_tally",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-negative_tally-4",
+    "structural_signature": "A>training>negative_tally",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_filter",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Count strictly negative entries and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER count=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { count+=1. } }\nDISPLAYNL(count).",
+    "capability": "A",
+    "archetype": "negative_tally",
+    "algorithmic_structure": "dev1_training_negative_tally",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-negative_tally-5",
+    "structural_signature": "A>training>negative_tally",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "semantic_operations": [
+      "negative_filter",
+      "count",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "neighbor_products",
+    "algorithmic_structure": "dev1_training_neighbor_products",
+    "control_flow": "array_loop_arithmetic",
+    "template_lineage": "dev1-training-neighbor_products-1",
+    "structural_signature": "A>training>neighbor_products",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_products",
+      "array_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "neighbor_products",
+    "algorithmic_structure": "dev1_training_neighbor_products",
+    "control_flow": "array_loop_arithmetic",
+    "template_lineage": "dev1-training-neighbor_products-2",
+    "structural_signature": "A>training>neighbor_products",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_products",
+      "array_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "neighbor_products",
+    "algorithmic_structure": "dev1_training_neighbor_products",
+    "control_flow": "array_loop_arithmetic",
+    "template_lineage": "dev1-training-neighbor_products-3",
+    "structural_signature": "A>training>neighbor_products",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_products",
+      "array_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "neighbor_products",
+    "algorithmic_structure": "dev1_training_neighbor_products",
+    "control_flow": "array_loop_arithmetic",
+    "template_lineage": "dev1-training-neighbor_products-4",
+    "structural_signature": "A>training>neighbor_products",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_products",
+      "array_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum products of neighboring pairs, then add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<3, i++) { total+=values[i]*values[i+1]. }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "neighbor_products",
+    "algorithmic_structure": "dev1_training_neighbor_products",
+    "control_flow": "array_loop_arithmetic",
+    "template_lineage": "dev1-training-neighbor_products-5",
+    "structural_signature": "A>training>neighbor_products",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "neighbor_products",
+      "array_sum",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_position",
+    "algorithmic_structure": "dev1_training_positive_position",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-positive_position-1",
+    "structural_signature": "A>training>positive_position",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "positive_filter",
+      "position_weight",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_position",
+    "algorithmic_structure": "dev1_training_positive_position",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-positive_position-2",
+    "structural_signature": "A>training>positive_position",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "positive_filter",
+      "position_weight",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_position",
+    "algorithmic_structure": "dev1_training_positive_position",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-positive_position-3",
+    "structural_signature": "A>training>positive_position",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "positive_filter",
+      "position_weight",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_position",
+    "algorithmic_structure": "dev1_training_positive_position",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-positive_position-4",
+    "structural_signature": "A>training>positive_position",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "positive_filter",
+      "position_weight",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add each positive entry times its one-based position, then add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>0) { total+=values[i]*(i+1). } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "positive_position",
+    "algorithmic_structure": "dev1_training_positive_position",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-positive_position-5",
+    "structural_signature": "A>training>positive_position",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>*>+>DISPLAYNL",
+    "semantic_operations": [
+      "positive_filter",
+      "position_weight",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+1).",
+    "capability": "A",
+    "archetype": "range_span",
+    "algorithmic_structure": "dev1_training_range_span",
+    "control_flow": "array_loop_two_if",
+    "template_lineage": "dev1-training-range_span-1",
+    "structural_signature": "A>training>range_span",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_minimum",
+      "array_maximum",
+      "range",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+2).",
+    "capability": "A",
+    "archetype": "range_span",
+    "algorithmic_structure": "dev1_training_range_span",
+    "control_flow": "array_loop_two_if",
+    "template_lineage": "dev1-training-range_span-2",
+    "structural_signature": "A>training>range_span",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_minimum",
+      "array_maximum",
+      "range",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+3).",
+    "capability": "A",
+    "archetype": "range_span",
+    "algorithmic_structure": "dev1_training_range_span",
+    "control_flow": "array_loop_two_if",
+    "template_lineage": "dev1-training-range_span-3",
+    "structural_signature": "A>training>range_span",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_minimum",
+      "array_maximum",
+      "range",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+4).",
+    "capability": "A",
+    "archetype": "range_span",
+    "algorithmic_structure": "dev1_training_range_span",
+    "control_flow": "array_loop_two_if",
+    "template_lineage": "dev1-training-range_span-4",
+    "structural_signature": "A>training>range_span",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_minimum",
+      "array_maximum",
+      "range",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Subtract the minimum from the maximum and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER lo=values[0].\nNUMBER hi=values[0].\nLOOP (NUMBER i=1 TILL i<4, i++) { IF (values[i]<lo) { lo=values[i]. } IF (values[i]>hi) { hi=values[i]. } }\nDISPLAYNL(hi-lo+5).",
+    "capability": "A",
+    "archetype": "range_span",
+    "algorithmic_structure": "dev1_training_range_span",
+    "control_flow": "array_loop_two_if",
+    "template_lineage": "dev1-training-range_span-5",
+    "structural_signature": "A>training>range_span",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>DISPLAYNL>->+",
+    "semantic_operations": [
+      "array_minimum",
+      "array_maximum",
+      "range",
+      "offset"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_positions",
+    "algorithmic_structure": "dev1_training_alternating_positions",
+    "control_flow": "array_loop_if_else",
+    "template_lineage": "dev1-training-alternating_positions-1",
+    "structural_signature": "A>training>alternating_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "position_parity",
+      "alternating_array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_positions",
+    "algorithmic_structure": "dev1_training_alternating_positions",
+    "control_flow": "array_loop_if_else",
+    "template_lineage": "dev1-training-alternating_positions-2",
+    "structural_signature": "A>training>alternating_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "position_parity",
+      "alternating_array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_positions",
+    "algorithmic_structure": "dev1_training_alternating_positions",
+    "control_flow": "array_loop_if_else",
+    "template_lineage": "dev1-training-alternating_positions-3",
+    "structural_signature": "A>training>alternating_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "position_parity",
+      "alternating_array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_positions",
+    "algorithmic_structure": "dev1_training_alternating_positions",
+    "control_flow": "array_loop_if_else",
+    "template_lineage": "dev1-training-alternating_positions-4",
+    "structural_signature": "A>training>alternating_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "position_parity",
+      "alternating_array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Add entries at even zero-based positions, subtract entries at odd positions, then add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (i%2==0) { total+=values[i]. } ELSE { total-=values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "alternating_positions",
+    "algorithmic_structure": "dev1_training_alternating_positions",
+    "control_flow": "array_loop_if_else",
+    "template_lineage": "dev1-training-alternating_positions-5",
+    "structural_signature": "A>training>alternating_positions",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>ELSE>-=>DISPLAYNL",
+    "semantic_operations": [
+      "position_parity",
+      "alternating_array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-01",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "even_square_total",
+    "algorithmic_structure": "dev1_training_even_square_total",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-even_square_total-1",
+    "structural_signature": "A>training>even_square_total",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "even_value_filter",
+      "square_sum",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-02",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "even_square_total",
+    "algorithmic_structure": "dev1_training_even_square_total",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-even_square_total-2",
+    "structural_signature": "A>training>even_square_total",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "even_value_filter",
+      "square_sum",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-03",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=3.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "even_square_total",
+    "algorithmic_structure": "dev1_training_even_square_total",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-even_square_total-3",
+    "structural_signature": "A>training>even_square_total",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "even_value_filter",
+      "square_sum",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-04",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "even_square_total",
+    "algorithmic_structure": "dev1_training_even_square_total",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-even_square_total-4",
+    "structural_signature": "A>training>even_square_total",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "even_value_filter",
+      "square_sum",
+      "array_sum"
+    ]
+  },
+  {
+    "example_id": "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-05",
+    "split": "phase3c_dev1_diverse_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-delimited numbers as an array. Sum squares of even-valued entries and add 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=5.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { total+=values[i]*values[i]. } }\nDISPLAYNL(total).",
+    "capability": "A",
+    "archetype": "even_square_total",
+    "algorithmic_structure": "dev1_training_even_square_total",
+    "control_flow": "array_loop_if",
+    "template_lineage": "dev1-training-even_square_total-5",
+    "structural_signature": "A>training>even_square_total",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>*>DISPLAYNL",
+    "semantic_operations": [
+      "even_value_filter",
+      "square_sum",
+      "array_sum"
+    ]
+  }
+]

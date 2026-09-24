@@ -1,0 +1,514 @@
+{
+  "phase": "3C-DEV1",
+  "status": "PRE_MODEL_TOKEN_AUDIT",
+  "tokenizer_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "max_length": 320,
+  "conditions": {
+    "dense": {
+      "examples": 60,
+      "max_full_tokens": 232,
+      "one_epoch_full_tokens": 12183,
+      "one_epoch_supervised_tokens": 4809,
+      "by_example": {
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-01": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-02": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-03": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-04": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-05": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-06": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-07": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-08": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-09": {
+          "full_tokens": 172,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-10": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-11": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-12": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-13": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-14": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15": {
+          "full_tokens": 174,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-02": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-03": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-04": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-05": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-06": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-07": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-08": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-09": {
+          "full_tokens": 178,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-10": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-11": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-12": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-13": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-14": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15": {
+          "full_tokens": 180,
+          "supervised_tokens": 53
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-01": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-02": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-03": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-04": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-05": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-06": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-07": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-08": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-09": {
+          "full_tokens": 230,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-10": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-11": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-12": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-13": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-14": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15": {
+          "full_tokens": 232,
+          "supervised_tokens": 112
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-01": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-02": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-03": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-04": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-05": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-06": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-07": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-08": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-09": {
+          "full_tokens": 229,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-10": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-11": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-12": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-13": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-14": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        },
+        "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15": {
+          "full_tokens": 231,
+          "supervised_tokens": 109
+        }
+      },
+      "dataset_sha256": "9ff6e5f7e1b8cbd4b14de881d1c77b76fe815691ef4068918a4d4e17f1aea2f5"
+    },
+    "diverse": {
+      "examples": 60,
+      "max_full_tokens": 260,
+      "one_epoch_full_tokens": 12515,
+      "one_epoch_supervised_tokens": 5015,
+      "by_example": {
+        "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-01": {
+          "full_tokens": 173,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-02": {
+          "full_tokens": 173,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-03": {
+          "full_tokens": 173,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-04": {
+          "full_tokens": 173,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05": {
+          "full_tokens": 173,
+          "supervised_tokens": 48
+        },
+        "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01": {
+          "full_tokens": 179,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-02": {
+          "full_tokens": 179,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-03": {
+          "full_tokens": 179,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-04": {
+          "full_tokens": 179,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05": {
+          "full_tokens": 179,
+          "supervised_tokens": 52
+        },
+        "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-01": {
+          "full_tokens": 182,
+          "supervised_tokens": 55
+        },
+        "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-02": {
+          "full_tokens": 182,
+          "supervised_tokens": 55
+        },
+        "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-03": {
+          "full_tokens": 182,
+          "supervised_tokens": 55
+        },
+        "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-04": {
+          "full_tokens": 182,
+          "supervised_tokens": 55
+        },
+        "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05": {
+          "full_tokens": 182,
+          "supervised_tokens": 55
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-01": {
+          "full_tokens": 169,
+          "supervised_tokens": 46
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-02": {
+          "full_tokens": 169,
+          "supervised_tokens": 46
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-03": {
+          "full_tokens": 169,
+          "supervised_tokens": 46
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-04": {
+          "full_tokens": 169,
+          "supervised_tokens": 46
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DIVISOR_TALLY-05": {
+          "full_tokens": 169,
+          "supervised_tokens": 46
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01": {
+          "full_tokens": 175,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-02": {
+          "full_tokens": 175,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-03": {
+          "full_tokens": 175,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-04": {
+          "full_tokens": 175,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05": {
+          "full_tokens": 175,
+          "supervised_tokens": 49
+        },
+        "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-01": {
+          "full_tokens": 171,
+          "supervised_tokens": 41
+        },
+        "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-02": {
+          "full_tokens": 171,
+          "supervised_tokens": 41
+        },
+        "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-03": {
+          "full_tokens": 171,
+          "supervised_tokens": 41
+        },
+        "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-04": {
+          "full_tokens": 171,
+          "supervised_tokens": 41
+        },
+        "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05": {
+          "full_tokens": 171,
+          "supervised_tokens": 41
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-01": {
+          "full_tokens": 231,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-02": {
+          "full_tokens": 231,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-03": {
+          "full_tokens": 231,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-04": {
+          "full_tokens": 231,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05": {
+          "full_tokens": 231,
+          "supervised_tokens": 111
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-01": {
+          "full_tokens": 230,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-02": {
+          "full_tokens": 230,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-03": {
+          "full_tokens": 230,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-04": {
+          "full_tokens": 230,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DIVERSE-TR-AR-NEIGHBOR_PRODUCTS-05": {
+          "full_tokens": 230,
+          "supervised_tokens": 108
+        },
+        "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-01": {
+          "full_tokens": 241,
+          "supervised_tokens": 116
+        },
+        "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-02": {
+          "full_tokens": 241,
+          "supervised_tokens": 116
+        },
+        "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-03": {
+          "full_tokens": 241,
+          "supervised_tokens": 116
+        },
+        "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-04": {
+          "full_tokens": 241,
+          "supervised_tokens": 116
+        },
+        "P3CDEV1-DIVERSE-TR-AR-POSITIVE_POSITION-05": {
+          "full_tokens": 241,
+          "supervised_tokens": 116
+        },
+        "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-01": {
+          "full_tokens": 260,
+          "supervised_tokens": 139
+        },
+        "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-02": {
+          "full_tokens": 260,
+          "supervised_tokens": 139
+        },
+        "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-03": {
+          "full_tokens": 260,
+          "supervised_tokens": 139
+        },
+        "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-04": {
+          "full_tokens": 260,
+          "supervised_tokens": 139
+        },
+        "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05": {
+          "full_tokens": 260,
+          "supervised_tokens": 139
+        },
+        "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-01": {
+          "full_tokens": 252,
+          "supervised_tokens": 121
+        },
+        "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-02": {
+          "full_tokens": 252,
+          "supervised_tokens": 121
+        },
+        "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-03": {
+          "full_tokens": 252,
+          "supervised_tokens": 121
+        },
+        "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-04": {
+          "full_tokens": 252,
+          "supervised_tokens": 121
+        },
+        "P3CDEV1-DIVERSE-TR-AR-ALTERNATING_POSITIONS-05": {
+          "full_tokens": 252,
+          "supervised_tokens": 121
+        },
+        "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-01": {
+          "full_tokens": 240,
+          "supervised_tokens": 117
+        },
+        "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-02": {
+          "full_tokens": 240,
+          "supervised_tokens": 117
+        },
+        "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-03": {
+          "full_tokens": 240,
+          "supervised_tokens": 117
+        },
+        "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-04": {
+          "full_tokens": 240,
+          "supervised_tokens": 117
+        },
+        "P3CDEV1-DIVERSE-TR-AR-EVEN_SQUARE_TOTAL-05": {
+          "full_tokens": 240,
+          "supervised_tokens": 117
+        }
+      },
+      "dataset_sha256": "4c165e28d74a772dad0f9185cd4229a2444e3e4f88faeb1cc5f52d874e4bb05e"
+    }
+  },
+  "full_token_relative_difference_from_dense": 0.02725108758105557,
+  "supervised_token_relative_difference_from_dense": 0.042836348513204406,
+  "prospective_materiality_threshold": 0.1,
+  "compute_gate": "PASS"
+}
