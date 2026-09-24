@@ -1,0 +1,2691 @@
+{
+  "phase": "3C-DEV1",
+  "status": "DEVELOPMENT_CONSUMED_DESCRIPTIVE_ONLY",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "per_seed": {
+    "20270925": {
+      "dense": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 6,
+          "total": 36,
+          "pass_rate": 0.16666666666666666,
+          "failure_taxonomy": {
+            "hidden_test_semantic": 6,
+            "semantic": 2,
+            "success": 6,
+            "syntax": 22
+          }
+        },
+        "train_minus_development_gap_pp": 83.33333333333334,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "success": 6,
+              "syntax": 6
+            }
+          },
+          "numeric_iteration": {
+            "passed": 0,
+            "total": 18,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 2,
+              "syntax": 16
+            }
+          }
+        },
+        "training_by_archetype": {
+          "fourth_square": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "negative_tally": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "neighbor_products": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "nontriple_count": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 2,
+              "syntax": 4
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 2,
+              "syntax": 10
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "syntax": 6
+            }
+          },
+          "near": {
+            "passed": 6,
+            "total": 12,
+            "pass_rate": 0.5,
+            "failure_taxonomy": {
+              "success": 6,
+              "syntax": 6
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 12,
+          "total": 36,
+          "pass_rate": 0.3333333333333333,
+          "failure_taxonomy": {
+            "hidden_test_semantic": 3,
+            "semantic": 5,
+            "success": 12,
+            "syntax": 16
+          }
+        },
+        "train_minus_development_gap_pp": 66.66666666666667,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 3,
+              "semantic": 4,
+              "success": 6,
+              "syntax": 5
+            }
+          },
+          "numeric_iteration": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "semantic": 1,
+              "success": 6,
+              "syntax": 11
+            }
+          }
+        },
+        "training_by_archetype": {
+          "alternating_positions": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "alternating_weight": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "descending_odd": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "divisor_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "even_square_total": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "fourth_square": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "negative_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "neighbor_products": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "nontriple_count": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "positive_position": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "quadratic_balance": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "range_span": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 1,
+              "syntax": 5
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 2,
+              "semantic": 4
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 1,
+              "syntax": 5
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 1,
+              "semantic": 1,
+              "syntax": 10
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 2,
+              "semantic": 4,
+              "syntax": 6
+            }
+          },
+          "near": {
+            "passed": 12,
+            "total": 12,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 12
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse_minus_dense_pp": 16.666666666666664
+    },
+    "20271013": {
+      "dense": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 6,
+          "total": 36,
+          "pass_rate": 0.16666666666666666,
+          "failure_taxonomy": {
+            "semantic": 3,
+            "success": 6,
+            "syntax": 27
+          }
+        },
+        "train_minus_development_gap_pp": 83.33333333333334,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "success": 6,
+              "syntax": 12
+            }
+          },
+          "numeric_iteration": {
+            "passed": 0,
+            "total": 18,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 3,
+              "syntax": 15
+            }
+          }
+        },
+        "training_by_archetype": {
+          "fourth_square": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "negative_tally": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "neighbor_products": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "nontriple_count": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 3,
+              "syntax": 3
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 3,
+              "syntax": 9
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 12
+            }
+          },
+          "near": {
+            "passed": 6,
+            "total": 12,
+            "pass_rate": 0.5,
+            "failure_taxonomy": {
+              "success": 6,
+              "syntax": 6
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 12,
+          "total": 36,
+          "pass_rate": 0.3333333333333333,
+          "failure_taxonomy": {
+            "hidden_test_semantic": 11,
+            "semantic": 6,
+            "success": 12,
+            "syntax": 7
+          }
+        },
+        "train_minus_development_gap_pp": 66.66666666666667,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 11,
+              "semantic": 1,
+              "success": 6
+            }
+          },
+          "numeric_iteration": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "semantic": 5,
+              "success": 6,
+              "syntax": 7
+            }
+          }
+        },
+        "training_by_archetype": {
+          "alternating_positions": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "alternating_weight": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "descending_odd": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "divisor_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "even_square_total": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "fourth_square": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "negative_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "neighbor_products": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "nontriple_count": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "positive_position": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "quadratic_balance": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "range_span": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 5,
+              "syntax": 1
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 5,
+              "semantic": 1
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "semantic": 5,
+              "syntax": 1
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 5,
+              "semantic": 1,
+              "syntax": 6
+            }
+          },
+          "near": {
+            "passed": 12,
+            "total": 12,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 12
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse_minus_dense_pp": 16.666666666666664
+    },
+    "20271119": {
+      "dense": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 6,
+          "total": 36,
+          "pass_rate": 0.16666666666666666,
+          "failure_taxonomy": {
+            "hidden_test_semantic": 6,
+            "semantic": 6,
+            "success": 6,
+            "syntax": 18
+          }
+        },
+        "train_minus_development_gap_pp": 83.33333333333334,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "success": 6,
+              "syntax": 6
+            }
+          },
+          "numeric_iteration": {
+            "passed": 0,
+            "total": 18,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 6,
+              "syntax": 12
+            }
+          }
+        },
+        "training_by_archetype": {
+          "fourth_square": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "negative_tally": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "neighbor_products": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          },
+          "nontriple_count": {
+            "passed": 15,
+            "total": 15,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 15
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 6
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 6,
+              "syntax": 6
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "syntax": 6
+            }
+          },
+          "near": {
+            "passed": 6,
+            "total": 12,
+            "pass_rate": 0.5,
+            "failure_taxonomy": {
+              "success": 6,
+              "syntax": 6
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse": {
+        "training": {
+          "passed": 60,
+          "total": 60,
+          "pass_rate": 1.0,
+          "failure_taxonomy": {
+            "success": 60
+          }
+        },
+        "development": {
+          "passed": 12,
+          "total": 36,
+          "pass_rate": 0.3333333333333333,
+          "failure_taxonomy": {
+            "hidden_test_semantic": 12,
+            "semantic": 6,
+            "success": 12,
+            "syntax": 6
+          }
+        },
+        "train_minus_development_gap_pp": 66.66666666666667,
+        "training_by_subskill": {
+          "array_reduction": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          },
+          "numeric_iteration": {
+            "passed": 30,
+            "total": 30,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 30
+            }
+          }
+        },
+        "development_by_subskill": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 12,
+              "success": 6
+            }
+          },
+          "numeric_iteration": {
+            "passed": 6,
+            "total": 18,
+            "pass_rate": 0.3333333333333333,
+            "failure_taxonomy": {
+              "semantic": 6,
+              "success": 6,
+              "syntax": 6
+            }
+          }
+        },
+        "training_by_archetype": {
+          "alternating_positions": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "alternating_weight": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "descending_odd": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "divisor_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "even_square_total": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "fourth_square": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "negative_tally": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "neighbor_products": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "nontriple_count": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "positive_position": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "quadratic_balance": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          },
+          "range_span": {
+            "passed": 5,
+            "total": 5,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 5
+            }
+          }
+        },
+        "development_by_archetype": {
+          "fourth_square_step": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "negative_tally_unrolled": {
+            "passed": 6,
+            "total": 6,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 6
+            }
+          },
+          "nontriple_divisor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "semantic": 6
+            }
+          },
+          "positive_run_length": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6
+            }
+          },
+          "range_neighbor_mix": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6
+            }
+          },
+          "square_threshold_crossing": {
+            "passed": 0,
+            "total": 6,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "syntax": 6
+            }
+          }
+        },
+        "development_by_distance": {
+          "compositional": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "semantic": 6
+            }
+          },
+          "far": {
+            "passed": 0,
+            "total": 12,
+            "pass_rate": 0.0,
+            "failure_taxonomy": {
+              "hidden_test_semantic": 6,
+              "syntax": 6
+            }
+          },
+          "near": {
+            "passed": 12,
+            "total": 12,
+            "pass_rate": 1.0,
+            "failure_taxonomy": {
+              "success": 12
+            }
+          }
+        },
+        "exact_target_reproduction": 60
+      },
+      "diverse_minus_dense_pp": 16.666666666666664
+    }
+  },
+  "primary": {
+    "definition": "unweighted three-seed mean of diverse minus dense development pass@1, percentage points",
+    "paired_seed_differences_pp": {
+      "20270925": 16.666666666666664,
+      "20271013": 16.666666666666664,
+      "20271119": 16.666666666666664
+    },
+    "mean_difference_pp": 16.666666666666664,
+    "task_cluster_95pct_interval_pp": [
+      5.555555555555555,
+      27.77777777777778
+    ],
+    "archetype_block_sensitivity_95pct_interval_pp": [
+      0.0,
+      50.0
+    ]
+  },
+  "subskill_effect_pp": {
+    "numeric_iteration": {
+      "mean": 33.33333333333333,
+      "task_cluster_95pct_interval": [
+        11.11111111111111,
+        55.55555555555556
+      ]
+    },
+    "array_reduction": {
+      "mean": 0.0,
+      "task_cluster_95pct_interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "distance_effect_pp": {
+    "near": {
+      "mean": 50.0,
+      "task_cluster_95pct_interval": [
+        50.0,
+        50.0
+      ]
+    },
+    "compositional": {
+      "mean": 0.0,
+      "task_cluster_95pct_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "far": {
+      "mean": 0.0,
+      "task_cluster_95pct_interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "archetype_effect_pp": {
+    "fourth_square_step": 100.0,
+    "negative_tally_unrolled": 0.0,
+    "nontriple_divisor_mix": 0.0,
+    "positive_run_length": 0.0,
+    "range_neighbor_mix": 0.0,
+    "square_threshold_crossing": 0.0
+  },
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20271221,
+    "task_strata": "overall and subskill within A subskill; distance within subskill x distance cell",
+    "archetype_blocks": 6,
+    "intervals": "descriptive percentile 2.5/97.5; not a significance or PASS gate"
+  },
+  "nearest_training_similarity_by_task": [
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-21",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-22",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-23",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-24",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-25",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-26",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-21",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-22",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-23",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-24",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-25",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-NONTRIPLE_DIVISOR_MIX-26",
+      "family": "numeric_iteration",
+      "archetype": "nontriple_divisor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8955223880597015,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-ALTERNATING_WEIGHT-05",
+        "nearest_code_similarity": 0.9122807017543859,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-01",
+        "nearest_prompt_jaccard": 0.5185185185185185,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-NONTRIPLE_COUNT-05",
+        "nearest_semantic_operation_jaccard": 0.4,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-21",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-22",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-23",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-24",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-25",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-SQUARE_THRESHOLD_CROSSING-26",
+      "family": "numeric_iteration",
+      "archetype": "square_threshold_crossing",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.7911111111111111,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-05",
+        "nearest_code_similarity": 0.8699551569506726,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_prompt_jaccard": 0.27586206896551724,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-21",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-22",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-23",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-24",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-25",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-NEGATIVE_TALLY_UNROLLED-26",
+      "family": "array_reduction",
+      "archetype": "negative_tally_unrolled",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.8231511254019293,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.2413793103448276,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-21",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-22",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-23",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-24",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-25",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-RANGE_NEIGHBOR_MIX-26",
+      "family": "array_reduction",
+      "archetype": "range_neighbor_mix",
+      "distance_group": "compositional",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_code_similarity": 0.79890560875513,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_prompt_jaccard": 0.4444444444444444,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-AR-NEIGHBOR_PRODUCTS-15",
+        "nearest_semantic_operation_jaccard": 0.14285714285714285,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_code_similarity": 0.890840652446675,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_prompt_jaccard": 0.5,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-AR-RANGE_SPAN-05",
+        "nearest_semantic_operation_jaccard": 0.5,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-21",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-22",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-23",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-24",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-25",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-AR-POSITIVE_RUN_LENGTH-26",
+      "family": "array_reduction",
+      "archetype": "positive_run_length",
+      "distance_group": "far",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-AR-NEGATIVE_TALLY-15",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-NONTRIPLE_COUNT-15",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_code_similarity": 0.9065849923430321,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-AR-NEGATIVE_TALLY-05",
+        "nearest_prompt_jaccard": 0.48,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_semantic_operation_jaccard": 0.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      }
+    }
+  ],
+  "diverse_nearest_code_similarity_at_least_0p95_tasks": [
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-21",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-22",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-23",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-24",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-25",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV1-EVAL-NU-FOURTH_SQUARE_STEP-26",
+      "family": "numeric_iteration",
+      "archetype": "fourth_square_step",
+      "distance_group": "near",
+      "dense": {
+        "nearest_code_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_code_similarity": 0.8917748917748918,
+        "nearest_prompt_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_prompt_jaccard": 0.2903225806451613,
+        "nearest_semantic_id": "P3CDEV1-DENSE-TR-NU-FOURTH_SQUARE-15",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": false,
+          "20271013": false,
+          "20271119": false
+        }
+      },
+      "diverse": {
+        "nearest_code_id": "P3CDEV1-DIVERSE-TR-NU-QUADRATIC_BALANCE-05",
+        "nearest_code_similarity": 0.9724770642201835,
+        "nearest_prompt_id": "P3CDEV1-DIVERSE-TR-NU-DESCENDING_ODD-01",
+        "nearest_prompt_jaccard": 0.3333333333333333,
+        "nearest_semantic_id": "P3CDEV1-DIVERSE-TR-NU-FOURTH_SQUARE-05",
+        "nearest_semantic_operation_jaccard": 1.0,
+        "passes_by_seed": {
+          "20270925": true,
+          "20271013": true,
+          "20271119": true
+        }
+      }
+    }
+  ],
+  "frozen_manifest_sha256": "2a05844e6d84ea548758f3d44a921d1879368cd2a642b6c05a64fa49045b1fec",
+  "claims_boundary": "Development evidence only; neither suite nor result is untouched confirmatory evidence."
+}

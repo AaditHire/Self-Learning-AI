@@ -2,7 +2,32 @@
 
 Last updated: 2026-09-24
 
-Current phase: Phase 3C completed prospectively at `STOP_before_B_no_tuning`; Phase 3C-DIAG is a separate post-hoc diagnostic for independent review
+Current phase: Phase 3C-DEV1 exploratory development execution complete; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
+
+## Phase 3C-DEV1 completed development boundary
+
+Frozen design commit: `359a5eaa70bc8fcb468740b58b2d41ccc0ab5fb2`.
+Independent review then authorized the 4-archetype Dense versus 12-archetype
+Diverse A-only study. Three paired seeds completed exactly 180 exposure slots
+and 24 QLoRA optimizer steps per condition, with unchanged base-weight hashes.
+All six adapters passed 60/60 own-training examples and exactly reproduced
+60/60 targets. On the fresh 36-task development suite, Dense scored 6/36 and
+Diverse 12/36 for every seed: +16.67 points mean, frozen task-cluster 95%
+descriptive interval 5.56–27.78 points. Every gain came from one NEAR numeric
+archetype (`fourth_square_step`) with 0.9725 nearest normalized-code similarity
+to Diverse training. Both conditions scored 0 on every COMPOSITIONAL and FAR
+task. This supports only a local development-suite NEAR gain, not broad
+structural generalization or continual learning. The complete report is
+`research/results/PHASE_3C_DEV1/report.md`; task-level analysis and raw
+records are under `research/artifacts/phase3c-dev1/raw/`.
+
+**The full Phase 3C-DEV1 evaluation suite is `DEVELOPMENT_CONSUMED`.** It and
+Phase 3C `EVAL_A` cannot be represented as untouched confirmatory evidence.
+No B, replay, retention, new confirmatory suite, or sealed final-paper holdout
+access occurred. Six final adapters and essential records were copied to the
+established Git/Git LFS preservation paths with SHA-256 verification; consult
+`research/manifests/phase3c_dev1_remote_restore_verification.json` for the
+final off-machine restore result. STOP for independent scientific review.
 
 ## Phase 3C completed STOP and diagnostic boundary
 
@@ -452,12 +477,13 @@ autonomous learning, human-like understanding, or general lifelong learning.
 
 ## Resume instructions
 
-Phase 3B is complete and stopped for independent review. Preserve Phase 1T as
-a failed gate, Phase 2A as an exploratory pilot, Phase 2B as bounded
-confirmatory acquisition evidence, Phase 3A as the naive forgetting baseline,
-and Phase 3B as a numerical replay-gate pass with zero preservation of the
-24 previously passed A seed-tasks. Do not tune against consumed suites, select
-a best seed, merge an adapter, train on consumed tasks, or open the sealed
-holdout. Do not begin Phase 3C, another replay ratio, EWC, adapter isolation,
-STABLE, NoRA, gating, or any other method. Any later experiment requires
+Preserve Phase 1T as a failed gate, Phase 2A as an exploratory pilot, Phase 2B
+as bounded confirmatory acquisition evidence, Phase 3A as the naive forgetting
+baseline, Phase 3B as a numerical replay-gate pass with zero preservation of
+the 24 previously passed A seed-tasks, and Phase 3C as a confirmatory
+pre-B acquisition STOP. Phase 3C-DEV1 is exploratory development evidence
+limited to one NEAR archetype. Do not tune against consumed suites, select a
+best seed, merge an adapter, train on consumed tasks, or open the sealed
+holdout. Do not begin another replay ratio, EWC, adapter isolation, STABLE,
+NoRA, gating, or any other intervention. Any later experiment requires
 explicit new authorization and a new preregistration.

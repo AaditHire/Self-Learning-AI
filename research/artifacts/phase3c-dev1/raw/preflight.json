@@ -1,0 +1,52 @@
+{
+  "phase": "3C-DEV1",
+  "status": "PASS_PREGRADIENT_CONTRACT",
+  "frozen_design_head": "cbb243740f8e77e9848555cf91bbc861422e0156",
+  "git_status_at_preflight": "",
+  "manifest_sha256": "2a05844e6d84ea548758f3d44a921d1879368cd2a642b6c05a64fa49045b1fec",
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "base_weight_sha256": {
+    "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+    "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+  },
+  "packages": {
+    "torch": "2.9.0+cu130",
+    "transformers": "4.57.1",
+    "peft": "0.17.1",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0",
+    "numpy": "2.2.6",
+    "safetensors": "0.6.2"
+  },
+  "python": "3.13.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 610.74, 6144 MiB, 4312 MiB",
+  "java": "openjdk version \"25.0.1\" 2025-10-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.1+8 (build 25.0.1+8-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.1+8 (build 25.0.1+8-LTS, mixed mode, sharing)",
+  "seeds": [
+    20270925,
+    20271013,
+    20271119
+  ],
+  "exposure": {
+    "dense": {
+      "one_epoch_full_tokens": 12183,
+      "one_epoch_supervised_tokens": 4809,
+      "three_epoch_full_tokens": 36549,
+      "three_epoch_supervised_tokens": 14427,
+      "max_sequence_tokens": 232
+    },
+    "diverse": {
+      "one_epoch_full_tokens": 12515,
+      "one_epoch_supervised_tokens": 5015,
+      "three_epoch_full_tokens": 37545,
+      "three_epoch_supervised_tokens": 15045,
+      "max_sequence_tokens": 260
+    }
+  },
+  "diverse_minus_dense_full_tokens_per_epoch": 332,
+  "diverse_minus_dense_full_fraction": 0.02725108758105557,
+  "diverse_minus_dense_supervised_tokens_per_epoch": 206,
+  "diverse_minus_dense_supervised_fraction": 0.042836348513204406,
+  "token_gate": "PASS",
+  "no_model_inference_or_gradients": true
+}

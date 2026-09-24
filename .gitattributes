@@ -2,3 +2,5 @@
 * text=auto
 research/adapters/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
 research/artifacts/phase3c/raw/** -text
+research/artifacts/phase3c-dev1/raw/** -text
+research/artifacts/phase3c-dev1/raw/adapters/** filter=lfs diff=lfs merge=lfs -text
