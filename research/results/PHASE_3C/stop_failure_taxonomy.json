@@ -1,0 +1,724 @@
+{
+  "phase": "3C",
+  "status": "STOP_before_B_no_tuning",
+  "source": "frozen post-A evaluator records and frozen task manifests",
+  "note": "Descriptive tabulation only; no post-B result or causal attribution",
+  "rows": [
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 32
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "subskill",
+      "name": "array_reduction",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 16
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "subskill",
+      "name": "numeric_iteration",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 16
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "archetype",
+      "name": "alternating_accumulator",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "archetype",
+      "name": "negative_position_weight",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "archetype",
+      "name": "outer_inner_gap",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "A",
+      "condition": "base",
+      "level": "archetype",
+      "name": "triangular_milestones",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 31,
+        "lexical": 1
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "subskill",
+      "name": "field_processing",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 15,
+        "lexical": 1
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "subskill",
+      "name": "string_transform",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 16
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "archetype",
+      "name": "combined_field_length",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "archetype",
+      "name": "replace_upper_prefix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "archetype",
+      "name": "reverse_lower_suffix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      }
+    },
+    {
+      "seed": null,
+      "capability": "B",
+      "condition": "base",
+      "level": "archetype",
+      "name": "select_reversed_field",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 7,
+        "lexical": 1
+      }
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 9,
+        "lexical": 3,
+        "semantic": 10,
+        "syntax": 10
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "subskill",
+      "name": "array_reduction",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 9,
+        "hidden_test_semantic": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "subskill",
+      "name": "numeric_iteration",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 2,
+        "lexical": 3,
+        "semantic": 1,
+        "syntax": 10
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "archetype",
+      "name": "alternating_accumulator",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 1,
+        "lexical": 3,
+        "semantic": 1,
+        "syntax": 3
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "archetype",
+      "name": "negative_position_weight",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 1,
+        "hidden_test_semantic": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "archetype",
+      "name": "outer_inner_gap",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "A",
+      "level": "archetype",
+      "name": "triangular_milestones",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 7,
+        "hidden_test_semantic": 1
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 8,
+      "failure_taxonomy": {
+        "syntax": 5,
+        "semantic": 11,
+        "success": 8,
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "subskill",
+      "name": "field_processing",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8,
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "subskill",
+      "name": "string_transform",
+      "n": 16,
+      "hidden_pass_count": 8,
+      "failure_taxonomy": {
+        "syntax": 5,
+        "semantic": 3,
+        "success": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "archetype",
+      "name": "combined_field_length",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "archetype",
+      "name": "replace_upper_prefix",
+      "n": 8,
+      "hidden_pass_count": 8,
+      "failure_taxonomy": {
+        "success": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "archetype",
+      "name": "reverse_lower_suffix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 3,
+        "syntax": 5
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20260925,
+      "capability": "B",
+      "level": "archetype",
+      "name": "select_reversed_field",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 8,
+        "syntax": 8,
+        "semantic": 9,
+        "success": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "subskill",
+      "name": "array_reduction",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 9,
+        "hidden_test_semantic": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "subskill",
+      "name": "numeric_iteration",
+      "n": 16,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 1,
+        "syntax": 8,
+        "success": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "archetype",
+      "name": "alternating_accumulator",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "archetype",
+      "name": "negative_position_weight",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 1,
+        "hidden_test_semantic": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "archetype",
+      "name": "outer_inner_gap",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "A",
+      "level": "archetype",
+      "name": "triangular_milestones",
+      "n": 8,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "success": 7,
+        "hidden_test_semantic": 1
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8,
+        "syntax": 24
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "subskill",
+      "name": "field_processing",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8,
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "subskill",
+      "name": "string_transform",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 16
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "archetype",
+      "name": "combined_field_length",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "archetype",
+      "name": "replace_upper_prefix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "archetype",
+      "name": "reverse_lower_suffix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261013,
+      "capability": "B",
+      "level": "archetype",
+      "name": "select_reversed_field",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 9,
+        "syntax": 8,
+        "semantic": 8,
+        "success": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "subskill",
+      "name": "array_reduction",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8,
+        "hidden_test_semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "subskill",
+      "name": "numeric_iteration",
+      "n": 16,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 1,
+        "syntax": 8,
+        "success": 7
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "archetype",
+      "name": "alternating_accumulator",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "archetype",
+      "name": "negative_position_weight",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "hidden_test_semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "archetype",
+      "name": "outer_inner_gap",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "A",
+      "level": "archetype",
+      "name": "triangular_milestones",
+      "n": 8,
+      "hidden_pass_count": 7,
+      "failure_taxonomy": {
+        "success": 7,
+        "hidden_test_semantic": 1
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "overall",
+      "name": "all",
+      "n": 32,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 5,
+        "semantic": 19,
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "subskill",
+      "name": "field_processing",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "syntax": 5,
+        "semantic": 3,
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "subskill",
+      "name": "string_transform",
+      "n": 16,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 16
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "archetype",
+      "name": "combined_field_length",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "runtime": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "archetype",
+      "name": "replace_upper_prefix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "archetype",
+      "name": "reverse_lower_suffix",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 8
+      },
+      "condition": "post_A"
+    },
+    {
+      "seed": 20261119,
+      "capability": "B",
+      "level": "archetype",
+      "name": "select_reversed_field",
+      "n": 8,
+      "hidden_pass_count": 0,
+      "failure_taxonomy": {
+        "semantic": 3,
+        "syntax": 5
+      },
+      "condition": "post_A"
+    }
+  ]
+}
