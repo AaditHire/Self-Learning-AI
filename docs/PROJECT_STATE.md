@@ -25,9 +25,11 @@ records are under `research/artifacts/phase3c-dev1/raw/`.
 Phase 3C `EVAL_A` cannot be represented as untouched confirmatory evidence.
 No B, replay, retention, new confirmatory suite, or sealed final-paper holdout
 access occurred. Six final adapters and essential records were copied to the
-established Git/Git LFS preservation paths with SHA-256 verification; consult
-`research/manifests/phase3c_dev1_remote_restore_verification.json` for the
-final off-machine restore result. STOP for independent scientific review.
+established Git/Git LFS preservation paths. All 81 artifacts, including the
+six adapters, were restored from a fresh remote clone and matched original
+size and SHA-256; see
+`research/manifests/phase3c_dev1_remote_restore_verification.json`.
+STOP for independent scientific review.
 
 ## Phase 3C completed STOP and diagnostic boundary
 
