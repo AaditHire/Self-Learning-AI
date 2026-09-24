@@ -1,0 +1,1640 @@
+{
+  "phase": "3C-DIAG",
+  "status": "POST_HOC_DESCRIPTIVE_STRUCTURAL_AUDIT",
+  "source": "frozen pre-model overlap audit, A manifests/references, and existing pre-B outcomes",
+  "interpretation": "String similarity, prompt Jaccard, and coarse AST proxies are descriptive; they do not explain causal transfer.",
+  "records": [
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-01",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 1. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+1; print the total.",
+      "train_prompt_jaccard": 0.3448275862068966,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8995633187772926
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-01",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 1; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+1; print the total.",
+      "train_prompt_jaccard": 0.55,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+          "generated_nearest_training_archetype": "even_count_shift",
+          "generated_nearest_training_code_similarity": 0.7455197132616488
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-01",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 1.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 1.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.9548387096774194
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.9548387096774194
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-01",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 1.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 1.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-02",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 2. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+1; print the total.",
+      "train_prompt_jaccard": 0.3793103448275862,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-02",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 2; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+1; print the total.",
+      "train_prompt_jaccard": 0.6,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "lexical",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-02",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 2.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-02",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 2.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-02",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 2.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-02",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 2.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-03",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 3. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-03",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+3; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-03",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 3; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-03",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+3; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+          "generated_nearest_training_archetype": "even_count_shift",
+          "generated_nearest_training_code_similarity": 0.8212927756653993
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-03",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 3.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-03",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 3.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-03",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 3.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-03",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 3.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-04",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 4. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-04",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+4; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-04",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 4; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-04",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+4; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "lexical",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-04",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 4.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-04",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 4.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-04",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 4.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-04",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 4.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-05",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 5. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-05",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+5; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-05",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 5; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-05",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+5; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+          "generated_nearest_training_archetype": "even_count_shift",
+          "generated_nearest_training_code_similarity": 0.8212927756653993
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-05",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 5.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-05",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 5.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-05",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 5.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-05",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 5.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-06",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 6. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-06",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+6; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-06",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 6; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-06",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+6; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+          "generated_nearest_training_archetype": "even_count_shift",
+          "generated_nearest_training_code_similarity": 0.8658008658008658
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-06",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 6.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-06",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 6.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9854604200323102
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-06",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 6.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-06",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 6.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-07",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 7. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-07",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+7; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-07",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 7; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-07",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+7; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+          "generated_nearest_training_archetype": "even_count_shift",
+          "generated_nearest_training_code_similarity": 0.8212927756653993
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-07",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 7.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-07",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 7.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-07",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 7.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-07",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 7.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-TRIANGULAR_MILESTONES-08",
+      "family": "numeric_iteration",
+      "archetype": "triangular_milestones",
+      "eval_prompt": "Read nonnegative n. Maintain the running sum of integers 1 through i. At each i divisible by three, add that running sum to an answer initially 8. Print the answer.",
+      "eval_semantic_operations": [
+        "running_triangular",
+        "multiple_of_three_milestone"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>+=>IF>%>==>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { ID+=ID. IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-08",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+8; print the total.",
+      "train_prompt_jaccard": 0.36666666666666664,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.8947368421052632,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9586206896551724,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.9702970297029703
+        },
+        "20261013": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        },
+        "20261119": {
+          "hidden_pass": true,
+          "failure_category": "success",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.8477366255144033
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-NU-ALTERNATING_ACCUMULATOR-08",
+      "family": "numeric_iteration",
+      "archetype": "alternating_accumulator",
+      "eval_prompt": "Read nonnegative n. Start total at 8; from i=1 through n add odd i and subtract even i; print total.",
+      "eval_semantic_operations": [
+        "parity_branch",
+        "alternating_sum"
+      ],
+      "eval_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>-=>ELSE>+=>DISPLAYNL",
+      "eval_reference_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID-=ID. } ELSE { ID+=ID. } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-08",
+      "nearest_train_prompt": "Read nonnegative n. For each odd i from 1 through n, add 2*i+8; print the total.",
+      "train_prompt_jaccard": 0.5714285714285714,
+      "nearest_train_code_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "nearest_train_code_archetype": "even_count_shift",
+      "nearest_train_code_normalized": "NUMBER ID. INPUT(ID). NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<=ID, ID++) { IF (ID%ID==ID) { ID+=ID. } } DISPLAYNL(ID*ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "even_index_filter",
+        "count",
+        "affine_output"
+      ],
+      "nearest_train_code_ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*>+",
+      "train_code_similarity": 0.9118773946360154,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9784172661870504,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "lexical",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "syntax",
+          "generated_nearest_training_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+          "generated_nearest_training_archetype": "odd_linear_bonus",
+          "generated_nearest_training_code_similarity": 0.944954128440367
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-NEGATIVE_POSITION_WEIGHT-08",
+      "family": "array_reduction",
+      "archetype": "negative_position_weight",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. For each negative entry add its magnitude times its one-based position; then add 8.",
+      "eval_semantic_operations": [
+        "negative_array_filter",
+        "position_weighted_magnitude"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>->*>+>DISPLAYNL",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]<ID) { ID+=(ID-ID[ID])*(ID+ID). } } DISPLAYNL(ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-08",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 8.",
+      "train_prompt_jaccard": 0.37037037037037035,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.9514563106796117,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.92018779342723,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "hidden_test_semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+          "generated_nearest_training_archetype": "positive_square_sum",
+          "generated_nearest_training_code_similarity": 0.9742765273311897
+        }
+      }
+    },
+    {
+      "task_id": "P3C-A-EVAL-AR-OUTER_INNER_GAP-08",
+      "family": "array_reduction",
+      "archetype": "outer_inner_gap",
+      "eval_prompt": "Read four pipe-delimited numbers into an array. Print the absolute difference between the sum of the outer pair and the sum of the inner pair, plus 8.",
+      "eval_semantic_operations": [
+        "outer_inner_pair_sums",
+        "absolute_gap"
+      ],
+      "eval_ast_proxy_signature": "IMPORT>INPUT>IMPORT>DISPLAYNL>+>->->+",
+      "eval_reference_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). IMPORT ID. NUMBER[] ID=[ID,ID,ID,ID]. DISPLAYNL(ID.ID(ID[ID]+ID[ID]-ID[ID]-ID[ID])+ID).",
+      "nearest_train_prompt_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-08",
+      "nearest_train_prompt": "Read four pipe-delimited numbers into an array. Sum squares of positive entries and add 8.",
+      "train_prompt_jaccard": 0.48,
+      "nearest_train_code_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "nearest_train_code_archetype": "count_above_shift",
+      "nearest_train_code_normalized": "IMPORT ID. SENTENCE ID. INPUT(ID). SENTENCE[] ID = ID.ID(ID, \"ID\"). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER ID = ID.ID(ID[ID]). NUMBER[] ID=[ID,ID,ID,ID]. NUMBER ID=ID. LOOP (NUMBER ID=ID TILL ID<ID, ID++) { IF (ID[ID]>ID) { ID+=ID. } } DISPLAYNL(ID+ID).",
+      "nearest_train_code_semantic_operations": [
+        "array_threshold",
+        "count",
+        "offset"
+      ],
+      "nearest_train_code_ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+      "train_code_similarity": 0.6831858407079646,
+      "train_ast_proxy_exact": false,
+      "semantic_operation_overlap": [],
+      "prior_code_similarity": 0.9173228346456693,
+      "per_seed": {
+        "20260925": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.7912885662431942
+        },
+        "20261013": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        },
+        "20261119": {
+          "hidden_pass": false,
+          "failure_category": "semantic",
+          "generated_nearest_training_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+          "generated_nearest_training_archetype": "count_above_shift",
+          "generated_nearest_training_code_similarity": 0.8117443868739206
+        }
+      }
+    }
+  ]
+}

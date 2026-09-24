@@ -1,8 +1,36 @@
 # Project state
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
-Current phase: Phase 3C pre-execution implementation and protocol verification complete; STOP for independent scientific review before model execution
+Current phase: Phase 3C completed prospectively at `STOP_before_B_no_tuning`; Phase 3C-DIAG is a separate post-hoc diagnostic for independent review
+
+## Phase 3C completed STOP and diagnostic boundary
+
+Final confirmatory Phase 3C commit: `12e2b2b80502ab962ca32c8c5c92cbdb9afc42ad`.
+The three frozen A seeds scored 0/32, 7/32, and 7/32 on EVAL_A, all below
+the preregistered 24/32 overall floor; array reduction was 0/16 in every
+seed. The runner stopped before naive or replay B training, with no rescue
+run. The report is `research/results/PHASE_3C/README.md`. Three final A
+adapters and 45 other produced files were copied to the existing Git/Git LFS
+remote; all 48 restored files passed SHA-256 and size verification from a
+fresh separate clone.
+
+**Phase 3C EVAL_A status: `CONSUMED_FOR_CONFIRMATORY_USE`.** It has been used
+for the completed confirmatory STOP decision and is now being inspected in
+Phase 3C-DIAG alongside post-hoc training-set inference. It may inform
+exploratory diagnosis but must never be reused as untouched confirmatory
+evidence for a recipe developed after this STOP. Any later confirmatory
+retention experiment needs fresh untouched evaluation material and separate
+independent review. The sealed final-paper holdout remains unopened. No new
+continual-learning intervention is authorized by this diagnostic work.
+
+The Phase 3C-DIAG code, deterministic audits, model-inference records, and
+interpretation are kept under `scripts/diagnose_phase3c_a_training.py`,
+`scripts/audit_phase3c_diag_pipeline.py`,
+`scripts/audit_phase3c_diag_structure.py`, and
+`research/results/PHASE_3C_DIAG/`. This exploratory work does not alter the
+frozen Phase 3C result.
+
 Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
 Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
 Phase 3A measured A-to-B sequential acquisition and A forgetting. Phase 3B
@@ -60,19 +88,20 @@ The three-seed 20% matched replay schedule is
 gate requires, in every seed, at least 24/32 overall, 10/16 in each A
 subskill, and 2/8 in each A evaluation archetype. Failure requires STOP before
 B training. Exact acquired-task retention and aggregate post-B A are
-co-primary. No Phase 3C gradients or confirmatory model evaluations have run;
-the final-paper holdout remains unopened. Execution is not authorized by this
-design artifact; STOP for independent review.
+co-primary. At design freeze, no Phase 3C gradients or confirmatory model
+evaluations had run; subsequent execution and STOP are recorded above. The
+final-paper holdout remains unopened. The design artifact alone did not
+authorize execution.
 
 The subsequent pre-execution verification is recorded in
 `research/results/PHASE_3C_PREEXECUTION/verification.md`. Future execution
 scripts and their support/tokenizer hashes are frozen by
 `research/protocols/phase3c_execution_manifest.json`; a machine-generated
 separation audit confirms all replay examples come from the frozen A training
-set. Synthetic tests passed without model inference or gradients. The current
-host's hardware/package snapshot is preflight information and will be
-captured again during any later authorized run. No Phase 3C model execution
-has begun, and off-machine backup of future model artifacts remains pending.
+set. Synthetic tests passed without model inference or gradients. The host's
+hardware/package snapshot was captured again during the authorized run. The
+completed Phase 3C execution and verified off-machine restore are recorded
+above.
 
 ## Phase 3A recovery pointer
 

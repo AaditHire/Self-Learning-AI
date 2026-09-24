@@ -1,0 +1,404 @@
+{
+  "phase": "3C-DIAG",
+  "status": "PASS_DETERMINISTIC_PIPELINE_AUDIT",
+  "no_model_generation_or_gradients": true,
+  "training_rows": 60,
+  "eval_rows": 32,
+  "training_reference_cases_verified_before_model_run": 300,
+  "eval_reference_cases_verified_before_model_run": 160,
+  "user_prompt_format_identical": true,
+  "train_inference_prompt_token_ids_identical": true,
+  "answer_masks_valid": true,
+  "targets_nonempty": true,
+  "max_length": 320,
+  "max_observed_train_tokens": 237,
+  "min_supervised_tokens": 41,
+  "max_supervised_tokens": 116,
+  "training_tokens": [
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-01",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-01",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-01",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-01",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-02",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-02",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-02",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-02",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-03",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-03",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-03",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-03",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-04",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-04",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-04",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-04",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-05",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-05",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-05",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-05",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-06",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-06",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-06",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-06",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-07",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-07",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-07",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-07",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-08",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-08",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-08",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-08",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-09",
+      "total_tokens": 165,
+      "supervised_tokens": 41,
+      "prompt_tokens": 124
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-09",
+      "total_tokens": 171,
+      "supervised_tokens": 52,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-09",
+      "total_tokens": 233,
+      "supervised_tokens": 115,
+      "prompt_tokens": 118
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-09",
+      "total_tokens": 233,
+      "supervised_tokens": 113,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-10",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-10",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-10",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-10",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-11",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-11",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-11",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-11",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-12",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-12",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-12",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-12",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-13",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-13",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-13",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-13",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-14",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-14",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-14",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-14",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    },
+    {
+      "example_id": "P3C-A-TR-NU-ODD_LINEAR_BONUS-15",
+      "total_tokens": 167,
+      "supervised_tokens": 42,
+      "prompt_tokens": 125
+    },
+    {
+      "example_id": "P3C-A-TR-NU-EVEN_COUNT_SHIFT-15",
+      "total_tokens": 173,
+      "supervised_tokens": 53,
+      "prompt_tokens": 120
+    },
+    {
+      "example_id": "P3C-A-TR-AR-POSITIVE_SQUARE_SUM-15",
+      "total_tokens": 235,
+      "supervised_tokens": 116,
+      "prompt_tokens": 119
+    },
+    {
+      "example_id": "P3C-A-TR-AR-COUNT_ABOVE_SHIFT-15",
+      "total_tokens": 237,
+      "supervised_tokens": 115,
+      "prompt_tokens": 122
+    }
+  ],
+  "run_checks": {
+    "20260925": {
+      "steps": 24,
+      "finite_logged_losses_gradients_lr": true,
+      "training_prompt_tokens_match": true,
+      "stored_eval_task_and_case_scores_match": true,
+      "base_hashes_match": true
+    },
+    "20261013": {
+      "steps": 24,
+      "finite_logged_losses_gradients_lr": true,
+      "training_prompt_tokens_match": true,
+      "stored_eval_task_and_case_scores_match": true,
+      "base_hashes_match": true
+    },
+    "20261119": {
+      "steps": 24,
+      "finite_logged_losses_gradients_lr": true,
+      "training_prompt_tokens_match": true,
+      "stored_eval_task_and_case_scores_match": true,
+      "base_hashes_match": true
+    }
+  },
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "interpretation": "No concrete defect found in these deterministic checks; absence of a detected defect is not proof that the complete pipeline is defect-free."
+}
