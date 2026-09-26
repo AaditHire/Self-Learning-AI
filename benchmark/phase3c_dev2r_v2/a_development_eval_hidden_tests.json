@@ -1,0 +1,1298 @@
+{
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "8.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "9.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "10.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "11.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "12.0"
+    }
+  ],
+  "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "7\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "11\n",
+      "expected_stdout": "9.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "19\n",
+      "expected_stdout": "13.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "7.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "7.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "8.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "6.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "5.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "1.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "2.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "2.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "3.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "3.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "4.0"
+    }
+  ],
+  "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04": [
+    {
+      "case_id": "case-1",
+      "stdin": "0|0|0|0\n",
+      "expected_stdout": "4.0"
+    },
+    {
+      "case_id": "case-2",
+      "stdin": "-7|4|-3|8\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-3",
+      "stdin": "5|-6|2|-1\n",
+      "expected_stdout": "5.0"
+    },
+    {
+      "case_id": "case-4",
+      "stdin": "1|9|-5|-2\n",
+      "expected_stdout": "6.0"
+    },
+    {
+      "case_id": "case-5",
+      "stdin": "-4|-8|7|3\n",
+      "expected_stdout": "5.0"
+    }
+  ]
+}

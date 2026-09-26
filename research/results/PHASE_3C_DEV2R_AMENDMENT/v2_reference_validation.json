@@ -1,0 +1,3132 @@
+{
+  "status": "PASS",
+  "references": 48,
+  "semantic_cases": 240,
+  "passed_references": 48,
+  "passed_cases": 240,
+  "replacement_references": 16,
+  "replacement_cases": 80,
+  "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "results": [
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "11.0",
+          "expected_stdout": "11.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "12.0",
+          "expected_stdout": "12.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 109,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 113,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 139,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 104,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "11.0",
+          "expected_stdout": "11.0",
+          "elapsed_ms": 116,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 103,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 111,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 114,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 119,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 120,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 116,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 118,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 112,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 110,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 114,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 10.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "10.0",
+          "expected_stdout": "10.0",
+          "elapsed_ms": 117,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 11.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "11.0",
+          "expected_stdout": "11.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 12.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "12.0",
+          "expected_stdout": "12.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 115,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 109,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 9.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "9.0",
+          "expected_stdout": "9.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for n: 13.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "13.0",
+          "expected_stdout": "13.0",
+          "elapsed_ms": 115,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 140,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 139,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 155,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 124,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 139,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 151,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 139,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 145,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 122,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-02",
+      "group": "primitive_sanity",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 139,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 129,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 132,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 132,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 141,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 121,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 137,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 7.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "7.0",
+          "expected_stdout": "7.0",
+          "elapsed_ms": 117,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 126,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "group": "novel_composition",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 8.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "8.0",
+          "expected_stdout": "8.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 128,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 137,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 123,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 124,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 125,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 137,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 129,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 134,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 122,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 133,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 1.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "1.0",
+          "expected_stdout": "1.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 2.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "2.0",
+          "expected_stdout": "2.0",
+          "elapsed_ms": 146,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 120,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 3.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "3.0",
+          "expected_stdout": "3.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 128,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 133,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "group": "structural_transfer",
+      "hidden_pass": true,
+      "cases_passed": 5,
+      "cases_total": 5,
+      "error_phase": null,
+      "case_results": [
+        {
+          "case_id": "case-1",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 4.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "4.0",
+          "expected_stdout": "4.0",
+          "elapsed_ms": 151,
+          "passed": true
+        },
+        {
+          "case_id": "case-2",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 121,
+          "passed": true
+        },
+        {
+          "case_id": "case-3",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-4",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 6.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "6.0",
+          "expected_stdout": "6.0",
+          "elapsed_ms": 127,
+          "passed": true
+        },
+        {
+          "case_id": "case-5",
+          "phase": "success",
+          "exit_code": 0,
+          "stdout": "Enter value for line: 5.0\r\n",
+          "stderr": "",
+          "normalized_stdout": "5.0",
+          "expected_stdout": "5.0",
+          "elapsed_ms": 127,
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

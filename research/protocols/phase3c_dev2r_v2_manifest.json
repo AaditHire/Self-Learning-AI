@@ -1,0 +1,139 @@
+{
+  "phase": "3C-DEV2R-v2",
+  "status": "FROZEN_PRE_EXECUTION",
+  "model_execution_authorized": false,
+  "original_design_commit": "cdff638153df13c5da2d77b4eda908385c1a6423",
+  "pre_execution_stop_commit": "c5d26366345cb228c3bafb7c64d51ec58d39ca95",
+  "structural_essentiality_commit": "1815279f0f8acf4266aab58b1cf2215edf55efe4",
+  "amendment_commit_identity": "Git commit containing this manifest (SHA reported after commit creation)",
+  "original_design_manifest_normalized_sha256": "2b1d07cb2241431445a2df78170bcab2b441d09a345fa0ea9298591f5bd63cfd",
+  "hash_policy": "LF-normalized SHA-256 for text inputs; byte-exact SHA-256 for compiler binaries and adapter weights",
+  "old_execution_code_sha256": "80143887aabda504289d5b9d3be87cf3711c66cd18e344a312445509e497d1d3",
+  "new_execution_code_sha256": "f36d7bab748407d79d3d9efb51cbc94b26c99bf96a3c81659c35a8de82565375",
+  "input_sha256": {
+    ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "benchmark/phase3c_dev2r/a_development_eval_hidden_tests.json": "04ba559358f63b58170e9e7d0bf250b5b1458f75fd38b9e5c1ca96cc63be868c",
+    "benchmark/phase3c_dev2r/a_development_eval_references.json": "445570b6ebfc3a7e94aa94ac06e5b4a07bc01429640ca2535ddec7a44ee416e7",
+    "benchmark/phase3c_dev2r/a_development_eval_tasks.json": "96f3188d34203af77aff9b47f13ad3db0ef6c52df4e90f54c3f0c0a4a2bee328",
+    "benchmark/phase3c_dev2r_v2/a_development_eval_hidden_tests.json": "477982b11f6931d2da106958f8e00c0a0d535a32f613ee2585ce8acb729744e9",
+    "benchmark/phase3c_dev2r_v2/a_development_eval_references.json": "0af18bc06a5c5785ca0faa5d396f5edc59ab0509d9e2c8a6310edfd7aba23d80",
+    "benchmark/phase3c_dev2r_v2/a_development_eval_tasks.json": "9d33db75d40b2013bf45c8aa2c9f2d6d679854c107addb2cbc7eab9f18793d58",
+    "data/phase3c_dev2/a_composition_training_examples.json": "1a91cd780cbe8d6938ad6e2dfca5742e41e45e4c867c941e587f9260372d1dcc",
+    "data/phase3c_dev2/a_composition_training_hidden_tests.json": "fc8e1b7646d71ffb6daf316e96dc430a53056b84f4272bf186436ed206d780ea",
+    "data/phase3c_dev2/a_composition_training_references.json": "afd8642a3f2a5e818805758d5a98ab8d31bd48acf6a00e92397b8181769f71bb",
+    "data/phase3c_dev2/a_isolated_training_examples.json": "2bf65aa0c48486829c215e0ccaff3d9126a4d18cfb76bee9e1caa5df30b410d1",
+    "data/phase3c_dev2/a_isolated_training_hidden_tests.json": "3bee6679b6313f012e9ee198afed17fb74ee30da07be58d55ad35e133910e643",
+    "data/phase3c_dev2/a_isolated_training_references.json": "d25670f3f05d31290786250deba747e7ff74f104b33f57891a7b8a6b49981dcc",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "research/protocols/phase3c_dev2_config.json": "ee339166b64cea6f17614866e6cab92d424cf261a4e82cbd2a5f166b84f34136",
+    "research/protocols/phase3c_dev2_protocol.md": "6fff85ecc95c2ef4c8a1efbf1f6e3715d8222f350080cd4a9537dc3cdc351f18",
+    "research/protocols/phase3c_dev2_schedule.json": "7fd81095ae7b0fab255660892800c1288729f5a59daea364ce2cff1040c71d95",
+    "research/protocols/phase3c_dev2r_protocol.md": "8c196c56c6a453d851489fe65d87c9bc9af8a895a1d9e5afe4719ebb1c280d69",
+    "research/protocols/phase3c_dev2r_v2_amendment.md": "e036404a6bffb81e0e9da01d681b529edc5f90dcc98fe34e81deb8f8499c18bd",
+    "research/results/PHASE_3C_DEV2R/reference_validation.json": "c80e8dc072b2e9267264b73d306eec14b79e12857861aeb89b1c153555163391",
+    "research/results/PHASE_3C_DEV2R/structural_audit.json": "f51a990b2589123c3159839309c87e499fbde64744de38a5725aabb65515b849",
+    "research/results/PHASE_3C_DEV2R/structural_pairs.json": "34e439b7e28856e7b752d11ed6c728cb8c119146a0f96ac0c94d6b8397cb87ec",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/primitive_sanity_original_essentiality.json": "fe2fe1920d4be689637c379d87a4a1f0e416bc5646b3743bc04d08de26e0f787",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/replacement_map.json": "d0e6f5876992ff0fee65a6c639eb562cb73ed9f10c557ebc3d19df09ac7c62ee",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/replacement_structural_pairs.json": "484ca4eae93b63ba26463ddf240fe35e9da401c11f66eb996b9f52d1074c4341",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/report.md": "91583caeaa45435c63c4b2fee420d4e0c6a51159d011d90868a3523f1630aad5",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/v2_pre_execution_audit.json": "145b9635af09552e4d1b42a865feb2e3ed85b86b8d0e4a50d6954e3df4584084",
+    "research/results/PHASE_3C_DEV2R_AMENDMENT/v2_reference_validation.json": "0479bf2cbbe0b39f121db29daceee5bd0e15e8695a46e1acb9f23b8cef58571c",
+    "research/results/PHASE_3C_DEV2R_ESSENTIALITY/essentiality_audit.json": "6dd020068db6c18b757e7239cdf3b26ab5c7fde43d2bd10fd2e144296c16e73a",
+    "research/results/PHASE_3C_DEV2R_PREEXEC_STOP/api_construct_coverage.json": "319f6986e2d784142b32e2c9e024b8ad4d770bd9f1f5ba8fe2ad403b315fd365",
+    "scripts/audit_phase3c_dev2r.py": "468a70099b023cb9bc54dcdbf27608384f7f6649af2ab800ea7e11bd1331d05a",
+    "scripts/audit_phase3c_dev2r_sanity_essentiality.py": "297a8e0a7b1d7383f856d713794cb09ef91f3826ac588d56e6f066f629c19315",
+    "scripts/audit_phase3c_dev2r_v2.py": "d19e865a39ad8e2f92f69ec7952b2d762c0bb2f117e15ff5829943a4949a65ef",
+    "scripts/build_phase3c_dev2r_data.py": "f6754703513e415577b7ff25d9e12f00061ddbef2dd0158bd1338a5cb355e7a0",
+    "scripts/build_phase3c_dev2r_v2_sanity.py": "d3e7f8789d2ea207c886a10ab6d86aeb1553c84b7f2fa8c62e08f5bff2512139",
+    "scripts/evaluate_phase3c_dev2r.py": "f36d7bab748407d79d3d9efb51cbc94b26c99bf96a3c81659c35a8de82565375",
+    "scripts/freeze_phase3c_dev2r.py": "da970be2cdd78d4bfb23b0891446a5689aff6c75c19e160e838c4e2098f92c50",
+    "scripts/freeze_phase3c_dev2r_v2.py": "37ba8497f899993a3dabb8fe13eac1c82231cd3d8c0454143d4d5b0efbae54d0",
+    "src/self_learning_ai/benchmark.py": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+    "src/self_learning_ai/compiler.py": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+    "src/self_learning_ai/dev2r_evaluation.py": "8120bad8356481d31ed39cad22af73ff55bce2fe550fc49f6209f6b0eec617ff",
+    "tests/test_phase3c_dev2r_evaluation.py": "5803beca52188d27d22aa7ec873e22d907e431a74c324d30dd3654834634e477"
+  },
+  "suite_version": "phase3c_dev2r_v2",
+  "suite_file_sha256": {
+    "v1": {
+      "tasks": "96f3188d34203af77aff9b47f13ad3db0ef6c52df4e90f54c3f0c0a4a2bee328",
+      "references": "445570b6ebfc3a7e94aa94ac06e5b4a07bc01429640ca2535ddec7a44ee416e7",
+      "hidden_tests": "04ba559358f63b58170e9e7d0bf250b5b1458f75fd38b9e5c1ca96cc63be868c"
+    },
+    "v2": {
+      "tasks": "9d33db75d40b2013bf45c8aa2c9f2d6d679854c107addb2cbc7eab9f18793d58",
+      "references": "0af18bc06a5c5785ca0faa5d396f5edc59ab0509d9e2c8a6310edfd7aba23d80",
+      "hidden_tests": "477982b11f6931d2da106958f8e00c0a0d535a32f613ee2585ce8acb729744e9"
+    }
+  },
+  "original_suite_preserved": true,
+  "primitive_sanity_replacements": 16,
+  "scientific_gates": {
+    "primitive_sanity_task_essential": "16/16",
+    "novel_composition_primitive": "16/16",
+    "novel_composition_signature_absence": "16/16",
+    "structural_transfer_primitive_and_task_essential": "16/16"
+  },
+  "reference_validation": {
+    "references": 48,
+    "cases": 240,
+    "passed": 240
+  },
+  "adapter_identity": {
+    "20270925/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+      "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+    },
+    "20270925/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+      "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+    },
+    "20271013/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+      "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+    },
+    "20271013/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+      "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+    },
+    "20271119/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+      "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+    },
+    "20271119/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+      "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+    }
+  },
+  "historical_own_training_completed": "20270925/isolated:60/60",
+  "pending_own_training_cells": [
+    "20270925/composition",
+    "20271013/isolated",
+    "20271013/composition",
+    "20271119/isolated",
+    "20271119/composition"
+  ],
+  "original_dev2_development_status": "CONSUMED_FROM_ATTEMPTED_USE",
+  "sealed_final_paper_holdout_touched": false,
+  "model_inference_performed_under_dev2r": false
+}

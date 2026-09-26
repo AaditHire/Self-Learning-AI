@@ -1,0 +1,114 @@
+[
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_ODD_INDEX-01",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_ODD_INDEX-02",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_RESIDUE_TWO-01",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_RESIDUE_TWO-02",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_DIVISOR_INDEX-01",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_DIVISOR_INDEX-02",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_FIRST_HALF-01",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_FIRST_HALF-02",
+    "new_task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_NEGATIVE_VALUE-01",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_NEGATIVE_VALUE-02",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_EVEN_VALUE-01",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_EVEN_VALUE-02",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_LARGE_MAGNITUDE-01",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_LARGE_MAGNITUDE-02",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_VALUE_EXCEEDS_INDEX-01",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  },
+  {
+    "old_task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_VALUE_EXCEEDS_INDEX-02",
+    "new_task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-02",
+    "reason": "Original task requires a negative -1 output on no match, absent from both original training target/output distributions; replacement tests the same primitive with a nonnegative offset count.",
+    "same_semantic_primitive": true,
+    "same_frozen_case_stdin": true
+  }
+]
