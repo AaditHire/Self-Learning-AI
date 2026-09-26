@@ -1,0 +1,1218 @@
+[
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_ODD_INDEX-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_odd_index",
+    "prompt": "Read nonnegative n. Print the first positive index through n that is odd index; print -1 when there is no match.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "first_index(odd_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_ODD_INDEX-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_odd_index",
+    "prompt": "Read nonnegative n. Print the last positive index through n that is odd index; print -1 when there is no match.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "last_index(odd_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_RESIDUE_TWO-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_residue_two",
+    "prompt": "Read nonnegative n. Print the first positive index through n that is index with remainder two modulo three; print -1 when there is no match.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "first_index(residue_two)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_RESIDUE_TWO-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_residue_two",
+    "prompt": "Read nonnegative n. Print the last positive index through n that is index with remainder two modulo three; print -1 when there is no match.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "last_index(residue_two)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_DIVISOR_INDEX-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_divisor_index",
+    "prompt": "Read nonnegative n. Print the first positive index through n that is positive divisor of n; print -1 when there is no match.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "first_index(divisor_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_DIVISOR_INDEX-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_divisor_index",
+    "prompt": "Read nonnegative n. Print the last positive index through n that is positive divisor of n; print -1 when there is no match.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "last_index(divisor_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-FIRST_FIRST_HALF-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_first_half",
+    "prompt": "Read nonnegative n. Print the first positive index through n that is index in the first half through n; print -1 when there is no match.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "first_index(first_half)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>*><=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-PRIMITIVE_SANITY-LAST_FIRST_HALF-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_first_half",
+    "prompt": "Read nonnegative n. Print the last positive index through n that is index in the first half through n; print -1 when there is no match.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "last_index(first_half)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>*><=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and index with remainder two modulo three, or both positive divisor of n and index in the first half through n. Add 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,residue_two),intersect(divisor_index,first_half))+1",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and index with remainder two modulo three, or both positive divisor of n and index in the first half through n. Add 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,residue_two),intersect(divisor_index,first_half))+2",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and index with remainder two modulo three, or both positive divisor of n and index in the first half through n. Add 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,residue_two),intersect(divisor_index,first_half))+3",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and index with remainder two modulo three, or both positive divisor of n and index in the first half through n. Add 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,residue_two),intersect(divisor_index,first_half))+4",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and positive divisor of n, or both index with remainder two modulo three and index in the first half through n. Add 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,divisor_index),intersect(residue_two,first_half))+1",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and positive divisor of n, or both index with remainder two modulo three and index in the first half through n. Add 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,divisor_index),intersect(residue_two,first_half))+2",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and positive divisor of n, or both index with remainder two modulo three and index in the first half through n. Add 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,divisor_index),intersect(residue_two,first_half))+3",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and positive divisor of n, or both index with remainder two modulo three and index in the first half through n. Add 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "composition_signature": "union(intersect(odd_index,divisor_index),intersect(residue_two,first_half))+4",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 1.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+1",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 2.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 3.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 4.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+4",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 1.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+1",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 2.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 3.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+    "split": "phase3c_dev2r_development",
+    "family": "numeric_iteration",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 4.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+4",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_NEGATIVE_VALUE-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_negative_value",
+    "prompt": "Read four pipe-separated numbers. Print the first zero-based position that is negative entry; print -1 when there is no match.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "first_index(negative_value)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_NEGATIVE_VALUE-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_negative_value",
+    "prompt": "Read four pipe-separated numbers. Print the last zero-based position that is negative entry; print -1 when there is no match.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "last_index(negative_value)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_EVEN_VALUE-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_even_value",
+    "prompt": "Read four pipe-separated numbers. Print the first zero-based position that is even-valued entry; print -1 when there is no match.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "first_index(even_value)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_EVEN_VALUE-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_even_value",
+    "prompt": "Read four pipe-separated numbers. Print the last zero-based position that is even-valued entry; print -1 when there is no match.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "last_index(even_value)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>%>==>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_LARGE_MAGNITUDE-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_large_magnitude",
+    "prompt": "Read four pipe-separated numbers. Print the first zero-based position that is entry whose square exceeds four; print -1 when there is no match.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "first_index(large_magnitude)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>*>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_LARGE_MAGNITUDE-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_large_magnitude",
+    "prompt": "Read four pipe-separated numbers. Print the last zero-based position that is entry whose square exceeds four; print -1 when there is no match.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "last_index(large_magnitude)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-FIRST_VALUE_EXCEEDS_INDEX-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "first_value_exceeds_index",
+    "prompt": "Read four pipe-separated numbers. Print the first zero-based position that is entry greater than its zero-based position; print -1 when there is no match.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "first_index(value_exceeds_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-PRIMITIVE_SANITY-LAST_VALUE_EXCEEDS_INDEX-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "primitive_sanity",
+    "archetype": "last_value_exceeds_index",
+    "prompt": "Read four pipe-separated numbers. Print the last zero-based position that is entry greater than its zero-based position; print -1 when there is no match.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "last_index(value_exceeds_index)",
+    "control_flow": "scan_store_index",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+1",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+2",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+3",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs1",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+4",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and entry whose square exceeds four, or both even-valued entry and entry greater than its zero-based position. Add 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,large_magnitude),intersect(even_value,value_exceeds_index))+1",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>*>IF>%>==>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and entry whose square exceeds four, or both even-valued entry and entry greater than its zero-based position. Add 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,large_magnitude),intersect(even_value,value_exceeds_index))+2",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>*>IF>%>==>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and entry whose square exceeds four, or both even-valued entry and entry greater than its zero-based position. Add 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,large_magnitude),intersect(even_value,value_exceeds_index))+3",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>*>IF>%>==>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "novel_composition",
+    "archetype": "union_pairs2",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and entry whose square exceeds four, or both even-valued entry and entry greater than its zero-based position. Add 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "union(intersect(negative_value,large_magnitude),intersect(even_value,value_exceeds_index))+4",
+    "control_flow": "one_pass_union_flag",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>*>IF>%>==>IF>IF>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read four pipe-separated numbers. Find the first position that is negative entry. In a separate traversal count positions strictly after it that are even-valued entry; if no anchor exists count zero. Add 1.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "suffix_after_first(negative_value,even_value)+1",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read four pipe-separated numbers. Find the first position that is negative entry. In a separate traversal count positions strictly after it that are even-valued entry; if no anchor exists count zero. Add 2.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "suffix_after_first(negative_value,even_value)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read four pipe-separated numbers. Find the first position that is negative entry. In a separate traversal count positions strictly after it that are even-valued entry; if no anchor exists count zero. Add 3.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "suffix_after_first(negative_value,even_value)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_suffix1",
+    "prompt": "Read four pipe-separated numbers. Find the first position that is negative entry. In a separate traversal count positions strictly after it that are even-valued entry; if no anchor exists count zero. Add 4.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "suffix_after_first(negative_value,even_value)+4",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 1.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+1",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 2.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 3.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  },
+  {
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+    "split": "phase3c_dev2r_development",
+    "family": "array_reduction",
+    "capability": "A",
+    "development_group": "structural_transfer",
+    "archetype": "anchored_prefix2",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 4.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+4",
+    "control_flow": "two_pass_dependent_anchor",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "required_regex": [],
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ]
+  }
+]

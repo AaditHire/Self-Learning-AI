@@ -1,0 +1,91 @@
+{
+  "phase": "3C-DEV2R",
+  "status": "FROZEN_PRE_INFERENCE",
+  "original_dev2_development_status": "CONSUMED_FROM_ATTEMPTED_USE",
+  "model_execution_authorized": false,
+  "base_config": "research/protocols/phase3c_dev2_config.json",
+  "input_sha256": {
+    "research/protocols/phase3c_dev2_config.json": "32dbf92f4b856dc48004044d7dcc3f462918249eba1246f6fe6e7bc791366c99",
+    "research/protocols/phase3c_dev2_protocol.md": "6fff85ecc95c2ef4c8a1efbf1f6e3715d8222f350080cd4a9537dc3cdc351f18",
+    "research/protocols/phase3c_dev2_schedule.json": "ae4791b0fc0cb568a533a9c5240fa933271a96023d113354230f98f0b4ff6940",
+    "research/protocols/phase3c_dev2r_protocol.md": "8c196c56c6a453d851489fe65d87c9bc9af8a895a1d9e5afe4719ebb1c280d69",
+    "benchmark/phase3c_dev2r/a_development_eval_tasks.json": "3e74501193139bfb85fadc6f1e0b1ca445ff796c83ad35f37472b34070ea8ccf",
+    "benchmark/phase3c_dev2r/a_development_eval_references.json": "87b67359df7362d0a927cd0922f01728c303fabafcab03abd394ea72a863fbf7",
+    "benchmark/phase3c_dev2r/a_development_eval_hidden_tests.json": "a26451a1561978f91a7888ddeada6cc89b3400b8240c6840be366bd3db179adb",
+    "research/results/PHASE_3C_DEV2R/structural_pairs.json": "f7bfdfc8b8c1579f285b20411997325823e020dabf0dfc0f6992880d6ac3c931",
+    "research/results/PHASE_3C_DEV2R/structural_audit.json": "382e786b2a3b240615799e05e322ef409016b0935e1771c7d355f8eb75a3e593",
+    "research/results/PHASE_3C_DEV2R/reference_validation.json": "1e70515d50e3e3b22f2026f17aa1570a253a93e6075ae00f9d04ecbaefee9793",
+    "data/phase3c_dev2/a_isolated_training_examples.json": "72169b1c5cd5ddaadd6ab7187f5db1666ba17946617b51248ead23b991eee640",
+    "data/phase3c_dev2/a_isolated_training_references.json": "60c85eaa4cad08c18f281f600e26d7a16979506066379c2791d3a222d1b3b233",
+    "data/phase3c_dev2/a_isolated_training_hidden_tests.json": "d065bdff1bdbbe3aa51eb8680bebabf9aa78d80923dbec671ec4ec91c394aada",
+    "data/phase3c_dev2/a_composition_training_examples.json": "a28aa75a038dd065ef7e2f7ba6b5e23e552fa235961452a4b0ef497092033053",
+    "data/phase3c_dev2/a_composition_training_references.json": "c1c639a0f811e827a5b21c0e6982855c6f8bcda693c1b10d886816a5da521a3a",
+    "data/phase3c_dev2/a_composition_training_hidden_tests.json": "9eca958c9f85bcbf3ed39b125b401067f25d122e7aee04274a079f0872391f7e",
+    "prompts/phase1t_system.txt": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+    "prompts/phase1t_user_template.txt": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+    "scripts/build_phase3c_dev2r_data.py": "f6754703513e415577b7ff25d9e12f00061ddbef2dd0158bd1338a5cb355e7a0",
+    "scripts/audit_phase3c_dev2r.py": "468a70099b023cb9bc54dcdbf27608384f7f6649af2ab800ea7e11bd1331d05a",
+    "scripts/freeze_phase3c_dev2r.py": "da970be2cdd78d4bfb23b0891446a5689aff6c75c19e160e838c4e2098f92c50",
+    "scripts/evaluate_phase3c_dev2r.py": "80143887aabda504289d5b9d3be87cf3711c66cd18e344a312445509e497d1d3",
+    "src/self_learning_ai/dev2r_evaluation.py": "5b4bf9d3a98595ef8a0094e7b3416c652c3476fcaa778f76b3df0ab7bb6308fe",
+    "tests/test_phase3c_dev2r_evaluation.py": "0dda9266986e17f13592be9881b4e4e4708be9507ae95bf8546f1f4fbfd61e77",
+    "src/self_learning_ai/benchmark.py": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+    "src/self_learning_ai/compiler.py": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+    ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+  },
+  "adapter_identity": {
+    "20270925/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+      "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+    },
+    "20270925/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+      "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+    },
+    "20271013/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+      "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+    },
+    "20271013/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+      "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+    },
+    "20271119/isolated": {
+      "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+      "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+    },
+    "20271119/composition": {
+      "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+      "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+      "size_bytes": 119801528,
+      "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+      "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+    }
+  },
+  "design_task_count": 48,
+  "reference_semantic_cases_passed": 240,
+  "structural_training_pairs": 5760,
+  "historical_own_training_completed": "20270925/isolated:60/60",
+  "pending_own_training_cells": [
+    "20270925/composition",
+    "20271013/isolated",
+    "20271013/composition",
+    "20271119/isolated",
+    "20271119/composition"
+  ]
+}

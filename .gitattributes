@@ -1,5 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+benchmark/phase3c_dev2r/** text eol=lf
+research/protocols/phase3c_dev2r* text eol=lf
+research/results/PHASE_3C_DEV2R/** text eol=lf
+scripts/*phase3c_dev2r.py text eol=lf
+src/self_learning_ai/dev2r_evaluation.py text eol=lf
+tests/test_phase3c_dev2r_evaluation.py text eol=lf
 research/adapters/**/*.safetensors filter=lfs diff=lfs merge=lfs -text
 research/artifacts/phase3c/raw/** -text
 research/artifacts/phase3c-dev1/raw/** -text
