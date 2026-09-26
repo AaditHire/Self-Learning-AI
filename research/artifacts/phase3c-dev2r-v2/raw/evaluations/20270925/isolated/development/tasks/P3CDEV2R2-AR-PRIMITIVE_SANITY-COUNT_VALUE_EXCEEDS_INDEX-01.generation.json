@@ -1,0 +1,43 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 20101,
+    "input_tokens": 134,
+    "output_tokens": 133
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=1.\nNUMBER right=4.\nLOOP (left<=right) { NUMBER middle=(left+right)/2. IF (values[middle]>middle) { left=middle+1. } ELSE { right=middle-1. } }\nNUMBER count=left.\nDISPLAYNL(count).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "count_value_exceeds_index",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(value_exceeds_index)+1",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Determine how many array positions satisfy the property entry greater than its zero-based position. Print that count plus 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01"
+  }
+}

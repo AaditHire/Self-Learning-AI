@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 22258,
+    "input_tokens": 129,
+    "output_tokens": 141
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]<0) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05",
+  "task_metadata": {
+    "archetype": "pair1",
+    "composition_signature": "count(negative_value AND even_value)+count(negative_value)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both negative entry and even-valued entry; also count negative entry. Add both counts and 5.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR1-05"
+  }
+}

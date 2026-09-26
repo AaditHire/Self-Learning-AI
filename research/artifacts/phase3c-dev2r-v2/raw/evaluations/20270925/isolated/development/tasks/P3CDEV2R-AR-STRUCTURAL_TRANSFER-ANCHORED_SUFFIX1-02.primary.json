@@ -1,0 +1,115 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 25288,
+    "input_tokens": 143,
+    "output_tokens": 164
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nLOOP (left>=0) { IF (values[left]<0) { break. } left-=1. }\nNUMBER right=4.\nLOOP (right>=0) { IF (values[right]==2) { break. } right-=1. }\nNUMBER result=2.\nLOOP (right<5) { IF (values[right]%2==0) { result+=1. } right+=1. }\nDISPLAYNL(result).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nLOOP (left>=0) { IF (values[left]<0) { break. } left-=1. }\nNUMBER right=4.\nLOOP (right>=0) { IF (values[right]==2) { break. } right-=1. }\nNUMBER result=2.\nLOOP (right<5) { IF (values[right]%2==0) { result+=1. } right+=1. }\nDISPLAYNL(result).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 143,
+        "exit_code": 1,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 13\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 145,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 13\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 140,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 13\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 151,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 13\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 139,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 13\r\n",
+        "stdout": "Enter value for line: "
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "runtime",
+    "execution_success": false,
+    "family": "array_reduction",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "anchored_suffix1",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>IF>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "suffix_after_first(negative_value,even_value)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Find the first position that is negative entry. In a separate traversal count positions strictly after it that are even-valued entry; if no anchor exists count zero. Add 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02"
+  }
+}

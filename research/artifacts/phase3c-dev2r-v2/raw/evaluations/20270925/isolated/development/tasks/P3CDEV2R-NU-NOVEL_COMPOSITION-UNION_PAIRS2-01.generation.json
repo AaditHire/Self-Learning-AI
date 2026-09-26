@@ -1,0 +1,42 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12636,
+    "input_tokens": 145,
+    "output_tokens": 83
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1 AND i%2==0) { IF (i%2==1) { left+=1. } } IF (2*i%n==0) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "union_pairs2",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "union(intersect(odd_index,divisor_index),intersect(residue_two,first_half))+1",
+    "control_flow": "one_pass_union_flag",
+    "development_group": "novel_composition",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and positive divisor of n, or both index with remainder two modulo three and index in the first half through n. Add 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index",
+      "residue_two",
+      "first_half"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 15256,
+    "input_tokens": 131,
+    "output_tokens": 105
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=n.\nLOOP (left<=right) {\n    NUMBER middle=(left+right)/2.\n    IF (n%middle==0) {\n        left=middle+1.\n    } ELSE {\n        right=middle-1.\n    }\n}\nNUMBER count=0.\nNUMBER index=n.\nLOOP (index>=1) {\n    IF (n%index==0) {\n        count++.\n    }\n    index--.\n}\nDISPLAYNL(count).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=n.\nLOOP (left<=right) {\n    NUMBER middle=(left+right)/2.\n    IF (n%middle==0) {\n        left=middle+1.\n    } ELSE {\n        right=middle-1.\n    }\n}\nNUMBER count=0.\nNUMBER index=n.\nLOOP (index>=1) {\n    IF (n%index==0) {\n        count++.\n    }\n    index--.\n}\nDISPLAYNL(count).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 141,
+        "exit_code": 0,
+        "expected_stdout": "1.0",
+        "normalized_stdout": "0.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 0.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 122,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "2.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 142,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "2.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 110,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "2.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 123,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "2.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_divisor_index",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(divisor_index)+1",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property positive divisor of n. Print that count plus 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  }
+}

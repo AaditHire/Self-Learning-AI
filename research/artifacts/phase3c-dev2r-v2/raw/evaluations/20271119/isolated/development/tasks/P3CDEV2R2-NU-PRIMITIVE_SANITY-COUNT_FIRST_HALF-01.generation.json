@@ -1,0 +1,39 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 6786,
+    "input_tokens": 132,
+    "output_tokens": 45
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (2*i<=n) { left+=1. } }\nDISPLAYNL(left).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_first_half",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(first_half)+1",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property index in the first half through n. Print that count plus 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01"
+  }
+}

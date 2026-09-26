@@ -1,0 +1,3140 @@
+{
+  "phase": "3C-DEV2R-v2",
+  "status": "DEVELOPMENT_CONSUMED_DESCRIPTIVE_ONLY",
+  "authorization_commit": "53ac2ca264239d2c74c08aa47533cb6dacb3650c",
+  "authorization_manifest_sha256": "56e3880621a9de1d2677134d705c9d9c0fa1138d3d5aa3e868f98443e1eb955e",
+  "per_cell": {
+    "20270925": {
+      "isolated": {
+        "overall": {
+          "passed": 7,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 2,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 5,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 2,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 5,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 2,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 5,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 1,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 1,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 0,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 0,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 2,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 24,
+          "lexical": 3,
+          "runtime": 6,
+          "semantic": 2,
+          "success": 7,
+          "syntax": 1,
+          "timeout": 5
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "hidden_test_semantic": 1,
+            "success": 5,
+            "syntax": 1,
+            "timeout": 1
+          },
+          "primitive_sanity:array_reduction": {
+            "lexical": 2,
+            "runtime": 2,
+            "timeout": 4
+          },
+          "novel_composition:numeric_iteration": {
+            "hidden_test_semantic": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 6,
+            "success": 2
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 6,
+            "runtime": 2
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 3,
+            "lexical": 1,
+            "runtime": 2,
+            "semantic": 2
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 18,
+            "total": 48
+          },
+          "2": {
+            "passed": 9,
+            "total": 48
+          },
+          "3": {
+            "passed": 9,
+            "total": 48
+          },
+          "4": {
+            "passed": 9,
+            "total": 48
+          },
+          "5": {
+            "passed": 8,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 44,
+          "compile_success": 42,
+          "execution_success": 31,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 31,
+          "lexical": 3,
+          "runtime": 6,
+          "semantic": 2,
+          "syntax": 1,
+          "timeout": 5
+        }
+      },
+      "composition": {
+        "overall": {
+          "passed": 21,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 14,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 7,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 8,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 13,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 6,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 8,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 2,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 5,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 3,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 3,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 4,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 4,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 2,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 11,
+          "lexical": 3,
+          "runtime": 5,
+          "semantic": 6,
+          "success": 21,
+          "timeout": 2
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "lexical": 3,
+            "success": 5
+          },
+          "primitive_sanity:array_reduction": {
+            "runtime": 3,
+            "semantic": 2,
+            "success": 2,
+            "timeout": 1
+          },
+          "novel_composition:numeric_iteration": {
+            "success": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 2,
+            "success": 6
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 7,
+            "timeout": 1
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 2,
+            "runtime": 2,
+            "semantic": 4
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 31,
+            "total": 48
+          },
+          "2": {
+            "passed": 25,
+            "total": 48
+          },
+          "3": {
+            "passed": 23,
+            "total": 48
+          },
+          "4": {
+            "passed": 22,
+            "total": 48
+          },
+          "5": {
+            "passed": 23,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 45,
+          "compile_success": 39,
+          "execution_success": 32,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 32,
+          "lexical": 3,
+          "runtime": 5,
+          "semantic": 6,
+          "timeout": 2
+        }
+      }
+    },
+    "20271013": {
+      "isolated": {
+        "overall": {
+          "passed": 8,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 4,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 4,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 6,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 2,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 4,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 2,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 2,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 4,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 0,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 0,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 0,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 1,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 23,
+          "runtime": 2,
+          "semantic": 3,
+          "success": 8,
+          "syntax": 6,
+          "timeout": 6
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "hidden_test_semantic": 2,
+            "semantic": 1,
+            "success": 2,
+            "syntax": 3
+          },
+          "primitive_sanity:array_reduction": {
+            "runtime": 2,
+            "success": 2,
+            "timeout": 4
+          },
+          "novel_composition:numeric_iteration": {
+            "hidden_test_semantic": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 4,
+            "success": 4
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 7,
+            "semantic": 1
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 2,
+            "semantic": 1,
+            "syntax": 3,
+            "timeout": 2
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 21,
+            "total": 48
+          },
+          "2": {
+            "passed": 11,
+            "total": 48
+          },
+          "3": {
+            "passed": 11,
+            "total": 48
+          },
+          "4": {
+            "passed": 9,
+            "total": 48
+          },
+          "5": {
+            "passed": 10,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 42,
+          "compile_success": 39,
+          "execution_success": 31,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 31,
+          "runtime": 2,
+          "semantic": 3,
+          "syntax": 6,
+          "timeout": 6
+        }
+      },
+      "composition": {
+        "overall": {
+          "passed": 28,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 14,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 14,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 12,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 16,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 6,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 8,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 6,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 8,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 3,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 3,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 4,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 4,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 2,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 7,
+          "runtime": 2,
+          "semantic": 4,
+          "success": 28,
+          "syntax": 2,
+          "timeout": 5
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "success": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "runtime": 1,
+            "success": 6,
+            "timeout": 1
+          },
+          "novel_composition:numeric_iteration": {
+            "success": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 2,
+            "success": 6
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 4,
+            "timeout": 4
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 1,
+            "runtime": 1,
+            "semantic": 4,
+            "syntax": 2
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 33,
+            "total": 48
+          },
+          "2": {
+            "passed": 31,
+            "total": 48
+          },
+          "3": {
+            "passed": 29,
+            "total": 48
+          },
+          "4": {
+            "passed": 28,
+            "total": 48
+          },
+          "5": {
+            "passed": 28,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 46,
+          "compile_success": 42,
+          "execution_success": 35,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 35,
+          "runtime": 2,
+          "semantic": 4,
+          "syntax": 2,
+          "timeout": 5
+        }
+      }
+    },
+    "20271119": {
+      "isolated": {
+        "overall": {
+          "passed": 14,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 4,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 10,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 8,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 6,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 4,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 4,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 6,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 4,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 0,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 0,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 0,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 2,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 23,
+          "runtime": 4,
+          "semantic": 2,
+          "success": 14,
+          "syntax": 1,
+          "timeout": 4
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "semantic": 1,
+            "success": 6,
+            "syntax": 1
+          },
+          "primitive_sanity:array_reduction": {
+            "runtime": 2,
+            "success": 4,
+            "timeout": 2
+          },
+          "novel_composition:numeric_iteration": {
+            "hidden_test_semantic": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 4,
+            "success": 4
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 7,
+            "runtime": 1
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 4,
+            "runtime": 1,
+            "semantic": 1,
+            "timeout": 2
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 28,
+            "total": 48
+          },
+          "2": {
+            "passed": 17,
+            "total": 48
+          },
+          "3": {
+            "passed": 19,
+            "total": 48
+          },
+          "4": {
+            "passed": 16,
+            "total": 48
+          },
+          "5": {
+            "passed": 17,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 47,
+          "compile_success": 45,
+          "execution_success": 37,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 37,
+          "runtime": 4,
+          "semantic": 2,
+          "syntax": 1,
+          "timeout": 4
+        }
+      },
+      "composition": {
+        "overall": {
+          "passed": 14,
+          "total": 48
+        },
+        "by_group": {
+          "novel_composition": {
+            "passed": 10,
+            "total": 16
+          },
+          "primitive_sanity": {
+            "passed": 4,
+            "total": 16
+          },
+          "structural_transfer": {
+            "passed": 0,
+            "total": 16
+          }
+        },
+        "by_family": {
+          "array_reduction": {
+            "passed": 3,
+            "total": 24
+          },
+          "numeric_iteration": {
+            "passed": 11,
+            "total": 24
+          }
+        },
+        "by_group_family": {
+          "novel_composition:array_reduction": {
+            "passed": 2,
+            "total": 8
+          },
+          "novel_composition:numeric_iteration": {
+            "passed": 8,
+            "total": 8
+          },
+          "primitive_sanity:array_reduction": {
+            "passed": 1,
+            "total": 8
+          },
+          "primitive_sanity:numeric_iteration": {
+            "passed": 3,
+            "total": 8
+          },
+          "structural_transfer:array_reduction": {
+            "passed": 0,
+            "total": 8
+          },
+          "structural_transfer:numeric_iteration": {
+            "passed": 0,
+            "total": 8
+          }
+        },
+        "by_archetype": {
+          "novel_composition:array_reduction:union_pairs1": {
+            "passed": 1,
+            "total": 4
+          },
+          "novel_composition:array_reduction:union_pairs2": {
+            "passed": 1,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs1": {
+            "passed": 4,
+            "total": 4
+          },
+          "novel_composition:numeric_iteration:union_pairs2": {
+            "passed": 4,
+            "total": 4
+          },
+          "primitive_sanity:array_reduction:count_even_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_large_magnitude": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_negative_value": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:array_reduction:count_value_exceeds_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_divisor_index": {
+            "passed": 0,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_first_half": {
+            "passed": 1,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_odd_index": {
+            "passed": 2,
+            "total": 2
+          },
+          "primitive_sanity:numeric_iteration:count_residue_two": {
+            "passed": 0,
+            "total": 2
+          },
+          "structural_transfer:array_reduction:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:array_reduction:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_prefix2": {
+            "passed": 0,
+            "total": 4
+          },
+          "structural_transfer:numeric_iteration:anchored_suffix1": {
+            "passed": 0,
+            "total": 4
+          }
+        },
+        "failure_taxonomy": {
+          "hidden_test_semantic": 13,
+          "lexical": 9,
+          "runtime": 5,
+          "semantic": 5,
+          "success": 14,
+          "timeout": 2
+        },
+        "failure_by_group_family": {
+          "primitive_sanity:numeric_iteration": {
+            "lexical": 5,
+            "success": 3
+          },
+          "primitive_sanity:array_reduction": {
+            "hidden_test_semantic": 2,
+            "runtime": 4,
+            "semantic": 1,
+            "success": 1
+          },
+          "novel_composition:numeric_iteration": {
+            "success": 8
+          },
+          "novel_composition:array_reduction": {
+            "hidden_test_semantic": 6,
+            "success": 2
+          },
+          "structural_transfer:numeric_iteration": {
+            "hidden_test_semantic": 2,
+            "lexical": 4,
+            "timeout": 2
+          },
+          "structural_transfer:array_reduction": {
+            "hidden_test_semantic": 3,
+            "runtime": 1,
+            "semantic": 4
+          }
+        },
+        "five_case_outcomes": {
+          "1": {
+            "passed": 19,
+            "total": 48
+          },
+          "2": {
+            "passed": 14,
+            "total": 48
+          },
+          "3": {
+            "passed": 14,
+            "total": 48
+          },
+          "4": {
+            "passed": 14,
+            "total": 48
+          },
+          "5": {
+            "passed": 14,
+            "total": 48
+          }
+        },
+        "stage_counts": {
+          "parse_success": 39,
+          "compile_success": 34,
+          "execution_success": 27,
+          "structural_requirements_met": 48
+        },
+        "error_phase": {
+          "None": 27,
+          "lexical": 9,
+          "runtime": 5,
+          "semantic": 5,
+          "timeout": 2
+        }
+      }
+    }
+  },
+  "primary_novel_composition": {
+    "definition": "Paired COMPOSITION minus ISOLATED pass@1 on 16 Novel Composition tasks",
+    "per_seed": {
+      "20270925": {
+        "isolated": {
+          "passed": 2,
+          "total": 16
+        },
+        "composition": {
+          "passed": 14,
+          "total": 16
+        },
+        "difference_pp": 75.0
+      },
+      "20271013": {
+        "isolated": {
+          "passed": 4,
+          "total": 16
+        },
+        "composition": {
+          "passed": 14,
+          "total": 16
+        },
+        "difference_pp": 62.5
+      },
+      "20271119": {
+        "isolated": {
+          "passed": 4,
+          "total": 16
+        },
+        "composition": {
+          "passed": 10,
+          "total": 16
+        },
+        "difference_pp": 37.5
+      }
+    },
+    "pooled_paired_seed_tasks": 48,
+    "pooled_transitions": {
+      "both_pass": 6,
+      "both_fail": 6,
+      "isolated_only": 4,
+      "composition_only": 32
+    },
+    "mean_difference_pp": 58.333333333333336,
+    "percentile_95_interval_pp": [
+      20.833333333333336,
+      83.33333333333334
+    ]
+  },
+  "paired_transitions_by_seed": {
+    "20270925": {
+      "overall": {
+        "both_pass": 6,
+        "both_fail": 26,
+        "isolated_only": 1,
+        "composition_only": 15
+      },
+      "primitive_sanity": {
+        "both_pass": 4,
+        "both_fail": 8,
+        "isolated_only": 1,
+        "composition_only": 3
+      },
+      "novel_composition": {
+        "both_pass": 2,
+        "both_fail": 2,
+        "isolated_only": 0,
+        "composition_only": 12
+      },
+      "structural_transfer": {
+        "both_pass": 0,
+        "both_fail": 16,
+        "isolated_only": 0,
+        "composition_only": 0
+      }
+    },
+    "20271013": {
+      "overall": {
+        "both_pass": 7,
+        "both_fail": 19,
+        "isolated_only": 1,
+        "composition_only": 21
+      },
+      "primitive_sanity": {
+        "both_pass": 4,
+        "both_fail": 2,
+        "isolated_only": 0,
+        "composition_only": 10
+      },
+      "novel_composition": {
+        "both_pass": 3,
+        "both_fail": 1,
+        "isolated_only": 1,
+        "composition_only": 11
+      },
+      "structural_transfer": {
+        "both_pass": 0,
+        "both_fail": 16,
+        "isolated_only": 0,
+        "composition_only": 0
+      }
+    },
+    "20271119": {
+      "overall": {
+        "both_pass": 5,
+        "both_fail": 25,
+        "isolated_only": 9,
+        "composition_only": 9
+      },
+      "primitive_sanity": {
+        "both_pass": 4,
+        "both_fail": 6,
+        "isolated_only": 6,
+        "composition_only": 0
+      },
+      "novel_composition": {
+        "both_pass": 1,
+        "both_fail": 3,
+        "isolated_only": 3,
+        "composition_only": 9
+      },
+      "structural_transfer": {
+        "both_pass": 0,
+        "both_fail": 16,
+        "isolated_only": 0,
+        "composition_only": 0
+      }
+    }
+  },
+  "pooled_transitions": {
+    "overall": {
+      "both_pass": 18,
+      "both_fail": 70,
+      "isolated_only": 11,
+      "composition_only": 45
+    },
+    "primitive_sanity": {
+      "both_pass": 12,
+      "both_fail": 16,
+      "isolated_only": 7,
+      "composition_only": 13
+    },
+    "novel_composition": {
+      "both_pass": 6,
+      "both_fail": 6,
+      "isolated_only": 4,
+      "composition_only": 32
+    },
+    "structural_transfer": {
+      "both_pass": 0,
+      "both_fail": 48,
+      "isolated_only": 0,
+      "composition_only": 0
+    }
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "rng_seed": 20270926,
+    "resampling": "paired seeds and whole archetype blocks with replacement within each group and family; retain all variants",
+    "interval": "descriptive percentile 2.5/97.5",
+    "results": {
+      "primitive_sanity": {
+        "mean_difference_pp": 12.5,
+        "percentile_95_interval_pp": [
+          -37.5,
+          62.5
+        ]
+      },
+      "novel_composition": {
+        "mean_difference_pp": 58.333333333333336,
+        "percentile_95_interval_pp": [
+          20.833333333333336,
+          83.33333333333334
+        ]
+      },
+      "structural_transfer": {
+        "mean_difference_pp": 0.0,
+        "percentile_95_interval_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "overall": {
+        "mean_difference_pp": 23.61111111111111,
+        "percentile_95_interval_pp": [
+          0.0,
+          43.75
+        ]
+      },
+      "numeric_iteration": {
+        "mean_difference_pp": 37.5,
+        "percentile_95_interval_pp": [
+          16.666666666666664,
+          58.333333333333336
+        ]
+      },
+      "array_reduction": {
+        "mean_difference_pp": 9.722222222222223,
+        "percentile_95_interval_pp": [
+          -25.0,
+          36.11111111111111
+        ]
+      }
+    }
+  },
+  "own_training_diagnostics": {
+    "20270925/composition": {
+      "evaluator": "DEV2R v2 frozen evaluator",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 45,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 15
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 30
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "aggregate_sha256": "d4e5dfaba669b6379e56d66050d0147a7587d938a9d82a04f748113d9d513815"
+    },
+    "20271013/isolated": {
+      "evaluator": "DEV2R v2 frozen evaluator",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 45,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 15
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 30
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "aggregate_sha256": "904ae690b08a116cb6751efb0761982b671e9ab79417836d18def5a795da140a"
+    },
+    "20271013/composition": {
+      "evaluator": "DEV2R v2 frozen evaluator",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 40,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 15
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 25
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "aggregate_sha256": "b6c73fd459912c5216ad94ccc9afafd4f76d13e7ed9d0ec2335ea0d63d907a3d"
+    },
+    "20271119/isolated": {
+      "evaluator": "DEV2R v2 frozen evaluator",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 45,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 15
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 30
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "aggregate_sha256": "f5c69fbab266e3b143aaa424f6c3c5a8c22f42f4b0309563b00cdb6d2356cf89"
+    },
+    "20271119/composition": {
+      "evaluator": "DEV2R v2 frozen evaluator",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 51,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 21
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 30
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 4
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 2
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "aggregate_sha256": "8173d3902b8a9973570aeb6b2cbe395073182a1fdce8ffd935e7e832be99acfc"
+    },
+    "20270925/isolated": {
+      "evaluator": "Historical DEV2 evaluator; not rerun under DEV2R v2",
+      "overall": {
+        "passed": 60,
+        "total": 60
+      },
+      "exact_target_reproduction": 43,
+      "by_family": {
+        "array_reduction": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 15
+        },
+        "numeric_iteration": {
+          "passed": 30,
+          "total": 30,
+          "exact_target_reproduction": 28
+        }
+      },
+      "by_family_archetype": {
+        "array_reduction:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "array_reduction:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "array_reduction:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 0
+        },
+        "numeric_iteration:pair1": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair2": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair3": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair4": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 3
+        },
+        "numeric_iteration:pair5": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        },
+        "numeric_iteration:pair6": {
+          "passed": 5,
+          "total": 5,
+          "exact_target_reproduction": 5
+        }
+      },
+      "source_sha256": "a9bc00cc45c2eb28b116dee5f9652d00b45bf7c496924d4d8b31d519bb0563de"
+    }
+  },
+  "frozen_nearest_pass_fail": [
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-01",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_odd_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.34615384615384615,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3103448275862069,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_odd_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.34615384615384615,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3103448275862069,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-01",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_residue_two",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.4482758620689655,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3939393939393939,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_residue_two",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.4482758620689655,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3939393939393939,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_divisor_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.35714285714285715,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-02",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_divisor_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.35714285714285715,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.3333333333333333,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_first_half",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.4,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-02",
+      "group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_first_half",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8026315789473685,
+          "nearest_prompt_jaccard": 0.4,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5625,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8159203980099502,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7162790697674418,
+          "nearest_prompt_jaccard": 0.39473684210526316,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7534883720930232,
+          "nearest_prompt_jaccard": 0.36585365853658536,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7162790697674418,
+          "nearest_prompt_jaccard": 0.39473684210526316,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7534883720930232,
+          "nearest_prompt_jaccard": 0.36585365853658536,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7162790697674418,
+          "nearest_prompt_jaccard": 0.39473684210526316,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7534883720930232,
+          "nearest_prompt_jaccard": 0.36585365853658536,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7162790697674418,
+          "nearest_prompt_jaccard": 0.39473684210526316,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7534883720930232,
+          "nearest_prompt_jaccard": 0.36585365853658536,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7740384615384616,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7403846153846154,
+          "nearest_prompt_jaccard": 0.40540540540540543,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7740384615384616,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7403846153846154,
+          "nearest_prompt_jaccard": 0.40540540540540543,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7740384615384616,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7403846153846154,
+          "nearest_prompt_jaccard": 0.40540540540540543,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.7740384615384616,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.7403846153846154,
+          "nearest_prompt_jaccard": 0.40540540540540543,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-01",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_negative_value",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.37037037037037035,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.3103448275862069,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_negative_value",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.37037037037037035,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.3103448275862069,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-01",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_even_value",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9107142857142857,
+          "nearest_prompt_jaccard": 0.4074074074074074,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9107142857142857,
+          "nearest_prompt_jaccard": 0.3448275862068966,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_even_value",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9107142857142857,
+          "nearest_prompt_jaccard": 0.4074074074074074,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9107142857142857,
+          "nearest_prompt_jaccard": 0.3448275862068966,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-01",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_large_magnitude",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9180327868852459,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9180327868852459,
+          "nearest_prompt_jaccard": 0.36666666666666664,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-02",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_large_magnitude",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9180327868852459,
+          "nearest_prompt_jaccard": 0.42857142857142855,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9180327868852459,
+          "nearest_prompt_jaccard": 0.36666666666666664,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_value_exceeds_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.4838709677419355,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.42424242424242425,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-02",
+      "group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_value_exceeds_index",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.4838709677419355,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.9096385542168675,
+          "nearest_prompt_jaccard": 0.42424242424242425,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8868894601542416,
+          "nearest_prompt_jaccard": 0.5588235294117647,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8823529411764706,
+          "nearest_prompt_jaccard": 0.5882352941176471,
+          "passed_by_seed": {
+            "20270925": true,
+            "20271013": true,
+            "20271119": true
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8377358490566038,
+          "nearest_prompt_jaccard": 0.3611111111111111,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8244084682440846,
+          "nearest_prompt_jaccard": 0.3157894736842105,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8377358490566038,
+          "nearest_prompt_jaccard": 0.3611111111111111,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8244084682440846,
+          "nearest_prompt_jaccard": 0.3157894736842105,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8377358490566038,
+          "nearest_prompt_jaccard": 0.3611111111111111,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8244084682440846,
+          "nearest_prompt_jaccard": 0.3157894736842105,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8377358490566038,
+          "nearest_prompt_jaccard": 0.3611111111111111,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8244084682440846,
+          "nearest_prompt_jaccard": 0.3157894736842105,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8071065989847716,
+          "nearest_prompt_jaccard": 0.48717948717948717,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8341836734693877,
+          "nearest_prompt_jaccard": 0.43902439024390244,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8071065989847716,
+          "nearest_prompt_jaccard": 0.48717948717948717,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8341836734693877,
+          "nearest_prompt_jaccard": 0.43902439024390244,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8071065989847716,
+          "nearest_prompt_jaccard": 0.48717948717948717,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8341836734693877,
+          "nearest_prompt_jaccard": 0.43902439024390244,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "conditions": {
+        "isolated": {
+          "nearest_code_similarity": 0.8071065989847716,
+          "nearest_prompt_jaccard": 0.48717948717948717,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        },
+        "composition": {
+          "nearest_code_similarity": 0.8341836734693877,
+          "nearest_prompt_jaccard": 0.43902439024390244,
+          "passed_by_seed": {
+            "20270925": false,
+            "20271013": false,
+            "20271119": false
+          }
+        }
+      }
+    }
+  ],
+  "limits": [
+    "development suite only",
+    "correlated variants and three paired seeds",
+    "historical own-training cell uses the original DEV2 evaluator"
+  ]
+}

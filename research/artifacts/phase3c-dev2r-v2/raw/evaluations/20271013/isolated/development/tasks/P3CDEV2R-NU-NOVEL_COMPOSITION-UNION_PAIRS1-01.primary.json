@@ -1,0 +1,113 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12718,
+    "input_tokens": 145,
+    "output_tokens": 81
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1 && i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0 && 2*i<=n) { left+=1. } }\nDISPLAYNL(left).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1 && i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0 && 2*i<=n) { left+=1. } }\nDISPLAYNL(left).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 114,
+        "exit_code": 0,
+        "expected_stdout": "1.0",
+        "normalized_stdout": "1.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 1.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "3.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 3.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 121,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "6.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 6.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 121,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "8.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 8.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "5.0",
+        "normalized_stdout": "12.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 12.0\r\n"
+      }
+    ],
+    "cases_passed": 1,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "union_pairs1",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "union(intersect(odd_index,residue_two),intersect(divisor_index,first_half))+1",
+    "control_flow": "one_pass_union_flag",
+    "development_group": "novel_composition",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count each item once if it satisfies both odd index and index with remainder two modulo three, or both positive divisor of n and index in the first half through n. Add 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01"
+  }
+}

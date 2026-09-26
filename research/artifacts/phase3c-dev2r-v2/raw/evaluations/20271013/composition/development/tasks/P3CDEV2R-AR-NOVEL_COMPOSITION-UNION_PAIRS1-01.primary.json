@@ -1,0 +1,117 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+    "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 23664,
+    "input_tokens": 145,
+    "output_tokens": 153
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { IF (values[i]>i) { right+=1. } } }\nDISPLAYNL(left+right).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=1.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { IF (values[i]>i) { right+=1. } } }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 150,
+        "exit_code": 0,
+        "expected_stdout": "1.0",
+        "normalized_stdout": "5.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 5.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 130,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "7.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 7.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 126,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "7.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 7.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 138,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "7.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 7.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 147,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "8.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "array_reduction",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "union_pairs1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+1",
+    "control_flow": "one_pass_union_flag",
+    "development_group": "novel_composition",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01"
+  }
+}

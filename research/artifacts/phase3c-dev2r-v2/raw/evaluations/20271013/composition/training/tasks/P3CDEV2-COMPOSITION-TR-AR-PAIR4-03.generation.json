@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+    "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 22712,
+    "input_tokens": 134,
+    "output_tokens": 146
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]*values[i]>4) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-03",
+  "task_metadata": {
+    "archetype": "pair4",
+    "composition_signature": "count(even_value AND large_magnitude)+count(even_value)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both even-valued entry and entry whose square exceeds four; also count even-valued entry. Add both counts and 3.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR4-03"
+  }
+}

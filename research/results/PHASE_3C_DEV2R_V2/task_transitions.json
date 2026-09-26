@@ -1,0 +1,1110 @@
+{
+  "phase": "3C-DEV2R-v2",
+  "status": "DEVELOPMENT_CONSUMED_DESCRIPTIVE_ONLY",
+  "rows": [
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-01",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_odd_index",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_odd_index",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-01",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_residue_two",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_residue_two",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_divisor_index",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-02",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_divisor_index",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-01",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_first_half",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_FIRST_HALF-02",
+      "development_group": "primitive_sanity",
+      "family": "numeric_iteration",
+      "archetype": "count_first_half",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "development_group": "novel_composition",
+      "family": "numeric_iteration",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "development_group": "structural_transfer",
+      "family": "numeric_iteration",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-01",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_negative_value",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_negative_value",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-01",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_even_value",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_even_value",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-01",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_large_magnitude",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_LARGE_MAGNITUDE-02",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_large_magnitude",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-01",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_value_exceeds_index",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_VALUE_EXCEEDS_INDEX-02",
+      "development_group": "primitive_sanity",
+      "family": "array_reduction",
+      "archetype": "count_value_exceeds_index",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-01",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-03",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": false,
+          "transition": "isolated_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-04",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs1",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271119": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-02",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-03",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-04",
+      "development_group": "novel_composition",
+      "family": "array_reduction",
+      "archetype": "union_pairs2",
+      "seeds": {
+        "20270925": {
+          "isolated": true,
+          "composition": true,
+          "transition": "both_pass"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": true,
+          "transition": "composition_only"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-01",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-04",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_suffix1",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    },
+    {
+      "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-04",
+      "development_group": "structural_transfer",
+      "family": "array_reduction",
+      "archetype": "anchored_prefix2",
+      "seeds": {
+        "20270925": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271013": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        },
+        "20271119": {
+          "isolated": false,
+          "composition": false,
+          "transition": "both_fail"
+        }
+      }
+    }
+  ]
+}

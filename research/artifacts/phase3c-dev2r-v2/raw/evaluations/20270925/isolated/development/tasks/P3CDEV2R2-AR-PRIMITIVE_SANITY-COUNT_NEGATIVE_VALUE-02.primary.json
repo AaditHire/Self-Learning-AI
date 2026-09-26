@@ -1,0 +1,114 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 17896,
+    "input_tokens": 127,
+    "output_tokens": 115
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=values.LENGTH.\nLOOP (NUMBER i=left; i<right; i++) { IF (values[i]<0) { left+=1. } }\nDISPLAYNL(left).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=values.LENGTH.\nLOOP (NUMBER i=left; i<right; i++) { IF (values[i]<0) { left+=1. } }\nDISPLAYNL(left).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 139,
+        "exit_code": 1,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 12, column 20.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 126,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 12, column 20.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 127,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 12, column 20.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 127,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 12, column 20.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 127,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 12, column 20.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": false,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "lexical",
+    "execution_success": false,
+    "family": "array_reduction",
+    "hidden_pass": false,
+    "parse_success": false,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "count_negative_value",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(negative_value)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Determine how many array positions satisfy the property negative entry. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02"
+  }
+}

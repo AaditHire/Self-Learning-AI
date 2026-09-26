@@ -1,0 +1,40 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+    "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12970,
+    "input_tokens": 144,
+    "output_tokens": 85
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=n; i>=0; i--) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { IF (i%3==2) { right+=1. } } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "anchored_suffix1",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 3.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-03"
+  }
+}

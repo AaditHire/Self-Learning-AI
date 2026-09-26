@@ -1,0 +1,110 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 6857,
+    "input_tokens": 131,
+    "output_tokens": 43
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nLOOP (NUMBER i=n; i>=1; i--) { IF (n%i==0) { left+=1. } }\nDISPLAYNL(left).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nLOOP (NUMBER i=n; i>=1; i--) { IF (n%i==0) { left+=1. } }\nDISPLAYNL(left).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 147,
+        "exit_code": 1,
+        "expected_stdout": "1.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 4, column 17.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 127,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 4, column 17.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 145,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 4, column 17.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 133,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 4, column 17.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 128,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "lexical",
+        "stderr": "Lexical Error: Lexical error at line 4, column 17.  Encountered: ';' (59),\r\n",
+        "stdout": ""
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": false,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "lexical",
+    "execution_success": false,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": false,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_divisor_index",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(divisor_index)+1",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property positive divisor of n. Print that count plus 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  }
+}

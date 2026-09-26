@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+    "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12824,
+    "input_tokens": 139,
+    "output_tokens": 76
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { IF (2*i<=n) { left+=1. } } IF (i%3==2) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-04",
+  "task_metadata": {
+    "archetype": "pair5",
+    "composition_signature": "count(residue_two AND first_half)+count(residue_two)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count items satisfying both index with remainder two modulo three and index in the first half through n; also count index with remainder two modulo three. Add both counts and 4.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR5-04"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "exact_target_reproduction": false,
+  "generation_metadata": {
+    "generation_ms": 22390,
+    "input_tokens": 127,
+    "output_tokens": 146
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } }\nDISPLAYNL(left+right).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 141,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 152,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 133,
+        "exit_code": 0,
+        "expected_stdout": "9.0",
+        "normalized_stdout": "9.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 9.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 145,
+        "exit_code": 0,
+        "expected_stdout": "9.0",
+        "normalized_stdout": "9.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 9.0\r\n"
+      }
+    ],
+    "cases_passed": 5,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "development_training",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "array_reduction",
+    "hidden_pass": true,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-04"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-04",
+  "task_metadata": {
+    "archetype": "pair4",
+    "composition_signature": "count(even_value)+count(large_magnitude); redundant inner even_value guard",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Separately count even-valued entry and entry whose square exceeds four; add the two counts and 4.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "task_id": "P3CDEV2-ISOLATED-TR-AR-PAIR4-04"
+  }
+}

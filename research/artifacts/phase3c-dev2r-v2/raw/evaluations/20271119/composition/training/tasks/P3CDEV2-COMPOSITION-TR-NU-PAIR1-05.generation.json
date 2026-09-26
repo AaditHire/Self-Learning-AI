@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+    "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 11939,
+    "input_tokens": 130,
+    "output_tokens": 77
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05",
+  "task_metadata": {
+    "archetype": "pair1",
+    "composition_signature": "count(odd_index AND residue_two)+count(odd_index)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count odd index. Add both counts and 5.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-05"
+  }
+}

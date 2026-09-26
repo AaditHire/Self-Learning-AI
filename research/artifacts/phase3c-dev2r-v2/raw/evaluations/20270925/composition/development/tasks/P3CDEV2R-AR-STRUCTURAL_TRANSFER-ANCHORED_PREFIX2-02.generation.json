@@ -1,0 +1,44 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 21502,
+    "input_tokens": 148,
+    "output_tokens": 133
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (left>=0) { IF (values[left]*values[left]>4) { left-=1. } }\nLOOP (right<4) { IF (values[right]>right) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "anchored_prefix2",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02"
+  }
+}

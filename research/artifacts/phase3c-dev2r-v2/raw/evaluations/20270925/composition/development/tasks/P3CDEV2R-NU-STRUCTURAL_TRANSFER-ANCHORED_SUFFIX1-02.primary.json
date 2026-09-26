@@ -1,0 +1,111 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12116,
+    "input_tokens": 144,
+    "output_tokens": 76
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<n, i++) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { right+=1. } }\nDISPLAYNL(left+right).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<n, i++) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { right+=1. } }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 130,
+        "exit_code": 0,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "2.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 121,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "3.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 3.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "6.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 6.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 145,
+        "exit_code": 0,
+        "expected_stdout": "6.0",
+        "normalized_stdout": "8.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 8.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 128,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "14.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 14.0\r\n"
+      }
+    ],
+    "cases_passed": 2,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "anchored_suffix1",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>IF>%>==>LOOP><=>+>+>IF>>=>IF>IF>%>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "suffix_after_first(odd_index,residue_two)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Find the first position that is odd index. In a separate traversal count positions strictly after it that are index with remainder two modulo three; if no anchor exists count zero. Add 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_SUFFIX1-02"
+  }
+}

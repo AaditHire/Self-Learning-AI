@@ -1,0 +1,110 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 79816,
+    "input_tokens": 128,
+    "output_tokens": 512
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=n.\nLOOP (left<=right) { IF (left%2==1) { left+=2. } IF (right%2==1) { right-=2. } IF (left<=right) { left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=n.\nLOOP (left<=right) { IF (left%2==1) { left+=2. } IF (right%2==1) { right-=2. } IF (left<=right) { left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2. left+=2. right-=2",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 141,
+        "exit_code": 1,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "syntax",
+        "stderr": "Syntax Error: Missing statement terminator '.' at line 5, column 1179\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 140,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "syntax",
+        "stderr": "Syntax Error: Missing statement terminator '.' at line 5, column 1179\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 125,
+        "exit_code": 1,
+        "expected_stdout": "6.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "syntax",
+        "stderr": "Syntax Error: Missing statement terminator '.' at line 5, column 1179\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 126,
+        "exit_code": 1,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "syntax",
+        "stderr": "Syntax Error: Missing statement terminator '.' at line 5, column 1179\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 123,
+        "exit_code": 1,
+        "expected_stdout": "12.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "syntax",
+        "stderr": "Syntax Error: Missing statement terminator '.' at line 5, column 1179\r\n",
+        "stdout": ""
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": false,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "syntax",
+    "execution_success": false,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": false,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_odd_index",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(odd_index)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property odd index. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_ODD_INDEX-02"
+  }
+}

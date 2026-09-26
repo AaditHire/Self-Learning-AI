@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+    "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 23290,
+    "input_tokens": 136,
+    "output_tokens": 143
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]%2==0) { IF (values[i]>i) { left+=1. } } IF (values[i]%2==0) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-02",
+  "task_metadata": {
+    "archetype": "pair5",
+    "composition_signature": "count(even_value AND value_exceeds_index)+count(even_value)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both even-valued entry and entry greater than its zero-based position; also count even-valued entry. Add both counts and 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR5-02"
+  }
+}

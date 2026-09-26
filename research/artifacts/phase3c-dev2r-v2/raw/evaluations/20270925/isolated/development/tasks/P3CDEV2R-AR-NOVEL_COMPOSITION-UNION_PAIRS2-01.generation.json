@@ -1,0 +1,46 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 27254,
+    "input_tokens": 145,
+    "output_tokens": 175
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0 AND values[i]%2==1) { left-=1. } IF (values[i]*values[i]>4) { right+=1. } IF (values[i]%2==0 AND values[i]%2==0) { left+=1. } IF (values[i]>i) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "union_pairs2",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>*>IF>%>==>IF>IF>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "union(intersect(negative_value,large_magnitude),intersect(even_value,value_exceeds_index))+1",
+    "control_flow": "one_pass_union_flag",
+    "development_group": "novel_composition",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and entry whose square exceeds four, or both even-valued entry and entry greater than its zero-based position. Add 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude",
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS2-01"
+  }
+}

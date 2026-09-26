@@ -1,0 +1,111 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 8080,
+    "input_tokens": 146,
+    "output_tokens": 46
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=n.\nLOOP (left<=right) { IF (n%left==0) { right=left. } left+=1. }\nDISPLAYNL(right).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nNUMBER right=n.\nLOOP (left<=right) { IF (n%left==0) { right=left. } left+=1. }\nDISPLAYNL(right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "0.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 0.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 136,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "2.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 2.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "5.0",
+        "normalized_stdout": "7.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 7.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "7.0",
+        "normalized_stdout": "11.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 11.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "11.0",
+        "normalized_stdout": "19.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 19.0\r\n"
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "anchored_prefix2",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+2",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-02"
+  }
+}

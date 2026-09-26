@@ -1,0 +1,114 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 17758,
+    "input_tokens": 127,
+    "output_tokens": 116
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=4.\nLOOP (NUMBER i=left TILL i<=right, i++) { IF (values[i]==-1) { left+=1. } }\nDISPLAYNL(left).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=4.\nLOOP (NUMBER i=left TILL i<=right, i++) { IF (values[i]==-1) { left+=1. } }\nDISPLAYNL(left).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 156,
+        "exit_code": 1,
+        "expected_stdout": "2.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 12\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 133,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 12\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 161,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 12\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 159,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 12\r\n",
+        "stdout": "Enter value for line: "
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 147,
+        "exit_code": 1,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "runtime",
+        "stderr": "Runtime Error: Array index 4 out of bounds for length 4 at line 12\r\n",
+        "stdout": "Enter value for line: "
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "runtime",
+    "execution_success": false,
+    "family": "array_reduction",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "count_negative_value",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(negative_value)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Determine how many array positions satisfy the property negative entry. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/isolated/adapter_model.safetensors",
+    "sha256": "b063db57ddf9a103b6777e14ef813847e7dff22fafadd38a8107a0e5d837f6b8",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 24378,
+    "input_tokens": 148,
+    "output_tokens": 153
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=3.\nNUMBER right=3.\nLOOP (left>=0) { IF (values[left]*values[left]>4) { right=left. } left-=1. }\nDISPLAYNL(right).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (left>=0) { IF (values[left]>left) { right=left. } left-=1. }\nDISPLAYNL(right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "anchored_prefix2",
+    "ast_proxy_signature": "IMPORT>INPUT>->LOOP><=>+>+>IF>*>LOOP><=>+>+>IF>>=>IF><=>IF>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "prefix_through_last(large_magnitude,value_exceeds_index)+1",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Find the last position that is entry whose square exceeds four. In a separate traversal count positions through it that are entry greater than its zero-based position; if no anchor exists count zero. Add 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-01"
+  }
+}

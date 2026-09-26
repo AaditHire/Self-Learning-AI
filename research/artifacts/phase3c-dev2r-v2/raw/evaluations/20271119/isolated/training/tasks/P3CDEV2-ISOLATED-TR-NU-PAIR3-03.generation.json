@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12326,
+    "input_tokens": 126,
+    "output_tokens": 76
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (2*i<=n) { right+=1. } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-03",
+  "task_metadata": {
+    "archetype": "pair3",
+    "composition_signature": "count(odd_index)+count(first_half); redundant inner odd_index guard",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Separately count odd index and index in the first half through n; add the two counts and 3.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR3-03"
+  }
+}

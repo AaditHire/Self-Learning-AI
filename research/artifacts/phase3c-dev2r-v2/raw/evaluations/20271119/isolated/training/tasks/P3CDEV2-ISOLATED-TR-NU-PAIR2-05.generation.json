@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 11942,
+    "input_tokens": 123,
+    "output_tokens": 76
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (i%2==1) { left+=1. } } IF (n%i==0) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05",
+  "task_metadata": {
+    "archetype": "pair2",
+    "composition_signature": "count(odd_index)+count(divisor_index); redundant inner odd_index guard",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Separately count odd index and positive divisor of n; add the two counts and 5.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR2-05"
+  }
+}

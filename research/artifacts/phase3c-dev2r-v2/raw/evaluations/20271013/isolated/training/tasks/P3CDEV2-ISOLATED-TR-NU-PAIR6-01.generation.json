@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 12383,
+    "input_tokens": 128,
+    "output_tokens": 74
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-01",
+  "task_metadata": {
+    "archetype": "pair6",
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-01"
+  }
+}

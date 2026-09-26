@@ -1,0 +1,43 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 20436,
+    "input_tokens": 127,
+    "output_tokens": 121
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=3.\nLOOP (left<=right) { IF (values[left]<0) { left+=1. } IF (values[right]<0) { right-=1. } }\nDISPLAYNL(right-left).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "count_negative_value",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(negative_value)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Determine how many array positions satisfy the property negative entry. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_NEGATIVE_VALUE-02"
+  }
+}

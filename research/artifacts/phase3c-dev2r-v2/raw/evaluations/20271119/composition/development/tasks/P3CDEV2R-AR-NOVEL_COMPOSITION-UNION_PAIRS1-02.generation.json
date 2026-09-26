@@ -1,0 +1,46 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+    "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 24983,
+    "input_tokens": 145,
+    "output_tokens": 153
+  },
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=4.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { IF (values[i]%2==0) { left+=1. } } IF (values[i]*values[i]>4) { IF (values[i]>i) { right+=1. } } }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "union_pairs1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP><=>+>+>IF>IF>%>==>IF>*>IF>IF>==>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "union(intersect(negative_value,even_value),intersect(large_magnitude,value_exceeds_index))+2",
+    "control_flow": "one_pass_union_flag",
+    "development_group": "novel_composition",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count each item once if it satisfies both negative entry and even-valued entry, or both entry whose square exceeds four and entry greater than its zero-based position. Add 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-AR-NOVEL_COMPOSITION-UNION_PAIRS1-02"
+  }
+}

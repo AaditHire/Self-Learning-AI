@@ -1,0 +1,40 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 11646,
+    "input_tokens": 146,
+    "output_tokens": 75
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=3.\nNUMBER right=n.\nLOOP (left<=right) { IF (n%left==0) { right=left. } left+=1. }\nNUMBER i=n.\nLOOP (i>=left) { IF (2*i==n) { left+=1. } i-=1. }\nDISPLAYNL(left).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "anchored_prefix2",
+    "ast_proxy_signature": "INPUT>->LOOP><=>+>+>IF>%>==>LOOP><=>+>+>IF>>=>IF><=>IF>*><=>+=>DISPLAYNL",
+    "capability": "A",
+    "composition_signature": "prefix_through_last(divisor_index,first_half)+3",
+    "control_flow": "two_pass_dependent_anchor",
+    "development_group": "structural_transfer",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Find the last position that is positive divisor of n. In a separate traversal count positions through it that are index in the first half through n; if no anchor exists count zero. Add 3.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "split": "phase3c_dev2r_development",
+    "task_id": "P3CDEV2R-NU-STRUCTURAL_TRANSFER-ANCHORED_PREFIX2-03"
+  }
+}

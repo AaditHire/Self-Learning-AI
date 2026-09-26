@@ -1,0 +1,103 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/isolated/adapter_model.safetensors",
+    "sha256": "a41fa70c5a59b9010763b37949209651683571213b333dbcf7dd0fea965852ed",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/isolated.json"
+  },
+  "exact_target_reproduction": true,
+  "generation_metadata": {
+    "generation_ms": 12060,
+    "input_tokens": 128,
+    "output_tokens": 74
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (n%i==0) { IF (n%i==0) { left+=1. } } IF (2*i<=n) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 125,
+        "exit_code": 0,
+        "expected_stdout": "5.0",
+        "normalized_stdout": "5.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 5.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "6.0",
+        "normalized_stdout": "6.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 6.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 133,
+        "exit_code": 0,
+        "expected_stdout": "9.0",
+        "normalized_stdout": "9.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 9.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "14.0",
+        "normalized_stdout": "14.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 14.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 127,
+        "exit_code": 0,
+        "expected_stdout": "20.0",
+        "normalized_stdout": "20.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 20.0\r\n"
+      }
+    ],
+    "cases_passed": 5,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "development_training",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": true,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05",
+  "task_metadata": {
+    "archetype": "pair6",
+    "composition_signature": "count(divisor_index)+count(first_half); redundant inner divisor_index guard",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Separately count positive divisor of n and index in the first half through n; add the two counts and 5.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "task_id": "P3CDEV2-ISOLATED-TR-NU-PAIR6-05"
+  }
+}

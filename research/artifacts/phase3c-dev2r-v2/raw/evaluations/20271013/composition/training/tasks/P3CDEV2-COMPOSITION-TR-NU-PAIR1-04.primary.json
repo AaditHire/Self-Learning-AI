@@ -1,0 +1,103 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/composition/adapter_model.safetensors",
+    "sha256": "cbe2c5efa295e73100ff5760e64fef0642bf00076b0acf6f2a2a14ab9f90d4b3",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/composition.json"
+  },
+  "exact_target_reproduction": true,
+  "generation_metadata": {
+    "generation_ms": 12702,
+    "input_tokens": 130,
+    "output_tokens": 77
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { right+=1. } }\nDISPLAYNL(left+right).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { IF (i%3==2) { left+=1. } } IF (i%2==1) { right+=1. } }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 143,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "4.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 4.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 146,
+        "exit_code": 0,
+        "expected_stdout": "5.0",
+        "normalized_stdout": "5.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 5.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 131,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 8.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 132,
+        "exit_code": 0,
+        "expected_stdout": "10.0",
+        "normalized_stdout": "10.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 10.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 121,
+        "exit_code": 0,
+        "expected_stdout": "16.0",
+        "normalized_stdout": "16.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for n: 16.0\r\n"
+      }
+    ],
+    "cases_passed": 5,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "development_training",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "numeric_iteration",
+    "hidden_pass": true,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-04"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-04",
+  "task_metadata": {
+    "archetype": "pair1",
+    "composition_signature": "count(odd_index AND residue_two)+count(odd_index)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and index with remainder two modulo three; also count odd index. Add both counts and 4.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR1-04"
+  }
+}

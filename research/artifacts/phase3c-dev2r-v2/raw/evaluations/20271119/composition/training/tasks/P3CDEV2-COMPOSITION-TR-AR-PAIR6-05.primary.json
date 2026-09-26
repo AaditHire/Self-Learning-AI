@@ -1,0 +1,103 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+    "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+  },
+  "exact_target_reproduction": true,
+  "generation_metadata": {
+    "generation_ms": 23579,
+    "input_tokens": 138,
+    "output_tokens": 146
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]>i) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=5.\nNUMBER right=0.\nNUMBER i=3.\nLOOP (i>=0) { IF (values[i]*values[i]>4) { IF (values[i]>i) { left+=1. } } IF (values[i]*values[i]>4) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 152,
+        "exit_code": 0,
+        "expected_stdout": "5.0",
+        "normalized_stdout": "5.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 5.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 157,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "10.0",
+        "normalized_stdout": "10.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 10.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 146,
+        "exit_code": 0,
+        "expected_stdout": "7.0",
+        "normalized_stdout": "7.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 7.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "8.0",
+        "normalized_stdout": "8.0",
+        "passed": true,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 8.0\r\n"
+      }
+    ],
+    "cases_passed": 5,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "development_training",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "array_reduction",
+    "hidden_pass": true,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05",
+  "task_metadata": {
+    "archetype": "pair6",
+    "composition_signature": "count(large_magnitude AND value_exceeds_index)+count(large_magnitude)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Count items satisfying both entry whose square exceeds four and entry greater than its zero-based position; also count entry whose square exceeds four. Add both counts and 5.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-AR-PAIR6-05"
+  }
+}

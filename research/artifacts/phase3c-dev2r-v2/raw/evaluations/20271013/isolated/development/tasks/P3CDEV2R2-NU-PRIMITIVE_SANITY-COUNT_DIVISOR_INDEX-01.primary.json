@@ -1,0 +1,110 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271013/isolated/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271013/isolated/adapter_model.safetensors",
+    "sha256": "1be74ede1aff8a09caceb9e6011a8a996393ee2c9dd75a7f685ada22b24cf10e",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271013/isolated.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 37338,
+    "input_tokens": 131,
+    "output_tokens": 225
+  },
+  "normalized_output": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=n.\nLOOP (left<=right) {\n    NUMBER middle=(left+right)/2.\n    NUMBER left2=middle.\n    NUMBER right2=n.\n    LOOP (left2<=right2) {\n        NUMBER middle2=(left2+right2)/2.\n        NUMBER left3=1.\n        NUMBER right3=middle2.\n        NUMBER result=0.\n        LOOP (left3<=right3) {\n            NUMBER middle3=(left3+right3)/2.\n            IF (middle2%middle3==0) { result=middle3. }\n            IF (middle2>=middle3) { left3=middle3+1. }\n            ELSE { right3=middle3-1. }\n        }\n        IF (result!=0) { left2=middle2+1. }\n        ELSE { right2=middle2-1. }\n    }\n    IF (result!=0) { left=middle+1. }\n    ELSE { right=middle-1. }\n}\nDISPLAYNL(left).",
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=1.\nNUMBER right=n.\nLOOP (left<=right) {\n    NUMBER middle=(left+right)/2.\n    NUMBER left2=middle.\n    NUMBER right2=n.\n    LOOP (left2<=right2) {\n        NUMBER middle2=(left2+right2)/2.\n        NUMBER left3=1.\n        NUMBER right3=middle2.\n        NUMBER result=0.\n        LOOP (left3<=right3) {\n            NUMBER middle3=(left3+right3)/2.\n            IF (middle2%middle3==0) { result=middle3. }\n            IF (middle2>=middle3) { left3=middle3+1. }\n            ELSE { right3=middle3-1. }\n        }\n        IF (result!=0) { left2=middle2+1. }\n        ELSE { right2=middle2-1. }\n    }\n    IF (result!=0) { left=middle+1. }\n    ELSE { right=middle-1. }\n}\nDISPLAYNL(left).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 134,
+        "exit_code": 1,
+        "expected_stdout": "1.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "semantic",
+        "stderr": "Semantic Errors:\r\nLine 23: Undefined variable: 'result'\r\nIf condition must be boolean expression, got UNKNOWN\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 128,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "semantic",
+        "stderr": "Semantic Errors:\r\nLine 23: Undefined variable: 'result'\r\nIf condition must be boolean expression, got UNKNOWN\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 126,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "semantic",
+        "stderr": "Semantic Errors:\r\nLine 23: Undefined variable: 'result'\r\nIf condition must be boolean expression, got UNKNOWN\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 137,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "semantic",
+        "stderr": "Semantic Errors:\r\nLine 23: Undefined variable: 'result'\r\nIf condition must be boolean expression, got UNKNOWN\r\n",
+        "stdout": ""
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 133,
+        "exit_code": 1,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "",
+        "passed": false,
+        "phase": "semantic",
+        "stderr": "Semantic Errors:\r\nLine 23: Undefined variable: 'result'\r\nIf condition must be boolean expression, got UNKNOWN\r\n",
+        "stdout": ""
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": false,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": "semantic",
+    "execution_success": false,
+    "family": "numeric_iteration",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_divisor_index",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(divisor_index)+1",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property positive divisor of n. Print that count plus 1.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_DIVISOR_INDEX-01"
+  }
+}

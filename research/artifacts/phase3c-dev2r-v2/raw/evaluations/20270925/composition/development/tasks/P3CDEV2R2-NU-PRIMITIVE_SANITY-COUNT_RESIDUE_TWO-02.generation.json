@@ -1,0 +1,39 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 7222,
+    "input_tokens": 133,
+    "output_tokens": 46
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=2.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%3==2) { left+=1. } }\nDISPLAYNL(left).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP"
+    ],
+    "archetype": "count_residue_two",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(residue_two)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Determine how many positive indices through n satisfy the property index with remainder two modulo three. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-NU-PRIMITIVE_SANITY-COUNT_RESIDUE_TWO-02"
+  }
+}

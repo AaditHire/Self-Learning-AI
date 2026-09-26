@@ -1,0 +1,114 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20271119/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20271119/composition/adapter_model.safetensors",
+    "sha256": "e51cd29f262ba7c5332636a01b57e77e83a7de289e8e7b0667096c2277d24198",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20271119/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 38144,
+    "input_tokens": 129,
+    "output_tokens": 244
+  },
+  "normalized_output": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=4.\nNUMBER middle=2.\nNUMBER top=4.\nNUMBER bottom=2.\nNUMBER value=values[0].\nIF (value%2==0) { left+=1. }\nIF (value%2==0) { top+=1. }\nvalue=values[1].\nIF (value%2==0) { right+=1. }\nIF (value%2==0) { bottom+=1. }\nvalue=values[2].\nIF (value%2==0) { middle+=1. }\nIF (value%2==0) { left+=1. }\nvalue=values[3].\nIF (value%2==0) { left+=1. }\nIF (value%2==0) { top+=1. }\nDISPLAYNL(left+right+middle+bottom).",
+  "raw_generation": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER left=2.\nNUMBER right=4.\nNUMBER middle=2.\nNUMBER top=4.\nNUMBER bottom=2.\nNUMBER value=values[0].\nIF (value%2==0) { left+=1. }\nIF (value%2==0) { top+=1. }\nvalue=values[1].\nIF (value%2==0) { right+=1. }\nIF (value%2==0) { bottom+=1. }\nvalue=values[2].\nIF (value%2==0) { middle+=1. }\nIF (value%2==0) { left+=1. }\nvalue=values[3].\nIF (value%2==0) { left+=1. }\nIF (value%2==0) { top+=1. }\nDISPLAYNL(left+right+middle+bottom).",
+  "score": {
+    "case_results": [
+      {
+        "case_id": "case-1",
+        "elapsed_ms": 142,
+        "exit_code": 0,
+        "expected_stdout": "6.0",
+        "normalized_stdout": "16.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 16.0\r\n"
+      },
+      {
+        "case_id": "case-2",
+        "elapsed_ms": 139,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "13.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 13.0\r\n"
+      },
+      {
+        "case_id": "case-3",
+        "elapsed_ms": 133,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "14.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 14.0\r\n"
+      },
+      {
+        "case_id": "case-4",
+        "elapsed_ms": 144,
+        "exit_code": 0,
+        "expected_stdout": "3.0",
+        "normalized_stdout": "11.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 11.0\r\n"
+      },
+      {
+        "case_id": "case-5",
+        "elapsed_ms": 153,
+        "exit_code": 0,
+        "expected_stdout": "4.0",
+        "normalized_stdout": "13.0",
+        "passed": false,
+        "phase": "success",
+        "stderr": "",
+        "stdout": "Enter value for line: 13.0\r\n"
+      }
+    ],
+    "cases_passed": 0,
+    "cases_total": 5,
+    "compile_success": true,
+    "difficulty": "phase3c_dev2r_development",
+    "error_phase": null,
+    "execution_success": true,
+    "family": "array_reduction",
+    "hidden_pass": false,
+    "parse_success": true,
+    "structural_requirements_met": true,
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02"
+  },
+  "status": "PRIMARY_SCORE_DURABLE",
+  "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02",
+  "task_metadata": {
+    "api_requirements": [
+      "INPUT",
+      "DISPLAYNL",
+      "IF",
+      "LOOP",
+      "IMPORT strings",
+      "strings.SPLIT",
+      "strings.TO_NUMBER",
+      "array_index"
+    ],
+    "archetype": "count_even_value",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL>+",
+    "capability": "A",
+    "composition_signature": "count(even_value)+2",
+    "control_flow": "forward_count",
+    "development_group": "primitive_sanity",
+    "family": "array_reduction",
+    "prompt": "Read four pipe-separated numbers. Determine how many array positions satisfy the property even-valued entry. Print that count plus 2.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "split": "phase3c_dev2r_v2_development",
+    "task_id": "P3CDEV2R2-AR-PRIMITIVE_SANITY-COUNT_EVEN_VALUE-02"
+  }
+}

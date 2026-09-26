@@ -1,0 +1,31 @@
+{
+  "adapter_identity": {
+    "path": ".runtime/phase3c_dev2/adapters/20270925/composition/adapter_model.safetensors",
+    "preservation_backup_path": "research/adapters/phase3c-dev2-preserved/20270925/composition/adapter_model.safetensors",
+    "sha256": "fd3a86800cff5c9b90b515b637e15a1b3fa96c372b4499d72a2ff3445cb246d9",
+    "size_bytes": 119801528,
+    "training_record": ".runtime/phase3c_dev2/training/20270925/composition.json"
+  },
+  "generation_metadata": {
+    "generation_ms": 11643,
+    "input_tokens": 128,
+    "output_tokens": 76
+  },
+  "raw_generation": "NUMBER n.\nINPUT(n).\nNUMBER left=4.\nNUMBER right=0.\nNUMBER i=n.\nLOOP (i>=1) { IF (i%2==1) { IF (n%i==0) { left+=1. } } IF (i%2==1) { right+=1. } i-=1. }\nDISPLAYNL(left+right).",
+  "status": "GENERATION_DURABLE",
+  "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-04",
+  "task_metadata": {
+    "archetype": "pair2",
+    "composition_signature": "count(odd_index AND divisor_index)+count(odd_index)",
+    "development_group": "own_training",
+    "difficulty": "development_training",
+    "family": "numeric_iteration",
+    "prompt": "Read nonnegative n. Count items satisfying both odd index and positive divisor of n; also count odd index. Add both counts and 4.",
+    "required_regex": [],
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "task_id": "P3CDEV2-COMPOSITION-TR-NU-PAIR2-04"
+  }
+}
