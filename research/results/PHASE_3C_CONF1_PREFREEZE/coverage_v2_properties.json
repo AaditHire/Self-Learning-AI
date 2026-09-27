@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "algebraic_equivalence_checks": 150,
+  "audited_bundle_properties": 7,
+  "bundle_results": [
+    {
+      "name": "alpha_renaming_preserves_coverage",
+      "expected": "PASS",
+      "observed": "PASS",
+      "required_failure": null,
+      "pass": true
+    },
+    {
+      "name": "constant_false_branch_does_not_create_capability",
+      "expected": "PASS",
+      "observed": "PASS",
+      "required_failure": null,
+      "pass": true
+    },
+    {
+      "name": "required_input_api_removed",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "required_failure": "API_INPUT_MISSING",
+      "pass": true
+    },
+    {
+      "name": "dead_if_not_independent_checks",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "required_failure": "MULTIPLE_INDEPENDENT_PREDICATE_CHECKS",
+      "pass": true
+    },
+    {
+      "name": "negative_output_capability_removed",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "required_failure": "OUTPUT_NEGATIVE",
+      "pass": true
+    },
+    {
+      "name": "local_pair_motif_permitted",
+      "expected": "PASS",
+      "observed": "PASS",
+      "required_failure": null,
+      "pass": true
+    },
+    {
+      "name": "full_signature_inserted",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "required_failure": "PROHIBITED_FULL_SIGNATURE",
+      "pass": true
+    }
+  ],
+  "no_model_execution": true
+}
