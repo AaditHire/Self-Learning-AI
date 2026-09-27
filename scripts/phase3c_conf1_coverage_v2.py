@@ -314,12 +314,16 @@ def _source_certificate(record: dict) -> tuple[list[dict], list[str]]:
             failures.append("ARRAY_VALUES_MISSING")
     used_predicates = set(_predicate_leaves(record))
     if_count = len(re.findall(r"\bIF\s*\(", source, re.I))
-    if if_count > len(used_predicates):
+    graph_conditional_nodes = (sum(node["op"] in {"or", "and", "gt", "ge", "lt", "le"}
+                                   for _, node in walk(record["aggregation"]["expr"]))
+                               if record["aggregation"]["kind"] == "sum_per_item" else 0)
+    allowed_if = len(used_predicates) + graph_conditional_nodes
+    if if_count > allowed_if:
         dead = len(re.findall(r"\bIF\s*\(\s*0\s*==\s*1\s*\)", source, re.I))
-        if if_count - len(used_predicates) > dead:
+        if if_count - allowed_if > dead:
             failures.append("UNCLASSIFIED_EXTRA_IF")
         else:
-            reference_only.append({"construct": "IF", "count": if_count - len(used_predicates),
+            reference_only.append({"construct": "IF", "count": if_count - allowed_if,
                                    "proof_code": "CONSTANT_FALSE_BRANCH"})
     declarations = re.findall(r"\bNUMBER\s+([A-Za-z_]\w*)\s*=", source, re.I)
     for name in declarations:

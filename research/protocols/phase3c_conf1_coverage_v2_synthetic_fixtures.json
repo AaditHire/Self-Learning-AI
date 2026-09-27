@@ -1,0 +1,6581 @@
+{
+  "version": 2,
+  "status": "LABELS_FROZEN_BEFORE_AUDITOR_RUN",
+  "fixtures": [
+    {
+      "name": "equivalent_comparison_operands",
+      "focus_category": "SEMANTIC_PRIMITIVE",
+      "expected": "PASS",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "EQ_COMPARE",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "le",
+                "args": [
+                  {
+                    "op": "var",
+                    "name": "n"
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (n<=2*i) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "name": "commutative_pair_order",
+      "focus_category": "OPERATOR_CAPABILITY",
+      "expected": "PASS",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "COMMUTE",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              },
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitQ=0. NUMBER hitP=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitQ=0. hitP=0. IF (2*i>=n) { hitQ=1. } IF (i%2==0) { hitP=1. } total+=(hitQ+hitP). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "name": "unused_reference_declaration",
+      "focus_category": "LANGUAGE_CONSTRUCT",
+      "expected": "PASS",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "REFERENCE_ONLY",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0. NUMBER unused=99. LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "name": "local_pair_motifs_without_full_graph",
+      "focus_category": "STRUCTURAL_SIGNATURE",
+      "expected": "PASS",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "LOCAL_GRAPH_EVAL",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "pred",
+                        "name": "P"
+                      },
+                      {
+                        "op": "pred",
+                        "name": "Q"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "pred",
+                        "name": "P"
+                      },
+                      {
+                        "op": "pred",
+                        "name": "R"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "ZERO",
+                "POSITIVE"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. hitR=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitQ+hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "3"
+              }
+            ],
+            "task_kind": "primary"
+          }
+        ]
+      }
+    },
+    {
+      "name": "computed_negative_one_equivalence",
+      "focus_category": "LITERAL_OR_VALUE_CAPABILITY",
+      "expected": "PASS",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "4"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "6"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "4"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "0"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "VALUE_DERIVED",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": -1
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=-1. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      }
+    },
+    {
+      "name": "literal_token_not_value",
+      "focus_category": "LITERAL_OR_VALUE_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "4"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "6"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "4"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "const",
+                    "value": 0
+                  },
+                  {
+                    "op": "const",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=(0-1). NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "0"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "EXACT_LITERAL_EVAL",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": -1
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [
+              "-1"
+            ],
+            "source": "NUMBER n. INPUT(n). NUMBER total=-1. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "LITERAL_TOKEN:-1"
+    },
+    {
+      "name": "task_essential_array_api_absent",
+      "focus_category": "API_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "ARRAY_API_EVAL",
+            "domain": "array_reduction",
+            "predicate_definitions": {
+              "A": {
+                "op": "lt",
+                "args": [
+                  {
+                    "op": "var",
+                    "name": "value"
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "pred",
+                "name": "A"
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "ZERO",
+                "POSITIVE"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "IMPORT strings. SENTENCE line. INPUT(line). SENTENCE[] parts = strings.SPLIT(line, \"|\"). NUMBER a = strings.TO_NUMBER(parts[0]). NUMBER b = strings.TO_NUMBER(parts[1]). NUMBER c = strings.TO_NUMBER(parts[2]). NUMBER d = strings.TO_NUMBER(parts[3]). NUMBER[] values=[a,b,c,d]. NUMBER total=0. LOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]<0) { total+=1. } } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0|0|0|0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "-1|0|0|0",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "-1|-2|0|0",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "1|2|3|4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "0|0|0|-1",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "UNCOVERED:API_CAPABILITY"
+    },
+    {
+      "name": "dead_if_does_not_cover_independent_checks",
+      "focus_category": "CONTROL_FLOW_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_SINGLE_P",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "pred",
+                "name": "P"
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. IF (0==1) { total+=99. } LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. IF (i%2==0) { hitP=1. } total+=hitP. } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "3"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_SINGLE_Q",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "pred",
+                "name": "Q"
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitQ=0. IF (0==1) { total+=99. } LOOP (NUMBER i=1 TILL i<=n, i++) { hitQ=0. IF (2*i>=n) { hitQ=1. } total+=hitQ. } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "4"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_SINGLE_P",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "pred",
+                "name": "P"
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. IF (0==1) { total+=99. } LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. IF (i%2==0) { hitP=1. } total+=hitP. } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "3"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_SINGLE_Q",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "pred",
+                "name": "Q"
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitQ=0. IF (0==1) { total+=99. } LOOP (NUMBER i=1 TILL i<=n, i++) { hitQ=0. IF (2*i>=n) { hitQ=1. } total+=hitQ. } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "4"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "TWO_CHECKS",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "MULTIPLE_INDEPENDENT_PREDICATE_CHECKS"
+    },
+    {
+      "name": "boolean_or_operator_absent",
+      "focus_category": "OPERATOR_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "OR_EVAL",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "or",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } IF (hitP+hitQ>0) { total+=1. } } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "BOOLEAN_OR"
+    },
+    {
+      "name": "prior_state_dataflow_absent",
+      "focus_category": "DATAFLOW_OR_AGGREGATION_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "PREFIX_EVAL",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "prefix_pair",
+              "p": "P",
+              "q": "Q"
+            },
+            "output_domain": {
+              "required_categories": [
+                "ZERO",
+                "POSITIVE"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER seen=0. NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (2*i>=n) { total+=seen. } IF (i%2==0) { seen+=1. } } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "6"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "PRIOR_STATE_TO_ACCUMULATOR"
+    },
+    {
+      "name": "full_primary_signature_reused",
+      "focus_category": "STRUCTURAL_SIGNATURE",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "FULL_REUSE",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "primary"
+          }
+        ]
+      },
+      "required_failure_substring": "PROHIBITED_FULL_SIGNATURE:composition"
+    },
+    {
+      "name": "negative_output_capability_absent",
+      "focus_category": "LITERAL_OR_VALUE_CAPABILITY",
+      "expected": "FAIL",
+      "bundle": {
+        "isolated": [
+          {
+            "id": "ISO_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP+hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "5"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "7"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          },
+          {
+            "id": "ISO_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP+hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "3"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "5"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "isolated"
+          }
+        ],
+        "composition": [
+          {
+            "id": "COMP_PQ",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "2"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "2"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          },
+          {
+            "id": "COMP_PR",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "R": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "R"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": 0
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hitP=0. NUMBER hitR=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitR=0. IF (i%2==0) { hitP=1. } IF (i%3==0) { hitR=1. } total+=(hitP*hitR). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "3",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "training",
+            "condition": "composition"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "NEGATIVE_UNCOVERED",
+            "domain": "numeric_iteration",
+            "predicate_definitions": {
+              "P": {
+                "op": "eq",
+                "args": [
+                  {
+                    "op": "mod",
+                    "args": [
+                      {
+                        "op": "var",
+                        "name": "i"
+                      },
+                      {
+                        "op": "const",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "const",
+                    "value": 0
+                  }
+                ]
+              },
+              "Q": {
+                "op": "ge",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "const",
+                        "value": 2
+                      },
+                      {
+                        "op": "var",
+                        "name": "i"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "var",
+                    "name": "n"
+                  }
+                ]
+              }
+            },
+            "aggregation": {
+              "kind": "sum_per_item",
+              "expr": {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "pred",
+                    "name": "P"
+                  },
+                  {
+                    "op": "pred",
+                    "name": "Q"
+                  }
+                ]
+              },
+              "initial": {
+                "op": "const",
+                "value": -1
+              }
+            },
+            "output_domain": {
+              "required_categories": [
+                "NEGATIVE",
+                "POSITIVE",
+                "ZERO"
+              ],
+              "exact_sentinels": []
+            },
+            "literal_token_requirements": [],
+            "source": "NUMBER n. INPUT(n). NUMBER total=-1. NUMBER hitP=0. NUMBER hitQ=0.  LOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==0) { hitP=1. } IF (2*i>=n) { hitQ=1. } total+=(hitP*hitQ). } DISPLAYNL(total).",
+            "cases": [
+              {
+                "case_id": "C1",
+                "stdin": "0",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C2",
+                "stdin": "1",
+                "expected_stdout": "-1"
+              },
+              {
+                "case_id": "C3",
+                "stdin": "2",
+                "expected_stdout": "0"
+              },
+              {
+                "case_id": "C4",
+                "stdin": "4",
+                "expected_stdout": "1"
+              },
+              {
+                "case_id": "C5",
+                "stdin": "6",
+                "expected_stdout": "1"
+              }
+            ],
+            "task_kind": "secondary"
+          }
+        ]
+      },
+      "required_failure_substring": "OUTPUT_NEGATIVE"
+    }
+  ]
+}
