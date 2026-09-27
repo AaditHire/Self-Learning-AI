@@ -1,0 +1,1684 @@
+{
+  "status": "PROSPECTIVE_DESIGN_LEDGER_BEFORE_DATA_OR_MODEL_USE",
+  "design_baseline_commit": "ebe5b1d90b1d44dce8551e29de3ebb8a807cfaa3",
+  "construction_seed": 20290123,
+  "predicate_definitions": {
+    "numeric_iteration": [
+      {
+        "name": "odd_index",
+        "expression": "i%2==1"
+      },
+      {
+        "name": "residue_two",
+        "expression": "i%3==2"
+      },
+      {
+        "name": "divisor_index",
+        "expression": "n%i==0"
+      },
+      {
+        "name": "first_half",
+        "expression": "2*i<=n"
+      }
+    ],
+    "array_reduction": [
+      {
+        "name": "negative_value",
+        "expression": "values[i]<0"
+      },
+      {
+        "name": "even_value",
+        "expression": "values[i]%2==0"
+      },
+      {
+        "name": "large_magnitude",
+        "expression": "values[i]*values[i]>4"
+      },
+      {
+        "name": "value_exceeds_index",
+        "expression": "values[i]>i"
+      }
+    ]
+  },
+  "training_semantics": {
+    "isolated": "per-item hitP+hitQ",
+    "composition": "per-item hitP*hitQ"
+  },
+  "graphs": {
+    "G1": "(P&Q)|(P&R) counted once",
+    "G2": "(P&Q)+(Q&R)+(R&S)",
+    "G3": "(P&Q)+(P&R)+(P&S)",
+    "G4": "((P|Q)&R)+(Q&S)"
+  },
+  "slots": {
+    "primary": [
+      {
+        "task_id": "CONF1-NC-NU-G1-R0",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 0,
+        "block_id": "numeric_iteration:G1",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "composition_signature": "numeric_iteration:G1:R0"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G1-R1",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 1,
+        "block_id": "numeric_iteration:G1",
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        },
+        "composition_signature": "numeric_iteration:G1:R1"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G1-R2",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 2,
+        "block_id": "numeric_iteration:G1",
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        },
+        "composition_signature": "numeric_iteration:G1:R2"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G1-R3",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 3,
+        "block_id": "numeric_iteration:G1",
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        },
+        "composition_signature": "numeric_iteration:G1:R3"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G2-R0",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 0,
+        "block_id": "numeric_iteration:G2",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "composition_signature": "numeric_iteration:G2:R0"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G2-R1",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 1,
+        "block_id": "numeric_iteration:G2",
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        },
+        "composition_signature": "numeric_iteration:G2:R1"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G2-R2",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 2,
+        "block_id": "numeric_iteration:G2",
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        },
+        "composition_signature": "numeric_iteration:G2:R2"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G2-R3",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 3,
+        "block_id": "numeric_iteration:G2",
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        },
+        "composition_signature": "numeric_iteration:G2:R3"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G3-R0",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 0,
+        "block_id": "numeric_iteration:G3",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "composition_signature": "numeric_iteration:G3:R0"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G3-R1",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 1,
+        "block_id": "numeric_iteration:G3",
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        },
+        "composition_signature": "numeric_iteration:G3:R1"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G3-R2",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 2,
+        "block_id": "numeric_iteration:G3",
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        },
+        "composition_signature": "numeric_iteration:G3:R2"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G3-R3",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 3,
+        "block_id": "numeric_iteration:G3",
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        },
+        "composition_signature": "numeric_iteration:G3:R3"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G4-R0",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 0,
+        "block_id": "numeric_iteration:G4",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "composition_signature": "numeric_iteration:G4:R0"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G4-R1",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 1,
+        "block_id": "numeric_iteration:G4",
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        },
+        "composition_signature": "numeric_iteration:G4:R1"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G4-R2",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 2,
+        "block_id": "numeric_iteration:G4",
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        },
+        "composition_signature": "numeric_iteration:G4:R2"
+      },
+      {
+        "task_id": "CONF1-NC-NU-G4-R3",
+        "family": "numeric_iteration",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 3,
+        "block_id": "numeric_iteration:G4",
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        },
+        "composition_signature": "numeric_iteration:G4:R3"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G1-R0",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 0,
+        "block_id": "array_reduction:G1",
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        },
+        "composition_signature": "array_reduction:G1:R0"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G1-R1",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 1,
+        "block_id": "array_reduction:G1",
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        },
+        "composition_signature": "array_reduction:G1:R1"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G1-R2",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 2,
+        "block_id": "array_reduction:G1",
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        },
+        "composition_signature": "array_reduction:G1:R2"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G1-R3",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G1",
+        "rotation": 3,
+        "block_id": "array_reduction:G1",
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        },
+        "composition_signature": "array_reduction:G1:R3"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G2-R0",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 0,
+        "block_id": "array_reduction:G2",
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        },
+        "composition_signature": "array_reduction:G2:R0"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G2-R1",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 1,
+        "block_id": "array_reduction:G2",
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        },
+        "composition_signature": "array_reduction:G2:R1"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G2-R2",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 2,
+        "block_id": "array_reduction:G2",
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        },
+        "composition_signature": "array_reduction:G2:R2"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G2-R3",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G2",
+        "rotation": 3,
+        "block_id": "array_reduction:G2",
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        },
+        "composition_signature": "array_reduction:G2:R3"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G3-R0",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 0,
+        "block_id": "array_reduction:G3",
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        },
+        "composition_signature": "array_reduction:G3:R0"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G3-R1",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 1,
+        "block_id": "array_reduction:G3",
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        },
+        "composition_signature": "array_reduction:G3:R1"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G3-R2",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 2,
+        "block_id": "array_reduction:G3",
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        },
+        "composition_signature": "array_reduction:G3:R2"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G3-R3",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G3",
+        "rotation": 3,
+        "block_id": "array_reduction:G3",
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        },
+        "composition_signature": "array_reduction:G3:R3"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G4-R0",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 0,
+        "block_id": "array_reduction:G4",
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        },
+        "composition_signature": "array_reduction:G4:R0"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G4-R1",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 1,
+        "block_id": "array_reduction:G4",
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        },
+        "composition_signature": "array_reduction:G4:R1"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G4-R2",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 2,
+        "block_id": "array_reduction:G4",
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        },
+        "composition_signature": "array_reduction:G4:R2"
+      },
+      {
+        "task_id": "CONF1-NC-AR-G4-R3",
+        "family": "array_reduction",
+        "group": "novel_composition",
+        "graph": "G4",
+        "rotation": 3,
+        "block_id": "array_reduction:G4",
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        },
+        "composition_signature": "array_reduction:G4:R3"
+      }
+    ],
+    "primitive_sanity": [
+      {
+        "task_id": "CONF1-PS-NU-P0-V0",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "odd_index",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-NU-P0-V1",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "odd_index",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-NU-P1-V0",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "residue_two",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-NU-P1-V1",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "residue_two",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-NU-P2-V0",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "divisor_index",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-NU-P2-V1",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "divisor_index",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-NU-P3-V0",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "first_half",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-NU-P3-V1",
+        "family": "numeric_iteration",
+        "group": "primitive_sanity",
+        "primitive": "first_half",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-AR-P0-V0",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "negative_value",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-AR-P0-V1",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "negative_value",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-AR-P1-V0",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "even_value",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-AR-P1-V1",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "even_value",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-AR-P2-V0",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "large_magnitude",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-AR-P2-V1",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "large_magnitude",
+        "variant": 1,
+        "offset": 3
+      },
+      {
+        "task_id": "CONF1-PS-AR-P3-V0",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "value_exceeds_index",
+        "variant": 0,
+        "offset": 0
+      },
+      {
+        "task_id": "CONF1-PS-AR-P3-V1",
+        "family": "array_reduction",
+        "group": "primitive_sanity",
+        "primitive": "value_exceeds_index",
+        "variant": 1,
+        "offset": 3
+      }
+    ],
+    "structural_transfer": [
+      {
+        "task_id": "CONF1-ST-NU-prefix_running_pair-R0",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 0,
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-prefix_running_pair-R1",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 1,
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-prefix_running_pair-R2",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 2,
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-prefix_running_pair-R3",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 3,
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-two_pass_product-R0",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 0,
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-two_pass_product-R1",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 1,
+        "role_predicates": {
+          "P": "residue_two",
+          "Q": "divisor_index",
+          "R": "first_half",
+          "S": "odd_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-two_pass_product-R2",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 2,
+        "role_predicates": {
+          "P": "divisor_index",
+          "Q": "first_half",
+          "R": "odd_index",
+          "S": "residue_two"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-NU-two_pass_product-R3",
+        "family": "numeric_iteration",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 3,
+        "role_predicates": {
+          "P": "first_half",
+          "Q": "odd_index",
+          "R": "residue_two",
+          "S": "divisor_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-prefix_running_pair-R0",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 0,
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-prefix_running_pair-R1",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 1,
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-prefix_running_pair-R2",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 2,
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-prefix_running_pair-R3",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "prefix_running_pair",
+        "rotation": 3,
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-two_pass_product-R0",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 0,
+        "role_predicates": {
+          "P": "negative_value",
+          "Q": "even_value",
+          "R": "large_magnitude",
+          "S": "value_exceeds_index"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-two_pass_product-R1",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 1,
+        "role_predicates": {
+          "P": "even_value",
+          "Q": "large_magnitude",
+          "R": "value_exceeds_index",
+          "S": "negative_value"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-two_pass_product-R2",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 2,
+        "role_predicates": {
+          "P": "large_magnitude",
+          "Q": "value_exceeds_index",
+          "R": "negative_value",
+          "S": "even_value"
+        }
+      },
+      {
+        "task_id": "CONF1-ST-AR-two_pass_product-R3",
+        "family": "array_reduction",
+        "group": "structural_transfer",
+        "structure": "two_pass_product",
+        "rotation": 3,
+        "role_predicates": {
+          "P": "value_exceeds_index",
+          "Q": "negative_value",
+          "R": "even_value",
+          "S": "large_magnitude"
+        }
+      }
+    ],
+    "training_paired_slots": [
+      {
+        "slot_id": "CONF1-TR-NU-01-V0",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "odd_index",
+          "residue_two"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-01-V1",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "residue_two"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-01-V2",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "odd_index",
+          "residue_two"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-01-V3",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "residue_two"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-01-V4",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "odd_index",
+          "residue_two"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-02-V0",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "divisor_index"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-02-V1",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "odd_index",
+          "divisor_index"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-02-V2",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "divisor_index"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-02-V3",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "odd_index",
+          "divisor_index"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-02-V4",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "divisor_index"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-03-V0",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "first_half"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-03-V1",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "first_half",
+        "unordered_pair": [
+          "odd_index",
+          "first_half"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-03-V2",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "first_half"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-03-V3",
+        "family": "numeric_iteration",
+        "P": "odd_index",
+        "Q": "first_half",
+        "unordered_pair": [
+          "odd_index",
+          "first_half"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-03-V4",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "odd_index",
+        "unordered_pair": [
+          "odd_index",
+          "first_half"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-12-V0",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "residue_two",
+          "divisor_index"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-12-V1",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "residue_two",
+          "divisor_index"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-12-V2",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "residue_two",
+          "divisor_index"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-12-V3",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "residue_two",
+          "divisor_index"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-12-V4",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "residue_two",
+          "divisor_index"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-13-V0",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "first_half",
+        "unordered_pair": [
+          "residue_two",
+          "first_half"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-13-V1",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "residue_two",
+          "first_half"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-13-V2",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "first_half",
+        "unordered_pair": [
+          "residue_two",
+          "first_half"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-13-V3",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "residue_two",
+        "unordered_pair": [
+          "residue_two",
+          "first_half"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-13-V4",
+        "family": "numeric_iteration",
+        "P": "residue_two",
+        "Q": "first_half",
+        "unordered_pair": [
+          "residue_two",
+          "first_half"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-23-V0",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "first_half",
+        "unordered_pair": [
+          "divisor_index",
+          "first_half"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-23-V1",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "divisor_index",
+          "first_half"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-23-V2",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "first_half",
+        "unordered_pair": [
+          "divisor_index",
+          "first_half"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-NU-23-V3",
+        "family": "numeric_iteration",
+        "P": "first_half",
+        "Q": "divisor_index",
+        "unordered_pair": [
+          "divisor_index",
+          "first_half"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-NU-23-V4",
+        "family": "numeric_iteration",
+        "P": "divisor_index",
+        "Q": "first_half",
+        "unordered_pair": [
+          "divisor_index",
+          "first_half"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-01-V0",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "even_value",
+        "unordered_pair": [
+          "negative_value",
+          "even_value"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-01-V1",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "even_value"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-01-V2",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "even_value",
+        "unordered_pair": [
+          "negative_value",
+          "even_value"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-01-V3",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "even_value"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-01-V4",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "even_value",
+        "unordered_pair": [
+          "negative_value",
+          "even_value"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-02-V0",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "large_magnitude"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-02-V1",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "negative_value",
+          "large_magnitude"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-02-V2",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "large_magnitude"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-02-V3",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "negative_value",
+          "large_magnitude"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-02-V4",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "large_magnitude"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-03-V0",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "value_exceeds_index"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-03-V1",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "negative_value",
+          "value_exceeds_index"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-03-V2",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "value_exceeds_index"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-03-V3",
+        "family": "array_reduction",
+        "P": "negative_value",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "negative_value",
+          "value_exceeds_index"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-03-V4",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "negative_value",
+        "unordered_pair": [
+          "negative_value",
+          "value_exceeds_index"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-12-V0",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "even_value",
+          "large_magnitude"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-12-V1",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "even_value",
+        "unordered_pair": [
+          "even_value",
+          "large_magnitude"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-12-V2",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "even_value",
+          "large_magnitude"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-12-V3",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "even_value",
+        "unordered_pair": [
+          "even_value",
+          "large_magnitude"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-12-V4",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "even_value",
+          "large_magnitude"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-13-V0",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "even_value",
+          "value_exceeds_index"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-13-V1",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "even_value",
+        "unordered_pair": [
+          "even_value",
+          "value_exceeds_index"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-13-V2",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "even_value",
+          "value_exceeds_index"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-13-V3",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "even_value",
+        "unordered_pair": [
+          "even_value",
+          "value_exceeds_index"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-13-V4",
+        "family": "array_reduction",
+        "P": "even_value",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "even_value",
+          "value_exceeds_index"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-23-V0",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "large_magnitude",
+          "value_exceeds_index"
+        ],
+        "variant": 0,
+        "offset": 0,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-23-V1",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "large_magnitude",
+          "value_exceeds_index"
+        ],
+        "variant": 1,
+        "offset": 2,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-23-V2",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "large_magnitude",
+          "value_exceeds_index"
+        ],
+        "variant": 2,
+        "offset": 4,
+        "reverse": true
+      },
+      {
+        "slot_id": "CONF1-TR-AR-23-V3",
+        "family": "array_reduction",
+        "P": "value_exceeds_index",
+        "Q": "large_magnitude",
+        "unordered_pair": [
+          "large_magnitude",
+          "value_exceeds_index"
+        ],
+        "variant": 3,
+        "offset": 6,
+        "reverse": false
+      },
+      {
+        "slot_id": "CONF1-TR-AR-23-V4",
+        "family": "array_reduction",
+        "P": "large_magnitude",
+        "Q": "value_exceeds_index",
+        "unordered_pair": [
+          "large_magnitude",
+          "value_exceeds_index"
+        ],
+        "variant": 4,
+        "offset": 8,
+        "reverse": true
+      }
+    ]
+  },
+  "candidate_policy": {
+    "generator": "scripts/build_phase3c_conf1_data.py; deterministic from this ledger and construction_seed",
+    "selection": "first candidate in deterministic order satisfying frozen semantic, case-discrimination, coverage and overlap constraints",
+    "rejection_log": "record every attempted candidate ID, input/prompt/reference hash, and rejection reason before accepting successor",
+    "no_model_feedback": true,
+    "after_model_use": "no replacement or regeneration",
+    "training_case_pool": "numeric 0..60; array signed values -16..16; case identity is task specification plus stdin plus expected output",
+    "evaluation_case_pool": "numeric 0..100; array signed values -16..16; exclude exact accepted training case triples and consumed exact task/case triples; record raw-stdin overlap separately",
+    "boundary_exception": "numeric n=0 may recur as a raw input because it uniquely exercises the empty loop under this schema; it is a new semantic case for a new task and its raw-input reuse is disclosed",
+    "evaluation_selection": "fixed-seed candidate ordering; first five satisfying each task's positive, zero, overlap, boundary, multiplicity and pairwise-distinguishing matrix; reject task if impossible",
+    "no_semantically_dead_code": true,
+    "training_numeric_cases": "for each slot use random.Random(SHA256(construction_seed,slot_id,'train-numeric')) to sample five distinct n from 1..60 excluding 12,13,14; sort ascending",
+    "training_array_cases": "for each slot use random.Random(SHA256(construction_seed,slot_id,'train-array')) to draw five unique 4-tuples from -16..16, rejection logged; exclude tuples selected for evaluation",
+    "primary_numeric_cases": [
+      0,
+      70,
+      12,
+      13,
+      14
+    ],
+    "primary_array_cases": "prepend all-zero tuple; draw 4096 four-tuples using random.Random(construction_seed), each component -16..16; greedily choose four further tuples maximizing newly distinguished pairs among 120, ties by candidate index; require all 120 pairs, otherwise STOP",
+    "secondary_cases": "reuse the five preselected domain inputs from primary but expected outputs derive from each fresh secondary specification",
+    "training_prompt_rule": "same wrapper; only separate-count versus overlap-count treatment clause differs",
+    "primary_prompt_rule": "fixed graph-specific text in prospective builder; no model-based edits"
+  }
+}
