@@ -1,0 +1,13 @@
+{
+  "status": "REJECTED_BEFORE_FREEZE_AND_BEFORE_MODEL_USE",
+  "reason": "GOCO compound assignment requires a parenthesized arithmetic expression; both initial training conditions produced a syntax error at the treatment expression",
+  "observed_examples": [
+    "CONF1-ISOLATED-TR-NU-01-V0",
+    "CONF1-COMPOSITION-TR-NU-01-V0"
+  ],
+  "non_model_test": "Pinned GOCO compiler on synthetic first training cases; both unparenthesized targets returned Syntax Error: Missing statement terminator",
+  "prospective_correction": "Wrap the treatment expression in parentheses in both conditions: total+=(hitP+hitQ). and total+=(hitP*hitQ).",
+  "task_or_case_selection_changed": false,
+  "adapter_or_model_output_used": false,
+  "files": "Original candidate data, evaluation artifacts, and candidate-attempt ledger are retained in this directory; their file SHA-256 values can be recomputed byte-exact."
+}
