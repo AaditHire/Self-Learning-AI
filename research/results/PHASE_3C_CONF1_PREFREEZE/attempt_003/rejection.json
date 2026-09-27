@@ -1,0 +1,9 @@
+{
+  "status": "STOP_PREFREEZE_NOT_FROZEN",
+  "reason": "The consumed-input audit found 174 coarse AST-proxy equalities, all involving Primitive Sanity. There are zero exact prompt, exact source, or approved normalized full-template matches, but the reviewed design requires an independently established overcoarse-proxy adjudication rule frozen before data review. No such rule was frozen. The equality flag is therefore unresolved and cannot be waived by inventing a post-data rule.",
+  "other_checks": "184/184 canonical references and 920/920 cases passed; selected five-case sets distinguish all 120 primary slot pairs per domain; token limits pass; these do not override the unresolved AST-proxy gate.",
+  "audit_caution": "The data_audit.json task-essential coverage field is preliminary and does not independently establish complete literal, output-value, and control-flow coverage for every task. The analyzer, RNG, authorization and persistence implementations/tests were not completed after the STOP.",
+  "model_output_used": false,
+  "model_training_or_inference": 0,
+  "candidate_frozen": false
+}

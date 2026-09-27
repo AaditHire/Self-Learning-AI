@@ -1,0 +1,978 @@
+[
+  {
+    "task_id": "CONF1-NC-NU-G1-R0",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G1",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "numeric_iteration:G1:R0",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G1-R1",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G1",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "numeric_iteration:G1:R1",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>*><=>IF>%>==>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G1-R2",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G1",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "numeric_iteration:G1:R2",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>*><=>IF>%>==>IF>%>==>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G1-R3",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G1",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "numeric_iteration:G1:R3",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>IF>%>==>IF>%>==>IF>%>==>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G2-R0",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G2",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "numeric_iteration:G2:R0",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G2-R1",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G2",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "numeric_iteration:G2:R1",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>*><=>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G2-R2",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G2",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "numeric_iteration:G2:R2",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>*><=>IF>%>==>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G2-R3",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G2",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "numeric_iteration:G2:R3",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>IF>%>==>IF>%>==>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G3-R0",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G3",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "numeric_iteration:G3:R0",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G3-R1",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G3",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "numeric_iteration:G3:R1",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>*><=>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G3-R2",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G3",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "numeric_iteration:G3:R2",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>*><=>IF>%>==>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G3-R3",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G3",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "numeric_iteration:G3:R3",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>IF>%>==>IF>%>==>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G4-R0",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G4",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "numeric_iteration:G4:R0",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>%>==>IF>*><=>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G4-R1",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G4",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "numeric_iteration:G4:R1",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>%>==>IF>*><=>IF>%>==>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G4-R2",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G4",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "numeric_iteration:G4:R2",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>IF>*><=>IF>%>==>IF>%>==>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-NU-G4-R3",
+    "family": "numeric_iteration",
+    "group": "novel_composition",
+    "block_id": "numeric_iteration:G4",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "numeric_iteration:G4:R3",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>IF>%>==>IF>%>==>IF>%>==>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G1-R0",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G1",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "array_reduction:G1:R0",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>IF>*>IF>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G1-R1",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G1",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: an entry with square above four; R: an entry greater than its zero-based position; S: a negative entry). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "array_reduction:G1:R1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>*>IF>IF>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G1-R2",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G1",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: an entry greater than its zero-based position; R: a negative entry; S: an even entry). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "array_reduction:G1:R2",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>IF>IF>IF>%>==>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G1-R3",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G1",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry greater than its zero-based position; Q: a negative entry; R: an even entry; S: an entry with square above four). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "array_reduction:G1:R3",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>IF>%>==>IF>*>IF>*>+>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G2-R0",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G2",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "array_reduction:G2:R0",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>IF>*>IF>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G2-R1",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G2",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: an entry with square above four; R: an entry greater than its zero-based position; S: a negative entry). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "array_reduction:G2:R1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>*>IF>IF>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G2-R2",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G2",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: an entry greater than its zero-based position; R: a negative entry; S: an even entry). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "array_reduction:G2:R2",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>IF>IF>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G2-R3",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G2",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry greater than its zero-based position; Q: a negative entry; R: an even entry; S: an entry with square above four). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "array_reduction:G2:R3",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>IF>%>==>IF>*>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G3-R0",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G3",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "array_reduction:G3:R0",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>IF>*>IF>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G3-R1",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G3",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: an entry with square above four; R: an entry greater than its zero-based position; S: a negative entry). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "array_reduction:G3:R1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>*>IF>IF>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G3-R2",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G3",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: an entry greater than its zero-based position; R: a negative entry; S: an even entry). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "array_reduction:G3:R2",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>IF>IF>IF>%>==>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G3-R3",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G3",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry greater than its zero-based position; Q: a negative entry; R: an even entry; S: an entry with square above four). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "array_reduction:G3:R3",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>IF>%>==>IF>*>+=>*>+>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G4-R0",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G4",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "array_reduction:G4:R0",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>%>==>IF>*>IF>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G4-R1",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G4",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: an entry with square above four; R: an entry greater than its zero-based position; S: a negative entry). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "array_reduction:G4:R1",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>IF>*>IF>IF>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G4-R2",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G4",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: an entry greater than its zero-based position; R: a negative entry; S: an even entry). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "array_reduction:G4:R2",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>IF>IF>IF>%>==>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-NC-AR-G4-R3",
+    "family": "array_reduction",
+    "group": "novel_composition",
+    "block_id": "array_reduction:G4",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry greater than its zero-based position; Q: a negative entry; R: an even entry; S: an entry with square above four). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "array_reduction:G4:R3",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>IF>IF>%>==>IF>*>IF>+>+=>*>+>*>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P0-V0",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "odd_index",
+    "prompt": "Read one nonnegative integer. Tally items that are an odd position; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P0-V1",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "odd_index",
+    "prompt": "Read one nonnegative integer. Tally items that are an odd position; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "odd_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P1-V0",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "residue_two",
+    "prompt": "Read one nonnegative integer. Tally items that are a position congruent to two modulo three; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P1-V1",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "residue_two",
+    "prompt": "Read one nonnegative integer. Tally items that are a position congruent to two modulo three; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "residue_two"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P2-V0",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "divisor_index",
+    "prompt": "Read one nonnegative integer. Tally items that are a positive position dividing the input; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P2-V1",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "divisor_index",
+    "prompt": "Read one nonnegative integer. Tally items that are a positive position dividing the input; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "divisor_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P3-V0",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "first_half",
+    "prompt": "Read one nonnegative integer. Tally items that are a position in the first half; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-NU-P3-V1",
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "block_id": "first_half",
+    "prompt": "Read one nonnegative integer. Tally items that are a position in the first half; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "first_half"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P0-V0",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "negative_value",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are a negative entry; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P0-V1",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "negative_value",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are a negative entry; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "negative_value"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P1-V0",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "even_value",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an even entry; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P1-V1",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "even_value",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an even entry; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "even_value"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P2-V0",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "large_magnitude",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry with square above four; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P2-V1",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "large_magnitude",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry with square above four; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "large_magnitude"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P3-V0",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "value_exceeds_index",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry greater than its zero-based position; begin the tally at 0. Print the final tally.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-PS-AR-P3-V1",
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "block_id": "value_exceeds_index",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry greater than its zero-based position; begin the tally at 3. Print the final tally.",
+    "semantic_primitives": [
+      "value_exceeds_index"
+    ],
+    "composition_signature": "single_primitive",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R0",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read one nonnegative integer. Use tests (P: an odd position; Q: a position congruent to two modulo three). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R1",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position congruent to two modulo three; Q: a positive position dividing the input). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R2",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read one nonnegative integer. Use tests (P: a positive position dividing the input; Q: a position in the first half). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R3",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position in the first half; Q: an odd position). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>IF>*><=>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-two_pass_product-R0",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read one nonnegative integer. Use tests (P: an odd position; Q: a position congruent to two modulo three). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two",
+      "divisor_index",
+      "first_half"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-two_pass_product-R1",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position congruent to two modulo three; Q: a positive position dividing the input). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index",
+      "first_half",
+      "odd_index"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-two_pass_product-R2",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read one nonnegative integer. Use tests (P: a positive position dividing the input; Q: a position in the first half). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half",
+      "odd_index",
+      "residue_two"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>%>==>+=>LOOP><=>+>+>IF>*><=>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-NU-two_pass_product-R3",
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position in the first half; Q: an odd position). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index",
+      "residue_two",
+      "divisor_index"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "INPUT>LOOP><=>+>+>IF>*><=>+=>LOOP><=>+>+>IF>%>==>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R0",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: a negative entry; Q: an even entry). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R1",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an even entry; Q: an entry with square above four). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>IF>%>==>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R2",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry with square above four; Q: an entry greater than its zero-based position). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>IF>*>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R3",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "prefix_running_pair",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry greater than its zero-based position; Q: a negative entry). For each Q item, add the number of earlier P items. Print the sum.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "prefix_running_pair",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>IF>+=>DISPLAYNL",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-two_pass_product-R0",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: a negative entry; Q: an even entry). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>%>==>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-two_pass_product-R1",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an even entry; Q: an entry with square above four). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>%>==>+=>LOOP>+>+>IF>*>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-two_pass_product-R2",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry with square above four; Q: an entry greater than its zero-based position). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index",
+      "negative_value",
+      "even_value"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>*>+=>LOOP>+>+>IF>+=>DISPLAYNL>*",
+    "required_regex": []
+  },
+  {
+    "task_id": "CONF1-ST-AR-two_pass_product-R3",
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "block_id": "two_pass_product",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry greater than its zero-based position; Q: a negative entry). Count P and Q separately, then print the product of their counts.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value",
+      "even_value",
+      "large_magnitude"
+    ],
+    "composition_signature": "two_pass_product",
+    "ast_proxy_signature": "IMPORT>INPUT>LOOP>+>+>IF>+=>LOOP>+>+>IF>+=>DISPLAYNL>*",
+    "required_regex": []
+  }
+]

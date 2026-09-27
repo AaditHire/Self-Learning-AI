@@ -1,0 +1,630 @@
+{
+  "status": "NON_MODEL_TOKEN_AUDIT_OF_UNFROZEN_CANDIDATE",
+  "tokenizer_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "conditions": {
+    "isolated": {
+      "examples": 60,
+      "full_tokens": 15346,
+      "supervised_tokens": 7531,
+      "max_full_tokens": 295,
+      "per_example": [
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-01-V0",
+          "full_tokens": 222,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-01-V1",
+          "full_tokens": 222,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-01-V2",
+          "full_tokens": 222,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-01-V3",
+          "full_tokens": 222,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-01-V4",
+          "full_tokens": 222,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-02-V0",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-02-V1",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-02-V2",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-02-V3",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-02-V4",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-03-V0",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-03-V1",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-03-V2",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-03-V3",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-03-V4",
+          "full_tokens": 219,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-12-V0",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-12-V1",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-12-V2",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-12-V3",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-12-V4",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-13-V0",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-13-V1",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-13-V2",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-13-V3",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-13-V4",
+          "full_tokens": 224,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-23-V0",
+          "full_tokens": 221,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-23-V1",
+          "full_tokens": 221,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-23-V2",
+          "full_tokens": 221,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-23-V3",
+          "full_tokens": 221,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-NU-23-V4",
+          "full_tokens": 221,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-01-V0",
+          "full_tokens": 286,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-01-V1",
+          "full_tokens": 285,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-01-V2",
+          "full_tokens": 286,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-01-V3",
+          "full_tokens": 285,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-01-V4",
+          "full_tokens": 286,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-02-V0",
+          "full_tokens": 289,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-02-V1",
+          "full_tokens": 290,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-02-V2",
+          "full_tokens": 289,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-02-V3",
+          "full_tokens": 290,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-02-V4",
+          "full_tokens": 289,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-03-V0",
+          "full_tokens": 289,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-03-V1",
+          "full_tokens": 288,
+          "supervised_tokens": 156
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-03-V2",
+          "full_tokens": 289,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-03-V3",
+          "full_tokens": 288,
+          "supervised_tokens": 156
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-03-V4",
+          "full_tokens": 289,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-12-V0",
+          "full_tokens": 292,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-12-V1",
+          "full_tokens": 291,
+          "supervised_tokens": 161
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-12-V2",
+          "full_tokens": 292,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-12-V3",
+          "full_tokens": 291,
+          "supervised_tokens": 161
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-12-V4",
+          "full_tokens": 292,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-13-V0",
+          "full_tokens": 290,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-13-V1",
+          "full_tokens": 291,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-13-V2",
+          "full_tokens": 290,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-13-V3",
+          "full_tokens": 291,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-13-V4",
+          "full_tokens": 290,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-23-V0",
+          "full_tokens": 295,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-23-V1",
+          "full_tokens": 294,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-23-V2",
+          "full_tokens": 295,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-23-V3",
+          "full_tokens": 294,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-ISOLATED-TR-AR-23-V4",
+          "full_tokens": 295,
+          "supervised_tokens": 160
+        }
+      ]
+    },
+    "composition": {
+      "examples": 60,
+      "full_tokens": 15466,
+      "supervised_tokens": 7531,
+      "max_full_tokens": 297,
+      "per_example": [
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-01-V0",
+          "full_tokens": 224,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-01-V1",
+          "full_tokens": 224,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-01-V2",
+          "full_tokens": 224,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-01-V3",
+          "full_tokens": 224,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-01-V4",
+          "full_tokens": 224,
+          "supervised_tokens": 93
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-02-V0",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-02-V1",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-02-V2",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-02-V3",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-02-V4",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-03-V0",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-03-V1",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-03-V2",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-03-V3",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-03-V4",
+          "full_tokens": 221,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-12-V0",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-12-V1",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-12-V2",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-12-V3",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-12-V4",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-13-V0",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-13-V1",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-13-V2",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-13-V3",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-13-V4",
+          "full_tokens": 226,
+          "supervised_tokens": 92
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-23-V0",
+          "full_tokens": 223,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-23-V1",
+          "full_tokens": 223,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-23-V2",
+          "full_tokens": 223,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-23-V3",
+          "full_tokens": 223,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-NU-23-V4",
+          "full_tokens": 223,
+          "supervised_tokens": 91
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-01-V0",
+          "full_tokens": 288,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-01-V1",
+          "full_tokens": 287,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-01-V2",
+          "full_tokens": 288,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-01-V3",
+          "full_tokens": 287,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-01-V4",
+          "full_tokens": 288,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-02-V0",
+          "full_tokens": 291,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-02-V1",
+          "full_tokens": 292,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-02-V2",
+          "full_tokens": 291,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-02-V3",
+          "full_tokens": 292,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-02-V4",
+          "full_tokens": 291,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-03-V0",
+          "full_tokens": 291,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-03-V1",
+          "full_tokens": 290,
+          "supervised_tokens": 156
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-03-V2",
+          "full_tokens": 291,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-03-V3",
+          "full_tokens": 290,
+          "supervised_tokens": 156
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-03-V4",
+          "full_tokens": 291,
+          "supervised_tokens": 157
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-12-V0",
+          "full_tokens": 294,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-12-V1",
+          "full_tokens": 293,
+          "supervised_tokens": 161
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-12-V2",
+          "full_tokens": 294,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-12-V3",
+          "full_tokens": 293,
+          "supervised_tokens": 161
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-12-V4",
+          "full_tokens": 294,
+          "supervised_tokens": 162
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-13-V0",
+          "full_tokens": 292,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-13-V1",
+          "full_tokens": 293,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-13-V2",
+          "full_tokens": 292,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-13-V3",
+          "full_tokens": 293,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-13-V4",
+          "full_tokens": 292,
+          "supervised_tokens": 158
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-23-V0",
+          "full_tokens": 297,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-23-V1",
+          "full_tokens": 296,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-23-V2",
+          "full_tokens": 297,
+          "supervised_tokens": 160
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-23-V3",
+          "full_tokens": 296,
+          "supervised_tokens": 159
+        },
+        {
+          "example_id": "CONF1-COMPOSITION-TR-AR-23-V4",
+          "full_tokens": 297,
+          "supervised_tokens": 160
+        }
+      ]
+    }
+  },
+  "full_relative_difference": 0.00781962726443373,
+  "supervised_relative_difference": 0.0,
+  "full_limit": 0.05,
+  "supervised_limit": 0.02,
+  "token_gate_pass": true
+}
