@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "status": "PROSPECTIVELY_FROZEN_VALIDATION_LABELS",
+  "fixtures": [
+    {
+      "name": "fresh_formatting_only",
+      "left": "NUMBER bound. INPUT(bound). NUMBER acc=0. LOOP (NUMBER t=1 TILL t<=bound, t++) { IF (t%3==0) { acc+=2. } } DISPLAYNL(acc).",
+      "right": "NUMBER bound.INPUT(bound).NUMBER acc=0.LOOP(NUMBER t=1 TILL t<=bound,t++){IF(t%3==0){acc+=2.}}DISPLAYNL(acc).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_allowed_keyword_case",
+      "left": "NUMBER size. INPUT(size). NUMBER count=0. LOOP (NUMBER x=1 TILL x<=size, x++) { IF (x>4) { count+=1. } } DISPLAYNL(count).",
+      "right": "number size. input(size). number count=0. loop (number x=1 till x<=size, x++) { if (x>4) { count+=1. } } displaynl(count).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_alpha_rename_two_branches",
+      "left": "NUMBER ceiling. INPUT(ceiling). NUMBER result=0. LOOP (NUMBER step=1 TILL step<=ceiling, step++) { IF (step%2==0) { result+=1. } IF (step%3==0) { result+=1. } } DISPLAYNL(result).",
+      "right": "NUMBER top. INPUT(top). NUMBER answer=0. LOOP (NUMBER place=1 TILL place<=top, place++) { IF (place%2==0) { answer+=1. } IF (place%3==0) { answer+=1. } } DISPLAYNL(answer).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_constant_only_rewrite",
+      "left": "NUMBER cap. INPUT(cap). NUMBER hits=0. LOOP (NUMBER u=1 TILL u<=cap, u++) { IF (u%4==2) { hits+=3. } } DISPLAYNL(hits).",
+      "right": "NUMBER cap. INPUT(cap). NUMBER hits=6. LOOP (NUMBER u=2 TILL u<=cap, u++) { IF (u%7==5) { hits+=9. } } DISPLAYNL(hits).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_prompt_paraphrase_same_target",
+      "left_prompt": "Read a limit and count qualifying positions.",
+      "right_prompt": "Given a maximum position, print how many meet the test.",
+      "left": "NUMBER limit. INPUT(limit). NUMBER output=0. LOOP (NUMBER p=1 TILL p<=limit, p++) { IF (p%5==1) { output+=1. } } DISPLAYNL(output).",
+      "right": "NUMBER limit. INPUT(limit). NUMBER output=0. LOOP (NUMBER p=1 TILL p<=limit, p++) { IF (p%5==1) { output+=1. } } DISPLAYNL(output).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_indicator_accumulator_superficial_edit",
+      "left": "NUMBER end. INPUT(end). NUMBER tally=0. NUMBER mark=0. LOOP (NUMBER k=1 TILL k<=end, k++) { mark=0. IF (k%4==0) { mark=1. } tally+=mark. } DISPLAYNL(tally).",
+      "right": "NUMBER end. INPUT(end). NUMBER tally=0. NUMBER mark=0. // indicator\nLOOP (NUMBER k=1 TILL k<=end, k++) { mark=0. IF (k%4==0) { mark=1. } tally += mark. } DISPLAYNL(tally).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "fresh_direct_vs_indicator_coarse_collision",
+      "left": "NUMBER bound. INPUT(bound). NUMBER sum=0. LOOP (NUMBER q=1 TILL q<=bound, q++) { IF (q%4==3) { sum+=2. } } DISPLAYNL(sum).",
+      "right": "NUMBER bound. INPUT(bound). NUMBER sum=0. NUMBER chosen=0. LOOP (NUMBER q=1 TILL q<=bound, q++) { chosen=0. IF (q%4==3) { chosen=2. } sum+=chosen. } DISPLAYNL(sum).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "fresh_accumulator_dependency_coarse_collision",
+      "left": "NUMBER limit. INPUT(limit). NUMBER sum=0. NUMBER prior=0. LOOP (NUMBER j=1 TILL j<=limit, j++) { IF (j%2==0) { sum+=prior. } prior+=1. } DISPLAYNL(sum).",
+      "right": "NUMBER limit. INPUT(limit). NUMBER sum=0. NUMBER prior=0. LOOP (NUMBER j=1 TILL j<=limit, j++) { IF (j%2==0) { prior+=sum. } sum+=1. } DISPLAYNL(sum).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "fresh_branch_relationship_coarse_collision",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER k=1 TILL k<=n, k++) { IF (k%2==0) { total+=1. } IF (k%3==0) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER k=1 TILL k<=n, k++) { IF (k%2==0) { total+=1. IF (k%3==0) { total+=1. } } } DISPLAYNL(total).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "fresh_boolean_topology_change",
+      "left": "NUMBER bound. INPUT(bound). NUMBER count=0. LOOP (NUMBER s=1 TILL s<=bound, s++) { IF ((s%2==0) AND (s%3==0)) { count+=1. } } DISPLAYNL(count).",
+      "right": "NUMBER bound. INPUT(bound). NUMBER count=0. LOOP (NUMBER s=1 TILL s<=bound, s++) { IF ((s%2==0) OR (s%3==0)) { count+=1. } } DISPLAYNL(count).",
+      "expected": "STRUCTURALLY_DISTINCT"
+    },
+    {
+      "name": "fresh_aggregation_multiplicity_change",
+      "left": "NUMBER n. INPUT(n). NUMBER a=0. NUMBER b=0. NUMBER total=0. LOOP (NUMBER v=1 TILL v<=n, v++) { a=0. b=0. IF (v%2==0) { a=1. } IF (v%3==0) { b=1. } total+=(a*b). } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER a=0. NUMBER b=0. NUMBER total=0. LOOP (NUMBER v=1 TILL v<=n, v++) { a=0. b=0. IF (v%2==0) { a=1. } IF (v%3==0) { b=1. } total+=(a+b). } DISPLAYNL(total).",
+      "expected": "STRUCTURALLY_DISTINCT"
+    }
+  ]
+}
