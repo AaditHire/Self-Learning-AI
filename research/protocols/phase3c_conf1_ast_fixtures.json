@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "positive_controls": [
+    {
+      "name": "literal_clone",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "identifier_renamed_clone",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER size. INPUT(size). NUMBER sum=0. LOOP (NUMBER position=1 TILL position<=size, position++) { IF (position%2==1) { sum+=1. } } DISPLAYNL(sum).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "constant_only_rewrite",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=7. LOOP (NUMBER i=3 TILL i<=n, i++) { IF (i%5==2) { total+=9. } } DISPLAYNL(total).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    },
+    {
+      "name": "superficial_spacing_and_case",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "number n.input(n).number total=0. loop(number i=1 till i<=n,i++){if(i%2==1){total+=1.}}displaynl(total).",
+      "expected": "PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "direct_count_vs_indicator_dataflow",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER hit=0. LOOP (NUMBER i=1 TILL i<=n, i++) { hit=0. IF (i%2==1) { hit=1. } total+=hit. } DISPLAYNL(total).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "predicate_placement_changes_truth",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (n%2==1) { total+=1. } } DISPLAYNL(total).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "different_output_dataflow",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER other=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. NUMBER other=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(other).",
+      "expected": "COARSE_AST_EQUALITY_ONLY",
+      "require_coarse_equal": true
+    },
+    {
+      "name": "different_aggregation_operator",
+      "left": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total+=1. } } DISPLAYNL(total).",
+      "right": "NUMBER n. INPUT(n). NUMBER total=0. LOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==1) { total*=1. } } DISPLAYNL(total).",
+      "expected": "NO_STRUCTURAL_TEMPLATE_REUSE"
+    }
+  ]
+}
