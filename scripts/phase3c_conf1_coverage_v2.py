@@ -20,6 +20,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from self_learning_ai.compiler import GocoCompiler, normalized_program_output  # noqa: E402
+from phase3c_conf1_coverage_v2_source import source_certificate  # noqa: E402
 
 
 class CoverageError(ValueError):
@@ -278,61 +279,6 @@ def _output_category(value: int, category: str) -> bool:
             "MULTIDIGIT": abs(value) >= 10}[category]
 
 
-def _source_certificate(record: dict) -> tuple[list[dict], list[str]]:
-    """Check the fixed numeric/array input parser chain and source-only extras."""
-    source = record["source"]
-    failures: list[str] = []
-    reference_only: list[dict] = []
-    inp = re.search(r"\bINPUT\s*\(\s*([A-Za-z_]\w*)\s*\)", source, re.I)
-    if not inp:
-        failures.append("API_INPUT_MISSING")
-        return reference_only, failures
-    input_var = inp.group(1)
-    if not re.search(r"\bLOOP\s*\(", source, re.I):
-        failures.append("LOOP_MISSING")
-    if not re.search(r"\bDISPLAYNL\s*\(", source, re.I):
-        failures.append("OUTPUT_MISSING")
-    if record["domain"] == "numeric_iteration":
-        loop_start = re.search(r"\bLOOP\s*\(", source, re.I)
-        if loop_start and input_var not in source[loop_start.start():loop_start.start() + 140]:
-            failures.append("NUMERIC_INPUT_NOT_IN_LOOP_BOUND")
-    else:
-        if not re.search(r"\bIMPORT\s+strings\s*\.", source, re.I):
-            failures.append("ARRAY_LIBRARY_IMPORT_MISSING")
-        split = re.search(r"\b([A-Za-z_]\w*)\s*=\s*strings\.SPLIT\s*\(\s*" +
-                          re.escape(input_var) + r"\s*,\s*\"\|\"\s*\)", source, re.I)
-        if not split:
-            failures.append("ARRAY_SPLIT_CHAIN_MISSING")
-        else:
-            parts = split.group(1)
-            indices = set(int(x) for x in re.findall(
-                r"strings\.TO_NUMBER\s*\(\s*" + re.escape(parts) + r"\s*\[\s*([0-3])\s*\]\s*\)",
-                source, re.I))
-            if indices != {0, 1, 2, 3}:
-                failures.append("ARRAY_CONVERSION_CHAIN_INCOMPLETE")
-        if not re.search(r"\bNUMBER\s*\[\s*\]\s+\w+\s*=\s*\[", source, re.I):
-            failures.append("ARRAY_VALUES_MISSING")
-    used_predicates = set(_predicate_leaves(record))
-    if_count = len(re.findall(r"\bIF\s*\(", source, re.I))
-    graph_conditional_nodes = (sum(node["op"] in {"or", "and", "gt", "ge", "lt", "le"}
-                                   for _, node in walk(record["aggregation"]["expr"]))
-                               if record["aggregation"]["kind"] == "sum_per_item" else 0)
-    allowed_if = len(used_predicates) + graph_conditional_nodes
-    if if_count > allowed_if:
-        dead = len(re.findall(r"\bIF\s*\(\s*0\s*==\s*1\s*\)", source, re.I))
-        if if_count - allowed_if > dead:
-            failures.append("UNCLASSIFIED_EXTRA_IF")
-        else:
-            reference_only.append({"construct": "IF", "count": if_count - allowed_if,
-                                   "proof_code": "CONSTANT_FALSE_BRANCH"})
-    declarations = re.findall(r"\bNUMBER\s+([A-Za-z_]\w*)\s*=", source, re.I)
-    for name in declarations:
-        if len(re.findall(r"\b" + re.escape(name) + r"\b", source)) == 1:
-            reference_only.append({"construct": "NUMBER_DECLARATION", "name": name,
-                                   "proof_code": "UNUSED_DECLARATION"})
-    return reference_only, failures
-
-
 def _predicate_leaves(record: dict) -> list[str]:
     agg = record["aggregation"]
     if agg["kind"] == "sum_per_item":
@@ -357,7 +303,76 @@ def _typed_operator(node: dict, *, predicate: bool) -> str:
 
 def _full_signature(record: dict) -> str:
     agg = record["aggregation"]
-    names = sorted(set(_predicate_leaves(record)))
+    definitions = record["predicate_definitions"]
+    # Roles are ordered by semantic predicate definition, never by spelling.
+    role_definitions = sorted({canonical_expr(definitions[name])
+                               for name in _predicate_leaves(record)})
+    role_lookup = {name: role_definitions.index(canonical_expr(definition))
+                   for name, definition in definitions.items()}
+    names = sorted(set(_predicate_leaves(record)), key=lambda name: role_lookup[name])
+    def typed_graph() -> dict:
+        nodes = []
+        edges = []
+        occurrences = Counter()
+
+        def visit(node: dict) -> int:
+            op = node["op"]
+            if op == "pred":
+                role = role_lookup[node["name"]]
+                occurrences[role] += 1
+                index = len(nodes)
+                nodes.append({"id": index, "type": "PREDICATE", "semantic_role": role,
+                              "definition": role_definitions[role]})
+                return index
+            if op == "const":
+                index = len(nodes)
+                nodes.append({"id": index, "type": "INTEGER_VALUE", "value": node["value"]})
+                return index
+            children = ([node["arg"]] if op in UNARY else node["args"])
+            if op in COMMUTATIVE:
+                children = sorted(children, key=lambda x: json.dumps(
+                    structural_tree(x), sort_keys=True))
+            child_ids = [visit(child) for child in children]
+            index = len(nodes)
+            nodes.append({"id": index, "type": "OPERATOR", "operator": op.upper()})
+            for position, child_id in enumerate(child_ids):
+                edges.append({"source": child_id, "target": index,
+                              "type": "OPERAND_TO_OPERATOR", "position": position})
+            return index
+
+        def structural_tree(node: dict) -> tuple:
+            if node["op"] == "pred":
+                return ("PREDICATE", role_lookup[node["name"]])
+            if node["op"] == "const":
+                return ("INTEGER_VALUE", node["value"])
+            children = ([node["arg"]] if node["op"] in UNARY else node["args"])
+            result = [structural_tree(x) for x in children]
+            if node["op"] in COMMUTATIVE:
+                result.sort()
+            return (node["op"].upper(), *result)
+
+        if agg["kind"] == "sum_per_item":
+            root = visit(agg["expr"])
+            accum = len(nodes)
+            nodes.append({"id": accum, "type": "ACCUMULATOR", "operation": "SUM",
+                          "initial": canonical_expr(agg["initial"])})
+            edges.append({"source": root, "target": accum, "type": "PER_ITEM_CONTRIBUTION",
+                          "position": 0})
+        else:
+            for position, role in enumerate((agg["p"], agg["q"])):
+                root = visit({"op": "pred", "name": role})
+                edges.append({"source": root, "target": 2,
+                              "type": "PREDICATE_TO_AGGREGATOR", "position": position})
+            accum = len(nodes)
+            nodes.append({"id": accum, "type": "ACCUMULATOR", "operation": agg["kind"]})
+        output = len(nodes)
+        nodes.append({"id": output, "type": "OUTPUT", "operation": "DISPLAYNL"})
+        edges.append({"source": accum, "target": output, "type": "ACCUMULATOR_TO_OUTPUT",
+                      "position": 0})
+        return {"nodes": nodes, "edges": edges,
+                "predicate_multiplicity": sorted(occurrences.items()),
+                "shared_predicate_roles": sorted(role for role, count in occurrences.items()
+                                                 if count > 1)}
     if agg["kind"] == "sum_per_item":
         vector = []
         for values in itertools.product((False, True), repeat=len(names)):
@@ -385,10 +400,11 @@ def _full_signature(record: dict) -> str:
                 if op == "mod": return int(a) % int(b)
                 raise CoverageError(f"unsupported graph signature op {op}")
             vector.append(int(eval_boolean(agg["expr"])))
-        signature = ["sum_per_item", names, vector, canonical_expr(agg["initial"])]
+        signature = {"aggregation": "sum_per_item", "contribution_vector": vector,
+                     "typed_graph": typed_graph()}
     else:
-        signature = [agg["kind"], names, agg["p"], agg["q"]]
-    return json.dumps(signature, separators=(",", ":"))
+        signature = {"aggregation": agg["kind"], "typed_graph": typed_graph()}
+    return json.dumps(signature, separators=(",", ":"), sort_keys=True)
 
 
 def _local_pair_motifs(record: dict) -> int:
@@ -480,7 +496,7 @@ def extract(record: dict, go_compiler: GocoCompiler, condition: str | None) -> d
     """Validate one source-backed contract and extract all capabilities."""
     _validate_schema(record, condition)
     failures: list[str] = []
-    source_only, source_failures = _source_certificate(record)
+    source_only, source_failures, source_inventory = source_certificate(record)
     failures.extend(source_failures)
     expected_values = []
     for case in record["cases"]:
@@ -630,6 +646,7 @@ def extract(record: dict, go_compiler: GocoCompiler, condition: str | None) -> d
     return {"id": record["id"], "domain": domain, "task_kind": record["task_kind"],
             "condition": condition, "requirements": rows,
             "reference_only": source_only, "failures": failures,
+            "source_inventory": source_inventory,
             "local_pair_motifs": _local_pair_motifs(record),
             "full_signature": signature}
 
