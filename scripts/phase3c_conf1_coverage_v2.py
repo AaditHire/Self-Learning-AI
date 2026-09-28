@@ -665,9 +665,12 @@ def audit_bundle(bundle: dict, go_compiler: GocoCompiler | None = None) -> dict:
     signatures = {condition: set() for condition in training}
     for condition, rows in training.items():
         for row in rows:
+            # Full-template absence is an independent primary constraint. A
+            # training row with incomplete activity cannot supply positive
+            # coverage, but its template is still present in that condition.
+            signatures[condition].add(row["full_signature"])
             if row["failures"]:
                 continue
-            signatures[condition].add(row["full_signature"])
             for req in row["requirements"]:
                 if req["activity_witness"] is not None:
                     indexes[condition][(row["domain"], req["category"], req["canonical_key"])].append(
