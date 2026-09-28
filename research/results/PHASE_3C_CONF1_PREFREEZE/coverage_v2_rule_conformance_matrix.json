@@ -1,0 +1,735 @@
+{
+  "status": "STOP_COVERAGE_V2_RULE_CONFORMANCE_INCOMPLETE",
+  "normative_rule": "research/protocols/phase3c_conf1_coverage_v2.md",
+  "clause_count": 46,
+  "counts": {
+    "CONFORMANT": 12,
+    "UNIMPLEMENTED": 16,
+    "UNTESTED": 18
+  },
+  "rows": [
+    {
+      "clause_id": "1.1",
+      "specification_section": "1",
+      "normative_clause": "Closed required contract fields and unknown-key failure",
+      "implementation_functions": [
+        "_validate_schema"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "CoverageError on schema mismatch",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "1.2",
+      "specification_section": "1",
+      "normative_clause": "Contract derived by prospective builder from immutable slot grammar",
+      "implementation_functions": [],
+      "regression_fixtures": [],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Attempt 004 builder and derivation absent",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "1.3",
+      "specification_section": "1",
+      "normative_clause": "Numeric and four-signed-value array input interpretation",
+      "implementation_functions": [
+        "parse_items",
+        "evaluate"
+      ],
+      "regression_fixtures": [
+        "A:task_essential_array_api_absent",
+        "B:live_array_parser_chain"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "CONTRACT_CASE_MISMATCH",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "1.4",
+      "specification_section": "1",
+      "normative_clause": "Typed expression grammar and closed operations",
+      "implementation_functions": [
+        "validate_expr"
+      ],
+      "regression_fixtures": [
+        "A:boolean_or_operator_absent"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Unknown op fails; operand/result type validation absent",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "1.5",
+      "specification_section": "1",
+      "normative_clause": "sum_per_item, prefix_pair, product_of_counts aggregators",
+      "implementation_functions": [
+        "evaluate",
+        "_validate_schema"
+      ],
+      "regression_fixtures": [
+        "A:prior_state_dataflow_absent"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No positive product_of_counts or prefix_pair source-backed fixture",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "1.6",
+      "specification_section": "1",
+      "normative_clause": "Five case contract/source/compiler exact agreement",
+      "implementation_functions": [
+        "extract",
+        "evaluate"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands",
+        "C_CONSUMED_REGRESSION:array_live_new_predicate"
+      ],
+      "property_tests": [
+        "required_input_api_removed"
+      ],
+      "emitted_evidence_or_reason": "CONTRACT_CASE_MISMATCH; SOURCE_CASE_MISMATCH",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "1.7",
+      "specification_section": "1",
+      "normative_clause": "Same extraction for training/evaluation, no task-ID branches",
+      "implementation_functions": [
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [
+        "alpha_renaming_preserves_coverage"
+      ],
+      "emitted_evidence_or_reason": "Shared extract function",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "2.1",
+      "specification_section": "2",
+      "normative_clause": "Closed ontology and explicit source-only classification",
+      "implementation_functions": [
+        "extract",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "B:unclassified_import",
+        "C_CONSUMED_REGRESSION:unproved_extra_branch"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Source statements default to TASK_ESSENTIAL without active-node link; expression operators not all inventoried",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "2.2",
+      "specification_section": "2",
+      "normative_clause": "Semantic predicate key and active same-domain training evidence",
+      "implementation_functions": [
+        "canonical_expr",
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands"
+      ],
+      "property_tests": [
+        "alpha_renaming_preserves_coverage"
+      ],
+      "emitted_evidence_or_reason": "SEMANTIC_PRIMITIVE rows and both-condition evidence",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "2.3",
+      "specification_section": "2",
+      "normative_clause": "Input, bounded loop, conditional choice, update, output, array index construct keys",
+      "implementation_functions": [
+        "extract",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "B:live_array_parser_chain"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "CONDITIONAL_CHOICE and ARRAY_INDEXING keys are not emitted",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "2.4",
+      "specification_section": "2",
+      "normative_clause": "Exact API role, connected decoder and distinct-input witness",
+      "implementation_functions": [
+        "source_certificate",
+        "extract"
+      ],
+      "regression_fixtures": [
+        "B:dead_array_conversion_disconnected",
+        "B:live_array_parser_chain"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Connection checked for fixed shape; distinct-input API witness not recorded",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "2.5",
+      "specification_section": "2",
+      "normative_clause": "Typed operators and sole pair-joint treatment exception",
+      "implementation_functions": [
+        "_typed_operator",
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph",
+        "A:boolean_or_operator_absent"
+      ],
+      "property_tests": [
+        "local_pair_motif_permitted"
+      ],
+      "emitted_evidence_or_reason": "OPERATOR_CAPABILITY; LOCAL_PAIR_JOINT",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "2.6",
+      "specification_section": "2",
+      "normative_clause": "Literal lexeme distinct from computed value and output category",
+      "implementation_functions": [
+        "_literal_token_witness",
+        "walk_semantic",
+        "extract"
+      ],
+      "regression_fixtures": [
+        "A:literal_token_not_value",
+        "C_CONSUMED_REGRESSION:literal_vs_computed_minus_two"
+      ],
+      "property_tests": [
+        "negative_output_capability_removed"
+      ],
+      "emitted_evidence_or_reason": "LITERAL_TOKEN; COMPUTED_VALUE; OUTPUT_*",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "2.7",
+      "specification_section": "2",
+      "normative_clause": "Independent/dependent/nested branch relation is source-backed",
+      "implementation_functions": [
+        "extract",
+        "_classify_extras"
+      ],
+      "regression_fixtures": [
+        "A:dead_if_does_not_cover_independent_checks"
+      ],
+      "property_tests": [
+        "dead_if_not_independent_checks"
+      ],
+      "emitted_evidence_or_reason": "Only predicate-count proxy; no ordered dependency graph",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "2.8",
+      "specification_section": "2",
+      "normative_clause": "Typed atomic dataflow edges retain paths/multiplicity",
+      "implementation_functions": [
+        "extract"
+      ],
+      "regression_fixtures": [
+        "A:prior_state_dataflow_absent"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Atomic keys emitted from aggregator witness, without each edge path/multiplicity",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "2.9",
+      "specification_section": "2",
+      "normative_clause": "Full vector plus typed graph/signature",
+      "implementation_functions": [
+        "_full_signature"
+      ],
+      "regression_fixtures": [
+        "B:equal_inventory_distinct_typed_topology",
+        "B:alpha_renamed_identical_graph",
+        "C_CONSUMED_REGRESSION:multiplication_edge_rewire"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "typed_graph and contribution_vector serialized; duplicate equivalent predicate-role edge cases untested",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "2.10",
+      "specification_section": "2",
+      "normative_clause": "Declared and observed output categories and exact sentinel cases",
+      "implementation_functions": [
+        "extract"
+      ],
+      "regression_fixtures": [
+        "A:negative_output_capability_absent"
+      ],
+      "property_tests": [
+        "negative_output_capability_removed"
+      ],
+      "emitted_evidence_or_reason": "OUTPUT_CATEGORY_UNWITNESSED; OUTPUT_EXACT",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "3.1",
+      "specification_section": "3",
+      "normative_clause": "Consistent identifier alpha-renaming",
+      "implementation_functions": [
+        "canonical_expr",
+        "_full_signature",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "B:alpha_renamed_identical_graph"
+      ],
+      "property_tests": [
+        "alpha_renaming_preserves_coverage"
+      ],
+      "emitted_evidence_or_reason": "Same typed graph for tested alpha-renaming",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "3.2",
+      "specification_section": "3",
+      "normative_clause": "Pure integer constant-tree folding",
+      "implementation_functions": [
+        "const_value",
+        "canonical_expr",
+        "walk_semantic"
+      ],
+      "regression_fixtures": [
+        "A:computed_negative_one_equivalence"
+      ],
+      "property_tests": [
+        "150 algebraic canonical checks"
+      ],
+      "emitted_evidence_or_reason": "COMPUTED_VALUE equivalence",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "3.3",
+      "specification_section": "3",
+      "normative_clause": "Commutative pure child sorting with duplicate multiplicity",
+      "implementation_functions": [
+        "canonical_expr",
+        "_full_signature"
+      ],
+      "regression_fixtures": [
+        "A:commutative_pair_order"
+      ],
+      "property_tests": [
+        "150 algebraic canonical checks"
+      ],
+      "emitted_evidence_or_reason": "Subtree sorting; duplicate structural relation not directly tested",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "3.4",
+      "specification_section": "3",
+      "normative_clause": "Boolean and versus 0/1 indicator multiplication local-pair equivalence",
+      "implementation_functions": [
+        "_local_pair_motifs"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Full typed graph keeps distinct AND/MUL operators; equivalence absent",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "3.5",
+      "specification_section": "3",
+      "normative_clause": "Boolean or versus indicator(add(a,b)>0) equivalence",
+      "implementation_functions": [],
+      "regression_fixtures": [
+        "A:boolean_or_operator_absent"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No canonical rewrite or equivalence test",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "3.6",
+      "specification_section": "3",
+      "normative_clause": "Comparison direction swap and symmetric equality",
+      "implementation_functions": [
+        "canonical_expr"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands"
+      ],
+      "property_tests": [
+        "150 algebraic canonical checks"
+      ],
+      "emitted_evidence_or_reason": "Canonical GT/GE swap and EQ sort",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "3.7",
+      "specification_section": "3",
+      "normative_clause": "No other algebraic rewrite",
+      "implementation_functions": [
+        "canonical_expr"
+      ],
+      "regression_fixtures": [
+        "B:equal_inventory_distinct_typed_topology"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No explicit negative property set for forbidden rewrites",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "3.8",
+      "specification_section": "3",
+      "normative_clause": "2^k truth vector, k<=4, role edges/shared predicates",
+      "implementation_functions": [
+        "_full_signature"
+      ],
+      "regression_fixtures": [
+        "B:equal_inventory_distinct_typed_topology"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No k<=4 enforcement; equal-definition distinct roles collapse in role_lookup",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "3.9",
+      "specification_section": "3",
+      "normative_clause": "Report local pair motifs without treating them as freshness failure",
+      "implementation_functions": [
+        "_local_pair_motifs",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [
+        "local_pair_motif_permitted"
+      ],
+      "emitted_evidence_or_reason": "local_pair_motifs count and treatment relation",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "3.10",
+      "specification_section": "3",
+      "normative_clause": "Pair-joint sole exception, components covered in both conditions",
+      "implementation_functions": [
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No independent property proving all component requirements retained",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.1",
+      "specification_section": "4",
+      "normative_clause": "Counterfactual table for every semantic node, lexicographic first witness",
+      "implementation_functions": [
+        "mutation",
+        "activity",
+        "walk_semantic"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:numeric_loop_new_predicates"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Activity failures recorded; complete mutation-table property suite absent",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.2",
+      "specification_section": "4",
+      "normative_clause": "Each repeated predicate occurrence mutated separately",
+      "implementation_functions": [
+        "walk",
+        "activity"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Occurrence paths exist; duplicate equal-predicate activity property absent",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.3",
+      "specification_section": "4",
+      "normative_clause": "Three aggregator counterfactual forms",
+      "implementation_functions": [
+        "evaluate",
+        "activity"
+      ],
+      "regression_fixtures": [
+        "A:prior_state_dataflow_absent"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No positive product_of_counts counterfactual property",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.4",
+      "specification_section": "4",
+      "normative_clause": "Each control/dataflow key inherits exact source-backed edge witness/path",
+      "implementation_functions": [
+        "extract"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:array_live_new_predicate"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Atomic edges all inherit a single aggregator witness/path",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "4.5",
+      "specification_section": "4",
+      "normative_clause": "Pinned GOCO compilation and exact case agreement",
+      "implementation_functions": [
+        "compiler",
+        "extract"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands"
+      ],
+      "property_tests": [
+        "required_input_api_removed"
+      ],
+      "emitted_evidence_or_reason": "SOURCE_CASE_MISMATCH",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "4.6",
+      "specification_section": "4",
+      "normative_clause": "Parsed numeric input-loop bound/output dependency",
+      "implementation_functions": [
+        "parse",
+        "_numeric_certificate"
+      ],
+      "regression_fixtures": [
+        "B:numeric_loop_alpha_and_whitespace"
+      ],
+      "property_tests": [
+        "alpha_renaming_preserves_coverage"
+      ],
+      "emitted_evidence_or_reason": "NUMERIC_LOOP_HEADER_INVALID; NUMERIC_ACCUMULATOR_DISCONNECTED",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.7",
+      "specification_section": "4",
+      "normative_clause": "Parsed array input/SPLIT/conversions/index/predicate/output dependency",
+      "implementation_functions": [
+        "parse",
+        "_array_certificate"
+      ],
+      "regression_fixtures": [
+        "B:live_array_parser_chain",
+        "B:dead_array_conversion_disconnected"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "ARRAY_DATAFLOW_DISCONNECTED",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "4.8",
+      "specification_section": "4",
+      "normative_clause": "Inventory each GOCO token-tree occurrence with offset and classification",
+      "implementation_functions": [
+        "tokenize",
+        "parse",
+        "source_certificate",
+        "_inventory_expression_tokens"
+      ],
+      "regression_fixtures": [
+        "B:unclassified_import"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Statement/API/index offsets only; no complete operator/expression occurrence inventory",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "4.9",
+      "specification_section": "4",
+      "normative_clause": "Source occurrence backs essential key only with matching active contract path",
+      "implementation_functions": [
+        "extract",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:array_live_new_predicate"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Inventory defaults essential before activity; no per-source-node link",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "4.10",
+      "specification_section": "4",
+      "normative_clause": "Unmatched source requires valid proof or fail closed",
+      "implementation_functions": [
+        "_classify_extras",
+        "parse"
+      ],
+      "regression_fixtures": [
+        "B:unclassified_import",
+        "C_CONSUMED_REGRESSION:unproved_extra_branch"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Some extras fail; arbitrary recognized live statements not fully adjudicated",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "5.1",
+      "specification_section": "5",
+      "normative_clause": "Only active contract/domain/output requirements are TASK_ESSENTIAL",
+      "implementation_functions": [
+        "extract",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:array_live_new_predicate"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Source inventory marks statements essential without individual activity proof",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "5.2",
+      "specification_section": "5",
+      "normative_clause": "Incidental names/grouping/formatting reference-only",
+      "implementation_functions": [
+        "canonical_expr",
+        "source_certificate"
+      ],
+      "regression_fixtures": [
+        "B:numeric_loop_alpha_and_whitespace"
+      ],
+      "property_tests": [
+        "alpha_renaming_preserves_coverage"
+      ],
+      "emitted_evidence_or_reason": "Equivalent coverage classification",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "5.3",
+      "specification_section": "5",
+      "normative_clause": "Nontrivial extra construct proof: rewrite, alternative reference, finite-domain or closed identity",
+      "implementation_functions": [
+        "_classify_extras"
+      ],
+      "regression_fixtures": [
+        "A:unused_reference_declaration",
+        "C_CONSUMED_REGRESSION:unproved_extra_branch"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Alternative-reference and finite-domain proof forms absent; UNUSED_DECLARATION not explicit catalog proof",
+      "status": "UNIMPLEMENTED"
+    },
+    {
+      "clause_id": "6.1",
+      "specification_section": "6",
+      "normative_clause": "Both-condition same-domain source-backed active coverage",
+      "implementation_functions": [
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:task_essential_array_api_absent"
+      ],
+      "property_tests": [
+        "negative_output_capability_removed"
+      ],
+      "emitted_evidence_or_reason": "UNCOVERED category/key with evidence lists",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "6.2",
+      "specification_section": "6",
+      "normative_clause": "Treatment exception does not waive atomic/operator/control/output capabilities",
+      "implementation_functions": [
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "Per-row requirements retained but no dedicated all-component test",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "6.3",
+      "specification_section": "6",
+      "normative_clause": "Primary full signature absent in both conditions even with other failures",
+      "implementation_functions": [
+        "_full_signature",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:withheld_full_signature_reuse",
+        "A:full_primary_signature_reused"
+      ],
+      "property_tests": [
+        "full_signature_inserted"
+      ],
+      "emitted_evidence_or_reason": "PROHIBITED_FULL_SIGNATURE:composition",
+      "status": "CONFORMANT"
+    },
+    {
+      "clause_id": "6.4",
+      "specification_section": "6",
+      "normative_clause": "Every independent violation emitted, no reason short-circuit",
+      "implementation_functions": [
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "C_CONSUMED_REGRESSION:withheld_full_signature_reuse"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "One combined-violation regression only; general reason-order property absent",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "6.5",
+      "specification_section": "6",
+      "normative_clause": "Report each requirement, condition evidence, category totals/reasons",
+      "implementation_functions": [
+        "extract",
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:equivalent_comparison_operands"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "requirements, evidence lists, category_counts, failures",
+      "status": "UNTESTED"
+    },
+    {
+      "clause_id": "6.6",
+      "specification_section": "6",
+      "normative_clause": "No thresholds, manual waivers or post-candidate reclassification",
+      "implementation_functions": [
+        "audit_bundle"
+      ],
+      "regression_fixtures": [
+        "A:local_pair_motifs_without_full_graph"
+      ],
+      "property_tests": [],
+      "emitted_evidence_or_reason": "No threshold branch; attempt 004 absent",
+      "status": "CONFORMANT"
+    }
+  ],
+  "no_model_execution": true
+}
