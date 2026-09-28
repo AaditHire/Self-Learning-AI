@@ -1,6 +1,10 @@
-# CONF1 prospective coverage v3 — specification proposal
+# Frozen CONF1 coverage v3 — prospective methodology
 
-**Status: PROPOSED FOR INDEPENDENT DESIGN REVIEW; NOT FROZEN OR IMPLEMENTED.** This document defines a proposed pre-model fairness method. It neither accepts a candidate nor authorizes model execution. Attempt 004 does not exist. Coverage v2 is preserved byte-for-byte as an **abandoned prefreeze methodology**, with all of its frozen evidence. V3 becomes operative only if an independent review approves and freezes a new version before candidate construction. No CONF1 model result caused this revision.
+**Status: FROZEN PROSPECTIVE PRE-ATTEMPT-004 METHODOLOGY; NOT IMPLEMENTED; MODEL EXECUTION UNAUTHORIZED.** Independent scientific review approved the exact Coverage v3 specification and v2→v3 disposition before candidate construction. This methodology freeze neither accepts a candidate nor authorizes Coverage-v3 implementation or model execution. Attempt 004 does not exist. Coverage v2 and its evidence remain preserved as an abandoned prefreeze methodology. No CONF1 model result selected this rule.
+
+**Freeze provenance:** The approved specification is the version at commit `e641cce3a7fd127b87d0d0ccb22edfe74e411cf0`, with SHA-256 `fc0b6fcefdbb0487bbfd693bf0947ee927ba252267187845ba7f34af837057d1` and Git blob `9e6ce1e5ff8299c01b6ef99d2795f49c95142f44`. The accompanying `phase3c_conf1_coverage_v3_freeze.json` binds this frozen file, the unchanged 46-clause v2→v3 disposition, the historical CONF1 protocol, and the frozen paired-scaffold clarification and its freeze manifest. The normative region beginning at the Design record heading below is byte-for-byte unchanged from the approved specification. The freeze commit is the Git commit containing this file and manifest; its SHA is reported after commit creation to avoid a self-referential hash.
+
+**Authority and scope:** The historical CONF1 protocol remains preserved. Its previously undefined §§6/12 paired-condition normalization procedure is prospectively resolved by `phase3c_conf1_paired_scaffold_normalization_proposed.md` and `phase3c_conf1_paired_scaffold_normalization_freeze.json`. V3.6/E3 use that frozen authority for within-slot paired-scaffold adjudication. AST-v2's candidate-versus-consumed structural-template normalization is a separate audit. No rule is selected from candidate or model outcomes. This freeze precedes Coverage-v3 implementation, Attempt 004 construction, and any CONF1 model execution.
 
 ## Design record: why v2 is superseded
 
