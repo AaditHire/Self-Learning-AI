@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "suite_a": {
+    "total": 12,
+    "passed": 12
+  },
+  "suite_b": {
+    "total": 6,
+    "passed": 6
+  },
+  "prior_properties": {
+    "status": "PASS",
+    "algebraic": 150,
+    "bundles": 7,
+    "error": null
+  },
+  "rows": [
+    {
+      "suite": "A",
+      "name": "equivalent_comparison_operands",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "A",
+      "name": "commutative_pair_order",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "A",
+      "name": "unused_reference_declaration",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "A",
+      "name": "local_pair_motifs_without_full_graph",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "A",
+      "name": "computed_negative_one_equivalence",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "A",
+      "name": "literal_token_not_value",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "LITERAL_TOKEN:-1",
+      "failures": [
+        "EVALUATION_INVALID:EXACT_LITERAL_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:LITERAL_TOKEN:-1"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "task_essential_array_api_absent",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "UNCOVERED:API_CAPABILITY",
+      "failures": [
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LANGUAGE_CONSTRUCT:INPUT",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LANGUAGE_CONSTRUCT:BOUNDED_ITERATION",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LANGUAGE_CONSTRUCT:NUMERIC_ASSIGNMENT_UPDATE",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LANGUAGE_CONSTRUCT:FINAL_DISPLAY",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:API_CAPABILITY:array_reduction:INPUT",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:API_CAPABILITY:array_reduction:strings.SPLIT",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:API_CAPABILITY:array_reduction:strings.TO_NUMBER",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:INPUT_DOMAIN:array_reduction",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:CONTROL_FLOW_CAPABILITY:BOUNDED_TRAVERSAL",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:CONTROL_FLOW_CAPABILITY:CONDITIONAL_ACCUMULATION",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:PREDICATE_TO_INDICATOR",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:NUMERIC_TO_ACCUMULATOR",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:LOOP_CARRY",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:ACCUMULATOR_TO_OUTPUT",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:SUM_AGGREGATION",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:OPERATOR_CAPABILITY:INTEGER_ADDITION",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:SEMANTIC_PRIMITIVE:array_reduction:A:('LT', ('VAR', 'value'), ('CONST', 0))",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:OPERATOR_CAPABILITY:COMPARISON_STRICT",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:COMPUTED_VALUE:0:PREDICATE",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:COMPUTED_VALUE:0:INITIAL",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:OUTPUT_POSITIVE",
+        "EVALUATION_INVALID:ARRAY_API_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:OUTPUT_ZERO"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "dead_if_does_not_cover_independent_checks",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "MULTIPLE_INDEPENDENT_PREDICATE_CHECKS",
+      "failures": [
+        "EVALUATION_INVALID:TWO_CHECKS:UNCOVERED:CONTROL_FLOW_CAPABILITY:MULTIPLE_INDEPENDENT_PREDICATE_CHECKS"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "boolean_or_operator_absent",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "BOOLEAN_OR",
+      "failures": [
+        "EVALUATION_INVALID:OR_EVAL:UNCOVERED:OPERATOR_CAPABILITY:BOOLEAN_OR"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "prior_state_dataflow_absent",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "PRIOR_STATE_TO_ACCUMULATOR",
+      "failures": [
+        "EVALUATION_INVALID:PREFIX_EVAL:PREDICATE_VALUE_NOT_EXERCISED:Q:('args', 0, 'args', 0)",
+        "EVALUATION_INVALID:PREFIX_EVAL:UNCOVERED:DATAFLOW_OR_AGGREGATION_CAPABILITY:PRIOR_STATE_TO_ACCUMULATOR",
+        "EVALUATION_INVALID:PREFIX_EVAL:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:COMPUTED_VALUE:2:PREDICATE"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "full_primary_signature_reused",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "PROHIBITED_FULL_SIGNATURE:composition",
+      "failures": [
+        "EVALUATION_INVALID:FULL_REUSE:PROHIBITED_FULL_SIGNATURE:composition"
+      ]
+    },
+    {
+      "suite": "A",
+      "name": "negative_output_capability_absent",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "OUTPUT_NEGATIVE",
+      "failures": [
+        "EVALUATION_INVALID:NEGATIVE_UNCOVERED:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:COMPUTED_VALUE:-1:INITIAL",
+        "EVALUATION_INVALID:NEGATIVE_UNCOVERED:UNCOVERED:LITERAL_OR_VALUE_CAPABILITY:OUTPUT_NEGATIVE"
+      ]
+    },
+    {
+      "suite": "B",
+      "name": "live_array_parser_chain",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "B",
+      "name": "dead_array_conversion_disconnected",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "ARRAY_DATAFLOW_DISCONNECTED",
+      "failures": [
+        "EVALUATION_INVALID:B_ARRAY_DEAD_CONVERSION:ARRAY_DATAFLOW_DISCONNECTED"
+      ]
+    },
+    {
+      "suite": "B",
+      "name": "numeric_loop_alpha_and_whitespace",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "B",
+      "name": "unclassified_import",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "required_failure": "UNCLASSIFIED_REQUIREMENT",
+      "failures": [
+        "EVALUATION_INVALID:B_UNCLASSIFIED_IMPORT:UNCLASSIFIED_REQUIREMENT:IMPORT:0"
+      ]
+    },
+    {
+      "suite": "B",
+      "name": "equal_inventory_distinct_typed_topology",
+      "expected": "DIFFERENT",
+      "observed": "DIFFERENT",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    },
+    {
+      "suite": "B",
+      "name": "alpha_renamed_identical_graph",
+      "expected": "SAME",
+      "observed": "SAME",
+      "pass": true,
+      "required_failure": null,
+      "failures": []
+    }
+  ],
+  "no_model_execution": true
+}
