@@ -345,7 +345,7 @@ status
 
 `process_exit_status` is a closed object containing exactly `kind`, `exit_code`, and `signal`. For `kind: "EXITED"`, `exit_code` is an integer and `signal` is null. For `kind: "SIGNALED"`, `exit_code` is null and `signal` is a nonempty string. For `kind: "UNRESOLVED"`, both are null and provenance status is `UNRESOLVED`. Other combinations are malformed.
 
-`repository_state_inventory` and `repository_local_read_set` are exact artifact references with role `DIAGNOSTIC_ARTIFACT`, including exact SHA-256 and size. The binder reads and verifies both artifacts. `dependency_access_observer`, `runtime_executable`, and `runtime_version_capture` are exact artifact references and must equal the identities bound by the producer-tool manifest. `package_environment_identity` is a closed object containing exactly `package_environment_mode`, `lock_or_environment_artifact`, and `installed_package_inventory_artifact`; its values and explicit nulls must equal the producer-tool manifest's selected mode. `compiler_identity_id` equals the candidate compiler identity when compiler relevance is `REQUIRED` and is explicit JSON `null` otherwise.
+`repository_state_inventory` and `repository_local_read_set` are exact artifact references with role `DIAGNOSTIC_ARTIFACT`, including exact SHA-256 and size. The binder reads and verifies both artifacts. `dependency_access_observer`, `runtime_executable`, and `runtime_version_capture` are exact artifact references and must equal the identities bound by the producer-tool manifest. `package_environment_identity` is a closed object containing exactly `package_environment_mode`, `lock_or_environment_artifact`, and `installed_package_inventory_artifact`; its values and explicit nulls must equal the producer-tool manifest's selected mode. `compiler_identity_id` follows the closed execution-level aggregation rule in section 6 across every report type covered by this execution.
 
 `dependency_closure_result` is exactly `CLOSED`, `FAILED`, or `UNRESOLVED`; `failure_reasons` is an ordered array of interface reason records; and `status` is exactly `PASS`, `FAIL`, or `UNRESOLVED`. PASS requires zero process exit code, matching repository and execution identities, exact read-set and state-inventory closure, `dependency_closure_result: "CLOSED"`, an empty failure-reason list, and all runtime, package, observer, and applicable compiler identities closed. Every mismatch or unclassified repository-local read makes status `FAIL` or `UNRESOLVED` under its reason code.
 
@@ -384,6 +384,19 @@ Every report contains `compiler_relevance`, with `status` exactly `REQUIRED` or 
 When `REQUIRED`, `compiler_identity_id` must equal the input manifest's closed identity. When `NOT_APPLICABLE`, `compiler_identity_id` must be JSON `null`; omission is invalid.
 
 For `coverage_v3_direct_evidence.json`, this rule is unconditional: `compiler_relevance.status` is `REQUIRED`, `compiler_relevance.reason_code` is `CONSUMES_PINNED_E1_COMPILER_VALIDATION`, and `compiler_identity_id` equals the candidate input manifest's closed compiler identity. Its mapped producer execution provenance carries the same non-null compiler identity ID. The report consumes the pinned E1-validated canonical source and case-output facts required before V3.5 activity; identity closure does not require the direct producer to invoke or rerun the compiler binary.
+
+### 6.1 Execution-level compiler aggregation
+
+For one `producer_execution_provenance.json`, let `R` be the exact nonempty report set obtained by joining its `execution_id` to `candidate_evidence_manifest.json.report_execution_map`. The binder requires that set to equal the provenance `report_types` and the applicable producer-tool manifest `report_types` for that exact invocation. It then validates every mapped report's individual `compiler_relevance` and `compiler_identity_id` rule before deriving the execution-level value.
+
+The execution rule has exactly two states:
+
+- if any report in `R` has `compiler_relevance.status: "REQUIRED"`, provenance `compiler_identity_id` is required non-null and must equal the candidate input manifest's closed compiler identity ID;
+- if every report in `R` has `compiler_relevance.status: "NOT_APPLICABLE"`, provenance `compiler_identity_id` is required JSON `null`.
+
+There is no third state. A missing, duplicate, malformed, internally inconsistent, or incomplete report-relevance declaration, a report/provenance compiler-ID mismatch, or a provenance value inconsistent with the derived execution state yields `EXECUTION_COMPILER_RELEVANCE_MISMATCH` and makes the execution `FAIL` or `UNRESOLVED` as appropriate.
+
+An individual `NOT_APPLICABLE` report retains explicit JSON `null` in its own envelope even when another report from the same exact invocation is `REQUIRED` and causes the shared execution provenance to carry the candidate compiler identity. That non-null execution identity does not make the `NOT_APPLICABLE` report compiler-dependent. Mixed-relevance multi-report execution is permitted only when the existing producer-tool rule is also satisfied: the identical bound entrypoint, dependency closure, scientific rules, runtime/package closure, and execution configuration legitimately produce every mapped report type in that single invocation. The aggregation rule does not weaken that condition.
 
 ## 7. Common evidence-report envelope
 
@@ -480,6 +493,7 @@ The common interface vocabulary is:
 - `RULE_IDENTITY_MISMATCH`
 - `COMPILER_IDENTITY_MISMATCH`
 - `COMPILER_RELEVANCE_INVALID`
+- `EXECUTION_COMPILER_RELEVANCE_MISMATCH`
 - `MALFORMED_REPORT`
 - `UNSUPPORTED_SCHEMA_VERSION`
 - `PRODUCER_ROW_FAIL`
@@ -554,18 +568,31 @@ Finding and interface status remain separate. `ACTIVE`, `INACTIVE`, `COVERED`, a
 
 #### 9.1.2 `VALUE_OR_LITERAL_ATTRIBUTE`
 
-No independent mutation, selected intervention, or attribute-specific counterfactual is performed. `value_or_literal_attribute_evidence` has exactly `canonical_attribute_key_id`, `attribute_subtype`, `exact_value_role`, `exact_required_lexeme`, `computed_integer`, `semantic_role`, `source_location`, `graph_location`, `mapped_parent_behavioral_key_id`, `parent_v3_5_activity_row_reference`, `frozen_witness_case_id`, `parent_path_execution_evidence`, `mapped_active_expression_reference`, and `coverage_finding`.
+No independent mutation, selected intervention, or attribute-specific counterfactual is performed. `value_or_literal_attribute_evidence` has exactly `canonical_attribute_key_id`, `attribute_subtype`, `attribute_parent_kind`, `exact_value_role`, `exact_required_lexeme`, `computed_integer`, `semantic_role`, `mapped_parent_behavioral_key_id`, `parent_v3_5_activity_row_reference`, `active_behavioral_parent_evidence`, `initial_accumulator_evidence`, and `coverage_finding`.
 
-`canonical_attribute_key_id`, `attribute_subtype`, `mapped_parent_behavioral_key_id`, and `parent_v3_5_activity_row_reference` are always required non-null; the parent association and expected parent row come from the prospective contract even when the parent's evidence fails. For `coverage_finding: "COVERED"`, `source_location`, `graph_location`, `frozen_witness_case_id`, and `parent_path_execution_evidence` are all required non-null and must prove that the referenced parent V3.5 behavioral row is `ACTIVE` and its mapped path executes on that case. For `NOT_COVERED` or `UNRESOLVED`, any of those four facts that cannot be established is explicit JSON `null`, every available fact remains non-null, and scientific reasons identify each missing or failed requirement. `coverage_finding` is exactly `COVERED`, `NOT_COVERED`, or `UNRESOLVED` and follows the resolved-finding/status rule above.
+`attribute_parent_kind` is exactly `ACTIVE_BEHAVIORAL_PARENT` or `INITIAL_ACCUMULATOR`. It is derived prospectively from the frozen `CoverageContractV3` key attachment and semantic role. Mapping, parent activity, case results, and PASS/FAIL outcomes cannot select or change it. All parent fields are mandatory, with this exact null matrix:
+
+| `attribute_parent_kind` | `mapped_parent_behavioral_key_id` | `parent_v3_5_activity_row_reference` | `active_behavioral_parent_evidence` | `initial_accumulator_evidence` |
+|---|---|---|---|---|
+| `ACTIVE_BEHAVIORAL_PARENT` | required non-null | required non-null | required non-null | required JSON `null` |
+| `INITIAL_ACCUMULATOR` | required JSON `null` | required JSON `null` | required JSON `null` | required non-null |
+
+Omission, an unknown parent kind, a kind/field mismatch, or switching to `INITIAL_ACCUMULATOR` because a declared behavioral parent is inactive or unresolved is malformed.
+
+For `ACTIVE_BEHAVIORAL_PARENT`, `active_behavioral_parent_evidence` has exactly `source_location`, `graph_location`, `frozen_witness_case_id`, `parent_path_execution_evidence`, and `mapped_active_expression_reference`. For `coverage_finding: "COVERED"`, source/graph locations, witness case, and path-execution evidence are required non-null and must prove that the referenced parent V3.5 row is `ACTIVE` and that its mapped path executes on that case. `mapped_active_expression_reference` is required non-null for a covered `LITERAL_TOKEN` and required JSON `null` for `COMPUTED_VALUE`. For `NOT_COVERED` or `UNRESOLVED`, unavailable location, case, path, or literal-expression evidence is explicit JSON `null`, available evidence is retained, and scientific reasons identify each failed requirement.
+
+For `INITIAL_ACCUMULATOR`, no behavioral parent is invented. `initial_accumulator_evidence` has exactly `initial_accumulator_contract_role_reference`, `mapped_source_initialization_reference`, `source_location`, `graph_location`, `initialization_value_role`, `frozen_witness_case_id`, `initialization_execution_evidence`, `displayed_accumulator_membership_evidence`, `mapped_initialization_expression_reference`, `computed_integer`, `semantic_role`, `exact_required_lexeme`, `coverage_finding`, `status`, and `scientific_reason_codes`. `initial_accumulator_contract_role_reference` and `initialization_value_role` are always required non-null because they are prospective contract facts. For `coverage_finding: "COVERED"`, the mapped initialization reference, locations, witness case, execution evidence, displayed-accumulator membership evidence, and mapped initialization expression are all required non-null and must prove that initialization executes on the frozen case and belongs to the mapped displayed-accumulator computation. For `NOT_COVERED` or `UNRESOLVED`, unavailable non-contract evidence fields are explicit JSON `null`, available evidence is retained, and the nested finding, status, and reasons exactly equal the enclosing attribute finding and row status/reasons.
+
+The enclosing `coverage_finding` is exactly `COVERED`, `NOT_COVERED`, or `UNRESOLVED` and follows the resolved-finding/status rule above.
 
 The subtype null rules are closed:
 
-| `attribute_subtype` | `exact_value_role` | `computed_integer` | `semantic_role` | `exact_required_lexeme` | `mapped_active_expression_reference` |
-|---|---|---|---|---|---|
-| `COMPUTED_VALUE` | required non-null | required integer | required non-null | required JSON `null` | required JSON `null` |
-| `LITERAL_TOKEN` | required JSON `null` | required JSON `null` | required JSON `null` | required non-null exact lexeme | required non-null for `COVERED`; otherwise explicit JSON `null` is permitted only with a scientific reason |
+| `attribute_subtype` | `exact_value_role` | `computed_integer` | `semantic_role` | `exact_required_lexeme` |
+|---|---|---|---|---|
+| `COMPUTED_VALUE` | required non-null | required integer | required non-null | required JSON `null` |
+| `LITERAL_TOKEN` | required JSON `null` | required JSON `null` | required JSON `null` | required non-null exact lexeme |
 
-For `COMPUTED_VALUE`, the integer and semantic role must be the exact value/role on the active mapped parent path. For `LITERAL_TOKEN`, the exact lexeme must occur in the referenced mapped active expression. An absent or inactive parent, a witness case that does not execute that path, or a missing exact value/role or lexeme cannot yield `COVERED`. The behavioral evidence object remains explicit null, so no behavioral intervention can be attributed to the attribute row.
+For `COMPUTED_VALUE`, the enclosing `computed_integer`, `semantic_role`, and `exact_value_role` retain the exact computed value/role requirement. For `LITERAL_TOKEN`, the enclosing `exact_required_lexeme` retains the exact syntax-essential lexeme requirement. Under `ACTIVE_BEHAVIORAL_PARENT`, those values must occur on the active mapped parent path or expression. Under `INITIAL_ACCUMULATOR`, the nested `computed_integer`, `semantic_role`, and `exact_required_lexeme` follow the same subtype null rules, equal their enclosing counterparts, and are evidenced by `mapped_initialization_expression_reference`, which is required non-null for `COVERED`. A failed parent path, initialization path, witness execution, displayed-accumulator membership, value/role, or lexeme requirement cannot yield `COVERED`. The row's `behavioral_evidence` remains explicit null for both parent kinds, and neither parent kind receives an intervention or independent counterfactual.
 
 #### 9.1.3 `OUTPUT_ATTRIBUTE`
 
@@ -586,7 +613,9 @@ The expected V3.5 row formula remains exactly `RID("V3.5", [training_program_id,
 | Frozen V3.5 rule | Interface representation | Compatibility |
 |---|---|---|
 | Behavioral keys require a connected executed path, normal-run output event, and capability-level output-changing intervention over all mapped instances. | Non-null `behavioral_evidence` records complete mapped occurrences, connected paths, events, ordered joint attempts, and the selected active witness. | Exact representation; no strengthening or weakening. |
-| `VALUE_OR_LITERAL` inherits coverage from an active parent path and requires exact value/role or exact syntax-essential lexeme on an executing frozen case. | Non-null value/literal evidence binds the active parent row, executing witness, source/graph path, and subtype-specific exact value/role or lexeme; behavioral evidence is null. | Exact representation; no independent attribute mutation added. |
+| `VALUE_OR_LITERAL` attached to a semantic predicate/operator inherits coverage from an active parent path and requires exact value/role or exact syntax-essential lexeme on an executing frozen case. | `ACTIVE_BEHAVIORAL_PARENT` binds the non-null parent key/row and executing path evidence; initial-accumulator evidence is null. | Exact representation; active-parent requirements are unchanged. |
+| `VALUE_OR_LITERAL` may instead attach to the initial accumulator. | `INITIAL_ACCUMULATOR` requires null behavioral-parent IDs and binds the mapped initialization, execution, displayed-accumulator membership, and exact subtype evidence. | Exact representation without invented behavioral activity. |
+| Neither value/literal parent kind receives a separate mutation. | Both parent variants live under attribute evidence while row `behavioral_evidence` is null and no counterfactual field exists. | Exact representation; no independent attribute mutation added. |
 | `OUTPUT_CATEGORY` and exact sentinels require actual expected-output cases. | Non-null output evidence mechanically evaluates bound expected-output cases and selects an actual matching witness; behavioral and value/literal evidence are null. | Exact representation; no intervention or source-only evidence added. |
 | `INPUT_DOMAIN` is behavioral `API_DECODER`; its V3.4 class checks are separate and conjunctive. | `INPUT_DOMAIN` is forced to `BEHAVIORAL`, while the existing 14 class rows remain separate and may use different frozen cases. | Exact representation; no strengthening or weakening. |
 
@@ -745,16 +774,17 @@ No conflict was identified. If independent review finds that a field changes a s
 
 This proposal satisfies the following interface checks:
 
-1. Attribute-key rows cannot carry an independent intervention because `behavioral_evidence` is required null for both attribute evidence kinds.
-2. Behavioral rows retain the complete joint-intervention ID list and intervene over all mapped instances in the example together.
-3. Value/literal attribute coverage requires a frozen active-parent row, executing parent-path witness, and subtype-specific exact value/role or lexeme evidence.
-4. Output attribute coverage requires an actual bound expected-output case with a mechanical category or exact-sentinel match.
-5. `evidence_kind` is derived prospectively from the frozen ontology and cannot be selected or relabeled from outcomes.
-6. The approved V3.5 row formula and contract-key-derived expected population are unchanged; attribute rows remain present and V3.2 results cannot alter existence.
-7. `INPUT_DOMAIN` remains behavioral `API_DECODER`, with the separate 14 class obligations unchanged.
-8. The direct Coverage-v3 report has one unconditional compiler-relevance rule: `REQUIRED` with reason `CONSUMES_PINNED_E1_COMPILER_VALIDATION`.
-9. The direct report and its mapped execution provenance carry the same candidate-level compiler identity ID.
-10. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
+1. An initial-accumulator value/literal row has null behavioral-parent IDs and non-null initialization evidence, so it does not require a fake behavioral parent.
+2. An `ACTIVE_BEHAVIORAL_PARENT` row retains non-null parent key/row identity and the frozen active-parent, executing-path witness rule.
+3. Neither attribute-parent kind receives an independent mutation or counterfactual, and row `behavioral_evidence` remains null.
+4. Both parent kinds retain the exact `COMPUTED_VALUE` integer/semantic-role and `LITERAL_TOKEN` exact-lexeme requirements.
+5. `attribute_parent_kind` derives prospectively from the frozen contract key/role and cannot change from observed activity or outcomes.
+6. The approved V3.5 row identity and contract-key-derived expected population are unchanged.
+7. An execution covering only `NOT_APPLICABLE` reports has a null provenance compiler identity.
+8. An execution covering any `REQUIRED` report has the candidate compiler identity in provenance.
+9. A `NOT_APPLICABLE` report can share an execution with `REQUIRED` reports while retaining null in its own envelope; this does not make it compiler-dependent.
+10. The binder independently verifies report-level relevance/null rules and the deterministic execution-level aggregate.
+11. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
 
 The earlier interface checks remain satisfied: every independent row set has a separate expected index and closure; schema version remains exactly 1; artifact and record-reference vocabularies remain closed; ordered row-ID digest encoding and every row-ID formula, including the approved two-component V3.5 formula, are unchanged by this repair; producer execution provenance and hash ordering remain acyclic; package-environment modes remain closed; compiler runtime identity remains mandatory; historical reports remain descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
 
