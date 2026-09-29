@@ -41,9 +41,9 @@ All table SHA-256 values except AST-v2 use their recorded LF-normalized text pol
 
 ## 2. Exact-byte hash policy and shared references
 
-All new candidate manifests, expected-row indexes, producer-tool manifests, direct-evidence files, and E1--E6 reports use UTF-8 JSON. SHA-256 is computed over exact file bytes, and `size_bytes` is the exact byte length. No CRLF/LF normalization is applied. A file does not contain its own SHA-256. Frozen historical and methodology artifacts retain the hash policy already recorded by their own freeze manifests.
+All new candidate manifests, expected-row indexes, producer-tool manifests, producer-execution-provenance artifacts, direct-evidence files, and E1--E6 reports use UTF-8 JSON. SHA-256 is computed over exact file bytes, and `size_bytes` is the exact byte length. No CRLF/LF normalization is applied. A file does not contain its own SHA-256. Frozen historical and methodology artifacts retain the hash policy already recorded by their own freeze manifests.
 
-Every JSON artifact newly defined by this proposal has exact integer `schema_version: 1`. This includes the candidate input and evidence manifests, consumed-inventory manifest, producer-tool manifests, expected-row indexes, direct Coverage-v3 evidence, and all nine delegated report files. Any other value yields `UNSUPPORTED_SCHEMA_VERSION`. A future value requires a new prospective interface revision. An already-frozen authority retains its own schema version rather than being rewritten by this proposal.
+Every JSON artifact newly defined by this proposal has exact integer `schema_version: 1`. This includes the candidate input and evidence manifests, consumed-inventory manifest, producer-tool manifests, producer-execution-provenance artifacts, expected-row indexes, direct Coverage-v3 evidence, and all nine delegated report files. Any other value yields `UNSUPPORTED_SCHEMA_VERSION`. A future value requires a new prospective interface revision. An already-frozen authority retains its own schema version rather than being rewritten by this proposal.
 
 Every file-level reference uses this closed object:
 
@@ -91,6 +91,7 @@ PRODUCER_ENTRYPOINT
 PRODUCER_DEPENDENCY
 PRODUCER_CONFIGURATION
 PRODUCER_TOOL_MANIFEST
+PRODUCER_EXECUTION_PROVENANCE
 RUNTIME_EXECUTABLE
 RUNTIME_VERSION_CAPTURE
 PACKAGE_ENVIRONMENT
@@ -166,7 +167,7 @@ Define `RID(label, [c1, c2, ...])` as ASCII `label` followed, for each component
 | Direct `v3_1_contract_rows` | `RID("V3.1", [program_id])` |
 | Direct `v3_2_mapping_rows` | `RID("V3.2", [program_id])` |
 | Direct `v3_3_equivalence_rows` | `RID("V3.3", [program_id])` |
-| Direct `v3_5_activity_rows` | `RID("V3.5", [training_program_id, canonical_contract_key_id, mapped_occurrence_id])` |
+| Direct `v3_5_activity_rows` | `RID("V3.5", [training_program_id, canonical_contract_key_id])` |
 | Direct `input_domain_class_rows` | `RID("INPUT_DOMAIN_CLASS", [condition_id, domain_id, class_id])` |
 | Direct `v3_4_coverage_rows` | `RID("V3.4", [evaluation_task_id, canonical_contract_key_id, required_condition_id])` |
 | Direct `v3_6_symmetry_rows`, shared key | `RID("V3.6", ["SHARED_KEY", canonical_contract_key_id, condition_relation_id])` |
@@ -185,7 +186,7 @@ Define `RID(label, [c1, c2, ...])` as ASCII `label` followed, for each component
 | E6 `task_rows` | `RID("E6TASK", [evaluation_task_id])` |
 | E6 `pair_distinction_rows` | `RID("E6PAIR", [domain_id, lower_utf8_task_id, higher_utf8_task_id])` |
 
-`mapped_occurrence_id`, canonical key IDs, condition IDs, domain IDs, epoch IDs, ordinals, and relation IDs are taken from bound pre-run contract, source-occurrence, schedule, or inventory artifacts. For E6, task IDs are ordered by exact UTF-8 bytes. No expected row ID contains or depends on `PASS`, `FAIL`, `ACTIVE`, `INACTIVE`, collision, similarity, output values, or any other scientific result.
+Canonical key IDs, condition IDs, domain IDs, epoch IDs, ordinals, and relation IDs are taken from bound pre-run contract, schedule, or inventory artifacts. For E6, task IDs are ordered by exact UTF-8 bytes. No expected row ID contains or depends on a V3.2 mapping, mapped occurrence, `PASS`, `FAIL`, `ACTIVE`, `INACTIVE`, collision, similarity, output value, or any other scientific result.
 
 E2 and both E4 reports therefore use the same framed `pair_id`; E5 and E6 retain their previously proposed `E5` and `E6PAIR` semantics under this shared framing convention.
 
@@ -208,7 +209,7 @@ This manifest is created and frozen before any candidate-specific scientific evi
 - `expected_row_indexes`; and
 - `construction_provenance`.
 
-`candidate_artifacts` binds every training example, target/reference, prompt, case, evaluation task/reference/case, serialization input, and configuration file required by a report. `coverage_contract_inventory` binds one prospective `CoverageContractV3` for each of the 120 training programs and 64 evaluation tasks using artifact role `COVERAGE_CONTRACT_V3_INVENTORY`. `source_occurrence_inventory`, with role `SOURCE_OCCURRENCE_INVENTORY`, assigns stable, outcome-independent occurrence IDs to every syntactic source node/edge eligible for a V3.5 activity row without deciding whether its mapping or activity later passes. The manifest's own SHA-256 is recorded only by downstream reports and the later evidence manifest.
+`candidate_artifacts` binds every training example, target/reference, prompt, case, evaluation task/reference/case, serialization input, and configuration file required by a report. `coverage_contract_inventory` binds one prospective `CoverageContractV3` for each of the 120 training programs and 64 evaluation tasks using artifact role `COVERAGE_CONTRACT_V3_INVENTORY`. `source_occurrence_inventory`, with role `SOURCE_OCCURRENCE_INVENTORY`, assigns stable, outcome-independent occurrence IDs and source/graph locations to every syntactic source node and edge in the 120 training programs that is eligible under the frozen mapping grammar to appear as nested V3.5 occurrence evidence. It does not decide which occurrences V3.2 maps to a key and does not determine the V3.5 expected-row population. The manifest's own SHA-256 is recorded only by downstream reports and the later evidence manifest.
 
 ### 4.2 `candidate_evidence_manifest.json`
 
@@ -218,11 +219,15 @@ This manifest is created only after the direct Coverage-v3 evidence and every re
 - `model_execution_authorized`, again actual JSON boolean `false`;
 - an exact artifact reference to `candidate_input_manifest.json`;
 - exact artifact references to `coverage_v3_direct_evidence.json` and all nine delegated report files;
+- `producer_execution_provenances`, an ordered array of exact `PRODUCER_EXECUTION_PROVENANCE` artifact references covering every distinct execution that generated those ten reports;
+- `report_execution_map`, an ordered array with exactly one closed entry per direct or delegated report, each containing only `report_artifact_id`, `report_type`, and `producer_execution_id`;
 - `report_status_summary`;
 - `overall_audit_state`, one of `ALL_REPORTS_PASS`, `BLOCKED`, or `UNRESOLVED`; and
 - `failure_reasons`.
 
-The nine delegated files are E1; E2; the three E3 reports; the two E4 reports; E5; and E6. `ALL_REPORTS_PASS` is permitted only when every referenced report declares `PASS`; it is not the final Coverage-v3 decision. The binder consumes both manifests and all referenced bytes and emits a separate closure result, avoiding a self-reference. A later candidate freeze may bind that closure result; this proposal does not create such a freeze.
+The nine delegated files are E1; E2; the three E3 reports; the two E4 reports; E5; and E6. Every one of those nine files and the direct Coverage-v3 file appears exactly once in `report_execution_map`. Its mapped execution ID and the execution-provenance hash and size in its report envelope must identify one exact artifact in `producer_execution_provenances`. Multiple reports may map to the same execution only when that artifact records the exact single invocation that produced all of them and its `report_types` equals those mapped report types. Unmapped reports, multiply mapped reports, unused provenance artifacts, and absent, stale, mismatched, failed, or unresolved provenance block PASS.
+
+`ALL_REPORTS_PASS` is permitted only when every referenced report declares `PASS` and every mapped execution provenance declares `PASS`; it is not the final Coverage-v3 decision. The binder consumes both manifests, all reports, every execution-provenance artifact, and every transitively referenced read-set artifact, then emits a separate closure result. A later candidate freeze may bind that closure result; this proposal does not create such a freeze.
 
 ## 5. Producer-tool identity
 
@@ -251,22 +256,100 @@ The manifest separately contains ordered exact artifact-reference arrays for `sc
 
 ### 5.3 Runtime and package closure
 
-The manifest contains:
+The manifest contains these runtime fields:
 
 - `runtime_executable`, an exact artifact reference with path, exact-byte SHA-256, and size;
 - `runtime_version_capture`, an exact artifact reference containing stdout and stderr from the frozen version command;
 - parsed runtime name, vendor, version, and architecture, each required to match the captured bytes;
-- `package_environment`, an exact artifact reference to either the bound lock/environment artifact used to construct the environment or a deterministic complete installed-package inventory produced by a frozen capture command;
-- the exact package-environment capture command and its producer identity;
+- the package-environment fields defined below, all present even when a mode requires an explicit JSON `null`;
 - `execution_command`, represented as an ordered argument array rather than a shell string;
 - exact working directory, environment-variable allowlist with values or bound secret identifiers, locale, encoding, timeouts, and resource/output limits; and
 - `runtime_closure_status`, which must be `CLOSED`.
 
-No runtime executable, version capture, or package environment field is optional. If exact executable bytes, version output, deterministic package inventory, or execution configuration cannot be bound, the producer tool identity is `UNRESOLVED`.
+`package_environment_mode` is exactly `LOCK_OR_ENVIRONMENT_ARTIFACT` or `INSTALLED_PACKAGE_INVENTORY`. The manifest always contains exactly these six package-environment fields:
+
+```text
+package_environment_mode
+lock_or_environment_artifact
+lock_or_environment_selection
+installed_package_inventory_artifact
+installed_package_capture_command
+installed_package_capture_identity
+```
+
+`lock_or_environment_selection`, when non-null, is a closed object containing exactly `method_id`, `ordered_arguments`, `runtime_executable_artifact_id`, `working_directory`, and `environment_inputs`; it mechanically identifies how the bound runtime is constructed or selected from the lock/environment artifact. `installed_package_capture_identity`, when non-null, is a closed object containing exactly `capture_tool_artifact`, `runtime_executable_artifact_id`, and `runtime_version_capture_artifact_id`. `capture_tool_artifact` is an exact reference with role `PRODUCER_DEPENDENCY` or `RUNTIME_EXECUTABLE`; the two runtime IDs must resolve to the exact bound runtime and version-capture artifacts. `installed_package_capture_command`, when non-null, is a nonempty ordered argument array.
+
+For `LOCK_OR_ENVIRONMENT_ARTIFACT`:
+
+- `lock_or_environment_artifact` is a non-null exact `PACKAGE_ENVIRONMENT` artifact reference with SHA-256 and size;
+- `lock_or_environment_selection` is the non-null closed object above and must mechanically select or construct the runtime actually used;
+- `installed_package_inventory_artifact` is exact JSON `null`;
+- `installed_package_capture_command` is exact JSON `null`; and
+- `installed_package_capture_identity` is exact JSON `null`.
+
+If the lock/environment artifact and selection method do not adequately determine the environment used for execution, closure is `UNRESOLVED`.
+
+For `INSTALLED_PACKAGE_INVENTORY`:
+
+- `installed_package_inventory_artifact` is a non-null exact `PACKAGE_ENVIRONMENT` artifact reference to the deterministic complete installed-package inventory, with SHA-256 and size;
+- `installed_package_capture_command` is the non-null ordered argument array used to capture it;
+- `installed_package_capture_identity` is the non-null closed capture-tool/runtime identity above;
+- `lock_or_environment_artifact` is either a non-null exact `PACKAGE_ENVIRONMENT` artifact reference when such an artifact governed the runtime or exact JSON `null`; and
+- `lock_or_environment_selection` is the non-null closed selection object exactly when `lock_or_environment_artifact` is non-null, and otherwise is exact JSON `null`.
+
+All six named fields are mandatory in both modes. Omission, a third mode, a non-null value where null is required, a null value where an exact artifact or object is required, or a lock artifact/selection nullity mismatch is malformed. No runtime executable, version capture, package-environment field, capture identity, or execution configuration is optional. If neither mode closes the actual runtime, the producer tool identity is `UNRESOLVED`. This mode choice changes reproducibility representation only and cannot change a scientific classification.
 
 ### 5.4 Tool-manifest fields and report binding
 
 The complete manifest therefore contains `schema_version`, `producer_id`, `contract_ids`, `report_types`, all section 5.1--5.3 fields, `rule_authorities`, `output_schema_version` fixed to `1`, optional informational `dependency_enumeration_method`, and `unresolved_dependencies`. `unresolved_dependencies` must be an empty array for use. A producer report references the exact tool-manifest SHA-256 and size through the candidate input manifest. A single script hash never stands for repository, runtime, package, or configuration closure.
+
+### 5.5 Post-execution producer provenance
+
+Every distinct producer execution emits one `producer_execution_provenance.json` artifact with role `PRODUCER_EXECUTION_PROVENANCE`. One artifact may cover multiple reports only when the exact single supervised producer invocation generated all of them. The artifact has schema version 1 and exactly these top-level fields:
+
+```text
+schema_version
+phase
+candidate_id
+producer_id
+execution_id
+report_types
+candidate_input_manifest
+producer_tool_manifest_sha256
+producer_tool_manifest_size_bytes
+bound_repository_commit_sha
+bound_repository_root_tree_id
+observed_repository_commit_sha
+observed_repository_root_tree_id
+actual_execution_arguments
+actual_working_directory
+actual_environment_configuration
+execution_start
+execution_end
+process_exit_status
+repository_state_inventory
+repository_local_read_set
+dependency_access_observer
+runtime_executable
+runtime_version_capture
+package_environment_identity
+compiler_identity_id
+dependency_closure_result
+failure_reasons
+status
+```
+
+`schema_version` is integer `1`; `phase` is `PHASE_3C_CONF1`; `report_types` is a nonempty ordered list with no duplicates; and `candidate_input_manifest` is an exact file-level reference to the input manifest used by the execution. The producer-tool-manifest hash and size must match the exact manifest bound by that input manifest. Bound repository identities are copied from that tool manifest; observed identities are captured at execution and must equal them.
+
+`actual_execution_arguments` is the exact ordered argument array; `actual_working_directory` is the exact resolved working directory; and `actual_environment_configuration` is the exact relevant allowlisted environment representation, including values or bound secret identifiers, observed for execution. These must equal the bound execution configuration. `execution_start` and `execution_end` are closed objects containing exactly `event_id` and `observed_at_utc`. Their event IDs are respectively `RID("EXECUTION_EVENT", [execution_id, "START"])` and `RID("EXECUTION_EVENT", [execution_id, "END"])`; each time value is either an RFC 3339 UTC string or explicit JSON `null`. Wall-clock values are provenance only and cannot affect any scientific or interface classification.
+
+`process_exit_status` is a closed object containing exactly `kind`, `exit_code`, and `signal`. For `kind: "EXITED"`, `exit_code` is an integer and `signal` is null. For `kind: "SIGNALED"`, `exit_code` is null and `signal` is a nonempty string. For `kind: "UNRESOLVED"`, both are null and provenance status is `UNRESOLVED`. Other combinations are malformed.
+
+`repository_state_inventory` and `repository_local_read_set` are exact artifact references with role `DIAGNOSTIC_ARTIFACT`, including exact SHA-256 and size. The binder reads and verifies both artifacts. `dependency_access_observer`, `runtime_executable`, and `runtime_version_capture` are exact artifact references and must equal the identities bound by the producer-tool manifest. `package_environment_identity` is a closed object containing exactly `package_environment_mode`, `lock_or_environment_artifact`, and `installed_package_inventory_artifact`; its values and explicit nulls must equal the producer-tool manifest's selected mode. `compiler_identity_id` equals the candidate compiler identity when compiler relevance is `REQUIRED` and is explicit JSON `null` otherwise.
+
+`dependency_closure_result` is exactly `CLOSED`, `FAILED`, or `UNRESOLVED`; `failure_reasons` is an ordered array of interface reason records; and `status` is exactly `PASS`, `FAIL`, or `UNRESOLVED`. PASS requires zero process exit code, matching repository and execution identities, exact read-set and state-inventory closure, `dependency_closure_result: "CLOSED"`, an empty failure-reason list, and all runtime, package, observer, and applicable compiler identities closed. Every mismatch or unclassified repository-local read makes status `FAIL` or `UNRESOLVED` under its reason code.
+
+The bound execution supervisor records the supervised producer subprocess's arguments, observations, read set, and exit status, then serializes execution provenance without any report hash. After those provenance bytes are fixed, the same supervisor invocation finalizes each report envelope with the provenance execution ID, hash, and size. The later evidence manifest binds both. Therefore the dependency order is input manifest and tool manifest → supervised execution/read set → execution provenance → report envelope → evidence manifest; no artifact hashes itself or a downstream artifact.
 
 ## 6. Candidate-level compiler identity
 
@@ -314,6 +397,9 @@ candidate_input_manifest_sha256
 candidate_input_manifest_size_bytes
 producer_tool_manifest_sha256
 producer_tool_manifest_size_bytes
+producer_execution_id
+producer_execution_provenance_sha256
+producer_execution_provenance_size_bytes
 rule_authorities
 compiler_relevance
 compiler_identity_id
@@ -323,7 +409,7 @@ aggregate
 failure_reasons
 ```
 
-`schema_version` is exactly integer `1`. `phase` is `PHASE_3C_CONF1`. Status is exactly `PASS`, `FAIL`, or `UNRESOLVED`. `rule_authorities` and `input_artifacts` are exact references to entries already bound by the input manifest, not free-form copies. `aggregate` contains only deterministic summaries derived from closed row sets. `failure_reasons` is an ordered list.
+`schema_version` is exactly integer `1`. `phase` is `PHASE_3C_CONF1`. Status is exactly `PASS`, `FAIL`, or `UNRESOLVED`. `producer_execution_id` and the execution-provenance hash and size identify the exact schema-version-1 execution provenance later bound by the evidence manifest. They must match its internal execution ID, exact bytes, candidate ID, producer ID, producer-tool-manifest identity, and report type. A report cannot be `PASS` when that provenance is absent, stale, mismatched, `FAIL`, or `UNRESOLVED`. `rule_authorities` and `input_artifacts` are exact references to entries already bound by the input manifest, not free-form copies. `aggregate` contains only deterministic summaries derived from closed row sets. `failure_reasons` is an ordered list.
 
 `row_sets` is an ordered array. Every entry has exactly these four fields:
 
@@ -381,6 +467,13 @@ The common interface vocabulary is:
 - `INPUT_ARTIFACT_SIZE_MISMATCH`
 - `CANDIDATE_INPUT_MANIFEST_MISMATCH`
 - `PRODUCER_TOOL_IDENTITY_MISMATCH`
+- `MISSING_PRODUCER_EXECUTION_PROVENANCE`
+- `PRODUCER_EXECUTION_PROVENANCE_MISMATCH`
+- `REPOSITORY_LOCAL_READ_SET_HASH_MISMATCH`
+- `EXECUTION_DEPENDENCY_CLOSURE_FAILURE`
+- `INVALID_PACKAGE_ENVIRONMENT_MODE`
+- `PACKAGE_ENVIRONMENT_REQUIRED_FIELD_MISSING`
+- `PACKAGE_ENVIRONMENT_NULL_RULE_VIOLATION`
 - `RULE_IDENTITY_MISMATCH`
 - `COMPILER_IDENTITY_MISMATCH`
 - `COMPILER_RELEVANCE_INVALID`
@@ -411,13 +504,17 @@ Its pre-enumerated row sets are:
 - `v3_1_contract_rows`: one per 120 training and 64 evaluation contracts, total 184, binding contract provenance, required keys, source/case references, and case obligations;
 - `v3_2_mapping_rows`: one per program/reference, total 184, binding the closed parse and complete contract/source node-and-edge mapping, plus any mechanically proved `REFERENCE_ONLY` constructs;
 - `v3_3_equivalence_rows`: one per program/reference, total 184, with a complete nested list of every equivalence claim invoked for that record, its source locations, context, and closed V3.3 rule; an empty nested list is a resolved finding only when the complete V3.2 mapping requires no equivalence claim;
-- `v3_5_activity_rows`: one per potential task-essential behavioral or attribute-key occurrence declared by each of the 120 training contracts, enumerated before execution from contracts and frozen expected-output facts, with mapped paths, normal-event case, ordered intervention, normal and counterfactual outputs, and a resolved finding `ACTIVE` or `INACTIVE`, or `UNRESOLVED`; `INACTIVE` is not itself an interface failure because V3.4, rather than every individual occurrence, decides whether each required key has at least one active witness;
+- `v3_5_activity_rows`: exactly one row for each `training_program_id × canonical_contract_key_id` over every potential task-essential behavioral or attribute key declared prospectively by each of the 120 training contracts. Its expected index is derived only from those bound contracts and their canonical keys, before V3.2 execution. A V3.2 mapping result cannot add, remove, split, or merge an expected row.
 - `input_domain_class_rows`: exactly 14 condition/domain/class obligations: four numeric and three array classes in each of two conditions, with example, case, decoded-value/element, class, and decoder mapping; these rows remain distinct from V3.5 activity rows;
 - `v3_4_coverage_rows`: one per evaluation-task-essential atomic key and required condition, with the sole pair-joint relation exception represented as a prospectively marked COMPOSITION-only relation; IDs are enumerated from the 64 evaluation contracts before execution;
 - `v3_6_symmetry_rows`: one per required shared key/condition comparison plus one treatment-exception declaration and references to all 60 E3 scaffold rows; and
 - `v3_7_delegation_rows`: exactly one row binding the complete E5 report and confirming that no weaker novelty result was reconstructed.
 
 Each gate row has status `PASS`, `FAIL`, or `UNRESOLVED`, scientific reason codes, evidence record references, and source offsets or graph paths where V3 requires them. This direct report is bound by the evidence manifest and traversed by the final binder.
+
+Each V3.5 row contains a closed `occurrence_evidence` object with exactly `source_occurrence_inventory_reference`, `mapping_cardinality`, `mapped_occurrence_count`, `mapped_occurrences`, and `joint_intervention_occurrence_ids`. `mapping_cardinality` is exactly `ZERO`, `ONE`, or `MULTIPLE` and must reconcile with the count. `mapped_occurrences` is the complete list of every syntactic occurrence that V3.2 maps to the row's canonical key, ordered by the pre-bound source-occurrence inventory's frozen occurrence order. Each nested entry contains exactly `occurrence_id`, `source_location`, `graph_location`, `v3_2_mapping_reference`, and `affected_by_joint_intervention`. Occurrence IDs and locations must resolve to the pre-bound `SOURCE_OCCURRENCE_INVENTORY`; mapping references must resolve to the closed V3.2 row.
+
+`joint_intervention_occurrence_ids` must equal the complete ordered mapped-occurrence ID list, and every nested `affected_by_joint_intervention` must be true. V3.5 therefore intervenes over all mapped instances of that capability in the example together, preserving the frozen capability-level activity rule. The row also contains `normal_event_witness_case`, `intervention_ordering_rule_reference`, `selected_intervention`, `normal_output`, `counterfactual_output`, `finding` (`ACTIVE`, `INACTIVE`, or `UNRESOLVED`), `status`, and `scientific_reason_codes`. A zero or invalid mapping is recorded in the still-present expected row and resolves under the frozen V3.2/V3.5 scientific rules; it never deletes the row. `INACTIVE` is not itself an interface failure because V3.4, rather than every individual key occurrence, decides whether each required key has at least one active witness.
 
 ## 10. E1 — compiler/reference validation
 
@@ -523,10 +620,11 @@ The final binder may emit `PASS` only when:
 2. `model_execution_authorized` is actual boolean `false` in both candidate manifests;
 3. every V3.1--V3.7 direct-evidence row population closes and every row passes;
 4. all nine E1--E6 report files close against their exact expected indexes and declare `PASS`;
-5. `candidate_evidence_manifest.json` binds the exact input manifest, direct report, and all report hashes and sizes;
-6. every compiler-relevance and producer-tool identity closes;
-7. no row, report, manifest, or dependency is `UNRESOLVED`; and
-8. aggregate summaries reconcile exactly with their rows.
+5. `candidate_evidence_manifest.json` binds the exact input manifest, direct report, all report hashes and sizes, every required producer-execution-provenance artifact, and exactly one execution mapping per report;
+6. every mapped execution provenance passes and transitively closes its exact repository-state inventory and repository-local read-set hashes and sizes;
+7. every compiler-relevance, producer-tool identity, runtime identity, and package-environment mode closes;
+8. no row, report, provenance, manifest, or dependency is `UNRESOLVED`; and
+9. aggregate summaries reconcile exactly with their rows.
 
 A later separate protocol action is required to authorize model execution. Evidence PASS cannot change authorization.
 
@@ -573,19 +671,17 @@ No conflict was identified. If independent review finds that a field changes a s
 
 This proposal satisfies the following interface checks:
 
-1. Every artifact with multiple independent row populations has one separately bound expected-row index per row set.
-2. Exact required row-set inventories and independent closure prevent a report from omitting, combining, renaming, or adding a row set and still passing.
-3. Every newly defined JSON artifact uses exact integer `schema_version: 1`; any other value is `UNSUPPORTED_SCHEMA_VERSION`.
-4. Every file-level `artifact_role` is drawn from the explicit closed enum in section 2.1; an unrepresentable role is `UNRESOLVED`.
-5. Every `record_reference` has the exact five-field shape in section 2.2, with content hash and size required for strings and explicit nulls required for structured values.
-6. Every expected-row index has the exact schema-version-1 fields and invariants in section 3.1.
-7. Expected and observed ordered row-ID digests use the single byte encoding frozen in section 3.2.
-8. Every required row set has the deterministic, unambiguous derivation in section 3.3.
-9. Expected row IDs derive only from bound pre-run identities and never from scientific outcomes.
-10. Producer dependency closure is decided from the bound Git commit/tree, repository state, exact repository-local read set, explicit non-code artifacts, and mandatory runtime/package closure; an informational completeness assertion cannot create PASS.
-11. Compiler runtime identity always requires the exact invoked Java executable hash and size plus an exact bound `java -version` capture; there is no availability escape.
-12. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
+1. Every post-run repository-local read set is an exact artifact reference with SHA-256 and size inside execution provenance, and the evidence manifest transitively binds it.
+2. Every direct or delegated report maps exactly once to one evidence-manifest-bound producer execution provenance; one execution may cover multiple reports only for the exact single invocation recorded by that provenance.
+3. The ordering input/tool manifest → supervised execution/read set → execution provenance → report envelope → evidence manifest contains no backward hash reference and no hash cycle.
+4. V3.5 expected rows derive only from the 120 prospective training contracts and their canonical task-essential keys, never from a V3.2 mapping result.
+5. Each V3.5 row jointly intervenes over every mapped instance of its capability within the example.
+6. Zero or invalid mappings remain represented in their expected V3.5 rows and resolve under frozen V3.2/V3.5 rules; mappings cannot make expected rows disappear.
+7. `package_environment_mode` has exactly the two values `LOCK_OR_ENVIRONMENT_ARTIFACT` and `INSTALLED_PACKAGE_INVENTORY`.
+8. Every package-environment field is present, and every mode-specific unused field is explicit JSON `null` under the closed null rules.
+9. Neither package-environment mode contains a discretionary availability condition; failure to close the actual runtime is `UNRESOLVED`.
+10. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
 
-The additional compatibility checks remain satisfied: historical reports are descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; compiler relevance is explicit for every report; the two-stage manifests avoid self-reference; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
+The earlier interface checks remain satisfied: every independent row set has a separate expected index and closure; schema version remains exactly 1; artifact and record-reference vocabularies remain closed; ordered row-ID digest encoding and all row-ID formulas other than the corrected V3.5 arity are unchanged; compiler runtime identity remains mandatory; historical reports remain descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
 
 Remaining work is deliberately outside this proposal: independent review and freeze of this interface; independent review and freeze of the real consumed-inventory contents; implementation and preregistered scientific fixtures; prospective candidate construction; candidate-specific producer-tool manifests and expected indexes; candidate evidence production; and any separate authorization decision. None is implied by this document.
