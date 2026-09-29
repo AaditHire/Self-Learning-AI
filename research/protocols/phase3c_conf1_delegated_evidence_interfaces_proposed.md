@@ -371,6 +371,7 @@ Every report contains `compiler_relevance`, with `status` exactly `REQUIRED` or 
 
 | Report | Relevance rule |
 |---|---|
+| `coverage_v3_direct_evidence.json` | `REQUIRED`; reason `CONSUMES_PINNED_E1_COMPILER_VALIDATION`. |
 | E1 | `REQUIRED`; reason `EXECUTES_PINNED_COMPILER`. |
 | E2 | `REQUIRED`; reason `COMPILER_VALID_SOURCE_AND_GRAMMAR_AUTHORITY`. |
 | E3 scaffold | `REQUIRED`; reason `PARSED_GOCO_AND_MECHANICAL_OUTPUT_DERIVATION`. |
@@ -381,6 +382,8 @@ Every report contains `compiler_relevance`, with `status` exactly `REQUIRED` or 
 | E6 | `NOT_APPLICABLE`; reason `CONSUMES_E1_VALIDATED_REFERENCE_CASE_FACTS`, only when it does not compile or execute references; otherwise `REQUIRED`. |
 
 When `REQUIRED`, `compiler_identity_id` must equal the input manifest's closed identity. When `NOT_APPLICABLE`, `compiler_identity_id` must be JSON `null`; omission is invalid.
+
+For `coverage_v3_direct_evidence.json`, this rule is unconditional: `compiler_relevance.status` is `REQUIRED`, `compiler_relevance.reason_code` is `CONSUMES_PINNED_E1_COMPILER_VALIDATION`, and `compiler_identity_id` equals the candidate input manifest's closed compiler identity. Its mapped producer execution provenance carries the same non-null compiler identity ID. The report consumes the pinned E1-validated canonical source and case-output facts required before V3.5 activity; identity closure does not require the direct producer to invoke or rerun the compiler binary.
 
 ## 7. Common evidence-report envelope
 
@@ -512,9 +515,80 @@ Its pre-enumerated row sets are:
 
 Each gate row has status `PASS`, `FAIL`, or `UNRESOLVED`, scientific reason codes, evidence record references, and source offsets or graph paths where V3 requires them. This direct report is bound by the evidence manifest and traversed by the final binder.
 
-Each V3.5 row contains a closed `occurrence_evidence` object with exactly `source_occurrence_inventory_reference`, `mapping_cardinality`, `mapped_occurrence_count`, `mapped_occurrences`, and `joint_intervention_occurrence_ids`. `mapping_cardinality` is exactly `ZERO`, `ONE`, or `MULTIPLE` and must reconcile with the count. `mapped_occurrences` is the complete list of every syntactic occurrence that V3.2 maps to the row's canonical key, ordered by the pre-bound source-occurrence inventory's frozen occurrence order. Each nested entry contains exactly `occurrence_id`, `source_location`, `graph_location`, `v3_2_mapping_reference`, and `affected_by_joint_intervention`. Occurrence IDs and locations must resolve to the pre-bound `SOURCE_OCCURRENCE_INVENTORY`; mapping references must resolve to the closed V3.2 row.
+### 9.1 Closed V3.5 evidence variants
 
-`joint_intervention_occurrence_ids` must equal the complete ordered mapped-occurrence ID list, and every nested `affected_by_joint_intervention` must be true. V3.5 therefore intervenes over all mapped instances of that capability in the example together, preserving the frozen capability-level activity rule. The row also contains `normal_event_witness_case`, `intervention_ordering_rule_reference`, `selected_intervention`, `normal_output`, `counterfactual_output`, `finding` (`ACTIVE`, `INACTIVE`, or `UNRESOLVED`), `status`, and `scientific_reason_codes`. A zero or invalid mapping is recorded in the still-present expected row and resolves under the frozen V3.2/V3.5 scientific rules; it never deletes the row. `INACTIVE` is not itself an interface failure because V3.4, rather than every individual key occurrence, decides whether each required key has at least one active witness.
+Every V3.5 row has these V3.5-specific fields in addition to the common row identity, status, and scientific-reason fields:
+
+```text
+training_program_id
+canonical_contract_key_id
+evidence_kind
+behavioral_evidence
+value_or_literal_attribute_evidence
+output_attribute_evidence
+```
+
+`evidence_kind` is exactly `BEHAVIORAL`, `VALUE_OR_LITERAL_ATTRIBUTE`, or `OUTPUT_ATTRIBUTE`. It is derived prospectively from the key type in the bound frozen Coverage-v3 contract ontology: `SEMANTIC_PRIMITIVE`, `API_DECODER` including `INPUT_DOMAIN`, `ATOMIC_OPERATOR`, `GENERIC_CONSTRUCT` when it controls an update, and `ATOMIC_CONTROL_DATAFLOW` map to `BEHAVIORAL`; `VALUE_OR_LITERAL` keys map to `VALUE_OR_LITERAL_ATTRIBUTE`; and `OUTPUT_CATEGORY`, including prospectively required exact sentinels, maps to `OUTPUT_ATTRIBUTE`. A producer cannot choose or relabel the kind from mapping, activity, case, or PASS/FAIL outcomes.
+
+All three evidence-object fields are mandatory. Within the one non-null object, every field listed for that variant is also mandatory; no field may be omitted. Their exact evidence-kind null matrix is:
+
+| `evidence_kind` | `behavioral_evidence` | `value_or_literal_attribute_evidence` | `output_attribute_evidence` |
+|---|---|---|---|
+| `BEHAVIORAL` | required non-null | required JSON `null` | required JSON `null` |
+| `VALUE_OR_LITERAL_ATTRIBUTE` | required JSON `null` | required non-null | required JSON `null` |
+| `OUTPUT_ATTRIBUTE` | required JSON `null` | required JSON `null` | required non-null |
+
+Omission, an unknown kind, more or fewer than one non-null evidence object, or a kind/object mismatch is malformed.
+
+Finding and interface status remain separate. `ACTIVE`, `INACTIVE`, `COVERED`, and `NOT_COVERED` are resolved scientific findings and may have row `status: "PASS"` when their required evidence is complete and internally valid; `UNRESOLVED` requires row `status: "UNRESOLVED"`. An `INACTIVE` or `NOT_COVERED` row cannot serve as positive V3.4 coverage evidence, but does not alone preempt V3.4's condition-level decision about whether another training example supplies the required active/covered witness.
+
+#### 9.1.1 `BEHAVIORAL`
+
+`behavioral_evidence` has exactly `occurrence_evidence`, `connected_executed_paths`, `normal_run_output_events`, `intervention_ordering_rule_reference`, `ordered_intervention_attempts`, `selected_active_witness`, and `activity_finding`.
+
+`occurrence_evidence` has exactly `source_occurrence_inventory_reference`, `mapping_cardinality`, `mapped_occurrence_count`, `mapped_occurrences`, and `joint_intervention_occurrence_ids`. `mapping_cardinality` is exactly `ZERO`, `ONE`, or `MULTIPLE` and reconciles with the count. `mapped_occurrences` is the complete list of every syntactic occurrence that V3.2 maps to the row's canonical key, ordered by the pre-bound source-occurrence inventory's frozen occurrence order. Each nested occurrence contains exactly `occurrence_id`, `source_location`, `graph_location`, `v3_2_mapping_reference`, and `affected_by_joint_intervention`. Occurrence IDs and locations resolve to the pre-bound `SOURCE_OCCURRENCE_INVENTORY`; mapping references resolve to the closed V3.2 row.
+
+`connected_executed_paths`, `normal_run_output_events`, and `ordered_intervention_attempts` are required non-null ordered arrays, even when empty. The path and event entries bind the connected executed source-to-contract path, frozen case, displayed-accumulator reachability, and normal-run output event. Intervention attempts follow the frozen class-specific ordering and bind their case, intervention, normal output, counterfactual output, and whether the final output changed. `intervention_ordering_rule_reference` is always required non-null.
+
+`joint_intervention_occurrence_ids` equals the complete ordered mapped-occurrence ID list, and every nested `affected_by_joint_intervention` is true. Every attempt therefore intervenes over all mapped instances of that capability in the example together. `selected_active_witness` is required non-null exactly when `activity_finding` is `ACTIVE`; it contains exactly `normal_event_witness_case_id`, `selected_intervention`, `normal_output`, and `counterfactual_output`, chosen under the frozen case/intervention order. It is required JSON `null` when `activity_finding` is `INACTIVE` or `UNRESOLVED`. Empty or incomplete evidence for those findings remains represented in the non-null arrays and must carry the frozen scientific reason codes. `activity_finding` is exactly `ACTIVE`, `INACTIVE`, or `UNRESOLVED`.
+
+#### 9.1.2 `VALUE_OR_LITERAL_ATTRIBUTE`
+
+No independent mutation, selected intervention, or attribute-specific counterfactual is performed. `value_or_literal_attribute_evidence` has exactly `canonical_attribute_key_id`, `attribute_subtype`, `exact_value_role`, `exact_required_lexeme`, `computed_integer`, `semantic_role`, `source_location`, `graph_location`, `mapped_parent_behavioral_key_id`, `parent_v3_5_activity_row_reference`, `frozen_witness_case_id`, `parent_path_execution_evidence`, `mapped_active_expression_reference`, and `coverage_finding`.
+
+`canonical_attribute_key_id`, `attribute_subtype`, `mapped_parent_behavioral_key_id`, and `parent_v3_5_activity_row_reference` are always required non-null; the parent association and expected parent row come from the prospective contract even when the parent's evidence fails. For `coverage_finding: "COVERED"`, `source_location`, `graph_location`, `frozen_witness_case_id`, and `parent_path_execution_evidence` are all required non-null and must prove that the referenced parent V3.5 behavioral row is `ACTIVE` and its mapped path executes on that case. For `NOT_COVERED` or `UNRESOLVED`, any of those four facts that cannot be established is explicit JSON `null`, every available fact remains non-null, and scientific reasons identify each missing or failed requirement. `coverage_finding` is exactly `COVERED`, `NOT_COVERED`, or `UNRESOLVED` and follows the resolved-finding/status rule above.
+
+The subtype null rules are closed:
+
+| `attribute_subtype` | `exact_value_role` | `computed_integer` | `semantic_role` | `exact_required_lexeme` | `mapped_active_expression_reference` |
+|---|---|---|---|---|---|
+| `COMPUTED_VALUE` | required non-null | required integer | required non-null | required JSON `null` | required JSON `null` |
+| `LITERAL_TOKEN` | required JSON `null` | required JSON `null` | required JSON `null` | required non-null exact lexeme | required non-null for `COVERED`; otherwise explicit JSON `null` is permitted only with a scientific reason |
+
+For `COMPUTED_VALUE`, the integer and semantic role must be the exact value/role on the active mapped parent path. For `LITERAL_TOKEN`, the exact lexeme must occur in the referenced mapped active expression. An absent or inactive parent, a witness case that does not execute that path, or a missing exact value/role or lexeme cannot yield `COVERED`. The behavioral evidence object remains explicit null, so no behavioral intervention can be attributed to the attribute row.
+
+#### 9.1.3 `OUTPUT_ATTRIBUTE`
+
+No intervention or active-parent mutation is performed. `output_attribute_evidence` has exactly `canonical_output_key_id`, `output_requirement_kind`, `output_category`, `exact_sentinel`, `evaluated_expected_output_cases`, `selected_output_witness`, and `coverage_finding`.
+
+`output_requirement_kind` is exactly `CATEGORY` or `EXACT_SENTINEL`. For `CATEGORY`, `output_category` is required non-null and exactly one of `OUTPUT_ZERO`, `OUTPUT_POSITIVE`, `OUTPUT_NEGATIVE`, or `OUTPUT_MULTIDIGIT`, while `exact_sentinel` is required JSON `null`. For `EXACT_SENTINEL`, `output_category` is required JSON `null` and `exact_sentinel` is required non-null.
+
+`evaluated_expected_output_cases` is a required non-null ordered array. Every entry contains exactly `frozen_case_id`, `expected_output_reference`, `expected_output_value`, and `mechanical_match`, where `mechanical_match` is `MATCH`, `NO_MATCH`, or `UNRESOLVED` under the frozen category or exact-sentinel definition. `selected_output_witness` is required non-null exactly when `coverage_finding` is `COVERED`; it contains exactly those same four fields, has `mechanical_match: "MATCH"`, and identifies an actual expected-output case satisfying the category or exact sentinel. It is required JSON `null` for `NOT_COVERED` or `UNRESOLVED`. `coverage_finding` is exactly `COVERED`, `NOT_COVERED`, or `UNRESOLVED` and follows the resolved-finding/status rule above. Both non-output evidence objects remain explicit null.
+
+#### 9.1.4 Population and INPUT_DOMAIN preservation
+
+The expected V3.5 row formula remains exactly `RID("V3.5", [training_program_id, canonical_contract_key_id])`. The expected population remains the Cartesian enumeration of each of the 120 prospective training contracts with its prospectively declared canonical task-essential keys. Behavioral and attribute rows are all retained. No V3.2 mapping, activity finding, attribute finding, or output case result can create or remove a row; a zero or invalid mapping resolves under frozen V3.2/V3.5 rules inside the still-present row.
+
+`INPUT_DOMAIN:<domain/range>` remains an `API_DECODER` key and therefore has `evidence_kind: "BEHAVIORAL"`. It requires the connected decoder path, normal-run output event, capability-level joint intervention, and output-changing decoder counterfactual prescribed by frozen V3.5. Its separate 14 `input_domain_class_rows` obligations remain unchanged. The class witness and decoder-activity witness may use different frozen cases exactly as allowed by the frozen INPUT_DOMAIN amendment.
+
+### 9.2 Frozen-V3.5 compatibility check
+
+| Frozen V3.5 rule | Interface representation | Compatibility |
+|---|---|---|
+| Behavioral keys require a connected executed path, normal-run output event, and capability-level output-changing intervention over all mapped instances. | Non-null `behavioral_evidence` records complete mapped occurrences, connected paths, events, ordered joint attempts, and the selected active witness. | Exact representation; no strengthening or weakening. |
+| `VALUE_OR_LITERAL` inherits coverage from an active parent path and requires exact value/role or exact syntax-essential lexeme on an executing frozen case. | Non-null value/literal evidence binds the active parent row, executing witness, source/graph path, and subtype-specific exact value/role or lexeme; behavioral evidence is null. | Exact representation; no independent attribute mutation added. |
+| `OUTPUT_CATEGORY` and exact sentinels require actual expected-output cases. | Non-null output evidence mechanically evaluates bound expected-output cases and selects an actual matching witness; behavioral and value/literal evidence are null. | Exact representation; no intervention or source-only evidence added. |
+| `INPUT_DOMAIN` is behavioral `API_DECODER`; its V3.4 class checks are separate and conjunctive. | `INPUT_DOMAIN` is forced to `BEHAVIORAL`, while the existing 14 class rows remain separate and may use different frozen cases. | Exact representation; no strengthening or weakening. |
 
 ## 10. E1 — compiler/reference validation
 
@@ -671,17 +745,17 @@ No conflict was identified. If independent review finds that a field changes a s
 
 This proposal satisfies the following interface checks:
 
-1. Every post-run repository-local read set is an exact artifact reference with SHA-256 and size inside execution provenance, and the evidence manifest transitively binds it.
-2. Every direct or delegated report maps exactly once to one evidence-manifest-bound producer execution provenance; one execution may cover multiple reports only for the exact single invocation recorded by that provenance.
-3. The ordering input/tool manifest → supervised execution/read set → execution provenance → report envelope → evidence manifest contains no backward hash reference and no hash cycle.
-4. V3.5 expected rows derive only from the 120 prospective training contracts and their canonical task-essential keys, never from a V3.2 mapping result.
-5. Each V3.5 row jointly intervenes over every mapped instance of its capability within the example.
-6. Zero or invalid mappings remain represented in their expected V3.5 rows and resolve under frozen V3.2/V3.5 rules; mappings cannot make expected rows disappear.
-7. `package_environment_mode` has exactly the two values `LOCK_OR_ENVIRONMENT_ARTIFACT` and `INSTALLED_PACKAGE_INVENTORY`.
-8. Every package-environment field is present, and every mode-specific unused field is explicit JSON `null` under the closed null rules.
-9. Neither package-environment mode contains a discretionary availability condition; failure to close the actual runtime is `UNRESOLVED`.
+1. Attribute-key rows cannot carry an independent intervention because `behavioral_evidence` is required null for both attribute evidence kinds.
+2. Behavioral rows retain the complete joint-intervention ID list and intervene over all mapped instances in the example together.
+3. Value/literal attribute coverage requires a frozen active-parent row, executing parent-path witness, and subtype-specific exact value/role or lexeme evidence.
+4. Output attribute coverage requires an actual bound expected-output case with a mechanical category or exact-sentinel match.
+5. `evidence_kind` is derived prospectively from the frozen ontology and cannot be selected or relabeled from outcomes.
+6. The approved V3.5 row formula and contract-key-derived expected population are unchanged; attribute rows remain present and V3.2 results cannot alter existence.
+7. `INPUT_DOMAIN` remains behavioral `API_DECODER`, with the separate 14 class obligations unchanged.
+8. The direct Coverage-v3 report has one unconditional compiler-relevance rule: `REQUIRED` with reason `CONSUMES_PINNED_E1_COMPILER_VALIDATION`.
+9. The direct report and its mapped execution provenance carry the same candidate-level compiler identity ID.
 10. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
 
-The earlier interface checks remain satisfied: every independent row set has a separate expected index and closure; schema version remains exactly 1; artifact and record-reference vocabularies remain closed; ordered row-ID digest encoding and all row-ID formulas other than the corrected V3.5 arity are unchanged; compiler runtime identity remains mandatory; historical reports remain descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
+The earlier interface checks remain satisfied: every independent row set has a separate expected index and closure; schema version remains exactly 1; artifact and record-reference vocabularies remain closed; ordered row-ID digest encoding and every row-ID formula, including the approved two-component V3.5 formula, are unchanged by this repair; producer execution provenance and hash ordering remain acyclic; package-environment modes remain closed; compiler runtime identity remains mandatory; historical reports remain descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
 
 Remaining work is deliberately outside this proposal: independent review and freeze of this interface; independent review and freeze of the real consumed-inventory contents; implementation and preregistered scientific fixtures; prospective candidate construction; candidate-specific producer-tool manifests and expected indexes; candidate evidence production; and any separate authorization decision. None is implied by this document.
