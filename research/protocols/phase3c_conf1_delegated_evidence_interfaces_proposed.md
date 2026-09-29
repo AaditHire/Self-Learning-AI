@@ -1,8 +1,10 @@
-# CONF1 delegated-evidence and Coverage-v3 closure interfaces
+# Frozen CONF1 delegated-evidence and Coverage-v3 closure interfaces
 
-**Status: PROPOSED PROSPECTIVE METHODOLOGY FOR INDEPENDENT REVIEW; NOT FROZEN; NOT IMPLEMENTED; NO CANDIDATE OR MODEL EXECUTION AUTHORIZED.**
+**Status: FROZEN PROSPECTIVE PRE-ATTEMPT-004 METHODOLOGY; NOT IMPLEMENTED; CANDIDATE CONSTRUCTION UNAUTHORIZED; MODEL EXECUTION UNAUTHORIZED.**
 
-This proposal closes only the mechanical representation, enumeration, identity, and closure interfaces required by the frozen CONF1 Coverage-v3 methodology. It does not alter any scientific gate, task, case, seed, graph, treatment, budget, threshold, or authorization rule. It does not accept a candidate. Attempt 004 remains prohibited until this interface and a real consumed-inventory manifest have received separate independent review and prospective freezes.
+Independent scientific review approved the exact proposal at commit `027427ed5567aa75e10e35a0b3ed342516094ce9`, with exact-byte SHA-256 `1c43f9bc4a1a93e20dec68a69963d123da909c7332647371a09612802f1bff0e`, Git blob `181cd74b0ba9ada1e8e2493504b6723699cd5c86`, and size 75,388 bytes. The accompanying `phase3c_conf1_delegated_evidence_interfaces_freeze.json` binds this frozen file, its upstream authorities, and the exact normative region beginning at `## 1. Authority, scope, and precedence`; that region is byte-for-byte unchanged from the approved proposal.
+
+This freeze makes only the approved mechanical representation, enumeration, identity, and closure interfaces a normative prospective authority. It does not alter any scientific gate, task, case, seed, graph, treatment, budget, threshold, or authorization rule. It does not accept a candidate or authorize implementation, synthetic scientific validation, consumed-inventory contents, candidate construction, model execution, or sealed-holdout access. Attempt 004 remains prohibited, and the real consumed-inventory contents still require separate independent review and prospective freeze.
 
 ## 1. Authority, scope, and precedence
 

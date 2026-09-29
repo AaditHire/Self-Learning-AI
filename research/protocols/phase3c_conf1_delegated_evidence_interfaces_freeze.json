@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "phase": "PHASE_3C_CONF1",
+  "status": "FROZEN_PROSPECTIVE_PRE_ATTEMPT_004_METHODOLOGY",
+  "scope": "Exact approved delegated-evidence and Coverage-v3 closure interfaces for future CONF1 implementation and candidate evidence only",
+  "implementation_authorization_effect": "NONE",
+  "candidate_construction_authorization_effect": "NONE",
+  "model_execution_authorization_effect": "NONE",
+  "approved_proposal_commit": "027427ed5567aa75e10e35a0b3ed342516094ce9",
+  "approved_proposal_path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_proposed.md",
+  "approved_proposal_sha256_exact_bytes": "1c43f9bc4a1a93e20dec68a69963d123da909c7332647371a09612802f1bff0e",
+  "approved_proposal_git_blob": "181cd74b0ba9ada1e8e2493504b6723699cd5c86",
+  "approved_proposal_size_bytes": 75388,
+  "frozen_interface_path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_proposed.md",
+  "frozen_interface_sha256_exact_bytes": "9c684eaf6b0099080ddf907630b0a2f8e176e3a882b67875d82f07bd82d64dc5",
+  "frozen_interface_git_blob": "1b6d4d1a825bf9e9d288ca9c3815d1a8e7c78d1a",
+  "frozen_interface_size_bytes": 76081,
+  "hash_policy": "SHA-256 over exact file bytes; no CRLF/LF normalization; Git blob ID independently binds committed bytes",
+  "normative_region_start_heading": "## 1. Authority, scope, and precedence",
+  "approved_normative_region_sha256_exact_bytes": "26c642e17bb5218727c0cd09f370eaf1ac6c4de35006fa9801d701ece81cf16d",
+  "frozen_normative_region_sha256_exact_bytes": "26c642e17bb5218727c0cd09f370eaf1ac6c4de35006fa9801d701ece81cf16d",
+  "normative_region_byte_count": 74717,
+  "normative_region_byte_equal_to_approved_proposal": true,
+  "upstream_authorities": {
+    "coverage_v3": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_proposed.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "git_blob": "16210d9810d217461b77546c3568c3344c0c770b",
+      "size_bytes": 31128
+    },
+    "coverage_v3_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_freeze.json",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "8d8f8a37c808d84c740867174e219803712213e672687c42164500f2bca12291",
+      "git_blob": "28c0fb52fba083e72f87ebfc530fd88ddded5f92",
+      "size_bytes": 3307
+    },
+    "paired_scaffold": {
+      "path": "research/protocols/phase3c_conf1_paired_scaffold_normalization_proposed.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0",
+      "git_blob": "475e9de4a0ef3bef23edac1e3631011a20790f5a",
+      "size_bytes": 14114
+    },
+    "paired_scaffold_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_paired_scaffold_normalization_freeze.json",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2",
+      "git_blob": "9a54e9b525b1795b10f94bf0d0250ae831e6db74",
+      "size_bytes": 2093
+    },
+    "input_domain_amendment": {
+      "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e",
+      "git_blob": "66467ef968e4963dd7a22568100a940871ad304c",
+      "size_bytes": 16901
+    },
+    "input_domain_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a",
+      "git_blob": "774eb73150f66d2545ddf270cc2f051eddedc156",
+      "size_bytes": 4201
+    },
+    "semantic_slot_ledger": {
+      "path": "research/protocols/phase3c_conf1_slots.json",
+      "sha256_exact_bytes": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2",
+      "sha256_utf8_crlf_to_lf": "83436eecda3affe813b785e868e3f8936fa59afc35ded0eb6a54290edb41dc88",
+      "git_blob": "133c9c7275bcedeaf2474e54e61bae47923508ad",
+      "size_bytes": 47968
+    },
+    "coverage_v2_to_v3_disposition": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_v2_disposition.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "fb8a385538ddebf95195f099b9ba933bde97d33faf86373a7611e532e8b637d2",
+      "git_blob": "511843b001f6827c2b46242155485eecc3e429d8",
+      "size_bytes": 10364
+    },
+    "ast_v2": {
+      "path": "research/protocols/phase3c_conf1_ast_adjudication_v2.md",
+      "hash_policy": "EXACT_BYTES_SHA256",
+      "sha256": "962960ed6d766b574d2f9812b8ade5b5faa824acfe84e85b520636e2d6667fd9",
+      "git_blob": "c1ffc66d6b8a98645711cd77b6ff49fde5841deb",
+      "size_bytes": 4365
+    },
+    "historical_conf1_protocol": {
+      "path": "research/protocols/phase3c_conf1_proposed_protocol.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920",
+      "git_blob": "7ec58f3b4d5fc5827e35e4fbf22712a300240cec",
+      "size_bytes": 39663
+    }
+  },
+  "attempt_004_exists_at_freeze": false,
+  "delegated_interface_implementation_completed_at_freeze": false,
+  "delegated_interface_synthetic_scientific_validation_executed_at_freeze": false,
+  "real_consumed_inventory_frozen_at_freeze": false,
+  "active_conf1_candidate_exists_at_freeze": false,
+  "candidate_construction_authorized_at_freeze": false,
+  "conf1_model_execution_observed_at_freeze": false,
+  "conf1_model_execution_authorized_at_freeze": false,
+  "sealed_final_holdout_contents_accessed_for_this_freeze": false,
+  "freeze_commit_identity": "Git commit containing this manifest and the frozen delegated-interface methodology; SHA reported after commit creation to avoid self-reference"
+}
