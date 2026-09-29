@@ -43,6 +43,8 @@ All table SHA-256 values except AST-v2 use their recorded LF-normalized text pol
 
 All new candidate manifests, expected-row indexes, producer-tool manifests, direct-evidence files, and E1--E6 reports use UTF-8 JSON. SHA-256 is computed over exact file bytes, and `size_bytes` is the exact byte length. No CRLF/LF normalization is applied. A file does not contain its own SHA-256. Frozen historical and methodology artifacts retain the hash policy already recorded by their own freeze manifests.
 
+Every JSON artifact newly defined by this proposal has exact integer `schema_version: 1`. This includes the candidate input and evidence manifests, consumed-inventory manifest, producer-tool manifests, expected-row indexes, direct Coverage-v3 evidence, and all nine delegated report files. Any other value yields `UNSUPPORTED_SCHEMA_VERSION`. A future value requires a new prospective interface revision. An already-frozen authority retains its own schema version rather than being rewritten by this proposal.
+
 Every file-level reference uses this closed object:
 
 ```json
@@ -58,34 +60,147 @@ Every file-level reference uses this closed object:
 
 `size_bytes` is a nonnegative integer; zero is allowed only where the artifact schema expressly permits an empty file. Paths are descriptive locations, never identity. The binder resolves each path inside the declared candidate root, reads exact bytes, and requires hash and size equality.
 
-When a row refers to one logical record inside a bound JSON artifact, it uses a `record_reference` containing `artifact_id`, the artifact schema's stable `record_id`, and, for source/prompt/target or case strings, `content_sha256_utf8` and `content_size_bytes_utf8` over the exact UTF-8 payload. This does not replace the containing artifact's file-level closure.
+### 2.1 Closed artifact-role vocabulary
+
+`artifact_role` is exactly one of:
+
+```text
+FROZEN_AUTHORITY
+FREEZE_MANIFEST
+SLOT_LEDGER
+CANDIDATE_TRAINING_INVENTORY
+CANDIDATE_TRAINING_DATA
+EVALUATION_INVENTORY
+EVALUATION_DATA
+SOURCE_REFERENCE
+PROMPT
+TARGET
+CASE_SET
+SCHEDULE
+COVERAGE_CONTRACT_V3_INVENTORY
+SOURCE_OCCURRENCE_INVENTORY
+COMPILER_BINARY
+COMPILER_PROVENANCE
+COMPILER_WRAPPER
+COMPILER_CONFIGURATION
+TOKENIZER
+CHAT_TEMPLATE
+SCHEMA
+STATIC_LOOKUP
+PRODUCER_ENTRYPOINT
+PRODUCER_DEPENDENCY
+PRODUCER_CONFIGURATION
+PRODUCER_TOOL_MANIFEST
+RUNTIME_EXECUTABLE
+RUNTIME_VERSION_CAPTURE
+PACKAGE_ENVIRONMENT
+CONSUMED_INVENTORY_MANIFEST
+EXPECTED_ROW_INDEX
+CANDIDATE_INPUT_MANIFEST
+COVERAGE_V3_DIRECT_EVIDENCE
+DELEGATED_EVIDENCE_REPORT
+CANDIDATE_EVIDENCE_MANIFEST
+COVERAGE_V3_CLOSURE_RESULT
+CONSTRUCTION_PROVENANCE
+DIAGNOSTIC_ARTIFACT
+```
+
+An artifact that cannot be assigned exactly one role is `UNRESOLVED`. New role strings require a prospective interface revision.
+
+### 2.2 Exact `record_reference` schema
+
+Every logical-record reference has exactly these fields; none may be omitted:
+
+```json
+{
+  "artifact_id": "ID of a file-level artifact already bound by a manifest",
+  "record_id": "stable unique record ID under that artifact's schema",
+  "record_role": "one closed role below",
+  "content_sha256_utf8": null,
+  "content_size_bytes_utf8": null
+}
+```
+
+`record_role` is exactly one of `TRAINING_EXAMPLE`, `EVALUATION_TASK`, `SOURCE`, `REFERENCE`, `PROMPT`, `TARGET`, `CASE_SET`, `CASE`, `CASE_INPUT`, `EXPECTED_OUTPUT`, `SCHEDULE_ENTRY`, `COVERAGE_CONTRACT`, `CONSUMED_RECORD`, `SERIALIZED_EXAMPLE`, or `DIAGNOSTIC`.
+
+If the referenced logical value is a JSON string, including source, reference, prompt, target, case input, expected output, serialized example, or textual diagnostic, `content_sha256_utf8` is required as lowercase SHA-256 over the exact UTF-8 bytes of the string value without JSON quotes or escaping, and `content_size_bytes_utf8` is the length of those same bytes. If the referenced value is a structured JSON object, array, number, Boolean, or null, both content fields must be explicit JSON `null`; the containing artifact's exact-byte hash supplies its byte identity. A string reference with null content fields, a structured reference with non-null content fields, or omission of either field is malformed. A record reference never replaces file-level artifact closure.
 
 ## 3. Stable IDs and expected-row indexes
 
 All candidate, program, task, slot, case, cell, and consumed-record IDs must be unique in their authoritative input inventory. Unknown or duplicate IDs fail before evidence execution.
 
-For each report or row set, a pre-run `expected_row_index` JSON artifact enumerates the complete ordered list of expected row IDs, the derivation name, the exact input-inventory artifact IDs used, and the expected count. These index artifacts are generated without making a scientific classification, are reviewed with the candidate inputs, and are bound by `candidate_input_manifest.json` before evidence producers run. Reports cannot choose or shrink their own populations.
+For each report row set, a separate pre-run `expected_row_index` JSON artifact enumerates the complete ordered list of expected row IDs. These index artifacts are generated without making a scientific classification, are reviewed with the candidate inputs, and are bound by `candidate_input_manifest.json` before evidence producers run. Reports cannot choose, combine, omit, or shrink their own populations.
 
-For a cross-product pair, the stable shared pair ID is constructed from the exact candidate-program ID and consumed-record ID using unambiguous UTF-8 byte-length framing:
+### 3.1 `expected_row_index` schema version 1
+
+Every index has exactly these top-level fields:
 
 ```text
-PAIR|<candidate_utf8_byte_length>:<candidate_id>|<consumed_utf8_byte_length>:<consumed_id>
+schema_version
+phase
+candidate_id
+index_id
+report_type
+row_set_id
+derivation_name
+input_inventory_artifacts
+ordered_row_ids
+expected_count
+ordered_row_id_digest
 ```
 
-E2 and both E4 reports use this same `pair_id`. E5 uses an analogous `E5|<primary-length>:<primary-id>|<training-length>:<training-id>` ID. E6 unordered primary pairs place the two task IDs in ascending UTF-8 byte order and use the same length framing prefixed by `E6PAIR|<domain>|`.
+`schema_version` is integer `1`; `phase` is `PHASE_3C_CONF1`; `input_inventory_artifacts` is a nonempty ordered list of exact artifact references; and `ordered_row_ids` is an ordered array of unique nonempty UTF-8 strings. `expected_count` must equal `len(ordered_row_ids)`. `index_id` is unique within the candidate and `row_set_id` must be the exact closed ID assigned in section 7.1. The index artifact uses role `EXPECTED_ROW_INDEX` and is itself bound by exact SHA-256 and size in the candidate input manifest.
+
+### 3.2 Ordered row-ID digest
+
+For ordered row IDs `[r1, r2, ...]`, encode each row independently as the ASCII bytes `ROWSET|`, followed by the row ID's UTF-8 byte length as minimal unsigned decimal ASCII with no leading zero, followed by ASCII `:`, followed by the exact UTF-8 row-ID bytes. Concatenate the framed rows in order with no separator, terminator, or platform newline. For an empty sequence the concatenation is zero bytes. `ordered_row_id_digest` is the lowercase 64-character hexadecimal SHA-256 of those exact concatenated bytes.
+
+The expected-row index stores this digest. Each report independently reconstructs it from row IDs in the report's array order. PASS requires exact digest equality as well as set equality, uniqueness, and count equality.
+
+### 3.3 Shared row-ID framing and formulas
+
+Define `RID(label, [c1, c2, ...])` as ASCII `label` followed, for each component in order, by ASCII `|`, the component's exact UTF-8 byte length as minimal unsigned decimal ASCII, ASCII `:`, and the exact UTF-8 component bytes. Components are never normalized. The fixed label and component arity are defined by the row set below, making the encoding unambiguous.
+
+| Report / row set | Outcome-independent row-ID formula |
+|---|---|
+| Direct `v3_1_contract_rows` | `RID("V3.1", [program_id])` |
+| Direct `v3_2_mapping_rows` | `RID("V3.2", [program_id])` |
+| Direct `v3_3_equivalence_rows` | `RID("V3.3", [program_id])` |
+| Direct `v3_5_activity_rows` | `RID("V3.5", [training_program_id, canonical_contract_key_id, mapped_occurrence_id])` |
+| Direct `input_domain_class_rows` | `RID("INPUT_DOMAIN_CLASS", [condition_id, domain_id, class_id])` |
+| Direct `v3_4_coverage_rows` | `RID("V3.4", [evaluation_task_id, canonical_contract_key_id, required_condition_id])` |
+| Direct `v3_6_symmetry_rows`, shared key | `RID("V3.6", ["SHARED_KEY", canonical_contract_key_id, condition_relation_id])` |
+| Direct `v3_6_symmetry_rows`, treatment exception | `RID("V3.6", ["TREATMENT_EXCEPTION", canonical_relation_id, "COMPOSITION_ONLY"])` |
+| Direct `v3_7_delegation_rows` | `RID("V3.7", ["E5_FULL_SIGNATURE"])` |
+| E1 `program_rows` | `RID("E1", [program_type, program_id])` |
+| E2 and both E4 `pair_rows` | `RID("PAIR", [candidate_program_id, consumed_id])` |
+| E3 scaffold `paired_slot_rows` | `RID("E3SCAFFOLD", [slot_id])` |
+| E3 token `example_rows` | `RID("E3TOKEN", [condition_id, example_id])` |
+| E3 schedule `cell_rows` | `RID("E3CELL", [seed_id, condition_id])` |
+| E3 schedule `exposure_rows` | `RID("E3EXPOSURE", [cell_row_id, epoch_id, exposure_ordinal])` |
+| E3 schedule `optimizer_step_rows` | `RID("E3STEP", [cell_row_id, epoch_id, step_ordinal])` |
+| E5 `primary_certificates` | `RID("E5PRIMARY", [primary_task_id])` |
+| E5 `training_certificates` | `RID("E5TRAINING", [training_program_id])` |
+| E5 `comparisons` | `RID("E5", [primary_task_id, training_program_id])` |
+| E6 `task_rows` | `RID("E6TASK", [evaluation_task_id])` |
+| E6 `pair_distinction_rows` | `RID("E6PAIR", [domain_id, lower_utf8_task_id, higher_utf8_task_id])` |
+
+`mapped_occurrence_id`, canonical key IDs, condition IDs, domain IDs, epoch IDs, ordinals, and relation IDs are taken from bound pre-run contract, source-occurrence, schedule, or inventory artifacts. For E6, task IDs are ordered by exact UTF-8 bytes. No expected row ID contains or depends on `PASS`, `FAIL`, `ACTIVE`, `INACTIVE`, collision, similarity, output values, or any other scientific result.
+
+E2 and both E4 reports therefore use the same framed `pair_id`; E5 and E6 retain their previously proposed `E5` and `E6PAIR` semantics under this shared framing convention.
 
 ## 4. Non-self-referential candidate manifests
 
 ### 4.1 `candidate_input_manifest.json`
 
-This manifest is created and frozen before any candidate-specific scientific evidence producer runs. It does not contain E1--E6 report hashes or scientific outcomes. Its closed top-level fields are:
+This manifest is created and frozen before any candidate-specific scientific evidence producer runs. It has `schema_version: 1` and does not contain E1--E6 report hashes or scientific outcomes. Its closed top-level fields are:
 
 - `schema_version`, `phase`, `candidate_id`, `attempt_id`, `status`;
 - `model_execution_authorized`, which must be actual JSON boolean `false`;
 - `candidate_root` and `hash_policy`;
-- `frozen_authorities`, each with identity, path, recorded hash policy, SHA-256, size, and Git blob or freeze identity where available;
+- `frozen_authorities`, each with identity, path, recorded hash policy, SHA-256, size, and its authority-declared Git blob or freeze identity, using explicit JSON `null` only when that authority declares neither;
 - `slot_ledger` and `candidate_artifacts`;
-- `coverage_contract_inventory`;
+- `coverage_contract_inventory` and `source_occurrence_inventory`;
 - `schedule_manifest`;
 - `compiler_identities`;
 - `consumed_inventory_manifest`;
@@ -93,11 +208,11 @@ This manifest is created and frozen before any candidate-specific scientific evi
 - `expected_row_indexes`; and
 - `construction_provenance`.
 
-`candidate_artifacts` binds every training example, target/reference, prompt, case, evaluation task/reference/case, serialization input, and configuration file required by a report. `coverage_contract_inventory` binds one prospective `CoverageContractV3` for each of the 120 training programs and 64 evaluation tasks. The manifest's own SHA-256 is recorded only by downstream reports and the later evidence manifest.
+`candidate_artifacts` binds every training example, target/reference, prompt, case, evaluation task/reference/case, serialization input, and configuration file required by a report. `coverage_contract_inventory` binds one prospective `CoverageContractV3` for each of the 120 training programs and 64 evaluation tasks using artifact role `COVERAGE_CONTRACT_V3_INVENTORY`. `source_occurrence_inventory`, with role `SOURCE_OCCURRENCE_INVENTORY`, assigns stable, outcome-independent occurrence IDs to every syntactic source node/edge eligible for a V3.5 activity row without deciding whether its mapping or activity later passes. The manifest's own SHA-256 is recorded only by downstream reports and the later evidence manifest.
 
 ### 4.2 `candidate_evidence_manifest.json`
 
-This manifest is created only after the direct Coverage-v3 evidence and every required delegated report exist. Its closed fields are:
+This manifest is created only after the direct Coverage-v3 evidence and every required delegated report exist. It has `schema_version: 1`; its closed fields are:
 
 - `schema_version`, `phase`, `candidate_id`, `status`;
 - `model_execution_authorized`, again actual JSON boolean `false`;
@@ -111,20 +226,47 @@ The nine delegated files are E1; E2; the three E3 reports; the two E4 reports; E
 
 ## 5. Producer-tool identity
 
-Before evidence execution, each distinct report producer has a `producer_tool_manifest.json`, or a separately named manifest with the same closed schema. One manifest may cover multiple reports only when the identical entrypoint, dependency closure, rules, and execution configuration produce all of them.
+Before evidence execution, each distinct report producer has a `producer_tool_manifest.json`, or a separately named manifest with the same schema version 1. One manifest may cover multiple reports only when the identical entrypoint, repository closure, non-code dependency closure, runtime/package closure, rules, and execution configuration produce all of them.
 
-Required fields are:
+### 5.1 Repository code closure
 
-- `schema_version`, `producer_id`, `contract_ids`, `report_types`;
-- `entrypoint`, as an exact artifact reference;
-- `repository_dependency_closure`, an exhaustive list of exact artifact references for every repository-local source, imported helper, schema, configuration, prompt/template, and static data file that can affect the result;
-- `rule_authorities`, exact references to all controlling frozen scientific rules;
-- `external_runtime`, including executable/package name, version, immutable distribution or environment identity where available, and provenance source;
-- `execution_configuration`, containing all flags, environment settings, timeouts, limits, locale/encoding, and command template that can affect output;
-- `output_schema_version`; and
-- `dependency_enumeration_method` and `unresolved_dependencies`.
+Each producer-tool manifest contains:
 
-Any unresolved dependency makes the tool manifest unusable. A producer report references the exact tool-manifest SHA-256 and size through the candidate input manifest. A single script hash never stands for unlisted imports or configuration.
+- `repository_commit_sha`, the exact 40-hex Git commit used for execution;
+- `repository_root_tree_id`, the exact root tree object of that commit;
+- `producer_controlled_pathspecs`, the closed list of repository paths containing producer code and repository configuration under producer control;
+- `producer_code_dirty_state`, which must equal `CLEAN_AGAINST_BOUND_COMMIT`;
+- `entrypoint`, an artifact reference with role `PRODUCER_ENTRYPOINT`;
+- `dependency_access_observer`, an exact `PRODUCER_DEPENDENCY` artifact reference plus its ordered invocation/configuration, identifying the frozen file-access tracer or hermetic boundary used for this producer;
+- `explicit_uncommitted_dependencies`, an array of exact artifact references, empty when none; and
+- `repository_state_inventory`, an exact diagnostic artifact produced before execution.
+
+At execution, `git rev-parse HEAD` and `git rev-parse HEAD^{tree}` must equal the bound commit and root tree. All tracked files under `producer_controlled_pathspecs` must match that commit byte-for-byte. The state inventory enumerates every modified, staged, deleted, and untracked repository path. A repository-local code or configuration file outside the bound tracked tree may affect execution only when it appears in `explicit_uncommitted_dependencies` before evidence execution. Candidate-input paths are classified separately through `candidate_input_manifest.json`; they are not producer code dependencies. Any other dirty producer-controlled path is `DIRTY_PRODUCER_CODE` and makes tool identity `UNRESOLVED`.
+
+Because the root tree binds every tracked repository file, imported tracked helpers cannot change without changing the bound tree. A producer execution additionally emits an exact `repository_local_read_set` diagnostic artifact from its bound `dependency_access_observer`. Every repository-local file read must classify as one of: bound tracked tree, explicit uncommitted dependency, explicit non-code dependency, or candidate input artifact. An unclassified read is `UNDECLARED_DEPENDENCY`. If the bound observer cannot produce this closed read set, producer identity is `UNRESOLVED`.
+
+### 5.2 Explicit non-code dependency closure
+
+The manifest separately contains ordered exact artifact-reference arrays for `schemas`, `prompts_and_templates`, `static_lookups`, `producer_configurations`, `compiler_wrapper_and_configuration`, and `tokenizer_and_chat_template_configuration`. Empty arrays are explicit. Each repository-local non-code file observed in the read set must appear in the applicable array or be a separately bound candidate input. This rule detects omission mechanically; a free-form assertion that a list is exhaustive cannot produce PASS.
+
+### 5.3 Runtime and package closure
+
+The manifest contains:
+
+- `runtime_executable`, an exact artifact reference with path, exact-byte SHA-256, and size;
+- `runtime_version_capture`, an exact artifact reference containing stdout and stderr from the frozen version command;
+- parsed runtime name, vendor, version, and architecture, each required to match the captured bytes;
+- `package_environment`, an exact artifact reference to either the bound lock/environment artifact used to construct the environment or a deterministic complete installed-package inventory produced by a frozen capture command;
+- the exact package-environment capture command and its producer identity;
+- `execution_command`, represented as an ordered argument array rather than a shell string;
+- exact working directory, environment-variable allowlist with values or bound secret identifiers, locale, encoding, timeouts, and resource/output limits; and
+- `runtime_closure_status`, which must be `CLOSED`.
+
+No runtime executable, version capture, or package environment field is optional. If exact executable bytes, version output, deterministic package inventory, or execution configuration cannot be bound, the producer tool identity is `UNRESOLVED`.
+
+### 5.4 Tool-manifest fields and report binding
+
+The complete manifest therefore contains `schema_version`, `producer_id`, `contract_ids`, `report_types`, all section 5.1--5.3 fields, `rule_authorities`, `output_schema_version` fixed to `1`, optional informational `dependency_enumeration_method`, and `unresolved_dependencies`. `unresolved_dependencies` must be an empty array for use. A producer report references the exact tool-manifest SHA-256 and size through the candidate input manifest. A single script hash never stands for repository, runtime, package, or configuration closure.
 
 ## 6. Candidate-level compiler identity
 
@@ -133,12 +275,14 @@ Any unresolved dependency makes the tool manifest unusable. A producer report re
 - compiler JAR artifact reference, including exact JAR SHA-256 and size;
 - compiler source/provenance-record artifact reference, including exact SHA-256 and size;
 - the upstream compiler commit and source-tree identities recorded by that provenance;
-- Java executable/distribution identity, vendor, version, architecture, and an executable or immutable distribution hash where available;
+- exact Java executable artifact reference, including the invoked path, exact-byte SHA-256, and size;
+- exact `java -version` capture artifact containing stdout and stderr from the invoked executable;
+- vendor, version, and architecture parsed from that captured output and required to match it;
 - the compiler wrapper/tool artifact identity;
-- exact command template, working-directory policy, input encoding, output normalization, timeout, output-size limit, locale, and relevant environment configuration; and
+- exact ordered invocation arguments, wrapper/configuration references, working-directory policy, input encoding, output normalization, timeout, output-size limit, locale, and relevant environment configuration; and
 - `identity_status`, which must be `CLOSED`.
 
-The existing provenance record `research/manifests/goco_compiler_source.json` currently has exact-byte SHA-256 `67a15aefe1be747c630e887e6e030ae6dcf37ddd64e71b13b0fca7e41587725d` and size 1,289 bytes. It identifies upstream commit `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`. The deterministic JAR currently has SHA-256 `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb` and size 212,005 bytes. A future candidate must bind the then-present exact files and runtime; this proposal does not silently freeze an unrecorded Java executable or invocation.
+The existing provenance record `research/manifests/goco_compiler_source.json` currently has exact-byte SHA-256 `67a15aefe1be747c630e887e6e030ae6dcf37ddd64e71b13b0fca7e41587725d` and size 1,289 bytes. It identifies upstream commit `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`. The deterministic JAR currently has SHA-256 `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb` and size 212,005 bytes. A future candidate must bind the then-invoked exact Java executable and its exact version capture in addition to the JAR, provenance, wrapper, and configuration. Failure to bind any component makes compiler identity `UNRESOLVED`; there is no portability or availability exception.
 
 Every report contains `compiler_relevance`, with `status` exactly `REQUIRED` or `NOT_APPLICABLE`, and a closed `reason_code`:
 
@@ -174,16 +318,57 @@ rule_authorities
 compiler_relevance
 compiler_identity_id
 input_artifacts
-expected_row_population
-observed_row_population
-rows
+row_sets
 aggregate
 failure_reasons
 ```
 
-`schema_version` is a supported positive integer. `phase` is `PHASE_3C_CONF1`. Status is exactly `PASS`, `FAIL`, or `UNRESOLVED`. `rule_authorities` and `input_artifacts` are exact references to entries already bound by the input manifest, not free-form copies. `expected_row_population` references the pre-run index artifact and records its count and SHA-256. `observed_row_population` records count, unique count, ordered row-ID digest, missing IDs, duplicate IDs, and unexpected IDs. `rows` contains the contract-specific row sets below. `aggregate` contains only deterministic summaries derived from rows. `failure_reasons` is an ordered list.
+`schema_version` is exactly integer `1`. `phase` is `PHASE_3C_CONF1`. Status is exactly `PASS`, `FAIL`, or `UNRESOLVED`. `rule_authorities` and `input_artifacts` are exact references to entries already bound by the input manifest, not free-form copies. `aggregate` contains only deterministic summaries derived from closed row sets. `failure_reasons` is an ordered list.
 
-A report can be `PASS` only if all referenced artifacts, rule identities, producer-tool identities, and relevant compiler identity close; expected and observed row IDs are exactly equal; there are no duplicates; every blocking row is `PASS`; aggregate values reconcile with rows; and no `UNRESOLVED` item remains.
+`row_sets` is an ordered array. Every entry has exactly these four fields:
+
+```json
+{
+  "row_set_id": "closed ID from section 7.1",
+  "expected_row_index": {
+    "artifact_id": "bound EXPECTED_ROW_INDEX artifact ID",
+    "index_id": "index_id inside that exact artifact",
+    "sha256": "lowercase exact-byte SHA-256",
+    "size_bytes": 1,
+    "expected_count": 1
+  },
+  "observed_population": {
+    "observed_row_count": 1,
+    "unique_row_count": 1,
+    "ordered_row_id_digest": "lowercase SHA-256 under section 3.2",
+    "missing_ids": [],
+    "duplicate_ids": [],
+    "unexpected_ids": []
+  },
+  "rows": []
+}
+```
+
+The `expected_row_index` and `observed_population` subobjects have exactly the fields shown. The expected-index reference must match the exact artifact bound by the candidate input manifest; `index_id` must equal the artifact contents; and `expected_count` must match the index contents. Every element of `rows` has one `row_id`. `observed_row_count` equals `len(rows)` and `unique_row_count` is the set cardinality of those exact IDs. The ordered digest is reconstructed from `rows` array order using section 3.2. `missing_ids` follows expected-index order; `duplicate_ids` follows first duplicate occurrence order with each duplicated ID listed once; `unexpected_ids` follows first observed occurrence order with each unexpected ID listed once. The three lists are computed, never producer-selected.
+
+Each row set closes independently. Closure requires exact expected-index hash and size, matching report/candidate/row-set identity, exact count and ID set equality, zero duplicate or unexpected IDs, and ordered digest equality. A report can be `PASS` only if its required row-set ID inventory is exact, every required row set closes, all referenced artifacts and identities close, every blocking row is `PASS`, aggregate values reconcile with all row sets, and no `UNRESOLVED` item remains. An omitted, combined, renamed, or extra row set blocks PASS.
+
+### 7.1 Closed row-set IDs by report
+
+| Report | Required row-set IDs |
+|---|---|
+| `coverage_v3_direct_evidence.json` | `v3_1_contract_rows`, `v3_2_mapping_rows`, `v3_3_equivalence_rows`, `v3_5_activity_rows`, `input_domain_class_rows`, `v3_4_coverage_rows`, `v3_6_symmetry_rows`, `v3_7_delegation_rows` |
+| E1 `reference_validation.json` | `program_rows` |
+| E2 `ast_v2_overlap_audit.json` | `pair_rows` |
+| E3 `scaffold_allowed_difference_audit.json` | `paired_slot_rows` |
+| E3 `token_budget_audit.json` | `example_rows` |
+| E3 `schedule_audit.json` | `cell_rows`, `exposure_rows`, `optimizer_step_rows` |
+| E4 `consumed_similarity_pairs.json` | `pair_rows` |
+| E4 `exact_overlap_audit.json` | `pair_rows` |
+| E5 `full_signature_novelty_audit.json` | `primary_certificates`, `training_certificates`, `comparisons` |
+| E6 `hidden_case_discrimination.json` | `task_rows`, `pair_distinction_rows` |
+
+Although `v3_7_delegation_rows` has expected count one, it remains a plural row-set ID and uses the same closure mechanism.
 
 ## 8. Closed interface reason codes
 
@@ -207,12 +392,19 @@ The common interface vocabulary is:
 - `EXPECTED_POPULATION_MISMATCH`
 - `MODEL_AUTHORIZATION_NOT_FALSE`
 - `FROZEN_AUTHORITY_MISMATCH`
+- `REPOSITORY_COMMIT_MISMATCH`
+- `REPOSITORY_TREE_MISMATCH`
+- `DIRTY_PRODUCER_CODE`
+- `UNDECLARED_DEPENDENCY`
+- `DEPENDENCY_ACCESS_UNCLOSED`
+- `RUNTIME_IDENTITY_MISMATCH`
+- `PACKAGE_ENVIRONMENT_MISMATCH`
 
 Each reason record contains `code`, `contract_id`, optional `row_id`, optional `artifact_id`, and `detail_reference`. Producers retain their closed contract-specific scientific reason codes in each affected row. The binder may add interface reasons but may not translate, erase, or replace scientific reasons.
 
 ## 9. Coverage-v3 direct evidence
 
-`coverage_v3_direct_evidence.json` is the versioned output of the future Coverage-v3 contract, parser/mapping, equivalence, activity, and atomic-coverage engine. It uses the same identity and population fields as the common envelope, with `contract_id` `COVERAGE_V3_DIRECT`. It does not duplicate delegated scientific findings.
+`coverage_v3_direct_evidence.json` is the schema-version-1 output of the future Coverage-v3 contract, parser/mapping, equivalence, activity, and atomic-coverage engine. It uses the common envelope and independent `row_sets`, with `contract_id` `COVERAGE_V3_DIRECT`. It does not duplicate delegated scientific findings. Each row set below has its own separately bound expected-row index.
 
 Its pre-enumerated row sets are:
 
@@ -223,7 +415,7 @@ Its pre-enumerated row sets are:
 - `input_domain_class_rows`: exactly 14 condition/domain/class obligations: four numeric and three array classes in each of two conditions, with example, case, decoded-value/element, class, and decoder mapping; these rows remain distinct from V3.5 activity rows;
 - `v3_4_coverage_rows`: one per evaluation-task-essential atomic key and required condition, with the sole pair-joint relation exception represented as a prospectively marked COMPOSITION-only relation; IDs are enumerated from the 64 evaluation contracts before execution;
 - `v3_6_symmetry_rows`: one per required shared key/condition comparison plus one treatment-exception declaration and references to all 60 E3 scaffold rows; and
-- `v3_7_delegation_row`: exactly one row binding the complete E5 report and confirming that no weaker novelty result was reconstructed.
+- `v3_7_delegation_rows`: exactly one row binding the complete E5 report and confirming that no weaker novelty result was reconstructed.
 
 Each gate row has status `PASS`, `FAIL`, or `UNRESOLVED`, scientific reason codes, evidence record references, and source offsets or graph paths where V3 requires them. This direct report is bound by the evidence manifest and traversed by the final binder.
 
@@ -231,7 +423,7 @@ Each gate row has status `PASS`, `FAIL`, or `UNRESOLVED`, scientific reason code
 
 Required file: `reference_validation.json`.
 
-The expected index contains exactly 184 program rows: 60 ISOLATED training targets, 60 COMPOSITION training targets, and 64 evaluation references. Program IDs come from the candidate's frozen inventories. Row ID is `E1|<program_type>|<program_id>`.
+The report has only the `program_rows` row set and its separate expected index contains exactly 184 program rows: 60 ISOLATED training targets, 60 COMPOSITION training targets, and 64 evaluation references. Program IDs come from the candidate's frozen inventories. Row IDs use the section 3.3 E1 formula.
 
 Each program row contains:
 
@@ -243,13 +435,13 @@ Each program row contains:
 - compiler identity ID;
 - row status and scientific reason codes.
 
-The nested population is exactly 920 case outcomes. E1 `PASS` requires all 184 rows, exactly five unique expected cases per row, all 920 compile/semantic outcomes `PASS`, compiler closure, and source/case hash closure. The binder verifies these facts and the producer's statuses; it does not invoke or emulate the compiler.
+The nested population is exactly 920 case outcomes. Each program row records its exact five expected case IDs from the input manifest; the binder requires the nested outcome IDs to equal that ordered list with no duplicates or extras. E1 `PASS` requires the closed `program_rows` set, exactly five unique expected cases per row, all 920 compile/semantic outcomes `PASS`, compiler closure, and source/case hash closure. The binder verifies these facts and the producer's statuses; it does not invoke or emulate the compiler.
 
 ## 11. E2 — AST-v2 structural overlap
 
 Required file: `ast_v2_overlap_audit.json`.
 
-`consumed_inventory_manifest.json` prospectively enumerates the real permitted consumed population. If it has `N` records, the E2 expected population is `184 × N`, absent a separately frozen exclusion rule. No historical value of `N` is adopted here.
+The report has only the `pair_rows` row set. `consumed_inventory_manifest.json` prospectively enumerates the real permitted consumed population. If it has `N` records, the separate E2 pair index has `184 × N` rows, absent a separately frozen exclusion rule. No historical value of `N` is adopted here.
 
 Each row contains shared `pair_id`, candidate program ID and source record reference, consumed ID and source/template record reference, legacy coarse-equality flag, canonical-tree identity/digest for both sides, exact frozen AST-v2 classification (`PROHIBITED_STRUCTURAL_TEMPLATE_REUSE`, `COARSE_AST_EQUALITY_ONLY`, or `STRUCTURALLY_DISTINCT`), adjudication status, and scientific reason codes. Prohibited reuse is `FAIL`; coarse-only and distinct are resolved results whose row status is `PASS`; parse, validity, or classification uncertainty is `UNRESOLVED`. Missing or unadjudicated pairs block.
 
@@ -257,19 +449,19 @@ Each row contains shared `pair_id`, candidate program ID and source record refer
 
 ### 12.1 `scaffold_allowed_difference_audit.json`
 
-The expected population is exactly 60 paired-slot rows, one for every frozen `training_paired_slots` ID. Each row binds the slot ID; ISOLATED and COMPOSITION program IDs; source, prompt, and case-set references; the five ordered paired case IDs and exact inputs; marked treatment-expression and treatment-description classifications; every protected-field comparison required by the paired-scaffold authority; mechanical expected-output derivations for both conditions on all five inputs; feature counts; row status; and scientific reasons.
+The report has only `paired_slot_rows`, with a separate expected index of exactly 60 rows, one for every frozen `training_paired_slots` ID. Each row binds the slot ID; ISOLATED and COMPOSITION program IDs; source, prompt, and case-set references; the five ordered paired case IDs and exact inputs; marked treatment-expression and treatment-description classifications; every protected-field comparison required by the paired-scaffold authority; mechanical expected-output derivations for both conditions on all five inputs; feature counts; row status; and scientific reasons.
 
 Only the frozen treatment expression and treatment description may be `INTENDED_TREATMENT_DIFFERENCE`; only mechanically derived outputs and treatment serialization may be `UNAVOIDABLE_SEMANTIC_CONSEQUENCE`. Every other field is `MATCHED` or the row fails.
 
 ### 12.2 `token_budget_audit.json`
 
-The expected population is exactly 120 model-facing example rows. Each row includes example ID, condition, exact prompt/input/target record references, tokenizer and chat-template identities, prompt/input token count, supervised target-token count, full serialized-token count, truncation status, applicable 320-token check, row status, and reasons.
+The report has only `example_rows`, with a separate expected index of exactly 120 model-facing example rows. Each row includes example ID, condition, exact prompt/input/target record references, tokenizer and chat-template identities, prompt/input token count, supervised target-token count, full serialized-token count, truncation status, applicable 320-token check, row status, and reasons.
 
 The aggregate deterministically reports each condition's example and token totals, maximum sequence length, supervised-token relative difference, full-token relative difference, and the frozen 2%/5%/320 limits. All rows and aggregates must pass.
 
 ### 12.3 `schedule_audit.json`
 
-The frozen design has five paired seeds and two conditions, hence 10 cell rows. Each cell has 60 examples over three epochs, hence 180 exposure rows and 24 optimizer-step rows. The full expected population is therefore:
+The report has three independent row sets, each with its own expected index. The frozen design has five paired seeds and two conditions, hence 10 cell rows. Each cell has 60 examples over three epochs, hence 180 exposure rows and 24 optimizer-step rows. The full expected population is therefore:
 
 - 10 `cell_rows`;
 - 1,800 `exposure_rows` (180 per cell); and
@@ -281,7 +473,7 @@ All three E3 reports must independently close and declare `PASS`.
 
 ## 13. E4 — consumed-suite overlap
 
-Required files are `consumed_similarity_pairs.json` and `exact_overlap_audit.json`. Both reference the identical frozen consumed-inventory manifest and identical expected pair index. If that inventory has `N` records, each file has exactly `184 × N` pair rows and uses the same shared `pair_id`.
+Required files are `consumed_similarity_pairs.json` and `exact_overlap_audit.json`. Each has only `pair_rows` and its own exact expected-index artifact; the two indexes must contain the same ordered IDs and digest. Both reference the identical frozen consumed-inventory manifest. If that inventory has `N` records, each file has exactly `184 × N` pair rows and uses the same shared `pair_id`.
 
 `consumed_similarity_pairs.json` contains candidate and consumed identities, every prespecified descriptive metric, normalized-code and coarse/structural fields where delegated to it, and deterministic nearest-neighbor summaries. Complete enumeration is required; descriptive status does not create a new scientific threshold.
 
@@ -295,15 +487,15 @@ Required file: `full_signature_novelty_audit.json`.
 
 ### 14.1 `primary_certificates`
 
-Exactly 32 rows, one per primary evaluation task, contain task ID; task-contract reference; domain; role map and role count `k`; typed complete-graph identity; the complete ordered `2^k` contribution vector; aggregation/state recurrence; fixed initialization or fully represented initialization/state; source-to-contract completeness references; hidden/unrepresented-state checks; certificate status; and scientific reason codes. The field `k` here is role cardinality, distinct from any training accumulator offset.
+The `primary_certificates` row set has its own expected index with exactly 32 rows, one per primary evaluation task. Rows contain task ID; task-contract reference; domain; role map and role count `k`; typed complete-graph identity; the complete ordered `2^k` contribution vector; aggregation/state recurrence; fixed initialization or fully represented initialization/state; source-to-contract completeness references; hidden/unrepresented-state checks; certificate status; and scientific reason codes. The field `k` here is role cardinality, distinct from any training accumulator offset.
 
 ### 14.2 `training_certificates`
 
-Exactly 120 rows, one per training program, encode the same completeness fields needed for comparison. They prevent 3,840 comparisons from silently using an uncertified aggregate training signature.
+The `training_certificates` row set has its own expected index with exactly 120 rows, one per training program, encoding the same completeness fields needed for comparison. They prevent 3,840 comparisons from silently using an uncertified aggregate training signature.
 
 ### 14.3 `comparisons`
 
-Exactly 32 primary tasks × 120 training programs = 3,840 rows under the current frozen design. Each row binds primary task ID, training program ID, both domains, role cardinalities, role-bijection enumeration/status, typed-graph comparison, graph-isomorphism result, complete semantic contribution/output-signature comparison, semantic-equality result, local-pair-motif diagnostic, final result (`COLLISION`, `NONMATCH`, or `UNRESOLVED`), row status, and reasons.
+The `comparisons` row set has its own expected index with exactly 32 primary tasks × 120 training programs = 3,840 rows under the current frozen design. Each row binds primary task ID, training program ID, both domains, role cardinalities, role-bijection enumeration/status, typed-graph comparison, graph-isomorphism result, complete semantic contribution/output-signature comparison, semantic-equality result, local-pair-motif diagnostic, final result (`COLLISION`, `NONMATCH`, or `UNRESOLVED`), row status, and reasons.
 
 Graph isomorphism or complete semantic-signature equality independently yields `COLLISION` and row `FAIL`. A frozen V3.7 fewer-role motif comparison records a resolved `NONMATCH`, not missing or unresolved. Any incomplete certificate, unrepresented output-affecting state, undecidable role bijection, or unresolved graph/semantic comparison is `UNRESOLVED`. E5 `PASS` requires all 32 primary certificates, all 120 training certificates, all 3,840 comparison rows, and no collision or unresolved result. The binder verifies closure and status only; it does not rebuild signatures.
 
@@ -311,15 +503,15 @@ Graph isomorphism or complete semantic-signature equality independently yields `
 
 Required file: `hidden_case_discrimination.json` with two blocking row sets.
 
-`task_rows` contains exactly 64 rows, one per evaluation slot. Each binds task ID, contract and case-set references, exactly five nested case outcomes, and every prospectively declared task-essential behavior witness. The nested case population is exactly 320. Each witness identifies the behavior obligation, case IDs, source/contract path, observed behavior, status, and scientific reasons.
+`task_rows` has its own expected index and contains exactly 64 rows, one per evaluation slot. Each binds task ID, contract and case-set references, exactly five nested case outcomes, and every prospectively declared task-essential behavior witness. The nested case population is exactly 320. Each task row records its exact five expected case IDs; nested outcome IDs must equal that ordered list with no duplicates or extras. Each witness identifies the behavior obligation, case IDs, source/contract path, observed behavior, status, and scientific reasons.
 
-`pair_distinction_rows` contains every unordered pair among the 16 primary slots separately within each domain: 120 numeric rows and 120 array rows, total 240. Each row contains domain, task A, task B, case/input witness references, the mechanically observed output or contribution difference, status, and reasons. Cross-domain pairs are not required by the frozen domain-specific 120/120 rule.
+`pair_distinction_rows` has its own expected index and contains every unordered pair among the 16 primary slots separately within each domain: 120 numeric rows and 120 array rows, total 240. Each row contains domain, task A, task B, case/input witness references, the mechanically observed output or contribution difference, status, and reasons. Cross-domain pairs are not required by the frozen domain-specific 120/120 rule.
 
 E6 `PASS` requires complete 64-task, 320-case, and 240-pair closure, all declared behavior obligations witnessed, and all required within-domain pairs distinguished. An aggregate `64/64` or `240/240` without the rows cannot pass.
 
 ## 16. Consumed-inventory boundary
 
-`consumed_inventory_manifest.json` has closed fields `schema_version`, `status`, `inventory_id`, `authority`, `inclusion_rule`, `exclusion_rules`, `records`, `record_count`, `source_artifacts`, `hash_policy`, and `failure_reasons`.
+`consumed_inventory_manifest.json` has exact integer `schema_version: 1` and closed fields `schema_version`, `status`, `inventory_id`, `authority`, `inclusion_rule`, `exclusion_rules`, `records`, `record_count`, `source_artifacts`, `hash_policy`, and `failure_reasons`.
 
 Every record contains stable `consumed_id`, origin/suite, record type, source/template and prompt/target record references where applicable, exact file/content hashes and sizes, and the authority justifying inclusion. Duplicate semantic IDs or an unbound source artifact fail. The manifest must be independently reviewed and frozen before Attempt-004 construction. This proposal defines its format and completeness proof but does not choose its real contents and does not freeze the historical 420 records or 77,280 pair count. Later synthetic implementation tests may use a small manifest explicitly labeled `SYNTHETIC_FIXTURE_ONLY`.
 
@@ -381,17 +573,19 @@ No conflict was identified. If independent review finds that a field changes a s
 
 This proposal satisfies the following interface checks:
 
-1. Scientific PASS conditions, thresholds, budgets, tasks, cases, seeds, graphs, and treatment rules are unchanged.
-2. Historical reports remain descriptive and are not promoted to authority.
-3. The real consumed population remains unfrozen; neither 420 nor 77,280 is adopted.
-4. Expected populations are fixed counts where existing authority fixes inventories and are exact cross-products of independently frozen indexes otherwise.
-5. Every report has row-level closure and duplicate/missing/unexpected-row handling.
-6. Compiler relevance is explicit for every report.
-7. Producer identity covers dependencies, rules, runtime, and execution configuration rather than one script hash.
-8. Input and evidence manifests do not hash themselves or create report cycles.
-9. E5 requires 32 primary and 120 training certificates plus 3,840 comparisons; an aggregate novelty flag cannot pass.
-10. E6 requires 64 task rows, 320 nested cases, and 240 pair rows; aggregate counts cannot pass.
-11. A full-path synthetic PASS must contain all 17 executed gate records.
-12. Unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
+1. Every artifact with multiple independent row populations has one separately bound expected-row index per row set.
+2. Exact required row-set inventories and independent closure prevent a report from omitting, combining, renaming, or adding a row set and still passing.
+3. Every newly defined JSON artifact uses exact integer `schema_version: 1`; any other value is `UNSUPPORTED_SCHEMA_VERSION`.
+4. Every file-level `artifact_role` is drawn from the explicit closed enum in section 2.1; an unrepresentable role is `UNRESOLVED`.
+5. Every `record_reference` has the exact five-field shape in section 2.2, with content hash and size required for strings and explicit nulls required for structured values.
+6. Every expected-row index has the exact schema-version-1 fields and invariants in section 3.1.
+7. Expected and observed ordered row-ID digests use the single byte encoding frozen in section 3.2.
+8. Every required row set has the deterministic, unambiguous derivation in section 3.3.
+9. Expected row IDs derive only from bound pre-run identities and never from scientific outcomes.
+10. Producer dependency closure is decided from the bound Git commit/tree, repository state, exact repository-local read set, explicit non-code artifacts, and mandatory runtime/package closure; an informational completeness assertion cannot create PASS.
+11. Compiler runtime identity always requires the exact invoked Java executable hash and size plus an exact bound `java -version` capture; there is no availability escape.
+12. These interface changes do not alter scientific PASS conditions, thresholds, populations, budgets, tasks, cases, seeds, graphs, treatment rules, Coverage-v3 gates, the 17-gate trace, consumed-inventory boundary, or authorization rules.
+
+The additional compatibility checks remain satisfied: historical reports are descriptive rather than authoritative; the real consumed population remains unfrozen and neither 420 nor 77,280 is adopted; compiler relevance is explicit for every report; the two-stage manifests avoid self-reference; E5 still requires 32 primary certificates, 120 training certificates, and 3,840 comparisons; E6 still requires 64 task rows, 320 nested cases, and 240 pair rows; and unknown, missing, duplicate, stale, mismatched, failed, or unresolved evidence blocks.
 
 Remaining work is deliberately outside this proposal: independent review and freeze of this interface; independent review and freeze of the real consumed-inventory contents; implementation and preregistered scientific fixtures; prospective candidate construction; candidate-specific producer-tool manifests and expected indexes; candidate evidence production; and any separate authorization decision. None is implied by this document.
