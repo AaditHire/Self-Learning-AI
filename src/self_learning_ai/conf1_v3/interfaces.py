@@ -85,6 +85,8 @@ class ClosureError(ValueError):
 
 
 def _keys(value: Mapping[str, Any], required: Iterable[str], *, optional: Iterable[str] = ()) -> None:
+    if not isinstance(value, dict):
+        raise SchemaError("object required")
     required, optional = set(required), set(optional)
     actual = set(value)
     missing, extra = required - actual, actual - required - optional
@@ -99,12 +101,13 @@ def _string(value: Any, name: str, *, nonempty: bool = True) -> str:
 
 
 def _integer(value: Any, name: str, *, minimum: int | None = None) -> int:
-    if isinstance(value, bool) or not isinstance(value, int) or (minimum is not None and value < minimum):
+    if type(value) is not int or (minimum is not None and value < minimum):
         raise SchemaError(f"{name} must be an integer" + (f" >= {minimum}" if minimum is not None else ""))
     return value
 
 
 def _schema(value: Mapping[str, Any]) -> None:
+    _integer(value.get("schema_version"), "schema_version")
     if value.get("schema_version") != SCHEMA_VERSION:
         raise SchemaError("UNSUPPORTED_SCHEMA_VERSION")
 
@@ -138,7 +141,7 @@ def validate_artifact_reference(value: Mapping[str, Any]) -> None:
         raise SchemaError("unknown artifact_role")
     path = _string(value["path"], "path")
     pure = PurePosixPath(path)
-    if pure.is_absolute() or ".." in pure.parts or "\\" in path:
+    if pure.is_absolute() or ".." in pure.parts or "\\" in path or ":" in path or str(pure) != path:
         raise SchemaError("path must be repository-relative POSIX form")
     if not HEX64.fullmatch(_string(value["sha256"], "sha256")):
         raise SchemaError("invalid sha256")
@@ -226,6 +229,8 @@ def validate_expected_row_index(value: Mapping[str, Any]) -> None:
         raise SchemaError("wrong phase")
     for name in ("candidate_id", "index_id", "report_type", "row_set_id", "derivation_name"):
         _string(value[name], name)
+    if value["report_type"] not in REPORT_ROW_SETS or value["row_set_id"] not in REPORT_ROW_SETS[value["report_type"]]:
+        raise SchemaError("unknown report/row set")
     refs = value["input_inventory_artifacts"]
     if not isinstance(refs, list) or not refs:
         raise SchemaError("input_inventory_artifacts must be nonempty")
@@ -235,7 +240,7 @@ def validate_expected_row_index(value: Mapping[str, Any]) -> None:
         raise SchemaError("ordered_row_ids invalid")
     if len(ids) != len(set(ids)):
         raise SchemaError("DUPLICATE_ROW")
-    if value["expected_count"] != len(ids):
+    if _integer(value["expected_count"], "expected_count", minimum=0) != len(ids):
         raise ClosureError("EXPECTED_POPULATION_MISMATCH")
     if value["ordered_row_id_digest"] != ordered_row_id_digest(ids):
         raise ClosureError("EXPECTED_POPULATION_MISMATCH")
@@ -358,17 +363,23 @@ REPORT_ENVELOPE_FIELDS = {
     "compiler_identity_id", "input_artifacts", "row_sets", "aggregate", "failure_reasons",
 }
 
-def validate_report_envelope(value: Mapping[str, Any]) -> None:
+def validate_report_envelope(value: Mapping[str, Any], *, resolver: "ArtifactResolver | None" = None,
+                             bound_indexes: Sequence[Mapping[str, Any]] = ()) -> None:
     _keys(value, REPORT_ENVELOPE_FIELDS); _schema(value)
     if value["phase"] != PHASE or value["status"] not in STATUSES:
         raise SchemaError("invalid report phase/status")
     report_type = _string(value["report_type"], "report_type")
     if report_type not in REPORT_ROW_SETS: raise SchemaError("unknown report_type")
     row_sets = value["row_sets"]
-    if not isinstance(row_sets, dict) or tuple(row_sets) != REPORT_ROW_SETS[report_type]:
+    if not isinstance(row_sets, list) or [r.get("row_set_id") if isinstance(r, dict) else None for r in row_sets] != list(REPORT_ROW_SETS[report_type]):
         raise SchemaError("row_sets do not match frozen report type/order")
-    for rows in row_sets.values():
-        if not isinstance(rows, list): raise SchemaError("row set must be a list")
+    if resolver is None:
+        raise ClosureError("expected-index resolver required")
+    for row_set in row_sets:
+        validate_row_set(row_set, resolver=resolver, bound_indexes=bound_indexes,
+                         candidate_id=value["candidate_id"], report_type=report_type,
+                         require_closed=value["status"] == "PASS")
+    validate_reason_records(value["failure_reasons"])
     relevance = value["compiler_relevance"]
     _keys(relevance, {"status", "reason_code"})
     if relevance["status"] not in {"REQUIRED", "NOT_APPLICABLE"}:
@@ -383,7 +394,132 @@ def validate_report_envelope(value: Mapping[str, Any]) -> None:
     for name in ("candidate_input_manifest_size_bytes", "producer_tool_manifest_size_bytes",
                  "producer_execution_provenance_size_bytes"):
         _integer(value[name], name, minimum=0)
+    if report_type=="COVERAGE_V3_DIRECT" and value["status"]=="PASS":
+        raise ClosureError("UNRESOLVED_REQUIREMENT: full direct-row variant/aggregate closure is not implemented")
 
 
 def canonical_json_bytes(value: Any) -> bytes:
     return (json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def validate_reason_records(reasons: Any) -> None:
+    if not isinstance(reasons, list):
+        raise SchemaError("reason records must be an array")
+    for reason in reasons:
+        _keys(reason, {"code", "contract_id", "detail_reference"}, optional={"row_id", "artifact_id"})
+        if reason["code"] not in INTERFACE_REASON_CODES:
+            raise SchemaError("unknown interface reason code")
+        _string(reason["contract_id"], "contract_id")
+        for name in ("row_id", "artifact_id"):
+            if name in reason:
+                _string(reason[name], name)
+        validate_record_reference(reason["detail_reference"])
+
+
+class ArtifactResolver:
+    """Resolve only pre-bound exact-byte artifacts; never select an inventory."""
+
+    def __init__(self, root: Path, artifacts: Sequence[Mapping[str, Any]]):
+        self.root = root.resolve()
+        self.artifacts: dict[str, dict[str, Any]] = {}
+        for ref in artifacts:
+            validate_artifact_reference(ref)
+            if ref["artifact_id"] in self.artifacts:
+                raise ClosureError("duplicate bound artifact ID")
+            self.artifacts[ref["artifact_id"]] = dict(ref)
+
+    def read(self, artifact_id: str, *, role: str | None = None) -> bytes:
+        if artifact_id not in self.artifacts:
+            raise ClosureError("unbound artifact")
+        ref = self.artifacts[artifact_id]
+        if role is not None and ref["artifact_role"] != role:
+            raise ClosureError("artifact role mismatch")
+        verify_artifact_reference(ref, self.root)
+        return (self.root / ref["path"]).read_bytes()
+
+    def json(self, artifact_id: str, *, role: str | None = None) -> Any:
+        def unique_object(pairs):
+            value = {}
+            for key, item in pairs:
+                if key in value:
+                    raise ValueError("duplicate JSON field")
+                value[key] = item
+            return value
+        try:
+            return json.loads(self.read(artifact_id, role=role).decode("utf-8"),
+                              object_pairs_hook=unique_object,
+                              parse_constant=lambda _: (_ for _ in ()).throw(ValueError("non-JSON number")))
+        except (ValueError, UnicodeError) as exc:
+            raise SchemaError("invalid JSON artifact") from exc
+
+    def verify_record_content(self, ref: Mapping[str, Any], content: str) -> None:
+        validate_record_reference(ref, string_value=True)
+        artifact = self.json(ref["artifact_id"])
+        # This core resolver deliberately supports only the record selector it
+        # can prove. Other producers need their own closed record adapters.
+        if ref["record_role"] != "EXPECTED_OUTPUT" or not isinstance(artifact, dict) or not isinstance(artifact.get("cases"), list):
+            raise ClosureError("unsupported record selector")
+        matches = [row for row in artifact["cases"] if isinstance(row, dict) and row.get("case_id") == ref["record_id"]]
+        if len(matches) != 1 or matches[0].get("expected_output") != content:
+            raise ClosureError("record not present in bound artifact")
+        encoded = content.encode("utf-8")
+        if ref["content_sha256_utf8"] != sha256_bytes(encoded) or ref["content_size_bytes_utf8"] != len(encoded):
+            raise ClosureError("record content identity mismatch")
+
+
+def observed_population(expected_ids: Sequence[str], rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    if not isinstance(rows, list):
+        raise SchemaError("rows must be an array")
+    actual = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise SchemaError("row object required")
+        actual.append(_string(row.get("row_id"), "row_id"))
+    seen: set[str] = set(); duplicates: list[str] = []; unexpected: list[str] = []
+    expected = set(expected_ids)
+    for row_id in actual:
+        if row_id in seen and row_id not in duplicates:
+            duplicates.append(row_id)
+        if row_id not in expected and row_id not in unexpected:
+            unexpected.append(row_id)
+        seen.add(row_id)
+    return {"observed_row_count": len(actual), "unique_row_count": len(seen),
+            "ordered_row_id_digest": ordered_row_id_digest(actual),
+            "missing_ids": [x for x in expected_ids if x not in seen],
+            "duplicate_ids": duplicates, "unexpected_ids": unexpected}
+
+
+def validate_row_set(value: Mapping[str, Any], *, resolver: ArtifactResolver,
+                     bound_indexes: Sequence[Mapping[str, Any]], candidate_id: str,
+                     report_type: str, require_closed: bool = True) -> None:
+    _keys(value, {"row_set_id", "expected_row_index", "observed_population", "rows"})
+    if report_type not in REPORT_ROW_SETS or value["row_set_id"] not in REPORT_ROW_SETS[report_type]:
+        raise SchemaError("unknown row set")
+    ref = value["expected_row_index"]
+    _keys(ref, {"artifact_id", "index_id", "sha256", "size_bytes", "expected_count"})
+    _integer(ref["size_bytes"], "size_bytes", minimum=0)
+    _integer(ref["expected_count"], "expected_count", minimum=0)
+    candidates = [a for a in bound_indexes if a.get("artifact_id") == ref["artifact_id"]]
+    if len(candidates) != 1 or resolver.artifacts.get(ref["artifact_id"]) != candidates[0]:
+        raise ClosureError("unbound or duplicate expected index")
+    bound = candidates[0]
+    if ref["sha256"] != bound["sha256"] or ref["size_bytes"] != bound["size_bytes"]:
+        raise ClosureError("expected index identity mismatch")
+    index = resolver.json(ref["artifact_id"], role="EXPECTED_ROW_INDEX")
+    validate_expected_row_index(index)
+    if (index["index_id"], index["candidate_id"], index["report_type"], index["row_set_id"], index["expected_count"]) != (
+            ref["index_id"], candidate_id, report_type, value["row_set_id"], ref["expected_count"]):
+        raise ClosureError("expected index identity/population mismatch")
+    for artifact in index["input_inventory_artifacts"]:
+        if resolver.artifacts.get(artifact["artifact_id"]) != artifact:
+            raise ClosureError("unbound index input inventory")
+        resolver.read(artifact["artifact_id"])
+    population = value["observed_population"]
+    _keys(population, {"observed_row_count", "unique_row_count", "ordered_row_id_digest",
+                       "missing_ids", "duplicate_ids", "unexpected_ids"})
+    for name in ("observed_row_count", "unique_row_count"):
+        _integer(population[name], name, minimum=0)
+    if population != observed_population(index["ordered_row_ids"], value["rows"]):
+        raise ClosureError("AGGREGATE_INCONSISTENCY")
+    if require_closed:
+        reconcile_rows(index, value["rows"])

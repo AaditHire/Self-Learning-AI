@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import itertools
 import random
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from typing import Any, Iterable, Mapping, Sequence
 
 from .interfaces import PHASE, SchemaError, rid
@@ -43,15 +43,24 @@ class ContractKey:
     computed_integer: int | None = None
     semantic_role: str | None = None
     exact_required_lexeme: str | None = None
+    operand_types: tuple[str, ...] = ()
+    result_type: str = "INTEGER"
 
     def validate(self) -> None:
         if self.category not in CATEGORIES or self.evidence_kind not in KEY_KINDS:
             raise SchemaError("UNRESOLVED_REQUIREMENT")
+        expected = "VALUE_OR_LITERAL_ATTRIBUTE" if self.category == "VALUE_OR_LITERAL" else "OUTPUT_ATTRIBUTE" if self.category == "OUTPUT_CATEGORY" else "BEHAVIORAL"
+        if self.evidence_kind != expected or self.result_type not in {"INTEGER","BOOLEAN","STRING","INTEGER_ARRAY","STRING_ARRAY"}:
+            raise SchemaError("key ontology/type mismatch")
         if self.domain not in DOMAINS:
             raise SchemaError("UNRESOLVED_REQUIREMENT")
         if self.required_condition not in CONDITIONS:
             raise SchemaError("UNRESOLVED_REQUIREMENT")
         if self.evidence_kind == "VALUE_OR_LITERAL_ATTRIBUTE":
+            if self.exact_required_lexeme is None and (type(self.computed_integer) is not int or not self.semantic_role):
+                raise SchemaError("computed integer/role required")
+            if self.exact_required_lexeme is not None and (self.computed_integer is not None or self.semantic_role is not None):
+                raise SchemaError("literal subtype null matrix")
             if self.attribute_parent_kind not in PARENT_KINDS:
                 raise SchemaError("attribute parent kind missing")
             if self.attribute_parent_kind == "ACTIVE_BEHAVIORAL_PARENT" and not self.parent_key_id:
@@ -87,12 +96,20 @@ class CoverageContractV3:
     case_obligations: tuple[str, ...]
     source_roles: tuple[str, ...]
     e5_role_state: Mapping[str, Any]
+    reference_source: str = ""
+    key_occurrences: Mapping[str, tuple[str, ...]] = field(default_factory=dict)
+    ir: Any = field(default=None, repr=False, compare=False)
+    core_gaps: tuple[str, ...] = ()
 
     def validate(self) -> None:
-        if self.schema_version != 1 or self.phase != PHASE:
+        if type(self.schema_version) is not int or self.schema_version != 1 or self.phase != PHASE:
             raise SchemaError("UNSUPPORTED_SCHEMA_VERSION")
         if self.condition not in CONDITIONS or self.domain not in DOMAINS:
             raise SchemaError("UNRESOLVED_REQUIREMENT")
+        if self.task_kind not in {"training","primary","secondary","development"}:
+            raise SchemaError("unknown contract kind")
+        if self.task_kind!="development" and not self.core_gaps:
+            raise SchemaError("UNRESOLVED_REQUIREMENT: frozen contract completion is not implemented")
         ids = [key.key_id for key in self.canonical_keys]
         if not ids or len(ids) != len(set(ids)):
             raise SchemaError("canonical key IDs must be nonempty and unique")
@@ -100,6 +117,21 @@ class CoverageContractV3:
             key.validate()
             if key.domain != self.domain:
                 raise SchemaError("key domain mismatch")
+        if self.ir is None or self.ir.program_id != self.program_id or self.ir.source != self.reference_source:
+            raise SchemaError("complete prospective IR required")
+        if set(self.key_occurrences) != set(ids): raise SchemaError("key occurrence inventory incomplete")
+        item_ids = {i.occurrence_id for i in self.ir.items}
+        if any(not occurrences or not set(occurrences) <= item_ids for occurrences in self.key_occurrences.values()):
+            raise SchemaError("unknown prospective key occurrence")
+        from .contract_ir import graph_record, keys_from_ir
+        from .core_ir import compile_program
+        rebuilt=compile_program(self.program_id,self.reference_source)
+        if graph_record(rebuilt)!=dict(self.complete_expression_graph) or graph_record(self.ir)!=graph_record(rebuilt):
+            raise SchemaError("prospective graph not derivable from bound source")
+        outputs=tuple(k.operation for k in self.canonical_keys if k.category=="OUTPUT_CATEGORY")
+        keys,occurrences=keys_from_ir(rebuilt,outputs)
+        if keys!=self.canonical_keys or occurrences!=dict(self.key_occurrences):
+            raise SchemaError("key inventory not derivable from prospective graph")
 
     def to_dict(self) -> dict[str, Any]:
         self.validate()
@@ -115,125 +147,23 @@ class CoverageContractV3:
             "canonical_keys": [key.to_dict() for key in self.canonical_keys],
             "case_obligations": list(self.case_obligations),
             "source_roles": list(self.source_roles), "e5_role_state": dict(self.e5_role_state),
+            "key_occurrences": {key:list(ids) for key,ids in self.key_occurrences.items()},
+            "core_gaps": list(self.core_gaps),
         }
 
 
-def _key_id(category: str, domain: str, operation: str, roles: Sequence[str]) -> str:
-    return rid("KEY", [category, domain, operation, *roles])
-
-
-def _behavioral(category: str, domain: str, operation: str, roles: Sequence[str],
-                required: str = "BOTH") -> ContractKey:
-    return ContractKey(_key_id(category, domain, operation, roles), category, "BEHAVIORAL",
-                       domain, operation, tuple(roles[:-1]), roles[-1], required)
-
-
 def _predicate_ops(expression: str) -> tuple[str, ...]:
-    found = []
-    for token, name in (("%", "MOD"), ("*", "MUL"), ("<=", "LE"), (">=", "GE"),
-                        ("==", "EQ"), ("<", "LT"), (">", "GT")):
-        if token in expression and name not in found: found.append(name)
-    return tuple(found)
-
-
-def _domain_keys(domain: str) -> list[ContractKey]:
-    roles = ("raw_input", "decoded_domain")
-    keys = [_behavioral("API_DECODER", domain, f"INPUT_DOMAIN:{DOMAINS[domain]}", roles)]
-    if domain == "array_reduction":
-        for op in ("INPUT", "strings.SPLIT", "strings.TO_NUMBER", "ARRAY_INDEX"):
-            keys.append(_behavioral("API_DECODER", domain, op, ("raw_input", "decoded_value")))
-    else:
-        keys.append(_behavioral("GENERIC_CONSTRUCT", domain, "BOUNDED_LOOP", ("decoded_n", "loop_control")))
-    return keys
-
-
-def _common_keys(domain: str, predicates: Iterable[tuple[str, str]]) -> list[ContractKey]:
-    keys = _domain_keys(domain)
-    for name, expression in predicates:
-        parent = _behavioral("SEMANTIC_PRIMITIVE", domain, name, ("domain_item", "predicate_boolean"))
-        keys.append(parent)
-        keys.append(_behavioral("ATOMIC_CONTROL_DATAFLOW", domain, "PREDICATE_TO_INDICATOR",
-                                (name, "indicator")))
-        for op in _predicate_ops(expression):
-            keys.append(_behavioral("ATOMIC_OPERATOR", domain, op, ("predicate_operand", "predicate_result")))
-    for category, operation, roles in (
-        ("GENERIC_CONSTRUCT", "CONDITIONAL_UPDATE", ("predicate", "update")),
-        ("ATOMIC_CONTROL_DATAFLOW", "CONTROL_TO_UPDATE", ("control", "update")),
-        ("ATOMIC_CONTROL_DATAFLOW", "OPERATOR_TO_ACCUMULATOR", ("contribution", "accumulator")),
-        ("ATOMIC_CONTROL_DATAFLOW", "ACCUMULATOR_TO_OUTPUT", ("accumulator", "output")),
-        ("GENERIC_CONSTRUCT", "FINAL_DISPLAY", ("accumulator", "output")),
-    ):
-        keys.append(_behavioral(category, domain, operation, roles))
-    unique = {key.key_id: key for key in keys}
-    return list(unique.values())
-
-
-def _initial_attribute(domain: str, offset: int) -> ContractKey:
-    op = f"COMPUTED_VALUE:{offset}:INITIAL_ACCUMULATOR"
-    return ContractKey(_key_id("VALUE_OR_LITERAL", domain, op, ("initial_accumulator",)),
-                       "VALUE_OR_LITERAL", "VALUE_OR_LITERAL_ATTRIBUTE", domain, op, (),
-                       "initial_accumulator", "EVALUATION", "INITIAL_ACCUMULATOR", None,
-                       offset, "INITIAL_ACCUMULATOR", None)
-
-
-def _output_keys(domain: str) -> list[ContractKey]:
-    return [ContractKey(_key_id("OUTPUT_CATEGORY", domain, name, ("displayed_output",)),
-                        "OUTPUT_CATEGORY", "OUTPUT_ATTRIBUTE", domain, name, (),
-                        "displayed_output", "EVALUATION")
-            for name in ("OUTPUT_ZERO", "OUTPUT_POSITIVE")]
-
-
-def _predicates_for_slot(ledger: Mapping[str, Any], slot: Mapping[str, Any]) -> tuple[tuple[str, str], ...]:
-    definitions = {x["name"]: x["expression"] for x in ledger["predicate_definitions"][slot["family"]]}
-    names: list[str]
-    if "role_predicates" in slot: names = list(slot["role_predicates"].values())
-    elif "primitive" in slot: names = [slot["primitive"]]
-    else: names = [slot["P"], slot["Q"]]
-    return tuple((name, definitions[name]) for name in dict.fromkeys(names))
+    from .core_ir import OPERATORS
+    from .goco import Parser, _walk_expr
+    parser = Parser(expression); root = parser.expr()
+    if parser.peek().kind != "EOF": raise SchemaError("predicate trailing token")
+    return tuple(dict.fromkeys(OPERATORS[e.value] for e in _walk_expr(root) if e.kind == "BINARY"))
 
 
 def contract_from_slot(ledger: Mapping[str, Any], slot: Mapping[str, Any], *,
                        condition: str = "EVALUATION") -> CoverageContractV3:
-    condition = condition.upper()
-    if condition not in CONDITIONS: raise SchemaError("unknown condition")
-    domain = slot["family"]
-    if domain not in DOMAINS: raise SchemaError("unknown domain")
-    program_id = slot.get("task_id") or f"CONF1-{condition}-{slot['slot_id']}"
-    slot_id = slot.get("slot_id") or slot["task_id"]
-    predicates = _predicates_for_slot(ledger, slot)
-    keys = _common_keys(domain, predicates)
-    offset = int(slot.get("offset", 0))
-    keys.append(_initial_attribute(domain, offset))
-    keys.extend(_output_keys(domain))
-    if "slot_id" in slot:
-        treatment = "PAIR_INDEPENDENT_ADD" if condition == "ISOLATED" else "PAIR_JOINT_MUL"
-        required = "COMPOSITION" if condition == "COMPOSITION" else "BOTH"
-        keys.append(_behavioral("ATOMIC_OPERATOR", domain, treatment,
-                                ("indicator_P", "indicator_Q", "contribution"), required))
-        aggregator = {"kind": "sum_per_item", "treatment": treatment, "initial": offset}
-        graph = {"family": "TRAINING_PAIR", "roles": ["P", "Q"], "relation": treatment}
-        task_kind = "training"
-        obligations = ("FIVE_CASES", "PAIRED_CASE_INPUT_IDENTITY")
-        role_map = (("P", slot["P"]), ("Q", slot["Q"]))
-    else:
-        graph_name = slot.get("graph", slot.get("structure", "PRIMITIVE"))
-        aggregator = {"kind": "sum_per_item", "graph": graph_name, "initial": offset}
-        graph = {"family": graph_name, "roles": list(slot.get("role_predicates", {})),
-                 "signature": slot.get("composition_signature")}
-        task_kind = "primary" if slot.get("group") == "novel_composition" else "secondary"
-        obligations = ("FIVE_CASES", "ZERO_OUTPUT", "POSITIVE_OUTPUT", "BEHAVIOR_EXERCISE")
-        role_map = tuple(slot.get("role_predicates", {}).items())
-    key_map = {key.key_id: key for key in keys}
-    contract = CoverageContractV3(
-        1, PHASE, rid("CONTRACT", [program_id]), program_id, slot_id, task_kind,
-        condition, domain, DOMAINS[domain], predicates, role_map, aggregator, graph,
-        tuple(key_map.values()), obligations,
-        ("INPUT", "DECODER", "LOOP", "PREDICATES", "ACCUMULATOR", "DISPLAY"),
-        {"role_count": len(role_map), "aggregation_state_complete": True,
-         "fixed_initialization": offset, "hidden_state_allowed": False},
-    )
-    contract.validate()
-    return contract
+    from .contract_ir import lower_contract
+    return lower_contract(ledger, slot, condition=condition)
 
 
 def all_contracts(ledger: Mapping[str, Any]) -> list[CoverageContractV3]:
@@ -248,7 +178,9 @@ def all_contracts(ledger: Mapping[str, Any]) -> list[CoverageContractV3]:
     return result
 
 
-def v35_expected_row_ids(contracts: Sequence[CoverageContractV3]) -> list[str]:
+def v35_expected_row_ids(contracts: Sequence[CoverageContractV3], *, diagnostic_incomplete: bool = False) -> list[str]:
+    if not diagnostic_incomplete and any(contract.core_gaps for contract in contracts):
+        raise SchemaError("UNRESOLVED_REQUIREMENT: incomplete prospective key ontology")
     rows = []
     for contract in contracts:
         if contract.task_kind != "training": continue

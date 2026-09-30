@@ -8,6 +8,7 @@ fail-closed error rather than an invitation to infer new language semantics.
 from __future__ import annotations
 
 import re
+import json
 from dataclasses import dataclass
 from typing import Any, Iterable, Iterator, Mapping, Sequence
 
@@ -22,7 +23,7 @@ TYPES = {"NUMBER", "SENTENCE", "LOGIC"}
 STATEMENT_HEADS = TYPES | {"IMPORT", "INPUT", "DISPLAY", "DISPLAYNL", "IF", "ELSEIF", "ELSE", "LOOP"}
 BINARY = {"||": 1, "&&": 2, "==": 3, "!=": 3, "<": 4, "<=": 4,
           ">": 4, ">=": 4, "+": 5, "-": 5, "*": 6, "/": 6, "%": 6}
-COMMUTATIVE = {"+", "*", "==", "!=", "&&", "||"}
+COMMUTATIVE = {"+", "*", "==", "&&", "||"}
 
 
 @dataclass(frozen=True)
@@ -50,6 +51,8 @@ class Stmt:
     children: tuple["Stmt", ...]
     start: int
     end: int
+    alternate: tuple["Stmt", ...] = ()
+    loop_index: str | None = None
 
 
 def lex(source: str) -> list[Tok]:
@@ -61,9 +64,10 @@ def lex(source: str) -> list[Tok]:
             raise SchemaError(f"UNSUPPORTED_GOCO_FORM at byte {pos}")
         kind = match.lastgroup or ""
         if kind not in {"WS", "COMMENT"}:
-            out.append(Tok(kind, match.group(), match.start(), match.end()))
+            out.append(Tok(kind, match.group(), len(source[:match.start()].encode("utf-8")),
+                           len(source[:match.end()].encode("utf-8"))))
         pos = match.end()
-    out.append(Tok("EOF", "", len(source), len(source)))
+    out.append(Tok("EOF", "", len(source.encode("utf-8")), len(source.encode("utf-8"))))
     return out
 
 
@@ -101,7 +105,7 @@ class Parser:
         start = head.start
         if head.text == "IMPORT":
             self.take(); name = self.take()
-            if name.kind != "ID": raise SchemaError("UNSUPPORTED_GOCO_FORM invalid import")
+            if name.kind != "ID" or name.text != "strings": raise SchemaError("UNSUPPORTED_GOCO_FORM import")
             end = self._terminator().end
             return Stmt("IMPORT", name.text, (), (), start, end)
         if head.text in TYPES:
@@ -114,48 +118,47 @@ class Parser:
                 self.take("="); exprs = (self.expr(),)
             end = self._terminator().end
             return Stmt("DECLARE", f"{typ}:{name.text}", exprs, (), start, end)
-        if head.text in {"INPUT", "DISPLAY", "DISPLAYNL"}:
+        if head.text in {"INPUT", "DISPLAYNL"}:
             kind = self.take().text; self.take("("); value = self.expr(); self.take(")")
             end = self._terminator().end
             return Stmt(kind, kind, (value,), (), start, end)
-        if head.text in {"IF", "ELSEIF"}:
+        if head.text == "IF":
             kind = self.take().text; self.take("("); cond = self.expr(); self.take(")")
             children = list(self.block())
-            if self.peek("ELSEIF"): children.append(self.statement())
-            elif self.peek("ELSE"):
-                e = self.take(); nested = self.block()
-                children.append(Stmt("ELSE", "ELSE", (), nested, e.start,
-                                     nested[-1].end if nested else self.tokens[self.i - 1].end))
             return Stmt(kind, kind, (cond,), tuple(children), start, children[-1].end if children else self.tokens[self.i-1].end)
         if head.text == "LOOP":
-            self.take(); opening = self.take("("); depth = 1; header: list[Tok] = []
-            while depth:
-                token = self.take()
-                if token.kind == "EOF": raise SchemaError("UNSUPPORTED_GOCO_FORM unterminated LOOP header")
-                if token.text == "(": depth += 1
-                elif token.text == ")":
-                    depth -= 1
-                    if depth == 0: break
-                header.append(token)
-            header_text = " ".join(token.text for token in header)
-            if not re.fullmatch(r"NUMBER\s+[A-Za-z_]\w*\s*=.+\s+TILL\s+.+,\s*[A-Za-z_]\w*\s*(?:\+\+|--)", header_text):
-                raise SchemaError("UNSUPPORTED_GOCO_FORM invalid LOOP header")
-            header_expr = Expr("LOOP_HEADER", header_text, (), opening.start, token.end)
+            self.take(); self.take("(")
+            if self.peek("NUMBER"):
+                self.take(); index = self.take()
+                if index.kind != "ID": raise SchemaError("UNSUPPORTED_GOCO_FORM loop index")
+                self.take("="); initial = self.expr(); self.take("TILL")
+                condition = self.expr(); self.take(","); step_index = self.take(); step = self.take()
+                if step_index.text != index.text or step.text != "++":
+                    raise SchemaError("UNSUPPORTED_GOCO_FORM forward step")
+                self.take(")"); children = self.block()
+                return Stmt("LOOP", "FORWARD", (initial, condition), children, start,
+                            self.tokens[self.i-1].end, loop_index=index.text)
+            condition = self.expr(); self.take(")")
             children = self.block()
-            return Stmt("LOOP", "LOOP", (header_expr,), children, start,
-                        children[-1].end if children else self.tokens[self.i-1].end)
+            if condition.kind != "BINARY" or condition.value != ">=" or condition.children[0].kind != "ID":
+                raise SchemaError("UNSUPPORTED_GOCO_FORM reverse bound")
+            index = condition.children[0].value
+            if not children or children[-1].kind != "UPDATE" or children[-1].value != "-=" or children[-1].expressions[0].value != index or children[-1].expressions[1].value != "1":
+                raise SchemaError("UNSUPPORTED_GOCO_FORM reverse step")
+            return Stmt("LOOP", "REVERSE", (condition,), children, start,
+                        self.tokens[self.i-1].end, loop_index=index)
         if head.kind != "ID":
             raise SchemaError(f"UNSUPPORTED_GOCO_FORM {head.text!r} at byte {head.start}")
         lhs = self.expr(7)
         op = self.take()
-        if op.text not in {"=", "+=", "-=", "++", "--"}:
+        if op.text not in {"=", "+=", "-="} or lhs.kind != "ID":
             raise SchemaError(f"UNSUPPORTED_GOCO_FORM assignment operator {op.text!r}")
-        rhs = () if op.text in {"++", "--"} else (self.expr(),)
+        rhs = (self.expr(),)
         end = self._terminator().end
         return Stmt("UPDATE", op.text, (lhs, *rhs), (), start, end)
 
     def _terminator(self) -> Tok:
-        if self.peek(".") or self.peek(";"): return self.take()
+        if self.peek("."): return self.take()
         raise SchemaError(f"UNSUPPORTED_GOCO_FORM missing terminator at byte {self.peek().start}")
 
     def expr(self, minimum: int = 0) -> Expr:
@@ -177,10 +180,12 @@ class Parser:
             raise SchemaError(f"UNSUPPORTED_GOCO_FORM expression at byte {token.start}")
         while True:
             if (self.peek(".") and self.tokens[self.i + 1].kind == "ID" and
-                    ((left.kind == "ID" and left.value in {"strings", "math"}) or left.kind == "MEMBER")):
+                    (left.kind == "ID" and left.value == "strings")):
                 self.take(); member = self.take()
                 left = Expr("MEMBER", member.text, (left,), left.start, member.end); continue
             if self.peek("("):
+                if left.kind != "MEMBER" or left.children[0].value != "strings" or left.value not in {"SPLIT", "TO_NUMBER"}:
+                    raise SchemaError("UNSUPPORTED_GOCO_FORM call")
                 self.take(); args = []
                 if not self.peek(")"):
                     args.append(self.expr())
@@ -210,45 +215,58 @@ def _walk_stmt(stmt: Stmt) -> Iterator[Stmt | Expr]:
     yield stmt
     for expr in stmt.expressions: yield from _walk_expr(expr)
     for child in stmt.children: yield from _walk_stmt(child)
+    for child in stmt.alternate: yield from _walk_stmt(child)
 
 
 def source_occurrence_inventory(program_id: str, source: str) -> dict[str, Any]:
-    """Assign IDs by lexical source order; do not perform mapping/activity."""
-    nodes: list[dict[str, Any]] = []
-    for ordinal, node in enumerate(sorted((n for s in parse(source) for n in _walk_stmt(s)),
-                                           key=lambda n: (n.start, n.end, type(n).__name__))):
-        kind = f"{type(node).__name__.upper()}:{node.kind}"
-        nodes.append({"occurrence_id": rid("OCC", [program_id, kind, str(node.start), str(ordinal)]),
-                      "kind": kind, "source_location": {"start": node.start, "end": node.end},
-                      "graph_location": f"nodes/{ordinal}", "eligible_for_v3_5": True})
-    edges = []
-    for ordinal in range(max(0, len(nodes) - 1)):
-        edges.append({"occurrence_id": rid("OCC_EDGE", [program_id, str(ordinal)]),
-                      "kind": "LEXICAL_SUCCESSOR", "source_location": None,
-                      "graph_location": f"edges/{ordinal}", "from": nodes[ordinal]["occurrence_id"],
-                      "to": nodes[ordinal + 1]["occurrence_id"], "eligible_for_v3_5": True})
+    from .core_ir import compile_program
+    program = compile_program(program_id, source)
     return {"schema_version": 1, "phase": PHASE, "program_id": program_id,
-            "nodes": nodes, "edges": edges}
+            "source_sha256": __import__("hashlib").sha256(source.encode("utf-8")).hexdigest(),
+            "nodes": [i.__dict__ for i in program.items if i.kind == "NODE"],
+            "edges": [i.__dict__ for i in program.items if i.kind == "EDGE"]}
 
 
-def canonical_expression(expr: Expr, names: Mapping[str, str] | None = None) -> tuple[Any, ...]:
-    """Frozen alpha/commutative/comparison-direction/Boolean catalog only."""
+def canonical_expression(expr: Expr, names: Mapping[str, str] | None = None, *,
+                         symbols: Mapping[str, str] | None = None,
+                         context: str = "ATOMIC", indicators: frozenset[str] = frozenset()) -> tuple[Any, ...]:
+    """Only typed pure catalog operations; no general simplification."""
+    from .core_ir import infer_type, integer_constant, ungroup
+    expr = ungroup(expr)
+    if symbols is None: raise SchemaError("typed equivalence context required")
+    if context not in {"ATOMIC", "COMPUTED_VALUE", "LOCAL_PAIR_JOINT", "BOOLEAN_OR"}: raise SchemaError("unlisted equivalence context")
+    if context in {"LOCAL_PAIR_JOINT", "BOOLEAN_OR"}:
+        raise SchemaError("source-mapped indicator/Boolean flow proof is not implemented; caller indicator sets are not proof")
+    if context == "COMPUTED_VALUE":
+        value = integer_constant(expr)
+        if value is not None: return ("INTEGER_CONSTANT", value)
+    typ = infer_type(expr, symbols)
     names = names or {}
-    if expr.kind == "ID": return ("ID", names.get(expr.value, expr.value))
-    children = [canonical_expression(c, names) for c in expr.children]
-    if expr.kind == "GROUP": return children[0]
+    if expr.kind == "ID": return ("ID", names.get(expr.value, expr.value), typ)
+    children = [canonical_expression(c, names, symbols=symbols, context=context, indicators=indicators) for c in expr.children]
     op = expr.value
     if expr.kind == "BINARY" and op in {">", ">="}:
         op = "<" if op == ">" else "<="; children.reverse()
     if expr.kind == "BINARY" and op in COMMUTATIVE:
+        if any(n.kind in {"CALL", "MEMBER", "INDEX"} for n in _walk_expr(expr)):
+            raise SchemaError("commutative purity not proved")
+        if any(n.kind=="BINARY" and n.value=="%" and integer_constant(n.children[1]) in {None,0} for n in _walk_expr(expr)):
+            raise SchemaError("commutative totality not proved")
         children.sort(key=repr)
-    if expr.kind == "UNARY" and op == "!" and expr.children[0].kind == "BINARY":
-        inverse = {"==": "!=", "!=": "==", "<": ">=", "<=": ">", ">": "<=", ">=": "<"}
-        child = expr.children[0]
-        if child.value in inverse:
-            return canonical_expression(Expr("BINARY", inverse[child.value], child.children, child.start, child.end), names)
-    return (expr.kind, op, *children)
+    return (expr.kind, op, typ, *children)
 
 
-def expressions_equivalent(left: Expr, right: Expr, alpha_map: Mapping[str, str] | None = None) -> bool:
-    return canonical_expression(left, alpha_map) == canonical_expression(right)
+def alpha_bijection(left: Mapping[str, str], right: Mapping[str, str], names: Mapping[str, str]) -> None:
+    if not isinstance(names, dict) or set(names) != set(left) or set(names.values()) != set(right) or len(set(names.values())) != len(names):
+        raise SchemaError("incomplete/non-bijective alpha mapping")
+    if any(left[a] != right[b] for a,b in names.items()): raise SchemaError("alpha type mismatch")
+
+
+def expressions_equivalent(left: Expr, right: Expr, alpha_map: Mapping[str, str] | None = None, *,
+                           left_symbols: Mapping[str, str] | None = None,
+                           right_symbols: Mapping[str, str] | None = None,
+                           context: str = "ATOMIC", indicators: frozenset[str] = frozenset()) -> bool:
+    if left_symbols is None or right_symbols is None: raise SchemaError("typed equivalence context required")
+    names = dict(alpha_map) if alpha_map is not None else {n:n for n in left_symbols}
+    alpha_bijection(left_symbols, right_symbols, names)
+    return canonical_expression(left,names,symbols=left_symbols,context=context,indicators=indicators) == canonical_expression(right,symbols=right_symbols,context=context,indicators=frozenset(names[n] for n in indicators))
