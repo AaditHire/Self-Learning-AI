@@ -1,0 +1,21 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"INPUT_DOMAIN","cases":[
+{"case_id":"INPUT_CANONICAL_ZERO_FOUR","slot":"CONF1-TR-NU-01-V0","inputs":["0","27","33","41","49"],"rng":"SHA256_SEED_SLOT_TAG"},
+{"case_id":"INPUT_SEPARATE_WITNESSES","class_witness":"0","activity_witness":"27"},
+{"case_id":"INPUT_ZERO_AS_ACTIVITY","class_witness":"0","activity_witness":"0","zero_has_normal_output_event":false},
+{"case_id":"INPUT_MISSING_SIGN_ZERO","numeric_inputs":["1","2","3","4","5"]},
+{"case_id":"INPUT_MISSING_SIGN_POSITIVE","numeric_inputs":["0"]},
+{"case_id":"INPUT_ZERO_TRIPLE_CLASS","raw":"0","classes":["SIGN_ZERO","EMPTY_LOOP","LOWER_DOMAIN_BOUNDARY"]},
+{"case_id":"INPUT_NEGATIVE_NUMERIC","raw":"-1"},
+{"case_id":"INPUT_FAKE_UPPER_BOUNDARY","raw":"60","claimed_class":"UPPER_DOMAIN_BOUNDARY"},
+{"case_id":"INPUT_ARRAY_ALL_SIGNS","raw":"-2|0|3|4"},
+{"case_id":"INPUT_ARRAY_MISSING_NEGATIVE","raw":"0|1|2|3"},
+{"case_id":"INPUT_ARRAY_MISSING_ZERO","raw":"-1|1|2|3"},
+{"case_id":"INPUT_ARRAY_MISSING_POSITIVE","raw":"-1|-2|0|-3"},
+{"case_id":"INPUT_ARRAY_MALFORMED_EMPTY","raw":"","claimed_class":"EMPTY"},
+{"case_id":"INPUT_FAKE_MAGNITUDE_BOUNDARY","raw":"-16|16|0|1","claimed_classes":["LOWER_DOMAIN_BOUNDARY","UPPER_DOMAIN_BOUNDARY"]},
+{"case_id":"INPUT_WRONG_SLOT","slot":"CONF1-TR-NU-02-V0","inputs":["0","4","8","9","11"]},
+{"case_id":"INPUT_POSTHOC_SLOT","prospective_slot":"CONF1-TR-NU-01-V0","selected_after_results":"CONF1-TR-NU-03-V0"},
+{"case_id":"INPUT_SIX_CASES","slot":"CONF1-TR-NU-01-V0","inputs":["0","1","2","3","4","5"]},
+{"case_id":"INPUT_WRONG_RNG","slot":"CONF1-TR-NU-01-V0","inputs":["0","1","2","3","4"],"rng":"HAND_SELECTED"},
+{"case_id":"INPUT_PAIRED_MISMATCH","isolated":{"case_ids":["c1","c2"],"inputs":["0","27"]},"composition":{"case_ids":["c1","c2"],"inputs":["0","33"]}}
+]}

@@ -1,0 +1,10 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"E5","cases":[
+{"case_id":"E5_COMPLETE_CERT","role_count":2,"vector":[0,1,1,2],"graph":"g1","recurrence":"sum","initialization":0,"hidden_state":false},
+{"case_id":"E5_INCOMPLETE_VECTOR","role_count":2,"vector":[0,1,1],"hidden_state":false},
+{"case_id":"E5_HIDDEN_STATE","role_count":1,"vector":[0,1],"hidden_state":true},
+{"case_id":"E5_GRAPH_COLLISION","role_count":2,"role_bijections":[{"map":{"P":"A","Q":"B"},"graph_isomorphic":true,"semantic_signature_equal":false}]},
+{"case_id":"E5_SIGNATURE_COLLISION","role_count":2,"role_bijections":[{"map":{"P":"A","Q":"B"},"graph_isomorphic":false,"semantic_signature_equal":true}]},
+{"case_id":"E5_BIJECTION_COLLISION","role_count":2,"role_bijections":[{"map":{"P":"B","Q":"A"},"graph_isomorphic":true,"semantic_signature_equal":true}]},
+{"case_id":"E5_VALID_NONMATCH","role_count":2,"role_bijections":[{"map":{"P":"A","Q":"B"},"graph_isomorphic":false,"semantic_signature_equal":false},{"map":{"P":"B","Q":"A"},"graph_isomorphic":false,"semantic_signature_equal":false}]},
+{"case_id":"E5_FEWER_ROLE_NONMATCH","primary_role_count":1,"training_role_count":2,"local_motif_equal":true}
+]}

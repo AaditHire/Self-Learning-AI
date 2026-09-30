@@ -1,0 +1,7 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"E3","population_mode":"SYNTHETIC_REDUCED_SAME_DECISION_PATH","cases":[
+{"case_id":"E3_SCAFFOLD_COMPLETE","expected_slots":["s1","s2"],"rows":[{"slot_id":"s1","status":"PASS"},{"slot_id":"s2","status":"PASS"}]},
+{"case_id":"E3_TOKEN_VIOLATION","example_id":"x1","limit_applicable":true,"serialized_token_count":321,"limit":320,"truncated":false},
+{"case_id":"E3_MISSING_EXPOSURE","expected_exposures":["e1","e2"],"rows":["e1"]},
+{"case_id":"E3_DUPLICATE_EXPOSURE","expected_exposures":["e1"],"rows":["e1","e1"]},
+{"case_id":"E3_STEP_INCONSISTENCY","step_id":"step1","declared_examples":8,"exposure_rows":7}
+]}

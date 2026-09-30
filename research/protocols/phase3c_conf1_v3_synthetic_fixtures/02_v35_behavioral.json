@@ -1,0 +1,11 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"V35_BEHAVIORAL","cases":[
+{"case_id":"V35_ACTIVE","mapped":["o1"],"joint":["o1"],"connected_paths":["p1"],"normal_events":["e1"],"attempts":[{"occurrences":["o1"],"normal":"2","counterfactual":"0"}]},
+{"case_id":"V35_DEAD","mapped":["o1"],"joint":["o1"],"connected_paths":[],"normal_events":["e1"],"attempts":[]},
+{"case_id":"V35_UNREACHABLE_BRANCH","mapped":["o1"],"joint":["o1"],"connected_paths":[],"normal_events":["e1"],"branch_reached":false},
+{"case_id":"V35_DISCONNECTED_API","mapped":["o1"],"joint":["o1"],"connected_paths":[],"normal_events":["e1"],"api_called":true},
+{"case_id":"V35_MULTI_JOINT","mapped":["o1","o2"],"joint":["o1","o2"],"connected_paths":["p1","p2"],"normal_events":["e1"],"attempts":[{"occurrences":["o1","o2"],"normal":"4","counterfactual":"0"}]},
+{"case_id":"V35_MULTI_PARTIAL","mapped":["o1","o2"],"joint":["o1"],"connected_paths":["p1","p2"],"normal_events":["e1"]},
+{"case_id":"V35_NORMAL_EVENT_ABSENT","mapped":["o1"],"joint":["o1"],"connected_paths":["p1"],"normal_events":[]},
+{"case_id":"V35_COUNTERFACTUAL_UNCHANGED","mapped":["o1"],"joint":["o1"],"connected_paths":["p1"],"normal_events":["e1"],"attempts":[{"occurrences":["o1"],"normal":"2","counterfactual":"2"}]},
+{"case_id":"V35_INTERVENTION_UNRESOLVED","mapped":["o1"],"joint":["o1"],"connected_paths":["p1"],"normal_events":["e1"],"intervention_resolution":null}
+]}

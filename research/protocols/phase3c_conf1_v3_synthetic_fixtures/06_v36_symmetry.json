@@ -1,0 +1,18 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"V36_SYMMETRY","cases":[
+{"case_id":"V36_MATCHED","isolated":{"protected":"same","inputs":["1"]},"composition":{"protected":"same","inputs":["1"]},"difference":"TREATMENT_EXPRESSION"},
+{"case_id":"V36_ALPHA_RENAME","isolated":"NUMBER total","composition":"NUMBER score","identifier_bijection":{"total":"score"}},
+{"case_id":"V36_TRIVIA_NORMALIZED","isolated":"NUMBER x=0. // a","composition":" NUMBER x = 0. "},
+{"case_id":"V36_PREDICATE_CHANGE","protected_field":"predicate","isolated":"i%2==0","composition":"i%2==1"},
+{"case_id":"V36_CASE_INPUT_CHANGE","isolated_inputs":["1"],"composition_inputs":["2"]},
+{"case_id":"V36_K_CHANGE","isolated_k":2,"composition_k":3},
+{"case_id":"V36_EXTRA_GUARD","isolated_guards":1,"composition_guards":2},
+{"case_id":"V36_EXTRA_LOOP","isolated_loops":1,"composition_loops":2},
+{"case_id":"V36_API_CHANGE","isolated_api":["INPUT"],"composition_api":["INPUT","strings.SPLIT"]},
+{"case_id":"V36_INITIALIZATION_CHANGE","isolated_initial":0,"composition_initial":1},
+{"case_id":"V36_OUTSIDE_ARITHMETIC_CHANGE","isolated_outside":"x+1","composition_outside":"x+2"},
+{"case_id":"V36_PROMPT_WRAPPER_CHANGE","isolated_wrapper":"A","composition_wrapper":"B"},
+{"case_id":"V36_VALID_TREATMENT_EXPR","isolated":"indicatorP+indicatorQ","composition":"indicatorP*indicatorQ"},
+{"case_id":"V36_VALID_TREATMENT_DESCRIPTION","isolated":"independent add","composition":"joint multiply"},
+{"case_id":"V36_MECHANICAL_OUTPUT_DIFFERENCE","input":"12","isolated_output":"2","composition_output":"1","derived":true},
+{"case_id":"V36_LITERAL_PLACEHOLDER_NORMALIZATION","isolated_initial":0,"composition_initial":7,"attempted_normalization":"AST_V2_LITERAL_PLACEHOLDER"}
+]}

@@ -1,0 +1,19 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"INTERFACE_CLOSURE","cases":[
+{"case_id":"CLOSURE_STALE_HASH","bound_sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","observed_sha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+{"case_id":"CLOSURE_SIZE_MISMATCH","bound_size":10,"observed_size":11},
+{"case_id":"CLOSURE_SCHEMA_UNSUPPORTED","artifact_schema_version":2},
+{"case_id":"CLOSURE_MISSING_ROW","expected":["r1","r2"],"actual":["r1"]},
+{"case_id":"CLOSURE_DUPLICATE_ROW","expected":["r1"],"actual":["r1","r1"]},
+{"case_id":"CLOSURE_UNEXPECTED_ROW","expected":["r1"],"actual":["r1","r2"]},
+{"case_id":"CLOSURE_TOOL_MISMATCH","bound_tool_sha":"a","report_tool_sha":"b"},
+{"case_id":"CLOSURE_MISSING_PROVENANCE","producer_execution_id":"exec1","provenance":null},
+{"case_id":"CLOSURE_STALE_PROVENANCE","report_execution_id":"exec1","provenance_execution_id":"exec0"},
+{"case_id":"CLOSURE_READ_SET_MISMATCH","bound_read_set_sha":"a","observed_read_set_sha":"b"},
+{"case_id":"CLOSURE_UNDECLARED_DEPENDENCY","read_set":["bound.py","unbound.cfg"],"declared":["bound.py"]},
+{"case_id":"CLOSURE_INVALID_PACKAGE_MODE","package_environment_mode":"MAGIC"},
+{"case_id":"CLOSURE_PACKAGE_NULL_RULE","package_environment_mode":"LOCK_OR_ENVIRONMENT_ARTIFACT","lock_artifact":"lock","installed_inventory":"must-be-null"},
+{"case_id":"CLOSURE_REPORT_COMPILER_MISMATCH","compiler_relevance":"NOT_APPLICABLE","compiler_identity_id":"compiler-A"},
+{"case_id":"CLOSURE_MIXED_VALID","reports":[{"relevance":"REQUIRED","compiler":"compiler-A"},{"relevance":"NOT_APPLICABLE","compiler":null}],"execution_compiler":"compiler-A"},
+{"case_id":"CLOSURE_MIXED_EXEC_MISMATCH","reports":[{"relevance":"REQUIRED","compiler":"compiler-A"},{"relevance":"NOT_APPLICABLE","compiler":null}],"execution_compiler":null},
+{"case_id":"CLOSURE_MODEL_AUTH_TRUE","model_execution_authorized":true}
+]}

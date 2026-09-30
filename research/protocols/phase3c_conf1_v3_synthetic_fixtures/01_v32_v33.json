@@ -1,0 +1,13 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"V32_V33","cases":[
+{"case_id":"V33_VALID_MAPPING","source_nodes":["n0","n1"],"contract_keys":["k0","k1"],"mapping":{"n0":"k0","n1":"k1"}},
+{"case_id":"V33_MISSING_MAPPING","source_nodes":["n0","n1"],"contract_keys":["k0","k1"],"mapping":{"n0":"k0"}},
+{"case_id":"V33_EXTRA_ESSENTIAL_NODE","source_nodes":["n0","n1","n_extra"],"contract_keys":["k0","k1"],"mapping":{"n0":"k0","n1":"k1"}},
+{"case_id":"V33_UNSUPPORTED_GOCO","source":"WHILE (true) { DISPLAYNL(0). }"},
+{"case_id":"V33_ALPHA_RENAME","left":"a+b","right":"y+x","alpha_map":{"a":"x","b":"y"}},
+{"case_id":"V33_COMMUTATIVE","left":"a+b","right":"b+a"},
+{"case_id":"V33_COMPARISON_DIRECTION","left":"a>b","right":"b<a"},
+{"case_id":"V33_BOOLEAN","left":"!(a==b)","right":"a!=b"},
+{"case_id":"V33_FORBIDDEN_REASSOCIATION","left":"(a+b)+c","right":"a+(b+c)"},
+{"case_id":"V33_FORBIDDEN_DISTRIBUTIVITY","left":"a*(b+c)","right":"a*b+a*c"},
+{"case_id":"V33_UNRESOLVED_EQUIVALENCE","left":"opaque(a)","right":"a","catalog_resolution":null}
+]}

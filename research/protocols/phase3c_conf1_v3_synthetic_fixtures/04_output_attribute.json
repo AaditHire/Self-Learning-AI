@@ -1,0 +1,8 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"OUTPUT_ATTRIBUTE","cases":[
+{"case_id":"OUTPUT_ZERO","requirement":{"kind":"CATEGORY","value":"OUTPUT_ZERO"},"expected_outputs":["0","2"]},
+{"case_id":"OUTPUT_POSITIVE","requirement":{"kind":"CATEGORY","value":"OUTPUT_POSITIVE"},"expected_outputs":["3"]},
+{"case_id":"OUTPUT_NEGATIVE","requirement":{"kind":"CATEGORY","value":"OUTPUT_NEGATIVE"},"expected_outputs":["-1"]},
+{"case_id":"OUTPUT_MULTIDIGIT","requirement":{"kind":"CATEGORY","value":"OUTPUT_MULTIDIGIT"},"expected_outputs":["12"]},
+{"case_id":"OUTPUT_SENTINEL","requirement":{"kind":"EXACT_SENTINEL","value":"INVALID"},"expected_outputs":["INVALID"]},
+{"case_id":"OUTPUT_SOURCE_ONLY","requirement":{"kind":"CATEGORY","value":"OUTPUT_ZERO"},"source_contains":"DISPLAYNL(0)","expected_outputs":[]}
+]}

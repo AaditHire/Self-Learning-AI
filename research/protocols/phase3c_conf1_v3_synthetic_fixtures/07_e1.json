@@ -1,0 +1,9 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"E1","cases":[
+{"case_id":"E1_COMPLETE","expected_programs":["p1","p2"],"rows":[{"program_id":"p1","compile":"PASS","cases":["c1","c2","c3","c4","c5"]},{"program_id":"p2","compile":"PASS","cases":["c1","c2","c3","c4","c5"]}]},
+{"case_id":"E1_MISSING_PROGRAM","expected_programs":["p1","p2"],"rows":[{"program_id":"p1"}]},
+{"case_id":"E1_DUPLICATE_PROGRAM","expected_programs":["p1"],"rows":[{"program_id":"p1"},{"program_id":"p1"}]},
+{"case_id":"E1_WRONG_CASE_COUNT","rows":[{"program_id":"p1","cases":["c1","c2","c3","c4"]}]},
+{"case_id":"E1_COMPILE_FAIL","rows":[{"program_id":"p1","compile":"FAIL","cases":["c1","c2","c3","c4","c5"]}]},
+{"case_id":"E1_SEMANTIC_FAIL","rows":[{"program_id":"p1","compile":"PASS","case_results":["PASS","PASS","FAIL","PASS","PASS"]}]},
+{"case_id":"E1_COMPILER_MISMATCH","bound_compiler":"compiler-A","observed_compiler":"compiler-B"}
+]}

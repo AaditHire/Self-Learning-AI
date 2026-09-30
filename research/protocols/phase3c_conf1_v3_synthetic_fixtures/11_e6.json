@@ -1,0 +1,7 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"E6","population_mode":"SYNTHETIC_REDUCED_SAME_DECISION_PATH","cases":[
+{"case_id":"E6_COMPLETE_TASK","task_id":"t1","expected_cases":["c1","c2","c3","c4","c5"],"outcomes":["c1","c2","c3","c4","c5"],"behavior_witnesses":["b1"]},
+{"case_id":"E6_MISSING_CASE","task_id":"t1","expected_cases":["c1","c2","c3","c4","c5"],"outcomes":["c1","c2","c3","c4"]},
+{"case_id":"E6_MISSING_BEHAVIOR","task_id":"t1","outcomes":["c1","c2","c3","c4","c5"],"behavior_witnesses":[]},
+{"case_id":"E6_PAIR_DISTINCT","domain":"numeric_iteration","task_a":"a","task_b":"b","witness":{"input":"4","output_a":"1","output_b":"2"}},
+{"case_id":"E6_PAIR_MISSING","domain":"numeric_iteration","required_pair":["a","b"],"pair_rows":[]}
+]}

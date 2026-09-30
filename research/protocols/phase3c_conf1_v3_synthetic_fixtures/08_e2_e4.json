@@ -1,0 +1,11 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"E2_E4","consumed_inventory":{"status":"SYNTHETIC_FIXTURE_ONLY","inventory_id":"SYN-CONSUMED-01","records":["r1","r2"]},"cases":[
+{"case_id":"PAIR_COMPLETE","candidates":["p1","p2"],"consumed":["r1","r2"],"pairs":["PAIR|2:p1|2:r1","PAIR|2:p1|2:r2","PAIR|2:p2|2:r1","PAIR|2:p2|2:r2"]},
+{"case_id":"PAIR_MISSING","expected":["a","b"],"actual":["a"]},
+{"case_id":"PAIR_DUPLICATE","expected":["a"],"actual":["a","a"]},
+{"case_id":"PAIR_UNEXPECTED","expected":["a"],"actual":["a","b"]},
+{"case_id":"E2_PROHIBITED_COLLISION","classification":"PROHIBITED_STRUCTURAL_TEMPLATE_REUSE"},
+{"case_id":"E2_COARSE_ONLY","classification":"COARSE_AST_EQUALITY_ONLY"},
+{"case_id":"E4_EXACT_OVERLAP","classification":"EXACT_OVERLAP"},
+{"case_id":"E4_NORMALIZED_TEMPLATE_OVERLAP","classification":"FULL_TEMPLATE_OVERLAP"},
+{"case_id":"E4_DESCRIPTIVE_ONLY","descriptive_similarity":0.99,"blocking_classification":"ALLOWED"}
+]}

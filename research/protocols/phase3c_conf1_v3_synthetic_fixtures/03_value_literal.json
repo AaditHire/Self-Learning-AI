@@ -1,0 +1,11 @@
+{"schema_version":1,"fixture_kind":"SYNTHETIC_FIXTURE_ONLY","status":"PREREGISTERED FOR INDEPENDENT REVIEW — NOT EXECUTED","fixture_id":"VALUE_LITERAL","cases":[
+{"case_id":"VALUE_ACTIVE_COMPUTED","parent_kind":"ACTIVE_BEHAVIORAL_PARENT","parent_activity":"ACTIVE","subtype":"COMPUTED_VALUE","computed_integer":4,"semantic_role":"CONTRIBUTION","path_executes":true},
+{"case_id":"VALUE_INACTIVE_PARENT","parent_kind":"ACTIVE_BEHAVIORAL_PARENT","parent_activity":"INACTIVE","subtype":"COMPUTED_VALUE","computed_integer":4,"semantic_role":"CONTRIBUTION"},
+{"case_id":"VALUE_WRONG_ROLE","parent_kind":"ACTIVE_BEHAVIORAL_PARENT","parent_activity":"ACTIVE","subtype":"COMPUTED_VALUE","computed_integer":4,"semantic_role":"INITIAL_ACCUMULATOR","required_role":"CONTRIBUTION"},
+{"case_id":"VALUE_ACTIVE_LEXEME","parent_kind":"ACTIVE_BEHAVIORAL_PARENT","parent_activity":"ACTIVE","subtype":"LITERAL_TOKEN","required_lexeme":"2","mapped_expression":"2*indicator"},
+{"case_id":"VALUE_LEXEME_ELSEWHERE","parent_kind":"ACTIVE_BEHAVIORAL_PARENT","parent_activity":"ACTIVE","subtype":"LITERAL_TOKEN","required_lexeme":"2","mapped_expression":"indicator","unmapped_expression":"2+dead"},
+{"case_id":"VALUE_INITIAL_COMPUTED","parent_kind":"INITIAL_ACCUMULATOR","subtype":"COMPUTED_VALUE","computed_integer":3,"semantic_role":"INITIAL_ACCUMULATOR","initialization_executes":true,"displayed_path":true},
+{"case_id":"VALUE_INITIAL_LITERAL","parent_kind":"INITIAL_ACCUMULATOR","subtype":"LITERAL_TOKEN","required_lexeme":"3","mapped_initialization":"NUMBER total=3","initialization_executes":true,"displayed_path":true},
+{"case_id":"VALUE_INITIAL_FAKE_PARENT","parent_kind":"INITIAL_ACCUMULATOR","mapped_parent_behavioral_key_id":"fake","parent_activity":"ACTIVE"},
+{"case_id":"VALUE_INITIAL_NOT_DISPLAYED","parent_kind":"INITIAL_ACCUMULATOR","subtype":"COMPUTED_VALUE","computed_integer":3,"semantic_role":"INITIAL_ACCUMULATOR","initialization_executes":true,"displayed_path":false}
+]}
