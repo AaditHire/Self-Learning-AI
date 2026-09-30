@@ -1,0 +1,321 @@
+{
+  "historical_files_compared": 13,
+  "new_ids": 20,
+  "new_sources": 14,
+  "new_expressions": 12,
+  "new_inputs": 10,
+  "exact_string_overlap": 0,
+  "recorded_fixture_hash_overlap": 0,
+  "computed_historical_string_hash_overlap": 0,
+  "historical_fixture_filenames": [
+    "01_v32_v33.json",
+    "02_v35_behavioral.json",
+    "03_value_literal.json",
+    "04_output_attribute.json",
+    "05_input_domain.json",
+    "06_v36_symmetry.json",
+    "07_e1.json",
+    "08_e2_e4.json",
+    "09_e3.json",
+    "10_e5.json",
+    "11_e6.json",
+    "12_interface_closure.json",
+    "13_full_path.json"
+  ],
+  "comparison_scope": "all recursive raw strings and recorded hashes in 13 fixture files plus manifest; labels excluded",
+  "expected_labels_loaded": false,
+  "classifiers_invoked": false,
+  "schema_version": 1,
+  "artifact_kind": "DISPOSABLE_INPUT_OVERLAP_DIAGNOSTIC",
+  "starting_head": "152673769d29b47c458b8fac0c153f8c4778fd02",
+  "inventory": {
+    "ids": [
+      {
+        "value": "DEVCORE-NUMERIC-DOUBLE-20260930",
+        "sha256_utf8": "ed1fb047df7c4cca4d4dceaf02dfafd35d354ad3df300419571f061eafbe6b4c",
+        "size_bytes_utf8": 31
+      },
+      {
+        "value": "DEVCORE-PAIR-20260930",
+        "sha256_utf8": "a897410cfc078dc0c64073afa7d2b621e8aa9d3fa73d6212ac2c57b6f68858a3",
+        "size_bytes_utf8": 21
+      },
+      {
+        "value": "DEVCORE-REVERSE-20260930",
+        "sha256_utf8": "d0684f78cba40d5e23992eaa990f81007573e08512c315994fc50d8004e276ac",
+        "size_bytes_utf8": 24
+      },
+      {
+        "value": "DEVCORE-ZERO-20260930",
+        "sha256_utf8": "8e5d8b76fcb45ad61c5f5efbbd926e8033317f5f4836d3eb31b86e6e202cc4b5",
+        "size_bytes_utf8": 21
+      },
+      {
+        "value": "DEVCORE-ARRAY-20260930",
+        "sha256_utf8": "96573e40b176923fcc8bc096c1ffb30cba5f9e14303a3947e78bab2f4b514371",
+        "size_bytes_utf8": 22
+      },
+      {
+        "value": "DEVCORE-CASE-Z",
+        "sha256_utf8": "02711a78b0c53406526a9d320affc4f67317155c45bf41d4717ed906e9a11bc6",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CASE-A",
+        "sha256_utf8": "a29797e86558bd1a960fe1ac6a12d44cc9b54a1992ff58533fd5c49222ac5920",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CASE-C",
+        "sha256_utf8": "8490e5c88612ade54bc91d350674e97a2fee2158a5821c4a2999f7814aefdab9",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CASE-B",
+        "sha256_utf8": "01064fd2221d314349f997f532f54b77bc008b3844b7c56c5833a56c3223e529",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CASE-D",
+        "sha256_utf8": "9ac5638f9a642a961b13f97e27d52b2db2b6eae44ee9cfee4c1a6a6d8f6b820e",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CANDIDATE",
+        "sha256_utf8": "2d794360bb163c11fcb3d2a110f48cc520cfafe448a36545285b722734b5176c",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "DEVCORE-INDEX",
+        "sha256_utf8": "cfbd2b124bbcb1f5dcc6dc6c0c14603096ec6aa61beb5d3c8c2faef24d0907aa",
+        "size_bytes_utf8": 13
+      },
+      {
+        "value": "DEVCORE-ROW-ONE",
+        "sha256_utf8": "0778e18b52a64ca79de7e27d7829c93a93ccdfec70723804e8c0441d0b178104",
+        "size_bytes_utf8": 15
+      },
+      {
+        "value": "DEVCORE-ROW-TWO",
+        "sha256_utf8": "d4870e5d0468453363dfff5a76e2557b03d2bb21af63b709a8b0301ddec5c235",
+        "size_bytes_utf8": 15
+      },
+      {
+        "value": "DEVCORE-SOURCE",
+        "sha256_utf8": "26cf3ce76950cec4b6601a09389046656fd7e6ed2de222aa6a67da13b06f7652",
+        "size_bytes_utf8": 14
+      },
+      {
+        "value": "DEVCORE-CASES",
+        "sha256_utf8": "997f859262dc4fa9e7b1f050fe14f805d4e70b62a589e9164c0a2abc2f79146d",
+        "size_bytes_utf8": 13
+      },
+      {
+        "value": "DEVCORE-INVENTORY",
+        "sha256_utf8": "02fed6706802c136bb6646c05c1047a69d848d5ff330cf5434484062224c7ddb",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "DEVCORE-INDEX-ARTIFACT",
+        "sha256_utf8": "8a7f6c17cb605680136430ce88035c9f5bafaf2a2314f759595e75710a379b9c",
+        "size_bytes_utf8": 22
+      },
+      {
+        "value": "DEV-CLOSURE-LEDGER-20260930-B",
+        "sha256_utf8": "25757716faedba495733f5301de93d011f3a96fb33aa6ab8fbe6c3fa763e2639",
+        "size_bytes_utf8": 29
+      },
+      {
+        "value": "DEV-CLOSURE-UNKNOWN-OCCURRENCE-20260930",
+        "sha256_utf8": "6b47f245fb55570e23b46df7f50194557ac1d524ea685c807ab9662dcf8c015d",
+        "size_bytes_utf8": 39
+      }
+    ],
+    "sources": [
+      {
+        "value": "NUMBER devLimit. INPUT(devLimit). NUMBER devLedger=17. LOOP (NUMBER devCursor=1 TILL devCursor<=devLimit, devCursor++) { devLedger+=(devCursor). devLedger+=(devCursor). } DISPLAYNL(devLedger).",
+        "sha256_utf8": "1e4bcbf89e4d2262d3e7cf9e096fdacbf72700ec04a63ece407ec4c05889bf99",
+        "size_bytes_utf8": 192
+      },
+      {
+        "value": "NUMBER reverseLimit. INPUT(reverseLimit). NUMBER reverseLedger=17. NUMBER reverseCursor=(reverseLimit). LOOP (reverseCursor>=1) { reverseLedger+=(reverseCursor). reverseCursor-=1. } DISPLAYNL(reverseLedger).",
+        "sha256_utf8": "ba4a9a842ffd745d1a1a57a9e14ca996441926a2892e220d2350c9c5934d44ea",
+        "size_bytes_utf8": 207
+      },
+      {
+        "value": "NUMBER pairLimit. INPUT(pairLimit). NUMBER pairLedger=17. NUMBER fifthHit=0. NUMBER seventhHit=0. LOOP (NUMBER pairCursor=1 TILL pairCursor<=pairLimit, pairCursor++) { fifthHit=0. seventhHit=0. IF (pairCursor%5==0) { fifthHit=1. } IF (pairCursor%7==0) { seventhHit=1. } pairLedger+=(fifthHit+seventhHit). } DISPLAYNL(pairLedger).",
+        "sha256_utf8": "8784f924242ad41652dfa046c01451e782819cc629f68949ea8626eff6ed5b62",
+        "size_bytes_utf8": 329
+      },
+      {
+        "value": "NUMBER pairLimit. INPUT(pairLimit). NUMBER pairLedger=17. NUMBER fifthHit=0. NUMBER seventhHit=0. LOOP (NUMBER pairCursor=1 TILL pairCursor<=pairLimit, pairCursor++) { fifthHit=0. seventhHit=0. IF (pairCursor%5==0) { fifthHit=1. } IF (pairCursor%7==0) { seventhHit=1. } pairLedger+=(fifthHit*seventhHit). } DISPLAYNL(pairLedger).",
+        "sha256_utf8": "f8b5076663f419c8655c0b9ae186290d8a85875c646614ea533c7807eb797e2b",
+        "size_bytes_utf8": 329
+      },
+      {
+        "value": "NUMBER aliasLimit. INPUT(aliasLimit). NUMBER aliasLedger=17. LOOP (NUMBER aliasCursor=1 TILL aliasCursor<=aliasLimit, aliasCursor++) { aliasLedger+=(aliasCursor). aliasLedger+=(aliasCursor). } DISPLAYNL(aliasLedger).",
+        "sha256_utf8": "d24062949d275fcdb026d481b59d746f01ef3744beceb912c5f57423b7f4f924",
+        "size_bytes_utf8": 216
+      },
+      {
+        "value": "NUMBER devLimit. INPUT(devLimit). NUMBER devLedger=19. LOOP (NUMBER devCursor=1 TILL devCursor<=devLimit, devCursor++) { devLedger+=(devCursor). devLedger+=(devCursor). } DISPLAYNL(devLedger).",
+        "sha256_utf8": "e1b16b542fcce7064f4715f70ae41512bbc7e500efc90af1a51a6667bf856ee7",
+        "size_bytes_utf8": 192
+      },
+      {
+        "value": "NUMBER pairLimit. INPUT(pairLimit). NUMBER pairLedger=17. NUMBER fifthHit=0. NUMBER seventhHit=0. LOOP (NUMBER pairCursor=1 TILL pairCursor<=pairLimit, pairCursor++) { fifthHit=0. seventhHit=0. IF (pairCursor%5==0) { fifthHit=1. } IF (pairCursor%11==0) { seventhHit=1. } pairLedger+=(fifthHit*seventhHit). } DISPLAYNL(pairLedger).",
+        "sha256_utf8": "57efe5669828f6836d6ee8815668b9dac282ec3c540132d4c437126513c37c34",
+        "size_bytes_utf8": 330
+      },
+      {
+        "value": "// disposable DevCore comment\n  NUMBER aliasLimit. INPUT(aliasLimit).   NUMBER aliasLedger=17. LOOP (  NUMBER aliasCursor=1 TILL aliasCursor<=aliasLimit, aliasCursor++) { aliasLedger+=(aliasCursor). aliasLedger+=(aliasCursor). } DISPLAYNL(aliasLedger).",
+        "sha256_utf8": "12a77d6e00e2d2c3d1122e285b5f4e8223596604743df8939fe8fc59029616d5",
+        "size_bytes_utf8": 252
+      },
+      {
+        "value": "NUMBER devLimit. INPUT(devLimit). NUMBER devLedger=17. LOOP (NUMBER devCursor=1 TILL devCursor<=devLimit, devCursor++) { devLedger+=0. devLedger+=0. } DISPLAYNL(devLedger).",
+        "sha256_utf8": "a5adf11ee8f2f1f2355bd14f279e83fd998120f58190da4105ed19a133152389",
+        "size_bytes_utf8": 172
+      },
+      {
+        "value": "IMPORT strings. SENTENCE devRaw. INPUT(devRaw). SENTENCE[] devFields=strings.SPLIT(devRaw,\"|\"). NUMBER decodedNorth=strings.TO_NUMBER(devFields[0]). NUMBER decodedEast=strings.TO_NUMBER(devFields[1]). NUMBER decodedSouth=strings.TO_NUMBER(devFields[2]). NUMBER decodedWest=strings.TO_NUMBER(devFields[3]). NUMBER[] devValues=[decodedNorth,decodedEast,decodedSouth,decodedWest]. NUMBER arrayLedger=17. LOOP (NUMBER arrayCursor=0 TILL arrayCursor<4, arrayCursor++) { arrayLedger+=(devValues[arrayCursor]). } DISPLAYNL(arrayLedger).",
+        "sha256_utf8": "c663e1195c5eb52c2d6b5b0157e08edf14eca9e81365b7846441ae57447ee7e9",
+        "size_bytes_utf8": 529
+      },
+      {
+        "value": "IMPORT unknownDevCore.",
+        "sha256_utf8": "cc205aec2ff4f27f877e94c436a681a4dc3f516b82e2020f53bf5105fa1c4f64",
+        "size_bytes_utf8": 22
+      },
+      {
+        "value": "WHILE (devCoreTruth) { DISPLAYNL(29). }",
+        "sha256_utf8": "e72a42a3338428b21ba5f9438973a549bfcff4c92bd95974af940c4170eea405",
+        "size_bytes_utf8": 39
+      },
+      {
+        "value": "devCallback(31)",
+        "sha256_utf8": "1a928f1fa5c58bf1c4c494b13a004479fb596984b5585ff3782a72f3170f509a",
+        "size_bytes_utf8": 15
+      },
+      {
+        "value": "NUMBER closureLimit. INPUT(closureLimit). NUMBER closureTally=37. LOOP (NUMBER closureCursor=1 TILL closureCursor<=closureLimit, closureCursor++) { closureTally+=(closureCursor%11). } DISPLAYNL(closureTally).",
+        "sha256_utf8": "e384468d447e0a9fb25a78501472ff080f5199d2bf6a2b44b7158d1b70192d87",
+        "size_bytes_utf8": 208
+      }
+    ],
+    "expressions": [
+      {
+        "value": "devLeft+devRight",
+        "sha256_utf8": "20bcc719012b2007b53bcb94d66de75019019a4c9f021d9a0db26f3785dcdaa9",
+        "size_bytes_utf8": 16
+      },
+      {
+        "value": "otherRight+otherLeft",
+        "sha256_utf8": "66bb0088af91a63a1327639d1057591186bae4566c2d7b3dc78e19d4be639c76",
+        "size_bytes_utf8": 20
+      },
+      {
+        "value": "(devLeft+devRight)+devThird",
+        "sha256_utf8": "54b80f5b3e7955148bedbbe845816049bd99f9afb5c0d1317f155d5be344feae",
+        "size_bytes_utf8": 27
+      },
+      {
+        "value": "devLeft+(devRight+devThird)",
+        "sha256_utf8": "245154d0f016df67e1b427809209c4c787d4a8de24e24d7edde8e82d39225e9c",
+        "size_bytes_utf8": 27
+      },
+      {
+        "value": "devLeft<=devRight",
+        "sha256_utf8": "6b4fa6cf69b7c6b9ee013b86059c20ae7a242de19e751c975eb3cc52b81c249d",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "otherRight>=otherLeft",
+        "sha256_utf8": "976fbc42933eacacca7cab9f6c41339f795c5669d09aa0e4600aed57d235419d",
+        "size_bytes_utf8": 21
+      },
+      {
+        "value": "-(23+6)*3",
+        "sha256_utf8": "9287ecbe03c045bfc186586e036b6d158311d34992cb173307f69b9dfd9cc4a2",
+        "size_bytes_utf8": 9
+      },
+      {
+        "value": "-87",
+        "sha256_utf8": "b8a04bc64b66b9baa4133554a7156408cfee77eb2e5399394b0034472dfe1b0c",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "!(devLeft<devRight)",
+        "sha256_utf8": "e404f825ed140aefe5a1ef4095b9b4d5573fb6aebb00e4902b2bd5afcf34bde4",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "devLeft>=devRight",
+        "sha256_utf8": "afcabf8d76968b6083bcd063dfd899b8b1d52f8a6a11910518e51411080bdba7",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "devLeft*devRight",
+        "sha256_utf8": "5358c6ec9657582360d7a51b5a9ed7f65cd30a42998cdd3acd4f91c79f601192",
+        "size_bytes_utf8": 16
+      },
+      {
+        "value": "devLeft&&devRight",
+        "sha256_utf8": "236322bcd22a2b3bb47c75c0c73ddd7d3a12f6a8ea72ed2a75a8303dbd2594df",
+        "size_bytes_utf8": 17
+      }
+    ],
+    "raw_inputs": [
+      {
+        "value": "000",
+        "sha256_utf8": "2ac9a6746aca543af8dff39894cfe8173afba21eb01c6fae33d52947222855ef",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "006",
+        "sha256_utf8": "c0f890f2fd6b058103ded8d296e49ba3b924661210ca87ff190de41dbb91dee0",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "008",
+        "sha256_utf8": "cc1af790b8e0c7460a7d41f6b57105ac04b4cac6a1edf9653bf85b006b77ee80",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "010",
+        "sha256_utf8": "13715f6c8b48ed1b00f509ca29bc826bd04fd6f1ce8d8ebe27fb286312ce3ba1",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "016",
+        "sha256_utf8": "8449c20ed663992df29144b6634547fde54fa73ceaa67f70dc211acb1052e29a",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "-7|0|11|2",
+        "sha256_utf8": "b26539bdd783b68275fe130eca26abeee569d22d76d8c320e1a28b742e0252d0",
+        "size_bytes_utf8": 9
+      },
+      {
+        "value": "-9|5|0|13",
+        "sha256_utf8": "3660d57a527c9c07bf84a8c38eceaea3d776d13b93f9209f32add2ee5ff33bb2",
+        "size_bytes_utf8": 9
+      },
+      {
+        "value": "4|-8|0|17",
+        "sha256_utf8": "a936e6c1eb9cf78ba0b9d91bd5580dc87696451b05b98501354c2bc37785f600",
+        "size_bytes_utf8": 9
+      },
+      {
+        "value": "0|0|-6|29",
+        "sha256_utf8": "2e2f9dd807d9874089ac808ad55f75f9ef6554a08b7677f6b2fab5e471e75ad6",
+        "size_bytes_utf8": 9
+      },
+      {
+        "value": "-12|7|3|0",
+        "sha256_utf8": "5101e35bb0edcfb9afcdf9aeb4a709b8473cda88a66d4865c9cf75bbe99d4280",
+        "size_bytes_utf8": 9
+      }
+    ]
+  }
+}

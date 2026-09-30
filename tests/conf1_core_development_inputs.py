@@ -27,6 +27,22 @@ PROGRAM_IDS = ("DEVCORE-NUMERIC-DOUBLE-20260930", "DEVCORE-PAIR-20260930", "DEVC
 CASE_IDS = tuple("DEVCORE-CASE-" + suffix for suffix in ("Z", "A", "C", "B", "D"))
 IDENTIFIERS = (*PROGRAM_IDS, *CASE_IDS, "DEVCORE-CANDIDATE", "DEVCORE-INDEX", "DEVCORE-ROW-ONE", "DEVCORE-ROW-TWO", "DEVCORE-SOURCE", "DEVCORE-CASES", "DEVCORE-INVENTORY", "DEVCORE-INDEX-ARTIFACT")
 
+# Additional pass-specific inputs. They are independent toy data, not derived
+# from a preregistered scientific fixture or its labels. No case is executed by
+# the population-guard tests; the strings remain in the complete preflight.
+CLOSURE_PROGRAM_ID = "DEV-CLOSURE-LEDGER-20260930-B"
+CLOSURE_SOURCE = "NUMBER closureLimit. INPUT(closureLimit). NUMBER closureTally=37. LOOP (NUMBER closureCursor=1 TILL closureCursor<=closureLimit, closureCursor++) { closureTally+=(closureCursor%11). } DISPLAYNL(closureTally)."
+IDENTIFIERS = (*IDENTIFIERS, CLOSURE_PROGRAM_ID, "DEV-CLOSURE-UNKNOWN-OCCURRENCE-20260930")
+SOURCES = (*SOURCES, CLOSURE_SOURCE)
+
+
+def disposable_inventory():
+    groups = {"ids": IDENTIFIERS, "sources": SOURCES, "expressions": EXPRESSIONS,
+              "raw_inputs": tuple(dict.fromkeys((*RAW_INPUTS, *ARRAY_INPUTS)))}
+    return {name: [{"value": value, "sha256_utf8": hashlib.sha256(value.encode("utf-8")).hexdigest(),
+                    "size_bytes_utf8": len(value.encode("utf-8"))} for value in values]
+            for name, values in groups.items()}
+
 
 def _strings(value):
     if isinstance(value, str):
@@ -55,10 +71,14 @@ def assert_zero_historical_overlap():
     collisions = sorted(new & historical)
     hashes = {hashlib.sha256(value.encode("utf-8")).hexdigest() for value in new}
     hash_collisions = sorted(hashes & historical)
-    if collisions or hash_collisions:
+    computed_hash_collisions = sorted(hashes & {hashlib.sha256(value.encode("utf-8")).hexdigest() for value in historical})
+    if collisions or hash_collisions or computed_hash_collisions:
         raise RuntimeError(f"development overlap: strings={collisions!r}, hashes={hash_collisions!r}")
     return {"historical_files_compared": len(paths), "new_ids": len(IDENTIFIERS), "new_sources": len(SOURCES),
             "new_expressions": len(EXPRESSIONS), "new_inputs": len(set((*RAW_INPUTS,*ARRAY_INPUTS))), "exact_string_overlap": 0, "recorded_fixture_hash_overlap": 0,
+            "computed_historical_string_hash_overlap": 0,
+            "historical_fixture_filenames": [path.name for path in paths],
+            "comparison_scope": "all recursive raw strings and recorded hashes in 13 fixture files plus manifest; labels excluded",
             "expected_labels_loaded": False, "classifiers_invoked": False}
 
 

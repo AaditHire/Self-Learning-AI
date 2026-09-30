@@ -179,12 +179,42 @@ def all_contracts(ledger: Mapping[str, Any]) -> list[CoverageContractV3]:
 
 
 def v35_expected_row_ids(contracts: Sequence[CoverageContractV3], *, diagnostic_incomplete: bool = False) -> list[str]:
+    # A vacuous/partial inventory is not the prospective population required by
+    # interface sections 4.1 and 9.1. Diagnostic IDs are never an expected index.
+    if type(diagnostic_incomplete) is not bool:
+        raise SchemaError("diagnostic_incomplete must be an actual boolean")
+    program_ids = [contract.program_id for contract in contracts]
+    if len(program_ids) != len(set(program_ids)):
+        raise SchemaError("duplicate contract program in prospective population")
+    if not diagnostic_incomplete:
+        from .contract_ir import _builder
+        ledger = _builder().LEDGER
+        expected_programs = {
+            slot["slot_id"].replace("CONF1-", f"CONF1-{condition}-", 1):
+                (slot["slot_id"], "training", condition, slot["family"])
+            for slot in ledger["slots"]["training_paired_slots"]
+            for condition in ("ISOLATED", "COMPOSITION")
+        }
+        expected_programs.update({slot["task_id"]:
+            (slot["task_id"], "primary" if group == "primary" else "secondary", "EVALUATION", slot["family"])
+            for group in ("primary", "primitive_sanity", "structural_transfer") for slot in ledger["slots"][group]})
+        if set(program_ids) != set(expected_programs):
+            raise SchemaError("V3_5_POPULATION_UNRESOLVED: missing or unexpected frozen contracts")
+        if any((c.slot_id, c.task_kind, c.condition, c.domain) != expected_programs[c.program_id]
+               for c in contracts):
+            raise SchemaError("V3_5_POPULATION_UNRESOLVED: frozen contract inventory metadata mismatch")
     if not diagnostic_incomplete and any(contract.core_gaps for contract in contracts):
-        raise SchemaError("UNRESOLVED_REQUIREMENT: incomplete prospective key ontology")
+        raise SchemaError("V3_5_POPULATION_UNRESOLVED: incomplete prospective key ontology")
     rows = []
     for contract in contracts:
+        contract.validate()
         if contract.task_kind != "training": continue
         rows.extend(rid("V3.5", [contract.program_id, key.key_id]) for key in contract.canonical_keys)
+    if len(rows) != len(set(rows)):
+        raise SchemaError("duplicate logical V3.5 row")
+    # Ordering is a reproducible implementation convention, not a new gate.
+    # The frozen interface binds this exact order in the pre-run row index.
+    rows.sort(key=lambda value: value.encode("utf-8"))
     return rows
 
 
