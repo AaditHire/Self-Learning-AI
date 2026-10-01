@@ -8,7 +8,7 @@ from dataclasses import asdict
 from .interfaces import canonical_json_bytes, ClosureError
 from .requirements import digest, expression
 from .projection_grammar import grammar, derive_projection_plan, development_identity, require
-from .core_ir import compile_program, ungroup
+from .core_ir import compile_program, ungroup, integer_constant
 from .contract_ir import graph_record
 from .typed_alignment import align
 from .requirement_verifier import expected_claims
@@ -37,6 +37,8 @@ def reference_sites(plan,p):
     sites={}; statements={}
     def signature(e, rename):
         e=ungroup(e)
+        value=integer_constant(e)
+        if value is not None:return ("FROZEN_COMPUTED_INTEGER",value)
         return (e.kind,rename.get(e.value,e.value),tuple(signature(x,rename) for x in e.children))
     def ex(e,path):
         e=ungroup(e); sites[path]=p.node_ids[id(e)]
@@ -159,9 +161,14 @@ def reconstruct_bindings(plan,c,p,base,bundle=None):
                 ao=c.macro_id if kind=="DOMAIN" else c.primitive_aliases.get(sites[sel["path"]]) if kind=="PRIMITIVE" else c.index_nodes[sites[sel["path"]]][0 if sel["part"]=="initial" else 1] if kind=="INDEX_STATE" else sites[sel["path"]]
                 require(ao in table,"GENUINE_REQUIRED_COMPONENT_UNBOUND")
                 bo=table[ao]; actual=c.item(ao)
-                require(actual.operation==cap["operation"] or cap["operation"] in {"COMPUTED_VALUE","LITERAL_TOKEN"} and actual.operation=="CONSTANT", "REQUIREMENT_OPERATION_MISMATCH")
-                require(actual.datatype==cap["result_type"] and list(actual.operand_types)==cap["operand_types"] and list(actual.operand_roles)==cap["operand_roles"] and actual.result_role==cap["result_role"], "REQUIREMENT_TYPE_ROLE_MISMATCH")
-                if cap["value"] is not None:
+                if kind=="MAXIMAL_CONSTANT":
+                    a=c.attribute_specs.get(ao);b=p.attribute_specs.get(bo)
+                    require(a is not None and b is not None and a["computed_integer"]==b["computed_integer"]==cap["value"] and
+                            actual.datatype==cap["result_type"]=="INTEGER" and actual.result_role==cap["result_role"],"REQUIREMENT_MAXIMAL_CONSTANT_MISMATCH")
+                else:
+                    require(actual.operation==cap["operation"] or cap["operation"] in {"COMPUTED_VALUE","LITERAL_TOKEN"} and actual.operation=="CONSTANT", "REQUIREMENT_OPERATION_MISMATCH")
+                    require(actual.datatype==cap["result_type"] and list(actual.operand_types)==cap["operand_types"] and list(actual.operand_roles)==cap["operand_roles"] and actual.result_role==cap["result_role"], "REQUIREMENT_TYPE_ROLE_MISMATCH")
+                if cap["value"] is not None and kind!="MAXIMAL_CONSTANT":
                     require((int(actual.value) if cap["operation"]=="COMPUTED_VALUE" else actual.value)==cap["value"],"REQUIREMENT_VALUE_MISMATCH")
             require((ao,bo) not in occupied,"DUPLICATE_REQUIREMENT_SATISFACTION"); occupied.add((ao,bo))
             pairs.append((ao,bo))

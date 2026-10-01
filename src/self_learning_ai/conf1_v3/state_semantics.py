@@ -199,9 +199,11 @@ def required_computation(plan,p,graph):
         raise SchemaError("STATE_CONDITIONAL_WRITER_AMBIGUITY" if conditional else "STATE_EXTRA_LIVE_MUTATION")
     # Check updates at grammatical sites before the full shape proof to retain
     # a semantic rejection reason for the targeted adversaries.
-    def signature(e,rename):
+    def signature(e,rename,computed_comparison=False):
         e=ungroup(e)
-        return (e.kind,rename.get(e.value,e.value),tuple(signature(c,rename) for c in e.children))
+        value=integer_constant(e)
+        if computed_comparison and value is not None:return ("FROZEN_COMPUTED_INTEGER",value)
+        return (e.kind,rename.get(e.value,e.value),tuple(signature(c,rename,computed_comparison) for c in e.children))
     for a,loop,path in expected:
         if a["kind"]!="UPDATE": continue
         b=actual_paths.get(path)
@@ -210,7 +212,7 @@ def required_computation(plan,p,graph):
         require(b.value==a["value"],"STATE_REQUIRED_UPDATE_RECURRENCE_MISMATCH")
         if loop and any(r["consumer"]==p.node_ids[id(b)] and any(edge_by_id[e]["relation"]=="PRESERVED_PASS_STATE" for e in r["relations"]) for r in graph["reads"]):
             raise SchemaError("STATE_CROSS_LOOP_CONTRIBUTION")
-        require(signature(b.expressions[1],{})==signature(expression(a["expressions"][1]),names),"STATE_REQUIRED_CONTRIBUTION_MISMATCH")
+        require(signature(b.expressions[1],{},True)==signature(expression(a["expressions"][1]),names,True),"STATE_REQUIRED_CONTRIBUTION_MISMATCH")
     if len(flat)!=len(expected):
         extra=[s for s,l,path in flat if s.kind=="UPDATE" and path not in {q for a,l,q in expected if a["kind"]=="UPDATE"}]
         raise SchemaError("STATE_CONDITIONAL_WRITER_AMBIGUITY" if any(l and s.kind=="IF" for s,l,path in flat) and extra else "STATE_EXTRA_LIVE_MUTATION")

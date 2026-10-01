@@ -8,7 +8,7 @@ import re
 from collections import OrderedDict
 from .interfaces import ClosureError, rid
 from .requirements import frozen_metadata, digest, expression
-from .core_ir import infer_type, ungroup, OPERATORS, TYPE_NAMES
+from .core_ir import infer_type, ungroup, integer_constant, OPERATORS, TYPE_NAMES
 from .contracts import DOMAINS
 from .semantic_ir import predicate_signature, frozen_predicates
 
@@ -152,6 +152,13 @@ def recipe(d):
                      operand_roles=list(operand_roles),result_type=typ,result_role=result_role or role,semantic_role=role, value=value), selector=selector or dict(kind="NODE", path=path)))
     def expr(e, path, role):
         e = ungroup(e); typ = infer_type(e, symbols, imports)
+        constant = integer_constant(e)
+        if constant is not None and e.kind != "NUMBER":
+            # A prospective maximal computed unit, not behavioral operators or
+            # independently promoted leaf obligations inside that unit.
+            node(path, "COMPUTED_VALUE", "VALUE_OR_LITERAL", "INTEGER", role=role,
+                 value=constant, selector=dict(kind="MAXIMAL_CONSTANT", path=path))
+            return
         if e.kind == "CALL": op, cat, args = "strings."+e.children[0].value, "API_DECODER", e.children[1:]
         else:
             args = e.children
