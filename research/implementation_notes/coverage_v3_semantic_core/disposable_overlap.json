@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "DISPOSABLE_SEMANTIC_CORE_OVERLAP",
+  "historical_fixture_files": 13,
+  "exact_string_overlap": 0,
+  "recorded_hash_overlap": 0,
+  "computed_string_hash_overlap": 0,
+  "expected_labels_parsed": false,
+  "classifiers_invoked": false,
+  "inventory": {
+    "ids": [
+      {
+        "value": "SEMCORE-900-ODD",
+        "sha256_utf8": "e75bb5fc05890c3ad444adba585fef472fb88ba877d2100ef7df7d7fd5be3521",
+        "size_bytes_utf8": 15
+      },
+      {
+        "value": "SEMCORE-900-RESIDUE",
+        "sha256_utf8": "52b53f609f99dff4f665ec7fdd915cafae3604f7dcf1f4786c24913263f222b4",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "SEMCORE-900-DIVISOR",
+        "sha256_utf8": "f05448c1ee88eb6e25d14c3aff6b3de8ab14143f62cd116689f208d46b0565c5",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "SEMCORE-900-HALF",
+        "sha256_utf8": "8b50af126b4277ce9f67f6590f0477d1eb78a77f739bb4e72f11beffb5c5cba8",
+        "size_bytes_utf8": 16
+      },
+      {
+        "value": "SEMCORE-900-REPEAT",
+        "sha256_utf8": "acba6e516bfd13a5d874a2905cf434dc9321c6bc9ec32ef4dd0d8d6ea0a6ab4f",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-PREFIX",
+        "sha256_utf8": "81045dbc859aae3b2a6a658dcb1d706ff42af648f46ab08c618acf84683083e3",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-TWO_PASS",
+        "sha256_utf8": "03661fae2f95aa54d7e9d55d9da374c490fa5dd025d4047eac2f920ff0e9e76b",
+        "size_bytes_utf8": 20
+      },
+      {
+        "value": "SEMCORE-900-REVERSE",
+        "sha256_utf8": "3ba395fc28da64952032ce30fea5e5989acb9b3b7738b2866d9c79c2e1d24b6e",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "SEMCORE-900-INITIAL",
+        "sha256_utf8": "166e0eae3cdd8570864594715f6a8184c39fdc4e15d6038da05b649bf43b4c89",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "SEMCORE-900-INITIAL_FOLDED",
+        "sha256_utf8": "ecaed8a268c021ab2349e7d301cc8414e8f3a4b5ec5f655e7453eb7bdad9e7d8",
+        "size_bytes_utf8": 26
+      },
+      {
+        "value": "SEMCORE-900-THRESHOLD",
+        "sha256_utf8": "2d8156409aa4dbc6c8dd35b0fbbf7893ca45adcef9e00a5c30c8470c134144aa",
+        "size_bytes_utf8": 21
+      },
+      {
+        "value": "SEMCORE-900-FLOW_AND",
+        "sha256_utf8": "6eac0eb3ee3ecab5c121814f8e170eca7179cca427378cfdfc3b0bd30b7ef4a7",
+        "size_bytes_utf8": 20
+      },
+      {
+        "value": "SEMCORE-900-FLOW_OR",
+        "sha256_utf8": "68dcf0286c8dfc6d04166760c7b258c602349e119ec92b109d530ba7eddee9a6",
+        "size_bytes_utf8": 19
+      },
+      {
+        "value": "SEMCORE-900-AMBIGUOUS",
+        "sha256_utf8": "9585b69fa781b2ae046b17915e173fc576540bc519aeba34156cce614954bf33",
+        "size_bytes_utf8": 21
+      },
+      {
+        "value": "SEMCORE-900-ARRAY",
+        "sha256_utf8": "0c26c3186bb453e6b4d60bf52373b1469eb7683342bbe05a69ca97e54fdeee86",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "SEMCORE-900-ARRAY_LE",
+        "sha256_utf8": "2e779060e3b1b993e25f2cfb5933a3001f329d589ea6f3c7fa6fbfbeb7adac85",
+        "size_bytes_utf8": 20
+      },
+      {
+        "value": "SEMCORE-900-ALPHA",
+        "sha256_utf8": "528aae06098360751c3b81ec031c825137672718ec17ffc81c467399c155cea0",
+        "size_bytes_utf8": 17
+      },
+      {
+        "value": "SEMCORE-900-BAD_IMPORT",
+        "sha256_utf8": "3a7742aef42353ded903dce78c9e90eff04b67d9352c028aac67952d46261bc4",
+        "size_bytes_utf8": 22
+      },
+      {
+        "value": "SEMCORE-900-BAD_LOOP",
+        "sha256_utf8": "44b930f712d382e8212ed919bb15e82068ed343c0e25d758c9e70fb19f18390f",
+        "size_bytes_utf8": 20
+      },
+      {
+        "value": "SEMCORE-900-CASE-0",
+        "sha256_utf8": "2b24acf83cbf89ea09c57593c16a1a50244151bb430a3c43fb14f71303ed6920",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-CASE-1",
+        "sha256_utf8": "31a3e8614dd80fff3eb2994d5f77530e6ee051e1fd1fd8c06b5649087a6d10f7",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-CASE-2",
+        "sha256_utf8": "f3de929ef752e78914a498f856d8ad89685dc890acb1678fa3e53a80502aa583",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-CASE-3",
+        "sha256_utf8": "220aa3c42a875148c8571245feb986bad72c33945d8ecc930cdc01677fc92cab",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-CASE-4",
+        "sha256_utf8": "4b50f2588d46af4611d75dde3025afd47aa26d843dd30381cd4b065474f02747",
+        "size_bytes_utf8": 18
+      },
+      {
+        "value": "SEMCORE-900-SOURCE-ARTIFACT",
+        "sha256_utf8": "a9120a18cdb20dd0e8ccd3766901ac9b3d19aec49626861a3f3e287595c68136",
+        "size_bytes_utf8": 27
+      },
+      {
+        "value": "SEMCORE-900-CASE-ARTIFACT",
+        "sha256_utf8": "c90b8258725f3293d1c0627c08aac2db4785331d559d128a04dd41ab4acc80e4",
+        "size_bytes_utf8": 25
+      }
+    ],
+    "sources": [
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index%2==1) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "c9c034e69d5696707f90c438430c31fb9698b1be66c35486a8d2ceeaedabb9f4",
+        "size_bytes_utf8": 205
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index%3==2) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "b4c3c3a14cd313329c0e577456727f5a2e9a615b795f6286c803ffaff2d76d07",
+        "size_bytes_utf8": 205
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Bound%sem900Index==0) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "664f1e2bd4a8e9f25f1e33a20485bd794733d1d8592d4413fc366a3f27774589",
+        "size_bytes_utf8": 215
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (2*sem900Index<=sem900Bound) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "c8be5cea4e51ab1e2de293fdc65a9f31ee1702c16a1e7c06096a79666d24ee0c",
+        "size_bytes_utf8": 215
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index%2==1) { sem900Total+=1. } IF (sem900Index%2==1) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "4f09514b76fbd351b826218e83a15bfb022c12bb6c91087aacf0c613ac2827e6",
+        "size_bytes_utf8": 247
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Seen=0. NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index%3==2) { sem900Total+=sem900Seen. } IF (sem900Index%2==1) { sem900Seen+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "e53dd6b85e1ab037a36b72b14df17f9fbcfc217be73aefbeab062e9729ee086c",
+        "size_bytes_utf8": 276
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Left=0. NUMBER sem900Right=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index%2==1) { sem900Left+=1. } } LOOP (NUMBER sem900Second=1 TILL sem900Second<=sem900Bound, sem900Second++) { IF (sem900Second%3==2) { sem900Right+=1. } } DISPLAYNL(sem900Left*sem900Right).",
+        "sha256_utf8": "fa2353b8b6f8d355e8c0612c7674510c1d00c2994c182d235075252f24fee94f",
+        "size_bytes_utf8": 358
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. NUMBER sem900Index=sem900Bound. LOOP (sem900Index>=1) { IF (sem900Index%2==1) { sem900Total+=1. } sem900Index-=1. } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "72820b4a441f36617ec0fb67d9deee07a5d9749c0d928ac8ff40c6c496d4dc2c",
+        "size_bytes_utf8": 202
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=-(13+8). NUMBER sem900Hit=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { sem900Hit=0. IF (sem900Index%2==1) { sem900Hit=1. } sem900Total+=sem900Hit. } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "b26007a12f7b874b2a88a3161c6feff30818ecd8deb5198014a4d52effdcec1d",
+        "size_bytes_utf8": 264
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=-21. NUMBER sem900Hit=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { sem900Hit=0. IF (sem900Index%2==1) { sem900Hit=1. } sem900Total+=sem900Hit. } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "38b34d258b8f5eb2a9fd90c47ba5fcb792863d1685263d20a67022aaec7eb0e0",
+        "size_bytes_utf8": 260
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { IF (sem900Index>(3*5+2)) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "e59af4266d354d672b0a0614938d352aeb5db66ab24f1e1424b130a4978fda4d",
+        "size_bytes_utf8": 208
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. NUMBER sem900First=0. NUMBER sem900Next=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { sem900First=0. sem900Next=0. IF (sem900Index%2==1) { sem900First=1. } IF (sem900Index%3==2) { sem900Next=1. } sem900Total+=sem900First*sem900Next. IF ((sem900Index%2==1)&&(sem900Index%3==2)) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "b47d34bb251dc36bd59c2ea6a9743f2a627f945d7c944c5fce0b5f35f3d1075d",
+        "size_bytes_utf8": 417
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. NUMBER sem900First=0. NUMBER sem900Next=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { sem900First=0. sem900Next=0. IF (sem900Index%2==1) { sem900First=1. } IF (sem900Index%3==2) { sem900Next=1. } IF (sem900First+sem900Next>0) { sem900Total+=1. } IF ((sem900Index%2==1)||(sem900Index%3==2)) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "175eee7b6728512ef62065d43bcdb8a4c9d175d066cccd63f2d06440b2ba7e0e",
+        "size_bytes_utf8": 430
+      },
+      {
+        "value": "NUMBER sem900Bound. INPUT(sem900Bound). NUMBER sem900Total=37. NUMBER sem900First=0. NUMBER sem900Next=0. LOOP (NUMBER sem900Index=1 TILL sem900Index<=sem900Bound, sem900Index++) { sem900First=0. sem900Next=0. IF (sem900Index%2==1) { sem900First=1. } IF (sem900Index%3==2) { sem900Next=1. } IF (sem900Index>9) { sem900First=1. } sem900Total+=sem900First*sem900Next. } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "838ec94875f9d326d8e847628f2c4c187150eacc8d90065dd28289b44913970b",
+        "size_bytes_utf8": 391
+      },
+      {
+        "value": "IMPORT strings. SENTENCE sem900Raw. INPUT(sem900Raw). SENTENCE[] sem900Fields=strings.SPLIT(sem900Raw,\"|\"). NUMBER sem900North=strings.TO_NUMBER(sem900Fields[0]). NUMBER sem900East=strings.TO_NUMBER(sem900Fields[1]). NUMBER sem900South=strings.TO_NUMBER(sem900Fields[2]). NUMBER sem900West=strings.TO_NUMBER(sem900Fields[3]). NUMBER[] sem900Values=[sem900North,sem900East,sem900South,sem900West]. NUMBER sem900Total=37. LOOP (NUMBER sem900Index=0 TILL sem900Index<4, sem900Index++) { IF (sem900Values[sem900Index]<0) { sem900Total+=1. } IF (sem900Values[sem900Index]%2==0) { sem900Total+=1. } IF (sem900Values[sem900Index]*sem900Values[sem900Index]>4) { sem900Total+=1. } IF (sem900Values[sem900Index]>sem900Index) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "dc9f34190eaa1b4ad58650825f335d0940fe74df89fd1cd0ee47531238f02df3",
+        "size_bytes_utf8": 760
+      },
+      {
+        "value": "IMPORT strings. SENTENCE sem900Raw. INPUT(sem900Raw). SENTENCE[] sem900Fields=strings.SPLIT(sem900Raw,\"|\"). NUMBER sem900North=strings.TO_NUMBER(sem900Fields[0]). NUMBER sem900East=strings.TO_NUMBER(sem900Fields[1]). NUMBER sem900South=strings.TO_NUMBER(sem900Fields[2]). NUMBER sem900West=strings.TO_NUMBER(sem900Fields[3]). NUMBER[] sem900Values=[sem900North,sem900East,sem900South,sem900West]. NUMBER sem900Total=37. LOOP (NUMBER sem900Index=0 TILL sem900Index<4, sem900Index++) { IF (sem900Values[sem900Index]<=0) { sem900Total+=1. } IF (sem900Values[sem900Index]%2==0) { sem900Total+=1. } IF (sem900Values[sem900Index]*sem900Values[sem900Index]>4) { sem900Total+=1. } IF (sem900Values[sem900Index]>sem900Index) { sem900Total+=1. } } DISPLAYNL(sem900Total).",
+        "sha256_utf8": "6e7951516065ab84aa474de64700ba38e0d6aa2f2454e4adc29abd8d1e893bdf",
+        "size_bytes_utf8": 761
+      },
+      {
+        "value": "NUMBER alias903Bound. INPUT(alias903Bound). NUMBER alias903Total=37. NUMBER alias903First=0. NUMBER alias903Next=0. LOOP (NUMBER alias903Index=1 TILL alias903Index<=alias903Bound, alias903Index++) { alias903First=0. alias903Next=0. IF (alias903Index%2==1) { alias903First=1. } IF (alias903Index%3==2) { alias903Next=1. } alias903Total+=alias903First*alias903Next. IF ((alias903Index%2==1)&&(alias903Index%3==2)) { alias903Total+=1. } } DISPLAYNL(alias903Total).",
+        "sha256_utf8": "0f450be2cb4cb4c5dbe79c3b31b9388882773766a33ead3bf8fb2c71df2525f2",
+        "size_bytes_utf8": 461
+      },
+      {
+        "value": "IMPORT sem900UnknownModule.",
+        "sha256_utf8": "ec873e805e6d78071faf86c21de1255adbe23411ed423134580c0a4795f34b0f",
+        "size_bytes_utf8": 27
+      },
+      {
+        "value": "WHILE (sem900UnknownFlag) { DISPLAYNL(73). }",
+        "sha256_utf8": "b924a951d00a13cef6966024a8c6c1a527a011dd9376d6eeef51fbbe6ac2f58c",
+        "size_bytes_utf8": 44
+      }
+    ],
+    "expressions": [
+      {
+        "value": "sem900Index%2==1",
+        "sha256_utf8": "4596e4dfd2d7b2db59c8e2ba525d929429d0dd5616fc68552bf2873dbb8a2ac6",
+        "size_bytes_utf8": 16
+      },
+      {
+        "value": "sem900Index%3==2",
+        "sha256_utf8": "b619fc87447a9df42e111e485fa3d8cc98dbc9de24548b5ff5dee14697011d1f",
+        "size_bytes_utf8": 16
+      },
+      {
+        "value": "sem900Bound%sem900Index==0",
+        "sha256_utf8": "c169d15a1372dc181b6077f1aad245414888638939a486a2f6789fd74765a803",
+        "size_bytes_utf8": 26
+      },
+      {
+        "value": "2*sem900Index<=sem900Bound",
+        "sha256_utf8": "ae9b2351400f5968412fcceb3708c7b37aaf7409c4adc4bbb325b77f28cf9169",
+        "size_bytes_utf8": 26
+      },
+      {
+        "value": "sem900Values[sem900Index]<0",
+        "sha256_utf8": "3a6457703b1fec0a1b94a5081437a10bae34b5b2b61c68baa0677f2e3c82acb6",
+        "size_bytes_utf8": 27
+      },
+      {
+        "value": "sem900Values[sem900Index]%2==0",
+        "sha256_utf8": "27fd57227e1046f1942ad75e48dfd45094406391999a6e1e7de1f954579b4f7e",
+        "size_bytes_utf8": 30
+      },
+      {
+        "value": "sem900Values[sem900Index]*sem900Values[sem900Index]>4",
+        "sha256_utf8": "73f327dd2b36b3ddb3bbecbe8a309bf2498008d2ba6949d83275d47748b98577",
+        "size_bytes_utf8": 53
+      },
+      {
+        "value": "sem900Values[sem900Index]>sem900Index",
+        "sha256_utf8": "8e1920573249397a8cc8c7dc974b18cde39ed16e147fd7e097f737e82177e346",
+        "size_bytes_utf8": 37
+      },
+      {
+        "value": "sem900Values[sem900Index]<=0",
+        "sha256_utf8": "779645c72db0a1c91772763d84fb871dca07b9e76ecdb610fd69649a2790a829",
+        "size_bytes_utf8": 28
+      },
+      {
+        "value": "-(13+8)",
+        "sha256_utf8": "fdf63d3f4fce25642ae3dc32e88968eab87e40e366843406bbf081a5a8e4182a",
+        "size_bytes_utf8": 7
+      },
+      {
+        "value": "-21",
+        "sha256_utf8": "e54dc15ccafa608142ffa6340b035c327f972e24882052cfc3345f240f4ee237",
+        "size_bytes_utf8": 3
+      },
+      {
+        "value": "3*5+2",
+        "sha256_utf8": "7764a4ca8bcd56102e835825da024b9290d6e8c7679ce400d1d66a16e65cffc5",
+        "size_bytes_utf8": 5
+      },
+      {
+        "value": "sem900First*sem900Next",
+        "sha256_utf8": "b82a26c4a292f2f7c6c7876717389e121463bc95ff83ba0cfa997341bfd6373e",
+        "size_bytes_utf8": 22
+      },
+      {
+        "value": "sem900First+sem900Next>0",
+        "sha256_utf8": "500e2cfc56f0df40a7ec7ba79144d3c818e63fc7623ae4fc3fa6f5dc4b4d14cd",
+        "size_bytes_utf8": 24
+      },
+      {
+        "value": "(sem900Index%2==1)&&(sem900Index%3==2)",
+        "sha256_utf8": "0a69331455cdfbe4d7bb16d0c9bb444be29624b68234d0deddc94f8ea82a9670",
+        "size_bytes_utf8": 38
+      },
+      {
+        "value": "(sem900Index%2==1)||(sem900Index%3==2)",
+        "sha256_utf8": "4b63475435a43243b0bbf05e5ee2974f309e6c9ab99b1936f55f1439b17506b6",
+        "size_bytes_utf8": 38
+      }
+    ],
+    "raw_inputs": [
+      {
+        "value": "000000",
+        "sha256_utf8": "91b4d142823f7d20c5f08df69122de43f35f057a988d9619f6d3138485c9a203",
+        "size_bytes_utf8": 6
+      },
+      {
+        "value": "000003",
+        "sha256_utf8": "86e0fa410d1c284b13d7b123ff1484fac76b17c4087bad575b8471b7624e0d59",
+        "size_bytes_utf8": 6
+      },
+      {
+        "value": "000007",
+        "sha256_utf8": "ad621a23bd5c2474c1fe0909a8a38bb5fcccd382e855f97ef06d63a06b22dd7d",
+        "size_bytes_utf8": 6
+      },
+      {
+        "value": "000011",
+        "sha256_utf8": "4250041a2c9a323864ef0d88195fa1d5a71aa837f78f7fa4a77bd3f3d8a875fd",
+        "size_bytes_utf8": 6
+      },
+      {
+        "value": "000019",
+        "sha256_utf8": "0f7347a8407bb68e42239517139e064ab3154c142a853a8ca6319ab04d978c7a",
+        "size_bytes_utf8": 6
+      },
+      {
+        "value": "-37|0|43|2",
+        "sha256_utf8": "4e6dac8a0bd7d909f047ca5b9ece80d6422fe749b273031ed9efba71556d3ff3",
+        "size_bytes_utf8": 10
+      },
+      {
+        "value": "-41|6|0|47",
+        "sha256_utf8": "46b0ed179530db2c97e6bbf5ff8a15d1635b543703b9f88967fd7911d3a57512",
+        "size_bytes_utf8": 10
+      },
+      {
+        "value": "8|-53|0|59",
+        "sha256_utf8": "6a242506c84c5872cc53c74e0060b1f328d9eb365298a4f538217f98f24a50da",
+        "size_bytes_utf8": 10
+      },
+      {
+        "value": "0|0|-61|67",
+        "sha256_utf8": "8ad95cea66f9db7de27d7c7cbb0727587518fa491f779bf1cf48d12ba2af17ee",
+        "size_bytes_utf8": 10
+      },
+      {
+        "value": "-71|10|13|0",
+        "sha256_utf8": "2bce2c9c48dd971ece4f6e4f17e82e6e516cb419e16ed2a742e0c93a269f03b1",
+        "size_bytes_utf8": 11
+      },
+      {
+        "value": "00003",
+        "sha256_utf8": "81a16fe30e67d812332cdeda986281b41f59243082b792c13f0e004af77bc0e0",
+        "size_bytes_utf8": 5
+      }
+    ]
+  }
+}

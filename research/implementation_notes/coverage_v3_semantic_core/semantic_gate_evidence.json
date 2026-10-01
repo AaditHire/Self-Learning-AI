@@ -1,0 +1,94 @@
+{
+  "all_semantic_gates_pass": false,
+  "artifact_kind": "DEVELOPMENT_SEMANTIC_GATES_NOT_SCIENTIFIC_BINDER",
+  "authoritative_population_recount_performed": false,
+  "diagnostic_8668_status": "historical non-authoritative checkpoint only; not recounted",
+  "gates": [
+    {
+      "detail": "All eight frozen predicate trees extracted with typed ports; repeated occurrences and alpha are retained",
+      "evidence_file": "primitive_indicator_extraction.json",
+      "gate": "PRIMITIVE_EXTRACTION_COMPLETE",
+      "remaining_evidence_obligations": [],
+      "status": "PASS"
+    },
+    {
+      "detail": "Range/current-iteration proofs and every indicator write/edge are recorded; ambiguous definitions reject local equivalence",
+      "evidence_file": "primitive_indicator_extraction.json",
+      "gate": "INDICATOR_EXTRACTION_COMPLETE",
+      "remaining_evidence_obligations": [
+        "accepted local-flow proofs do not contain total-source mapping certificates"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "Structured reaching definitions and actual-writer traces agree on all three families/reverse; pure frozen probe still lacks recurrence/essentiality certification",
+      "evidence_file": "state_essentiality_traces.json",
+      "gate": "STATE_GRAPH_COMPLETE",
+      "remaining_evidence_obligations": [
+        "TASK_ESSENTIALITY_PROOF_INCOMPLETE"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "Joint typed interventions are executed; the untested-key inventory and unresolved loop interventions block full closure",
+      "evidence_file": "state_essentiality_traces.json",
+      "gate": "ESSENTIALITY_ENGINE_COMPLETE",
+      "remaining_evidence_obligations": [
+        "untested behavioral classes",
+        "force-true removes the sole exit from the parsed bounded loop; this closed subset has no break/return; no terminating counterfactual output exists"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "Maximal roots and exact initial/active-parent witnesses work; 71 unsupported toy parent attachments remain explicit",
+      "evidence_file": "attribute_output_attachments.json",
+      "gate": "VALUE_LITERAL_ATTACHMENT_COMPLETE",
+      "remaining_evidence_obligations": [
+        "unsupported source parent ontology"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "Bound output nodes/categories/sentinels work; the pure frozen probe emits no completed prospective declaration",
+      "evidence_file": "attribute_output_attachments.json",
+      "gate": "OUTPUT_ATTACHMENT_COMPLETE",
+      "remaining_evidence_obligations": [
+        "OUTPUT_CASE_OBLIGATIONS_UNRESOLVED"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "Total identical/alpha and computed-constant mappings exist; local Boolean alternatives do not supply a complete-source mapping",
+      "evidence_file": "primitive_indicator_extraction.json",
+      "gate": "V32_SEMANTIC_MAPPING_COMPLETE",
+      "remaining_evidence_obligations": [
+        "accepted local-flow proofs do not contain total-source mapping certificates"
+      ],
+      "status": "UNRESOLVED"
+    },
+    {
+      "detail": "AND/product and OR/indicator proof preconditions succeed, ambiguity rejects; total mapping integration remains missing",
+      "evidence_file": "attribute_output_attachments.json",
+      "gate": "V33_REQUIRED_EQUIVALENCE_COMPLETE",
+      "remaining_evidence_obligations": [
+        "accepted local-flow proofs do not contain total-source mapping certificates"
+      ],
+      "status": "UNRESOLVED"
+    }
+  ],
+  "population_status": "V3_5_POPULATION_UNRESOLVED",
+  "pure_production_probe": {
+    "case_execution": false,
+    "core_gaps": [
+      "COMPUTED_CONSTANT_SUBTREE_ATTACHMENT_INCOMPLETE",
+      "OUTPUT_CASE_OBLIGATIONS_UNRESOLVED",
+      "TASK_ESSENTIALITY_PROOF_INCOMPLETE"
+    ],
+    "population_derivation": false,
+    "program_id": "CONF1-ISOLATED-TR-NU-01-V0"
+  },
+  "schema_version": 1,
+  "scientific_17_gate_binder_changed": false,
+  "starting_head": "41468f4c831159b5658f14efd87c3ee9407922e8",
+  "status": "STOPPED_COVERAGE_V3_CORE_SEMANTIC_CLOSURE_ISSUE"
+}

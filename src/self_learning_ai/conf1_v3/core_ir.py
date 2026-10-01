@@ -120,6 +120,12 @@ class Program:
     output_id: str
     macro_id: str
     normalized_tree: tuple
+    semantic_records: tuple[dict[str, Any], ...] = ()
+    indicator_proofs: dict[str, dict[str, Any]] = field(default_factory=dict)
+    primitive_aliases: dict[str, str] = field(default_factory=dict)
+    index_nodes: dict[str, tuple[str, str]] = field(default_factory=dict)
+    attribute_specs: dict[str, dict[str, Any]] = field(default_factory=dict)
+    state_analysis: dict[str, Any] = field(default_factory=dict)
 
     def item(self, occurrence_id: str) -> Item:
         for item in self.items:
@@ -177,6 +183,23 @@ def compile_program(program_id: str, source: str) -> Program:
     input_name = inputs[0].expressions[0].value
     domain = "numeric_iteration" if symbols[input_name] == "INTEGER" else "array_reduction"
     if (domain == "array_reduction") != ("strings" in imports): raise SchemaError("decoder import/domain mismatch")
+    if input_name in assignments:raise SchemaError("frozen input binding must not be mutated")
+    for top in statements:
+        for s in _walk_stmt(top):
+            if not isinstance(s,Stmt) or s.kind!="LOOP":continue
+            cond=ungroup(s.expressions[-1])
+            if s.value=="FORWARD":
+                allowed=(domain=="numeric_iteration" and integer_constant(s.expressions[0])==1 and cond.value=="<=" and ungroup(cond.children[1]).kind=="ID" and ungroup(cond.children[1]).value==input_name) or (
+                    domain=="array_reduction" and integer_constant(s.expressions[0])==0 and cond.value=="<" and integer_constant(cond.children[1])==4)
+                if not allowed or s.loop_index in assignments:raise SchemaError("frozen forward domain traversal not proved")
+            else:
+                declaration=declarations.get(s.loop_index)
+                initial=ungroup(declaration.expressions[0]) if declaration and declaration.expressions else None
+                allowed=(domain=="numeric_iteration" and initial is not None and initial.kind=="ID" and initial.value==input_name and integer_constant(cond.children[1])==1) or (
+                    domain=="array_reduction" and initial is not None and integer_constant(initial)==3 and integer_constant(cond.children[1])==0)
+                decrement=s.children[-1] if s.children else None
+                if not allowed or decrement is None or decrement.kind!="UPDATE" or decrement.value!="-=" or decrement.expressions[0].value!=s.loop_index or integer_constant(decrement.expressions[1])!=1 or assignments.get(s.loop_index)!=[decrement]:
+                    raise SchemaError("frozen reverse domain traversal not proved")
     roles = {name: "LOCAL_VALUE" for name in symbols}
     roles[input_name] = "INPUT_LIMIT" if domain == "numeric_iteration" else "RAW_INPUT"
     for name in indices: roles[name] = "DOMAIN_ITEM" if domain == "numeric_iteration" else "ITEM_INDEX"
@@ -184,7 +207,8 @@ def compile_program(program_id: str, source: str) -> Program:
         if typ == "STRING_ARRAY": roles[name] = "SPLIT_FIELDS"
         elif typ == "INTEGER_ARRAY": roles[name] = "DOMAIN_SEQUENCE"
         elif name in assignments and name not in indices:
-            roles[name] = "INDICATOR" if all(a.value == "=" and integer_constant(a.expressions[1]) in {0,1} for a in assignments[name]) else "ACCUMULATOR"
+            initialized = name in declarations and declarations[name].expressions and integer_constant(declarations[name].expressions[0]) in {0,1}
+            roles[name] = "INDICATOR" if initialized and all(a.value == "=" and integer_constant(a.expressions[1]) in {0,1} for a in assignments[name]) else "ACCUMULATOR"
         elif name in declarations and declarations[name].expressions and ungroup(declarations[name].expressions[0]).kind == "CALL":
             roles[name] = "DECODED_FIELD"
     for e in _walk_expr(displays[0].expressions[0]):
@@ -277,7 +301,9 @@ def compile_program(program_id: str, source: str) -> Program:
         value=s.value
         if s.kind=="DECLARE":typ,name=value.split(":");value=(typ,names[name])
         return (s.kind,value,names.get(s.loop_index) if s.loop_index else None,tuple(ex(e) for e in s.expressions),tuple(st(c) for c in s.children))
-    return Program(program_id,source,statements,symbols,roles,frozenset(imports),tuple(items),node_ids,edge_ids,domain,output_id,macro_id,tuple(st(s) for s in statements))
+    program = Program(program_id,source,statements,symbols,roles,frozenset(imports),tuple(items),node_ids,edge_ids,domain,output_id,macro_id,tuple(st(s) for s in statements))
+    from .semantic_ir import enrich_semantics
+    return enrich_semantics(program)
 
 
 @dataclass(frozen=True)
@@ -295,6 +321,7 @@ class Execution:
     events: list[dict[str,Any]]
     initialization: dict[str,Value]
     intervention_occurrences: tuple[str,...]
+    state_trace: list[dict[str, Any]] = field(default_factory=list)
 
 
 def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (), replacement: Any = None,
@@ -304,6 +331,17 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
     if type(max_steps) is not int or max_steps<1:raise SchemaError("step budget")
     selected=set(occurrences);env:dict[str,Value]={};evaluated:set[str]=set();values:dict[str,list[Any]]={};events=[];initialization={};output=None;steps=0
     last_writer: dict[str, str] = {}
+    state_trace=[]
+    by_id={i.occurrence_id:i for i in program.items}
+    # A typed intervention cannot smuggle a Boolean into a numeric edge or an
+    # integer into a Boolean predicate. INPUT has its own raw-schema adapter.
+    for oid in occurrences:
+        item=by_id[oid]
+        if item.operation=="INPUT" or item.operation.startswith("INPUT_DOMAIN:"):continue
+        valid=(type(replacement) is int if item.datatype=="INTEGER" else type(replacement) is bool if item.datatype=="BOOLEAN" else
+               isinstance(replacement,str) if item.datatype=="STRING" else
+               isinstance(replacement,list) and len(replacement)==4 and all(type(v) is str for v in replacement) if item.datatype=="STRING_ARRAY" else False)
+        if not valid:raise SchemaError("UNTYPED_INTERVENTION")
     def tick() -> None:
         nonlocal steps
         steps+=1
@@ -323,6 +361,9 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
             matches=[item for item in program.items if item.kind=="EDGE" and item.operation=="PRIOR_STATE_TO_UPDATE" and item.source==writer and item.target==oid]
             if len(matches)>1:raise SchemaError("ambiguous runtime state edge")
             if matches:v=observe(matches[0].occurrence_id,v.value,v.dependencies)
+            if writer is not None and not matches:raise SchemaError("runtime writer absent from static reaching definitions")
+            state_trace.append({"sequence":len(state_trace),"kind":"READ","binding":e.value,"reader":oid,"writer":writer,
+                                "state_edge":matches[0].occurrence_id if matches else None,"value":v.value})
             return observe(oid,v.value,v.dependencies)
         if e.kind=="NUMBER":return observe(oid,int(e.value),frozenset())
         if e.kind=="STRING":return observe(oid,json.loads(e.value),frozenset())
@@ -349,7 +390,21 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
             else:value={"+":lambda:a+b,"-":lambda:a-b,"*":lambda:a*b,"==":lambda:a==b,"!=":lambda:a!=b,
                 "<":lambda:a<b,"<=":lambda:a<=b,">":lambda:a>b,">=":lambda:a>=b,"&&":lambda:bool(a and b),"||":lambda:bool(a or b)}[e.value]()
         else:raise SchemaError("unknown execution node")
-        return observe(oid,value,ds)
+        result=observe(oid,value,ds)
+        primitive=program.primitive_aliases.get(oid)
+        if primitive:
+            inputs=[operand(primitive,port,v) for port,v in enumerate(vs)]
+            result=Value(result.value,result.dependencies|frozenset().union(*(v.dependencies for v in inputs)))
+            if any(program.edge_ids[(primitive,port)] in selected for port in range(len(inputs))):
+                # Semantic input-edge suppression must affect the predicate's
+                # value, not just add a dependency tag to its original result.
+                a,b=(v.value for v in inputs)
+                predicate_value={"==":lambda:a==b,"!=":lambda:a!=b,"<":lambda:a<b,"<=":lambda:a<=b,
+                    ">":lambda:a>b,">=":lambda:a>=b}[e.value]()
+                result=Value(predicate_value,result.dependencies)
+            result=operand(primitive,900,result)
+            result=observe(primitive,result.value,result.dependencies)
+        return result
     def rows(statements:tuple[Stmt,...], controls:frozenset[str]=frozenset()) -> None:
         nonlocal output
         for s in statements:
@@ -359,6 +414,7 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
             if s.kind=="DECLARE":
                 typ,name=s.value.split(":");v=operand(oid,0,expr(s.expressions[0])) if s.expressions else Value(0 if typ=="NUMBER" else "")
                 v=observe(oid,v.value,v.dependencies|controls);env[name]=v;initialization[oid]=v;last_writer[name]=oid
+                state_trace.append({"sequence":len(state_trace),"kind":"INITIALIZE","binding":name,"writer":oid,"value":v.value})
             elif s.kind=="INPUT":
                 raw=replacement if program.macro_id in selected or oid in selected else raw_input
                 if program.domain=="numeric_iteration":
@@ -372,12 +428,18 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 macro_edge=program.edge_ids[(oid,400)]
                 decoded=observe(macro_edge,decoded.value,decoded.dependencies)
                 env[s.expressions[0].value]=decoded;last_writer[s.expressions[0].value]=oid
+                state_trace.append({"sequence":len(state_trace),"kind":"INPUT_WRITE","binding":s.expressions[0].value,"writer":oid,"value":value})
             elif s.kind=="UPDATE":
                 name=s.expressions[0].value;rhs=operand(oid,0,expr(s.expressions[1]));old=env[name];delta=rhs.value if s.value=="+=" else -rhs.value if s.value=="-=" else rhs.value-old.value
+                prior_writer=last_writer.get(name)
+                if s.value!="=" and prior_writer is not None:
+                    state_edges=[i for i in program.items if i.kind=="EDGE" and i.operation=="PRIOR_STATE_TO_UPDATE" and i.source==prior_writer and i.target==oid]
+                    if len(state_edges)!=1:raise SchemaError("accumulator reaching definition missing/ambiguous")
+                    old=observe(state_edges[0].occurrence_id,old.value,old.dependencies)
                 carry=program.edge_ids.get((oid,200))
                 active_controls=True;local_controls=controls
                 for item in program.items:
-                    if item.kind=="EDGE" and item.target==oid and item.operation=="CONTROL_TO_UPDATE":
+                    if item.kind=="EDGE" and item.target==oid and item.operation in {"CONTROL_TO_UPDATE","PREDICATE_TO_INDICATOR"}:
                         control=observe(item.occurrence_id,True,local_controls|{item.source})
                         active_controls=active_controls and bool(control.value)
                         local_controls=local_controls|control.dependencies
@@ -389,21 +451,33 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 # An accumulator intervention suppresses its contribution; it
                 # must never overwrite the previously accumulated state.
                 v=observe(oid,old.value+delta,deps,replace=s.value!="+=");env[name]=v;last_writer[name]=oid
+                state_trace.append({"sequence":len(state_trace),"kind":"WRITE","binding":name,"writer":oid,"prior_writer":prior_writer,
+                                    "old_value":old.value,"value":v.value,"delta":delta,"dependencies":sorted(v.dependencies)})
                 events.append({"occurrence_id":oid,"delta":delta,"dependencies":v.dependencies,"register":name})
             elif s.kind=="IF":
                 cond=operand(oid,0,expr(s.expressions[0]));cond=observe(oid,bool(cond.value),cond.dependencies|controls)
                 if cond.value:rows(s.children,controls|cond.dependencies)
             elif s.kind=="LOOP":
                 index=s.loop_index
-                if s.value=="FORWARD":env[index]=operand(oid,0,expr(s.expressions[0]))
+                if s.value=="FORWARD":
+                    initial,step=program.index_nodes[oid]
+                    value=operand(oid,0,expr(s.expressions[0]));env[index]=observe(initial,value.value,value.dependencies);last_writer[index]=initial
+                    initialization[initial]=env[index]
                 while True:
                     cond=operand(oid,len(s.expressions)-1,expr(s.expressions[-1]));cond=observe(oid,bool(cond.value),cond.dependencies|controls)
                     if not cond.value:break
                     rows(s.children,controls|cond.dependencies)
-                    if s.value=="FORWARD":env[index]=Value(env[index].value+1,env[index].dependencies)
+                    if s.value=="FORWARD":
+                        initial,step=program.index_nodes[oid]
+                        env[index]=observe(step,env[index].value+1,env[index].dependencies);last_writer[index]=step
             elif s.kind=="DISPLAYNL":
                 v=operand(oid,0,expr(s.expressions[0]));output=observe(oid,v.value,v.dependencies|controls)
+                final=ungroup(s.expressions[0])
+                if final.kind=="BINARY" and final.value=="*" and all(ungroup(c).kind=="ID" and program.roles[ungroup(c).value]=="DISPLAYED_ACCUMULATOR" for c in final.children):
+                    events.append({"occurrence_id":oid,"delta":v.value,"dependencies":output.dependencies,
+                                   "register":"FINAL_OUTPUT","event_kind":"TWO_PASS_PRODUCT_OUTPUT"})
     try:rows(program.statements)
+    except SchemaError:raise
     except (TypeError,ValueError,KeyError,IndexError,ZeroDivisionError) as exc:raise SchemaError("IR_EXECUTION_UNRESOLVED") from exc
     if output is None or type(output.value) is not int:raise SchemaError("integer final output required")
-    return Execution(str(output.value),output.dependencies,evaluated,values,events,initialization,occurrences)
+    return Execution(str(output.value),output.dependencies,evaluated,values,events,initialization,occurrences,state_trace)

@@ -23,28 +23,47 @@ class MappingProof:
     correspondence:tuple[tuple[str,str],...]
     key_occurrences:Mapping[str,tuple[str,...]]
     source_sha256:str
+    equivalence_proofs:tuple[Mapping[str,Any],...]=()
 
 
 def reconcile_complete_mapping(contract:CoverageContractV3,source:str) -> MappingProof:
     """No ID-set substitute: exact complete typed/binding/tree correspondence."""
     contract.validate();program=compile_program(contract.program_id,source);expected=contract.ir
     if contract.core_gaps:raise ClosureError("UNRESOLVED_REQUIREMENT: incomplete prospective contract")
-    if program.domain!=contract.domain or program.normalized_tree!=expected.normalized_tree:
+    from .semantic_ir import computed_mapping_view
+    expected_tree,expected_items,expected_hidden=computed_mapping_view(expected)
+    source_tree,source_items,source_hidden=computed_mapping_view(program)
+    if program.domain!=contract.domain or source_tree!=expected_tree:
         raise ClosureError("INCOMPATIBLE_COMPLETE_TYPED_STRUCTURE")
     names=dict(zip(expected.symbols,program.symbols))
     alpha_bijection(expected.symbols,program.symbols,names)
-    if len(program.items)!=len(expected.items):raise ClosureError("INCOMPLETE_SOURCE_MAPPING")
+    if len(source_items)!=len(expected_items):raise ClosureError("INCOMPLETE_SOURCE_MAPPING")
     pairs=[]
-    for a,b in zip(expected.items,program.items):
-        if a.semantic_identity()!=b.semantic_identity() or a.essential!=b.essential or a.proof!=b.proof:
+    def identity(item,p):
+        spec=p.attribute_specs.get(item.occurrence_id)
+        if spec and spec["parent_ontology_supported"] and item.essential:
+            return ("COMPUTED_VALUE",spec["computed_integer"],spec["semantic_role"],spec["attribute_parent_kind"],item.datatype)
+        return item.semantic_identity()
+    equivalences=[]
+    for a,b in zip(expected_items,source_items):
+        if identity(a,expected)!=identity(b,program) or a.essential!=b.essential or a.proof!=b.proof:
             raise ClosureError("INCOMPATIBLE_TYPED_NODE_OR_EDGE")
         pairs.append((a.occurrence_id,b.occurrence_id))
+        if a.occurrence_id in expected_hidden or b.occurrence_id in source_hidden:
+            equivalences.append({"frozen_rule_id":"V3.3","catalog_rule":"WHOLLY_INTEGER_CONSTANT_NEG_ADD_SUB_MUL_COMPUTED_KEY_ONLY",
+                "source_locations":[a.location,b.location],"result_type":"INTEGER",
+                "computed_integer":expected.attribute_specs[a.occurrence_id]["computed_integer"],
+                "semantic_role":expected.attribute_specs[a.occurrence_id]["semantic_role"],
+                "contract_accounted_occurrences":expected_hidden.get(a.occurrence_id,()),
+                "source_accounted_occurrences":source_hidden.get(b.occurrence_id,()),
+                "affected_occurrence_mapping":[a.occurrence_id,b.occurrence_id],
+                "preconditions":"maximal source-mapped pure integer constant tree; neg/add/sub/mul only; same exact value and role; no literal-token obligation"})
     table=dict(pairs)
-    for a,b in zip(expected.items,program.items):
+    for a,b in zip(expected_items,source_items):
         if a.kind=="EDGE" and (table[a.source]!=b.source or table[a.target]!=b.target or a.port!=b.port):
             raise ClosureError("INCOMPATIBLE_DIRECTED_BINDING")
         if not a.essential and a.proof!="PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT":raise ClosureError("UNPROVED_REFERENCE_ONLY")
-    return MappingProof(contract,program,tuple(pairs),{k:tuple(table[x] for x in ids) for k,ids in contract.key_occurrences.items()},hashlib.sha256(source.encode("utf-8")).hexdigest())
+    return MappingProof(contract,program,tuple(pairs),{k:tuple(table[x] for x in ids) for k,ids in contract.key_occurrences.items()},hashlib.sha256(source.encode("utf-8")).hexdigest(),tuple(equivalences))
 
 
 def closed_equivalence(left:Expr,right:Expr,alpha_map:Mapping[str,str]|None=None,**typed_context:Any) -> dict[str,Any]:
@@ -123,19 +142,21 @@ class CoverageEngine:
         self.mapping,self.resolver,self.oracle=mapping,resolver,oracle
         self.case_artifact_id=case_artifact_id;self.source_artifact_id=source_artifact_id
         self.cases=resolve_cases(resolver,case_artifact_id,mapping.program.program_id)
-        self.normals={};self.findings={}
+        self.normals={};self.findings={};self.compiler_outputs={}
         for case in self.cases:
             input_domain_classes(mapping.program.domain,case.raw_input)
             normal=execute(mapping.program,case.raw_input)
             expected=_integer_output(case.expected_output)
-            if normal.output!=expected or oracle.run(mapping.program.source,case.raw_input)!=expected:raise ClosureError("NORMAL_REFERENCE_IR_COMPILER_DISAGREEMENT")
+            compiler_output=oracle.run(mapping.program.source,case.raw_input)
+            if normal.output!=expected or compiler_output!=expected:raise ClosureError("NORMAL_REFERENCE_IR_COMPILER_DISAGREEMENT")
+            self.compiler_outputs[case.case_id]=compiler_output
             self.normals[case.case_id]=normal
 
     def _check_bound_inputs(self) -> None:
         from .contract_ir import graph_record
         source=self.resolver.read(self.source_artifact_id,role="SOURCE_REFERENCE").decode("utf-8")
         current_mapping=reconcile_complete_mapping(self.mapping.contract,source)
-        if (current_mapping.source_sha256,current_mapping.correspondence,current_mapping.key_occurrences)!=(self.mapping.source_sha256,self.mapping.correspondence,self.mapping.key_occurrences):
+        if (current_mapping.source_sha256,current_mapping.correspondence,current_mapping.key_occurrences,current_mapping.equivalence_proofs)!=(self.mapping.source_sha256,self.mapping.correspondence,self.mapping.key_occurrences,self.mapping.equivalence_proofs):
             raise ClosureError("bound source/mapping changed")
         if graph_record(current_mapping.program)!=graph_record(self.mapping.program):
             raise ClosureError("bound typed IR changed")
@@ -143,6 +164,8 @@ class CoverageEngine:
         if current!=self.cases:raise ClosureError("bound case set changed")
         if any(execute(current_mapping.program,case.raw_input)!=self.normals.get(case.case_id) for case in current):
             raise ClosureError("normal execution cache changed")
+        if any(self.compiler_outputs.get(case.case_id)!=self.normals[case.case_id].output for case in current):
+            raise ClosureError("normal compiler observation cache changed")
 
     def _key(self,key_id:str) -> ContractKey:
         for key in self.mapping.contract.canonical_keys:
@@ -154,6 +177,9 @@ class CoverageEngine:
         if key.evidence_kind!="BEHAVIORAL":raise SchemaError("behavioral key required")
         occurrences=self.mapping.key_occurrences[key_id];program=self.mapping.program
         items=[program.item(x) for x in occurrences]
+        if any(item.operation=="BOUNDED_LOOP" for item in items):
+            return {"key_id":key_id,"finding":"UNRESOLVED","status":"UNRESOLVED","occurrences":occurrences,"attempts":[],"witness":None,
+                    "reason":"force-true removes the sole exit from the parsed bounded loop; this closed subset has no break/return; no terminating counterfactual output exists"}
         if key.operation=="INPUT" or key.operation.startswith("INPUT_DOMAIN:"):
             values=("0","1") if program.domain=="numeric_iteration" else ("0|0|0|0","1|1|1|1")
         elif key.operation=="strings.SPLIT":values=(["0"]*4,["1"]*4)
@@ -195,21 +221,44 @@ class CoverageEngine:
                 elif item.parent not in self.mapping.key_occurrences[key.parent_key_id] or item.parent not in normal.output_dependencies:continue
                 role_matches=(item.result_role in {"INITIAL_ACCUMULATOR","INITIAL_DISPLAYED_ACCUMULATOR"}) if key.attribute_parent_kind=="INITIAL_ACCUMULATOR" else item.result_role==key.semantic_role
                 exact=(item.value==key.exact_required_lexeme) if key.exact_required_lexeme is not None else key.computed_integer in normal.values.get(oid,[]) and role_matches
-                if exact:return {"key_id":key_id,"finding":"COVERED","status":"PASS","witness":{"case_id":case.case_id,"occurrence_id":oid,"source_location":item.location,"parent_kind":key.attribute_parent_kind}}
+                if exact:
+                    from .goco import Stmt, _walk_stmt
+                    initialization=normal.initialization.get(item.parent) if key.attribute_parent_kind=="INITIAL_ACCUMULATOR" else None
+                    initial_binding=next((s.value.split(":")[1] for top in self.mapping.program.statements for s in _walk_stmt(top)
+                        if isinstance(s,Stmt) and s.kind=="DECLARE" and self.mapping.program.node_ids[id(s)]==item.parent),None) if initialization else None
+                    return {"key_id":key_id,"finding":"COVERED","status":"PASS","witness":{
+                        "case_id":case.case_id,"occurrence_id":oid,"source_location":item.location,"parent_kind":key.attribute_parent_kind,
+                        "parent_occurrence_id":item.parent,"parent_key_id":key.parent_key_id,"semantic_role":key.semantic_role,
+                        "result_type":item.datatype,"computed_integer":key.computed_integer,"exact_required_lexeme":key.exact_required_lexeme,
+                        "executed_values":normal.values.get(oid,[]),"normal_output":normal.output,
+                        "expected_output_reference":case.expected_output_reference,
+                        "initialization_value":initialization.value if initialization else None,
+                        "initialization_dependencies":sorted(initialization.dependencies) if initialization else [],
+                        "initial_accumulator_binding":initial_binding,
+                        "downstream_state_read_occurrences":[read for read,proof in self.mapping.program.state_analysis.get("read_definitions",{}).items() if item.parent in proof],
+                        "output_dependencies":sorted(normal.output_dependencies),"active_parent_witness":parent["witness"] if parent else None}}
         return {"key_id":key_id,"finding":"NOT_COVERED","status":"PASS","witness":None}
 
     def output_attribute(self,key_id:str) -> dict[str,Any]:
         self._check_bound_inputs();key=self._key(key_id)
         if key.evidence_kind!="OUTPUT_ATTRIBUTE":raise SchemaError("output key required")
+        from .contract_ir import output_requirement
+        requirement=output_requirement(key.operation)
+        program=self.mapping.program
+        if self.mapping.key_occurrences[key_id]!=(program.output_id,):raise ClosureError("output obligation is not attached to the final output node")
         rows=[];witness=None
-        for case in self.cases:
+        for case in sorted(self.cases,key=lambda c:c.case_id.encode("utf-8")):
             validate_record_reference(case.expected_output_reference,string_value=True)
             self.resolver.verify_record_content(case.expected_output_reference,case.expected_output)
-            v=int(_integer_output(case.expected_output));match={"OUTPUT_ZERO":v==0,"OUTPUT_POSITIVE":v>0,"OUTPUT_NEGATIVE":v<0,"OUTPUT_MULTIDIGIT":abs(v)>=10}.get(key.operation)
+            normal=self.normals[case.case_id]
+            if program.output_id not in normal.evaluated or program.output_id not in normal.output_dependencies:raise ClosureError("expected output has no executed mapped output connection")
+            v=int(_integer_output(case.expected_output))
+            match=(str(v)==requirement["exact_sentinel"]) if requirement["output_requirement_kind"]=="EXACT_SENTINEL" else {"OUTPUT_ZERO":v==0,"OUTPUT_POSITIVE":v>0,"OUTPUT_NEGATIVE":v<0,"OUTPUT_MULTIDIGIT":abs(v)>=10}.get(key.operation)
             if match is None:raise SchemaError("unknown output category")
             row={"frozen_case_id":case.case_id,"expected_output_reference":case.expected_output_reference,"expected_output_value":case.expected_output,"mechanical_match":"MATCH" if match else "NO_MATCH"};rows.append(row)
             if match and witness is None:witness=row
-        return {"key_id":key_id,"finding":"COVERED" if witness else "NOT_COVERED","status":"PASS","cases":rows,"witness":witness}
+        return {"key_id":key_id,**requirement,"finding":"COVERED" if witness else "NOT_COVERED","status":"PASS","cases":rows,"witness":witness,
+                "output_attachment":{"occurrence_id":program.output_id,"source_location":program.item(program.output_id).location,"result_type":"INTEGER"}}
 
 
 def behavioral_activity(*args:Any,**kwargs:Any):
