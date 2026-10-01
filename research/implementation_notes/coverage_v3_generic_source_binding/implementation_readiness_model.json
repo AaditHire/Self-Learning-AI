@@ -1,0 +1,107 @@
+{
+  "artifact_kind": "DEVELOPMENT_ONLY_GENERIC_BINDING_EVIDENCE",
+  "edge_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+  "frozen_equivalence_families": [
+    "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+    "BOOLEAN_OR_VS_PROVEN_INDICATOR_SUM_POSITIVE",
+    "COMPARISON_DIRECTION",
+    "CONSISTENT_ALPHA_RENAMING",
+    "PURE_COMMUTATIVE_CHILD_SORT",
+    "SYMMETRIC_EQUALITY",
+    "WHOLLY_INTEGER_CONSTANT_NEG_ADD_SUB_MUL_COMPUTED_KEY_ONLY"
+  ],
+  "grammar_forms": [
+    [
+      "array_reduction",
+      "PER_ITEM",
+      false
+    ],
+    [
+      "array_reduction",
+      "PER_ITEM",
+      true
+    ],
+    [
+      "array_reduction",
+      "PREFIX",
+      false
+    ],
+    [
+      "array_reduction",
+      "PREFIX",
+      true
+    ],
+    [
+      "array_reduction",
+      "TWO_PASS",
+      false
+    ],
+    [
+      "array_reduction",
+      "TWO_PASS",
+      true
+    ],
+    [
+      "numeric_iteration",
+      "PER_ITEM",
+      false
+    ],
+    [
+      "numeric_iteration",
+      "PER_ITEM",
+      true
+    ],
+    [
+      "numeric_iteration",
+      "PREFIX",
+      false
+    ],
+    [
+      "numeric_iteration",
+      "PREFIX",
+      true
+    ],
+    [
+      "numeric_iteration",
+      "TWO_PASS",
+      false
+    ],
+    [
+      "numeric_iteration",
+      "TWO_PASS",
+      true
+    ]
+  ],
+  "historical_8668_authoritative": false,
+  "implementation_readiness": {
+    "INDICATOR": "IMPLEMENTATION_READY",
+    "V32": "IMPLEMENTATION_READY",
+    "V33": "IMPLEMENTATION_READY"
+  },
+  "matrix_quantifier": "DEVELOPMENT REQUIREMENT KINDS, NOT SCIENTIFIC INSTANCES",
+  "old_global_gate_artifacts_changed": false,
+  "other_core_gaps": "state/essentiality/value/output/E5/V3.5/delegated/provenance/binder remain outside this pass",
+  "population_producer_invoked": false,
+  "primitive_identities": [
+    "divisor_index",
+    "even_value",
+    "first_half",
+    "large_magnitude",
+    "negative_value",
+    "odd_index",
+    "residue_two",
+    "value_exceeds_index"
+  ],
+  "schema_version": 1,
+  "scientific_expected_index_created": false,
+  "scientific_gate_semantics_changed": false,
+  "scientific_instance_closure": {
+    "INDICATOR": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION",
+    "V32": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION",
+    "V33": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION"
+  },
+  "scientific_satisfaction_claims": 0,
+  "scientific_sources_constructed": 0,
+  "scope": "DEVELOPMENT_ONLY",
+  "starting_head": "654c1745ae4148a9d8a4200c818ffc288fb8bb36"
+}
