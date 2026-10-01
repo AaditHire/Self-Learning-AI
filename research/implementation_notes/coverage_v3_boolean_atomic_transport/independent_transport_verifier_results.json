@@ -1,0 +1,2260 @@
+{
+  "records": [
+    {
+      "bundle_sha256": "c8fc14d1acd91bff9b69e8cc838034032ed85f393276ba6622aaa146e49ff903",
+      "pair": [
+        "AND",
+        "PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|29:CONTRACT|17:CTRANSPORT903-AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:125|2:11",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:37",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:42"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:251|2:33"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:255|2:34"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:AND|7:BOOLEAN|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "AND",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:35"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:36",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:41"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:40"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:293|2:45"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|9:PRIMITIVE|3:256|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|9:PRIMITIVE|3:274|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:31",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:36"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:32",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:37"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:33"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:34"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:35"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:38"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:39"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:40"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:41"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:42"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:43",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:44"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:45"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:50",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:51",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:52",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:58",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:59",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:65",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:66",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:67",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:68"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:69",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:70",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:71",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:72"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:266|2:38"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:269|2:39"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:284|2:43"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:287|2:44"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|29:CONTRACT|17:CTRANSPORT903-AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 1,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    },
+    {
+      "bundle_sha256": "1b5a1768e582b64b05cadf231cb3417fa2f3da82a3f784da591e4093acad4948",
+      "pair": [
+        "OR",
+        "SUM",
+        "BOOLEAN_OR"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|28:CONTRACT|16:CTRANSPORT903-OR|8:region_0|681:SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:125|2:11",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:37",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:42"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:251|2:33"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:35"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:36",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:41"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:40"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:293|2:45"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|9:PRIMITIVE|3:256|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|9:PRIMITIVE|3:274|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:31",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:36"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:32",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:37"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:33"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:34"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:35"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|12:OR_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:38"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:39"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:40"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|12:OR_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:41"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:42"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:43",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:44"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:45"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:50",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:51",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:52",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:58",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:59",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:65",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:66",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:67",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:68"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:69",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:70",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:71",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:72"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:266|2:38"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:269|2:39"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|126:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:284|2:43"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:287|2:44"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|126:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|28:CONTRACT|16:CTRANSPORT903-OR|8:region_0|681:SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 1,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    },
+    {
+      "bundle_sha256": "cf20c21a44c15f9d116a8578a43b35a11abbd0b95d59853338152f0cd8cdfe28",
+      "pair": [
+        "AND",
+        "ALPHA_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|29:CONTRACT|17:CTRANSPORT903-AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:125|2:11",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:37",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:42"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:251|2:33"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:255|2:34"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:AND|7:BOOLEAN|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "AND",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:35"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:256|2:36",
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:41"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:274|2:40"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:293|2:45"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|9:PRIMITIVE|3:256|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|9:PRIMITIVE|3:274|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:31",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:36"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:32",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:37"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:33"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:34"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:35"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:38"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:39"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:40"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:41"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:42"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:43",
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:44"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:EDGE|2:45"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:50",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:51",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:52",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:58",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:59",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:65",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:66",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:67",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:68"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:69",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:70",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:71",
+              "OCC|17:CTRANSPORT903-AND|13:SEMANTIC_EDGE|2:72"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:266|2:38"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:269|2:39"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:284|2:43"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|17:CTRANSPORT903-AND|4:NODE|3:287|2:44"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|29:CONTRACT|17:CTRANSPORT903-AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 1,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    },
+    {
+      "bundle_sha256": "9e5066e764b5746bdab798d6cd7dd0ecfda9fdf31cf4590c0d1bba2251b552d7",
+      "pair": [
+        "OR",
+        "ALPHA_SUM",
+        "BOOLEAN_OR"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|28:CONTRACT|16:CTRANSPORT903-OR|8:region_0|681:SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:125|2:11",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:37",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:42"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:251|2:33"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:35"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:256|2:36",
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:41"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:274|2:40"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:293|2:45"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|9:PRIMITIVE|3:256|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|9:PRIMITIVE|3:274|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:31",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:36"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:32",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:37"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:33"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:34"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:35"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|12:OR_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:38"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:39"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:40"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|12:OR_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:41"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:42"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:43",
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:44"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:EDGE|2:45"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:50",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:51",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:52",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:58",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:59",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:65",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:66",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:67",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:68"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:69",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:70",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:71",
+              "OCC|16:CTRANSPORT903-OR|13:SEMANTIC_EDGE|2:72"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:266|2:38"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:269|2:39"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|126:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:284|2:43"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|16:CTRANSPORT903-OR|4:NODE|3:287|2:44"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|126:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|12:OR_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|28:CONTRACT|16:CTRANSPORT903-OR|8:region_0|681:SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 1,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|657:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"BOOLEAN_OR\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"BOOLEAN_OR\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    },
+    {
+      "bundle_sha256": "dc00824581bcd0ca0878070544253ab83a0ed81ae27efffd89246bb46991733e",
+      "pair": [
+        "REPEATED_AND",
+        "REPEATED_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_1|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:125|2:11",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:37",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:42",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:51",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:56"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:251|2:33",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:309|2:47"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:255|2:34",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:313|2:48"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:AND|7:BOOLEAN|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "AND",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:35",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:49"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:36",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:41",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:50",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:55"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:40",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:54"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:293|2:45",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:351|2:59"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:256|9:odd_index",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:314|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:274|11:residue_two",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:332|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:31",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:36",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:46",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:51"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:32",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:37",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:47",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:52"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:33",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:48"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:34",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:49"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:35",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:50"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:38",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:39",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:40",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:41",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:56"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:42",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:57"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:43",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:44",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:58",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:59"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:45",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:60"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:65",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:68",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:71",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:74"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:66",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:69",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:72",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:75"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:67",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:70",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:73",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:76"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:79",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:80",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:86",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:87",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:88",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:89",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:90",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:91",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:92",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:93"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:94",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:95",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:96",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:97",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:98",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:99",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:100",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:101",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:102"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:266|2:38",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:324|2:52"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:269|2:39",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:327|2:53"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:284|2:43",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:342|2:57"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:287|2:44",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:345|2:58"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_1",
+          "region:region_1",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_1",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_1|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 2,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    },
+    {
+      "bundle_sha256": "d36cfa6e5694db6a3ebd4fd0252e2c7de6e648ecf80ba18e9f5d84c3b8348727",
+      "pair": [
+        "REPEATED_AND",
+        "ALPHA_REPEATED_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ],
+      "production_mapping_verification": {
+        "finding": "VERIFIED_PRODUCTION_MAPPING_FOR_INTENDED_SEMANTIC_OBLIGATIONS",
+        "key_resolution_recomputed": true,
+        "mapping_constructor_invoked": false,
+        "semantic_obligation_ids": [
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_1|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "unresolved_raw_keys": [
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:125|2:11",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:37",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:42",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:51",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:56"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|4:READ|7:INTEGER|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "READ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:251|2:33",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:309|2:47"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|2:IF|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "IF",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:255|2:34",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:313|2:48"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:AND|7:BOOLEAN|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "AND",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:35",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:49"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:256|2:36",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:41",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:314|2:50",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:55"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "MOD",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:274|2:40",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:332|2:54"
+            ],
+            "key_id": "KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "EQ",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:293|2:45",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:351|2:59"
+            ],
+            "key_id": "KEY|17:GENERIC_CONSTRUCT|17:numeric_iteration|10:ACCUMULATE|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "ACCUMULATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:256|9:odd_index",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:314|9:odd_index"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|9:odd_index|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "odd_index",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:274|11:residue_two",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|9:PRIMITIVE|3:332|11:residue_two"
+            ],
+            "key_id": "KEY|18:SEMANTIC_PRIMITIVE|17:numeric_iteration|11:residue_two|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "residue_two",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:31",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:36",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:46",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:51"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:32",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:37",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:47",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:52"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:33",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:48"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:34",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:49"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:35",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:50"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:38",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:53"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:39",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:54"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:40",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:55"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:VALUE_TO_OPERATOR|7:BOOLEAN|7:BOOLEAN|13:AND_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_OPERATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:41",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:56"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|20:PREDICATE_TO_CONTROL|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|7:CONTROL",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PREDICATE_TO_CONTROL",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:42",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:57"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|23:OPERATOR_TO_ACCUMULATOR|7:INTEGER|7:INTEGER|12:CONTRIBUTION|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "OPERATOR_TO_ACCUMULATOR",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:43",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:44",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:58",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:59"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|17:CONTROL_TO_UPDATE|7:BOOLEAN|7:BOOLEAN|7:CONTROL|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "CONTROL_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:45",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:EDGE|2:60"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|10:LOOP_CARRY|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "LOOP_CARRY",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:65",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:68",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:71",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:74"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:66",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:69",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:72",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:75"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:INTEGER|7:INTEGER|12:EQ_OPERAND_1|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:67",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:70",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:73",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:76"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|18:VALUE_TO_PREDICATE|7:BOOLEAN|7:BOOLEAN|17:PREDICATE_BOOLEAN|17:PREDICATE_BOOLEAN",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "VALUE_TO_PREDICATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:79",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:80",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:86",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:87",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:88",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:89",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:90",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:91",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:92",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:93"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|11:DOMAIN_ITEM",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:94",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:95",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:96",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:97",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:98",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|2:99",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:100",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:101",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|13:SEMANTIC_EDGE|3:102"
+            ],
+            "key_id": "KEY|23:ATOMIC_CONTROL_DATAFLOW|17:numeric_iteration|21:PRIOR_STATE_TO_UPDATE|7:INTEGER|7:INTEGER|21:DISPLAYED_ACCUMULATOR|21:DISPLAYED_ACCUMULATOR",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "PRIOR_STATE_TO_UPDATE",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:266|2:38",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:324|2:52"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:2:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:269|2:39",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:327|2:53"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:1:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:1:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:284|2:43",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:342|2:57"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|30:COMPUTED_VALUE:3:MOD_OPERAND_1|13:MOD_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|3:MOD|7:INTEGER|7:INTEGER|7:INTEGER|11:DOMAIN_ITEM|13:MOD_OPERAND_1|12:EQ_OPERAND_0",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:3:MOD_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          },
+          {
+            "contract_occurrences": [
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:287|2:44",
+              "OCC|26:CTRANSPORT903-REPEATED_AND|4:NODE|3:345|2:58"
+            ],
+            "key_id": "KEY|16:VALUE_OR_LITERAL|17:numeric_iteration|29:COMPUTED_VALUE:2:EQ_OPERAND_1|12:EQ_OPERAND_1|127:KEY|15:ATOMIC_OPERATOR|17:numeric_iteration|2:EQ|7:BOOLEAN|7:INTEGER|7:INTEGER|12:EQ_OPERAND_0|12:EQ_OPERAND_1|13:AND_OPERAND_1",
+            "method": "UNRESOLVED_DISTINCT_RAW_REQUIREMENT",
+            "operation": "COMPUTED_VALUE:2:EQ_OPERAND_1",
+            "source_occurrences": [],
+            "transport_references": []
+          }
+        ]
+      },
+      "transport_verification": {
+        "constructor_invoked": false,
+        "dependency_order": [
+          "frozen_authority",
+          "parsed_typed_source",
+          "primitive_recognition",
+          "reaching_indicator_proof",
+          "local_v33:region_1",
+          "region:region_1",
+          "local_v33:region_0",
+          "region:region_0",
+          "independent_verification",
+          "total_v32",
+          "transport:region_1",
+          "transport:region_0",
+          "production_mapping_proof",
+          "activity_semantic_keys"
+        ],
+        "direct_obligation_count": 85,
+        "finding": "VERIFIED_CANONICAL_TRANSPORT",
+        "obligation_ids": [
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_0|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_CLAIM|38:CONTRACT|26:CTRANSPORT903-REPEATED_AND|8:region_1|693:SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ],
+        "raw_graph_equality_claim": false,
+        "region_constructor_invoked": false,
+        "regional_obligation_count": 2,
+        "semantic_key_ids": [
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n",
+          "SEMANTIC_OBLIGATION|669:{\"atomic_AND_MUL_equality_authorized\":false,\"contribution_encoding\":\"INTEGER_01\",\"control_paths\":[],\"domain\":\"numeric_iteration\",\"frozen_rule_id\":\"V3.3\",\"input_domain\":\"NONNEGATIVE_INTEGER\",\"loop_paths\":[[5]],\"predicate_relation\":[\"LOCAL_PAIR_JOINT\",[\"BOOLEAN_PRIMITIVE\",\"odd_index\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",2]],[\"INTEGER\",1]]],[\"BOOLEAN_PRIMITIVE\",\"residue_two\",[\"BINARY\",\"==\",[\"BINARY\",\"%\",[\"READ\",\"binding4:DOMAIN_ITEM\",\"INTEGER\"],[\"INTEGER\",3]],[\"INTEGER\",2]]]],\"scope\":\"LOCAL_PAIR_JOINT\",\"semantic_operand_types\":[\"BOOLEAN\",\"BOOLEAN\"],\"semantic_result_type\":\"BOOLEAN\",\"target_role\":\"DISPLAYED_ACCUMULATOR\"}\n"
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "97c7a1679004a4682beebea8bccf58781d147a84"
+}

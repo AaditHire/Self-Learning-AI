@@ -1,0 +1,658 @@
+{
+  "records": [
+    {
+      "bundle_sha256": "c8fc14d1acd91bff9b69e8cc838034032ed85f393276ba6622aaa146e49ff903",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "AND",
+        "PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ]
+    },
+    {
+      "bundle_sha256": "1b5a1768e582b64b05cadf231cb3417fa2f3da82a3f784da591e4093acad4948",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "OR",
+        "SUM",
+        "BOOLEAN_OR"
+      ]
+    },
+    {
+      "bundle_sha256": "cf20c21a44c15f9d116a8578a43b35a11abbd0b95d59853338152f0cd8cdfe28",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "AND",
+        "ALPHA_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ]
+    },
+    {
+      "bundle_sha256": "9e5066e764b5746bdab798d6cd7dd0ecfda9fdf31cf4590c0d1bba2251b552d7",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "OR",
+        "ALPHA_SUM",
+        "BOOLEAN_OR"
+      ]
+    },
+    {
+      "bundle_sha256": "dc00824581bcd0ca0878070544253ab83a0ed81ae27efffd89246bb46991733e",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_1"
+          ],
+          [
+            "local_v33:region_1",
+            "region:region_1"
+          ],
+          [
+            "region:region_1",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_1"
+          ],
+          [
+            "transport:region_1",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "local_v33:region_1",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_1",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_1",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "REPEATED_AND",
+        "REPEATED_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ]
+    },
+    {
+      "bundle_sha256": "d36cfa6e5694db6a3ebd4fd0252e2c7de6e648ecf80ba18e9f5d84c3b8348727",
+      "graph": {
+        "edges": [
+          [
+            "frozen_authority",
+            "parsed_typed_source"
+          ],
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "primitive_recognition",
+            "reaching_indicator_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_0"
+          ],
+          [
+            "local_v33:region_0",
+            "region:region_0"
+          ],
+          [
+            "region:region_0",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_0"
+          ],
+          [
+            "transport:region_0",
+            "production_mapping_proof"
+          ],
+          [
+            "reaching_indicator_proof",
+            "local_v33:region_1"
+          ],
+          [
+            "local_v33:region_1",
+            "region:region_1"
+          ],
+          [
+            "region:region_1",
+            "independent_verification"
+          ],
+          [
+            "total_v32",
+            "transport:region_1"
+          ],
+          [
+            "transport:region_1",
+            "production_mapping_proof"
+          ],
+          [
+            "independent_verification",
+            "total_v32"
+          ],
+          [
+            "production_mapping_proof",
+            "activity_semantic_keys"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "frozen_authority",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "parsed_typed_source",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "reaching_indicator_proof",
+            "kind": "FOUNDATION"
+          },
+          {
+            "id": "local_v33:region_0",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_0",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_0",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "local_v33:region_1",
+            "kind": "LOCAL_EQUIVALENCE"
+          },
+          {
+            "id": "region:region_1",
+            "kind": "REGION_CERTIFICATE"
+          },
+          {
+            "id": "transport:region_1",
+            "kind": "SEMANTIC_TRANSPORT"
+          },
+          {
+            "id": "independent_verification",
+            "kind": "INDEPENDENT_CHECK"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_CORRESPONDENCE"
+          },
+          {
+            "id": "production_mapping_proof",
+            "kind": "MAPPING_PROOF"
+          },
+          {
+            "id": "activity_semantic_keys",
+            "kind": "DERIVED_ACTIVITY_IDENTITY"
+          }
+        ]
+      },
+      "pair": [
+        "REPEATED_AND",
+        "ALPHA_REPEATED_PRODUCT",
+        "LOCAL_PAIR_JOINT"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "97c7a1679004a4682beebea8bccf58781d147a84"
+}

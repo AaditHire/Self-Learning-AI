@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Mapping, Sequence
 import hashlib
 
-from .interfaces import ArtifactResolver, ClosureError, SchemaError, _keys, _schema, rid, validate_record_reference
+from .interfaces import ArtifactResolver, ClosureError, SchemaError, _keys, _schema, rid, validate_record_reference, canonical_json_bytes
 from .core_ir import Program, Execution, compile_program, execute
 from .contracts import CoverageContractV3, ContractKey, input_domain_classes
 from .goco import Expr, expressions_equivalent, alpha_bijection
@@ -24,12 +24,71 @@ class MappingProof:
     key_occurrences:Mapping[str,tuple[str,...]]
     source_sha256:str
     equivalence_proofs:tuple[Mapping[str,Any],...]=()
+    semantic_transport:Mapping[str,Any]|None=None
+    raw_key_resolution:tuple[Mapping[str,Any],...]=()
+
+    def to_record(self) -> dict[str,Any]:
+        """Expose direct/region satisfaction without hiding unresolved raw keys."""
+        from .interfaces import canonical_json_bytes
+        regional=self.semantic_transport is not None
+        return {"contract_id":self.contract.contract_id,"program_id":self.program.program_id,
+            "source_sha256":self.source_sha256,"ordinary_correspondence":self.correspondence,
+            "key_occurrences":dict(self.key_occurrences),"equivalence_proofs":self.equivalence_proofs,
+            "semantic_transport_sha256":hashlib.sha256(canonical_json_bytes(self.semantic_transport)).hexdigest() if regional else None,
+            "obligation_satisfaction":{"direct":self.semantic_transport["ordinary_obligations"],"regional":self.semantic_transport["transports"]} if regional else {"direct":self.correspondence,"regional":[]},
+            "raw_key_resolution":self.raw_key_resolution,
+            "mapping_status":"TOTAL_CORRESPONDENCE_WITH_VERIFIED_SEMANTIC_TRANSPORT" if regional else "STRICT_TYPED_MAPPING",
+            "all_raw_atomic_keys_satisfied":all(r["method"]!="UNRESOLVED_DISTINCT_RAW_REQUIREMENT" for r in self.raw_key_resolution),
+            "raw_graph_equality_claim":False if regional else None}
+
+    def validate(self) -> None:
+        from .contract_ir import graph_record
+        rebuilt=reconcile_complete_mapping(self.contract,self.program.source,
+            transport_evidence=self.semantic_transport)
+        if canonical_json_bytes(rebuilt.to_record())!=canonical_json_bytes(self.to_record()):
+            raise ClosureError("MAPPING_PROOF_RECONSTRUCTION_MISMATCH")
+        if graph_record(rebuilt.program)!=graph_record(self.program):raise ClosureError("bound typed IR changed")
 
 
-def reconcile_complete_mapping(contract:CoverageContractV3,source:str) -> MappingProof:
+def reconcile_complete_mapping(contract:CoverageContractV3,source:str,*,region_evidence:Mapping[str,Any]|None=None,
+                               transport_evidence:Mapping[str,Any]|None=None) -> MappingProof:
     """No ID-set substitute: exact complete typed/binding/tree correspondence."""
     contract.validate();program=compile_program(contract.program_id,source);expected=contract.ir
     if contract.core_gaps:raise ClosureError("UNRESOLVED_REQUIREMENT: incomplete prospective contract")
+    if region_evidence is not None or transport_evidence is not None:
+        from .canonical_transport import build_canonical_transport,digest
+        from .transport_verifier import verify_canonical_transport
+        if region_evidence is None:
+            region_evidence=transport_evidence.get("total_mapping_certificate")
+        if region_evidence is None:raise ClosureError("MISSING_REGION_CERTIFICATE")
+        bundle=transport_evidence if transport_evidence is not None else build_canonical_transport(contract,source,region_evidence)
+        verify_canonical_transport(bundle)
+        if digest(bundle["contract"])!=digest(contract.to_dict()):raise ClosureError("TRANSPORT_WRONG_BOUND_CONTRACT")
+        if digest(region_evidence)!=digest(bundle["total_mapping_certificate"]):raise ClosureError("TRANSPORT_CERTIFICATE_HASH_MISMATCH")
+        if bundle["source_sha256"]!=hashlib.sha256(source.encode()).hexdigest():raise ClosureError("TRANSPORT_WRONG_BOUND_SOURCE")
+        table={r["contract"]:r["source"] for r in region_evidence["ordinary_correspondence"]}
+        occurrences={};resolution=[]
+        region_by_root={r["contract"]["expression_node"]:r for r in region_evidence["regions"]}
+        transport_by_region={t["region_id"]:t for t in bundle["transports"]}
+        for key in contract.canonical_keys:
+            required=contract.key_occurrences[key.key_id]
+            refs=[]
+            if all(o in table for o in required):
+                method="DIRECT_TYPED_CORRESPONDENCE";actual=tuple(table[o] for o in required)
+            elif key.evidence_kind=="BEHAVIORAL" and key.operation=="OR" and all(o in region_by_root and region_by_root[o]["scope"]=="BOOLEAN_OR" for o in required):
+                # V3.3 explicitly authorizes typed Boolean OR truth transport.
+                # No analogous atomic AND->MUL authorization exists.
+                method="VERIFIED_REGIONAL_SEMANTIC_TRANSPORT"
+                actual=tuple(region_by_root[o]["source"]["expression_node"] for o in required)
+                refs=[transport_by_region[region_by_root[o]["region_id"]]["transport_id"] for o in required]
+                if any(program.item(o).datatype!="BOOLEAN" for o in actual):raise ClosureError("TRANSPORT_BOUNDARY_TYPE_MISMATCH")
+            else:
+                method="UNRESOLVED_DISTINCT_RAW_REQUIREMENT";actual=()
+            if actual:occurrences[key.key_id]=actual
+            resolution.append({"key_id":key.key_id,"operation":key.operation,"method":method,
+                "contract_occurrences":required,"source_occurrences":actual,"transport_references":refs})
+        return MappingProof(contract,program,tuple(table.items()),occurrences,hashlib.sha256(source.encode()).hexdigest(),
+            tuple(bundle["transports"]),bundle,tuple(resolution))
     from .semantic_ir import computed_mapping_view
     expected_tree,expected_items,expected_hidden=computed_mapping_view(expected)
     source_tree,source_items,source_hidden=computed_mapping_view(program)
@@ -137,6 +196,7 @@ def resolve_cases(resolver:ArtifactResolver,artifact_id:str,program_id:str) -> t
 class CoverageEngine:
     def __init__(self,mapping:MappingProof,*,resolver:ArtifactResolver,source_artifact_id:str,case_artifact_id:str,oracle:PinnedCompilerOracle):
         if type(oracle) is not PinnedCompilerOracle:raise SchemaError("actual pinned compiler oracle required")
+        mapping.validate()
         raw=resolver.read(source_artifact_id,role="SOURCE_REFERENCE")
         if raw!=mapping.program.source.encode("utf-8"):raise ClosureError("source artifact identity mismatch")
         self.mapping,self.resolver,self.oracle=mapping,resolver,oracle
@@ -155,8 +215,8 @@ class CoverageEngine:
     def _check_bound_inputs(self) -> None:
         from .contract_ir import graph_record
         source=self.resolver.read(self.source_artifact_id,role="SOURCE_REFERENCE").decode("utf-8")
-        current_mapping=reconcile_complete_mapping(self.mapping.contract,source)
-        if (current_mapping.source_sha256,current_mapping.correspondence,current_mapping.key_occurrences,current_mapping.equivalence_proofs)!=(self.mapping.source_sha256,self.mapping.correspondence,self.mapping.key_occurrences,self.mapping.equivalence_proofs):
+        current_mapping=reconcile_complete_mapping(self.mapping.contract,source,transport_evidence=self.mapping.semantic_transport)
+        if canonical_json_bytes(current_mapping.to_record())!=canonical_json_bytes(self.mapping.to_record()):
             raise ClosureError("bound source/mapping changed")
         if graph_record(current_mapping.program)!=graph_record(self.mapping.program):
             raise ClosureError("bound typed IR changed")
@@ -169,12 +229,18 @@ class CoverageEngine:
 
     def _key(self,key_id:str) -> ContractKey:
         for key in self.mapping.contract.canonical_keys:
-            if key.key_id==key_id:return key
+            if key.key_id==key_id:
+                if key_id not in self.mapping.key_occurrences:raise ClosureError("UNSATISFIED_DISTINCT_RAW_KEY: "+key.operation)
+                return key
         raise ClosureError("undeclared canonical key")
 
     def behavioral(self,key_id:str) -> dict[str,Any]:
         self._check_bound_inputs();key=self._key(key_id)
         if key.evidence_kind!="BEHAVIORAL":raise SchemaError("behavioral key required")
+        resolution=next((r for r in self.mapping.raw_key_resolution if r["key_id"]==key_id),None)
+        if resolution and resolution["method"]=="VERIFIED_REGIONAL_SEMANTIC_TRANSPORT":
+            from .canonical_activity import activity_for_raw_or_key
+            return activity_for_raw_or_key(self,key_id,resolution)
         occurrences=self.mapping.key_occurrences[key_id];program=self.mapping.program
         items=[program.item(x) for x in occurrences]
         if any(item.operation=="BOUNDED_LOOP" for item in items):
@@ -203,6 +269,12 @@ class CoverageEngine:
                 if witness is None and attempt["changed"]:witness=attempt
         result={"row_id":rid("V3.5",[program.program_id,key_id]),"key_id":key_id,"finding":"ACTIVE" if witness else "INACTIVE","status":"PASS","occurrences":occurrences,"normal_events":events,"attempts":attempts,"witness":witness}
         self.findings[key_id]=result;return result
+
+    def semantic_activity(self) -> dict[str,Any]:
+        """No caller-selected canonical key; derive all identities from proof."""
+        self._check_bound_inputs()
+        from .canonical_activity import semantic_activity
+        return semantic_activity(self)
 
     def attribute(self,key_id:str) -> dict[str,Any]:
         self._check_bound_inputs();key=self._key(key_id)
