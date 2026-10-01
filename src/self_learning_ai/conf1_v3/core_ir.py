@@ -325,13 +325,20 @@ class Execution:
 
 
 def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (), replacement: Any = None,
-            max_steps: int = 100000) -> Execution:
+            max_steps: int = 100000, detailed_state_trace: bool = False) -> Execution:
     """Bounded typed-IR interpreter; destinations are altered jointly, never text."""
     if len(occurrences)!=len(set(occurrences)) or any(x not in {i.occurrence_id for i in program.items} for x in occurrences):raise SchemaError("intervention occurrence set")
     if type(max_steps) is not int or max_steps<1:raise SchemaError("step budget")
     selected=set(occurrences);env:dict[str,Value]={};evaluated:set[str]=set();values:dict[str,list[Any]]={};events=[];initialization={};output=None;steps=0
     last_writer: dict[str, str] = {}
     state_trace=[]
+    loop_context=[]
+    loop_order={program.node_ids[id(s)]:n for n,s in enumerate(s for top in program.statements
+                for s in _walk_stmt(top) if isinstance(s,Stmt) and s.kind=="LOOP")}
+    def trace(record):
+        if detailed_state_trace:
+            record={**record,"loop_context":[dict(x) for x in loop_context]}
+        state_trace.append({"sequence":len(state_trace),**record})
     by_id={i.occurrence_id:i for i in program.items}
     # A typed intervention cannot smuggle a Boolean into a numeric edge or an
     # integer into a Boolean predicate. INPUT has its own raw-schema adapter.
@@ -362,8 +369,8 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
             if len(matches)>1:raise SchemaError("ambiguous runtime state edge")
             if matches:v=observe(matches[0].occurrence_id,v.value,v.dependencies)
             if writer is not None and not matches:raise SchemaError("runtime writer absent from static reaching definitions")
-            state_trace.append({"sequence":len(state_trace),"kind":"READ","binding":e.value,"reader":oid,"writer":writer,
-                                "state_edge":matches[0].occurrence_id if matches else None,"value":v.value})
+            trace({"kind":"READ","binding":e.value,"reader":oid,"writer":writer,
+                   "state_edge":matches[0].occurrence_id if matches else None,"value":v.value})
             return observe(oid,v.value,v.dependencies)
         if e.kind=="NUMBER":return observe(oid,int(e.value),frozenset())
         if e.kind=="STRING":return observe(oid,json.loads(e.value),frozenset())
@@ -414,7 +421,7 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
             if s.kind=="DECLARE":
                 typ,name=s.value.split(":");v=operand(oid,0,expr(s.expressions[0])) if s.expressions else Value(0 if typ=="NUMBER" else "")
                 v=observe(oid,v.value,v.dependencies|controls);env[name]=v;initialization[oid]=v;last_writer[name]=oid
-                state_trace.append({"sequence":len(state_trace),"kind":"INITIALIZE","binding":name,"writer":oid,"value":v.value})
+                trace({"kind":"INITIALIZE","binding":name,"writer":oid,"value":v.value})
             elif s.kind=="INPUT":
                 raw=replacement if program.macro_id in selected or oid in selected else raw_input
                 if program.domain=="numeric_iteration":
@@ -428,7 +435,7 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 macro_edge=program.edge_ids[(oid,400)]
                 decoded=observe(macro_edge,decoded.value,decoded.dependencies)
                 env[s.expressions[0].value]=decoded;last_writer[s.expressions[0].value]=oid
-                state_trace.append({"sequence":len(state_trace),"kind":"INPUT_WRITE","binding":s.expressions[0].value,"writer":oid,"value":value})
+                trace({"kind":"INPUT_WRITE","binding":s.expressions[0].value,"writer":oid,"value":value})
             elif s.kind=="UPDATE":
                 name=s.expressions[0].value;rhs=operand(oid,0,expr(s.expressions[1]));old=env[name];delta=rhs.value if s.value=="+=" else -rhs.value if s.value=="-=" else rhs.value-old.value
                 prior_writer=last_writer.get(name)
@@ -436,6 +443,9 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                     state_edges=[i for i in program.items if i.kind=="EDGE" and i.operation=="PRIOR_STATE_TO_UPDATE" and i.source==prior_writer and i.target==oid]
                     if len(state_edges)!=1:raise SchemaError("accumulator reaching definition missing/ambiguous")
                     old=observe(state_edges[0].occurrence_id,old.value,old.dependencies)
+                    if detailed_state_trace:
+                        trace({"kind":"IMPLICIT_READ","binding":name,"reader":oid,"writer":prior_writer,
+                               "state_edge":state_edges[0].occurrence_id,"value":old.value})
                 carry=program.edge_ids.get((oid,200))
                 active_controls=True;local_controls=controls
                 for item in program.items:
@@ -451,25 +461,33 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 # An accumulator intervention suppresses its contribution; it
                 # must never overwrite the previously accumulated state.
                 v=observe(oid,old.value+delta,deps,replace=s.value!="+=");env[name]=v;last_writer[name]=oid
-                state_trace.append({"sequence":len(state_trace),"kind":"WRITE","binding":name,"writer":oid,"prior_writer":prior_writer,
-                                    "old_value":old.value,"value":v.value,"delta":delta,"dependencies":sorted(v.dependencies)})
+                trace({"kind":"WRITE","binding":name,"writer":oid,"prior_writer":prior_writer,
+                       "old_value":old.value,"value":v.value,"delta":delta,"dependencies":sorted(v.dependencies)})
                 events.append({"occurrence_id":oid,"delta":delta,"dependencies":v.dependencies,"register":name})
             elif s.kind=="IF":
                 cond=operand(oid,0,expr(s.expressions[0]));cond=observe(oid,bool(cond.value),cond.dependencies|controls)
                 if cond.value:rows(s.children,controls|cond.dependencies)
             elif s.kind=="LOOP":
                 index=s.loop_index
+                loop_context.append(dict(loop=oid,pass_order=loop_order[oid],iteration=0,traversal=s.value))
                 if s.value=="FORWARD":
                     initial,step=program.index_nodes[oid]
                     value=operand(oid,0,expr(s.expressions[0]));env[index]=observe(initial,value.value,value.dependencies);last_writer[index]=initial
                     initialization[initial]=env[index]
+                    if detailed_state_trace:trace({"kind":"INDEX_INITIALIZE","binding":index,"writer":initial,"value":env[index].value})
                 while True:
                     cond=operand(oid,len(s.expressions)-1,expr(s.expressions[-1]));cond=observe(oid,bool(cond.value),cond.dependencies|controls)
+                    if detailed_state_trace:trace({"kind":"LOOP_TEST","loop":oid,"value":bool(cond.value),"index_value":env[index].value})
                     if not cond.value:break
                     rows(s.children,controls|cond.dependencies)
                     if s.value=="FORWARD":
                         initial,step=program.index_nodes[oid]
+                        prior=last_writer[index];old_value=env[index].value
+                        if detailed_state_trace:trace({"kind":"INDEX_PRIOR_READ","binding":index,"reader":step,"writer":prior,"value":old_value})
                         env[index]=observe(step,env[index].value+1,env[index].dependencies);last_writer[index]=step
+                        if detailed_state_trace:trace({"kind":"INDEX_WRITE","binding":index,"writer":step,"prior_writer":prior,"old_value":old_value,"value":env[index].value,"delta":1})
+                    loop_context[-1]["iteration"]+=1
+                loop_context.pop()
             elif s.kind=="DISPLAYNL":
                 v=operand(oid,0,expr(s.expressions[0]));output=observe(oid,v.value,v.dependencies|controls)
                 final=ungroup(s.expressions[0])
