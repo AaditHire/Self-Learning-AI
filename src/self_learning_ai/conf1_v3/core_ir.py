@@ -355,7 +355,9 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
         if steps>max_steps:raise SchemaError("IR_EXECUTION_BUDGET_EXCEEDED")
     def observe(oid:str,value:Any,deps:frozenset[str], *, replace: bool = True) -> Value:
         tick();evaluated.add(oid);values.setdefault(oid,[]).append(value)
-        if replace and oid in selected:value=replacement
+        if replace and oid in selected:
+            if detailed_state_trace:trace({"kind":"INTERVENTION","occurrence":oid,"before":value,"after":replacement,"mode":"DESTINATION_REPLACEMENT"})
+            value=replacement
         return Value(value,deps|{oid})
     def operand(dst:str,port:int,value:Value) -> Value:
         oid=program.edge_ids.get((dst,port))
@@ -424,6 +426,9 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 trace({"kind":"INITIALIZE","binding":name,"writer":oid,"value":v.value})
             elif s.kind=="INPUT":
                 raw=replacement if program.macro_id in selected or oid in selected else raw_input
+                if detailed_state_trace and (program.macro_id in selected or oid in selected):
+                    for target in occurrences:
+                        if target in {program.macro_id,oid}:trace({"kind":"INTERVENTION","occurrence":target,"before":raw_input,"after":raw,"mode":"DOMAIN_INPUT_REPLACEMENT"})
                 if program.domain=="numeric_iteration":
                     if not isinstance(raw,str) or not raw.isascii() or not raw.isdigit():raise SchemaError("nonnegative integer input required")
                     value=int(raw)
@@ -435,7 +440,7 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 macro_edge=program.edge_ids[(oid,400)]
                 decoded=observe(macro_edge,decoded.value,decoded.dependencies)
                 env[s.expressions[0].value]=decoded;last_writer[s.expressions[0].value]=oid
-                trace({"kind":"INPUT_WRITE","binding":s.expressions[0].value,"writer":oid,"value":value})
+                trace({"kind":"INPUT_WRITE","binding":s.expressions[0].value,"writer":oid,"value":decoded.value if detailed_state_trace else value})
             elif s.kind=="UPDATE":
                 name=s.expressions[0].value;rhs=operand(oid,0,expr(s.expressions[1]));old=env[name];delta=rhs.value if s.value=="+=" else -rhs.value if s.value=="-=" else rhs.value-old.value
                 prior_writer=last_writer.get(name)
@@ -456,7 +461,11 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                 if not active_controls:continue
                 if carry:
                     evaluated.add(carry);values.setdefault(carry,[]).append(old.value)
-                if (oid in selected or carry in selected) and s.value=="+=":delta=0
+                if (oid in selected or carry in selected) and s.value=="+=":
+                    if detailed_state_trace:
+                        for target in occurrences:
+                            if target in {oid,carry}:trace({"kind":"INTERVENTION","occurrence":target,"before":delta,"after":0,"mode":"CONTRIBUTION_SUPPRESSION"})
+                    delta=0
                 deps=rhs.dependencies|local_controls|(old.dependencies if s.value!="=" else frozenset())|(frozenset({carry}) if carry else frozenset())
                 # An accumulator intervention suppresses its contribution; it
                 # must never overwrite the previously accumulated state.
@@ -495,7 +504,13 @@ def execute(program: Program, raw_input: str, *, occurrences: tuple[str,...] = (
                     events.append({"occurrence_id":oid,"delta":v.value,"dependencies":output.dependencies,
                                    "register":"FINAL_OUTPUT","event_kind":"TWO_PASS_PRODUCT_OUTPUT"})
     try:rows(program.statements)
-    except SchemaError:raise
+    except SchemaError as exc:
+        if detailed_state_trace:
+            # Observations only: an interrupted trace is NOT an Execution and
+            # never supplies a fabricated terminal output or state certificate.
+            exc.partial_observations={"state_trace":state_trace,"events":[{**e,"dependencies":sorted(e["dependencies"])} for e in events],
+                "evaluated":sorted(evaluated),"terminal_output":None,"complete":False}
+        raise
     except (TypeError,ValueError,KeyError,IndexError,ZeroDivisionError) as exc:raise SchemaError("IR_EXECUTION_UNRESOLVED") from exc
     if output is None or type(output.value) is not int:raise SchemaError("integer final output required")
     return Execution(str(output.value),output.dependencies,evaluated,values,events,initialization,occurrences,state_trace)

@@ -267,15 +267,19 @@ def static_evidence(plan,source):
     return p,graph,certificate
 
 
-def trace_agreement(p,graph,execution):
+def trace_agreement(p,graph,execution,*,authorized_intervention=None):
     """Resolve every dynamic explicit/implicit read to a static epoch relation."""
     edges=graph["required_state_edges"];read_rows={r["reader"]:r for r in graph["reads"]};last={};last_event={};rows=[]
+    selected=set(authorized_intervention["occurrences"]) if authorized_intervention else set()
+    replacement=authorized_intervention["replacement"] if authorized_intervention else None
+    require(selected==set(execution.intervention_occurrences),"STATE_INTERVENTION_AUTHORIZATION_MISMATCH")
     for t in execution.state_trace:
         context=t["loop_context"];loop=context[-1]["loop"] if context else None;iteration=context[-1]["iteration"] if context else None
         if t["kind"] in {"READ","IMPLICIT_READ","INDEX_PRIOR_READ"}:
             require(t["binding"] in last and last[t["binding"]]==t["writer"],"STATE_RUNTIME_STALE_WRITER")
             prior=last_event[t["binding"]];pc=prior["loop_context"]
-            require(equal(prior["value"],t["value"]),"STATE_RUNTIME_READ_VALUE_MISMATCH")
+            expected=replacement if t.get("state_edge") in selected else prior["value"]
+            require(equal(expected,t["value"]),"STATE_RUNTIME_READ_VALUE_MISMATCH")
             if pc and pc[-1]["loop"]==loop:
                 epoch="BEFORE_LOOP" if prior["kind"]=="INDEX_INITIALIZE" else "CURRENT_ITERATION" if pc[-1]["iteration"]==iteration else "PREVIOUS_ITERATION"
             elif pc: epoch="PASS_FINAL"
@@ -284,12 +288,15 @@ def trace_agreement(p,graph,execution):
             match=[e for e in edges if e["writer"]==t["writer"] and e["reader"]==t["reader"] and e["epoch"]==epoch]
             require(len(match)==1,"STATE_RUNTIME_STATIC_EPOCH_MISMATCH")
             rows.append(dict(sequence=t["sequence"],actual_reader=t["reader"],actual_writer=t["writer"],binding=t["binding"],
-                             value_before=t["value"],value_after=t["value"],loop=loop,iteration=iteration,
+                             value_before=prior["value"],value_after=t["value"],loop=loop,iteration=iteration,
                              static_state_edge=match[0]["edge_id"],relation=match[0]["relation"]))
         elif t["kind"] in {"INITIALIZE","INPUT_WRITE","WRITE","INDEX_INITIALIZE","INDEX_WRITE"}:
             if "prior_writer" in t: require(last.get(t["binding"])==t["prior_writer"],"STATE_RUNTIME_WRITE_PRIOR_MISMATCH")
             if "old_value" in t:
-                require(equal(t["old_value"],last_event[t["binding"]]["value"]) and t["value"]==t["old_value"]+t["delta"],"STATE_RUNTIME_WRITE_VALUE_MISMATCH")
+                implicit=next((q for q in reversed(execution.state_trace[:t["sequence"]]) if q["kind"]=="IMPLICIT_READ" and q["reader"]==t["writer"]),None)
+                expected_old=implicit["value"] if implicit and implicit.get("state_edge") in selected else last_event[t["binding"]]["value"]
+                expected_value=replacement if t["writer"] in selected and p.item(t["writer"]).operation!="ACCUMULATE" else t["old_value"]+t["delta"]
+                require(equal(t["old_value"],expected_old) and equal(t["value"],expected_value),"STATE_RUNTIME_WRITE_VALUE_MISMATCH")
             last[t["binding"]]=t["writer"];last_event[t["binding"]]=t
             rows.append(dict(sequence=t["sequence"],actual_writer=t["writer"],binding=t["binding"],value_before=t.get("old_value"),value_after=t["value"],
                              loop=loop,iteration=iteration,static_write=t["writer"]))
