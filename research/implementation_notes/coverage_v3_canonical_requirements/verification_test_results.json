@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "starting_head": "26583dd1a6cfd6375455000d8f2ddfb1c5c5c048",
+  "artifact_kind": "DEVELOPMENT_VERIFICATION_NOT_SCIENTIFIC_EXECUTION",
+  "focused": {
+    "passed": 244,
+    "deselected": 1,
+    "population_test_exclusion": "not prospective_population_is_incomplete_not_authoritative",
+    "files": ["tests/test_conf1_v3_requirements.py", "tests/test_conf1_v3_canonical_transport.py", "tests/test_conf1_v3_boolean_regions.py", "tests/test_conf1_v3_boolean_mapping.py", "tests/test_conf1_v3_semantic_core.py", "tests/test_conf1_v3_unit.py"]
+  },
+  "new_requirements_only": {"passed": 51},
+  "relevant_regressions": {
+    "passed": 36,
+    "subtests_passed": 8,
+    "historical_failures_deselected": 3,
+    "files": ["tests/test_benchmark.py", "tests/test_compiler.py", "tests/test_phase1r_context.py", "tests/test_phase3c_execution_contract.py", "tests/test_phase3c_dev2r_evaluation.py"]
+  },
+  "historical_failures_rerun_separately": [
+    {"test": "tests/test_phase3c_dev2r_evaluation.py::RecoveryTests::test_real_manifest_remains_unauthorized", "result": "FAIL", "reason": "RuntimeError not raised"},
+    {"test": "tests/test_phase3c_dev2r_evaluation.py::RecoveryTests::test_versioned_manifest_portable_hashes", "result": "FAIL", "reason": "True is not False"},
+    {"test": "tests/test_phase3c_execution_contract.py::Phase3CContractTests::test_execution_manifest_and_model_support_hashes", "result": "FAIL", "reason": "Execution code changed: .gitattributes"}
+  ],
+  "python_bytecode_disabled": true,
+  "pytest_cache_disabled": true,
+  "temporary_directories": "fresh checked-unused GUID basetemps outside repository",
+  "scientific_fixture_execution": false,
+  "population_test_or_producer_invoked": false,
+  "model_execution": false
+}

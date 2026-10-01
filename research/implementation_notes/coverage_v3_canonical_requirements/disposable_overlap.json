@@ -1,0 +1,351 @@
+{
+  "exact_string_overlap": 0,
+  "expected_labels_parsed": false,
+  "historical_fixture_files": 13,
+  "inventory": {
+    "expressions": [
+      {
+        "sha256_utf8": "dd5fd209d4b09359a48752e1e1def261787a0f0ccf1af9947e5f33314da9d50b",
+        "value": "creq904Item%2==1"
+      },
+      {
+        "sha256_utf8": "acf22557b72177569f55e242c3b8dd98af62b7f51608d5776162a5c74a5a4933",
+        "value": "creq904Item%3==2"
+      },
+      {
+        "sha256_utf8": "d31719a1fa8b965eb73d389dfcaef48c26a1a67b2abc69d049526e0927620303",
+        "value": "P&&Q"
+      },
+      {
+        "sha256_utf8": "ec1e37288554460a70f37b2ee7b157e4c478e3464209e2591e4e91d348d1f4d6",
+        "value": "P||Q"
+      },
+      {
+        "sha256_utf8": "76c108bb57c71fc760bf63c6242464b8df1fd32ada2c13df810110f7e08e9216",
+        "value": "n+i"
+      },
+      {
+        "sha256_utf8": "2a246326d02f1c626c2f45ccde9685874b28be9ab8f4cd7c451e3eee5b4a0de3",
+        "value": "n*i"
+      },
+      {
+        "sha256_utf8": "68a4bee8b0c1df1d60538739746935375f02711f9ffe289151d296e1ec0192c2",
+        "value": "(n+i)*(n+i)"
+      },
+      {
+        "sha256_utf8": "dbe3c8f945336e4ae4cf3fa88f45b02a8e918b312571b6297de17d0e077a9029",
+        "value": "n>i"
+      },
+      {
+        "sha256_utf8": "ec442ec835e8a75007535be10bc5abb4d37f4338f26835ae53e093406023ee16",
+        "value": "n>=i"
+      },
+      {
+        "sha256_utf8": "cd7cbe09c95dcb250a1c78063c29e749d467b9e453442c981e6b04db8b1dcefd",
+        "value": "n==i"
+      },
+      {
+        "sha256_utf8": "e70047885f825e71cbede3c8b443a29e7db0f849b8da3b1b0c436302905145f2",
+        "value": "(n+i)+5"
+      },
+      {
+        "sha256_utf8": "76c108bb57c71fc760bf63c6242464b8df1fd32ada2c13df810110f7e08e9216",
+        "value": "n+i"
+      },
+      {
+        "sha256_utf8": "81cab609500d94c0ff9a0984eafa1cbc1b49c6d3b82136b874cd4b25728f6738",
+        "value": "(n%3==2)&&(i%2==1)"
+      },
+      {
+        "sha256_utf8": "b3bfbdcfa99a51bb93b9f81a98bbd13a6c53a3a13d1b1729e9c75b7404337071",
+        "value": "(n%3==2)||(i%2==1)"
+      }
+    ],
+    "ids": [
+      {
+        "sha256_utf8": "93373e37e1cb7affb9c64fe4c498dac6a06cb4369e3c1edf4d6955122e817b1a",
+        "value": "CREQ904-AND"
+      },
+      {
+        "sha256_utf8": "bebd231e295f0f2c5deb705f1f5a7be2845de37652c66a17330ff367f4d446af",
+        "value": "CREQ904-PRODUCT"
+      },
+      {
+        "sha256_utf8": "723094ec78f8bd5c20c2a0f6e5ecd143fdc48d8bd426997a1ca3b4c62a60d484",
+        "value": "CREQ904-OR"
+      },
+      {
+        "sha256_utf8": "58ee278c3ab81d2f676b3d9ba9bfb7708b3a09da5ed8554571ff424253974138",
+        "value": "CREQ904-SUM"
+      },
+      {
+        "sha256_utf8": "2be5e592371c7cfce161c958a1c72648aaaf2aaeb48f96282f648b1003ef9ba6",
+        "value": "CREQ904-REPEATED_AND"
+      },
+      {
+        "sha256_utf8": "8edefa0f1870a5dcd80d1a549bf20db2569e5a4d9735bd0d63fa6955a00221f3",
+        "value": "CREQ904-REPEATED_PRODUCT"
+      },
+      {
+        "sha256_utf8": "efa6c496a23a6dfa49c592460271f983e75d8036129feee62c7f2ac8356e9691",
+        "value": "CREQ904-DIRECT"
+      },
+      {
+        "sha256_utf8": "3aa6261809ad26cc5df773d8fd7cba37b81a79062cd57806304dc68e7519437d",
+        "value": "CREQ904-COMMUTATIVE"
+      },
+      {
+        "sha256_utf8": "d06ff810552e7316ef30ce8d5656b1236fd6acf81893315561f5d0ff6c4fa00f",
+        "value": "CREQ904-MUL"
+      },
+      {
+        "sha256_utf8": "d17e18a5309beb383789825be478e39d5a67a64495137f7ab73aae6ce3190e20",
+        "value": "CREQ904-MUL_SWAP"
+      },
+      {
+        "sha256_utf8": "7e93a4e8087bd5e47aa801b5803383698ee0c476433c7d401bc4d0a8048b7ed7",
+        "value": "CREQ904-DUPLICATES"
+      },
+      {
+        "sha256_utf8": "53d722ebfc0e5d25940a404d6847613654242c6ee4a58ac9a295101000f03c55",
+        "value": "CREQ904-DUPLICATES_SWAP"
+      },
+      {
+        "sha256_utf8": "f747c0b328f15b18cafc868adf45603313002ebc805804091bec60df9640fec7",
+        "value": "CREQ904-GT"
+      },
+      {
+        "sha256_utf8": "aa3279ed1e108b50a4995d0105e5f93b8941532a24a1c2337615a825a46ef928",
+        "value": "CREQ904-LT_REVERSED"
+      },
+      {
+        "sha256_utf8": "294ff21e18b3bf73847915e6549127b239d76f2fcf82caf7104b0feff4f2cee5",
+        "value": "CREQ904-GE"
+      },
+      {
+        "sha256_utf8": "1e9c515b69e4274665f400de5c8812dbc3ab97997abc9a3f67639a5acae7187d",
+        "value": "CREQ904-LE_REVERSED"
+      },
+      {
+        "sha256_utf8": "af7db0dfb7f07b37ec39347857b71844612847102f754948df25aec4eb3f23f4",
+        "value": "CREQ904-EQ"
+      },
+      {
+        "sha256_utf8": "398ecba06bd77d5704daf4fa460b4188c3d27c2f1045dbbb0059fc76f4c0fca4",
+        "value": "CREQ904-EQ_REVERSED"
+      },
+      {
+        "sha256_utf8": "79f4862215529deb609c811e396fd6fc5943fb153a800a227490b3a5f7f04de8",
+        "value": "CREQ904-ASSOCIATION"
+      },
+      {
+        "sha256_utf8": "21f5cb42985ebeb7ccac614186a86fd141d6e89a35634e53846272fe9a6bcab4",
+        "value": "CREQ904-REASSOCIATED"
+      },
+      {
+        "sha256_utf8": "ac12f14ccbb523d7fb5ea0a4e399b23a503297da5fbd6153e5615c939029d1b8",
+        "value": "CREQ904-BARE_AND"
+      },
+      {
+        "sha256_utf8": "181437e61811896ea9849909bfecec9baaf2dae26594433205df5e1ae157cc41",
+        "value": "CREQ904-EXTRA_LIVE"
+      },
+      {
+        "sha256_utf8": "4e15a81312fc461af1811c37406a8fef850d8a6a7e45fa21aa0a6c2bf6656be1",
+        "value": "CREQ904-FOLDED"
+      },
+      {
+        "sha256_utf8": "b6f25210d7336e2538bc1f394d7589372ccd20a51218f98c191f5afb0bcdb35b",
+        "value": "CREQ904-INCIDENTAL"
+      },
+      {
+        "sha256_utf8": "9760e60205257650b6c05af82b7ee4756b13e19a67dff24dc1220872cbffb689",
+        "value": "CREQ904-BOOL_AND_SORT"
+      },
+      {
+        "sha256_utf8": "ae5c69cf6e18c3e3e956b921c8e53264d2c9d83348662df513acc79a1379a832",
+        "value": "CREQ904-BOOL_AND_SORTED"
+      },
+      {
+        "sha256_utf8": "e4a585795d2d00966c18419f079546476df37f3b3f4ca8db192427f9fa09b3a8",
+        "value": "CREQ904-BOOL_OR_SORT"
+      },
+      {
+        "sha256_utf8": "6527c160b51e46d9126e3ff377b646ff7ab294d8a4fec5f236592452999725cf",
+        "value": "CREQ904-BOOL_OR_SORTED"
+      },
+      {
+        "sha256_utf8": "ecd1d22be9b420336678c43c120cb5ef297b3a1ce8d22288618399daa1e1febe",
+        "value": "CREQ904-ALPHA_DIRECT"
+      },
+      {
+        "sha256_utf8": "ad22c130e70aeb25415be42af0bd266ffba58c8c1884b8a320d703a5e130fde0",
+        "value": "CREQ904-ALPHA_PRODUCT"
+      },
+      {
+        "sha256_utf8": "1d3434b62cc2932b14f746119a2604957a87f8a1dda5c9ca69f4d8cca8af3fd0",
+        "value": "CREQ904-ALPHA_SUM"
+      },
+      {
+        "sha256_utf8": "3a14491380cd20826366e7bf1047dee67605683eae0afa72a8c2d3002c03f6cc",
+        "value": "CREQ904-ALPHA_REPEATED_PRODUCT"
+      }
+    ],
+    "raw_inputs": [
+      {
+        "sha256_utf8": "3620bf5d74a28bcfd375b21c02db259c4dc90b9c7007f73d65e8acac2084b442",
+        "value": "0000000000000041"
+      },
+      {
+        "sha256_utf8": "f4f1fef13e91f35485063622268ad22021a993a550c63948095ea1fa4970d064",
+        "value": "0000000000000047"
+      },
+      {
+        "sha256_utf8": "e0f0623b93d1b8cbc7c90dc4be3fab1bf7d3f23f639d5fa50060e45c2081ece1",
+        "value": "0000000000000059"
+      },
+      {
+        "sha256_utf8": "31111e55576fbb0e4f347fbac164d65ef119ecb0ac71a6f17c296ecd0c857e8d",
+        "value": "0000000000000067"
+      },
+      {
+        "sha256_utf8": "7d2141335777ab56c56f0409ca21a2406d88e6d7aa67e6045237b4924ab94bdf",
+        "value": "0000000000000071"
+      }
+    ],
+    "sources": [
+      {
+        "sha256_utf8": "36cb2dcff92e9061060d175745c0e29c800c1adced411dde8db410bfaa488b28",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } IF ((creq904Item%2==1)&&(creq904Item%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "2ecca2822f9a3f409bf83ea084f131eaa4b764d30c0f18ee3f74e396d02b6ec0",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } creq904Total+=(creq904P*creq904Q). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "4d6c7c895cc0012b660ccc875a62f8b201a00a26d4877ef61dbacc7f6ea0d601",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } IF ((creq904Item%2==1)||(creq904Item%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "b619866791ba991ab998b3baba124777124b91abf4cef32a17315cddc4252916",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } IF (creq904P+creq904Q>0) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "054c0fd75e069d4bbab3a88a9b702fb62167ebda1a033ffb7b98059c3d24558f",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } IF ((creq904Item%2==1)&&(creq904Item%3==2)) { creq904Total+=1. } IF ((creq904Item%2==1)&&(creq904Item%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "c4e2821813a4a60d1f7d52124a0ce248bdea4dd92c718c6e4d2c4356e53b7ebf",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904P=0. NUMBER creq904Q=0. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904P=0. creq904Q=0. IF (creq904Item%2==1) { creq904P=1. } IF (creq904Item%3==2) { creq904Q=1. } creq904Total+=(creq904P*creq904Q). creq904Total+=(creq904P*creq904Q). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "03663f2492343203b2c8219ba02d642240010a5fa5fbe74d61ca3d3cbcc74a0a",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit+creq904Item). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "41e56854658a61013d16d05206cc5c78be7491b95cb171feb52ce8707cefab1c",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Item+creq904Limit). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "7dddc883efd502500c32b49ed4d75ada7bb86abc9797237abb59a177b869874e",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit*creq904Item). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "f52f02e1c423d8acca74c628bef528bdf9a34fec22406aafee683923f6312fea",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Item*creq904Limit). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "9bc2f60dc9e5098c00ba38b88f9552232efcca304ba145cf099746507e04d034",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=((creq904Limit+creq904Item)*(creq904Limit+creq904Item)). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "d1c23fe139595abad041426969b11712737ce29d2dec0807c86645eb030845d7",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=((creq904Item+creq904Limit)*(creq904Limit+creq904Item)). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "2ca6686050ce6a53048b756f9fdaa33ceff765c2baae771187ff433a0b4bfb69",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Limit>creq904Item) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "8f29e23ae7dec98f00e3bacd709e06190b16ec2b8b6ed180bd2752fe4f27eade",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Item<creq904Limit) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "58817c365d5553f1751ff132b906adc64c3377a4236496c16b8ea13e895b2210",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Limit>=creq904Item) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "ba680f4d0b99b460efd735963f3a09f62ccf11972d244b51d9ecb7d2a2630bc6",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Item<=creq904Limit) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "b0009dceb1c898cea312ef260bba27c8d687e404ccd08ed9ce12f71c1897c2ba",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Limit==creq904Item) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "8ad24f2bf6403eb635759c23870c19fe6baf46acf88c23aa2df5c72633dca001",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF (creq904Item==creq904Limit) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "6ad8c4717b14858b5612b35f8874e0faa332a6ae75a093cad2338bc87b630ecf",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=((creq904Limit+creq904Item)+5). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "13f4b6ac2e2aaee2120404bd1701ec84d33f96fd4b29336f369e55f9c62fe62d",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit+(creq904Item+5)). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "f227891ceeb3c146778650f77b84d014b71e6f684785e9dc5184c995388c5f18",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF ((creq904Item%2==1)&&(creq904Item%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "3a1f3b462061f263f86d5065771b9b217f815637dd7dcaeda1ab5e50738be09a",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit+creq904Item). creq904Total+=creq904Item. } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "9e4d071068f4d556ffde59d6234254216ff0c1e1bd24b309dc23156c4082f79f",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=(340+7). LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit+creq904Item). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "953bd49bafa13ae0507aef13dd3e737989b795eb17c29e6ca5f71ff4c5b620a1",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. NUMBER creq904Unused=349. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { creq904Total+=(creq904Limit+creq904Item). } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "048b55e5d52b0848b3def6f1b44ca4ed98087a151ac8ae40c273775bcb806de6",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF ((creq904Limit%3==2)&&(creq904Item%2==1)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "26a405a461205ea3025ed09b5af10de50da6d722065dc3350960b4a46d06295d",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF ((creq904Item%2==1)&&(creq904Limit%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "3b030ac4160a8c154c57ad54299fe11e5001049a7d3d43b81e759084729c220a",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF ((creq904Limit%3==2)||(creq904Item%2==1)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "71ba358f050cb1989057bddda554be5d2f4c1507d009062f2a125056bc31fe9b",
+        "value": "NUMBER creq904Limit. INPUT(creq904Limit). NUMBER creq904Total=347. LOOP (NUMBER creq904Item=1 TILL creq904Item<=creq904Limit, creq904Item++) { IF ((creq904Item%2==1)||(creq904Limit%3==2)) { creq904Total+=1. } } DISPLAYNL(creq904Total)."
+      },
+      {
+        "sha256_utf8": "ab966195da20eb67b47da512619bb993db400491a8cfeb7aadafb10fe7967ae2",
+        "value": "NUMBER projected914Limit. INPUT(projected914Limit). NUMBER projected914Total=347. LOOP (NUMBER projected914Item=1 TILL projected914Item<=projected914Limit, projected914Item++) { projected914Total+=(projected914Limit+projected914Item). } DISPLAYNL(projected914Total)."
+      },
+      {
+        "sha256_utf8": "f727a2fedde555bd16e5f4a5150fd7c6d1dd43c02675461481e68a6c9a9867c5",
+        "value": "NUMBER projected914Limit. INPUT(projected914Limit). NUMBER projected914Total=347. NUMBER projected914P=0. NUMBER projected914Q=0. LOOP (NUMBER projected914Item=1 TILL projected914Item<=projected914Limit, projected914Item++) { projected914P=0. projected914Q=0. IF (projected914Item%2==1) { projected914P=1. } IF (projected914Item%3==2) { projected914Q=1. } projected914Total+=(projected914P*projected914Q). } DISPLAYNL(projected914Total)."
+      },
+      {
+        "sha256_utf8": "de6277f6da6fb16b9e274ff3ca09eac3f324196ff82f140eecf8e6aab128eb1b",
+        "value": "NUMBER projected914Limit. INPUT(projected914Limit). NUMBER projected914Total=347. NUMBER projected914P=0. NUMBER projected914Q=0. LOOP (NUMBER projected914Item=1 TILL projected914Item<=projected914Limit, projected914Item++) { projected914P=0. projected914Q=0. IF (projected914Item%2==1) { projected914P=1. } IF (projected914Item%3==2) { projected914Q=1. } IF (projected914P+projected914Q>0) { projected914Total+=1. } } DISPLAYNL(projected914Total)."
+      },
+      {
+        "sha256_utf8": "9707fb33d139542c767982b56c9e77998df713ed9429de09844395205beabc54",
+        "value": "NUMBER projected914Limit. INPUT(projected914Limit). NUMBER projected914Total=347. NUMBER projected914P=0. NUMBER projected914Q=0. LOOP (NUMBER projected914Item=1 TILL projected914Item<=projected914Limit, projected914Item++) { projected914P=0. projected914Q=0. IF (projected914Item%2==1) { projected914P=1. } IF (projected914Item%3==2) { projected914Q=1. } projected914Total+=(projected914P*projected914Q). projected914Total+=(projected914P*projected914Q). } DISPLAYNL(projected914Total)."
+      }
+    ]
+  },
+  "recomputed_string_hash_overlap": 0,
+  "recorded_hash_overlap": 0,
+  "schema_version": 1,
+  "starting_head": "26583dd1a6cfd6375455000d8f2ddfb1c5c5c048"
+}

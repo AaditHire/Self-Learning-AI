@@ -181,6 +181,8 @@ def all_contracts(ledger: Mapping[str, Any]) -> list[CoverageContractV3]:
 def v35_expected_row_ids(contracts: Sequence[CoverageContractV3], *, diagnostic_incomplete: bool = False) -> list[str]:
     # A vacuous/partial inventory is not the prospective population required by
     # interface sections 4.1 and 9.1. Diagnostic IDs are never an expected index.
+    if any(type(contract) is not CoverageContractV3 for contract in contracts):
+        raise SchemaError("REQUIREMENT_FOUNDATIONS_OR_DEVELOPMENT_PROJECTIONS_ARE_NOT_SCIENTIFIC_CONTRACTS")
     if type(diagnostic_incomplete) is not bool:
         raise SchemaError("diagnostic_incomplete must be an actual boolean")
     program_ids = [contract.program_id for contract in contracts]

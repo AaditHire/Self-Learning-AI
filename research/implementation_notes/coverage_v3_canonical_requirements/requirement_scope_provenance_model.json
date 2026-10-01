@@ -1,0 +1,69 @@
+{
+  "all_foundation_artifacts_scientific_index_eligible": false,
+  "development_to_scientific_transfer": "FORBIDDEN",
+  "evaluation_namespace_metadata": [
+    {
+      "authority_path": "research/protocols/phase3c_conf1_slots.json",
+      "frozen_slot": {
+        "block_id": "numeric_iteration:G1",
+        "composition_signature": "numeric_iteration:G1:R0",
+        "family": "numeric_iteration",
+        "graph": "G1",
+        "group": "novel_composition",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "rotation": 0,
+        "task_id": "CONF1-NC-NU-G1-R0"
+      },
+      "namespace_id": "SCIENTIFIC_EVALUATION_NAMESPACE|17:CONF1-NC-NU-G1-R0|64:845f19b74f13d57ed7db210d2faa8c775353cf0a3d7581ea91a1fbf78924e0fe",
+      "requirement_derivation_status": "NOT_ATTEMPTED",
+      "scientific_expected_row_index_eligible": false,
+      "scope": "SCIENTIFIC_EVALUATION",
+      "slot_id": "CONF1-NC-NU-G1-R0",
+      "training_requirement_transfer_authorized": false
+    },
+    {
+      "authority_path": "research/protocols/phase3c_conf1_slots.json",
+      "frozen_slot": {
+        "block_id": "numeric_iteration:G4",
+        "composition_signature": "numeric_iteration:G4:R0",
+        "family": "numeric_iteration",
+        "graph": "G4",
+        "group": "novel_composition",
+        "role_predicates": {
+          "P": "odd_index",
+          "Q": "residue_two",
+          "R": "divisor_index",
+          "S": "first_half"
+        },
+        "rotation": 0,
+        "task_id": "CONF1-NC-NU-G4-R0"
+      },
+      "namespace_id": "SCIENTIFIC_EVALUATION_NAMESPACE|17:CONF1-NC-NU-G4-R0|64:03eb6a5ba0de55263b33611c28dee45a4e882eec76a11f61f9bdc593d699d8b7",
+      "requirement_derivation_status": "NOT_ATTEMPTED",
+      "scientific_expected_row_index_eligible": false,
+      "scope": "SCIENTIFIC_EVALUATION",
+      "slot_id": "CONF1-NC-NU-G4-R0",
+      "training_requirement_transfer_authorized": false
+    }
+  ],
+  "evaluation_to_training_transfer": "FORBIDDEN",
+  "global_gate_source_scope": {
+    "evaluation": 64,
+    "scientific_source_records_verified": 0,
+    "training": 120
+  },
+  "schema_version": 1,
+  "scopes": [
+    "SCIENTIFIC_TRAINING",
+    "SCIENTIFIC_EVALUATION",
+    "DEVELOPMENT_ONLY"
+  ],
+  "source_independent_identity": true,
+  "starting_head": "26583dd1a6cfd6375455000d8f2ddfb1c5c5c048",
+  "training_to_evaluation_transfer": "FORBIDDEN"
+}

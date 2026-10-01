@@ -1,0 +1,2624 @@
+{
+  "computed_folding": "existing restricted production path retained",
+  "reassociation_authorized": false,
+  "records": [
+    {
+      "case_id": "DIRECT_TO_DIRECT",
+      "claims": []
+    },
+    {
+      "case_id": "DIRECT_TO_ALPHA_DIRECT",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:197bbf3630cc5c75a545fab60c2ef9f8bed6eb6a7a24eef5720fb10f13a14235|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "projected914Item",
+            "creq904Limit": "projected914Limit",
+            "creq904Total": "projected914Total"
+          },
+          "catalog_rule": "CONSISTENT_ALPHA_RENAMING",
+          "contract_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|1:0|1:0",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:21|1:1",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:42|1:2",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:62|1:3",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:67|1:4",
+            "OCC|14:CREQ904-DIRECT|13:INDEX_INITIAL|2:67",
+            "OCC|14:CREQ904-DIRECT|10:INDEX_STEP|2:67",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:92|1:5",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:99|1:6",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:99|1:7",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:112|1:8",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:143|1:9",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:10",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:11",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:171|2:12",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:187|2:13",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:197|2:14",
+            "OCC|14:CREQ904-DIRECT|14:DOMAIN_DECODER",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:0",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:1",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:2",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:3",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:4",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:5",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:6",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:7",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:8",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:9",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|2:10",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|2:17",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:12",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:13",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:14",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:15",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:16",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:17",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:18",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:19",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:20",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:21"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": {
+            "contract": {
+              "creq904Item": "INTEGER",
+              "creq904Limit": "INTEGER",
+              "creq904Total": "INTEGER"
+            },
+            "source": {
+              "projected914Item": "INTEGER",
+              "projected914Limit": "INTEGER",
+              "projected914Total": "INTEGER"
+            }
+          },
+          "preconditions": "bijective type/role-preserving declaration/use bindings",
+          "result_type": "COMPLETE_TYPED_BINDINGS",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "creq904Item": "DOMAIN_ITEM",
+              "creq904Limit": "INPUT_LIMIT",
+              "creq904Total": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "projected914Item": "DOMAIN_ITEM",
+              "projected914Limit": "INPUT_LIMIT",
+              "projected914Total": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              0,
+              211
+            ],
+            [
+              0,
+              266
+            ]
+          ],
+          "source_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|1:0|1:0",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:26|1:1",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:52|1:2",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:77|1:3",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:82|1:4",
+            "OCC|14:CREQ904-DIRECT|13:INDEX_INITIAL|2:82",
+            "OCC|14:CREQ904-DIRECT|10:INDEX_STEP|2:82",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:112|1:5",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:119|1:6",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:119|1:7",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:137|1:8",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:178|1:9",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:198|2:10",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:198|2:11",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:216|2:12",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:237|2:13",
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:247|2:14",
+            "OCC|14:CREQ904-DIRECT|14:DOMAIN_DECODER",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:0",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:1",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:2",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:3",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:4",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:5",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:6",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:7",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:8",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:9",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|2:10",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|2:17",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:12",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:13",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:14",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:15",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:16",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:17",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:18",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:19",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:20",
+            "OCC|14:CREQ904-DIRECT|13:SEMANTIC_EDGE|2:21"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "DIRECT_TO_COMMUTATIVE",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:197bbf3630cc5c75a545fab60c2ef9f8bed6eb6a7a24eef5720fb10f13a14235|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|14:CREQ904-DIRECT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "PURE_COMMUTATIVE_CHILD_SORT",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:10"
+          ],
+          "contract_root": "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "CONTRIBUTION",
+            "CONTRIBUTION"
+          ],
+          "source_locations": [
+            [
+              158,
+              182
+            ],
+            [
+              158,
+              182
+            ]
+          ],
+          "source_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:10"
+          ],
+          "source_root": "OCC|14:CREQ904-DIRECT|4:NODE|3:158|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "MUL_TO_MUL_SWAP",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|11:CREQ904-MUL|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:35e683ebe80a1c1f9fbc56c9fb70b1dfd13abf1fc6f81a3904971c43f71b5bf7|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|11:CREQ904-MUL|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|11:CREQ904-MUL|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "PURE_COMMUTATIVE_CHILD_SORT",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|11:CREQ904-MUL|4:NODE|3:158|2:10"
+          ],
+          "contract_root": "OCC|11:CREQ904-MUL|4:NODE|3:158|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "CONTRIBUTION",
+            "CONTRIBUTION"
+          ],
+          "source_locations": [
+            [
+              158,
+              182
+            ],
+            [
+              158,
+              182
+            ]
+          ],
+          "source_members": [
+            "OCC|11:CREQ904-MUL|4:NODE|3:158|2:10"
+          ],
+          "source_root": "OCC|11:CREQ904-MUL|4:NODE|3:158|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "GT_TO_LT_REVERSED",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:05fa713560083149d79b6d07daa9adcb1976bc764310602537bd99872070d340|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "COMPARISON_DIRECTION",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|10:CREQ904-GT|4:NODE|3:147|2:10"
+          ],
+          "contract_root": "OCC|10:CREQ904-GT|4:NODE|3:147|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "PREDICATE_BOOLEAN",
+            "PREDICATE_BOOLEAN"
+          ],
+          "source_locations": [
+            [
+              147,
+              171
+            ],
+            [
+              147,
+              171
+            ]
+          ],
+          "source_members": [
+            "OCC|10:CREQ904-GT|4:NODE|3:147|2:10"
+          ],
+          "source_root": "OCC|10:CREQ904-GT|4:NODE|3:147|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "GE_TO_LE_REVERSED",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GE|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:bf4567e4886040bdf56a74c4c30fc98f0e3319ed569deb6bdaafdc582f8019ae|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GE|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-GE|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "COMPARISON_DIRECTION",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|10:CREQ904-GE|4:NODE|3:147|2:10"
+          ],
+          "contract_root": "OCC|10:CREQ904-GE|4:NODE|3:147|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "PREDICATE_BOOLEAN",
+            "PREDICATE_BOOLEAN"
+          ],
+          "source_locations": [
+            [
+              147,
+              172
+            ],
+            [
+              147,
+              172
+            ]
+          ],
+          "source_members": [
+            "OCC|10:CREQ904-GE|4:NODE|3:147|2:10"
+          ],
+          "source_root": "OCC|10:CREQ904-GE|4:NODE|3:147|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "EQ_TO_EQ_REVERSED",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-EQ|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:7d1c86b202cfbdf30fbd51a194de9a6c7f8d3df8e60051ee7844814fff57d580|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-EQ|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:ec5ad8972c5a26dcc6d341e3458ccf13bb31df1a761a3ac0dce10dd6b1d53426|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-EQ|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:f8ebe2ced1e89bf8e23dc048ed6c6411a3f5884c8a4ddbcb8d25266543408609|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "SYMMETRIC_EQUALITY",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|10:CREQ904-EQ|4:NODE|3:147|2:10"
+          ],
+          "contract_root": "OCC|10:CREQ904-EQ|4:NODE|3:147|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "PREDICATE_BOOLEAN",
+            "PREDICATE_BOOLEAN"
+          ],
+          "source_locations": [
+            [
+              147,
+              172
+            ],
+            [
+              147,
+              172
+            ]
+          ],
+          "source_members": [
+            "OCC|10:CREQ904-EQ|4:NODE|3:147|2:10"
+          ],
+          "source_root": "OCC|10:CREQ904-EQ|4:NODE|3:147|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "DIRECT_TO_FOLDED",
+      "claims": [
+        {
+          "affected_requirements": [],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "WHOLLY_INTEGER_CONSTANT_NEG_ADD_SUB_MUL_COMPUTED_KEY_ONLY",
+          "child_permutation": [],
+          "contract_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:62|1:3"
+          ],
+          "contract_root": "OCC|14:CREQ904-DIRECT|4:NODE|2:62|1:3",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "INITIAL_DISPLAYED_ACCUMULATOR",
+            "INITIAL_DISPLAYED_ACCUMULATOR"
+          ],
+          "source_locations": [
+            [
+              62,
+              65
+            ],
+            [
+              63,
+              68
+            ]
+          ],
+          "source_members": [
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:63|1:3",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:0",
+            "OCC|14:CREQ904-DIRECT|4:EDGE|1:1",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:63|1:4",
+            "OCC|14:CREQ904-DIRECT|4:NODE|2:67|1:5"
+          ],
+          "source_root": "OCC|14:CREQ904-DIRECT|4:NODE|2:63|1:3"
+        }
+      ]
+    },
+    {
+      "case_id": "DUPLICATES_TO_DUPLICATES_SWAP",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|18:CREQ904-DUPLICATES|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:70739eb129cb37645658259f3e3744a5b962f98abc5279e9f38e21bfe0badef0|24:contribution/0/operand/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|18:CREQ904-DUPLICATES|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:56a8ca53452931368004deb51fe577e588112e67477b6fd9c596ae6fd5b73165|39:contribution/0/operand/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|18:CREQ904-DUPLICATES|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:c2a70a607aaae59814260d6027a6cb6fa2f6382b0c24c4d363a522f7ba9bced8|39:contribution/0/operand/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "PURE_COMMUTATIVE_CHILD_SORT",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|18:CREQ904-DUPLICATES|4:NODE|3:159|2:11"
+          ],
+          "contract_root": "OCC|18:CREQ904-DUPLICATES|4:NODE|3:159|2:11",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "INTEGER",
+              "INTEGER"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "MUL_OPERAND_0",
+            "MUL_OPERAND_0"
+          ],
+          "source_locations": [
+            [
+              159,
+              183
+            ],
+            [
+              159,
+              183
+            ]
+          ],
+          "source_members": [
+            "OCC|18:CREQ904-DUPLICATES|4:NODE|3:159|2:11"
+          ],
+          "source_root": "OCC|18:CREQ904-DUPLICATES|4:NODE|3:159|2:11"
+        }
+      ]
+    },
+    {
+      "case_id": "INCIDENTAL_TO_INCIDENTAL",
+      "claims": []
+    },
+    {
+      "case_id": "BOOL_AND_SORT_TO_BOOL_AND_SORTED",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|21:CREQ904-BOOL_AND_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:c10ad1fa124e072aa6e965c83edfc4b9c05d190599b7748085790dedfe23d1e6|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|21:CREQ904-BOOL_AND_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:89d31c07b04aa4c6504892ca349b3370abea5ca35f2982ee59972bba70a42bde|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|21:CREQ904-BOOL_AND_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:8dee64be9ec617ab2ee0e85bf2a669d52da7a90491ed6b82db2505f87e07038e|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "PURE_COMMUTATIVE_CHILD_SORT",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|21:CREQ904-BOOL_AND_SORT|4:NODE|3:147|2:10"
+          ],
+          "contract_root": "OCC|21:CREQ904-BOOL_AND_SORT|4:NODE|3:147|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "PREDICATE_BOOLEAN",
+            "PREDICATE_BOOLEAN"
+          ],
+          "source_locations": [
+            [
+              147,
+              186
+            ],
+            [
+              147,
+              186
+            ]
+          ],
+          "source_members": [
+            "OCC|21:CREQ904-BOOL_AND_SORT|4:NODE|3:147|2:10"
+          ],
+          "source_root": "OCC|21:CREQ904-BOOL_AND_SORT|4:NODE|3:147|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "BOOL_OR_SORT_TO_BOOL_OR_SORTED",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-BOOL_OR_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:65ef42a91407829d46bc52de65cc096616e9552c6f81cf32201453794ea598e9|14:contribution/0",
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-BOOL_OR_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:89d31c07b04aa4c6504892ca349b3370abea5ca35f2982ee59972bba70a42bde|29:contribution/0/operand/0/edge",
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-BOOL_OR_SORT|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:8dee64be9ec617ab2ee0e85bf2a669d52da7a90491ed6b82db2505f87e07038e|29:contribution/0/operand/1/edge"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "PURE_COMMUTATIVE_CHILD_SORT",
+          "child_permutation": [
+            1,
+            0
+          ],
+          "contract_members": [
+            "OCC|20:CREQ904-BOOL_OR_SORT|4:NODE|3:147|2:10"
+          ],
+          "contract_root": "OCC|20:CREQ904-BOOL_OR_SORT|4:NODE|3:147|2:10",
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ]
+          ],
+          "preconditions": "typed complete AST and bijective bindings; child permutation only, no reassociation; commutative scalar purity/nonzero constant remainder divisors; computed folding only under existing supported attribute parent",
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": [
+            "PREDICATE_BOOLEAN",
+            "PREDICATE_BOOLEAN"
+          ],
+          "source_locations": [
+            [
+              147,
+              186
+            ],
+            [
+              147,
+              186
+            ]
+          ],
+          "source_members": [
+            "OCC|20:CREQ904-BOOL_OR_SORT|4:NODE|3:147|2:10"
+          ],
+          "source_root": "OCC|20:CREQ904-BOOL_OR_SORT|4:NODE|3:147|2:10"
+        }
+      ]
+    },
+    {
+      "case_id": "AND_TO_PRODUCT",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|11:CREQ904-AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:5ab33cdc1dd100a4171e178f4529c09153a6cd87dda13b0ba6fb0f57dd5cd43d|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904P": "creq904P",
+            "creq904Q": "creq904Q",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|11:CREQ904-AND|4:NODE|3:281|2:33",
+            "OCC|11:CREQ904-AND|4:NODE|3:285|2:34",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:35",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:36",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:37",
+            "OCC|11:CREQ904-AND|4:NODE|3:298|2:38",
+            "OCC|11:CREQ904-AND|4:NODE|3:301|2:39",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:40",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:41",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:42",
+            "OCC|11:CREQ904-AND|4:NODE|3:318|2:43",
+            "OCC|11:CREQ904-AND|4:NODE|3:321|2:44",
+            "OCC|11:CREQ904-AND|4:NODE|3:327|2:45",
+            "OCC|11:CREQ904-AND|4:NODE|3:341|2:46",
+            "OCC|11:CREQ904-AND|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|11:CREQ904-AND|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|11:CREQ904-AND|4:EDGE|2:31",
+            "OCC|11:CREQ904-AND|4:EDGE|2:32",
+            "OCC|11:CREQ904-AND|4:EDGE|2:33",
+            "OCC|11:CREQ904-AND|4:EDGE|2:34",
+            "OCC|11:CREQ904-AND|4:EDGE|2:35",
+            "OCC|11:CREQ904-AND|4:EDGE|2:36",
+            "OCC|11:CREQ904-AND|4:EDGE|2:37",
+            "OCC|11:CREQ904-AND|4:EDGE|2:38",
+            "OCC|11:CREQ904-AND|4:EDGE|2:39",
+            "OCC|11:CREQ904-AND|4:EDGE|2:40",
+            "OCC|11:CREQ904-AND|4:EDGE|2:41",
+            "OCC|11:CREQ904-AND|4:EDGE|2:42",
+            "OCC|11:CREQ904-AND|4:EDGE|2:43",
+            "OCC|11:CREQ904-AND|4:EDGE|2:44",
+            "OCC|11:CREQ904-AND|4:EDGE|2:45",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:50",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:51",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:52",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:53",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:65",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:66",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:67",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:68",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:70",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:71",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:72"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|11:CREQ904-AND|4:NODE|3:181|2:13",
+                "OCC|11:CREQ904-AND|4:NODE|3:229|2:23"
+              ],
+              "indicator_read": "OCC|11:CREQ904-AND|4:NODE|3:296|2:35",
+              "range_proof": {
+                "binding": "creq904P",
+                "initialization": "OCC|11:CREQ904-AND|4:NODE|2:67|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      209,
+                      225
+                    ],
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:205|2:17"
+                    ],
+                    "edge_id": "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:40",
+                    "expression_node_id": "OCC|11:CREQ904-AND|4:NODE|3:209|2:18",
+                    "predicate_occurrence": "OCC|11:CREQ904-AND|9:PRIMITIVE|3:209|9:odd_index",
+                    "write": "OCC|11:CREQ904-AND|4:NODE|3:229|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:181|2:13",
+                    "source_location": [
+                      181,
+                      192
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:205|2:17"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:229|2:23",
+                    "source_location": [
+                      229,
+                      240
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                296,
+                304
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|11:CREQ904-AND|4:NODE|3:193|2:15",
+                "OCC|11:CREQ904-AND|4:NODE|3:267|2:31"
+              ],
+              "indicator_read": "OCC|11:CREQ904-AND|4:NODE|3:305|2:36",
+              "range_proof": {
+                "binding": "creq904Q",
+                "initialization": "OCC|11:CREQ904-AND|4:NODE|2:86|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      247,
+                      263
+                    ],
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:243|2:25"
+                    ],
+                    "edge_id": "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:41",
+                    "expression_node_id": "OCC|11:CREQ904-AND|4:NODE|3:247|2:26",
+                    "predicate_occurrence": "OCC|11:CREQ904-AND|9:PRIMITIVE|3:247|11:residue_two",
+                    "write": "OCC|11:CREQ904-AND|4:NODE|3:267|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:193|2:15",
+                    "source_location": [
+                      193,
+                      204
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:105|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:243|2:25"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:267|2:31",
+                    "source_location": [
+                      267,
+                      278
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                305,
+                313
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              296,
+              313
+            ]
+          ],
+          "source_members": [
+            "OCC|11:CREQ904-AND|4:NODE|3:281|2:33",
+            "OCC|11:CREQ904-AND|4:NODE|3:296|2:34",
+            "OCC|11:CREQ904-AND|4:NODE|3:296|2:35",
+            "OCC|11:CREQ904-AND|4:NODE|3:305|2:36",
+            "OCC|11:CREQ904-AND|4:EDGE|2:31",
+            "OCC|11:CREQ904-AND|4:EDGE|2:32",
+            "OCC|11:CREQ904-AND|4:EDGE|2:33",
+            "OCC|11:CREQ904-AND|4:EDGE|2:34",
+            "OCC|11:CREQ904-AND|4:EDGE|2:35",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:49",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:50",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:51",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:52",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:56"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "OR_TO_SUM",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-OR|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:479eab132c8bffad3d600d28e24ed34aecd9c5ff1364ef5f81bf58c73a3f4b31|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904P": "creq904P",
+            "creq904Q": "creq904Q",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "BOOLEAN_OR_VS_PROVEN_INDICATOR_SUM_POSITIVE",
+          "contract_members": [
+            "OCC|10:CREQ904-OR|4:NODE|3:281|2:33",
+            "OCC|10:CREQ904-OR|4:NODE|3:285|2:34",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:35",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:36",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:37",
+            "OCC|10:CREQ904-OR|4:NODE|3:298|2:38",
+            "OCC|10:CREQ904-OR|4:NODE|3:301|2:39",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:40",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:41",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:42",
+            "OCC|10:CREQ904-OR|4:NODE|3:318|2:43",
+            "OCC|10:CREQ904-OR|4:NODE|3:321|2:44",
+            "OCC|10:CREQ904-OR|4:NODE|3:327|2:45",
+            "OCC|10:CREQ904-OR|4:NODE|3:341|2:46",
+            "OCC|10:CREQ904-OR|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|10:CREQ904-OR|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|10:CREQ904-OR|4:EDGE|2:31",
+            "OCC|10:CREQ904-OR|4:EDGE|2:32",
+            "OCC|10:CREQ904-OR|4:EDGE|2:33",
+            "OCC|10:CREQ904-OR|4:EDGE|2:34",
+            "OCC|10:CREQ904-OR|4:EDGE|2:35",
+            "OCC|10:CREQ904-OR|4:EDGE|2:36",
+            "OCC|10:CREQ904-OR|4:EDGE|2:37",
+            "OCC|10:CREQ904-OR|4:EDGE|2:38",
+            "OCC|10:CREQ904-OR|4:EDGE|2:39",
+            "OCC|10:CREQ904-OR|4:EDGE|2:40",
+            "OCC|10:CREQ904-OR|4:EDGE|2:41",
+            "OCC|10:CREQ904-OR|4:EDGE|2:42",
+            "OCC|10:CREQ904-OR|4:EDGE|2:43",
+            "OCC|10:CREQ904-OR|4:EDGE|2:44",
+            "OCC|10:CREQ904-OR|4:EDGE|2:45",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:50",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:51",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:52",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:53",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:54",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:55",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:65",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:66",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:67",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:68",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:70",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:71",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:72"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|10:CREQ904-OR|4:NODE|3:181|2:13",
+                "OCC|10:CREQ904-OR|4:NODE|3:229|2:23"
+              ],
+              "indicator_read": "OCC|10:CREQ904-OR|4:NODE|3:285|2:36",
+              "range_proof": {
+                "binding": "creq904P",
+                "initialization": "OCC|10:CREQ904-OR|4:NODE|2:67|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      209,
+                      225
+                    ],
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:205|2:17"
+                    ],
+                    "edge_id": "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:44",
+                    "expression_node_id": "OCC|10:CREQ904-OR|4:NODE|3:209|2:18",
+                    "predicate_occurrence": "OCC|10:CREQ904-OR|9:PRIMITIVE|3:209|9:odd_index",
+                    "write": "OCC|10:CREQ904-OR|4:NODE|3:229|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:181|2:13",
+                    "source_location": [
+                      181,
+                      192
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:205|2:17"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:229|2:23",
+                    "source_location": [
+                      229,
+                      240
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                285,
+                293
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|10:CREQ904-OR|4:NODE|3:193|2:15",
+                "OCC|10:CREQ904-OR|4:NODE|3:267|2:31"
+              ],
+              "indicator_read": "OCC|10:CREQ904-OR|4:NODE|3:294|2:37",
+              "range_proof": {
+                "binding": "creq904Q",
+                "initialization": "OCC|10:CREQ904-OR|4:NODE|2:86|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      247,
+                      263
+                    ],
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:243|2:25"
+                    ],
+                    "edge_id": "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|10:CREQ904-OR|4:NODE|3:247|2:26",
+                    "predicate_occurrence": "OCC|10:CREQ904-OR|9:PRIMITIVE|3:247|11:residue_two",
+                    "write": "OCC|10:CREQ904-OR|4:NODE|3:267|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:193|2:15",
+                    "source_location": [
+                      193,
+                      204
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:105|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:243|2:25"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:267|2:31",
+                    "source_location": [
+                      267,
+                      278
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                294,
+                302
+              ]
+            }
+          ],
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              285,
+              304
+            ]
+          ],
+          "source_members": [
+            "OCC|10:CREQ904-OR|4:NODE|3:281|2:33",
+            "OCC|10:CREQ904-OR|4:NODE|3:285|2:34",
+            "OCC|10:CREQ904-OR|4:NODE|3:285|2:35",
+            "OCC|10:CREQ904-OR|4:NODE|3:285|2:36",
+            "OCC|10:CREQ904-OR|4:NODE|3:294|2:37",
+            "OCC|10:CREQ904-OR|4:NODE|3:303|2:38",
+            "OCC|10:CREQ904-OR|4:NODE|3:308|2:39",
+            "OCC|10:CREQ904-OR|4:NODE|3:322|2:40",
+            "OCC|10:CREQ904-OR|4:EDGE|2:31",
+            "OCC|10:CREQ904-OR|4:EDGE|2:32",
+            "OCC|10:CREQ904-OR|4:EDGE|2:33",
+            "OCC|10:CREQ904-OR|4:EDGE|2:34",
+            "OCC|10:CREQ904-OR|4:EDGE|2:35",
+            "OCC|10:CREQ904-OR|4:EDGE|2:36",
+            "OCC|10:CREQ904-OR|4:EDGE|2:37",
+            "OCC|10:CREQ904-OR|4:EDGE|2:38",
+            "OCC|10:CREQ904-OR|4:EDGE|2:39",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:53",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:54",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:55",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:56",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:58",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:59",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:60"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "AND_TO_ALPHA_PRODUCT",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|11:CREQ904-AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:5ab33cdc1dd100a4171e178f4529c09153a6cd87dda13b0ba6fb0f57dd5cd43d|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "projected914Item",
+            "creq904Limit": "projected914Limit",
+            "creq904P": "projected914P",
+            "creq904Q": "projected914Q",
+            "creq904Total": "projected914Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|11:CREQ904-AND|4:NODE|3:281|2:33",
+            "OCC|11:CREQ904-AND|4:NODE|3:285|2:34",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:35",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:36",
+            "OCC|11:CREQ904-AND|4:NODE|3:286|2:37",
+            "OCC|11:CREQ904-AND|4:NODE|3:298|2:38",
+            "OCC|11:CREQ904-AND|4:NODE|3:301|2:39",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:40",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:41",
+            "OCC|11:CREQ904-AND|4:NODE|3:306|2:42",
+            "OCC|11:CREQ904-AND|4:NODE|3:318|2:43",
+            "OCC|11:CREQ904-AND|4:NODE|3:321|2:44",
+            "OCC|11:CREQ904-AND|4:NODE|3:327|2:45",
+            "OCC|11:CREQ904-AND|4:NODE|3:341|2:46",
+            "OCC|11:CREQ904-AND|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|11:CREQ904-AND|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|11:CREQ904-AND|4:EDGE|2:31",
+            "OCC|11:CREQ904-AND|4:EDGE|2:32",
+            "OCC|11:CREQ904-AND|4:EDGE|2:33",
+            "OCC|11:CREQ904-AND|4:EDGE|2:34",
+            "OCC|11:CREQ904-AND|4:EDGE|2:35",
+            "OCC|11:CREQ904-AND|4:EDGE|2:36",
+            "OCC|11:CREQ904-AND|4:EDGE|2:37",
+            "OCC|11:CREQ904-AND|4:EDGE|2:38",
+            "OCC|11:CREQ904-AND|4:EDGE|2:39",
+            "OCC|11:CREQ904-AND|4:EDGE|2:40",
+            "OCC|11:CREQ904-AND|4:EDGE|2:41",
+            "OCC|11:CREQ904-AND|4:EDGE|2:42",
+            "OCC|11:CREQ904-AND|4:EDGE|2:43",
+            "OCC|11:CREQ904-AND|4:EDGE|2:44",
+            "OCC|11:CREQ904-AND|4:EDGE|2:45",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:50",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:51",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:52",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:53",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:65",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:66",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:67",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:68",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:70",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:71",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:72"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|11:CREQ904-AND|4:NODE|3:226|2:13",
+                "OCC|11:CREQ904-AND|4:NODE|3:289|2:23"
+              ],
+              "indicator_read": "OCC|11:CREQ904-AND|4:NODE|3:376|2:35",
+              "range_proof": {
+                "binding": "projected914P",
+                "initialization": "OCC|11:CREQ904-AND|4:NODE|2:82|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      264,
+                      285
+                    ],
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:260|2:17"
+                    ],
+                    "edge_id": "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:40",
+                    "expression_node_id": "OCC|11:CREQ904-AND|4:NODE|3:264|2:18",
+                    "predicate_occurrence": "OCC|11:CREQ904-AND|9:PRIMITIVE|3:264|9:odd_index",
+                    "write": "OCC|11:CREQ904-AND|4:NODE|3:289|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:226|2:13",
+                    "source_location": [
+                      226,
+                      242
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:260|2:17"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:289|2:23",
+                    "source_location": [
+                      289,
+                      305
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                376,
+                389
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|11:CREQ904-AND|4:NODE|3:243|2:15",
+                "OCC|11:CREQ904-AND|4:NODE|3:337|2:31"
+              ],
+              "indicator_read": "OCC|11:CREQ904-AND|4:NODE|3:390|2:36",
+              "range_proof": {
+                "binding": "projected914Q",
+                "initialization": "OCC|11:CREQ904-AND|4:NODE|3:106|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      312,
+                      333
+                    ],
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:308|2:25"
+                    ],
+                    "edge_id": "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:41",
+                    "expression_node_id": "OCC|11:CREQ904-AND|4:NODE|3:312|2:26",
+                    "predicate_occurrence": "OCC|11:CREQ904-AND|9:PRIMITIVE|3:312|11:residue_two",
+                    "write": "OCC|11:CREQ904-AND|4:NODE|3:337|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:243|2:15",
+                    "source_location": [
+                      243,
+                      259
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|11:CREQ904-AND|4:NODE|3:130|1:8",
+                      "OCC|11:CREQ904-AND|4:NODE|3:308|2:25"
+                    ],
+                    "occurrence_id": "OCC|11:CREQ904-AND|4:NODE|3:337|2:31",
+                    "source_location": [
+                      337,
+                      353
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                390,
+                403
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "projected914Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              376,
+              403
+            ]
+          ],
+          "source_members": [
+            "OCC|11:CREQ904-AND|4:NODE|3:356|2:33",
+            "OCC|11:CREQ904-AND|4:NODE|3:376|2:34",
+            "OCC|11:CREQ904-AND|4:NODE|3:376|2:35",
+            "OCC|11:CREQ904-AND|4:NODE|3:390|2:36",
+            "OCC|11:CREQ904-AND|4:EDGE|2:31",
+            "OCC|11:CREQ904-AND|4:EDGE|2:32",
+            "OCC|11:CREQ904-AND|4:EDGE|2:33",
+            "OCC|11:CREQ904-AND|4:EDGE|2:34",
+            "OCC|11:CREQ904-AND|4:EDGE|2:35",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:49",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:50",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:51",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:52",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|11:CREQ904-AND|13:SEMANTIC_EDGE|2:56"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "OR_TO_ALPHA_SUM",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|10:CREQ904-OR|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:479eab132c8bffad3d600d28e24ed34aecd9c5ff1364ef5f81bf58c73a3f4b31|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "projected914Item",
+            "creq904Limit": "projected914Limit",
+            "creq904P": "projected914P",
+            "creq904Q": "projected914Q",
+            "creq904Total": "projected914Total"
+          },
+          "catalog_rule": "BOOLEAN_OR_VS_PROVEN_INDICATOR_SUM_POSITIVE",
+          "contract_members": [
+            "OCC|10:CREQ904-OR|4:NODE|3:281|2:33",
+            "OCC|10:CREQ904-OR|4:NODE|3:285|2:34",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:35",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:36",
+            "OCC|10:CREQ904-OR|4:NODE|3:286|2:37",
+            "OCC|10:CREQ904-OR|4:NODE|3:298|2:38",
+            "OCC|10:CREQ904-OR|4:NODE|3:301|2:39",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:40",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:41",
+            "OCC|10:CREQ904-OR|4:NODE|3:306|2:42",
+            "OCC|10:CREQ904-OR|4:NODE|3:318|2:43",
+            "OCC|10:CREQ904-OR|4:NODE|3:321|2:44",
+            "OCC|10:CREQ904-OR|4:NODE|3:327|2:45",
+            "OCC|10:CREQ904-OR|4:NODE|3:341|2:46",
+            "OCC|10:CREQ904-OR|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|10:CREQ904-OR|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|10:CREQ904-OR|4:EDGE|2:31",
+            "OCC|10:CREQ904-OR|4:EDGE|2:32",
+            "OCC|10:CREQ904-OR|4:EDGE|2:33",
+            "OCC|10:CREQ904-OR|4:EDGE|2:34",
+            "OCC|10:CREQ904-OR|4:EDGE|2:35",
+            "OCC|10:CREQ904-OR|4:EDGE|2:36",
+            "OCC|10:CREQ904-OR|4:EDGE|2:37",
+            "OCC|10:CREQ904-OR|4:EDGE|2:38",
+            "OCC|10:CREQ904-OR|4:EDGE|2:39",
+            "OCC|10:CREQ904-OR|4:EDGE|2:40",
+            "OCC|10:CREQ904-OR|4:EDGE|2:41",
+            "OCC|10:CREQ904-OR|4:EDGE|2:42",
+            "OCC|10:CREQ904-OR|4:EDGE|2:43",
+            "OCC|10:CREQ904-OR|4:EDGE|2:44",
+            "OCC|10:CREQ904-OR|4:EDGE|2:45",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:50",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:51",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:52",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:53",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:54",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:55",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:65",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:66",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:67",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:68",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:70",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:71",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:72"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|10:CREQ904-OR|4:NODE|3:226|2:13",
+                "OCC|10:CREQ904-OR|4:NODE|3:289|2:23"
+              ],
+              "indicator_read": "OCC|10:CREQ904-OR|4:NODE|3:360|2:36",
+              "range_proof": {
+                "binding": "projected914P",
+                "initialization": "OCC|10:CREQ904-OR|4:NODE|2:82|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      264,
+                      285
+                    ],
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:260|2:17"
+                    ],
+                    "edge_id": "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:44",
+                    "expression_node_id": "OCC|10:CREQ904-OR|4:NODE|3:264|2:18",
+                    "predicate_occurrence": "OCC|10:CREQ904-OR|9:PRIMITIVE|3:264|9:odd_index",
+                    "write": "OCC|10:CREQ904-OR|4:NODE|3:289|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:226|2:13",
+                    "source_location": [
+                      226,
+                      242
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:260|2:17"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:289|2:23",
+                    "source_location": [
+                      289,
+                      305
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                360,
+                373
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|10:CREQ904-OR|4:NODE|3:243|2:15",
+                "OCC|10:CREQ904-OR|4:NODE|3:337|2:31"
+              ],
+              "indicator_read": "OCC|10:CREQ904-OR|4:NODE|3:374|2:37",
+              "range_proof": {
+                "binding": "projected914Q",
+                "initialization": "OCC|10:CREQ904-OR|4:NODE|3:106|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      312,
+                      333
+                    ],
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:308|2:25"
+                    ],
+                    "edge_id": "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|10:CREQ904-OR|4:NODE|3:312|2:26",
+                    "predicate_occurrence": "OCC|10:CREQ904-OR|9:PRIMITIVE|3:312|11:residue_two",
+                    "write": "OCC|10:CREQ904-OR|4:NODE|3:337|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:243|2:15",
+                    "source_location": [
+                      243,
+                      259
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|10:CREQ904-OR|4:NODE|3:130|1:8",
+                      "OCC|10:CREQ904-OR|4:NODE|3:308|2:25"
+                    ],
+                    "occurrence_id": "OCC|10:CREQ904-OR|4:NODE|3:337|2:31",
+                    "source_location": [
+                      337,
+                      353
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                374,
+                387
+              ]
+            }
+          ],
+          "result_type": "BOOLEAN",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "projected914Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              360,
+              389
+            ]
+          ],
+          "source_members": [
+            "OCC|10:CREQ904-OR|4:NODE|3:356|2:33",
+            "OCC|10:CREQ904-OR|4:NODE|3:360|2:34",
+            "OCC|10:CREQ904-OR|4:NODE|3:360|2:35",
+            "OCC|10:CREQ904-OR|4:NODE|3:360|2:36",
+            "OCC|10:CREQ904-OR|4:NODE|3:374|2:37",
+            "OCC|10:CREQ904-OR|4:NODE|3:388|2:38",
+            "OCC|10:CREQ904-OR|4:NODE|3:393|2:39",
+            "OCC|10:CREQ904-OR|4:NODE|3:412|2:40",
+            "OCC|10:CREQ904-OR|4:EDGE|2:31",
+            "OCC|10:CREQ904-OR|4:EDGE|2:32",
+            "OCC|10:CREQ904-OR|4:EDGE|2:33",
+            "OCC|10:CREQ904-OR|4:EDGE|2:34",
+            "OCC|10:CREQ904-OR|4:EDGE|2:35",
+            "OCC|10:CREQ904-OR|4:EDGE|2:36",
+            "OCC|10:CREQ904-OR|4:EDGE|2:37",
+            "OCC|10:CREQ904-OR|4:EDGE|2:38",
+            "OCC|10:CREQ904-OR|4:EDGE|2:39",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:53",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:54",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:55",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:56",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:58",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:59",
+            "OCC|10:CREQ904-OR|13:SEMANTIC_EDGE|2:60"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "REPEATED_AND_TO_REPEATED_PRODUCT",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-REPEATED_AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:5ab33cdc1dd100a4171e178f4529c09153a6cd87dda13b0ba6fb0f57dd5cd43d|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904P": "creq904P",
+            "creq904Q": "creq904Q",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:281|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:285|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:298|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:301|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:41",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:42",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:318|2:43",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:321|2:44",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:327|2:45",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:341|2:46",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:31",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:32",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:41",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:42",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:43",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:44",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:45",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:65",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:66",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:67",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:68",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:69",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:70",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:86",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:87",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:88",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:89",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:95",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:97",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:98",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:99"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:181|2:13",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:296|2:35",
+              "range_proof": {
+                "binding": "creq904P",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:67|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      209,
+                      225
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:205|2:17"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:209|2:18",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:209|9:odd_index",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:181|2:13",
+                    "source_location": [
+                      181,
+                      192
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:205|2:17"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23",
+                    "source_location": [
+                      229,
+                      240
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                296,
+                304
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:193|2:15",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:305|2:36",
+              "range_proof": {
+                "binding": "creq904Q",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:86|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      247,
+                      263
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:25"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:247|2:26",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:247|11:residue_two",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:193|2:15",
+                    "source_location": [
+                      193,
+                      204
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:25"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31",
+                    "source_location": [
+                      267,
+                      278
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                305,
+                313
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              296,
+              313
+            ]
+          ],
+          "source_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:281|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:296|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:296|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:305|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:31",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:32",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:64",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:65"
+          ]
+        },
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-REPEATED_AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:6919781d921c7df4cf4f2fadb929d193ca0c936bedafbeb305f9e8b6c4006121|14:contribution/1"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "creq904Item",
+            "creq904Limit": "creq904Limit",
+            "creq904P": "creq904P",
+            "creq904Q": "creq904Q",
+            "creq904Total": "creq904Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:346|2:47",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:350|2:48",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:49",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:50",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:51",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:363|2:52",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:366|2:53",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:383|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:386|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:392|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:406|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:351|9:odd_index",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:371|11:residue_two",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:46",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:47",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:48",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:49",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:50",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:51",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:52",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:53",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:71",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:72",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:73",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:74",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:75",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:76",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:90",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:91",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:92",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:93",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:96",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:100",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:101",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:102"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:181|2:13",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:331|2:39",
+              "range_proof": {
+                "binding": "creq904P",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:67|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      209,
+                      225
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:205|2:17"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:209|2:18",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:209|9:odd_index",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:181|2:13",
+                    "source_location": [
+                      181,
+                      192
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:205|2:17"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:229|2:23",
+                    "source_location": [
+                      229,
+                      240
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                331,
+                339
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:193|2:15",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:340|2:40",
+              "range_proof": {
+                "binding": "creq904Q",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:86|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      247,
+                      263
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:25"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:247|2:26",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:247|11:residue_two",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:193|2:15",
+                    "source_location": [
+                      193,
+                      204
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:105|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:25"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:267|2:31",
+                    "source_location": [
+                      267,
+                      278
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                340,
+                348
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              350,
+              388
+            ],
+            [
+              331,
+              348
+            ]
+          ],
+          "source_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:316|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:331|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:331|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:340|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:61",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:63",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:66"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "REPEATED_AND_TO_ALPHA_REPEATED_PRODUCT",
+      "claims": [
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-REPEATED_AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:5ab33cdc1dd100a4171e178f4529c09153a6cd87dda13b0ba6fb0f57dd5cd43d|14:contribution/0"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "projected914Item",
+            "creq904Limit": "projected914Limit",
+            "creq904P": "projected914P",
+            "creq904Q": "projected914Q",
+            "creq904Total": "projected914Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:281|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:285|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:286|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:298|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:301|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:41",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:306|2:42",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:318|2:43",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:321|2:44",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:327|2:45",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:341|2:46",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:286|9:odd_index",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:306|11:residue_two",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:31",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:32",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:41",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:42",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:43",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:44",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:45",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:65",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:66",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:67",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:68",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:69",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:70",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:86",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:87",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:88",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:89",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:95",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:97",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:98",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:99"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:226|2:13",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:376|2:35",
+              "range_proof": {
+                "binding": "projected914P",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:82|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      264,
+                      285
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:260|2:17"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:264|2:18",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:226|2:13",
+                    "source_location": [
+                      226,
+                      242
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:260|2:17"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23",
+                    "source_location": [
+                      289,
+                      305
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                376,
+                389
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:15",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:390|2:36",
+              "range_proof": {
+                "binding": "projected914Q",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:106|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      312,
+                      333
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:308|2:25"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:312|2:26",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:15",
+                    "source_location": [
+                      243,
+                      259
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:308|2:25"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31",
+                    "source_location": [
+                      337,
+                      353
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                390,
+                403
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "projected914Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              285,
+              323
+            ],
+            [
+              376,
+              403
+            ]
+          ],
+          "source_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:356|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:376|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:376|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:390|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:31",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:32",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:33",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:34",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:35",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:64",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:65"
+          ]
+        },
+        {
+          "affected_requirements": [
+            "DEVELOPMENT_ONLY_REQUIREMENT|20:CREQ904-REPEATED_AND|132:DEVELOPMENT_ONLY_KEY|17:numeric_iteration|19:NONNEGATIVE_INTEGER|64:6919781d921c7df4cf4f2fadb929d193ca0c936bedafbeb305f9e8b6c4006121|14:contribution/1"
+          ],
+          "alpha_mapping": {
+            "creq904Item": "projected914Item",
+            "creq904Limit": "projected914Limit",
+            "creq904P": "projected914P",
+            "creq904Q": "projected914Q",
+            "creq904Total": "projected914Total"
+          },
+          "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+          "contract_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:346|2:47",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:350|2:48",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:49",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:50",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:351|2:51",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:363|2:52",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:366|2:53",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:371|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:383|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:386|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:392|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:406|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:351|9:odd_index",
+            "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:371|11:residue_two",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:46",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:47",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:48",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:49",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:50",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:51",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:52",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:53",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:54",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:55",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:56",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:57",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:71",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:72",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:73",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:74",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:75",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:76",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:90",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:91",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:92",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:93",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:96",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:100",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:101",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|3:102"
+          ],
+          "duplicates_retained": true,
+          "frozen_rule_id": "V3.3",
+          "operand_types": [
+            [
+              "BOOLEAN",
+              "BOOLEAN"
+            ],
+            [
+              "INTEGER",
+              "INTEGER"
+            ]
+          ],
+          "preconditions": [
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:226|2:13",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:426|2:39",
+              "range_proof": {
+                "binding": "projected914P",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|2:82|1:4",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      264,
+                      285
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:260|2:17"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:264|2:18",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:226|2:13",
+                    "source_location": [
+                      226,
+                      242
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:260|2:17"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:289|2:23",
+                    "source_location": [
+                      289,
+                      305
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                426,
+                439
+              ]
+            },
+            {
+              "current_iteration_reaching_definitions": [
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:15",
+                "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31"
+              ],
+              "indicator_read": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:440|2:40",
+              "range_proof": {
+                "binding": "projected914Q",
+                "initialization": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:106|1:6",
+                "predicate_definitions": [
+                  {
+                    "condition_location": [
+                      312,
+                      333
+                    ],
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:308|2:25"
+                    ],
+                    "edge_id": "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                    "expression_node_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:312|2:26",
+                    "predicate_occurrence": "OCC|20:CREQ904-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+                    "write": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31"
+                  }
+                ],
+                "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+                "range": [
+                  0,
+                  1
+                ],
+                "type": "INTEGER",
+                "writes": [
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:243|2:15",
+                    "source_location": [
+                      243,
+                      259
+                    ],
+                    "value": 0
+                  },
+                  {
+                    "control_context": [
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:130|1:8",
+                      "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:308|2:25"
+                    ],
+                    "occurrence_id": "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:337|2:31",
+                    "source_location": [
+                      337,
+                      353
+                    ],
+                    "value": 1
+                  }
+                ]
+              },
+              "source_location": [
+                440,
+                453
+              ]
+            }
+          ],
+          "result_type": "INTEGER",
+          "scientific_requirement_transfer": false,
+          "semantic_roles": {
+            "contract": {
+              "target_binding": "creq904Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            },
+            "source": {
+              "target_binding": "projected914Total",
+              "target_role": "DISPLAYED_ACCUMULATOR"
+            }
+          },
+          "source_locations": [
+            [
+              350,
+              388
+            ],
+            [
+              426,
+              453
+            ]
+          ],
+          "source_members": [
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:406|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:426|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:426|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:NODE|3:440|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:36",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:37",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:38",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:39",
+            "OCC|20:CREQ904-REPEATED_AND|4:EDGE|2:40",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:58",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:59",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:60",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:61",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:63",
+            "OCC|20:CREQ904-REPEATED_AND|13:SEMANTIC_EDGE|2:66"
+          ]
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "26583dd1a6cfd6375455000d8f2ddfb1c5c5c048"
+}

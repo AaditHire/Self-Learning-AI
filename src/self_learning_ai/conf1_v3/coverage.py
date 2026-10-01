@@ -26,12 +26,13 @@ class MappingProof:
     equivalence_proofs:tuple[Mapping[str,Any],...]=()
     semantic_transport:Mapping[str,Any]|None=None
     raw_key_resolution:tuple[Mapping[str,Any],...]=()
+    requirement_evidence:Mapping[str,Any]|None=None
 
     def to_record(self) -> dict[str,Any]:
         """Expose direct/region satisfaction without hiding unresolved raw keys."""
         from .interfaces import canonical_json_bytes
         regional=self.semantic_transport is not None
-        return {"contract_id":self.contract.contract_id,"program_id":self.program.program_id,
+        result={"contract_id":self.contract.contract_id,"program_id":self.program.program_id,
             "source_sha256":self.source_sha256,"ordinary_correspondence":self.correspondence,
             "key_occurrences":dict(self.key_occurrences),"equivalence_proofs":self.equivalence_proofs,
             "semantic_transport_sha256":hashlib.sha256(canonical_json_bytes(self.semantic_transport)).hexdigest() if regional else None,
@@ -40,20 +41,45 @@ class MappingProof:
             "mapping_status":"TOTAL_CORRESPONDENCE_WITH_VERIFIED_SEMANTIC_TRANSPORT" if regional else "STRICT_TYPED_MAPPING",
             "all_raw_atomic_keys_satisfied":all(r["method"]!="UNRESOLVED_DISTINCT_RAW_REQUIREMENT" for r in self.raw_key_resolution),
             "raw_graph_equality_claim":False if regional else None}
+        if self.requirement_evidence is not None:
+            from .requirement_verifier import verify_requirement_evidence
+            result["canonical_requirement_verification"]=verify_requirement_evidence(self.requirement_evidence)
+            result["canonical_requirement_evidence_sha256"]=hashlib.sha256(canonical_json_bytes(self.requirement_evidence)).hexdigest()
+        return result
 
     def validate(self) -> None:
         from .contract_ir import graph_record
         rebuilt=reconcile_complete_mapping(self.contract,self.program.source,
-            transport_evidence=self.semantic_transport)
+            transport_evidence=self.semantic_transport, requirement_plan=self.requirement_evidence["before"] if self.requirement_evidence else None)
         if canonical_json_bytes(rebuilt.to_record())!=canonical_json_bytes(self.to_record()):
             raise ClosureError("MAPPING_PROOF_RECONSTRUCTION_MISMATCH")
         if graph_record(rebuilt.program)!=graph_record(self.program):raise ClosureError("bound typed IR changed")
 
 
 def reconcile_complete_mapping(contract:CoverageContractV3,source:str,*,region_evidence:Mapping[str,Any]|None=None,
-                               transport_evidence:Mapping[str,Any]|None=None) -> MappingProof:
+                               transport_evidence:Mapping[str,Any]|None=None, requirement_plan:Mapping[str,Any]|None=None) -> MappingProof:
     """No ID-set substitute: exact complete typed/binding/tree correspondence."""
     contract.validate();program=compile_program(contract.program_id,source);expected=contract.ir
+    if requirement_plan is not None:
+        from dataclasses import replace
+        from .requirement_mapping import build_requirement_evidence
+        from .requirement_verifier import verify_plan,dependency_scope
+        from .typed_alignment import align
+        verify_plan(requirement_plan); dependency_scope(contract.core_gaps,requirement_plan)
+        if requirement_plan["scope"]!="DEVELOPMENT_ONLY" or contract.task_kind!="development":
+            raise ClosureError("SCIENTIFIC_SOURCE_REQUIREMENT_MAPPING_UNRESOLVED: development proof cannot promote requirements")
+        # A bounded development proof view defers only named later-stage gaps.
+        # Original contract, gaps, full graphs and prospective plan remain bound
+        # in requirement_evidence. Legacy/scientific guards are unchanged.
+        proof_contract=replace(contract,core_gaps=())
+        try:
+            base=reconcile_complete_mapping(proof_contract,source,region_evidence=region_evidence,transport_evidence=transport_evidence)
+        except ClosureError as exc:
+            if region_evidence is not None or transport_evidence is not None or str(exc) not in {"INCOMPATIBLE_COMPLETE_TYPED_STRUCTURE","INCOMPATIBLE_TYPED_NODE_OR_EDGE","INCOMPATIBLE_DIRECTED_BINDING"}: raise
+            checked=align(expected,program); table=dict(checked["correspondence"])
+            base=MappingProof(proof_contract,program,tuple(table.items()),{k:tuple(table[x] for x in ids) for k,ids in contract.key_occurrences.items()},hashlib.sha256(source.encode()).hexdigest(),tuple(checked["equivalence_claims"]))
+        evidence=build_requirement_evidence(requirement_plan,contract,program,base)
+        return replace(base,contract=contract,requirement_evidence=evidence)
     if contract.core_gaps:raise ClosureError("UNRESOLVED_REQUIREMENT: incomplete prospective contract")
     if region_evidence is not None or transport_evidence is not None:
         from .canonical_transport import build_canonical_transport,digest
@@ -215,7 +241,8 @@ class CoverageEngine:
     def _check_bound_inputs(self) -> None:
         from .contract_ir import graph_record
         source=self.resolver.read(self.source_artifact_id,role="SOURCE_REFERENCE").decode("utf-8")
-        current_mapping=reconcile_complete_mapping(self.mapping.contract,source,transport_evidence=self.mapping.semantic_transport)
+        current_mapping=reconcile_complete_mapping(self.mapping.contract,source,transport_evidence=self.mapping.semantic_transport,
+            requirement_plan=self.mapping.requirement_evidence["before"] if self.mapping.requirement_evidence else None)
         if canonical_json_bytes(current_mapping.to_record())!=canonical_json_bytes(self.mapping.to_record()):
             raise ClosureError("bound source/mapping changed")
         if graph_record(current_mapping.program)!=graph_record(self.mapping.program):
