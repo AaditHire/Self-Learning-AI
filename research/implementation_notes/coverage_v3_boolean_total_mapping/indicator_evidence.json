@@ -1,0 +1,1070 @@
+{
+  "records": [
+    {
+      "contract_form": "AND",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "69af411e314649c82425cb8be8efd93d5cf743802ab10791707d8511a125121c",
+      "records": [
+        {
+          "predicate": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:187|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "bt902P",
+            "initialization": "OCC|13:BTOTAL902-AND|4:NODE|2:61|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  187,
+                  201
+                ],
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:183|2:17"
+                ],
+                "edge_id": "OCC|13:BTOTAL902-AND|13:SEMANTIC_EDGE|2:40",
+                "expression_node_id": "OCC|13:BTOTAL902-AND|4:NODE|3:187|2:18",
+                "predicate_occurrence": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:187|9:odd_index",
+                "write": "OCC|13:BTOTAL902-AND|4:NODE|3:205|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:163|2:13",
+                "source_location": [
+                  163,
+                  172
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:183|2:17"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:205|2:23",
+                "source_location": [
+                  205,
+                  214
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|13:BTOTAL902-AND|4:NODE|3:163|2:13",
+            "OCC|13:BTOTAL902-AND|4:NODE|3:205|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|13:BTOTAL902-AND|4:NODE|3:264|2:35"
+        },
+        {
+          "predicate": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:221|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "bt902Q",
+            "initialization": "OCC|13:BTOTAL902-AND|4:NODE|2:78|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  221,
+                  235
+                ],
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:217|2:25"
+                ],
+                "edge_id": "OCC|13:BTOTAL902-AND|13:SEMANTIC_EDGE|2:41",
+                "expression_node_id": "OCC|13:BTOTAL902-AND|4:NODE|3:221|2:26",
+                "predicate_occurrence": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:221|11:residue_two",
+                "write": "OCC|13:BTOTAL902-AND|4:NODE|3:239|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:173|2:15",
+                "source_location": [
+                  173,
+                  182
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|2:95|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:217|2:25"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:239|2:31",
+                "source_location": [
+                  239,
+                  248
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|13:BTOTAL902-AND|4:NODE|3:173|2:15",
+            "OCC|13:BTOTAL902-AND|4:NODE|3:239|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|13:BTOTAL902-AND|4:NODE|3:271|2:36"
+        }
+      ],
+      "source_form": "PRODUCT"
+    },
+    {
+      "contract_form": "OR",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "b90b55a5884f9f2368a813e493ec24eb882d4c45e5e7ea5f72dfb7d6be32598f",
+      "records": [
+        {
+          "predicate": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:187|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "bt902P",
+            "initialization": "OCC|12:BTOTAL902-OR|4:NODE|2:61|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  187,
+                  201
+                ],
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:183|2:17"
+                ],
+                "edge_id": "OCC|12:BTOTAL902-OR|13:SEMANTIC_EDGE|2:44",
+                "expression_node_id": "OCC|12:BTOTAL902-OR|4:NODE|3:187|2:18",
+                "predicate_occurrence": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:187|9:odd_index",
+                "write": "OCC|12:BTOTAL902-OR|4:NODE|3:205|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:163|2:13",
+                "source_location": [
+                  163,
+                  172
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:183|2:17"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:205|2:23",
+                "source_location": [
+                  205,
+                  214
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|12:BTOTAL902-OR|4:NODE|3:163|2:13",
+            "OCC|12:BTOTAL902-OR|4:NODE|3:205|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|12:BTOTAL902-OR|4:NODE|3:255|2:36"
+        },
+        {
+          "predicate": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:221|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "bt902Q",
+            "initialization": "OCC|12:BTOTAL902-OR|4:NODE|2:78|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  221,
+                  235
+                ],
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:217|2:25"
+                ],
+                "edge_id": "OCC|12:BTOTAL902-OR|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|12:BTOTAL902-OR|4:NODE|3:221|2:26",
+                "predicate_occurrence": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:221|11:residue_two",
+                "write": "OCC|12:BTOTAL902-OR|4:NODE|3:239|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:173|2:15",
+                "source_location": [
+                  173,
+                  182
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|2:95|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:217|2:25"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:239|2:31",
+                "source_location": [
+                  239,
+                  248
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|12:BTOTAL902-OR|4:NODE|3:173|2:15",
+            "OCC|12:BTOTAL902-OR|4:NODE|3:239|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|12:BTOTAL902-OR|4:NODE|3:262|2:37"
+        }
+      ],
+      "source_form": "SUM"
+    },
+    {
+      "contract_form": "AND",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "3a2e0c3bb84c4322282e04bd095a5db7df7cf75ba18d106ec50d092f996ee758",
+      "records": [
+        {
+          "predicate": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:264|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "transport907P",
+            "initialization": "OCC|13:BTOTAL902-AND|4:NODE|2:82|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  264,
+                  285
+                ],
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:260|2:17"
+                ],
+                "edge_id": "OCC|13:BTOTAL902-AND|13:SEMANTIC_EDGE|2:40",
+                "expression_node_id": "OCC|13:BTOTAL902-AND|4:NODE|3:264|2:18",
+                "predicate_occurrence": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:264|9:odd_index",
+                "write": "OCC|13:BTOTAL902-AND|4:NODE|3:289|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:226|2:13",
+                "source_location": [
+                  226,
+                  242
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:260|2:17"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:289|2:23",
+                "source_location": [
+                  289,
+                  305
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|13:BTOTAL902-AND|4:NODE|3:226|2:13",
+            "OCC|13:BTOTAL902-AND|4:NODE|3:289|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|13:BTOTAL902-AND|4:NODE|3:376|2:35"
+        },
+        {
+          "predicate": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:312|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "transport907Q",
+            "initialization": "OCC|13:BTOTAL902-AND|4:NODE|3:106|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  312,
+                  333
+                ],
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:308|2:25"
+                ],
+                "edge_id": "OCC|13:BTOTAL902-AND|13:SEMANTIC_EDGE|2:41",
+                "expression_node_id": "OCC|13:BTOTAL902-AND|4:NODE|3:312|2:26",
+                "predicate_occurrence": "OCC|13:BTOTAL902-AND|9:PRIMITIVE|3:312|11:residue_two",
+                "write": "OCC|13:BTOTAL902-AND|4:NODE|3:337|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:243|2:15",
+                "source_location": [
+                  243,
+                  259
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:130|1:8",
+                  "OCC|13:BTOTAL902-AND|4:NODE|3:308|2:25"
+                ],
+                "occurrence_id": "OCC|13:BTOTAL902-AND|4:NODE|3:337|2:31",
+                "source_location": [
+                  337,
+                  353
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|13:BTOTAL902-AND|4:NODE|3:243|2:15",
+            "OCC|13:BTOTAL902-AND|4:NODE|3:337|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|13:BTOTAL902-AND|4:NODE|3:390|2:36"
+        }
+      ],
+      "source_form": "ALPHA_PRODUCT"
+    },
+    {
+      "contract_form": "OR",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "747cb13261f8b5ae05af56fc46113a0e97a2cf82178cab1e2f9bbe19063b6376",
+      "records": [
+        {
+          "predicate": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:264|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "transport907P",
+            "initialization": "OCC|12:BTOTAL902-OR|4:NODE|2:82|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  264,
+                  285
+                ],
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:260|2:17"
+                ],
+                "edge_id": "OCC|12:BTOTAL902-OR|13:SEMANTIC_EDGE|2:44",
+                "expression_node_id": "OCC|12:BTOTAL902-OR|4:NODE|3:264|2:18",
+                "predicate_occurrence": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:264|9:odd_index",
+                "write": "OCC|12:BTOTAL902-OR|4:NODE|3:289|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:226|2:13",
+                "source_location": [
+                  226,
+                  242
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:260|2:17"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:289|2:23",
+                "source_location": [
+                  289,
+                  305
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|12:BTOTAL902-OR|4:NODE|3:226|2:13",
+            "OCC|12:BTOTAL902-OR|4:NODE|3:289|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|12:BTOTAL902-OR|4:NODE|3:360|2:36"
+        },
+        {
+          "predicate": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:312|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "transport907Q",
+            "initialization": "OCC|12:BTOTAL902-OR|4:NODE|3:106|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  312,
+                  333
+                ],
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:308|2:25"
+                ],
+                "edge_id": "OCC|12:BTOTAL902-OR|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|12:BTOTAL902-OR|4:NODE|3:312|2:26",
+                "predicate_occurrence": "OCC|12:BTOTAL902-OR|9:PRIMITIVE|3:312|11:residue_two",
+                "write": "OCC|12:BTOTAL902-OR|4:NODE|3:337|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:243|2:15",
+                "source_location": [
+                  243,
+                  259
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:130|1:8",
+                  "OCC|12:BTOTAL902-OR|4:NODE|3:308|2:25"
+                ],
+                "occurrence_id": "OCC|12:BTOTAL902-OR|4:NODE|3:337|2:31",
+                "source_location": [
+                  337,
+                  353
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|12:BTOTAL902-OR|4:NODE|3:243|2:15",
+            "OCC|12:BTOTAL902-OR|4:NODE|3:337|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|12:BTOTAL902-OR|4:NODE|3:374|2:37"
+        }
+      ],
+      "source_form": "ALPHA_SUM"
+    },
+    {
+      "contract_form": "REPEATED_AND",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_1",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "8150ea86c9f7b8bbb4855944613198877821a901654dd51e90e02de419718d57",
+      "records": [
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:187|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "bt902P",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:61|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  187,
+                  201
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:183|2:17"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:187|2:18",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:187|9:odd_index",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:163|2:13",
+                "source_location": [
+                  163,
+                  172
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:183|2:17"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23",
+                "source_location": [
+                  205,
+                  214
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:163|2:13",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:264|2:35"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:221|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "bt902Q",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:78|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  221,
+                  235
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:217|2:25"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:221|2:26",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:221|11:residue_two",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:173|2:15",
+                "source_location": [
+                  173,
+                  182
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:217|2:25"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31",
+                "source_location": [
+                  239,
+                  248
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:173|2:15",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:271|2:36"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:187|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "bt902P",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:61|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  187,
+                  201
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:183|2:17"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:187|2:18",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:187|9:odd_index",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:163|2:13",
+                "source_location": [
+                  163,
+                  172
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:183|2:17"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23",
+                "source_location": [
+                  205,
+                  214
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:163|2:13",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:205|2:23"
+          ],
+          "region_id": "region_1",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:293|2:39"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:221|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "bt902Q",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:78|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  221,
+                  235
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:217|2:25"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:221|2:26",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:221|11:residue_two",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:173|2:15",
+                "source_location": [
+                  173,
+                  182
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:95|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:217|2:25"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31",
+                "source_location": [
+                  239,
+                  248
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:173|2:15",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:239|2:31"
+          ],
+          "region_id": "region_1",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:300|2:40"
+        }
+      ],
+      "source_form": "REPEATED_PRODUCT"
+    },
+    {
+      "contract_form": "REPEATED_AND",
+      "dependency_order": [
+        "frozen_metadata",
+        "parsed_typed_source",
+        "reaching_definitions",
+        "primitive_recognition",
+        "region_1",
+        "region_0",
+        "total_v32",
+        "indicator_evidence"
+      ],
+      "finding": "DERIVED_AFTER_VERIFIED_TOTAL",
+      "mapping_sha256": "ab385ac7c7e19fbc2083b4e1c8e2b90a32c6f3c560c9bb102d630c3d1904cf4c",
+      "records": [
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "transport907P",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:82|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  264,
+                  285
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:260|2:17"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:264|2:18",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:226|2:13",
+                "source_location": [
+                  226,
+                  242
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:260|2:17"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23",
+                "source_location": [
+                  289,
+                  305
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:226|2:13",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:376|2:35"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "transport907Q",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:106|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  312,
+                  333
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:308|2:25"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:312|2:26",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:243|2:15",
+                "source_location": [
+                  243,
+                  259
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:308|2:25"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31",
+                "source_location": [
+                  337,
+                  353
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:243|2:15",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31"
+          ],
+          "region_id": "region_0",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:390|2:36"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+          "range_and_write_proof": {
+            "binding": "transport907P",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|2:82|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  264,
+                  285
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:260|2:17"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:264|2:18",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:264|9:odd_index",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:226|2:13",
+                "source_location": [
+                  226,
+                  242
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:260|2:17"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23",
+                "source_location": [
+                  289,
+                  305
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:226|2:13",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:289|2:23"
+          ],
+          "region_id": "region_1",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:426|2:39"
+        },
+        {
+          "predicate": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+          "range_and_write_proof": {
+            "binding": "transport907Q",
+            "initialization": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:106|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  312,
+                  333
+                ],
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:308|2:25"
+                ],
+                "edge_id": "OCC|22:BTOTAL902-REPEATED_AND|13:SEMANTIC_EDGE|2:46",
+                "expression_node_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:312|2:26",
+                "predicate_occurrence": "OCC|22:BTOTAL902-REPEATED_AND|9:PRIMITIVE|3:312|11:residue_two",
+                "write": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:243|2:15",
+                "source_location": [
+                  243,
+                  259
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:130|1:8",
+                  "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:308|2:25"
+                ],
+                "occurrence_id": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31",
+                "source_location": [
+                  337,
+                  353
+                ],
+                "value": 1
+              }
+            ]
+          },
+          "reaching_definitions": [
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:243|2:15",
+            "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:337|2:31"
+          ],
+          "region_id": "region_1",
+          "source_indicator_read": "OCC|22:BTOTAL902-REPEATED_AND|4:NODE|3:440|2:40"
+        }
+      ],
+      "source_form": "ALPHA_REPEATED_PRODUCT"
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "43a30343a6a0494de0f55177f714ef93adb3021b"
+}

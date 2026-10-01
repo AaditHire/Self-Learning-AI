@@ -1,0 +1,528 @@
+{
+  "records": [
+    {
+      "contract_form": "AND",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "69af411e314649c82425cb8be8efd93d5cf743802ab10791707d8511a125121c",
+      "source_form": "PRODUCT"
+    },
+    {
+      "contract_form": "OR",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "b90b55a5884f9f2368a813e493ec24eb882d4c45e5e7ea5f72dfb7d6be32598f",
+      "source_form": "SUM"
+    },
+    {
+      "contract_form": "AND",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "3a2e0c3bb84c4322282e04bd095a5db7df7cf75ba18d106ec50d092f996ee758",
+      "source_form": "ALPHA_PRODUCT"
+    },
+    {
+      "contract_form": "OR",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "747cb13261f8b5ae05af56fc46113a0e97a2cf82178cab1e2f9bbe19063b6376",
+      "source_form": "ALPHA_SUM"
+    },
+    {
+      "contract_form": "REPEATED_AND",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "parsed_typed_source",
+            "region_1"
+          ],
+          [
+            "frozen_metadata",
+            "region_1"
+          ],
+          [
+            "primitive_recognition",
+            "region_1"
+          ],
+          [
+            "reaching_definitions",
+            "region_1"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "region_1",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "region_1",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "8150ea86c9f7b8bbb4855944613198877821a901654dd51e90e02de419718d57",
+      "source_form": "REPEATED_PRODUCT"
+    },
+    {
+      "contract_form": "REPEATED_AND",
+      "graph": {
+        "edges": [
+          [
+            "parsed_typed_source",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "reaching_definitions"
+          ],
+          [
+            "frozen_metadata",
+            "primitive_recognition"
+          ],
+          [
+            "parsed_typed_source",
+            "region_0"
+          ],
+          [
+            "frozen_metadata",
+            "region_0"
+          ],
+          [
+            "primitive_recognition",
+            "region_0"
+          ],
+          [
+            "reaching_definitions",
+            "region_0"
+          ],
+          [
+            "parsed_typed_source",
+            "region_1"
+          ],
+          [
+            "frozen_metadata",
+            "region_1"
+          ],
+          [
+            "primitive_recognition",
+            "region_1"
+          ],
+          [
+            "reaching_definitions",
+            "region_1"
+          ],
+          [
+            "region_0",
+            "total_v32"
+          ],
+          [
+            "region_1",
+            "total_v32"
+          ],
+          [
+            "parsed_typed_source",
+            "total_v32"
+          ],
+          [
+            "total_v32",
+            "indicator_evidence"
+          ]
+        ],
+        "nodes": [
+          {
+            "id": "parsed_typed_source",
+            "kind": "ROOT"
+          },
+          {
+            "id": "frozen_metadata",
+            "kind": "ROOT"
+          },
+          {
+            "id": "primitive_recognition",
+            "kind": "ROOT"
+          },
+          {
+            "id": "reaching_definitions",
+            "kind": "ROOT"
+          },
+          {
+            "id": "region_0",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "region_1",
+            "kind": "LOCAL_V33_REGION"
+          },
+          {
+            "id": "total_v32",
+            "kind": "TOTAL_MAPPING"
+          },
+          {
+            "id": "indicator_evidence",
+            "kind": "DERIVED_EVIDENCE"
+          }
+        ]
+      },
+      "mapping_sha256": "ab385ac7c7e19fbc2083b4e1c8e2b90a32c6f3c560c9bb102d630c3d1904cf4c",
+      "source_form": "ALPHA_REPEATED_PRODUCT"
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "43a30343a6a0494de0f55177f714ef93adb3021b"
+}

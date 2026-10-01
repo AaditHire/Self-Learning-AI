@@ -1,0 +1,398 @@
+{
+  "exact_string_overlap": 0,
+  "expected_labels_parsed": false,
+  "historical_fixture_files": 13,
+  "inventory": {
+    "expressions": [
+      {
+        "sha256_utf8": "0420639a0e00077e0c49deafc57488bec34390600cae4f9253aa0412cf899d2f",
+        "value": "bt902Item%2==1"
+      },
+      {
+        "sha256_utf8": "43b5342f5b044c696eb1f142b0cc931f03a7bbe7e83876b5c6c4ce6b1ac209e7",
+        "value": "bt902Item%3==2"
+      },
+      {
+        "sha256_utf8": "ce89c8bfbeecd24daa608b783fdee0f0ae19c045f145a0906bb282799bd07549",
+        "value": "bt902P*bt902Q"
+      },
+      {
+        "sha256_utf8": "2452cde81e7e65c5e6305b25bba32e0169989d62f429faa6ae27b2191cda974d",
+        "value": "bt902P+bt902Q>0"
+      },
+      {
+        "sha256_utf8": "29a1252cc5ff81ef721ef93fccb34c057f83e2d185e625fcaa24f0b37454ce6e",
+        "value": "(bt902Item%2==1)&&(bt902Item%3==2)"
+      },
+      {
+        "sha256_utf8": "510ce9891d6e69493e8b186c91e5b82f5480faf861311c3eea6a9607d2b4e48a",
+        "value": "(bt902Item%2==1)||(bt902Item%3==2)"
+      },
+      {
+        "sha256_utf8": "1528d066345b1b26f21e0dd33da600cf9ba7f373b729ced616a0dc86f2394907",
+        "value": "bt902Item+191"
+      },
+      {
+        "sha256_utf8": "0ecbd002c64df0b9d7256ac81601606930099a04a993e3ca155c17d110f0268d",
+        "value": "bt902P*bt902Q+bt902P"
+      },
+      {
+        "sha256_utf8": "fbc5679ed076d16e44b0d9b3539ddac50dd7dd76063eec41c4a610595d94cacd",
+        "value": "bt902Item>197"
+      },
+      {
+        "sha256_utf8": "7c630a46d20d3ee2ccfa33568dcf9c06f9eefaae3823f8a7abece3b59699c7f9",
+        "value": "bt902Limit%bt902Item==0"
+      },
+      {
+        "sha256_utf8": "902edde4ffa9498b2ae353efec0d6a743c85c4674b3da860266f75f6b3f10de6",
+        "value": "2*bt902Item<=bt902Limit"
+      },
+      {
+        "sha256_utf8": "ff9e8692fa156d17fa91402a6853cc456a718ae1390683c116ec698b67de8563",
+        "value": "bt902Values[bt902Item]<0"
+      },
+      {
+        "sha256_utf8": "9bf5dfd6dc1f5660b661080b42a48d7096c4045031547bbe8e8ec526510697b3",
+        "value": "bt902Values[bt902Item]%2==0"
+      },
+      {
+        "sha256_utf8": "7a6ea41295a35ff47f506c7194d04542e17ecc519af1968c601dfbbfb010e0a3",
+        "value": "bt902Values[bt902Item]*bt902Values[bt902Item]>4"
+      },
+      {
+        "sha256_utf8": "ecd3cf8fc0ab8221dc0d8c8ac4a43c9839156f644d9c4e82458610a5c19d8800",
+        "value": "bt902Values[bt902Item]>bt902Item"
+      },
+      {
+        "sha256_utf8": "0affc891fbd327114f55b082834a328846f8a4cd90a65635b723ee41f3b366a7",
+        "value": "transport907Item%2==1"
+      },
+      {
+        "sha256_utf8": "bea945839c7799ed5331f6a0ec9ce9dcd663e63ef7497cf39dffcdf82700c7a7",
+        "value": "transport907Item%3==2"
+      },
+      {
+        "sha256_utf8": "f8da159e599d5dd6f393eee2c9c413ef66761a273df9f26b888c3e0f358da380",
+        "value": "transport907P*transport907Q"
+      },
+      {
+        "sha256_utf8": "ca9aca85bd6ff7d08104b083b8016d35ba198b15d60be617cba942027700c693",
+        "value": "transport907P+transport907Q>0"
+      },
+      {
+        "sha256_utf8": "78c9a45424e385ea5c042ef8c0348f74677e1df622d175118940e2ae7fc0329e",
+        "value": "(transport907Item%2==1)&&(transport907Item%3==2)"
+      },
+      {
+        "sha256_utf8": "5585cb970d9d3d297a9278951beea80ba5683c0093dd84a3e5452c2ab0abbcf3",
+        "value": "(transport907Item%2==1)||(transport907Item%3==2)"
+      },
+      {
+        "sha256_utf8": "8f0adf7d73f5d6218ac8cbbd7b8dafcc3205325f4941eab36cca3eac3ccee712",
+        "value": "transport907Item+191"
+      },
+      {
+        "sha256_utf8": "9a81d5433144997f48a362b77810abad0fdee26bcf42900996376456f0d57f73",
+        "value": "transport907P*transport907Q+transport907P"
+      },
+      {
+        "sha256_utf8": "1725120b89c1e358b76f1077d7479ce4a836fa308d6c97f26caa7d9543d4266f",
+        "value": "transport907Item>197"
+      },
+      {
+        "sha256_utf8": "30cd459d97d962f7e63df1b4a36dbef13f8bc9090071f2c4d4f4a246acfe4083",
+        "value": "transport907Limit%transport907Item==0"
+      },
+      {
+        "sha256_utf8": "3ad64acc0a759a96791d2179ccee2bed6dd6ee7350f4288c1e1800e5b690ac39",
+        "value": "2*transport907Item<=transport907Limit"
+      },
+      {
+        "sha256_utf8": "5088ddd42e1adc2152210489ae69174378ab0a7b1e43e1478a2371295f9b475a",
+        "value": "transport907Values[transport907Item]<0"
+      },
+      {
+        "sha256_utf8": "ad9d33fd086a6f8482db70e04e314790898f0ab3f18f96cfc78b14abadda4507",
+        "value": "transport907Values[transport907Item]%2==0"
+      },
+      {
+        "sha256_utf8": "5817660a424cefe97c74f782ef5a468adaf94c8a31187716bda04f9cc3ca2bc9",
+        "value": "transport907Values[transport907Item]*transport907Values[transport907Item]>4"
+      },
+      {
+        "sha256_utf8": "2668850af260e8885acbe964e29d610d3dd27287ace6e179266eb4df07413ca1",
+        "value": "transport907Values[transport907Item]>transport907Item"
+      }
+    ],
+    "ids": [
+      {
+        "sha256_utf8": "dd6d52aa9b1cd64bef0e9aaa7bd85c45cd914999da872baf3799fbad5fb5b118",
+        "value": "BTOTAL902-AND"
+      },
+      {
+        "sha256_utf8": "3374c1aeb063142dd5935d6054ce964c872029933abce0946d3683ed03fd9c9e",
+        "value": "BTOTAL902-PRODUCT"
+      },
+      {
+        "sha256_utf8": "f50fec2394f07c9f13042526e8512a7708522c40838dabf6339a16f21863657e",
+        "value": "BTOTAL902-OR"
+      },
+      {
+        "sha256_utf8": "2a9fccf1391c61ae4fdde7d636c76ea71132f25825c22b5579210a8a97ed9982",
+        "value": "BTOTAL902-SUM"
+      },
+      {
+        "sha256_utf8": "f5f6a7e93ec9bf1f0c0c96390ff8eb983529ef0a1ffa4aa9e5f32c4cd1a2ac68",
+        "value": "BTOTAL902-REPEATED_AND"
+      },
+      {
+        "sha256_utf8": "f8749c8933f42bf9b1dace28dec704bf67c8bb744b2aeda303ad0ad126a3304a",
+        "value": "BTOTAL902-REPEATED_PRODUCT"
+      },
+      {
+        "sha256_utf8": "4225852678964a91a53f39ad99b39d537e7c4158a8403c2c712c136721560ec1",
+        "value": "BTOTAL902-EXTRA_ARITHMETIC"
+      },
+      {
+        "sha256_utf8": "07bde8ff9831ffb82e962d39643b9d6e19f422684df4770038820eae1cf5971e",
+        "value": "BTOTAL902-EXTRA_BOOLEAN"
+      },
+      {
+        "sha256_utf8": "a957a5040b146da4cd03845c2cbb9c3f002f89d8c89ddd47277f42529d7936e2",
+        "value": "BTOTAL902-MISSING"
+      },
+      {
+        "sha256_utf8": "a78d0f7df1b4ce21c3b04c059d623d303248a9f9cf6b80915527eebf0a5abe11",
+        "value": "BTOTAL902-DOWNSTREAM"
+      },
+      {
+        "sha256_utf8": "264e6944929456b5c69e0bad1c66923d7270cc21e2d2b259a122a2d4b065be80",
+        "value": "BTOTAL902-EXTRA_INDICATOR"
+      },
+      {
+        "sha256_utf8": "1246eb1e14fe2b6b523f6a8df26dee46a7e69635895c2f5d2d1ffd6e55001dab",
+        "value": "BTOTAL902-STATE_MUTATION"
+      },
+      {
+        "sha256_utf8": "53d69e90a8973864c64a88c9bee9c2c0568185e1e0ddf2a62894ae52163ce211",
+        "value": "BTOTAL902-SAME_OUTPUT"
+      },
+      {
+        "sha256_utf8": "09924c22c45c3872bce3253cf13cc7f66f3a5f5256a667c3df173a57cb73d774",
+        "value": "BTOTAL902-WRONG_BOUNDARY"
+      },
+      {
+        "sha256_utf8": "4e093259a103d01a66c13b4bdf0abbb22c15f00f60871e739b4d11416a8e6b2a",
+        "value": "BTOTAL902-WRONG_LOOP"
+      },
+      {
+        "sha256_utf8": "386cde3a9d51ff87e0576b18fbd22c01d31ab8025e57869aa401ba2d4bfd4ab4",
+        "value": "BTOTAL902-ALPHA_AND"
+      },
+      {
+        "sha256_utf8": "9cea96e6548ba0a242f59e37130a550aa9bd11c530d5a37c8bbb03b462ee8963",
+        "value": "BTOTAL902-ALPHA_PRODUCT"
+      },
+      {
+        "sha256_utf8": "23b6155e865ac0b99311bd1569b613aff19d712ae202efd52bb68551b1923e72",
+        "value": "BTOTAL902-ALPHA_OR"
+      },
+      {
+        "sha256_utf8": "0aa8ee58541ed06508fe1552ae7d6485b82dd4bca85dfeaff7e8c8f29c97630c",
+        "value": "BTOTAL902-ALPHA_SUM"
+      },
+      {
+        "sha256_utf8": "28b4cc499d741a959b3c83b5e1d84cb620d06dd950c083d5231a7e999c768fe3",
+        "value": "BTOTAL902-ALPHA_REPEATED_PRODUCT"
+      },
+      {
+        "sha256_utf8": "c4272d4a8bbe62f13aedadfebe9b9f18ac2fc0ab2c56464d78805adb41bc0d49",
+        "value": "BTOTAL902-ODD"
+      },
+      {
+        "sha256_utf8": "36819712e3e6e656f79816373f6c65dfb55d6254c37fd71fe33353d19ddf47c3",
+        "value": "BTOTAL902-RESIDUE"
+      },
+      {
+        "sha256_utf8": "a75f78ae655cb416b23bdf9ce2ab3f5dbc864f6c9c488435a0c33de53af1370e",
+        "value": "BTOTAL902-DIVISOR"
+      },
+      {
+        "sha256_utf8": "ed9542561ce31c7bab30dafa5a8500a0b2ed3c030302e9442f1176433fc9f3fa",
+        "value": "BTOTAL902-HALF"
+      },
+      {
+        "sha256_utf8": "3ce781a538f3b5bcb036c3a4cca89fee704f00c429b3a491f12c470f30c6c84f",
+        "value": "BTOTAL902-ARRAY"
+      },
+      {
+        "sha256_utf8": "be79954480956583f7da90dd38cd8db51aee1f4581f28cbab98c9cfe11ac1a35",
+        "value": "BTOTAL902-CASE-0"
+      },
+      {
+        "sha256_utf8": "36b834a6015970f70a582183a6a9df6962b7dfd5e1150737f56610c48dd75048",
+        "value": "BTOTAL902-CASE-1"
+      },
+      {
+        "sha256_utf8": "0a8e8ae486844a557ee84f942112bc38631216b388e478fbe6026bb58173a71c",
+        "value": "BTOTAL902-CASE-2"
+      },
+      {
+        "sha256_utf8": "e41e14b83c15382f20d6e011c7e31bb3a31512fbf54d1e0c07cecbd9284aaa9f",
+        "value": "BTOTAL902-CASE-3"
+      },
+      {
+        "sha256_utf8": "132a4bfd6ae713a91b8093c455ff2b73e0a88f70a0ff193f556eceade121cf7b",
+        "value": "BTOTAL902-CASE-4"
+      }
+    ],
+    "raw_inputs": [
+      {
+        "sha256_utf8": "7e071fd9b023ed8f18458a73613a0834f6220bd5cc50357ba3493c6040a9ea8c",
+        "value": "00000000"
+      },
+      {
+        "sha256_utf8": "405391cdcba508299713f0df3491fc39ee8044c599aac506de3456b6b3dd79e6",
+        "value": "00000006"
+      },
+      {
+        "sha256_utf8": "348d5283aa6526c6170bdcdf1b1e1f5ff31074a06c5320b6dd89f22d5316ad4b",
+        "value": "000000011"
+      },
+      {
+        "sha256_utf8": "b3e6e600339cfc7787e98756a274e083e2ce87204328d96d7db258938966e309",
+        "value": "000000017"
+      },
+      {
+        "sha256_utf8": "fee4b4888e29f7410e66937fcd8f6ba1089c494afe1b0a4a8290f5027d29f6d2",
+        "value": "000000029"
+      },
+      {
+        "sha256_utf8": "1d05aaa1cf502303bd8ab6d785dbe2a5028efb97bbae63f20c2b124759201dbb",
+        "value": "-131|14|0|137"
+      },
+      {
+        "sha256_utf8": "452f2dba539fa5532cff1b2df5ec9d45f2b425e926f57d3ba3ed6fe670f59cc6",
+        "value": "0|-139|16|149"
+      },
+      {
+        "sha256_utf8": "ba39d85c6ccba8fcbf0698ee4643c8d8243ce3b0ba9c55fba581a00752038941",
+        "value": "18|0|-151|157"
+      },
+      {
+        "sha256_utf8": "548f11d6fbffb252de35c8faa6c457802bc3aa245d4ba06c35caf7c81f5fdc24",
+        "value": "-163|20|167|0"
+      },
+      {
+        "sha256_utf8": "46c1de216fb754ac567d88c74e3afee9f4251c3b9daa6f93d97cedd299ef230d",
+        "value": "0|22|-173|179"
+      }
+    ],
+    "sources": [
+      {
+        "sha256_utf8": "c2a0867d9e1f4d901fe0b6533820eb034a1e9cec284e08c6f5c26d76749ce668",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF ((bt902Item%2==1)&&(bt902Item%3==2)) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "2b6f766cadfe9c05b177680e2a1735b4d69694c80bfff08aabf4b45521fc08d9",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q). } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "523c363a3ff1b47159db336d84e003482fc9993e7b28b5afea522a9f5639375f",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF ((bt902Item%2==1)||(bt902Item%3==2)) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "796abc32b3d23c499482652cf7ad24bc8afa4d79729b08995260731b0dac0547",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (bt902P+bt902Q>0) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "356b06cfb2e475026b8e9aecbc0c25d991576dca6dc8d8f97de032cfdda41e45",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF ((bt902Item%2==1)&&(bt902Item%3==2)) { bt902Total+=1. }IF ((bt902Item%2==1)&&(bt902Item%3==2)) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "9a0771b0430bc89dc551f4ceb238c2dc0803dc4bff5bf214b10ec0758d75d20e",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q). bt902Total+=(bt902P*bt902Q). } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "abdb5cdf435ea93465495ace901d10f023ebd681847da7528f41e47f2f04f21b",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q).bt902Total+=bt902Item+191. } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "b7215708a8621a92bcfb3b2294fc127f2d874633d88109b8bf59b0869817e7d6",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (bt902P+bt902Q>0) { bt902Total+=1. }IF (bt902Item%2==1) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "2b6f766cadfe9c05b177680e2a1735b4d69694c80bfff08aabf4b45521fc08d9",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q). } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "eb978e648ce82df8a969835f42f84105231a3e3fbc5f496261e96f8644526b09",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q).bt902Total=181. } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "136be20718a1624d2a2671199079a0c0ed868462948208ead8bb33cc108cfb7f",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=bt902P*bt902Q+bt902P. } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "79d9d032da541334e12528d5a23ec8823eb54f69670a28b911835f037404d8fe",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q).bt902P=0. } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "4547ea5275d16e818a72fcd8a53916d63ef3c0c2b09299daea233dfd75695c0c",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Total+=(bt902P*bt902Q).IF (bt902Item>197) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "2abdcbd8b51c34116a934835dc61bc4dd9715a725242c17496617b1d79a995c0",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } bt902Q+=bt902P*bt902Q. } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "a2a26b08135f528d3dc3d6f88cc524ef9e1953c2657b24d786191f3f0c197584",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF ((bt902Item%2==1)&&(bt902Item%3==2)) { bt902Total+=1. } } LOOP (NUMBER bt902Later=1 TILL bt902Later<=bt902Limit, bt902Later++) { bt902Total+=(bt902P*bt902Q). } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "346c724e81eb82eb21b8a265262af7fc14358350d0ae4ecbdfa923c6e3135a6f",
+        "value": "NUMBER transport907Limit. INPUT(transport907Limit). NUMBER transport907Total=181. NUMBER transport907P=0. NUMBER transport907Q=0. LOOP (NUMBER transport907Item=1 TILL transport907Item<=transport907Limit, transport907Item++) { transport907P=0. transport907Q=0. IF (transport907Item%2==1) { transport907P=1. } IF (transport907Item%3==2) { transport907Q=1. } IF ((transport907Item%2==1)&&(transport907Item%3==2)) { transport907Total+=1. } } DISPLAYNL(transport907Total)."
+      },
+      {
+        "sha256_utf8": "c141c891df4e8629698b9114f5ce392ca7a886ad48a89838e4879872e04d9f0f",
+        "value": "NUMBER transport907Limit. INPUT(transport907Limit). NUMBER transport907Total=181. NUMBER transport907P=0. NUMBER transport907Q=0. LOOP (NUMBER transport907Item=1 TILL transport907Item<=transport907Limit, transport907Item++) { transport907P=0. transport907Q=0. IF (transport907Item%2==1) { transport907P=1. } IF (transport907Item%3==2) { transport907Q=1. } transport907Total+=(transport907P*transport907Q). } DISPLAYNL(transport907Total)."
+      },
+      {
+        "sha256_utf8": "b2baacd843440c0615fc65199ded4a6dd04d072d3b8c3e0a4fed668986ffa5da",
+        "value": "NUMBER transport907Limit. INPUT(transport907Limit). NUMBER transport907Total=181. NUMBER transport907P=0. NUMBER transport907Q=0. LOOP (NUMBER transport907Item=1 TILL transport907Item<=transport907Limit, transport907Item++) { transport907P=0. transport907Q=0. IF (transport907Item%2==1) { transport907P=1. } IF (transport907Item%3==2) { transport907Q=1. } IF ((transport907Item%2==1)||(transport907Item%3==2)) { transport907Total+=1. } } DISPLAYNL(transport907Total)."
+      },
+      {
+        "sha256_utf8": "066499060552189d17bf935e509d737c51537d240e56044bcffb8c036b333126",
+        "value": "NUMBER transport907Limit. INPUT(transport907Limit). NUMBER transport907Total=181. NUMBER transport907P=0. NUMBER transport907Q=0. LOOP (NUMBER transport907Item=1 TILL transport907Item<=transport907Limit, transport907Item++) { transport907P=0. transport907Q=0. IF (transport907Item%2==1) { transport907P=1. } IF (transport907Item%3==2) { transport907Q=1. } IF (transport907P+transport907Q>0) { transport907Total+=1. } } DISPLAYNL(transport907Total)."
+      },
+      {
+        "sha256_utf8": "ee35ad503188cfdefff32d91be81ae5bbfdf3a3625542fdae7e2d4b6a1a31048",
+        "value": "NUMBER transport907Limit. INPUT(transport907Limit). NUMBER transport907Total=181. NUMBER transport907P=0. NUMBER transport907Q=0. LOOP (NUMBER transport907Item=1 TILL transport907Item<=transport907Limit, transport907Item++) { transport907P=0. transport907Q=0. IF (transport907Item%2==1) { transport907P=1. } IF (transport907Item%3==2) { transport907Q=1. } transport907Total+=(transport907P*transport907Q). transport907Total+=(transport907P*transport907Q). } DISPLAYNL(transport907Total)."
+      },
+      {
+        "sha256_utf8": "202b515f1776ace9918aca5acbf9e47e44aa7da4c146d384170809e3f027a145",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (bt902Item%2==1) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "8e3ef7976fbc3c67c889cf2a10678a2c26e822769c712e98e49576cb80114f13",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (bt902Item%3==2) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "abc0b81b8494885d1d399ac5bbf82dc5af23cd95ecccb911edd3c7e282760e56",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (bt902Limit%bt902Item==0) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "fbc3573c757ed8586bdbac6cd08c4e4f380931f0ee26f083165c4a5dd5006c4c",
+        "value": "NUMBER bt902Limit. INPUT(bt902Limit). NUMBER bt902Total=181. NUMBER bt902P=0. NUMBER bt902Q=0. LOOP (NUMBER bt902Item=1 TILL bt902Item<=bt902Limit, bt902Item++) { bt902P=0. bt902Q=0. IF (bt902Item%2==1) { bt902P=1. } IF (bt902Item%3==2) { bt902Q=1. } IF (2*bt902Item<=bt902Limit) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      },
+      {
+        "sha256_utf8": "927f4f4d340b68c1104f0ffc55d22e4ca94720bdfa4c9ca4f727bf62e4e47c85",
+        "value": "IMPORT strings. SENTENCE bt902Raw. INPUT(bt902Raw). SENTENCE[] bt902Fields=strings.SPLIT(bt902Raw,\"|\"). NUMBER bt902A=strings.TO_NUMBER(bt902Fields[0]). NUMBER bt902B=strings.TO_NUMBER(bt902Fields[1]). NUMBER bt902C=strings.TO_NUMBER(bt902Fields[2]). NUMBER bt902D=strings.TO_NUMBER(bt902Fields[3]). NUMBER[] bt902Values=[bt902A,bt902B,bt902C,bt902D]. NUMBER bt902Total=181. LOOP (NUMBER bt902Item=0 TILL bt902Item<4, bt902Item++) { IF (bt902Values[bt902Item]<0) { bt902Total+=1. } IF (bt902Values[bt902Item]%2==0) { bt902Total+=1. } IF (bt902Values[bt902Item]*bt902Values[bt902Item]>4) { bt902Total+=1. } IF (bt902Values[bt902Item]>bt902Item) { bt902Total+=1. } } DISPLAYNL(bt902Total)."
+      }
+    ]
+  },
+  "recomputed_string_hash_overlap": 0,
+  "recorded_hash_overlap": 0,
+  "starting_head": "43a30343a6a0494de0f55177f714ef93adb3021b"
+}
