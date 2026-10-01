@@ -1,0 +1,105 @@
+{
+  "artifact_kind": "FROZEN_BOOLEAN_CATALOG_NOT_NEW_RULES",
+  "rules": [
+    {
+      "authority_path": "research/protocols/phase3c_conf1_coverage_v3_proposed.md",
+      "authority_section": "V3.3 Uniform extraction and narrow equivalence",
+      "authority_sha256_lf": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "catalog_rule": "AND_VS_PROVEN_01_PRODUCT_LOCAL_ONLY",
+      "catalog_rule_label_kind": "implementation label for an existing frozen V3.3 clause; not a new authority ID",
+      "complete_graph_equivalence_authorized": false,
+      "contract_topology": "and(Boolean,Boolean)",
+      "frozen_preconditions": [
+        "consistent alpha renaming",
+        "typed source-mapped operands and result",
+        "no unlisted rewrites",
+        "no complete-graph equality without full-signature audit",
+        "both product operands proven 0/1; equality is ONLY for local pair-joint key, not atomic AND/MUL keys"
+      ],
+      "frozen_rule_id": "V3.3",
+      "general_algebra_authorized": false,
+      "implementation_safety_restrictions": [
+        "both source graphs independently reconstructed",
+        "complete injective type/role-compatible alpha map",
+        "matching parsed loop contexts",
+        "source-recognized frozen predicate identities and exact operand bindings",
+        "every indicator write and initializer in {0,1}",
+        "one unconditional zero reset each iteration",
+        "one predicate-controlled assignment to 1",
+        "read after current-iteration definitions",
+        "exact reaching definitions; no stale/cross-loop/circular identity",
+        "duplicates retained"
+      ],
+      "mapping_precondition": "separate complete typed correspondence; no unmatched required source or contract occurrence",
+      "operand_types": [
+        [
+          "BOOLEAN",
+          "BOOLEAN"
+        ],
+        [
+          "INTEGER",
+          "INTEGER"
+        ]
+      ],
+      "purity_totality": "closed typed scalar predicate trees; fixed bounded domain/decoder; no extra API calls",
+      "result_types": [
+        "BOOLEAN",
+        "INTEGER"
+      ],
+      "scope": "LOCAL_PAIR_JOINT",
+      "source_topology": "mul(proven indicator01,proven indicator01)",
+      "state_order_requirement": "source-derived same-iteration flow; a range proof alone is insufficient"
+    },
+    {
+      "authority_path": "research/protocols/phase3c_conf1_coverage_v3_proposed.md",
+      "authority_section": "V3.3 Uniform extraction and narrow equivalence",
+      "authority_sha256_lf": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "catalog_rule": "BOOLEAN_OR_VS_PROVEN_INDICATOR_SUM_POSITIVE",
+      "catalog_rule_label_kind": "implementation label for an existing frozen V3.3 clause; not a new authority ID",
+      "complete_graph_equivalence_authorized": false,
+      "contract_topology": "or(Boolean,Boolean)",
+      "frozen_preconditions": [
+        "consistent alpha renaming",
+        "typed source-mapped operands and result",
+        "no unlisted rewrites",
+        "no complete-graph equality without full-signature audit",
+        "both inputs proven Boolean; numeric carriers require actual source-flow truth proof; comparison/indicator typed and source-mapped"
+      ],
+      "frozen_rule_id": "V3.3",
+      "general_algebra_authorized": false,
+      "implementation_safety_restrictions": [
+        "both source graphs independently reconstructed",
+        "complete injective type/role-compatible alpha map",
+        "matching parsed loop contexts",
+        "source-recognized frozen predicate identities and exact operand bindings",
+        "every indicator write and initializer in {0,1}",
+        "one unconditional zero reset each iteration",
+        "one predicate-controlled assignment to 1",
+        "read after current-iteration definitions",
+        "exact reaching definitions; no stale/cross-loop/circular identity",
+        "duplicates retained"
+      ],
+      "mapping_precondition": "separate complete typed correspondence; no unmatched required source or contract occurrence",
+      "operand_types": [
+        [
+          "BOOLEAN",
+          "BOOLEAN"
+        ],
+        [
+          "INTEGER",
+          "INTEGER"
+        ]
+      ],
+      "purity_totality": "closed typed scalar predicate trees; fixed bounded domain/decoder; no extra API calls",
+      "result_types": [
+        "BOOLEAN",
+        "BOOLEAN-to-01 indicator"
+      ],
+      "scope": "BOOLEAN_OR",
+      "source_topology": "indicator(add(a,b)>0)",
+      "state_order_requirement": "source-derived same-iteration flow; a range proof alone is insufficient"
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "c13996834f3895c013b460f43cf2a0303c892360"
+}

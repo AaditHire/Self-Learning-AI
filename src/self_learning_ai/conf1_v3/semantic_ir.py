@@ -222,12 +222,10 @@ def source_flow_equivalence(left: Program, left_expr: Expr, right: Program, righ
         names=alpha_map if alpha_map is not None else dict(zip(left.symbols,right.symbols))
         alpha_bijection(left.symbols,right.symbols,names)
         if any(left.roles[a]!=right.roles[b] for a,b in names.items()):raise SchemaError("alpha role mismatch")
-        # A primitive name denotes an atomic capability, not a particular
-        # value. Local equivalence cannot substitute another loop's/index's
-        # instance of that capability. Cross-program topology changes still
-        # require the unimplemented complete-source mapping certificate.
-        if left.normalized_tree!=right.normalized_tree:
-            raise SchemaError("local flow proof requires unchanged complete source topology")
+        # Local catalog proofs can compare different source spellings. They
+        # never authorize whole-source correspondence or atomic-key transport.
+        # Reconstructed source graphs, bindings, and loop identities remain
+        # mandatory; a separate complete mapping certificate is required.
         def loop_context(p,target):
             found=[]
             def visit(rows,path=(),loops=()):
@@ -242,9 +240,10 @@ def source_flow_equivalence(left: Program, left_expr: Expr, right: Program, righ
         if loop_context(left,left_expr)!=loop_context(right,right_expr):
             raise SchemaError("local expressions have different loop/state contexts")
         evidence=[]
-        def normalized(p,e,rename):
+        def normalized(p,e,rename,seen=frozenset()):
             e=ungroup(e)
             if e.kind=="ID" and e.value in p.indicator_proofs:
+                if e.value in seen:raise SchemaError("circular indicator foundation")
                 proof=p.indicator_proofs[e.value];definitions=proof["predicate_definitions"]
                 if len(definitions)!=1:raise SchemaError("indicator predicate attachment ambiguous")
                 definition=definitions[0];positive=definition["write"]
@@ -254,6 +253,8 @@ def source_flow_equivalence(left: Program, left_expr: Expr, right: Program, righ
                 context_ids=zero[0].get("control_context",[])
                 if len(context_ids)!=1 or p.item(context_ids[0]).operation!="BOUNDED_LOOP" or definition["control_context"][:-1]!=context_ids:
                     raise SchemaError("unconditional same-loop zero reset not proved")
+                lo,hi=p.item(context_ids[0]).location
+                if not lo<=e.start<e.end<=hi:raise SchemaError("indicator use is outside its resetting loop")
                 if not zero[0]["source_location"][0]<one[0]["source_location"][0]<e.start:
                     raise SchemaError("indicator use is not after current-iteration definition")
                 read=p.node_ids[id(e)];reaching=set(p.state_analysis["read_definitions"].get(read,[]))
@@ -263,8 +264,10 @@ def source_flow_equivalence(left: Program, left_expr: Expr, right: Program, righ
                 if len(candidates)!=1:raise SchemaError("condition selector ambiguous")
                 evidence.append({"indicator_read":read,"source_location":[e.start,e.end],"range_proof":proof,
                                  "current_iteration_reaching_definitions":sorted(reaching)})
-                return normalized(p,candidates[0],rename)
+                return normalized(p,candidates[0],rename,seen|{e.value})
             if infer_type(e,p.symbols,p.imports)=="BOOLEAN":
+                if any(n.kind=="ID" and n.value in seen for n in _walk_expr(e)):
+                    raise SchemaError("circular indicator foundation")
                 alias=p.primitive_aliases.get(p.node_ids[id(e)])
                 if alias:
                     bindings={name:rename.get(name,name) for name in p.symbols}

@@ -1,0 +1,336 @@
+{
+  "records": [
+    {
+      "finding": "UNRESOLVED",
+      "reason": "complete V3.2 certificate absent; local proof cannot supply indicator evidence",
+      "records": [],
+      "source_form": "PRODUCT"
+    },
+    {
+      "finding": "UNRESOLVED",
+      "reason": "complete V3.2 certificate absent; local proof cannot supply indicator evidence",
+      "records": [],
+      "source_form": "SUM_POSITIVE"
+    },
+    {
+      "artifact_kind": "INDICATOR_EVIDENCE_FROM_COMPLETE_MAPPING",
+      "complete_mapping_verified": true,
+      "finding": "DERIVED",
+      "records": [
+        {
+          "actual_source_predicate": "OCC|15:BMAP901-PRODUCT|9:PRIMITIVE|3:208|9:odd_index",
+          "complete_source_mapping_sha256": "52eefa55e98c8830f7f8089227d2c98c60f71c6286fb1a2e2983cba11b32a3af",
+          "current_iteration_reaching_definitions": [
+            "OCC|15:BMAP901-PRODUCT|4:NODE|3:180|2:13",
+            "OCC|15:BMAP901-PRODUCT|4:NODE|3:228|2:23"
+          ],
+          "frozen_rule_id": "V3.3",
+          "proof_dependency_order": [
+            "parsed typed source",
+            "frozen predicate recognition",
+            "reaching definitions",
+            "local V3.3 preconditions",
+            "complete V3.2 correspondence",
+            "indicator evidence"
+          ],
+          "source_indicator_read": "OCC|15:BMAP901-PRODUCT|4:NODE|3:294|2:35",
+          "source_location": [
+            294,
+            302
+          ],
+          "source_range_and_write_proof": {
+            "binding": "bmap904P",
+            "initialization": "OCC|15:BMAP901-PRODUCT|4:NODE|2:66|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  208,
+                  224
+                ],
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8",
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:204|2:17"
+                ],
+                "edge_id": "OCC|15:BMAP901-PRODUCT|13:SEMANTIC_EDGE|2:40",
+                "expression_node_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:208|2:18",
+                "predicate_occurrence": "OCC|15:BMAP901-PRODUCT|9:PRIMITIVE|3:208|9:odd_index",
+                "write": "OCC|15:BMAP901-PRODUCT|4:NODE|3:228|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8"
+                ],
+                "occurrence_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:180|2:13",
+                "source_location": [
+                  180,
+                  191
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8",
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:204|2:17"
+                ],
+                "occurrence_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:228|2:23",
+                "source_location": [
+                  228,
+                  239
+                ],
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "actual_source_predicate": "OCC|15:BMAP901-PRODUCT|9:PRIMITIVE|3:246|11:residue_two",
+          "complete_source_mapping_sha256": "52eefa55e98c8830f7f8089227d2c98c60f71c6286fb1a2e2983cba11b32a3af",
+          "current_iteration_reaching_definitions": [
+            "OCC|15:BMAP901-PRODUCT|4:NODE|3:192|2:15",
+            "OCC|15:BMAP901-PRODUCT|4:NODE|3:266|2:31"
+          ],
+          "frozen_rule_id": "V3.3",
+          "proof_dependency_order": [
+            "parsed typed source",
+            "frozen predicate recognition",
+            "reaching definitions",
+            "local V3.3 preconditions",
+            "complete V3.2 correspondence",
+            "indicator evidence"
+          ],
+          "source_indicator_read": "OCC|15:BMAP901-PRODUCT|4:NODE|3:303|2:36",
+          "source_location": [
+            303,
+            311
+          ],
+          "source_range_and_write_proof": {
+            "binding": "bmap904Q",
+            "initialization": "OCC|15:BMAP901-PRODUCT|4:NODE|2:85|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  246,
+                  262
+                ],
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8",
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:242|2:25"
+                ],
+                "edge_id": "OCC|15:BMAP901-PRODUCT|13:SEMANTIC_EDGE|2:41",
+                "expression_node_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:246|2:26",
+                "predicate_occurrence": "OCC|15:BMAP901-PRODUCT|9:PRIMITIVE|3:246|11:residue_two",
+                "write": "OCC|15:BMAP901-PRODUCT|4:NODE|3:266|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8"
+                ],
+                "occurrence_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:192|2:15",
+                "source_location": [
+                  192,
+                  203
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:104|1:8",
+                  "OCC|15:BMAP901-PRODUCT|4:NODE|3:242|2:25"
+                ],
+                "occurrence_id": "OCC|15:BMAP901-PRODUCT|4:NODE|3:266|2:31",
+                "source_location": [
+                  266,
+                  277
+                ],
+                "value": 1
+              }
+            ]
+          }
+        }
+      ],
+      "schema_version": 1,
+      "source_form": "ALPHA_PRODUCT"
+    },
+    {
+      "artifact_kind": "INDICATOR_EVIDENCE_FROM_COMPLETE_MAPPING",
+      "complete_mapping_verified": true,
+      "finding": "DERIVED",
+      "records": [
+        {
+          "actual_source_predicate": "OCC|20:BMAP901-SUM_POSITIVE|9:PRIMITIVE|3:208|9:odd_index",
+          "complete_source_mapping_sha256": "2c1d10f926e706cbe84ee6f6c1d404359b11440a357ee778b9bbd7691eabbaf4",
+          "current_iteration_reaching_definitions": [
+            "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:180|2:13",
+            "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:228|2:23"
+          ],
+          "frozen_rule_id": "V3.3",
+          "proof_dependency_order": [
+            "parsed typed source",
+            "frozen predicate recognition",
+            "reaching definitions",
+            "local V3.3 preconditions",
+            "complete V3.2 correspondence",
+            "indicator evidence"
+          ],
+          "source_indicator_read": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:284|2:36",
+          "source_location": [
+            284,
+            292
+          ],
+          "source_range_and_write_proof": {
+            "binding": "bmap904P",
+            "initialization": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|2:66|1:4",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  208,
+                  224
+                ],
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8",
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:204|2:17"
+                ],
+                "edge_id": "OCC|20:BMAP901-SUM_POSITIVE|13:SEMANTIC_EDGE|2:44",
+                "expression_node_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:208|2:18",
+                "predicate_occurrence": "OCC|20:BMAP901-SUM_POSITIVE|9:PRIMITIVE|3:208|9:odd_index",
+                "write": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:228|2:23"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8"
+                ],
+                "occurrence_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:180|2:13",
+                "source_location": [
+                  180,
+                  191
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8",
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:204|2:17"
+                ],
+                "occurrence_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:228|2:23",
+                "source_location": [
+                  228,
+                  239
+                ],
+                "value": 1
+              }
+            ]
+          }
+        },
+        {
+          "actual_source_predicate": "OCC|20:BMAP901-SUM_POSITIVE|9:PRIMITIVE|3:246|11:residue_two",
+          "complete_source_mapping_sha256": "2c1d10f926e706cbe84ee6f6c1d404359b11440a357ee778b9bbd7691eabbaf4",
+          "current_iteration_reaching_definitions": [
+            "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:192|2:15",
+            "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:266|2:31"
+          ],
+          "frozen_rule_id": "V3.3",
+          "proof_dependency_order": [
+            "parsed typed source",
+            "frozen predicate recognition",
+            "reaching definitions",
+            "local V3.3 preconditions",
+            "complete V3.2 correspondence",
+            "indicator evidence"
+          ],
+          "source_indicator_read": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:293|2:37",
+          "source_location": [
+            293,
+            301
+          ],
+          "source_range_and_write_proof": {
+            "binding": "bmap904Q",
+            "initialization": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|2:85|1:6",
+            "predicate_definitions": [
+              {
+                "condition_location": [
+                  246,
+                  262
+                ],
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8",
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:242|2:25"
+                ],
+                "edge_id": "OCC|20:BMAP901-SUM_POSITIVE|13:SEMANTIC_EDGE|2:45",
+                "expression_node_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:246|2:26",
+                "predicate_occurrence": "OCC|20:BMAP901-SUM_POSITIVE|9:PRIMITIVE|3:246|11:residue_two",
+                "write": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:266|2:31"
+              }
+            ],
+            "proof_rule": "declaration in {0,1}; every syntactic write is assignment in {0,1}; no INPUT or arithmetic update to binding",
+            "range": [
+              0,
+              1
+            ],
+            "type": "INTEGER",
+            "writes": [
+              {
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8"
+                ],
+                "occurrence_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:192|2:15",
+                "source_location": [
+                  192,
+                  203
+                ],
+                "value": 0
+              },
+              {
+                "control_context": [
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:104|1:8",
+                  "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:242|2:25"
+                ],
+                "occurrence_id": "OCC|20:BMAP901-SUM_POSITIVE|4:NODE|3:266|2:31",
+                "source_location": [
+                  266,
+                  277
+                ],
+                "value": 1
+              }
+            ]
+          }
+        }
+      ],
+      "schema_version": 1,
+      "source_form": "ALPHA_SUM_POSITIVE"
+    },
+    {
+      "artifact_kind": "INDICATOR_EVIDENCE_FROM_COMPLETE_MAPPING",
+      "complete_mapping_verified": true,
+      "finding": "NO_USED_INDICATOR_EVIDENCE",
+      "records": [],
+      "schema_version": 1,
+      "source_form": "ALPHA_REPEATED"
+    }
+  ],
+  "schema_version": 1,
+  "starting_head": "c13996834f3895c013b460f43cf2a0303c892360"
+}

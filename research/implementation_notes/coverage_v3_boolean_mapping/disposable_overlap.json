@@ -1,0 +1,387 @@
+{
+  "exact_string_overlap": 0,
+  "expected_labels_parsed": false,
+  "historical_fixture_files": 13,
+  "inventory": {
+    "expressions": [
+      {
+        "sha256_utf8": "3c4da81e0a8ad972973029de367e4f9eaf7b384eed56dccdfdd02b4705d55231",
+        "value": "bm901Item%2==1"
+      },
+      {
+        "sha256_utf8": "acbf419c327dd5fc71246627fd017f9baa7f7c1bbbfb5de56a5edb923eee3320",
+        "value": "bm901Item%3==2"
+      },
+      {
+        "sha256_utf8": "7a40c6988fae808e8f6f950e65aa6ab6c13b03fe3859223f0ee2039df70d370d",
+        "value": "bm901Limit%bm901Item==0"
+      },
+      {
+        "sha256_utf8": "88113238ae1fbba332b7fcf063d7336f909f66c1178ed23e5a3b5959d763ae71",
+        "value": "2*bm901Item<=bm901Limit"
+      },
+      {
+        "sha256_utf8": "b809ce40fc09181e25daef89b084d628e01e8f6a667bcfa40aad6146c6d1df85",
+        "value": "bm901Values[bm901Item]<0"
+      },
+      {
+        "sha256_utf8": "2e4a680076551185b16577225f164e1ae099c4260f6a6627e19b84626c83e3b3",
+        "value": "bm901Values[bm901Item]%2==0"
+      },
+      {
+        "sha256_utf8": "e0367aa8a5b5a910ded50b73bdaffce726967162b8cefd5e073d23eac82750b4",
+        "value": "bm901Values[bm901Item]*bm901Values[bm901Item]>4"
+      },
+      {
+        "sha256_utf8": "681a239231cbe4b76e69ea074a092984772a586f6255c0520d5d8f3ab9704f5d",
+        "value": "bm901Values[bm901Item]>bm901Item"
+      },
+      {
+        "sha256_utf8": "e2a3c0879de493f1a34092d0a3916399193ffe1c67316cb7ba47764e5f1c790e",
+        "value": "(bm901Item%2==1)&&(bm901Item%3==2)"
+      },
+      {
+        "sha256_utf8": "657daf64060c51bf6deba1529e234bb7158cd75e6d80ef6163033dfac02237ea",
+        "value": "(bm901Item%2==1)||(bm901Item%3==2)"
+      },
+      {
+        "sha256_utf8": "5fcb3cf0f456050b04fd44ef0efd1fe2687701c4c5d61add3a9ae17d4f8502aa",
+        "value": "bm901P*bm901Q"
+      },
+      {
+        "sha256_utf8": "9a329272b035f41f63148d0bbe952d27115ef6f78ec85c1986a6d7508d03e3ac",
+        "value": "bm901P+bm901Q>0"
+      },
+      {
+        "sha256_utf8": "16b5582c40f5399227527ec5719e03961acfc1072b976622eaaf83cc418b46b7",
+        "value": "bm901Item>77"
+      },
+      {
+        "sha256_utf8": "696dc8281185e3b43c70c773068d3fef557138c5114d3bfe4599e781f65cd514",
+        "value": "bm901Item+83"
+      },
+      {
+        "sha256_utf8": "6bb5da1696116598f9c5a206dbd8b0d481fef4da4ecbd2202604b557c20628ee",
+        "value": "bm901P==1"
+      },
+      {
+        "sha256_utf8": "77b0158aeb83a6595e1e27f76d1e6eed274549ef9f3ed7fcaf7380d3c212b82c",
+        "value": "!(bm901Item%2==1)&&(bm901Item%3==2)"
+      },
+      {
+        "sha256_utf8": "7dfeede58a7361aa7884a7344f9f33b40318ecbafa20871479421eeaeae1f8f6",
+        "value": "(bm901Item%2==1)&&((bm901Item%3==2)||(bm901Item%2==1))"
+      },
+      {
+        "sha256_utf8": "b82190c17dce7490bafe51f9d3def0817f26a1f00bf9ce0b787f1fa3a963ef45",
+        "value": "(bm901Item%2==1)||(bm901Item%3==2)||(bm901Item>77)"
+      },
+      {
+        "sha256_utf8": "dc75d75409c3c6a2968cbc2965d2f86a5f1e57a8c5d2ad94e07fe8a46dff22ce",
+        "value": "(bm901Item%2==1)*bm901Q"
+      }
+    ],
+    "ids": [
+      {
+        "sha256_utf8": "58da5e439b9a52a8237ebe8119ff4851b675ee6c7a20565e7f5f242814449018",
+        "value": "BMAP901-AND"
+      },
+      {
+        "sha256_utf8": "114c8e7bf8735d5842eaf1470ed153b8c2b3a8c90ccde52fd010521711c5edef",
+        "value": "BMAP901-PRODUCT"
+      },
+      {
+        "sha256_utf8": "17eeb1fc40917b1dc776893d114442c20f361c1fdf6ca7b94fdde1d2c5dde402",
+        "value": "BMAP901-OR"
+      },
+      {
+        "sha256_utf8": "780c2662975aa3cc0bf47c86f32351943df95c63951ab4962af30e75d23ce70a",
+        "value": "BMAP901-SUM_POSITIVE"
+      },
+      {
+        "sha256_utf8": "4ef66e54308b9c1aa108a62d6c07a3d1faf43325b85a12073d9b39228aa8bc5e",
+        "value": "BMAP901-REPEATED"
+      },
+      {
+        "sha256_utf8": "ec70a7187e78f6f17152ab91b4be05de05e78b36dd35b4bde4daac0220b5f114",
+        "value": "BMAP901-OMITTED"
+      },
+      {
+        "sha256_utf8": "67ff93bfdad427837d9d60258aae77b024b35bb1d09b8f77ff6bf8c9c8698bc4",
+        "value": "BMAP901-EXTRA_TERM"
+      },
+      {
+        "sha256_utf8": "940323f6178e54abb97b45704f61ca4a900a2e4c91b129447f453923170fe9eb",
+        "value": "BMAP901-COMPOUND"
+      },
+      {
+        "sha256_utf8": "1bf8e75ff9c31fe20ee404592b9b452e966dad55bef5aaa170005493bfbf7a06",
+        "value": "BMAP901-AMBIGUOUS"
+      },
+      {
+        "sha256_utf8": "a895e5a558b9809acfa034e280cb11380ad83d21230d808f9699bd63efa03101",
+        "value": "BMAP901-CONDITIONAL_RESET"
+      },
+      {
+        "sha256_utf8": "a5a541b99cbfd99a18bff4a3d8f295d6949db746f74fc21d5279f03da66cdbfc",
+        "value": "BMAP901-READ_BEFORE_WRITE"
+      },
+      {
+        "sha256_utf8": "5f7869e4587c999b972dccd04769a57ee0699ddc962c68bec5e0d61f3eda97ab",
+        "value": "BMAP901-STATE_ORDER"
+      },
+      {
+        "sha256_utf8": "3cee0038ce43c16773e3c840636d34f839c13374b27af35f8e9eb60020eacf2f",
+        "value": "BMAP901-WRONG_TYPE"
+      },
+      {
+        "sha256_utf8": "0359cad37e837706cab53babff3fe4a853fea91fda536a6547a5e1c112726cbd",
+        "value": "BMAP901-MATCHING_OUTPUT_INVALID"
+      },
+      {
+        "sha256_utf8": "47b90d3cf103d333e1197220f3e59a9d072f975faf3e3656dcbe5d3b6f5322db",
+        "value": "BMAP901-SOURCE_ONLY"
+      },
+      {
+        "sha256_utf8": "6c6062486d8f1d12dd243038f0d3f649f725f7c2b69a2a33724b6612b0036a84",
+        "value": "BMAP901-UNLISTED"
+      },
+      {
+        "sha256_utf8": "c46ea7ca9e0d9ac3ad8f199dd9c43e40c63aa3c9d49894af18c616743be4e2c1",
+        "value": "BMAP901-CIRCULAR"
+      },
+      {
+        "sha256_utf8": "4a2b9304761c0abafd1b1931cd16fec8e143379de6f0b480ab68ec78ff0ae378",
+        "value": "BMAP901-CROSS_LOOP"
+      },
+      {
+        "sha256_utf8": "e6d09f10dfe1fa508bd1913320ba1844502f2f24c863cd269ed895ac72b5f011",
+        "value": "BMAP901-ALPHA"
+      },
+      {
+        "sha256_utf8": "86d2b7e8f3c3087f34fad4fdd2839b444bd7e680ab3627643ab64ec743c43daf",
+        "value": "BMAP901-ALPHA_OR"
+      },
+      {
+        "sha256_utf8": "84a46d9fcae876ac6b2e703bf9da4b193479b5d3e15ed8e5e43d225720ac1bf8",
+        "value": "BMAP901-ALPHA_PRODUCT"
+      },
+      {
+        "sha256_utf8": "cd347bba8bb314dc64b91566a26ea0ab823600e58854928726cbed42f8595299",
+        "value": "BMAP901-ALPHA_SUM_POSITIVE"
+      },
+      {
+        "sha256_utf8": "8d14c81e069b8633d33f4c6ba8f0607e4ecc20573d345716c9314fd317a336ad",
+        "value": "BMAP901-ALPHA_REPEATED"
+      },
+      {
+        "sha256_utf8": "2280ab4b4965cdafbf74c3b9221933262a6dab1246ab22e5dfce0d1452bb4bb2",
+        "value": "BMAP901-ODD"
+      },
+      {
+        "sha256_utf8": "3b94ccebc6a08aff420281e732a67abdef654e1e5cb1c157ebb184ab778cf443",
+        "value": "BMAP901-RESIDUE"
+      },
+      {
+        "sha256_utf8": "b5c62d0da1627581b7f471d987425096596b4d2063004ce92b63b1224def73f1",
+        "value": "BMAP901-DIVISOR"
+      },
+      {
+        "sha256_utf8": "b2c895b35b1452fa0b899ecd8902ba6e24df2e4158b267e9641ed9835495e20a",
+        "value": "BMAP901-HALF"
+      },
+      {
+        "sha256_utf8": "427bb1a9241dea07e2d902005c4c33bf7bba59211228fcbeb48cfae7c3948aaf",
+        "value": "BMAP901-ARRAY"
+      },
+      {
+        "sha256_utf8": "93b8f081e10e33c53d88bdd4f2b1eb22ceb5776490a11836f5cb8f0b59d90d43",
+        "value": "BMAP901-CASE-0"
+      },
+      {
+        "sha256_utf8": "64d69a0088dd7f001773d50b553c438b5e8998fdf5d9fc94f28d903616d0514f",
+        "value": "BMAP901-CASE-1"
+      },
+      {
+        "sha256_utf8": "8051804f0e17a1849320d5f84b1833f44a6288a95aa815d832493766623384ef",
+        "value": "BMAP901-CASE-2"
+      },
+      {
+        "sha256_utf8": "bb80b928b5ea2b52bf3a83df188d0aca071068f30e45ed4a24a1c66c472fcae1",
+        "value": "BMAP901-CASE-3"
+      },
+      {
+        "sha256_utf8": "aecabfac14751f75df707fb0737eda3437ae3f2f3c64cde2704de2bf981d6bd7",
+        "value": "BMAP901-CASE-4"
+      },
+      {
+        "sha256_utf8": "d6530accd8c5c8780e9cef3597312dc57dc8a668b7b65bf66a7aad2b020f6439",
+        "value": "BMAP901-SOURCE-ARTIFACT"
+      },
+      {
+        "sha256_utf8": "b1fa9384c65414ac91a26f58cfc46ada654e4244ba2432316cd186ecfa9dc413",
+        "value": "BMAP901-CASE-ARTIFACT"
+      }
+    ],
+    "raw_inputs": [
+      {
+        "sha256_utf8": "20fdf64da3cd2c78ec3c033d2ac628bacf701711fa99435ee37bef0304800dc5",
+        "value": "0000000"
+      },
+      {
+        "sha256_utf8": "9166d3f4c413513a6f972f7094ddedbce740283f85b85b81d4e838257b878767",
+        "value": "0000005"
+      },
+      {
+        "sha256_utf8": "a4375be9c2242b6ae04428aa37301cc54d29ae4935b7ee371b78f7bbb76bb26e",
+        "value": "0000009"
+      },
+      {
+        "sha256_utf8": "600114aa14a3719efadb66f5a75c464b344ff34bcc6cbefe726949e7d2c155f7",
+        "value": "0000013"
+      },
+      {
+        "sha256_utf8": "bb575536dbafdfbfa4ccf402d8f0555742a6b048dfec11e851328650e40b8050",
+        "value": "0000023"
+      },
+      {
+        "sha256_utf8": "29bc3130535f28826880368ab3db8c34e6058d2956869637a7378f5be9baadb0",
+        "value": "-83|0|89|2"
+      },
+      {
+        "sha256_utf8": "4c0e031578141e2077bcf2bc7ff59106c55cec2c168c186aed32084f884d1932",
+        "value": "-97|6|0|101"
+      },
+      {
+        "sha256_utf8": "bf28e5fd4e694e8b02e0b60cd306b45292bf44c759c6bfff09404eaef6f84d52",
+        "value": "8|-103|0|107"
+      },
+      {
+        "sha256_utf8": "951cf9ec9be30c7f47a3e1d6393fce8cea8e86be66434981e6b1d1d9b2867616",
+        "value": "0|0|-109|113"
+      },
+      {
+        "sha256_utf8": "5893683d7d662193c794f1477e6b844eaa455d3c2baf9227efe4164e01fa51b4",
+        "value": "-127|10|13|0"
+      }
+    ],
+    "sources": [
+      {
+        "sha256_utf8": "2292f139b746a6b7cd598bcc520ea6716e61a729939df4c6b783bcd369818948",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "f508012bb7e5082b2cec607118d6f12609215379bec27857ab6ac43cc30d2194",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } bm901Total+=bm901P*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "1993ab32cda363eefb3951cff6ffa88e6da463cf2aca2dd2eed3eeb54da8cb68",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)||(bm901Item%3==2)) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "95d8873abd30f21d87d68b011debb901ef9c9bf1ea1865d3250c44219a5d4dee",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901P+bm901Q>0) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "045cf954bd4ea3b520c56a477304a8f860e4cc4cf109af747aa57ad9317046f3",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. }IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "077362af484abebc1bf2aff9a9aaca75019ab6959fe73d6ee246bf27ec9bd3a3",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901Item%2==1) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "80b31ae5a5bd8a9472d4e58dffc18ee935b38c84bea5bd3c1c25d804cdb3d91b",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)||(bm901Item%3==2)||(bm901Item>77)) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "60b59e39f6e7ff0616d8ca8883b463a88890a2917f59ae3cbe2012e10c4b0c01",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&((bm901Item%3==2)||(bm901Item%2==1))) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "6b462a9b0562f3620da27a8c2bc063ee8e094d9a1de4698cc0ca81bf76104b93",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901Item>77) { bm901P=1. } bm901Total+=bm901P*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "827f3518c4b7adb8498d9827d58e33c801a457d24cc01390889f9e73c66e8f1f",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { IF (bm901Item>77) { bm901P=0. } bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } bm901Total+=bm901P*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "c62a8db8b3e50c408d994c8e2a3e5938630dfc96aa7878d724d40fbb47bd9458",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901Total+=bm901P*bm901Q. bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. }  } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "880cf0efa522a724fd3a472da284910002ff5ff883dfa7430fc11f0d6bd1182e",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } bm901Total+=bm901P*bm901Q. bm901Total=79. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "bcf02f85a7c4958164498ecace13cc015c987d7f4b54011227d78e609dc7842d",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } bm901Total+=(bm901Item%2==1)*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "662d1659fffba6fa9d05d2f72dc0da5cd73b9b50558fb49bf21720a6138c08a2",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. } IF (bm901Item>77) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "cf2134de4d3fd6a57129020353b114233c917f286f21c56ae22fb5332e4e86dd",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. }NUMBER bm901Extra=bm901Item+83. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "e5e3cd7dbb5a4949c27c2d05a0dc91813a785f08d8fa93b457c549580990789a",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (!(bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "41412471fdb00827d157effac6be0169a9eae9bc951937cad454e343c227f335",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901P==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } bm901Total+=bm901P*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "4af4495b7b79833017aad80e0707bce89bc72adaad9693d7230df7647ef33afb",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF ((bm901Item%2==1)&&(bm901Item%3==2)) { bm901Total+=1. } } LOOP (NUMBER bm901Later=1 TILL bm901Later<=bm901Limit, bm901Later++) { bm901Total+=bm901P*bm901Q. } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "89efcf823024d5c73e6867b5c98967bebbe1f9e6949a5966a6b0b76f0a6510f1",
+        "value": "NUMBER bmap904Limit. INPUT(bmap904Limit). NUMBER bmap904Total=79. NUMBER bmap904P=0. NUMBER bmap904Q=0. LOOP (NUMBER bmap904Item=1 TILL bmap904Item<=bmap904Limit, bmap904Item++) { bmap904P=0. bmap904Q=0. IF (bmap904Item%2==1) { bmap904P=1. } IF (bmap904Item%3==2) { bmap904Q=1. } IF ((bmap904Item%2==1)&&(bmap904Item%3==2)) { bmap904Total+=1. } } DISPLAYNL(bmap904Total)."
+      },
+      {
+        "sha256_utf8": "f583bb3efcd1bf0e969706610146fcdd68edbfd5906e18fb945017244f646cfd",
+        "value": "NUMBER bmap904Limit. INPUT(bmap904Limit). NUMBER bmap904Total=79. NUMBER bmap904P=0. NUMBER bmap904Q=0. LOOP (NUMBER bmap904Item=1 TILL bmap904Item<=bmap904Limit, bmap904Item++) { bmap904P=0. bmap904Q=0. IF (bmap904Item%2==1) { bmap904P=1. } IF (bmap904Item%3==2) { bmap904Q=1. } IF ((bmap904Item%2==1)||(bmap904Item%3==2)) { bmap904Total+=1. } } DISPLAYNL(bmap904Total)."
+      },
+      {
+        "sha256_utf8": "6edcccf74ce33f4d523c2a686ed6b5526c21bba362354225abdbb48b01a719ca",
+        "value": "NUMBER bmap904Limit. INPUT(bmap904Limit). NUMBER bmap904Total=79. NUMBER bmap904P=0. NUMBER bmap904Q=0. LOOP (NUMBER bmap904Item=1 TILL bmap904Item<=bmap904Limit, bmap904Item++) { bmap904P=0. bmap904Q=0. IF (bmap904Item%2==1) { bmap904P=1. } IF (bmap904Item%3==2) { bmap904Q=1. } bmap904Total+=bmap904P*bmap904Q. } DISPLAYNL(bmap904Total)."
+      },
+      {
+        "sha256_utf8": "23df570e7445c6b1ff1a62fd190f637a7e52bbbc05fc2dca60a47c57d7bc91bd",
+        "value": "NUMBER bmap904Limit. INPUT(bmap904Limit). NUMBER bmap904Total=79. NUMBER bmap904P=0. NUMBER bmap904Q=0. LOOP (NUMBER bmap904Item=1 TILL bmap904Item<=bmap904Limit, bmap904Item++) { bmap904P=0. bmap904Q=0. IF (bmap904Item%2==1) { bmap904P=1. } IF (bmap904Item%3==2) { bmap904Q=1. } IF (bmap904P+bmap904Q>0) { bmap904Total+=1. } } DISPLAYNL(bmap904Total)."
+      },
+      {
+        "sha256_utf8": "67d0b777f37dbc61d98dc9f206fee041bffcec9e053f328e9838b78c14ab209a",
+        "value": "NUMBER bmap904Limit. INPUT(bmap904Limit). NUMBER bmap904Total=79. NUMBER bmap904P=0. NUMBER bmap904Q=0. LOOP (NUMBER bmap904Item=1 TILL bmap904Item<=bmap904Limit, bmap904Item++) { bmap904P=0. bmap904Q=0. IF (bmap904Item%2==1) { bmap904P=1. } IF (bmap904Item%3==2) { bmap904Q=1. } IF ((bmap904Item%2==1)&&(bmap904Item%3==2)) { bmap904Total+=1. }IF ((bmap904Item%2==1)&&(bmap904Item%3==2)) { bmap904Total+=1. } } DISPLAYNL(bmap904Total)."
+      },
+      {
+        "sha256_utf8": "077362af484abebc1bf2aff9a9aaca75019ab6959fe73d6ee246bf27ec9bd3a3",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901Item%2==1) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "7357170cd5f1159fe082a2001db508d05c439972fd9be01747f31cd69ef13722",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901Item%3==2) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "19266c93debe449851620049858144a9eaad2455d1c65c1f151edf0008d0543f",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (bm901Limit%bm901Item==0) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "644959ed569c0f6189ecafb2024615f289f3aff3bd82718b323502c5c499adc4",
+        "value": "NUMBER bm901Limit. INPUT(bm901Limit). NUMBER bm901Total=79. NUMBER bm901P=0. NUMBER bm901Q=0. LOOP (NUMBER bm901Item=1 TILL bm901Item<=bm901Limit, bm901Item++) { bm901P=0. bm901Q=0. IF (bm901Item%2==1) { bm901P=1. } IF (bm901Item%3==2) { bm901Q=1. } IF (2*bm901Item<=bm901Limit) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      },
+      {
+        "sha256_utf8": "1a1c6cecf893e81c86874d103a7738ce08c2c030b49a60f099ff836b46075e05",
+        "value": "IMPORT strings. SENTENCE bm901Raw. INPUT(bm901Raw). SENTENCE[] bm901Fields=strings.SPLIT(bm901Raw,\"|\"). NUMBER bm901A=strings.TO_NUMBER(bm901Fields[0]). NUMBER bm901B=strings.TO_NUMBER(bm901Fields[1]). NUMBER bm901C=strings.TO_NUMBER(bm901Fields[2]). NUMBER bm901D=strings.TO_NUMBER(bm901Fields[3]). NUMBER[] bm901Values=[bm901A,bm901B,bm901C,bm901D]. NUMBER bm901Total=79. LOOP (NUMBER bm901Item=0 TILL bm901Item<4, bm901Item++) { IF (bm901Values[bm901Item]<0) { bm901Total+=1. } IF (bm901Values[bm901Item]%2==0) { bm901Total+=1. } IF (bm901Values[bm901Item]*bm901Values[bm901Item]>4) { bm901Total+=1. } IF (bm901Values[bm901Item]>bm901Item) { bm901Total+=1. } } DISPLAYNL(bm901Total)."
+      }
+    ]
+  },
+  "recomputed_string_hash_overlap": 0,
+  "recorded_hash_overlap": 0,
+  "schema_version": 1,
+  "starting_head": "c13996834f3895c013b460f43cf2a0303c892360"
+}
