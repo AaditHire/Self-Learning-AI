@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_ONLY",
+  "status": "STOPPED_COVERAGE_V3_REFERENCE_ONLY_IMPLEMENTATION_ISSUE",
+  "starting_head": "92ebd4265da64fb66bcf8ad27de4eadd2a950c44",
+  "final_head": "92ebd4265da64fb66bcf8ad27de4eadd2a950c44",
+  "commit": null,
+  "reference_only_implementation_readiness": "NOT_ESTABLISHED",
+  "reference_only_scientific_instance_closure": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION_AND_VALIDATION",
+  "blocker": {
+    "code": "V32_PRE_DISPOSITION_CONTEXT_INVALID",
+    "detail": "DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+    "counterexample": [
+      {
+        "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+        "dependency_is_not_selected_occurrence": true,
+        "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|2:39",
+        "proposed_kind": "EDGE",
+        "proposed_operation": "INPUT_TO_DECODER",
+        "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+        "selected_kind": "NODE",
+        "selected_operation": "INPUT",
+        "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+      },
+      {
+        "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+        "dependency_is_not_selected_occurrence": true,
+        "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|13:SEMANTIC_EDGE|2:42",
+        "proposed_kind": "EDGE",
+        "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+        "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+        "selected_kind": "NODE",
+        "selected_operation": "INPUT",
+        "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+      },
+      {
+        "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+        "dependency_is_not_selected_occurrence": true,
+        "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:0",
+        "proposed_kind": "EDGE",
+        "proposed_operation": "VALUE_TO_OPERATOR",
+        "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+        "selected_kind": "NODE",
+        "selected_operation": "INITIALIZE",
+        "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:46|1:2"
+      }
+    ],
+    "complete_dependency_footprint_retained": true,
+    "missing_lists_alone_not_blocker": true,
+    "frozen_authorities_proved_incompatible": false,
+    "requirement_bridge_not_established": true,
+    "contract_changed": false,
+    "accepted_core_code_changed": false
+  },
+  "prior_saved_readiness_replays": {
+    "requirements": {
+      "exit_code": 0,
+      "output": "{\r\n  \"scientific_metadata_plans_verified\": 120,\r\n  \"development_mapping_records_verified\": 18,\r\n  \"mutations_rejected\": 9,\r\n  \"other_five_gates_unchanged\": true,\r\n  \"writes\": 0,\r\n  \"constructor_invoked\": false,\r\n  \"population_producer_invoked\": false\r\n}\r\n",
+      "writes": 0
+    },
+    "boolean_regions": {
+      "exit_code": 0,
+      "output": "{\r\n  \"saved_total_certificates_verified\": 6,\r\n  \"saved_mutations_rejected\": 22,\r\n  \"constructor_invoked\": false,\r\n  \"writes\": 0\r\n}\r\n",
+      "writes": 0
+    },
+    "canonical_transport": {
+      "exit_code": 0,
+      "output": "{\r\n  \"saved_transports_verified\": 6,\r\n  \"saved_mapping_proofs_verified\": 6,\r\n  \"saved_activity_identities_verified\": 6,\r\n  \"saved_mutations_rejected\": 26,\r\n  \"constructor_invoked\": false,\r\n  \"writes\": 0\r\n}\r\n",
+      "writes": 0
+    },
+    "generic_binding": {
+      "exit_code": 0,
+      "output": "{\r\n  \"development_mappings_verified\": 107,\r\n  \"development_requirement_kinds_verified\": 167,\r\n  \"adversaries_rejected\": 30,\r\n  \"implementation_readiness\": {\r\n    \"INDICATOR\": \"IMPLEMENTATION_READY\",\r\n    \"V32\": \"IMPLEMENTATION_READY\",\r\n    \"V33\": \"IMPLEMENTATION_READY\"\r\n  },\r\n  \"scientific_instance_closure\": {\r\n    \"INDICATOR\": \"DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION\",\r\n    \"V32\": \"DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION\",\r\n    \"V33\": \"DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION\"\r\n  },\r\n  \"writes\": 0,\r\n  \"constructor_invoked\": false,\r\n  \"population_producer_invoked\": false\r\n}\r\n",
+      "writes": 0
+    },
+    "state_readiness": {
+      "exit_code": 0,
+      "output": "{\r\n  \"development_state_records\": 74,\r\n  \"state_requirement_kinds\": 839,\r\n  \"adversaries_rejected\": 37,\r\n  \"implementation\": \"STATE_GRAPH_IMPLEMENTATION_READY\",\r\n  \"scientific\": \"DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION\",\r\n  \"old_global_state_gate\": \"UNRESOLVED\",\r\n  \"writes\": 0,\r\n  \"constructor_invoked\": false,\r\n  \"population_producer_invoked\": false\r\n}\r\n",
+      "writes": 0
+    },
+    "value_output_readiness": {
+      "exit_code": 0,
+      "output": "replayed ATTR908-EVIDENCE-N\r\nreplayed ATTR908-EVIDENCE-A\r\nreplayed ATTR908-EVIDENCE-Nother\r\nreplayed ATTR908-EVIDENCE-Aother\r\nreplayed ATTR908-EVIDENCE-Const\r\nreplayed ATTR908-EVIDENCE-Ops\r\nreplayed ATTR908-EVIDENCE-Lex\r\nreplayed ATTR908-EVIDENCE-Zero\r\nreplayed ATTR908-EVIDENCE-Inactive\r\nreplayed ATTR908-EVIDENCE-Two\r\nreplayed ATTR908-EVIDENCE-Reverse\r\nreplayed ATTR908-EVIDENCE-Unused\r\nreplayed ATTR908-EVIDENCE-Nalpha\r\nreplayed ATTR908-EVIDENCE-Aalpha\r\nreplayed ATTR908-EVIDENCE-ConstFold\r\n{\r\n  \"records\": 15,\r\n  \"value_kinds\": 18,\r\n  \"output_kinds\": 9,\r\n  \"adversaries_rejected\": 38,\r\n  \"kind_adversaries\": 27,\r\n  \"exception_adversaries\": 10,\r\n  \"permitted_zero_collisions\": 1,\r\n  \"prohibited_collisions\": 0,\r\n  \"value\": \"VALUE_LITERAL_IMPLEMENTATION_READY\",\r\n  \"output\": \"OUTPUT_ATTRIBUTE_IMPLEMENTATION_READY\",\r\n  \"scientific\": \"DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION_AND_VALIDATION\",\r\n  \"old_global_value_gate\": \"UNRESOLVED\",\r\n  \"old_global_output_gate\": \"UNRESOLVED\",\r\n  \"writes\": 0,\r\n  \"constructor_invoked\": false,\r\n  \"population_producer_invoked\": false\r\n}\r\n",
+      "writes": 0
+    },
+    "essentiality_readiness": {
+      "exit_code": 0,
+      "verification": "Completed earlier in this same resumed task; retained summary from completed output.",
+      "development_records": 74,
+      "requirement_kinds": 114,
+      "adversaries": 23,
+      "kind_adversaries": 114,
+      "loop_diagnostics": 8,
+      "implementation": "ESSENTIALITY_ENGINE_IMPLEMENTATION_READY",
+      "scientific": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION_AND_VALIDATION",
+      "old_global_gate": "UNRESOLVED",
+      "writes": 0,
+      "constructor_invoked": false,
+      "population_producer_invoked": false
+    }
+  },
+  "tests": {
+    "focused": {
+      "command": "PYTHONPATH=src python -B -m pytest -o addopts='' -q -p no:cacheprovider tests/test_conf1_v3_reference_only_overlap.py tests/test_conf1_v3_reference_only_prerequisites.py --basetemp <fresh disposable temp>",
+      "exit_code": 0,
+      "passed": 48,
+      "failed": 0,
+      "elapsed_seconds": 1.35,
+      "scope": "PARTIAL_FOUNDATIONS_NOT_COMPLETE_RO_IMPLEMENTATION"
+    },
+    "earlier_setup_issues": [
+      "Normal pytest temp-root AccessDenied; fresh disposable --basetemp resolved it.",
+      "Initial new combined run lacked PYTHONPATH and failed collection; corrected PYTHONPATH=src rerun passed."
+    ],
+    "complete_RO_matrix_run": false,
+    "all_accepted_core_suites_rerun_after_stop": false,
+    "broader_regressions_rerun": false,
+    "three_historical_failures_rerun": false
+  },
+  "audit_categories": {
+    "frozen_authority_integrity": "VERIFIED",
+    "closed_catalog_implementation": "PARTIAL_CONSTANT_KERNEL_ONLY",
+    "safe_constant_proofs": "LOCAL_KERNEL_TESTED_NO_BOUND_COMPILER_PROOF",
+    "pure_unused_proofs": "NOT_PRODUCED",
+    "constant_false_proofs": "NOT_PRODUCED",
+    "complete_development_inventories": "DRAFT_REPRESENTATION",
+    "graph_records": "DRAFT_RAW_REPRESENTATION",
+    "state_records": "DRAFT_RAW_REPRESENTATION",
+    "pre_disposition_contexts": "BLOCKED_NO_CLOSED_OBJECT_PRODUCED",
+    "shared_regions": "NOT_IMPLEMENTED",
+    "occurrence_certificates": "NOT_IMPLEMENTED",
+    "support_DAG": "NOT_IMPLEMENTED",
+    "strict_reference_resolution": "DRAFT_NOT_READINESS_VERIFIED",
+    "development_E1_prerequisites": "NOT_IMPLEMENTED",
+    "snapshot_adversaries": "ISOLATION_ONLY_NOT_E1_GATE",
+    "downstream_consistency": "NOT_IMPLEMENTED",
+    "four_bucket_accounting": "NOT_ESTABLISHED",
+    "reason_behavior": "PREREQUISITE_REJECTION_ONLY",
+    "independent_RO_verifier": "NOT_IMPLEMENTED",
+    "protected_overlap": "PASS_VISIBLE_ZERO_ONLY_EXCEPTION",
+    "test_results": "48_PARTIAL_FOUNDATION_CHECKS_PASS",
+    "remaining_scientific_dependencies": "DEFERRED"
+  },
+  "prohibited_work": {
+    "scientific_source_construction": false,
+    "population_derivation": false,
+    "scientific_rows": false,
+    "scientific_E1_E6": false,
+    "models": false,
+    "sealed_holdouts": false,
+    "preregistration_replacement": false,
+    "candidate_binder_provenance": false,
+    "whole_core_audit": false,
+    "expected_label_semantics_parsed": false
+  },
+  "no_resampling": true,
+  "scientific_overlap_rules_changed": false,
+  "accepted_global_gates_upgraded": false
+}

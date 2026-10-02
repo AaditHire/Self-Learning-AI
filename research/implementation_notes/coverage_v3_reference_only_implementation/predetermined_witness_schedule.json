@@ -1,0 +1,469 @@
+{
+  "artifact_kind": "DEVELOPMENT_ONLY_RO_PREDETERMINED_WITNESS_SCHEDULE",
+  "boundaries": [
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_ZERO_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_ZERO",
+      "field": "isolated_constant_expression",
+      "intended_semantic_purpose": "zero token satisfies frozen N grammar and inclusive lower bound",
+      "label": "ZERO",
+      "literal": "0",
+      "sha256_utf8": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_MAX_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_MAX",
+      "field": "isolated_constant_expression",
+      "intended_semantic_purpose": "maximum token satisfies frozen N grammar and inclusive upper bound",
+      "label": "MAX",
+      "literal": "2147483647",
+      "sha256_utf8": "972dcafa6fb4c2c88bce752fca4ab18c6bd88599330a4ad9813915b05bfbe76d"
+    },
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_OVERFLOW_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_OVERFLOW",
+      "field": "isolated_constant_expression",
+      "intended_semantic_purpose": "first above-bound token fails frozen N safety bound",
+      "label": "OVERFLOW",
+      "literal": "2147483648",
+      "sha256_utf8": "39f8d58187887b481fe709f7b323f2b876d9f522e9f7afef815c2089084a36d7"
+    }
+  ],
+  "non_boundary": [
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "814794c18e612bd26905919d6058b557797c2b56da26e4fa690bb168afb9ac0f",
+      "high": 997,
+      "intended_semantic_purpose": "ordered nested constant-tree arithmetic first operand",
+      "label": "ATOM_A",
+      "literal": "543",
+      "low": 101,
+      "sha256_utf8": "18beb4813723e788a1d79bcbf80802538ec813aa19ded2e9c21cbf08bed6bee3"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "414811d28868de44b9ffe99d60313955558967b70df11c0b0ee7ab7b29a299cd",
+      "high": 997,
+      "intended_semantic_purpose": "ordered nested constant-tree arithmetic second operand",
+      "label": "ATOM_B",
+      "literal": "845",
+      "low": 101,
+      "sha256_utf8": "3d34f102d1708fc5edd3111144f78764b4d7b745cb5450815780545495df1e68"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "4fc8066afc0ed2361d2b703fdccc56f975e8cca7446688794a13ab6ff2201351",
+      "high": 997,
+      "intended_semantic_purpose": "ordered nested constant-tree arithmetic third operand",
+      "label": "ATOM_C",
+      "literal": "849",
+      "low": 101,
+      "sha256_utf8": "12e967ca0f368d0d8511518c58c6929146650bb1babce4448263e67722dd0161"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "0bdd365a75c76e80c770f2c5a846abef9c07faabb9554675e5d0e42693deb402",
+      "high": 997,
+      "intended_semantic_purpose": "ordered nested constant-tree arithmetic fourth operand",
+      "label": "ATOM_D",
+      "literal": "764",
+      "low": 101,
+      "sha256_utf8": "aaee0ce51abf0849e68b257ab97d83a36d9d082916b939cd1012f27d7f6bb873"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "1978acc3132b2f25fa3dbfa9b668ca2fa0d5e94a233bac52e610ec9d31970236",
+      "high": 999983,
+      "intended_semantic_purpose": "fresh unused top-level scalar initializer",
+      "label": "PU_CONSTANT",
+      "literal": "351482",
+      "low": 100003,
+      "sha256_utf8": "df7e2c529474d481c68bcc8974af541f010b1507f38a0880582944d1644a23bd"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "79f3bd947c484b9340f349b989886b2d0822088fc7fb9642392a96d8c28f5bc5",
+      "high": 997,
+      "intended_semantic_purpose": "restricted constant-false body scalar initializer",
+      "label": "BODY_CONSTANT",
+      "literal": "709",
+      "low": 101,
+      "sha256_utf8": "92c5fd0421c1d619cbf1bdba83a207261f2c5f764aed46db9b4d2de03b72b654"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "bdd5397c77c79932c2514f696aac0bdb12ec502ccbef90e8791b9d4024be04aa",
+      "high": 999983,
+      "intended_semantic_purpose": "prospectively required development accumulator initializer",
+      "label": "INITIAL_OFFSET",
+      "literal": "386548",
+      "low": 100003,
+      "sha256_utf8": "49aab16f4f1463e24e876527be8572d21ebeb251c0a08c3b41a7b1785788b3e1"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "8673954c23a7bb54cc70df4806477f2402f0cd0fbbb8446425556383f29a2305",
+      "high": 997,
+      "intended_semantic_purpose": "prospectively required development loop contribution",
+      "label": "LOOP_CONTRIBUTION",
+      "literal": "607",
+      "low": 101,
+      "sha256_utf8": "67eab6db6703cdf9acf656bbb09640fcde2ff197786adbd9ae9c14936fc8d159"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "dfb7bb0091c618570ef397ef97bbd78ec1c68a00dc336c4ca444ee6e3eff068f",
+      "high": 997,
+      "intended_semantic_purpose": "nested independently false body initializer",
+      "label": "NESTED_BODY",
+      "literal": "107",
+      "low": 101,
+      "sha256_utf8": "3346f2bbf6c34bd2dbe28bd1bb657d0e9c37392a1d5ec9929e6a5df4763ddc2d"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "c981bf4ab5ca14f331fa8b3d076c86efa62cc15e95e0a1faa6a9b199dd25a104",
+      "high": 997,
+      "intended_semantic_purpose": "extra-write rejection and false-owner boundary event",
+      "label": "EXTRA_WRITE",
+      "literal": "510",
+      "low": 101,
+      "sha256_utf8": "5e5c743a015ff8d81e2374d5bca1bdf8ed87ce18484fce8cf4062183dde08493"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "583cd58a4c32e3a8d45a03705307bbd1144aef9ccc8e18b3cfffc2322345094c",
+      "high": 997,
+      "intended_semantic_purpose": "unmatched live-source rejection witness",
+      "label": "LIVE_UNMATCHED",
+      "literal": "783",
+      "low": 101,
+      "sha256_utf8": "5620e84be3e5141819e0d9e4ba10b782ba40e232e56352ed636dc0282161b543"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "39644a7295e170f5473e805f320ea326a9547dad562d6173818821c1545e9b6b",
+      "high": 997,
+      "intended_semantic_purpose": "comparison operand and false-only-on-samples adversary",
+      "label": "COMPARISON_OTHER",
+      "literal": "914",
+      "low": 101,
+      "sha256_utf8": "28ac593455c7f44e49e0e5fb2b130739cd8aed87c15e4d79eb2fc69c47649360"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "6be6d09c8a1ea0a473f54810cf12f5b41afc5e0a15491710be56d4286d10711f",
+      "high": 997,
+      "intended_semantic_purpose": "static comparison first constant operand",
+      "label": "FALSE_GUARD_LEFT",
+      "literal": "728",
+      "low": 101,
+      "sha256_utf8": "7c3d90003d7d645be0b5f3782533c198a5d5dee06870420b4d594976ed857fc3"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "88227b857495564dc6768ae007a91d3f131857a739cda6030547ae177abca771",
+      "high": 997,
+      "intended_semantic_purpose": "static comparison second constant operand",
+      "label": "FALSE_GUARD_RIGHT",
+      "literal": "849",
+      "low": 101,
+      "sha256_utf8": "12e967ca0f368d0d8511518c58c6929146650bb1babce4448263e67722dd0161"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "db598d384962f490a2a30faf28ccc1d0014824d091c77f3de15802dc7a062e90",
+      "high": 999983,
+      "intended_semantic_purpose": "array-development required accumulator initializer",
+      "label": "ARRAY_OFFSET",
+      "literal": "405341",
+      "low": 100003,
+      "sha256_utf8": "e8dd80e1a70e4fcdb1649e74a257561e40ed4d4fda4bb4fe1c109d286a5f6aec"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "791dd9f60e4f0eee7f127646165a1148d44c56a69a62fa0bacceb00e11744741",
+      "high": 997,
+      "intended_semantic_purpose": "unary-negation constant-tree operand",
+      "label": "NEGATIVE_ATOM",
+      "literal": "288",
+      "low": 101,
+      "sha256_utf8": "23c657f2efda7731a3c1990b25f318fa2eb1332208f97ab9cc2a7eac70ab5a76"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "712a721f0212fc6727d5418abb377432c4839e422a02a272901218756ddb52b6",
+      "high": 997,
+      "intended_semantic_purpose": "unsupported nonzero modulo rejection operand",
+      "label": "UNSUPPORTED_MODULUS",
+      "literal": "663",
+      "low": 101,
+      "sha256_utf8": "4b8ba4b13094beaef100d3eb7d4c8e23600c30be4420c47e0d6b4e88dbd70abb"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "4028e5faa30043ba715065fd744174d100b09e8fca6a224e3b982a3df799d764",
+      "high": 997,
+      "intended_semantic_purpose": "alpha-renaming development constant initializer",
+      "label": "ALPHA_CONSTANT",
+      "literal": "983",
+      "low": 101,
+      "sha256_utf8": "fbe10beedf9d29cf53137ba38859ffd1dbe7642cedb7ef0a102a3ab109b47842"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "a1f06570e30329c7d35e71fd932957c6cb1dc5d10b79d8e9add13846c1d5328e",
+      "high": 997,
+      "intended_semantic_purpose": "disposable numeric domain input",
+      "label": "CASE_0_NUMERIC",
+      "literal": "592",
+      "low": 101,
+      "sha256_utf8": "793733573a1dfd14a2e889a11b2ad7b6981de29df813863b528dc1ae99416eeb"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "874fbb2091c4c1f2c96f590678894f6f16e69d93270bcdc01b98e95e962b042f",
+      "high": 997,
+      "intended_semantic_purpose": "disposable numeric domain input",
+      "label": "CASE_1_NUMERIC",
+      "literal": "545",
+      "low": 101,
+      "sha256_utf8": "68e476b5d5aeca7b0e3b5ca867106c32e40cad05a490f6b08a24063cceed7e7e"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "f2358ee9b7b3bbea3a2385ffc3e00029a2d284e1f89d628302ff2461c42c6d85",
+      "high": 997,
+      "intended_semantic_purpose": "disposable numeric domain input",
+      "label": "CASE_2_NUMERIC",
+      "literal": "173",
+      "low": 101,
+      "sha256_utf8": "4a8596a7790b5ca9e067da401c018b3206befbcf95c38121854d1a0158e7678a"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "2a833d712efa3b4897672a706b51dc9a5e4afb22fed72709a08e005517e8d42b",
+      "high": 997,
+      "intended_semantic_purpose": "disposable numeric domain input",
+      "label": "CASE_3_NUMERIC",
+      "literal": "766",
+      "low": 101,
+      "sha256_utf8": "04222ea3e14cb1209b9726defe3efce5196b7afa0a959854a30401be41f4026d"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "e7789d06231842d1d125d0e7b7f06c68acb5cc926a6e8743b588963fa3c167da",
+      "high": 997,
+      "intended_semantic_purpose": "disposable numeric domain input",
+      "label": "CASE_4_NUMERIC",
+      "literal": "190",
+      "low": 101,
+      "sha256_utf8": "2397346b45823e070f6fc72ac94c0a999d234c472479f0e26b30cdf5942db854"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "bfe285abd0474c88648c933aa44334a5191dc226d3baee66a04e0cb4f6be177e",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_0_ARRAY_0",
+      "literal": "559242",
+      "low": 100003,
+      "sha256_utf8": "a7cdd03c558272f516630912557fdc32d2d01b6c4cc1caa90e2e258be815269e"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "77f685063f15bc34830922eb03b0dcc8a5ece32e1c0a9418f04029d2a837adc8",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_0_ARRAY_1",
+      "literal": "583966",
+      "low": 100003,
+      "sha256_utf8": "02ce39c9c45d53bcb9d189fdb4b46fe0df44ca22834f4dd331d41af0cf5285da"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "800e1ec77ab60c39c2ee988ed71173fa70ae496659efff7e558d5f7b2f110a3b",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_0_ARRAY_2",
+      "literal": "117937",
+      "low": 100003,
+      "sha256_utf8": "11247e8f94c8aa753031d1198be71cee57e0c3fe019d89b8649e103ae0f98c0b"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "4c26a07ff8fb4f1b8a17e45d0f7234336fc4ad7d3d394e93a54d0d216f8fd4b0",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_0_ARRAY_3",
+      "literal": "306101",
+      "low": 100003,
+      "sha256_utf8": "26ced34978861ba693f58159041cd4873241eeb8331abbc723975488ef7a030f"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "f4ed0fcb418d65e37cffd730e738cf4c411a2b59648c8dfcb5e53b1d971539c6",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_1_ARRAY_0",
+      "literal": "279746",
+      "low": 100003,
+      "sha256_utf8": "cab68b4340487d17ef77027a754b906ed13e0eaa84efaeae06ecaf231d4874a9"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "0f026584ff7a1a5c56e4451f5092d392dd9f488429e5ea46967635392a82e616",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_1_ARRAY_1",
+      "literal": "593946",
+      "low": 100003,
+      "sha256_utf8": "1a9185b8111d267a7b323a63d1ae286c5f3f2887fa143b47a7d8cb88512f16c0"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "45610fdf95473cdf8a4eb657754f041fb6e4d42fe52cc94685aaae1716f45a72",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_1_ARRAY_2",
+      "literal": "335065",
+      "low": 100003,
+      "sha256_utf8": "f5a62a59b74e9e73edddbb13c73b5de07f52b2adc0b8b0443356323f6b8058b9"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "d751ad6ad090ad4471e5f4a7496297d9813cb2afc522bb676db9353e482f8758",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_1_ARRAY_3",
+      "literal": "373206",
+      "low": 100003,
+      "sha256_utf8": "240452a74f2c003dc130e9d7518a70508d533cdde2ed5d04e9d7a083a33c4b35"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "f2e1747044e2b49b0d44b784d3c40a1c840e32da2e7271d618a83979983acbfe",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_2_ARRAY_0",
+      "literal": "776969",
+      "low": 100003,
+      "sha256_utf8": "6754d291405f2cedf7fdbea4584e704237dbc7b1e00a97aee6568672ae756fcf"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "c0531209e1202061b18a3ac1185d445fdefa9c62b70e7fb3dab90cf7d51dd2c8",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_2_ARRAY_1",
+      "literal": "109977",
+      "low": 100003,
+      "sha256_utf8": "001a46f34885f1e445f8418c9787ead35aeb67669e77d27806f2171c8712a17b"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "c43c5991e6c58784a55ba2573a9df061f8cc0519a70d631849fc627ed779802c",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_2_ARRAY_2",
+      "literal": "877326",
+      "low": 100003,
+      "sha256_utf8": "a28c1e85691fab01a72c5a3145df905e888672b52afd94f2d95e2c366425b237"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "c26e7517158de51b90d4d6e9cbff78ff5f2f3695b48752b1187b5afbdf9a9893",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_2_ARRAY_3",
+      "literal": "128199",
+      "low": 100003,
+      "sha256_utf8": "84f94cb633ea4f5b781b95d5367b05af691c128786d0c779294584faf83a341b"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "b9c3b967b8d476cc7631235edb6cd5c39fa5907ee7000d64b308c2e89399b120",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_3_ARRAY_0",
+      "literal": "985234",
+      "low": 100003,
+      "sha256_utf8": "3b9c129b112bdcd495363582027d9e5745aebe2d66ab6cbda363ec46be292ad8"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "c1f5584cbe23e0aaa63833f488e163a7be58c474b43f59cd8ac994d8545af35d",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_3_ARRAY_1",
+      "literal": "544273",
+      "low": 100003,
+      "sha256_utf8": "4f4126029c1a483544f308cee33dd9a9e69e1f4ecd1491fc84d4926267231777"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "fe955b293e7264a1b69c653fefcc943a2323350d422e97225e94dcd6a0f3e3f7",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_3_ARRAY_2",
+      "literal": "338418",
+      "low": 100003,
+      "sha256_utf8": "0e99b79b6d554b4d5e493c2ae84730545d528d566350846533833044032df851"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "62a504b3ec0249f6872aca6d1eefccdf6c015203185a51f2757b28e80271e7fe",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_3_ARRAY_3",
+      "literal": "708996",
+      "low": 100003,
+      "sha256_utf8": "bc8f377c9f13b16367aa3f22971e1b4e74460bde731328a37e92147e709a3149"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "04c72a5624a58f73e489acd55e9b08dc7d0769f31f1f8fba08fb803ef42f59f2",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_4_ARRAY_0",
+      "literal": "678060",
+      "low": 100003,
+      "sha256_utf8": "7da2b8079abafeb3812ca4aefc865a0b0c26c847f9c8d543b9b60782ddb72898"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "25fa8e24fa6d1a918c58c6c498e65f2ca6d6decbe357c0e73797e4b9d4597317",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_4_ARRAY_1",
+      "literal": "507078",
+      "low": 100003,
+      "sha256_utf8": "0dd8f4a333d29ebeb6db2fa5f221302a0255895ce2b1089399e8c21361eefc70"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "0855f76d0ee4bfa6abb7c2199455d7279f7d6d689126022f0e8802c161c9a52f",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_4_ARRAY_2",
+      "literal": "153980",
+      "low": 100003,
+      "sha256_utf8": "0d181a3e6e8792676982ff1abffac629299347546c1e62ce6f58616e4979e986"
+    },
+    {
+      "derivation_rule": "low + uint256(digest) modulo (high - low + 1)",
+      "digest": "bb9bfdbb0003451eacabf4422e2ee806c782f2f2ab425c5dc96d643f75397e24",
+      "high": 999983,
+      "intended_semantic_purpose": "disposable four-field array input component",
+      "label": "CASE_4_ARRAY_3",
+      "literal": "973498",
+      "low": 100003,
+      "sha256_utf8": "7fbc85716117f611a7f985fb64473c24319a63906c8273d4e6e46b8455366f28"
+    }
+  ],
+  "resampling_allowed": false,
+  "schema_version": 1,
+  "scope": "DEVELOPMENT_ONLY",
+  "seed": "RO_REFERENCE_ONLY_DEV_CONSTANTS_V1|7df2a31df6c995d0105e5547aa1d235c6046e9cf141f92321faf92cce3bac682",
+  "selected_before_overlap_consultation": true
+}

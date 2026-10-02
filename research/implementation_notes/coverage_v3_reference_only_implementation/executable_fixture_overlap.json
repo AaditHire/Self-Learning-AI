@@ -1,0 +1,93 @@
+{
+  "artifact_kind": "DEVELOPMENT_ONLY_RO_OVERLAP_ADJUDICATION",
+  "comparison_inputs": [
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/01_v32_v33.json",
+      "sha256_utf8": "d5e1077fdcec045189bc606210221db0baa2c4d8293a3f20bb7cb0f0f239302a",
+      "size_bytes_utf8": 1136
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/02_v35_behavioral.json",
+      "sha256_utf8": "3e6b714ccd3945b3f3fe16fdcaa7297a50e126ab5a932be0004a2718187be177",
+      "size_bytes_utf8": 1502
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/03_value_literal.json",
+      "sha256_utf8": "1b6374e63523dad7465bcae79980db4eda41c09413a4492b923c56de8b67e41d",
+      "size_bytes_utf8": 1968
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/04_output_attribute.json",
+      "sha256_utf8": "2f01ae72f340bf95bcfcde2d0ad0db22d3402e7e0766b62f88783a854e74b421",
+      "size_bytes_utf8": 900
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+      "sha256_utf8": "7820878c987147b456b4f02d2dd85b96d3c52948f1d56bae2c504e74f5f3a0f4",
+      "size_bytes_utf8": 1901
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/06_v36_symmetry.json",
+      "sha256_utf8": "efd4c5acf3be14f82894936f6dee86f39f7ece44e467124519429c68becafaba",
+      "size_bytes_utf8": 1824
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/07_e1.json",
+      "sha256_utf8": "6f3cbe8bbceb9a600069b8e0140ab29a0002f9065249fa892b4d7d29ceb48385",
+      "size_bytes_utf8": 1009
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/08_e2_e4.json",
+      "sha256_utf8": "77f4e7cf9af0a4a9ff0f748b2bfbf507eb8b2a4ffd73776cc57c5e9bba397086",
+      "size_bytes_utf8": 1044
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/09_e3.json",
+      "sha256_utf8": "8bf618be943b300f65315dd5367fc955714cb93dd2b1cca42b2e4f8b5da8eb9c",
+      "size_bytes_utf8": 748
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/10_e5.json",
+      "sha256_utf8": "3e862281a09cb3b05ed3accf126917c13eb2ea6c822c3dde3f7bf520b09ac813",
+      "size_bytes_utf8": 1272
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/11_e6.json",
+      "sha256_utf8": "eb39bd202a6ea2135b369194360a6843c4b16f4cf1758a37711e11dbefd8c0e0",
+      "size_bytes_utf8": 846
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/12_interface_closure.json",
+      "sha256_utf8": "d19620edf6df6e14508037e0ae9a69177b314b964e4e58950f2968324f40a88d",
+      "size_bytes_utf8": 2004
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/13_full_path.json",
+      "sha256_utf8": "3b76046ed1e8f104a864eb787ea91be4ffcca8115f3a311bbfb7175365e849c4",
+      "size_bytes_utf8": 7477
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixture_manifest.json",
+      "sha256_utf8": "65b038e99ed4a39114e579422fcdd97388925e166c13d378dd8f963d9d772678",
+      "size_bytes_utf8": 6746
+    }
+  ],
+  "executable_fixtures_run": false,
+  "expected_labels_parsed": false,
+  "fixture_count": 116,
+  "fixture_derivation_preceded_this_query": true,
+  "fixture_plan_sha256_utf8": "a155411216f1afc059a86bac4ad403bac1bf86ab2863901985181da4c778bd21",
+  "inventory_field_count": 1856,
+  "malformed_inventory": [],
+  "permitted_collision_count": 0,
+  "permitted_normative_collisions": [],
+  "prohibited_collision_count": 0,
+  "prohibited_collisions": [],
+  "resampling_occurred": false,
+  "schema_version": 1,
+  "scientific_overlap_permissions_changed": false,
+  "scope": "DEVELOPMENT_ONLY",
+  "status": "PASS",
+  "value_output_exception_imported": false,
+  "witness_schedule_sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198"
+}

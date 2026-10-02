@@ -1,0 +1,704 @@
+{
+  "artifact_kind": "DEVELOPMENT_ONLY_RO_OVERLAP_ADJUDICATION",
+  "causal_sequence": [
+    {
+      "event": "SERIALIZED_SCHEDULE_VERIFIED",
+      "sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198",
+      "time_unix_ns": 1790917001463898700
+    },
+    {
+      "event": "PROTECTED_RAW_CORPUS_READ_STARTED",
+      "time_unix_ns": 1790917001464219900
+    }
+  ],
+  "comparison_inputs": [
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/01_v32_v33.json",
+      "sha256_utf8": "d5e1077fdcec045189bc606210221db0baa2c4d8293a3f20bb7cb0f0f239302a",
+      "size_bytes_utf8": 1136
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/02_v35_behavioral.json",
+      "sha256_utf8": "3e6b714ccd3945b3f3fe16fdcaa7297a50e126ab5a932be0004a2718187be177",
+      "size_bytes_utf8": 1502
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/03_value_literal.json",
+      "sha256_utf8": "1b6374e63523dad7465bcae79980db4eda41c09413a4492b923c56de8b67e41d",
+      "size_bytes_utf8": 1968
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/04_output_attribute.json",
+      "sha256_utf8": "2f01ae72f340bf95bcfcde2d0ad0db22d3402e7e0766b62f88783a854e74b421",
+      "size_bytes_utf8": 900
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+      "sha256_utf8": "7820878c987147b456b4f02d2dd85b96d3c52948f1d56bae2c504e74f5f3a0f4",
+      "size_bytes_utf8": 1901
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/06_v36_symmetry.json",
+      "sha256_utf8": "efd4c5acf3be14f82894936f6dee86f39f7ece44e467124519429c68becafaba",
+      "size_bytes_utf8": 1824
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/07_e1.json",
+      "sha256_utf8": "6f3cbe8bbceb9a600069b8e0140ab29a0002f9065249fa892b4d7d29ceb48385",
+      "size_bytes_utf8": 1009
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/08_e2_e4.json",
+      "sha256_utf8": "77f4e7cf9af0a4a9ff0f748b2bfbf507eb8b2a4ffd73776cc57c5e9bba397086",
+      "size_bytes_utf8": 1044
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/09_e3.json",
+      "sha256_utf8": "8bf618be943b300f65315dd5367fc955714cb93dd2b1cca42b2e4f8b5da8eb9c",
+      "size_bytes_utf8": 748
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/10_e5.json",
+      "sha256_utf8": "3e862281a09cb3b05ed3accf126917c13eb2ea6c822c3dde3f7bf520b09ac813",
+      "size_bytes_utf8": 1272
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/11_e6.json",
+      "sha256_utf8": "eb39bd202a6ea2135b369194360a6843c4b16f4cf1758a37711e11dbefd8c0e0",
+      "size_bytes_utf8": 846
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/12_interface_closure.json",
+      "sha256_utf8": "d19620edf6df6e14508037e0ae9a69177b314b964e4e58950f2968324f40a88d",
+      "size_bytes_utf8": 2004
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/13_full_path.json",
+      "sha256_utf8": "3b76046ed1e8f104a864eb787ea91be4ffcca8115f3a311bbfb7175365e849c4",
+      "size_bytes_utf8": 7477
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_v3_synthetic_fixture_manifest.json",
+      "sha256_utf8": "65b038e99ed4a39114e579422fcdd97388925e166c13d378dd8f963d9d772678",
+      "size_bytes_utf8": 6746
+    }
+  ],
+  "comparison_scope": "all recursive raw keys/values and recorded/recomputed hashes in 13 fixtures plus manifest; labels excluded",
+  "expected_labels_parsed": false,
+  "inventory": [
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_ZERO_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_ZERO",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "boundaries/0/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "value": "0"
+    },
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_MAX_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_MAX",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "boundaries/1/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "972dcafa6fb4c2c88bce752fca4ab18c6bd88599330a4ad9813915b05bfbe76d",
+      "value": "2147483647"
+    },
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_OVERFLOW_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_OVERFLOW",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "boundaries/2/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "39f8d58187887b481fe709f7b323f2b876d9f522e9f7afef815c2089084a36d7",
+      "value": "2147483648"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ATOM_A",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/0/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "18beb4813723e788a1d79bcbf80802538ec813aa19ded2e9c21cbf08bed6bee3",
+      "value": "543"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ATOM_B",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/1/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "3d34f102d1708fc5edd3111144f78764b4d7b745cb5450815780545495df1e68",
+      "value": "845"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ATOM_C",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/2/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "12e967ca0f368d0d8511518c58c6929146650bb1babce4448263e67722dd0161",
+      "value": "849"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ATOM_D",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/3/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "aaee0ce51abf0849e68b257ab97d83a36d9d082916b939cd1012f27d7f6bb873",
+      "value": "764"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_PU_CONSTANT",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/4/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "df7e2c529474d481c68bcc8974af541f010b1507f38a0880582944d1644a23bd",
+      "value": "351482"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BODY_CONSTANT",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/5/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "92c5fd0421c1d619cbf1bdba83a207261f2c5f764aed46db9b4d2de03b72b654",
+      "value": "709"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_INITIAL_OFFSET",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/6/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "49aab16f4f1463e24e876527be8572d21ebeb251c0a08c3b41a7b1785788b3e1",
+      "value": "386548"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_LOOP_CONTRIBUTION",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/7/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "67eab6db6703cdf9acf656bbb09640fcde2ff197786adbd9ae9c14936fc8d159",
+      "value": "607"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NESTED_BODY",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/8/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "3346f2bbf6c34bd2dbe28bd1bb657d0e9c37392a1d5ec9929e6a5df4763ddc2d",
+      "value": "107"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_EXTRA_WRITE",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/9/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "5e5c743a015ff8d81e2374d5bca1bdf8ed87ce18484fce8cf4062183dde08493",
+      "value": "510"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_LIVE_UNMATCHED",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/10/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "5620e84be3e5141819e0d9e4ba10b782ba40e232e56352ed636dc0282161b543",
+      "value": "783"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_COMPARISON_OTHER",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/11/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "28ac593455c7f44e49e0e5fb2b130739cd8aed87c15e4d79eb2fc69c47649360",
+      "value": "914"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_FALSE_GUARD_LEFT",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/12/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "7c3d90003d7d645be0b5f3782533c198a5d5dee06870420b4d594976ed857fc3",
+      "value": "728"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_FALSE_GUARD_RIGHT",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/13/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "12e967ca0f368d0d8511518c58c6929146650bb1babce4448263e67722dd0161",
+      "value": "849"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ARRAY_OFFSET",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/14/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "e8dd80e1a70e4fcdb1649e74a257561e40ed4d4fda4bb4fe1c109d286a5f6aec",
+      "value": "405341"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NEGATIVE_ATOM",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/15/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "23c657f2efda7731a3c1990b25f318fa2eb1332208f97ab9cc2a7eac70ab5a76",
+      "value": "288"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_UNSUPPORTED_MODULUS",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/16/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "4b8ba4b13094beaef100d3eb7d4c8e23600c30be4420c47e0d6b4e88dbd70abb",
+      "value": "663"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ALPHA_CONSTANT",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/17/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "fbe10beedf9d29cf53137ba38859ffd1dbe7642cedb7ef0a102a3ab109b47842",
+      "value": "983"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_0_NUMERIC",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/18/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "793733573a1dfd14a2e889a11b2ad7b6981de29df813863b528dc1ae99416eeb",
+      "value": "592"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_1_NUMERIC",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/19/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "68e476b5d5aeca7b0e3b5ca867106c32e40cad05a490f6b08a24063cceed7e7e",
+      "value": "545"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_2_NUMERIC",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/20/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "4a8596a7790b5ca9e067da401c018b3206befbcf95c38121854d1a0158e7678a",
+      "value": "173"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_3_NUMERIC",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/21/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "04222ea3e14cb1209b9726defe3efce5196b7afa0a959854a30401be41f4026d",
+      "value": "766"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_4_NUMERIC",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/22/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "2397346b45823e070f6fc72ac94c0a999d234c472479f0e26b30cdf5942db854",
+      "value": "190"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_0_ARRAY_0",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/23/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "a7cdd03c558272f516630912557fdc32d2d01b6c4cc1caa90e2e258be815269e",
+      "value": "559242"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_0_ARRAY_1",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/24/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "02ce39c9c45d53bcb9d189fdb4b46fe0df44ca22834f4dd331d41af0cf5285da",
+      "value": "583966"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_0_ARRAY_2",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/25/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "11247e8f94c8aa753031d1198be71cee57e0c3fe019d89b8649e103ae0f98c0b",
+      "value": "117937"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_0_ARRAY_3",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/26/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "26ced34978861ba693f58159041cd4873241eeb8331abbc723975488ef7a030f",
+      "value": "306101"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_1_ARRAY_0",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/27/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "cab68b4340487d17ef77027a754b906ed13e0eaa84efaeae06ecaf231d4874a9",
+      "value": "279746"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_1_ARRAY_1",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/28/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "1a9185b8111d267a7b323a63d1ae286c5f3f2887fa143b47a7d8cb88512f16c0",
+      "value": "593946"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_1_ARRAY_2",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/29/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "f5a62a59b74e9e73edddbb13c73b5de07f52b2adc0b8b0443356323f6b8058b9",
+      "value": "335065"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_1_ARRAY_3",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/30/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "240452a74f2c003dc130e9d7518a70508d533cdde2ed5d04e9d7a083a33c4b35",
+      "value": "373206"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_2_ARRAY_0",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/31/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "6754d291405f2cedf7fdbea4584e704237dbc7b1e00a97aee6568672ae756fcf",
+      "value": "776969"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_2_ARRAY_1",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/32/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "001a46f34885f1e445f8418c9787ead35aeb67669e77d27806f2171c8712a17b",
+      "value": "109977"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_2_ARRAY_2",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/33/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "a28c1e85691fab01a72c5a3145df905e888672b52afd94f2d95e2c366425b237",
+      "value": "877326"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_2_ARRAY_3",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/34/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "84f94cb633ea4f5b781b95d5367b05af691c128786d0c779294584faf83a341b",
+      "value": "128199"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_3_ARRAY_0",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/35/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "3b9c129b112bdcd495363582027d9e5745aebe2d66ab6cbda363ec46be292ad8",
+      "value": "985234"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_3_ARRAY_1",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/36/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "4f4126029c1a483544f308cee33dd9a9e69e1f4ecd1491fc84d4926267231777",
+      "value": "544273"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_3_ARRAY_2",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/37/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "0e99b79b6d554b4d5e493c2ae84730545d528d566350846533833044032df851",
+      "value": "338418"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_3_ARRAY_3",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/38/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "bc8f377c9f13b16367aa3f22971e1b4e74460bde731328a37e92147e709a3149",
+      "value": "708996"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_4_ARRAY_0",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/39/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "7da2b8079abafeb3812ca4aefc865a0b0c26c847f9c8d543b9b60782ddb72898",
+      "value": "678060"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_4_ARRAY_1",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/40/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "0dd8f4a333d29ebeb6db2fa5f221302a0255895ce2b1089399e8c21361eefc70",
+      "value": "507078"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_4_ARRAY_2",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/41/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "0d181a3e6e8792676982ff1abffac629299347546c1e62ce6f58616e4979e986",
+      "value": "153980"
+    },
+    {
+      "boundary_rule": null,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_CASE_4_ARRAY_3",
+      "field": "isolated_constant_expression",
+      "implementation_test": "REFERENCE_ONLY",
+      "path": "non_boundary/42/literal",
+      "scope": "DEVELOPMENT_ONLY",
+      "sha256_utf8": "7fbc85716117f611a7f985fb64473c24319a63906c8273d4e6e46b8455366f28",
+      "value": "973498"
+    }
+  ],
+  "inventory_scope": "selected atomic witnesses only; no executable fixture has run",
+  "malformed_inventory": [],
+  "permitted_collision_count": 1,
+  "permitted_normative_collisions": [
+    {
+      "boundary_rule": "FROZEN_RO_INTEGER_ZERO_BOUNDARY",
+      "development_case_id": "DEVELOPMENT_ONLY_RO_BOUNDARY_ZERO",
+      "field": "isolated_constant_expression",
+      "literal": "0",
+      "match_location_count": 14,
+      "match_locations": [
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/02_v35_behavioral.json",
+          "json_pointer": "/cases/0/attempts/0/counterfactual",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/02_v35_behavioral.json",
+          "json_pointer": "/cases/4/attempts/0/counterfactual",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/04_output_attribute.json",
+          "json_pointer": "/cases/0/expected_outputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/0/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/1/class_witness",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/2/class_witness",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/2/activity_witness",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/4/numeric_inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/5/raw",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/14/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/16/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/17/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/18/isolated/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        },
+        {
+          "artifact_path": "research/protocols/phase3c_conf1_v3_synthetic_fixtures/05_input_domain.json",
+          "json_pointer": "/cases/18/composition/inputs/0",
+          "match_modes": [
+            "EXACT_STRING",
+            "RECOMPUTED_STRING_HASH"
+          ],
+          "string_kind": "VALUE"
+        }
+      ],
+      "path": "boundaries/0/literal",
+      "selection_basis": "exact serialized predetermined schedule, verified before corpus read",
+      "sha256_utf8": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "witness_schedule_sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198"
+    }
+  ],
+  "prohibited_collision_count": 0,
+  "prohibited_collisions": [],
+  "resampling_occurred": false,
+  "schedule_existed_before_scan": true,
+  "schema_version": 1,
+  "scientific_overlap_permissions_changed": false,
+  "scope": "DEVELOPMENT_ONLY",
+  "status": "PASS",
+  "value_output_exception_imported": false,
+  "witness_schedule_sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198"
+}

@@ -1,0 +1,855 @@
+{
+  "additional_fixture_inventory_sha256_utf8": "34582f8190978130696f971d172ce1d6ab57e36ce83f24aca4140e5bc19b5c9a",
+  "additional_overlap": {
+    "artifact_kind": "DEVELOPMENT_ONLY_RO_OVERLAP_ADJUDICATION",
+    "expected_labels_parsed": false,
+    "malformed_inventory": [],
+    "permitted_collision_count": 0,
+    "permitted_normative_collisions": [],
+    "prohibited_collision_count": 0,
+    "prohibited_collisions": [],
+    "resampling_occurred": false,
+    "schema_version": 1,
+    "scientific_overlap_permissions_changed": false,
+    "scope": "DEVELOPMENT_ONLY",
+    "status": "PASS",
+    "value_output_exception_imported": false,
+    "witness_schedule_sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198"
+  },
+  "artifact_kind": "DEVELOPMENT_ONLY_RO_PRE_CONTEXT_PREREQUISITE_DIAGNOSTIC",
+  "constructors_used": [
+    "accepted DEVELOPMENT_ONLY bind_projection for prior-readiness replay"
+  ],
+  "expected_labels_parsed": false,
+  "independent_ro_verifier": false,
+  "limitation": "The prior adapter retains a complete typed dependency footprint, so direct selector/key list gaps alone were not a blocker. However, assigning each dependency edge to its incident head requirement creates unlicensed required-selector satisfactions (including EDGE INPUT_TO_DECODER assigned to NODE INPUT). No CLOSED pre-context is produced by that shortcut. A faithful occurrence/key/multiplicity/attachment bridge still requires establishment against the complete unchanged prospective contract; this diagnostic does not prove that no such bridge can be implemented. No new requirement or equivalence rule was invented.",
+  "prohibited_work_invoked": false,
+  "records": [
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 32,
+      "complete_raw_occurrences": 95,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 34,
+      "declared_selector_occurrences": 52,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING_BASE",
+      "draft_inventory_occurrences": 95,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "ce07c1855bdfea195a9b57273d5c5e06b7faad60b1e453ddeb4cd4dae407d062",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 95,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 12,
+      "raw_state_dependency_edges": 215,
+      "raw_without_canonical_key_membership_count": 63,
+      "raw_without_declared_selector_count": 43,
+      "raw_without_either_selector_or_key_count": 29,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:108|1:6"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|2:10",
+          "operand_roles": [
+            "CONTRIBUTION"
+          ],
+          "operation": "OPERATOR_TO_ACCUMULATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:265|2:16",
+          "target_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:246|2:15"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "5ea6dbfa9523003da0cfa5eb5eabf186e92c858278826c94386aeb60103a8b55",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PER_ITEM",
+      "treatment": "EXPRESSION",
+      "unsupported_dependency_as_selector_claim_count": 104,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "99e4af9b90c34715f1c6a188cd1278867600d92e24bba9cc534bf561c0053de1",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|2:39",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|13:SEMANTIC_EDGE|2:42",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:0",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:46|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 95,
+      "complete_raw_occurrences": 168,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 40,
+      "declared_selector_occurrences": 86,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION_BASE",
+      "draft_inventory_occurrences": 168,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "array_reduction",
+      "full_mismatch_sets_sha256_utf8": "178aaf80685fe6c83da8bc719a599804c26f4329e2017173eaac680f7cfa3fd2",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 168,
+      "program_id": "DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 18,
+      "raw_state_dependency_edges": 321,
+      "raw_without_canonical_key_membership_count": 73,
+      "raw_without_declared_selector_count": 82,
+      "raw_without_either_selector_or_key_count": 33,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:25",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:587|2:35",
+          "target_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:562|2:34"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:26",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:615|2:37",
+          "target_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:590|2:36"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:34",
+          "operand_roles": [
+            "CONTRIBUTION"
+          ],
+          "operation": "OPERATOR_TO_ACCUMULATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:733|2:46",
+          "target_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:714|2:45"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "6aeb216ee9cf95a703949f8d0b07946617d96fc55d465bd268cc7bb7d8134e9c",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PER_ITEM",
+      "treatment": "EXPRESSION",
+      "unsupported_dependency_as_selector_claim_count": 182,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "e097bb1995e796aa97d2bdf2c73800a3d760034bf991b92e903d00cdab1800aa",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:78",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:43|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|13:SEMANTIC_EDGE|2:68",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:43|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:3a62a2a08a69a9b481f99aa3816978c7b2882a85b605d62a21b0719939180ef6",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|1:2",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:3a62a2a08a69a9b481f99aa3816978c7b2882a85b605d62a21b0719939180ef6",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:68|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 110,
+      "complete_raw_occurrences": 125,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 13,
+      "declared_selector_occurrences": 64,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY_BASE",
+      "draft_inventory_occurrences": 125,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "bb9c29ae4e045b43c0096949603c31ce13f322ce57ccb1610eb6d52785678975",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 125,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 14,
+      "raw_state_dependency_edges": 298,
+      "raw_without_canonical_key_membership_count": 15,
+      "raw_without_declared_selector_count": 61,
+      "raw_without_either_selector_or_key_count": 2,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:108|1:6"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "d596227f6fa41b9d8d75db7ef4ce2f4460d077f905d0ee5c5d3fc18e5856bae3",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PREFIX",
+      "treatment": "EXPRESSION",
+      "unsupported_dependency_as_selector_claim_count": 138,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "7034355109f3df8c2cc73f455296edb821e13ef8029139eaa52b5e6c02721f62",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|2:59",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|13:SEMANTIC_EDGE|2:54",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:0",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:46|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 119,
+      "complete_raw_occurrences": 189,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 36,
+      "declared_selector_occurrences": 91,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER_BASE",
+      "draft_inventory_occurrences": 189,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "3168675dd81bdec42c496dd9219e0726df55b489261f8da6334cba160780df76",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 189,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 22,
+      "raw_state_dependency_edges": 434,
+      "raw_without_canonical_key_membership_count": 70,
+      "raw_without_declared_selector_count": 98,
+      "raw_without_either_selector_or_key_count": 34,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:108|1:6"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|2:12",
+          "operand_roles": [
+            "CONTRIBUTION"
+          ],
+          "operation": "OPERATOR_TO_ACCUMULATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:322|2:20",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:303|2:19"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "9ad20ce7de7c145d24a17a07cf5a4ac37045b42c046d2ad1266364baca8a2962",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "TWO_PASS",
+      "treatment": "EXPRESSION",
+      "unsupported_dependency_as_selector_claim_count": 212,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "fec8f1e849853c4b35b4b10c94d0a5b516fdd4641362d5beb74f03f1deb43065",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|2:91",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|13:SEMANTIC_EDGE|2:82",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|13:SEMANTIC_EDGE|2:91",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 88,
+      "complete_raw_occurrences": 101,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 11,
+      "declared_selector_occurrences": 54,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING_BASE_ADD",
+      "draft_inventory_occurrences": 101,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "171cbaeb3a9562b266438c8711835ef854b20f8dd12b454ecbf01057889bd8e5",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 101,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 12,
+      "raw_state_dependency_edges": 228,
+      "raw_without_canonical_key_membership_count": 13,
+      "raw_without_declared_selector_count": 47,
+      "raw_without_either_selector_or_key_count": 2,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|3:108|1:6"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "8f9373d85a888cfa28557f142e6cc27763045ab28538141cc0901dc617cb5ffd",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PER_ITEM",
+      "treatment": "ADD",
+      "unsupported_dependency_as_selector_claim_count": 112,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "12af638b22ebe04012e02d1419d0e7455de0a922c97495d87c798c0a696f63b6",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|2:47",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|13:SEMANTIC_EDGE|2:44",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:EDGE|1:0",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|55:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PER_ITEM_TRAINING|4:NODE|2:46|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 152,
+      "complete_raw_occurrences": 169,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 15,
+      "declared_selector_occurrences": 86,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION_BASE_ADD",
+      "draft_inventory_occurrences": 169,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "array_reduction",
+      "full_mismatch_sets_sha256_utf8": "c5bf32231f336fbc4f9cd4cf2aeb205e71e47fa0cbfbfa6e58dd5366a292d3de",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 169,
+      "program_id": "DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 18,
+      "raw_state_dependency_edges": 322,
+      "raw_without_canonical_key_membership_count": 17,
+      "raw_without_declared_selector_count": 83,
+      "raw_without_either_selector_or_key_count": 2,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:25",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:587|2:35",
+          "target_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:562|2:34"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:26",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:615|2:37",
+          "target_endpoint_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|3:590|2:36"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "e4650ccd4e8ffa449f1e8be5bb67c15dc623218c68ca269ef9dcc1abc3b11267",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PER_ITEM",
+      "treatment": "ADD",
+      "unsupported_dependency_as_selector_claim_count": 184,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "8f4592877eb011daa91afee03cdb42c455a6a2073c8ad40108fecb4cf210e5b3",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|2:83",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:43|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|13:SEMANTIC_EDGE|2:68",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:bafdd95d65a6eb08d1e0573a9d25a6f38888dbfad9cc5e135e28613254424339",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:43|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|15:array_reduction|64:3a62a2a08a69a9b481f99aa3816978c7b2882a85b605d62a21b0719939180ef6",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:EDGE|1:2",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|108:DEVELOPMENT_ONLY_KIND|15:array_reduction|64:3a62a2a08a69a9b481f99aa3816978c7b2882a85b605d62a21b0719939180ef6",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|63:DEVELOPMENT_ONLY_RO_ARRAY_REDUCTION_PER_ITEM_PRIMARY_EVALUATION|4:NODE|2:68|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 110,
+      "complete_raw_occurrences": 125,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 13,
+      "declared_selector_occurrences": 64,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY_BASE_ADD",
+      "draft_inventory_occurrences": 125,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "bb9c29ae4e045b43c0096949603c31ce13f322ce57ccb1610eb6d52785678975",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 125,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 14,
+      "raw_state_dependency_edges": 298,
+      "raw_without_canonical_key_membership_count": 15,
+      "raw_without_declared_selector_count": 61,
+      "raw_without_either_selector_or_key_count": 2,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|3:108|1:6"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "d596227f6fa41b9d8d75db7ef4ce2f4460d077f905d0ee5c5d3fc18e5856bae3",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "PREFIX",
+      "treatment": "ADD",
+      "unsupported_dependency_as_selector_claim_count": 138,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "7034355109f3df8c2cc73f455296edb821e13ef8029139eaa52b5e6c02721f62",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|2:59",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|13:SEMANTIC_EDGE|2:54",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:EDGE|1:0",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "VALUE_TO_OPERATOR",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:263c67a6d9be1a05ce8ea4cd93ff5139f024bb17663d49a3591cf5ca7a079529",
+          "selected_kind": "NODE",
+          "selected_operation": "INITIALIZE",
+          "selected_requirement_occurrence_id": "OCC|61:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_PREFIX_PRIMITIVE_SANITY|4:NODE|2:46|1:2"
+        }
+      ]
+    },
+    {
+      "accepted_generic_binding_replayed": true,
+      "canonical_key_member_occurrences": 119,
+      "complete_raw_occurrences": 189,
+      "context_constructed": false,
+      "context_status": "UNRESOLVED",
+      "declared_but_not_canonical_key_member_count": 36,
+      "declared_selector_occurrences": 91,
+      "development_case_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER_BASE_ADD",
+      "draft_inventory_occurrences": 189,
+      "edge_obligation_quantifier": "ONE_TYPED_EDGE_PER_KIND; full graph multiplicity is separately retained",
+      "family": "numeric_iteration",
+      "full_mismatch_sets_sha256_utf8": "3168675dd81bdec42c496dd9219e0726df55b489261f8da6334cba160780df76",
+      "prior_head_and_dependency_footprint_complete": true,
+      "prior_head_and_dependency_footprint_count": 189,
+      "program_id": "DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER",
+      "prospective_contract_changed": false,
+      "raw_state_definitions": 22,
+      "raw_state_dependency_edges": 434,
+      "raw_without_canonical_key_membership_count": 70,
+      "raw_without_declared_selector_count": 98,
+      "raw_without_either_selector_or_key_count": 34,
+      "raw_without_either_selector_or_key_examples": [
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|1:1",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:105|1:5",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:80|1:4"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|1:2",
+          "operand_roles": [
+            "INITIAL_INDICATOR"
+          ],
+          "operation": "VALUE_TO_OPERATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:133|1:7",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:108|1:6"
+        },
+        {
+          "kind": "EDGE",
+          "occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|2:12",
+          "operand_roles": [
+            "CONTRIBUTION"
+          ],
+          "operation": "OPERATOR_TO_ACCUMULATOR",
+          "parser_legacy_essential": false,
+          "parser_legacy_proof": "PURE_UNUSED_NO_TYPED_PATH_TO_OUTPUT",
+          "result_role": "INDICATOR",
+          "source_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:322|2:20",
+          "target_endpoint_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|3:303|2:19"
+        }
+      ],
+      "raw_without_either_selector_or_key_sha256_utf8": "9ad20ce7de7c145d24a17a07cf5a4ac37045b42c046d2ad1266364baca8a2962",
+      "rejected_context_reason": "V32_PRE_DISPOSITION_CONTEXT_INVALID: DEPENDENCY_IS_NOT_REQUIRED_SELECTOR",
+      "scientific_reason_codes": [
+        "V32_PRE_DISPOSITION_CONTEXT_INVALID"
+      ],
+      "structural_match_is_not_canonical_key_attachment_proof": true,
+      "structure": "TWO_PASS",
+      "treatment": "ADD",
+      "unsupported_dependency_as_selector_claim_count": 212,
+      "unsupported_dependency_as_selector_claims_sha256_utf8": "fec8f1e849853c4b35b4b10c94d0a5b516fdd4641362d5beb74f03f1deb43065",
+      "unsupported_dependency_as_selector_examples": [
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:EDGE|2:91",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "INPUT_TO_DECODER",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|13:SEMANTIC_EDGE|2:82",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        },
+        {
+          "canonical_contract_key_id": "DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "dependency_is_not_selected_occurrence": true,
+          "proposed_dependency_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|13:SEMANTIC_EDGE|2:91",
+          "proposed_kind": "EDGE",
+          "proposed_operation": "PRIOR_STATE_TO_UPDATE",
+          "requirement_id": "DEVELOPMENT_ONLY_BINDING_REQUIREMENT|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|110:DEVELOPMENT_ONLY_KIND|17:numeric_iteration|64:5e4a82c512b0e2914d612bae9ce599bec241913d1f564cdeb5c9d58d658c38d4",
+          "selected_kind": "NODE",
+          "selected_operation": "INPUT",
+          "selected_requirement_occurrence_id": "OCC|66:DEVELOPMENT_ONLY_RO_NUMERIC_ITERATION_TWO_PASS_STRUCTURAL_TRANSFER|4:NODE|2:23|1:1"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "scientific_instance_closure": "DEFERRED_UNTIL_CANDIDATE_CONSTRUCTION_AND_VALIDATION",
+  "scope": "DEVELOPMENT_ONLY",
+  "status": "STOPPED_COVERAGE_V3_REFERENCE_ONLY_IMPLEMENTATION_ISSUE",
+  "witness_schedule_sha256_utf8": "e8720d7196bbbf4d166ecc7b72388287ad455ec0718d6ee2a60207a794983198",
+  "writes": 0
+}
