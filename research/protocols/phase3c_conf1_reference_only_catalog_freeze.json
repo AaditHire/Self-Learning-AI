@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "phase": "PHASE_3C_CONF1",
+  "status": "FROZEN_PROSPECTIVE_PRE_ATTEMPT_004_METHODOLOGY",
+  "normative_status": "FROZEN_CLOSED_REFERENCE_ONLY_SEMANTIC_CATALOG",
+  "catalog_version": "RO-CATALOG-PROPOSED-1",
+  "scope": "Freeze step 2 only: exact reviewed REFERENCE_ONLY semantic catalog under the exact compatible frozen Coverage-v3/base delegated-interface/amendment-v2 stack; no candidate, implementation or scientific result accepted",
+  "freeze_parent_commit": "579979e8a07f64a093620409ba09f9890f984f81",
+  "implementation_authorization_effect": "NONE",
+  "implementation_readiness_authorization_effect": "NONE",
+  "candidate_construction_authorization_effect": "NONE",
+  "scientific_execution_authorization_effect": "NONE",
+  "model_execution_authorization_effect": "NONE",
+  "approved_proposal_commit": "e56533364c38bf5c96b5c521081b3c368449c952",
+  "approved_proposal_path": "research/protocols/phase3c_conf1_reference_only_catalog_proposed.md",
+  "approved_proposal_sha256_exact_bytes": "7df2a31df6c995d0105e5547aa1d235c6046e9cf141f92321faf92cce3bac682",
+  "approved_proposal_git_blob": "569ed951b121416b4c90240282d96231ce62c6e8",
+  "approved_proposal_size_bytes": 52310,
+  "frozen_catalog_path": "research/protocols/phase3c_conf1_reference_only_catalog_proposed.md",
+  "frozen_catalog_sha256_exact_bytes": "7df2a31df6c995d0105e5547aa1d235c6046e9cf141f92321faf92cce3bac682",
+  "frozen_catalog_git_blob": "569ed951b121416b4c90240282d96231ce62c6e8",
+  "frozen_catalog_size_bytes": 52310,
+  "frozen_catalog_byte_equal_to_approved_proposal": true,
+  "hash_policy": "SHA-256 over exact UTF-8 file bytes; no CRLF/LF normalization for this catalog or manifest; Git blob independently binds committed bytes. Existing bound Coverage-v3 authority/freeze retain their declared LF-normalized hash policy and additionally bind the exact observed bytes below.",
+  "proposal_status_annotation_policy": "Proposal-time status, review questions, hypothetical threat examples, historical integrity observations and task-specific boundaries remain byte-identical historical provenance. This manifest records subsequent exact-byte approval/freezing of the reviewed semantic rules; no proposal is edited and no hypothetical example becomes an executed finding.",
+  "normative_region_start_heading": "## 1. Prospective status, authority, and scope",
+  "normative_region_extraction_policy": "Exact UTF-8 file bytes from the first byte of the identified heading immediately following LF through EOF, including the original final newline; exclude the preceding LF and pre-heading title/status metadata; no normalization",
+  "approved_normative_region_sha256_exact_bytes": "25c04bb3b319314cce744d5c83a491dae97c1596c4e38a19d639bab3ca9a58d5",
+  "frozen_normative_region_sha256_exact_bytes": "25c04bb3b319314cce744d5c83a491dae97c1596c4e38a19d639bab3ca9a58d5",
+  "normative_region_byte_count": 51739,
+  "normative_region_byte_equal_to_approved_proposal": true,
+  "bound_authorities": {
+    "coverage_v3": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_proposed.md",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256_lf_normalized": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "sha256_exact_bytes": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "git_blob": "16210d9810d217461b77546c3568c3344c0c770b",
+      "size_bytes": 31128
+    },
+    "coverage_v3_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_freeze.json",
+      "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+      "sha256_lf_normalized": "8d8f8a37c808d84c740867174e219803712213e672687c42164500f2bca12291",
+      "sha256_exact_bytes": "8d8f8a37c808d84c740867174e219803712213e672687c42164500f2bca12291",
+      "git_blob": "28c0fb52fba083e72f87ebfc530fd88ddded5f92",
+      "size_bytes": 3307
+    },
+    "delegated_interface": {
+      "path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_proposed.md",
+      "hash_policy": "EXACT_BYTES_SHA256",
+      "sha256_exact_bytes": "9c684eaf6b0099080ddf907630b0a2f8e176e3a882b67875d82f07bd82d64dc5",
+      "git_blob": "1b6d4d1a825bf9e9d288ca9c3815d1a8e7c78d1a",
+      "size_bytes": 76081
+    },
+    "delegated_interface_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_freeze.json",
+      "hash_policy": "EXACT_BYTES_SHA256",
+      "sha256_exact_bytes": "bd7a7fc6862ce049c1fdf363f763e1a3a17808132291b9064e3c6f26fb720948",
+      "git_blob": "32595c5c563fa262679f2bf93ae789f04cde7f72",
+      "size_bytes": 5892,
+      "upstream_identity_binding": "The exact predecessor freeze-manifest bytes transitively bind all unchanged upstream scientific authority identities and their declared hash policies"
+    },
+    "interface_amendment_v2": {
+      "path": "research/protocols/phase3c_conf1_reference_only_interface_clarification_proposed_v2.md",
+      "hash_policy": "EXACT_BYTES_SHA256",
+      "sha256_exact_bytes": "7a8b69e208bb0a5406cbce0515c4ff95e37aa2d3d8d8e493cda6df5783a2cf25",
+      "git_blob": "e6e12aedf658698a5dd1975894b6e4e7299bd171",
+      "size_bytes": 68503,
+      "amendment_version": "RO-INTERFACE-PROPOSED-2",
+      "normative_status": "PROSPECTIVE_DELEGATED_INTERFACE_AMENDMENT",
+      "frozen": true
+    },
+    "interface_amendment_v2_freeze_manifest": {
+      "path": "research/protocols/phase3c_conf1_reference_only_interface_clarification_v2_freeze.json",
+      "hash_policy": "EXACT_BYTES_SHA256",
+      "sha256_exact_bytes": "aa8cc827a5c171b388220b0382713982d7a981b6e73b071a2dd12c2cf50ed5ab",
+      "git_blob": "7aa3ca18fe4df6823278e3dbd82eaa6bebfc8e6b",
+      "size_bytes": 9936,
+      "completed_freeze_commit": "579979e8a07f64a093620409ba09f9890f984f81",
+      "freeze_step": 1,
+      "binding_and_normative_region_verification": "MATCH"
+    }
+  },
+  "closed_semantic_authority": {
+    "controlling_source": "The exact frozen catalog sections 1-8 and all catalog constraints; this summary identifies boundaries, not an alternative or broadened admission specification",
+    "reference_only_semantic_classes": [
+      "PURE_UNUSED",
+      "CONSTANT_FALSE"
+    ],
+    "supporting_rule_ids": [
+      "RO.SAFE.BOUNDED_INTEGER_CONSTANT_TREE"
+    ],
+    "admission_rule_ids": [
+      "RO.PU.TOP_LEVEL_CONSTANT_DECL",
+      "RO.CF.CONSTANT_COMPARISON_IF"
+    ],
+    "safety_and_totality": "All original-source validity, closed grammar, per-node exactness/bounds, pinned-compiler agreement, no observable effect, influence, execution/resource and required-premise constraints remain mandatory; no catch-all harmlessness rule",
+    "ownership": "Complete raw semantic occurrence/edge inventory, exact program/source/control/pass identity, full region and boundary ownership, nested support, one owner and exactly one valid disposition per occurrence",
+    "unknown_or_unmatched_behavior": "FAIL_CLOSED; incomplete necessary facts remain UNRESOLVED, known violations reject; no implicit ignored occurrence",
+    "required_inactive_or_unresolved_to_reference_only_allowed": false,
+    "four_bucket_v3_2_accounting": [
+      "REQUIRED_DIRECT_MAPPING",
+      "REQUIRED_VIA_AUTHORIZED_EQUIVALENCE",
+      "AUTHORIZED_EQUIVALENCE_INTERNAL",
+      "REFERENCE_ONLY"
+    ],
+    "output_equivalence_escape_allowed": false,
+    "alternative_reference_route_allowed": false,
+    "dead_code_or_scaffold_waiver_allowed": false,
+    "reference_only_contributes_v3_4_or_v3_5_coverage_evidence": false,
+    "independent_candidate_gates": "All unchanged source/scaffold/dead-code/overlap/slot/budget/state/E1-E6 requirements remain blocking even when a V3.2 disposition is valid",
+    "semantic_extension_policy": "Any semantic admission/domain/grammar/rule change requires a new catalog version and renewed independent prospective review; no automatic substitution or result-conditioned relaxation"
+  },
+  "representation_authority": {
+    "controlling_source": "Exact frozen interface amendment v2 under its completed step-1 freeze",
+    "semantic_catalog_section": "Section 8 semantic facts",
+    "canonical_adapter": "Frozen amendment v2 section 9 lossless C/R/I embedding, its closed V3.2 internal/support/shared-region/per-occurrence payload, section 7 staged consistency join and section 8 immutable matching per-program E1 PASS prerequisite/shared-invocation order",
+    "semantic_meaning_owner": "This exact frozen semantic catalog, subordinate to unchanged frozen Coverage-v3 scientific methodology",
+    "representation_and_proof_staging_owner": "The exact frozen interface amendment v2 only within its enumerated reviewed representation scope",
+    "amendment_override_areas": [
+      "D section 2.2",
+      "D section 4.1",
+      "D section 9",
+      "Canonical S section 8 representation"
+    ],
+    "read_classification_override": false,
+    "new_upstream_output_read_permission": false,
+    "cross_scope_silent_override_allowed": false,
+    "inconsistency_policy": "Any inconsistency in the exact frozen pair blocks acceptance under applicable FAIL/UNRESOLVED rules and requires prospective review; neither representation nor semantics may silently broaden or weaken the other"
+  },
+  "normative_precedence": [
+    {
+      "order": 1,
+      "authority": "Frozen Coverage-v3 scientific methodology",
+      "effect": "Remains controlling; no scientific method, ontology, required mapping, equivalence, state or coverage meaning changed"
+    },
+    {
+      "order": 2,
+      "authority": "Exact frozen base delegated interface",
+      "effect": "Remains controlling except the frozen amendment's explicitly enumerated representation supplements/overrides"
+    },
+    {
+      "order": 3,
+      "authority": "Exact frozen interface amendment v2",
+      "effect": "Controls only D section 2.2 record-role addition, D section 4.1 complete 184-program inventory representation, D section 9 V3.2 payload/internal/RO representation and lossless S section 8 representation/staging adapter; D section 5.1 read classes and all unlisted requirements unchanged"
+    },
+    {
+      "order": 4,
+      "authority": "This exact frozen REFERENCE_ONLY semantic catalog",
+      "effect": "Controls the two closed semantic classes, three exact proof-rule IDs and all reviewed semantic admission/safety/ownership/fail-closed constraints; no override of frozen scientific methodology"
+    },
+    {
+      "order": 5,
+      "authority": "All other frozen protocol/scaffold/slot/E1-E6 requirements",
+      "effect": "Remain unchanged and controlling; historical interface v1 has no normative authority"
+    }
+  ],
+  "compatible_pair": {
+    "interface_amendment_v2_frozen": true,
+    "semantic_catalog_frozen_by_this_manifest": true,
+    "creates_compatible_frozen_specification_pair": true,
+    "amendment_bound_catalog_proposal": {
+      "path": "research/protocols/phase3c_conf1_reference_only_catalog_proposed.md",
+      "sha256_exact_bytes": "7df2a31df6c995d0105e5547aa1d235c6046e9cf141f92321faf92cce3bac682",
+      "git_blob": "569ed951b121416b4c90240282d96231ce62c6e8",
+      "size_bytes": 52310
+    },
+    "amendment_bound_catalog_equals_this_frozen_catalog": true,
+    "catalog_freeze_binds_completed_amendment_freeze": true,
+    "directed_binding_relationship": "Coverage-v3/base delegated interface -> completed amendment v2 freeze -> semantic catalog freeze; amendment also binds the shared exact catalog PROPOSAL bytes, not this catalog freeze identity",
+    "step_1_temporal_metadata_policy": "The unchanged step-1 manifest's NOT_YET_FROZEN catalog status describes step 1 only. This step-2 manifest freezes exactly those bound proposal bytes; no step-1 field or hash is rewritten.",
+    "reciprocal_manifest_hash_dependency": false,
+    "self_or_future_identity_dependency": false,
+    "binding_identity_verification_at_freeze": "MATCH",
+    "independent_compatible_pair_verification_required_next": true,
+    "separate_explicit_implementation_authorization_required_after_pair_verification": true,
+    "specification_freeze_is_not_implementation_or_scientific_conformance_evidence": true
+  },
+  "freeze_order": {
+    "current_freeze_step": 2,
+    "total_freeze_steps": 2,
+    "amendment_v2_freeze_completed_first": true,
+    "semantic_catalog_freeze_completed_second_by_this_manifest": true,
+    "future_or_self_freeze_identity_included": false,
+    "implementation_authorization_by_either_freeze_or_pair": "NONE",
+    "next_required_action": "Independent verification of the exact compatible frozen specification pair; implementation requires subsequent separate explicit authorization, not this freeze",
+    "implementation_readiness_updated_by_this_freeze": false
+  },
+  "historical_interface_v1": {
+    "path": "research/protocols/phase3c_conf1_reference_only_interface_clarification_proposed.md",
+    "sha256_exact_bytes": "e0a48b2ccd1eec31e3019982d199fc4b96c418a10e8b05558de2956ad70e3e9f",
+    "git_blob": "3658ce02d473bc34c27f0f2144f4fb1c99136962",
+    "size_bytes": 50404,
+    "status": "HISTORICAL_UNFROZEN",
+    "normative_authority": "NONE"
+  },
+  "protected_integrity_at_freeze": {
+    "verification_method": "Read-only verify_protected_inputs and independent exact chain/proposal/normative-region identity checks; no separate report or scientific validator executed",
+    "frozen_authorities_verified": 10,
+    "prior_normative_regions_verified": 4,
+    "protected_preregistration_files_verified": 15,
+    "protected_preregistration_baseline_commit": "b44d1c73de1be47b541f76d67c88541a5d90f3fa",
+    "completed_amendment_normative_region_verified": true,
+    "expected_label_semantics_read": false,
+    "expected_labels_parsed": false,
+    "scientific_fixture_execution_performed": false,
+    "sealed_holdout_contents_accessed_for_this_freeze": false
+  },
+  "historical_8668_normative_authority": "NONE",
+  "reference_only_implementation_authorized": false,
+  "scientific_model_population_or_holdout_execution_performed_for_this_freeze": false,
+  "freeze_commit_identity": "Git commit containing only this semantic-catalog freeze manifest; SHA reported after commit creation to avoid self-reference"
+}
