@@ -84,7 +84,11 @@ A resolved ACTIVE/INACTIVE or COVERED/NOT_COVERED finding may be interface-valid
 
 D §3.3 RID framing and §3.2 ROWSET digest remain byte-for-byte unchanged. Distinguish scientific row_id, G CGKEY capability ID, G CGREQ requirement ID, G selected CGNODE/CGEDGE ID, R raw occurrence_id/V32OCCRECORD wrapper, and execution/witness record ID. None substitutes for another.
 
-All new IDs below are subordinate representation IDs, using D's exact RID framing. Components are exact UTF-8; ordinals are minimal unsigned decimal. New destination, dynamic-event and path ordinals are their 1-based positions in the prescribed ordered arrays; trial ordinals are explicitly 1/2. Input expected-index/static-occurrence ordinals are 0-based array positions. G profile/multiplicity values are copied exactly, not converted. BINDNORMAL event_ordinal is the first attributable actual trace event of that normal-event proof; if multiple valid proof paths share it, use the first qualifying actual path in trace order for that record and retain other paths in paths[]. This only resolves proof-encoding ties below the unchanged witness criterion. They never replace scientific rows. "req" is G's CGREQ, "key" G's CGKEY, "row" an unchanged D row_id, "case" an existing frozen case ID. No activity/status/output appears in a scientific row ID.
+All new IDs below are subordinate representation IDs, using D's exact RID framing. Components are exact UTF-8; ordinals are minimal unsigned decimal. New destination ordinals are their 1-based positions in the prescribed ordered arrays; dynamic-event and path ordinals are local to the owning CaseExecution as defined below; trial ordinals are explicitly 1/2. Input expected-index/static-occurrence ordinals are 0-based array positions. G profile/multiplicity values are copied exactly, not converted. BINDNORMAL event_ordinal is the first attributable actual trace event of that normal-event proof; if multiple valid proof paths share it, use the first qualifying actual path in trace order for that record and retain other paths in paths[]. This only resolves proof-encoding ties below the unchanged witness criterion. They never replace scientific rows. "req" is G's CGREQ, "key" G's CGKEY, "row" an unchanged D row_id, "case" an existing frozen case ID. No activity/status/output appears in a scientific row ID.
+
+For every BINDEVENT and BINDPATH formula, execution_id is exactly the record_id of the OWNING CaseExecution: the corresponding RID("BINDEXEC", [row, case, mode, trial_ordinal_or_NONE]) value. It is NEVER producer_execution_id, producer invocation identity, report execution provenance ID, case ID alone or row ID alone. producer_execution_id retains its existing producer-provenance meaning; no additional execution identifier is introduced.
+
+Every ExecutionEvent's owning CaseExecution record_id MUST equal the execution_id component of its BINDEVENT RID. Every ExecutionPath's execution_reference.record_id MUST equal the execution_id component of its BINDPATH RID, and every event referenced by that path, including its displayed_computation_event_reference, MUST belong to that same CaseExecution. event_ordinal is the 1-based position in that CaseExecution's events[] in actual execution order. path_ordinal is the 1-based position among that CaseExecution's paths in the prescribed actual-trace order, retaining their order in the direct paths[] array. Ordinals restart locally for each CaseExecution. Distinct CaseExecutions inside one producer invocation therefore have distinct BINDEXEC components and cannot collide merely because they share producer_execution_id; the existing registry still rejects duplicate or inconsistent IDs. No scientific row-ID formula changes.
 
 | Object | Representation ID formula | Exact container and stage |
 |---|---|---|
@@ -259,11 +263,15 @@ DOMAIN_VALUE fixes INPUT; each FIELD_VALUE fixes its corresponding TO_NUMBER, re
 | algorithm | NUMERIC_UNBOUNDED_PROOF / ARRAY_INTERVAL_PARITY_ABSTRACT_PRODUCT | A/G: fixed by actual family; consumes accepted procedure unchanged. |
 | declared_categories | category enum[] | A: subset of OUTPUT_ZERO/POSITIVE/NEGATIVE/MULTIDIGIT in that order. |
 | undeclared_categories | category enum[] | A: exact complement, same order; no overlap or missing category. |
-| derivation_text | nonempty UTF-8 string | A/S, B1/R serialization: complete symbolic mathematical derivation of inclusion and exclusion for this exact target/domain, not sampled cases or an unchecked approval statement. |
-| derivation_status | COMPLETE / UNRESOLVED | A: authoritative constructor's finding; COMPLETE requires actual accepted two-direction proof. Merely having text cannot produce scientific completeness. |
+| derivation_text | nonempty UTF-8 string | B1/R: DESCRIPTIVE REPRESENTATION ONLY for human-readable audit/provenance; scientifically non-authoritative, not a machine-checkable proof language or an independently authoritative premise. |
+| derivation_status | COMPLETE / UNRESOLVED | A/S: COMPLETE is valid only when deterministic independent scientific reconstruction under the exact accepted algorithm establishes inclusion of every declared category and exclusion of every undeclared category. Text presence or wording cannot establish completeness. |
 | rule_authority_references | FileRef[] | A/G: exact accepted authorities and algorithm clauses. |
 
-This fixes proof serialization only. Mathematical completeness remains A/G's scientific constructor and independent scientific replay responsibility: recompute the own-target category set and verify both proof directions under their exact accepted algorithms before accepting COMPLETE. The format binder verifies identity/status/provenance and cannot establish mathematical validity from text presence or a status flag. UNRESOLVED blocks construction. A future proof producer must be prospectively reviewed; no declaration or proof instance exists in this task.
+derivation_text is DESCRIPTIVE REPRESENTATION ONLY. Its natural-language wording, formatting, phrasing, ordering or textual persuasiveness MUST NOT determine derivation_status, declared_categories, undeclared_categories or scientific COMPLETE/UNRESOLVED. It is NOT a machine-checkable proof language, is NOT parsed to establish mathematical truth and is NOT a scientific premise independent of the already-frozen algorithm/contract/domain/function authorities. The required nonempty UTF-8 string is a representation constraint only; text presence alone establishes no scientific fact.
+
+Scientific validity is established only by deterministic independent recomputation/replay using the exact contract, complete frozen valid domain, exact target function and the already-frozen NUMERIC_UNBOUNDED_PROOF or ARRAY_INTERVAL_PARITY_ABSTRACT_PRODUCT attainability algorithm under the exact controlling authority bindings, including the contract's roles, offset and state. Before accepting derivation_status=COMPLETE, that reconstruction MUST independently establish both inclusion of every declared category and exclusion of every undeclared category. The format binder verifies identity/status/provenance and cannot establish mathematical validity from text or a status flag. UNRESOLVED blocks construction. No proof DSL/grammar or mathematical rule is introduced. A future proof producer must be prospectively reviewed; no declaration or proof instance exists in this task.
+
+Two mathematically equivalent valid certificates MAY contain different descriptive derivation_text and therefore different exact containing-artifact hashes. This representation variability is acceptable because each artifact is bound exactly and the scientific result is independently recomputed; the text does not select or change that result. Section 4's exact serialization and artifact-binding rules remain unchanged.
 
 | DeclarationBinding field | Type/null | Meaning/validation |
 |---|---|---|
@@ -706,7 +714,7 @@ The bundle's ProgramOutputCheck serializes the already-frozen own-training-progr
 | v3_1_row_reference | Ref | D/A: same unchanged program row, retaining its case-obligation role. |
 | declaration_certificate_reference | Ref(BINDDECLCERT) | A/G: own COMPLETE declaration. |
 | category_checks | OwnCategoryCheck[] | A: one per own declared category, in four-category order; no checks for undeclared categories. |
-| own_category_case_finding | SATISFIED / FAILED / UNRESOLVED | A/S, B1/R label: all own declared categories actually COVERED / at least one resolved NOT_COVERED / any unresolved necessary check. |
+| own_category_case_finding | SATISFIED / FAILED / UNRESOLVED | A/S, B1/R label: deterministic mutually exclusive FAILED -> UNRESOLVED -> SATISFIED aggregation of the existing own declared-category conjunction, defined below. |
 | validation | StatusState | D/A/B1/R: format and exact downstream consistency, not additional scientific evidence. |
 
 | OwnCategoryCheck field | Type/null | Meaning/validation |
@@ -716,6 +724,14 @@ The bundle's ProgramOutputCheck serializes the already-frozen own-training-progr
 | coverage_finding | COVERED / NOT_COVERED / UNRESOLVED | D/A: equals that row's actual case evidence, never inferred from declaration. |
 
 All are mandatory non-null. These links report results; they never form a self-proving cycle or establish a mapping/RO premise.
+
+Aggregate own_category_case_finding in this exact precedence, with mutually exclusive branches:
+
+1. FAILED iff at least one required own declared-category check is resolved NOT_COVERED. This applies even if one or more other required checks are UNRESOLVED, because the existing conjunction is already known to fail.
+2. Otherwise, UNRESOLVED iff no check is NOT_COVERED and at least one necessary check is UNRESOLVED.
+3. Otherwise, SATISFIED iff every required own declared-category check is COVERED.
+
+No finding may satisfy more than one branch. Retain every underlying OwnCategoryCheck.coverage_finding and all applicable reasons unchanged; FAILED aggregation MUST NOT erase unresolved evidence, which remains blocking under the existing StatusState and inherited row rules. This is only deterministic serialization/aggregation of the already-frozen own-program conjunction. It creates no scientific gate, reason code or row and changes no V3.1, output declaration, OUTPUT_ATTRIBUTE evidence or V3.4 rule. Another program cannot repair an own-program failure. Malformed/impossible enum combinations remain interface failures under the existing StatusState rules.
 
 An own declared category missing among that program's existing five cases yields its inherited case-obligation failure, even if its resolved NOT_COVERED V3.5 row is interface-valid. Existing scientific gate aggregation must retain that failure. Another training slot's V3.4 witness cannot repair it. SATISFIED is consistency with actual evidence, not a new success certificate. A future producer uses the frozen V3.1 case-obligation scope and existing failure/status/reason fields; no new reason-code meaning or gate is invented here.
 
@@ -903,17 +919,17 @@ Already-frozen construction/class/typed trial/runtime-parent/output/normal-event
 | C06 | RequirementBinding copies IDs/kind/multiplicity/class/scope and references selector/attachments | REPRESENTATION_ONLY | G identities remain subordinate to D row IDs. |
 | C07 | KeyBinding grouping with complete occurrence list | REPRESENTATION_ONLY | Same key-level evidence rule; no occurrence deletion. |
 | C08 | ParentBinding and source-backed fixed-parent links | REPRESENTATION_ONLY | A/G parent identity unchanged. |
-| C09 | Closed complete-domain certificate container and derivation_text serialization | INTERFACE_METHODOLOGY_REFINEMENT | Accepted mathematical producer still establishes both inclusion/exclusion; text presence alone proves nothing. |
-| C10 | DeclarationBinding and own-output downstream consistency checks | INTERFACE_METHODOLOGY_REFINEMENT | A's already-frozen own five-case obligation, distinct from V3.4. |
+| C09 | Closed complete-domain certificate container; derivation_text is descriptive/non-authoritative, deterministic independent scientific replay is authoritative | INTERFACE_METHODOLOGY_REFINEMENT | Exact accepted algorithm/contract/domain/function reconstruction establishes inclusion/exclusion; text cannot determine categories or scientific status. |
+| C10 | DeclarationBinding and own-output downstream consistency checks with mutually exclusive FAILED -> UNRESOLVED -> SATISFIED aggregation precedence | INTERFACE_METHODOLOGY_REFINEMENT | A's already-frozen own five-case conjunction, distinct from V3.4; all individual findings/reasons retained, including unresolved evidence under FAILED. |
 | C11 | ContextBinding/ContextCorrespondence owner/component/source-fact references | REPRESENTATION_ONLY | No SUPPORT accounting policy or DIRECT-v2 artifact. |
 | C12 | ObligationBinding and unchanged-row canonical reference field | REPRESENTATION_ONLY | Existing row formulas/indexes/populations. |
-| C13 | Subordinate BIND record-ID namespaces and strict type/container/stage registry | REPRESENTATION_ONLY | Zero new scientific identifiers/rows. |
+| C13 | Subordinate BIND record-ID namespaces and strict type/container/stage registry; event/path execution_id is exactly the owning BINDEXEC CaseExecution record_id, never producer execution provenance | REPRESENTATION_ONLY | Deterministic per-CaseExecution ordinals and ownership joins; zero new scientific identifiers/rows. |
 | C14 | Exact integer/structured TypedValue encoding and deterministic B1 JSON | REPRESENTATION_ONLY | Lossless accepted types; no arithmetic/domain change. |
 | C15 | BehavioralDescriptor/site/text-role/event-code and ordered TrialSpecification tables | REPRESENTATION_ONLY | Exact frozen class matrix/trials; no UNIT intervention. |
 | C16 | MappingView plus complete SourceMappingInstance list and SourceSite | INTERFACE_METHODOLOGY_REFINEMENT | Every existing authorized source correspondence retained; no new equivalence. |
 | C17 | MultiViewLink and separate downstream ViewEvidenceLink | REPRESENTATION_ONLY | One raw source occurrence, independent requirement/evidence obligations. |
 | C18 | BINDALL complete union/destination groups with exact-site identity proof | INTERFACE_METHODOLOGY_REFINEMENT | Existing ALL joint rule, no doubled application or convenient subset. |
-| C19 | Closed behavioral body and actual execution/event/count/path/trial provenance | INTERFACE_METHODOLOGY_REFINEMENT | Exact connected normal-event and counterfactual science; no extra executions/criteria. |
+| C19 | Closed behavioral body and actual execution/event/count/path/trial provenance; event/path execution_id is exactly the owning BINDEXEC CaseExecution record_id, never producer execution provenance | INTERFACE_METHODOLOGY_REFINEMENT | Every path/event belongs to that same execution; exact connected normal-event and counterfactual science, no extra executions/criteria. |
 | C20 | Attribute wrapper retaining unchanged fixed D object/null matrices | REPRESENTATION_ONLY | Fixed/literal semantics unchanged. |
 | C21 | Closed RUNTIME_VALUE_ROLE body and parent/type/role/path witnesses | INTERFACE_METHODOLOGY_REFINEMENT | A/G's accepted subtype; no sampled constants or independent mutation. |
 | C22 | Output wrapper retaining unchanged actual-case D object | REPRESENTATION_ONLY | Declaration and evidence cannot substitute for each other. |
@@ -941,8 +957,8 @@ This is an internal document/authority review, not independent acceptance, a fre
 | 8. Structured types lossless | Six types, exact integers and four-element arrays; §8. |
 | 9. Generic eligibility | Accepted actual decision/value/contribution/display/read sites; §14. |
 | 10. Runtime subtype | Closed type/role/carrier/fixed parent/source/path fields; §12. |
-| 11. Output declaration vs evidence | Own pre-case certificate and actual-case object separate; §§6/13. |
-| 12. Own vs whole-condition scopes | Own V3.1 case check vs independent V3.4 witnesses; §13. |
+| 11. Output declaration vs evidence | Descriptive/non-authoritative derivation_text, authoritative deterministic scientific reconstruction and actual-case evidence remain separate; §§6/13. |
+| 12. Own vs whole-condition scopes | Own V3.1 conjunction has mutually exclusive FAILED -> UNRESOLVED -> SATISFIED summary retaining all findings; independent V3.4 witnesses remain separate; §13. |
 | 13. All mapped instances | Complete source correspondence union and dynamic destinations/counts; §§9–11/17. |
 | 14. Multi-view independent obligations | One raw source entry, separate requirement mappings and key outcomes; §§9/16. |
 | 15. UNIT never an intervention payload | Excluded from all six-type payload fields; §§8/14. |
@@ -955,7 +971,17 @@ This is an internal document/authority review, not independent acceptance, a fre
 | 22. No treatment/population/evidence-rule change | Consumed A/G science, choice catalog 0/0 prohibited classifications; §§1/26. |
 | 23. No candidate/scientific execution | Document/byte/Git integrity work only; §28 boundary. |
 
-Internal outcome: DELEGATED_EVIDENCE_INTERFACE_BINDING_AMENDMENT_COMPLETE_WITHOUT_SCIENTIFIC_CHANGE.
+Narrow revision starting repository: 87f4aac1986bbc8662447191496fc1a0fb5325ae, main, clean tracked/index/untracked state; exact old proposal SHA/blob/size independently verified before editing. The original creation provenance elsewhere in this document is retained. Only the three independently identified interface defects and mechanically affected catalog/self-review wording are revised in this existing proposal.
+
+| Prior interface defect | Narrow revision closure |
+|---|---|
+| derivation_text authority ambiguous | CLOSED, §6.3: DESCRIPTIVE REPRESENTATION ONLY, non-authoritative and not a proof language; exact deterministic independent scientific reconstruction alone determines categories and COMPLETE/UNRESOLVED. Equivalent descriptive text may vary under exact artifact binding. Internal representation verdict: DECLARATION_CERTIFICATE_REPRESENTATION_COMPATIBLE. |
+| execution_id undefined in event/path RID formulas | CLOSED, §5: exactly the owning BINDEXEC CaseExecution record_id, never producer execution provenance; event/path ownership and same-execution references are mandatory, with local 1-based ordinals. Shared producer invocation IDs cannot cause these records to collide. |
+| own_category_case_finding FAILED/UNRESOLVED overlap | CLOSED, §13: exact mutually exclusive FAILED -> UNRESOLVED -> SATISFIED precedence; all individual category findings/reasons retained, unresolved evidence remains blocking. No new gate, row or scientific rule. |
+
+The three corrections preserve B1 and all schema versions, scientific row formulas/populations, evidence kinds/dispositions, frozen scientific authorities and all other upheld interfaces/boundaries. C09/C10/C13/C19 descriptions alone are mechanically updated; classifications remain 16 REPRESENTATION_ONLY, 9 INTERFACE_METHODOLOGY_REFINEMENT, 0 SCIENTIFIC_CHANGE, 0 UNRESOLVED_SCIENTIFIC_CHOICE and 0 CONFLICT_WITH_FROZEN_AUTHORITY. No further scientific/interface gap was identified in this narrow internal review. Independent review of the revised exact bytes remains required before any later freeze.
+
+Internal outcome: DELEGATED_EVIDENCE_INTERFACE_BINDING_AMENDMENT_REVISED_WITHOUT_SCIENTIFIC_CHANGE.
 
 This outcome concerns faithful prospective representation only. It does not assert independent approval, implementation completeness, a valid candidate or positive scientific gate findings. No genuine row-ID scientific gap was found.
 
