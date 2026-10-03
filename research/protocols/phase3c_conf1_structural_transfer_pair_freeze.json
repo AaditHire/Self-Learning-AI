@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "phase": "PHASE_3C_CONF1",
+  "subphase": "CONF1",
+  "status": "FROZEN_PROSPECTIVE_PRE_ATTEMPT_004_METHODOLOGY",
+  "normative_status": "ACCEPTED_JOINT_STRUCTURAL_TRANSFER_MATHEMATICS_AND_SCIENTIFIC_TOPOLOGY",
+  "freeze_outcome": "STRUCTURAL_TRANSFER_PAIR_PROSPECTIVELY_FROZEN",
+  "freeze_date": "2026-10-03",
+  "freeze_date_timezone": "Asia/Calcutta",
+  "freeze_parent_commit": "b6f3056197b26878804c3b4733a030757270b05f",
+  "freeze_branch": "main",
+  "starting_tracked_index_and_untracked_status": "CLEAN",
+  "scope": "Prospective acceptance of the reviewed structural-transfer mathematics and scientific topology ONLY AS ONE JOINTLY FROZEN SCIENTIFIC UNIT; close only the two identified structural authority gaps.",
+  "acceptance_basis": {
+    "independent_pair_review_outcome": "STRUCTURAL_TRANSFER_PAIR_FREEZE_READY",
+    "authorization": "Explicit user authorization to create and commit exactly this joint prospective freeze manifest after integrity verification",
+    "scientific_character": "PROSPECTIVE_SCIENTIFIC_SPECIFICATION_REPAIR",
+    "recovered_predecessor_authority_claim": false,
+    "historical_implementation_agreement_is_acceptance_basis": false,
+    "current_conf1_model_result_or_attempt_004_is_acceptance_basis": false,
+    "private_inspection_chronology_certified_by_this_manifest": false
+  },
+  "hash_policy": "SHA-256 over exact file bytes for this manifest, both whole proposal files, both accepted prospective prefixes, both descriptive appendices and recorded exact predecessor identities; Git blobs independently bind committed bytes. Only predecessor normative regions and explicitly declared predecessor LF-normalized hashes retain their controlling CRLF-to-LF policy.",
+  "scientific_freeze_unit": {
+    "members": [
+      "mathematics",
+      "topology"
+    ],
+    "operation_rule": "ONLY AS A PAIR",
+    "neither_proposal_independently_operative": true,
+    "fail_closed_rule": "If either document is absent, modified, identity-mismatched or not bound by this manifest, the structural-transfer amendment is NOT SCIENTIFICALLY FROZEN. Both whole-file and accepted-prefix identities must match; no independent, partial, historical-implementation or earlier-proposal fallback is allowed.",
+    "predecessor_mismatch_rule": "Missing, identity-mismatched or incompatible controlling predecessors block scientific use under existing FAIL/UNRESOLVED rules; no moving-path substitution or permissive reinterpretation.",
+    "interpretation": "Mathematics owns functions, bindings, initialization values, role scope and output meanings. Topology owns logical traversals, state/control/dataflow, temporal ordering and completed-state consumption. Interpret both together.",
+    "topology_precedence": "Topology section 9.2 controls scientific target qualification where mathematics sections 4, 5 and 10 leave topology/layout/order open, including scientific portions of C18/C20 deferrals. It does not rewrite the mathematical output law. Completed multiplication operand commutativity does not reverse P-first/Q-second phase order.",
+    "accepted_prefix_and_provenance_rule": "Sections 1-10 supply accepted prospective science. Retained title/status, prior-task boundaries and Section 11 observations record proposal provenance; this manifest supplies subsequent joint acceptance and closes only the paired authority prerequisite."
+  },
+  "frozen_amendments": {
+    "mathematics": {
+      "approved_proposal_commit": "09f9e30a332a119d1bbcd7f8c0484e14b5b9a2e4",
+      "path": "research/protocols/phase3c_conf1_structural_transfer_semantics_amendment_proposed.md",
+      "sha256_exact_bytes": "362c16faba42246344589fc7f46709b5b83e5bc829a13e1540b04392ddab2fba",
+      "git_blob": "eab80c50f3861438add2713689ee81fdbcdf38dd",
+      "size_bytes": 40956,
+      "normative_scientific_region": {
+        "status": "ACCEPTED_PROSPECTIVE_SCIENTIFIC_SECTIONS_1_THROUGH_10",
+        "extraction_policy": "Take the first byte_count exact file bytes from zero-based byte offset 0, without normalization. This prefix binds sections 1-10 and retained title/status provenance; proposal-time annotations do not negate subsequent joint acceptance.",
+        "byte_count": 36321,
+        "sha256_exact_bytes": "a0c99b79001c1a37163d1ff4b06d4518891dca8c12518dc4a3d276b3de5658ac",
+        "authority_scope": [
+          "Structural slot/function bindings; exact frozen P/Q argument use; R/S metadata-only scope",
+          "PREFIX strict-prior mathematical function, zero initialization and completed result output",
+          "TWO_PASS product of completed same-domain counts with zero initialization",
+          "Family correspondence, structural mathematical rationale and associated preservation/V3.5/E5 boundaries"
+        ]
+      },
+      "historical_implementation_comparison_appendix": {
+        "section": 11,
+        "start_heading": "## 11. Subsequent read-only historical implementation comparison",
+        "status": "DESCRIPTIVE_NON_NORMATIVE",
+        "scientific_authority": "NONE",
+        "start_byte_offset_zero_based": 36322,
+        "byte_count": 4634,
+        "sha256_exact_bytes": "f20458e84675f0bb7231a8b8d7f66b984a2ed05f4ce331da6f5426ae433bb3ec",
+        "extraction_policy": "Exact bytes from the first byte of the Section 11 heading through EOF, including the final newline. One separator LF follows the accepted prefix and precedes this heading; separator and appendix remain bound by the whole-file identity.",
+        "historical_implementation_agreement_is_acceptance_basis": false
+      }
+    },
+    "topology": {
+      "approved_proposal_commit": "b6f3056197b26878804c3b4733a030757270b05f",
+      "path": "research/protocols/phase3c_conf1_structural_transfer_topology_amendment_proposed.md",
+      "sha256_exact_bytes": "9a5e7e80502304e7281a924ef764f9a81b9edd0f9c65fc4a4e0007ad19a2aa2a",
+      "git_blob": "4f624b93d33decf3dd4643067693546fed32499d",
+      "size_bytes": 49306,
+      "normative_scientific_region": {
+        "status": "ACCEPTED_PROSPECTIVE_SCIENTIFIC_SECTIONS_1_THROUGH_10",
+        "extraction_policy": "Take the first byte_count exact file bytes from zero-based byte offset 0, without normalization. This prefix binds sections 1-10 and retained title/status provenance; proposal-time annotations do not negate subsequent joint acceptance.",
+        "byte_count": 44187,
+        "sha256_exact_bytes": "19d9dfc8863e4b2668a6525294fbdb71b479dbf1211d39a95f544b28d30a185d",
+        "authority_scope": [
+          "PREFIX exactly one ordered logical traversal, distinct carried prior-P/result states, pre-update prior-P read, result update before P update, both carries and completion",
+          "TWO_PASS exactly two complete logical phases, P-first/Q-second order, completed-P phase boundary/persistence, separate Q state and logical Phase-2 initialization",
+          "Completed-state multiplication after both phases and final output afterward",
+          "Scientific versus representational boundary; later atomic derivation, selectors, multiplicity and attachments; V3.4/V3.5/E5 preservation constraints"
+        ]
+      },
+      "historical_implementation_comparison_appendix": {
+        "section": 11,
+        "start_heading": "## 11. Subsequent read-only historical implementation comparison",
+        "status": "DESCRIPTIVE_NON_NORMATIVE",
+        "scientific_authority": "NONE",
+        "start_byte_offset_zero_based": 44188,
+        "byte_count": 5118,
+        "sha256_exact_bytes": "0c3f3f965bc6e59a686d09e4abaebc7c719deff627f0a2960f7f6155dc9e7617",
+        "extraction_policy": "Exact bytes from the first byte of the Section 11 heading through EOF, including the final newline. One separator LF follows the accepted prefix and precedes this heading; separator and appendix remain bound by the whole-file identity.",
+        "historical_implementation_agreement_is_acceptance_basis": false
+      }
+    }
+  },
+  "proposal_status_annotation_policy": "Preserve both proposal files byte-for-byte, including textual PROPOSED/NOT FROZEN headers and proposal-time boundaries. Consistent with existing RO freezes, this manifest establishes subsequent accepted/frozen authority ONLY AS A PAIR; no proposal annotation is edited.",
+  "bound_authorities": {
+    "coverage_v3": {
+      "path": "research/protocols/phase3c_conf1_coverage_v3_proposed.md",
+      "sha256_exact_bytes": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3",
+      "git_blob": "16210d9810d217461b77546c3568c3344c0c770b",
+      "size_bytes": 31128,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_coverage_v3_freeze.json",
+        "sha256_exact_bytes": "8d8f8a37c808d84c740867174e219803712213e672687c42164500f2bca12291",
+        "git_blob": "28c0fb52fba083e72f87ebfc530fd88ddded5f92",
+        "size_bytes": 3307,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## Design record: why v2 is superseded",
+        "extraction_policy": "Convert CRLF to LF as required by the controlling predecessor freeze; take bytes from the first byte of the identified heading immediately following LF through EOF, excluding the preceding LF.",
+        "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+        "sha256": "884a8ac3f859268e16dfa0d8f0d477211c7a273fca58666c7eba018265d8c15a",
+        "byte_count": 29178,
+        "approved_proposal_commit": "e641cce3a7fd127b87d0d0ccb22edfe74e411cf0",
+        "byte_equal_to_approved_normative_region": true
+      },
+      "sha256_lf_normalized": "a9fb8350c849ce62e2a673e3ca1f1d5a08f556b7f415687f1e2eabdf356030f3"
+    },
+    "paired_scaffold_normalization": {
+      "path": "research/protocols/phase3c_conf1_paired_scaffold_normalization_proposed.md",
+      "sha256_exact_bytes": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0",
+      "git_blob": "475e9de4a0ef3bef23edac1e3631011a20790f5a",
+      "size_bytes": 14114,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_paired_scaffold_normalization_freeze.json",
+        "sha256_exact_bytes": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2",
+        "git_blob": "9a54e9b525b1795b10f94bf0d0250ae831e6db74",
+        "size_bytes": 2093,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## Scope and source precedence",
+        "extraction_policy": "Convert CRLF to LF as required by the controlling predecessor freeze; take bytes from the first byte of the identified heading immediately following LF through EOF, excluding the preceding LF.",
+        "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+        "sha256": "5aa404949a8cc580b9ca3ff4aff7325195e172a7cfa82c69317280597c73b25c",
+        "byte_count": 12217,
+        "approved_proposal_commit": "4a5f947843d0fb49bb7a8ccf62c8411ce37b5b94",
+        "byte_equal_to_approved_normative_region": true
+      },
+      "sha256_lf_normalized": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0"
+    },
+    "input_domain_case_classes_and_training_amendment": {
+      "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md",
+      "sha256_exact_bytes": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e",
+      "git_blob": "66467ef968e4963dd7a22568100a940871ad304c",
+      "size_bytes": 16901,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json",
+        "sha256_exact_bytes": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a",
+        "git_blob": "774eb73150f66d2545ddf270cc2f051eddedc156",
+        "size_bytes": 4201,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## Authority and scope",
+        "extraction_policy": "Convert CRLF to LF as required by the controlling predecessor freeze; take bytes from the first byte of the identified heading immediately following LF through EOF, excluding the preceding LF.",
+        "hash_policy": "SHA256_UTF8_CRLF_TO_LF",
+        "sha256": "b9dc3d6ca22778ab0b3e734270fb20a00b4d88e0602f24fe77b2112335df8167",
+        "byte_count": 14669,
+        "approved_proposal_commit": "e662fae4596c4a5f25cd262e479933ba59ed38fc",
+        "byte_equal_to_approved_normative_region": true
+      },
+      "sha256_lf_normalized": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e"
+    },
+    "delegated_evidence_interfaces": {
+      "path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_proposed.md",
+      "sha256_exact_bytes": "9c684eaf6b0099080ddf907630b0a2f8e176e3a882b67875d82f07bd82d64dc5",
+      "git_blob": "1b6d4d1a825bf9e9d288ca9c3815d1a8e7c78d1a",
+      "size_bytes": 76081,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_delegated_evidence_interfaces_freeze.json",
+        "sha256_exact_bytes": "bd7a7fc6862ce049c1fdf363f763e1a3a17808132291b9064e3c6f26fb720948",
+        "git_blob": "32595c5c563fa262679f2bf93ae789f04cde7f72",
+        "size_bytes": 5892,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## 1. Authority, scope, and precedence",
+        "extraction_policy": "Take exact bytes from the first byte of the identified heading immediately following LF through EOF, including the final newline and excluding the preceding LF; no normalization.",
+        "hash_policy": "EXACT_BYTES_SHA256",
+        "sha256": "26c642e17bb5218727c0cd09f370eaf1ac6c4de35006fa9801d701ece81cf16d",
+        "byte_count": 74717,
+        "approved_proposal_commit": "027427ed5567aa75e10e35a0b3ed342516094ce9",
+        "byte_equal_to_approved_normative_region": true
+      }
+    },
+    "reference_only_interface_clarification_v2": {
+      "path": "research/protocols/phase3c_conf1_reference_only_interface_clarification_proposed_v2.md",
+      "sha256_exact_bytes": "7a8b69e208bb0a5406cbce0515c4ff95e37aa2d3d8d8e493cda6df5783a2cf25",
+      "git_blob": "e6e12aedf658698a5dd1975894b6e4e7299bd171",
+      "size_bytes": 68503,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_reference_only_interface_clarification_v2_freeze.json",
+        "sha256_exact_bytes": "aa8cc827a5c171b388220b0382713982d7a981b6e73b071a2dd12c2cf50ed5ab",
+        "git_blob": "7aa3ca18fe4df6823278e3dbd82eaa6bebfc8e6b",
+        "size_bytes": 9936,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## 1. Authority, scope, and prospective effect",
+        "extraction_policy": "Take exact bytes from the first byte of the identified heading immediately following LF through EOF, including the final newline and excluding the preceding LF; no normalization.",
+        "hash_policy": "EXACT_BYTES_SHA256",
+        "sha256": "a2bf9185686171e566d4a0e35a9780eaab45eb99e1ffdfbd4dfa49dcf22d9a00",
+        "byte_count": 68141,
+        "approved_proposal_commit": "9f23a3cfb0862cfdfaad0332f1260ab00dadae2f",
+        "byte_equal_to_approved_normative_region": true
+      }
+    },
+    "reference_only_catalog": {
+      "path": "research/protocols/phase3c_conf1_reference_only_catalog_proposed.md",
+      "sha256_exact_bytes": "7df2a31df6c995d0105e5547aa1d235c6046e9cf141f92321faf92cce3bac682",
+      "git_blob": "569ed951b121416b4c90240282d96231ce62c6e8",
+      "size_bytes": 52310,
+      "controlling_freeze_manifest": {
+        "path": "research/protocols/phase3c_conf1_reference_only_catalog_freeze.json",
+        "sha256_exact_bytes": "769eb09bf85440ac4baaaac90b074e282d87c9a9a5e2d0265aedc17f6c46f7ce",
+        "git_blob": "a5781769519f8432c795de0290aa3d15d3722c07",
+        "size_bytes": 14086,
+        "hash_policy": "EXACT_BYTES_SHA256"
+      },
+      "approved_normative_region": {
+        "start_heading": "## 1. Prospective status, authority, and scope",
+        "extraction_policy": "Take exact bytes from the first byte of the identified heading immediately following LF through EOF, including the final newline and excluding the preceding LF; no normalization.",
+        "hash_policy": "EXACT_BYTES_SHA256",
+        "sha256": "25c04bb3b319314cce744d5c83a491dae97c1596c4e38a19d639bab3ca9a58d5",
+        "byte_count": 51739,
+        "approved_proposal_commit": "e56533364c38bf5c96b5c521081b3c368449c952",
+        "byte_equal_to_approved_normative_region": true
+      }
+    }
+  },
+  "transitive_predecessor_bindings": {
+    "delegated_interface_freeze": "The exact controlling delegated_evidence_interfaces freeze manifest above transitively binds all ten upstream_authorities entries: protocol, semantic slot ledger/design, Coverage-v3/freeze, v2-to-v3 disposition, paired scaffold/freeze, INPUT_DOMAIN/freeze and AST-v2. Their current hashes, declared policies, sizes and committed blobs were recomputed and matched before this manifest was written.",
+    "required_upstream_records": {
+      "conf1_proposed_protocol": {
+        "path": "research/protocols/phase3c_conf1_proposed_protocol.md",
+        "binding": "bound_authorities.delegated_evidence_interfaces.controlling_freeze_manifest -> upstream_authorities.historical_conf1_protocol"
+      },
+      "frozen_slot_ledger_design_authority": {
+        "path": "research/protocols/phase3c_conf1_slots.json",
+        "binding": "bound_authorities.delegated_evidence_interfaces.controlling_freeze_manifest -> upstream_authorities.semantic_slot_ledger"
+      },
+      "coverage_v2_to_v3_disposition": {
+        "path": "research/protocols/phase3c_conf1_coverage_v3_v2_disposition.md",
+        "binding": "bound_authorities.delegated_evidence_interfaces.controlling_freeze_manifest -> upstream_authorities.coverage_v2_to_v3_disposition"
+      },
+      "ast_v2": {
+        "path": "research/protocols/phase3c_conf1_ast_adjudication_v2.md",
+        "binding": "bound_authorities.delegated_evidence_interfaces.controlling_freeze_manifest -> upstream_authorities.ast_v2"
+      }
+    },
+    "ro_source_accounting": "The exact reference_only_catalog freeze binds its six bound_authorities entries, including the completed RO-interface-v2 freeze. The exact RO-interface-v2 freeze retains its declared predecessor/interface and compatible catalog identities. Both approved normative regions above remain controlling within their existing scientific-source and representation/source-accounting scope.",
+    "verification_at_parent": {
+      "distinct_current_authority_files": 16,
+      "approved_normative_regions": 6,
+      "approved_normative_regions_match_declared_hashes_and_approved_committed_regions": true,
+      "delegated_upstream_identities_verified": 10,
+      "ro_catalog_predecessor_identities_verified": 6,
+      "ro_v2_current_predecessor_identities_verified": 3,
+      "verification_status": "MATCH",
+      "protected_holdout_or_expected_label_contents_read_or_hashed": false
+    },
+    "scope_rule": "These bindings identify existing authorities, not new scientific rules. Historical implementation, historical unfrozen RO-interface-v1 and unfrozen DIRECT-support proposals gain no scientific authority."
+  },
+  "normative_precedence_boundary": {
+    "narrow_joint_amendment": "The pair supplies only missing structural-transfer mathematical bindings/functions and scientific topology. Its prospective repairs are not recovered authority or representation-only.",
+    "unchanged_scientific_authorities": "Protocol, ledger/design, Coverage-v3, reviewed disposition, paired-scaffold and INPUT_DOMAIN authorities retain all unlisted scientific rules, populations, gates and preservation boundaries.",
+    "source_accounting": "Delegated and applicable RO freezes retain their established interface/catalog/source-accounting scope; no scientific dead-code waiver, selector substitute, new capability or implementation readiness follows.",
+    "preservation_of_coverage_rules": "Retain the seven-category ontology, ten-edge vocabulary, closed V3.3 equivalences, V3.4 active same-domain both-condition coverage, V3.5 activity/interventions, sole V3.6 treatment exception, V3.7/E5 criterion/population and V3.8 fail-closed boundary.",
+    "unresolved_mapping_or_broader_change": "Follow the accepted proposals' existing FAIL/UNRESOLVED and scientific-change STOP boundaries; no broader repair or implementation permission is granted."
+  },
+  "closed_authority_gaps": [
+    "STRUCTURAL_TRANSFER_SEMANTICS_PARTIALLY_RECOVERED_AUTHORITY_GAP",
+    "STRUCTURAL_TOPOLOGY_SPECIFICATION_GAP"
+  ],
+  "unchanged_scientific_design": [
+    "CONF1 research question",
+    "ISOLATED treatment",
+    "COMPOSITION treatment",
+    "Sole ADD-versus-MUL contrast",
+    "Paired training scaffold and training population",
+    "Frozen predicates and primary G1-G4 mathematics",
+    "32-task primary population and 16-task primitive-sanity population",
+    "All 16 structural-transfer task IDs and frozen P/Q/R/S role maps",
+    "Evaluation counts (64 tasks) and case count (five per task)",
+    "Seven-category ontology and ten-edge vocabulary",
+    "V3.3 equivalences",
+    "Input domains and existing INPUT_DOMAIN training-case override",
+    "Seeds, candidate pools and case-selection boundaries",
+    "Primary +20-percentage-point endpoint and interpretation rules",
+    "Exploratory Structural Transfer status, without primary rescue/veto",
+    "E5 scientific criterion: graph isomorphism OR completeness-certified semantic contribution/output equality",
+    "E5 primary population: 32 primary certificates, 120 training certificates, 3840 primary-versus-training comparisons"
+  ],
+  "readiness_or_pass_not_established": [
+    "Canonical graph readiness",
+    "Selector/multiplicity/attachment closure",
+    "DIRECT-support closure",
+    "REFERENCE_ONLY readiness",
+    "V3.4 coverage PASS",
+    "V3.5 activity PASS",
+    "E1-E6 PASS",
+    "Candidate authorization",
+    "Attempt 004",
+    "Model readiness",
+    "Model result"
+  ],
+  "scientific_claim_boundary": {
+    "current_strongest_demonstrated_empirical_claim": "Level B — parameterized behavioral acquisition",
+    "changed_by_this_freeze": false,
+    "unauthorized_claims": [
+      "Continual learning",
+      "Self-directed learning",
+      "Recursive self-improvement",
+      "Autonomous learning-process improvement"
+    ],
+    "interpretation": "Prospective methodology acceptance adds no empirical model evidence and does not expand the current claim."
+  },
+  "implementation_alignment": {
+    "status": "IMPLEMENTATION_ALIGNMENT_FOLLOW_ON",
+    "current_implementation_conformance_certified": false,
+    "known_follow_on_issues": [
+      "Current TWO_PASS source declares/zeros Q before the P loop; accepted topology specifies logical Q-state initialization at Phase-2 entry. Later source/state mapping must establish faithful entry/initialization/lifetime or fail closed.",
+      "The current structural prompt describes separate P/Q counts and their product without explicitly encoding the P-first/Q-second two-phase requirement; faithful future prompt/mapping alignment remains follow-on work."
+    ],
+    "authority_effect": "Future implementation/mapping alignment matters do not change the accepted prospective specification or make historical implementation scientific authority.",
+    "implementation_modified_by_this_task": false
+  },
+  "canonical_graph_recipe": {
+    "structural_semantics_topology_authority_blocker": "CLOSED",
+    "prospective_drafting_eligibility": "ELIGIBLE_ONLY_FOR_A_SEPARATELY_AUTHORIZED_PROSPECTIVE_DRAFTING_TASK",
+    "readiness": "NOT_ESTABLISHED",
+    "drafted_or_resumed_by_this_freeze_task": false,
+    "remaining_requirement": "Deterministically lower the jointly frozen science and unchanged predecessors; faithfully resolve graph construction, atomic derivation, selectors, source mappings, multiplicity, attachments, initialization/state/phase representation and intervention destinations. This freeze does not close those details.",
+    "direct_support_status": "WAITING_ON_CANONICAL_RECIPE",
+    "direct_support_v2_created": false,
+    "reference_only_implementation_status": "PAUSED",
+    "ro_development_file_count": 17,
+    "ro_development_status": "DEVELOPMENT_ONLY; STOPPED_COVERAGE_V3_REFERENCE_ONLY_IMPLEMENTATION_ISSUE; unchanged and not promoted",
+    "project_state_modified": false
+  },
+  "implementation_authorization_effect": "NONE",
+  "candidate_construction_authorization_effect": "NONE",
+  "model_execution_authorization_effect": "NONE",
+  "scientific_execution_authorization_effect": "NONE",
+  "authorization_and_execution_boundary": {
+    "authorized_output": "Exactly this one new prospective freeze manifest and its single-file commit",
+    "downstream_work_authorized": false,
+    "scientific_tests_or_e1_e6_executed_for_this_freeze": false,
+    "candidate_case_expected_output_graph_coverage_direct_or_ro_artifacts_constructed": false,
+    "model_training_inference_fixture_evaluation_or_compiler_validation_executed": false,
+    "sealed_holdout_or_expected_label_contents_read_or_hashed": false,
+    "attempt_004_exists_at_freeze": false,
+    "attempt_004_authorized": false,
+    "active_conf1_candidate_exists_at_freeze": false,
+    "repository_observation_scope": "Attempt/candidate absence is bounded to tracked CONF1 paths and active CONF1 data, benchmark, result, runtime and adapter directory metadata at the parent HEAD; no claim about activity outside the repository.",
+    "no_retrospective_candidate_or_result_reinterpretation": true
+  },
+  "freeze_commit_identity": "Git commit containing only this new joint freeze manifest; SHA reported after commit creation to avoid self-reference"
+}
