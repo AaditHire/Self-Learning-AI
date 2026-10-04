@@ -1,536 +1,229 @@
-# Project state
-
-Last updated: 2026-09-24
-
-Current phase: Phase 3C-DEV2 A-only execution stopped after an evaluator-code defect; STOP for independent review. Phase 3C confirmatory result remains `STOP_before_B_no_tuning`.
-
-## Phase 3C-DEV2 execution STOP
-
-Independent review authorized DEV2 execution. Preflight passed the frozen
-hashes, reference/case validation, 16-task composition-novelty assertion,
-primitive/API matching, paired schedules and token rule. All six A-only
-adapters completed 180 exposure slots and 24 optimizer steps with unchanged
-base weights. The first own-training evaluation scored 60/60 for seed
-20270925 ISOLATED. The first development evaluation generated one task and
-ran its five compiler cases, then stopped because the committed evaluator
-passed a DEV2 task without the `difficulty` field required by the scorer.
-No development outcome or generation was saved. The frozen one-pass/no-retry
-rule prevents a silent repair or repeat. DEV2 development is marked consumed
-from attempted use; its primary comparison and other development outcomes
-are unavailable. See `research/results/PHASE_3C_DEV2_EXECUTION_STOP/report.md`.
-All 70 available artifacts, including six adapters, were pushed through Git/
-Git LFS and restored from a fresh remote clone with matching size and SHA-256;
-see `research/manifests/phase3c_dev2_partial_remote_restore_verification.json`.
-No B, replay, retention test, or sealed final-paper holdout access occurred.
-
-## Phase 3C-DEV2 design boundary
-
-The proposed primitive-matched ISOLATED versus COMPOSITION development study
-is frozen in `research/protocols/phase3c_dev2_protocol.md` and its manifest.
-Each condition has 60 fresh training examples; a fresh 48-task development
-suite has Primitive Sanity, Novel Composition and Structural Transfer groups.
-The eight essential predicates and audited GOCO construct counts match across
-conditions. All 168 references passed 840 pinned-compiler semantic cases;
-the pre-gradient audit retains all 5,760 training/development structural
-pairs. The token audit passes the prospective 10% limit. These compiler
-checks validate reference programs, not model performance. No gradients or
-scientific model evaluation have run for DEV2. The consumed Phase 3C and DEV1
-suites remain consumed, and the sealed final-paper holdout remains untouched.
-Independent review is required before any DEV2 training or evaluation.
-
-## Phase 3C-DEV1-DIAG2 diagnostic boundary
-
-The post-hoc operation inventory, 36-task primitive-coverage matrix, and
-per-outcome audit of all 144 saved COMPOSITIONAL/FAR failures are in
-`research/results/PHASE_3C_DEV1_DIAG2/`. The diagnostic finds a mix of
-missing FAR primitives, unsolved composition of separately trained
-primitives, and GOCO syntax/compiler errors. This is descriptive evidence
-from the consumed DEV1 suite, not a new gate or an intervention result. No
-model generation, gradients, new data, B training, replay, or sealed holdout
-access occurred. Independent review is required before any new study design.
-
-## Phase 3C-DEV1 completed development boundary
-
-Frozen design commit: `359a5eaa70bc8fcb468740b58b2d41ccc0ab5fb2`.
-Independent review then authorized the 4-archetype Dense versus 12-archetype
-Diverse A-only study. Three paired seeds completed exactly 180 exposure slots
-and 24 QLoRA optimizer steps per condition, with unchanged base-weight hashes.
-All six adapters passed 60/60 own-training examples and exactly reproduced
-60/60 targets. On the fresh 36-task development suite, Dense scored 6/36 and
-Diverse 12/36 for every seed: +16.67 points mean, frozen task-cluster 95%
-descriptive interval 5.56–27.78 points. Every gain came from one NEAR numeric
-archetype (`fourth_square_step`) with 0.9725 nearest normalized-code similarity
-to Diverse training. Both conditions scored 0 on every COMPOSITIONAL and FAR
-task. This supports only a local development-suite NEAR gain, not broad
-structural generalization or continual learning. The complete report is
-`research/results/PHASE_3C_DEV1/report.md`; task-level analysis and raw
-records are under `research/artifacts/phase3c-dev1/raw/`.
-
-**The full Phase 3C-DEV1 evaluation suite is `DEVELOPMENT_CONSUMED`.** It and
-Phase 3C `EVAL_A` cannot be represented as untouched confirmatory evidence.
-No B, replay, retention, new confirmatory suite, or sealed final-paper holdout
-access occurred. Six final adapters and essential records were copied to the
-established Git/Git LFS preservation paths. All 81 artifacts, including the
-six adapters, were restored from a fresh remote clone and matched original
-size and SHA-256; see
-`research/manifests/phase3c_dev1_remote_restore_verification.json`.
-STOP for independent scientific review.
-
-## Phase 3C completed STOP and diagnostic boundary
-
-Final confirmatory Phase 3C commit: `12e2b2b80502ab962ca32c8c5c92cbdb9afc42ad`.
-The three frozen A seeds scored 0/32, 7/32, and 7/32 on EVAL_A, all below
-the preregistered 24/32 overall floor; array reduction was 0/16 in every
-seed. The runner stopped before naive or replay B training, with no rescue
-run. The report is `research/results/PHASE_3C/README.md`. Three final A
-adapters and 45 other produced files were copied to the existing Git/Git LFS
-remote; all 48 restored files passed SHA-256 and size verification from a
-fresh separate clone.
-
-**Phase 3C EVAL_A status: `CONSUMED_FOR_CONFIRMATORY_USE`.** It has been used
-for the completed confirmatory STOP decision and is now being inspected in
-Phase 3C-DIAG alongside post-hoc training-set inference. It may inform
-exploratory diagnosis but must never be reused as untouched confirmatory
-evidence for a recipe developed after this STOP. Any later confirmatory
-retention experiment needs fresh untouched evaluation material and separate
-independent review. The sealed final-paper holdout remains unopened. No new
-continual-learning intervention is authorized by this diagnostic work.
-
-The Phase 3C-DIAG code, deterministic audits, model-inference records, and
-interpretation are kept under `scripts/diagnose_phase3c_a_training.py`,
-`scripts/audit_phase3c_diag_pipeline.py`,
-`scripts/audit_phase3c_diag_structure.py`, and
-`research/results/PHASE_3C_DIAG/`. This exploratory work does not alter the
-frozen Phase 3C result.
-
-Phase decision: Phase 1T gate remains failed; Phase 2A remains exploratory;
-Phase 2B independently confirms multi-seed parameterized GOCO behavioral acquisition.
-Phase 3A measured A-to-B sequential acquisition and A forgetting. Phase 3B
-separately tested one fixed 20% A replay branch against a fresh matched 0%
-naive branch. Both are complete; no further method is authorized.
-
-## Phase 3B recovery pointer
-
-Starting from clean Phase 3A final commit `000311f724155d0a643d99bff22c6cac848a15be`.
-Preregistration Git commit: `002395e5dc7916e827eeed3e4806417d27bb5419`.
-Read `research/protocols/phase3b_protocol.md` and
-`research/protocols/phase3b_config.json` (SHA-256
-`52cc6c8400e5675389a9ca151137a179442af6e6021859aa8572a819855e907f`)
-before execution. Three seeds are 20260924, 20261012, 20261118. Fresh data
-and evaluation are in `data/phase3b/` and `benchmark/phase3b/`; the reference
-and overlap audit is `research/results/EXP-0036/`. The deterministic schedule
-is `research/protocols/phase3b_replay_schedule.json`. All inputs and method
-scripts were committed before gradients. All mutable adapters, checkpoints, generations, and
-partial results live only in gitignored `.runtime/phase3b/` (not LFS). Only
-final immutable compact results are published in `research/results/`. The
-sealed final-paper holdout is unopened. The GOCO product checkout is read-only.
-
-All three A adapters scored 8/32 on fresh EVAL_A, with B-before-B 0/32.
-Fresh matched naive B-only continuations scored post-B A 0/32 each and B
-8/32 each. Fixed-budget replay continuations scored post-B A 15/32, 16/32,
-16/32 and B 9/32, 8/32, 8/32. The mean post-B A advantage was 48.96 points;
-B was 104.17% of naive mean. Non-GOCO replay scores were 48/64, 47/64,
-49/64 versus base 47/64, so the preregistered three-part gate **PASSed**.
-However, paired transitions show **0/24** A seed-tasks passed before B remained
-passing under replay: all 47 replay post-B A successes were formerly failed
-tasks. This is improved net A score, **not demonstrated preservation of
-previously acquired A tasks**. Full report and compact evidence:
-`research/results/PHASE_3B/`. No additional replay ratio or continual-learning
-method is authorized or started. STOP for independent review.
-
-The nine final Phase 3B adapter weights and 39 raw runtime records were
-subsequently copied to the existing GitHub remote (Git LFS for adapters,
-ordinary Git for records) without changing the originals. All 48 were
-restored from a fresh remote clone and matched their recorded SHA-256 and
-size. Preservation evidence: `research/artifacts/PHASE3B_PRESERVATION.md`
-and `research/manifests/phase3b_remote_restore_verification.json`. This
-infrastructure action does not alter the Phase 3B scientific result or
-authorize Phase 3C.
-
-## Phase 3C design pointer
-
-Proposed frozen protocol: `research/protocols/phase3c_protocol.md` and
-`research/protocols/phase3c_config.json`. Fresh deterministic A/B construction
-is in `scripts/build_phase3c_data.py`, with 60 training examples and 32
-evaluation tasks per capability. Pinned-compiler pre-model audit:
-`research/results/EXP-0048/data_validation.json` and
-`structural_overlap_manual_review.md`; all 920 reference semantic cases pass.
-The three-seed 20% matched replay schedule is
-`research/protocols/phase3c_replay_schedule.json`. The pre-B A acquisition
-gate requires, in every seed, at least 24/32 overall, 10/16 in each A
-subskill, and 2/8 in each A evaluation archetype. Failure requires STOP before
-B training. Exact acquired-task retention and aggregate post-B A are
-co-primary. At design freeze, no Phase 3C gradients or confirmatory model
-evaluations had run; subsequent execution and STOP are recorded above. The
-final-paper holdout remains unopened. The design artifact alone did not
-authorize execution.
-
-The subsequent pre-execution verification is recorded in
-`research/results/PHASE_3C_PREEXECUTION/verification.md`. Future execution
-scripts and their support/tokenizer hashes are frozen by
-`research/protocols/phase3c_execution_manifest.json`; a machine-generated
-separation audit confirms all replay examples come from the frozen A training
-set. Synthetic tests passed without model inference or gradients. The host's
-hardware/package snapshot was captured again during the authorized run. The
-completed Phase 3C execution and verified off-machine restore are recorded
-above.
-
-## Phase 3A recovery pointer
-
-Starting commit: `1ded323e036cd93813ab165210e0c3dcf32616df`.
-Preregistration: `research/protocols/phase3a_protocol.md` and
-`research/protocols/phase3a_config.json` (SHA-256 `3fb940a6b9a65311904db13f2a834a2729f60826c12c250d966420aaa356a715`).
-Preregistration Git commit: `18c4c1065bf1e63bb0cdac91a33e01ec1c6a37e6`.
-Three frozen seeds: `20260923`, `20261011`, `20261117`. A is numeric
-iteration/array reduction; B is string transformation/field processing.
-Data: 60 training examples and 32 evaluation tasks per capability, five
-semantic cases each. All 184 references/targets pass; see
-`research/results/EXP-0027/data_validation.json` and manual review.
-The sealed final-paper holdout remains unopened. All six training runs and all
-required evaluations completed. EVAL_A: base 0/32, A 29/32, 31/32, 30/32,
-and A→B 0/32 in every seed. EVAL_B: A-only 0/32 in every seed, A→B 19/32,
-16/32, 8/32. Mean A forgetting 93.75 points (task-bootstrap 95% interval
-85.42–100), relative retention 0%. Frozen non-GOCO regression: base 47/64,
-all A checkpoints 48/64, all A→B checkpoints 49/64. Full report:
-`research/results/PHASE_3A/report.md`; analysis:
-`research/results/PHASE_3A/analysis.json`; independent verification:
-`research/results/PHASE_3A/completion_verification.json`. STOP for
-independent review.
-
-## Repository boundaries
-
-- Primary research repository (all new work goes here):
-  `C:\Users\Admin\OneDrive\Documents\GitHub\Self Learning AI`
-- Primary repository commit inspected at Phase 0 start:
-  `1edb0f5c017302da9054dbb06c82b695612400fd`
-- Main GOCO product repository (**STRICTLY READ ONLY**):
-  `C:\Users\Admin\OneDrive\Documents\GitHub\GOCO`
-- GOCO commit extracted and pinned for the research instrument:
-  `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`
-- GOCO remote: `https://github.com/Thryza-creators/GOCO.git`
-- The mutable GOCO checkout had advanced to `57acfa52b3ce983572683e612c4cd8e4ba9b47a4`
-  before Phase 1. Phase 1 did not use that working tree content: extraction came
-  from the recorded `6a029b8` Git object. GOCO remained clean and unmodified.
-
-Never write to the GOCO path for this research project. Future integration must
-copy an explicitly pinned source tree into this repository and record its
-provenance; it must not import from or execute against the mutable product
-checkout.
-
-## Research goal
-
-Test whether a small language model can acquire verified GOCO capabilities in
-sequence, retain them in adapter parameters without permanent documentation
-access, and reject candidate updates that cause pre-registered unacceptable
-forgetting. This project does not claim AGI, consciousness, self-awareness, or
-unrestricted recursive self-improvement.
-
-## Fixed constraints
-
-- Hardware: Windows 11, RTX 3060 Laptop GPU (6 GB VRAM), Ryzen 7 6800HS,
-  16 GB system RAM.
-- Phase 1 primary model was `Qwen/Qwen2.5-Coder-1.5B-Instruct`. Phase 2A uses
-  the exact frozen `Qwen/Qwen2.5-Coder-3B-Instruct` Phase 1S/1T revision under
-  a separate exploratory authorization.
-- Training path after baselines: 4-bit QLoRA, LoRA rank initially near 16,
-  batch size 1, gradient accumulation, gradient checkpointing, conservative
-  sequence lengths.
-- No model training occurs in Phase 0 or Phase 1.
-- Foundation-model weights remain immutable; adapters are versioned and never
-  repeatedly merged into the base.
-- Compiler plus hidden semantic tests, not the model, determine correctness.
-
-## Phase 0 findings
-
-GOCO's compiler is an interpreter implemented in Java around a JavaCC grammar.
-The entry point is `parser.MyLanguageParser`. It accepts exactly one `.goco`
-file, parses it to a `CoreNodes.ProgramNode`, validates it against a global
-scope, and executes the AST only if semantic validation succeeds. Syntax,
-lexical, semantic, and runtime failures terminate with exit code 1. Program
-output uses stdout; diagnostics use stderr. `INPUT` reads stdin and emits a
-prompt to stdout.
-
-The production test manifest contains 88 cases: 45 expected successes and 43
-expected failures. The current Python test harness regenerates test files and
-the batch runner recompiles into `goco-compiler/bin`, so it was deliberately not
-run inside the read-only repository.
-
-The production repository already contains a useful Python subprocess adapter
-in `goco-ai/src/goco_ai/compiler/goco.py`. It uses a temporary `.goco` file,
-captures stdout/stderr, supplies stdin, applies a timeout, sets a 256 MB JVM
-heap limit, and normalizes diagnostics. It is a design reference only; Phase 1
-will implement a research-owned version against a pinned compiler snapshot.
-
-## Compiler provenance selected for extraction
-
-- GOCO commit: `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`
-- `goco-compiler` Git tree: `f51973617cc3da8c78de88c668d8de6959575d6d`
-- Java source Git tree: `415215892c7127df899d59b3bceb99dc8357484b`
-- `tests/tests.json` Git blob: `7ad40be14848fa3d03ac02f36066e737000bc401`
-- Full machine-readable record:
-  `research/manifests/goco_compiler_source.json`
-
-## Phase 1 frozen inputs
-
-- Compiler runtime: Eclipse Temurin 25.0.1+8.
-- Parser generator: JavaCC 7.0.13.
-- Evaluated compiler JAR SHA-256: `c6f45759930438dd4ae7bfbff298e9c7242604582d29da04210f15377f2be879`.
-- Canonical class-tree SHA-256: `68b3ab9e694d3917957a62577a10e658cd60f5103368a17c5c3ae77374c4fb2a`.
-- Deterministically packaged reproduction JAR SHA-256:
-  `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb`.
-- Model: `Qwen/Qwen2.5-Coder-1.5B-Instruct` revision
-  `2e1fd397ee46e1388853d2af2c993145b0f1098a`.
-- Model weights SHA-256: `c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8`.
-- Inference config SHA-256: `7a6ab3e3fcd335be8674a22dde74d137b7c04b5632eabea3229b7f9319fc7584`.
-- Python 3.13.0, PyTorch 2.9.0+cu130, Transformers 4.57.1.
-
-Java 21 and the pinned Java 25 runtime produced identical behavior across all 88
-upstream conformance cases, but official results use Java 25.0.1 only.
-
-## Phase 1 results
-
-- Compiler conformance: 87/88 exact; one explained stale upstream expectation
-  for the automatic `INPUT` prompt; no timeout, crash, or output-limit failure.
-- Wrapper tests: 10/10 passed.
-- Benchmark: 40 tasks, 8 semantic families, 40 unique template IDs; 8
-  development, 24 frozen evaluation, and 8 sealed final-paper tasks.
-- Condition A, frozen base/no docs: 0/24 parse and 0/24 hidden pass. Every output
-  was a Go `package main` program.
-- Condition B, frozen base/full trusted docs: 0/24 parse and 0/24 hidden pass.
-  Every output invented an unsupported `PROGRAM` wrapper.
-- Paired pass-rate difference: 0.000; paired bootstrap 95% interval [0, 0];
-  exact McNemar p=1.0 with zero discordant pairs. This is a floor effect, not an
-  equivalence finding.
-
-The compiler exposes no GOCO filesystem, process, network, reflection, or Java
-interop capabilities. Execution nevertheless remains bounded in a no-shell
-subprocess with a temporary directory, controlled stdin, separate capped
-streams, heap/metaspace caps, timeout, and cleanup.
-
-## Phase 1R results
-
-Phase 1R is a frozen-model diagnostic recovery phase starting from commit
-`e88d49255abd7b9d1a4497d3d89dbdc4d3a8a5ae`. The consumed Phase 1 evaluation
-is excluded from protocol selection. The eight final-paper tasks remain sealed
-and are now classified as a legacy sealed holdout.
-
-A new development-only suite contains 24 tasks, three in each of the eight
-families, with 97 hidden cases. References passed all cases. No docs scored
-0/24; corrected reference A scored 2/24; reference plus concise contract B
-scored 2/24; contract, reference, and canonical examples C scored 3/24.
-
-C was selected by the frozen rule but failed the conjunctive progression gate:
-12.5% was below the required 25%, and its +12.5-point gain was below the
-required +15 points. Its three successes did span three families. Therefore no
-new confirmatory suite was created, no confirmatory A/B experiment ran, and
-Phase 2 remains prohibited.
-
-## Phase 1S preregistration
-
-Phase 1S starts from commit
-`2879bbea5a5199eba3df1ead4fe9138916c17937`. It introduces a new diagnostic-only
-suite with 96 items: eight families, four capability levels, and three items
-per family/level. The 72 executable items have 288 hidden cases; all references
-passed before freezing. Phase 1/1R tasks remain consumed, and the legacy final-
-paper holdout remains sealed.
-
-Candidate C is fixed with no prompt search. The primary 1.5B revision remains
-unchanged; a frozen 3B comparator is allowed only in 4-bit after a hardware
-smoke gate. The frozen config SHA-256 is
-`5e7da9fe450cef1561bdeaa9f0642ec88d4e96429eac9c4bf44944b36df20c2a`.
-No Phase 1S inference result existed when this protocol was frozen.
-
-## Phase 1S results
-
-The exact preregistration commit is
-`2e14057ddd9ee622ef123dbc30c1099bf7d31782`. The 1.5B model scored 13/24
-recognition, 0/24 local completion, 4/24 structured modification, and 0/24 full
-synthesis. Its executable funnel was 6/72 parse, 5/72 compile, 5/72 execute,
-and 4/72 hidden pass; 66/72 executable outputs failed lexing or parsing.
-
-The frozen 3B NF4 comparator passed its local smoke gate at 2.87 GB peak GPU
-allocation. It scored 17/24 recognition, 7/24 local completion, 14/24
-structured modification, and 7/24 full synthesis. Full-synthesis passes reached
-29.2% across five families, satisfying preregistered case C. Case B also fires
-for 1.5B. Therefore 1.5B is a NO-GO as the primary backbone, and the only
-recommended next step is a separately preregistered backbone-selection phase.
-No training or backbone change is authorized.
-
-## Phase 1T preregistration
-
-Phase 1T starts from commit
-`56940731b14053677123521093615c73c24604c6`. It uses 64 completely new
-full-synthesis tasks, eight in each semantic family, with 329 hidden cases and
-at least five per task. All reference programs passed. Phase 1/1R/1S tasks are
-consumed and the legacy final-paper holdout remains sealed.
-
-The exact 3B NF4 configuration runs paired no-docs and fixed Candidate C
-conditions. A secondary 1.5B NF4 Candidate C check is frozen but cannot alter
-the 3B gate. The config SHA-256 is
-`4cf19e35b4b937eeba6a89cbf2340e49c83f147b37dddffbb9ebde0946e020d5`.
-No Phase 1T model inference existed at freeze time.
-
-## Phase 1T results
-
-The exact preregistration commit is
-`dd3dd6f2ebcc303bc7ca6fcb1ca35bb2319fee26`. On the fresh 64-task suite, the
-3B NF4 no-doc condition scored 0/64 hidden pass and Candidate C scored 14/64
-(21.875%). The paired improvement was +21.875 points with a paired bootstrap
-95% interval of [12.5, 32.8125] points; there were 14 docs-only wins and no
-baseline-only wins. Candidate C passes spanned five families.
-
-The 25% absolute-pass criterion failed, while the +15-point and four-family
-criteria passed. No major benchmark-integrity issue was found. Because the gate
-is conjunctive, Phase 1T is a **FAIL** and the recommendation is **NO-GO for
-QLoRA or Phase 2 parameter adaptation**. The secondary matched-NF4 1.5B check
-scored 4/64 (6.25%) across three families; it is diagnostic only and does not
-alter the gate. No training or parameter update occurred.
-
-## Phase 2A preregistration
-
-Phase 2A starts from final Phase 1T commit
-`00d819c1f38260f6750db70306150bd085422312`. Phase 1T remains a failed gate;
-Phase 2A is a separately authorized developmental pilot and cannot change that
-history.
-
-The frozen pool has 200 verified training examples (25 per family; 600 hidden
-verification cases), 64 structurally held-out development tasks (eight per
-family; 320 hidden cases), and 24 non-GOCO regression tasks. All training
-targets and development references passed. Phase 1/1R/1S/1T tasks are excluded
-from training and the legacy final-paper holdout remains sealed.
-
-The exact 3B base remains immutable. Candidate `c0001-phase2a-qlora` is an
-unmerged rank-16 NF4 QLoRA adapter. A two-step smoke gate precedes the single
-three-epoch training configuration. The frozen config SHA-256 is
-`f8d4e94dddff4fbf6244c9d9d41585e69291325aefb386c26b2bcfa76b0075d2`.
-No Phase 2A gradient step or model evaluation existed at freeze time.
-
-## Phase 2A results
-
-The exact preregistration commit is
-`b5fe9b3b5e8d95d319ebc1e14bd14aa1df492f9b`. The local two-step smoke passed,
-and the single fixed three-epoch run completed 75 optimizer steps without OOM
-or non-finite values. Peak full-run GPU allocation was 3,673,793,536 bytes,
-reserved GPU memory 4,102,029,312 bytes, and process RSS 6,030,819,328 bytes.
-The immutable base shard hashes were unchanged; adapter weights remain
-separate with SHA-256 `d23e22646bcdbc11281e3ed597487740ce9c50734bfc8caac4b628b30fdd5d43`.
-
-On the frozen 64-task development suite, base/no-doc scored 0/64 and
-adapter/no-doc 18/64 (28.125%), a +28.125-point paired gain with bootstrap 95%
-interval [+17.1875, +39.0625]. Passes span five families. Training tasks scored
-198/200 (99.0%), leaving a 70.875-point train/held-out gap that must be treated
-as potential memorization and narrow transfer. Regression moved from 18/24 to
-16/24, inside the frozen severe-collapse rule.
-
-All five exploratory success criteria passed. This supports only development-
-set evidence consistent with parameterized GOCO behavioral acquisition in this
-setup. It does not establish continual learning, self-learning, general
-acquisition, or robust retention. Phase 1T remains failed. The Phase 2A suites
-are consumed, Phase 2B was not started, and independent review plus a new
-untouched preregistration are required before any confirmatory work.
-
-## Phase 2B preregistration
-
-Phase 2B starts from exact commit
-`06e5db763ad2af2adc51e9b4709916820b0883a6`. The exact preregistration commit is
-`4589be9473283d46cff7920fc1a46208dfa911e1`. No Phase 2B gradient step or model
-inference existed at freeze time.
-
-The fresh pool has 200 verified training examples (25 per family; 600 hidden
-cases), a new 128-task confirmatory suite (16 per family; 640 hidden cases), and
-a 64-task non-GOCO regression suite. All training targets and confirmatory
-references pass. Phase 2A training data and all prior consumed evaluation tasks
-are excluded; the legacy sealed holdout remains unopened.
-
-The final structural audit has zero exact train/evaluation prompt, algorithm,
-lineage, structural-signature, or semantic-operation overlap; zero normalized-
-code rejects at 0.98; zero prior-suite prompt flags at 0.70; and manual review
-of every lower-threshold prompt, code, and AST-proxy flag. Frozen distance
-buckets are 3 far, 44 medium, and 81 near.
-
-Three independent rank-16 NF4 QLoRA adapters use the unchanged Phase 2A recipe
-and seeds `20260921`, `20261007`, and `20261103`. Every seed is primary; best-
-seed selection is prohibited. The success gate requires mean adapted pass@1 at
-least 20%, mean gain at least 15 points, every seed gain at least 10 points,
-every seed successes in four families, a frozen structural non-domination rule,
-and no regression drop greater than 15 points. All three training runs must be
-feasible. Candidate C on the immutable base is descriptive only.
-
-At the Phase 2B stop boundary no sequential experiment was authorized; the
-later explicit Phase 3A request separately authorized this naive baseline only.
-
-## Phase 2B results
-
-All three frozen QLoRA runs completed 75/75 optimizer steps with finite losses
-and gradients, no OOM, separately saved adapters, and unchanged immutable base
-shard hashes. Seeds `20260921`, `20261007`, and `20261103` reached final losses
-0.000665, 0.002141, and 0.001394.
-
-On the untouched 128-task confirmatory suite, frozen base/no-doc scored 0/128.
-The three adapter/no-doc conditions scored 65/128 (50.78%), 70/128 (54.69%),
-and 70/128 (54.69%): mean 53.39%, range 50.78%–54.69%. Every seed succeeded
-in all eight families. The paired task-cluster bootstrap 95% interval for mean
-improvement is 45.57–61.20 points. Medium/far tasks improved by 48.94 points on
-average, so the preregistered structural non-domination rule passed. Frozen
-base plus Candidate C documentation scored 22/128 (17.19%) and is descriptive
-only.
-
-Training performance was 200/200, 196/200, and 195/200, leaving large
-train/held-out gaps of 49.22, 43.31, and 42.81 points. Regression was 47/64 for
-base and 40/64, 41/64, and 48/64 for adapters; no seed crossed the greater-than-
-15-point severe-collapse rule, though the first two had measurable drops.
-
-All seven conjunctive confirmatory criteria passed. There were no post-freeze
-protocol deviations and no failed training or evaluation runs. Phase 2B is a
-confirmatory PASS and a GO for independent review of the bounded acquisition
-claim. It does not authorize or establish continual learning, self-learning,
-autonomous learning, human-like understanding, or general lifelong learning.
-
-## Research records
-
-- Phase 3A final report: `research/results/PHASE_3A/report.md`
-- Phase 3A paired analysis: `research/results/PHASE_3A/analysis.json`
-- Phase 3A frozen protocol and config: `research/protocols/phase3a_protocol.md`,
-  `research/protocols/phase3a_config.json`
-
-- Research question: `docs/research/RESEARCH_QUESTION.md`
-- Hypotheses: `docs/research/HYPOTHESES.md`
-- Methodology and reproducibility: `docs/research/METHODOLOGY.md`
-- Claims ledger: `docs/research/CLAIMS_LEDGER.md`
-- References: `docs/research/REFERENCES.md`
-- Threats: `docs/research/THREATS_TO_VALIDITY.md`
-- Experiment registry: `docs/research/EXPERIMENT_REGISTRY.md`
-- Completed phase record: `docs/research/stages/PHASE_00.md`
-- Completed Phase 1 record: `docs/research/stages/PHASE_01.md`
-- Frozen Phase 1 protocol: `research/protocols/PHASE_01_FROZEN_BASELINE_RETRIEVAL_CEILING.md`
-- Frozen Phase 1S protocol: `research/protocols/PHASE_1S_FROZEN_DIAGNOSTIC.md`
-- Frozen Phase 1T protocol: `research/protocols/PHASE_1T_FROZEN_CONFIRMATION.md`
-- Completed Phase 1S record: `docs/research/stages/PHASE_1S.md`
-- Completed Phase 1T record: `docs/research/stages/PHASE_1T.md`
-- Phase 2A record: `docs/research/stages/PHASE_2A.md`
-- Frozen Phase 2B protocol: `research/protocols/PHASE_2B_FROZEN_CONFIRMATORY_EXPERIMENT.md`
-- Phase 2B record: `docs/research/stages/PHASE_2B.md`
-- Phase 3A stage pointer: `docs/research/stages/PHASE_3A.md`
-- Phase 3B stage pointer: `docs/research/stages/PHASE_3B.md`
-- Stage index: `docs/research/stages/README.md`
-- Infrastructure checkpoint: `docs/research/RESEARCH_INFRASTRUCTURE_CHECKPOINT.md`
-- Phase 1S compact summary: `research/results/PHASE_1S/summary.json`
-- Phase 1T compact summary: `research/results/PHASE_1T/summary.json`
-- Phase 2A compact summary: `research/results/PHASE_2A/summary.json`
-- Phase 2B compact summary: `research/results/PHASE_2B/summary.json`
-- Phase 2B final report: `research/results/PHASE_2B/report.md`
-- Phase 2A adapter lineage: `research/manifests/phase2a_adapter_c0001.json`
-- Raw evaluation: `research/results/EXP-0003-0004/phase1_evaluation.json`
-
-## Resume instructions
-
-Preserve Phase 1T as a failed gate, Phase 2A as an exploratory pilot, Phase 2B
-as bounded confirmatory acquisition evidence, Phase 3A as the naive forgetting
-baseline, Phase 3B as a numerical replay-gate pass with zero preservation of
-the 24 previously passed A seed-tasks, and Phase 3C as a confirmatory
-pre-B acquisition STOP. Phase 3C-DEV1 is exploratory development evidence
-limited to one NEAR archetype. Do not tune against consumed suites, select a
-best seed, merge an adapter, train on consumed tasks, or open the sealed
-holdout. Do not begin another replay ratio, EWC, adapter isolation, STABLE,
-NoRA, gating, or any other intervention. Any later experiment requires
-explicit new authorization and a new preregistration.
+# Project state — Self-Learning AI
+
+Last verified repository HEAD: `841f5ca4a7b829fb87b7667315de89f0af2cacc2` (the commit before this handoff; the handoff commit adds only this file, `CLAUDE.md`, `AGENTS.md` and a README status line)
+Last substantive state review: 2026-10-05 (Opus takeover review plus the specification-level coverage feasibility audit)
+Current project-head model: Claude Sonnet (Opus as escalation)
+Current execution agent: Codex
+Current phase: **Phase 3C-CONF1 — methodology reopened; coverage re-baseline required. No implementation, candidate construction or model execution is authorized.**
+
+This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
+
+---
+
+## A. Project objective
+
+**Overall goal.** Test whether a small language model can acquire objectively verified programming-language capabilities sequentially, retain them in adapter parameters without documentation in the prompt, and reject updates that cause preregistered unacceptable forgetting. The domain is GOCO, a small private language whose pinned compiler plus hidden test cases (not the model) decide correctness. Model: `Qwen/Qwen2.5-Coder-3B-Instruct` (pinned revision), 4-bit NF4 QLoRA rank-16 adapters, immutable base weights, one RTX 3060 6 GB laptop GPU. Research question: `docs/research/RESEARCH_QUESTION.md`; hypotheses: `docs/research/HYPOTHESES.md`; claims: `docs/research/CLAIMS_LEDGER.md`.
+
+**Strongest demonstrated claim: `Level B — parameterized behavioral acquisition`.** Phase 2B (confirmatory, three seeds) showed that QLoRA adapters, with no documentation at inference, raise hidden-test pass@1 on a fresh 128-task GOCO suite from 0% (base) to 50.8–54.7%, in all eight task families. Large train/held-out gaps (≈43–49 points) limit this to narrow behavioral acquisition.
+
+**Not demonstrated:** continual learning; retention of previously acquired tasks across sequential updates; effective forgetting mitigation at the task level; broad or compositional generalization; self-directed learning; autonomous or self-modifying improvement; persistent knowledge in any general sense. Do not describe the project's results with those terms.
+
+**Why CONF1 exists.** The continual-learning programme stalled at a prerequisite: in the original Phase 3C the adapters could not even acquire the compositional "A" capability (acquisition gate failed in every seed), so retention could not be tested. Development studies (DEV1/DEV2/DEV2R) then suggested that *how* training examples are presented matters: practising pairs of predicates jointly ("composition") produced much better performance on new multi-predicate tasks than practising them independently. CONF1 is the preregistered, fresh-data confirmation of that curriculum effect. It is an acquisition/curriculum question; it does **not** test retention and cannot by itself raise the claim level above B.
+
+## B. Key empirical history
+
+| Phase | What was tested | Key result | Consequence |
+|---|---|---|---|
+| 1 / 1R / 1S / 1T | Base model knowledge of GOCO, with/without documentation | Base no-docs ≈0%; 1.5B unusable; 3B with documentation 14/64 (21.9%) — conjunctive 25% gate **failed** | 3B chosen as backbone; documentation alone insufficient |
+| 2A | Exploratory QLoRA pilot | 0/64 → 18/64 dev; 99% train | Promising but possibly memorization |
+| **2B** | Confirmatory multi-seed acquisition | 0/128 → 65, 70, 70/128; all 8 families; all 7 criteria **PASS** | **Level B claim** |
+| 3A | Naive sequential A→B | A 29–31/32 then 0/32 after B; mean forgetting 93.75 pts | Catastrophic forgetting baseline |
+| 3B | Fixed 20% replay vs naive | Gate PASS numerically (post-B A 15–16/32 vs 0/32), but **0/24** previously passed A tasks stayed passed | Net score gain, **not** preservation |
+| 3C (confirmatory) | New A/B with acquisition gate | A scored 0, 7, 7/32 (gate needed 24/32) | `STOP_before_B_no_tuning`; EVAL_A consumed |
+| 3C-DEV1 | Dense vs diverse training | 6/36 vs 12/36, entirely one near archetype; 0 on compositional/far | No broad structural gain |
+| 3C-DEV2 | ISOLATED vs COMPOSITION (first try) | Execution stopped on an evaluator schema bug after one task | Suite consumed; plumbing risk demonstrated |
+| 3C-DEV2R v2 | ISOLATED vs COMPOSITION (development) | Novel Composition 10/48 vs 38/48 (+58.3 pp, all 3 seeds positive); Structural Transfer 0/16 everywhere; Primitive Sanity seed differences −37.5 to +62.5 pp | Motivates CONF1; development-consumed |
+| CONF1 Attempts 001–003 | Pre-freeze candidate construction (no model use) | 001: GOCO syntax error; 002: sanity references matched a consumed template; 003: 174 unadjudicated coarse-AST flags and incomplete task-essential coverage audit | All rejected, permanently non-confirmatory |
+| CONF1 methodology (since 003) | Coverage-v2 (abandoned) → Coverage-v3 and ~10 frozen amendments | See §E | Methodology became very large (§H) |
+| CONF1 feasibility audit (2026-10-05) | Can the frozen coverage rules pass on the frozen task population? | **No** — definite blockers in 56/64 evaluation specifications | **Current blocker (§D)** |
+
+Reports: `research/results/PHASE_2B/report.md`, `PHASE_3A/report.md`, `PHASE_3B/report.md`, `PHASE_3C/README.md`, `PHASE_3C_DEV1/report.md`, `PHASE_3C_DEV2_EXECUTION_STOP/report.md`, `PHASE_3C_DEV2R_V2/report.md`, `PHASE_3C_CONF1_PREFREEZE/STOP_report.md`. Full registry: `docs/research/EXPERIMENT_REGISTRY.md`.
+
+All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**: never reuse them for tuning, selection or confirmation.
+
+## C. Current CONF1 research question
+
+**Plain English.** Two fresh adapters are trained from the same base on the same eight predicates with the same budget. One practises counting two predicates *independently*; the other practises counting their *overlap*. Is the second better at writing new programs that combine three or four of those predicates?
+
+**Technical form** (`research/protocols/phase3c_conf1_proposed_protocol.md`; slot ledger `research/protocols/phase3c_conf1_slots.json`):
+
+- **Predicates (8).** Numeric iteration: odd index, index ≡ 2 mod 3, index divides n, first-half index. Array reduction (four `|`-separated signed integers): negative, even, value² > 4, value > index.
+- **Training population.** 60 paired slots × 2 conditions = 120 programs (30 per domain; all six predicate pairs × five offsets {0,2,4,6,8}; both loop directions). Paired programs are byte-identical except the marked treatment expression:
+  - `ISOLATED`: `total+=(hitP+hitQ).`
+  - `COMPOSITION`: `total+=(hitP*hitQ).`
+  - Prompts differ only in a marked treatment clause. Attempt 003 achieved 60/60 exact scaffold matches and a 0.78% full-token difference (supervised tokens equal).
+- **Evaluation population.** 64 specifications: 32 primary Novel Composition (graphs G1–G4 × 4 rotations × 2 domains; G1=(P∧Q)∨(P∧R), G2=(P∧Q)+(Q∧R)+(R∧S), G3=(P∧Q)+(P∧R)+(P∧S), G4=((P∨Q)∧R)+(Q∧S)); 16 Primitive Sanity (single predicate, offsets 0 or 3); 16 Structural Transfer (PREFIX ordered-pair count and TWO_PASS product of counts). Five hidden cases each. Universe = 120 + 64 = 184 specifications.
+- **Training recipe.** Fresh rank-16 NF4 QLoRA per cell, 180 exposures, 24 optimizer steps, max length 320, fixed final epoch.
+- **Seeds.** Five paired seeds: 20280117, 20280223, 20280329, 20280411, 20280507. All primary; no selection or substitution.
+- **Acquisition gate.** Every one of the 10 cells must score ≥ 54/60 semantic passes on its own training prompts, or the result is `INDETERMINATE_INSUFFICIENT_ACQUISITION`.
+- **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
+- **Claim limitation.** Even a positive result supports only: *pairwise conjunctive practice beats pairwise additive practice for generating multi-conjunction counting programs in GOCO under this budget*. The primary tasks reuse COMPOSITION's local `hitX*hitY` idiom, so this is bounded local-motif transfer, not general compositional reasoning. Four algebraic graphs, one DSL, one model.
+
+**Status of this design: REOPENED.** The protocol's estimand, thresholds and gate were reviewed and are hash-bound by later freezes, but no executable CONF1 config/manifest exists, and the coverage methodology that gates candidate acceptance is internally infeasible (§D).
+
+## D. Current scientific blocker
+
+**Finding** (VERIFIED_FROM_ARTIFACT: `research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md`, commit `841f5ca`; independently confirmed against the frozen text by the Opus review). Verdict: **`FROZEN_STACK_COVERAGE_INFEASIBLE_AT_SPECIFICATION_LEVEL`**.
+
+The frozen fairness rule (Coverage-v3 V3.4/V3.6) requires every evaluation-essential atomic capability to be present and active in **both** training conditions; the only exception is the COMPOSITION-only local pair-joint relation ("J"). Symmetric absence is explicitly FAIL. The frozen canonical graph recipe v2 (G) defines those capabilities at a fine typed granularity. Applying G to the frozen training and evaluation constructions gives:
+
+| Blocker | Affected specifications | Status |
+|---|---|---|
+| Independent AND operator required by every primary graph; no training program (either condition) or predicate emits AND; J explicitly cannot satisfy it (G §9, §20; atomic amendment §5) | 32/32 primary | **Proven** (NEITHER) |
+| OR required by G1/G4; absent from both conditions; the frozen OR≡`indicator(add>0)` equivalence is not realized in training | 16 primary | **Proven** |
+| Boolean operand edges into AND/OR | 32 primary | **Proven** |
+| PREFIX: prior-count state read into a MUL operand; MUL(indicator, int) | 8 structural | **Proven** |
+| TWO_PASS: completed-count reads into a MUL operand | 8 structural | **Proven** |
+| Sanity offset-3 accumulator initial value (training offsets are 0,2,4,6,8) | 8 sanity | **Proven** |
+| ADD of two indicators (G2/G3/G4) absent from COMPOSITION; ISOLATED equality underdetermined | 24 primary | COMPOSITION absence proven; full key underdetermined |
+| Mixed/accumulator ADD refinements, composite indicator roles, structural count roles | various | UNDERDETERMINED by frozen text |
+
+Definite-blocker union: **56/64** evaluation specifications (all 32 primary, all 16 structural, 8 sanity). The audit assessed only key-profile existence; activity, case witnesses and source mapping were not assessed, so the remaining 8 are not shown to pass.
+
+**Why this matters scientifically.** The conflict is not a serialization detail. The evaluation tasks need *both* treatment operators (multiplying indicators for conjunction, adding indicator terms) plus Boolean OR, which neither condition trains. Under the frozen rules, conjunction is simultaneously "the treatment" (J, COMPOSITION-only) and "an ordinary capability both conditions must have" (independent AND). Very fine typing (e.g., an exact offset value) also turns trivially novel details into coverage failures. Any implementation that "passes" this gate would have to reinterpret frozen rules, which would be an implementation-dependent scientific choice.
+
+**Consequences (accepted by the project head):**
+
+- Implementation of graph-v2/B1/D2/wire/RO/E5 machinery is **stopped**; building it would only produce a deterministic coverage FAIL.
+- The wire-format proposal is **not to be frozen** (its two narrow repairs were reviewed as correct, but they serialize a design that cannot pass).
+- **Attempt 004 remains nonexistent and unauthorized.** No candidate construction, model loading, training or evaluation.
+- A **consolidated CONF1 methodology re-baseline** is required before any further implementation. It must decide, prospectively and before any new candidate is generated: (1) the exact treatment construct (is conjunction the treatment?); (2) how OR in G1/G4 is handled; (3) the granularity of coverage keys (operator vs typed role vs exact values); (4) whether Structural Transfer and the sanity offset-3 variant block or are descriptive; (5) which of the existing coverage/accounting layers are retained, simplified or superseded. These are Opus-escalation decisions (§M) requiring user authorization.
+
+## E. What is frozen vs proposed vs historical
+
+All under `research/protocols/` unless noted. "Frozen" means a freeze manifest binds exact bytes; it does **not** mean implemented or feasible. Hashes live in the freeze manifests.
+
+| Item | File(s) | Role | Status |
+|---|---|---|---|
+| CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | Reviewed; hash-bound by later freezes; titled "design proposal"; no executable config/manifest. **Reopened** for coverage semantics |
+| Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | FROZEN |
+| AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | FROZEN |
+| Coverage-v3 | `phase3c_conf1_coverage_v3_proposed.md` + `_freeze.json` (+ `phase3c_conf1_coverage_v3_v2_disposition.md`) | Fairness gate V3.1–V3.8, E1–E6 | FROZEN, **shown infeasible with G** |
+| Atomic/activity/output amendment | `phase3c_conf1_coverage_v3_atomic_activity_output_amendment_proposed.md` + `_freeze.json` | Activity/output evidence classes | FROZEN |
+| Paired-scaffold normalization | `phase3c_conf1_paired_scaffold_normalization_proposed.md` + `_freeze.json` | Treatment-symmetry check (E3) | FROZEN; sound and simple |
+| INPUT_DOMAIN case classes | `phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md` + `_freeze.json` | Input-domain coverage | FROZEN |
+| Structural-transfer pair (PREFIX/TWO_PASS) | `phase3c_conf1_structural_transfer_{semantics,topology}_amendment_proposed.md`, `phase3c_conf1_structural_transfer_pair_freeze.json` | Exploratory endpoint definition | FROZEN |
+| REFERENCE_ONLY catalog + interface v2 | `phase3c_conf1_reference_only_catalog_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed_v2.md` + freezes | Proof that extra source constructs are inert | FROZEN; RO implementation paused |
+| Canonical graph recipe v2 ("G") | `phase3c_conf1_canonical_contract_graph_recipe_proposed_v2.md` + `_v2_freeze.json` | Typed canonical graph defining coverage keys | FROZEN, **source of the infeasibility** |
+| Delegated evidence interfaces + B1 binding | `phase3c_conf1_delegated_evidence_interfaces_proposed.md`, `phase3c_conf1_delegated_evidence_interfaces_binding_amendment_proposed.md` + freezes | Report schemas, row formulas | FROZEN |
+| D2 direct-support accounting | `phase3c_conf1_direct_support_accounting_amendment_proposed_v2.md` + `_v2_freeze.json` | Four-bucket source accounting | FROZEN |
+| Graph-v2 wire-format binding | `phase3c_conf1_canonical_graph_v2_wire_format_binding_amendment_proposed.md` | Serialization of G | **PROPOSED / UNFROZEN**, revised at `9887c38`; do not freeze pending re-baseline |
+| Specification coverage feasibility audit | `research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md` | Evidence for §D | NON-NORMATIVE ANALYSIS (accepted as correct) |
+| Development readiness evidence | `research/implementation_notes/` (~325 MB) | Development-only tranches (Boolean mapping, state, essentiality, value/output, RO) | DEVELOPMENT_ONLY; predates G/B1/D2; never scientific evidence |
+| Coverage-v2 (`phase3c_conf1_coverage_v2*`), AST v1 (`phase3c_conf1_ast_adjudication.md`), and superseded v1 proposals (`phase3c_conf1_canonical_contract_graph_recipe_proposed.md`, `phase3c_conf1_direct_support_accounting_amendment_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed.md`) | `research/protocols/` | Earlier methodology | HISTORICAL / SUPERSEDED |
+| Attempts 001–003 | `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_00{1,2,3}/` | Rejected candidates | HISTORICAL; never confirmatory; never select Attempt 004 content from their outcomes |
+| CONF1 config, schedule, manifest, authorization field | — | Required before execution | MISSING |
+
+## F. Current implementation state
+
+VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
+
+**`src/self_learning_ai/conf1_v3/` (~7,200 lines, last changed 2026-10-02, before G/B1/D2 were frozen):**
+
+| Component (modules) | What it does | Classification |
+|---|---|---|
+| `goco.py`, `core_ir.py` | Parser and typed IR/bounded executor for the builder-generated GOCO subset | Partially reusable (useful for any simpler auditor) |
+| `contracts.py`, `contract_ir.py`, `requirements.py`, `requirement_mapping.py`, `requirement_verifier.py` | Pre-G Coverage-v3 contracts and requirement namespaces | STALE (pre-G key ontology) |
+| `boolean_mapping.py`, `boolean_regions.py`, `boolean_region_checker.py`, `canonical_transport.py`, `transport_verifier.py`, `typed_alignment.py`, `canonical_activity.py`, `semantic_ir.py` | Boolean-region equivalence proofs and transport to semantic keys | STALE; maps `&&` to the J relation, which G-v2 contradicts |
+| `state_*`, `essentiality_*`, `attribute_*`, `projection_*` | Development-only readiness kernels and verifiers | DEVELOPMENT_ONLY; stale |
+| `reference_only_*` | RO inventory/kernel/context/resolution | DEVELOPMENT_ONLY; paused |
+| `coverage.py`, `delegated.py`, `interfaces.py`, `provenance.py`, `binder.py` | Coverage findings, E1–E6 helpers, schema-v1 interfaces, 17-gate binder | STALE relative to B1/D2; binder concept reusable |
+
+**Missing entirely:** graph-v2 builder, B1 producers, D2 accounting, wire serializer, E5 producer, CONF1 orchestration, and all CONF1 execution code (training runner, evaluator, scorer, acquisition gate, task-local RNG, atomic persistence/no-retry guard, analyzer with the frozen bootstrap). **No graph-v2/B1/D2 identifiers appear anywhere in `src/`, `scripts/` or `tests/`.**
+
+**Reusable from earlier phases:** `scripts/build_phase3c_conf1_data.py` (produced Attempts 001–003; will need changes after re-baseline), `scripts/phase3c_conf1_structural_overlap_v2.py`, `scripts/audit_phase3c_conf1_references.py` and `scripts/audit_phase3c_conf1_tokens.py` (E1/E2/E4/E3-token style audits), and the DEV2/DEV2R runners (`scripts/train_phase3c_dev2.py`, `scripts/evaluate_phase3c_dev2r.py`, `scripts/analyze_phase3c_dev2r_v2.py`), which executed 588 generations cleanly and are the natural template for CONF1 execution code.
+
+## G. Scientific principles (non-negotiable)
+
+1. **Prospective decisions.** Every rule, threshold, population and analysis is frozen before the candidate or model results it governs. Non-model construction diagnostics may motivate a prospective change; model outcomes may never.
+2. **No sealed or prohibited data.** Never open the legacy final-paper holdout (the 8 `final_paper` tasks inside `benchmark/tasks.json`, `benchmark/hidden_tests.json`, `benchmark/reference_solutions.json`). Do not read `research/protocols/phase3c_conf1_v3_synthetic_expected_labels.json` or attempt `hidden_cases.json` files unless a task explicitly authorizes it. Never tune on consumed suites.
+3. **Treatment symmetry.** The only intended difference between conditions is the marked treatment expression and prompt clause; everything else is matched and audited.
+4. **Preserve negative results.** STOPs, failures and rejections are recorded, never rerun or overwritten to get a better answer. One pass, no retries, all seeds primary.
+5. **Claim conservatism.** Level B until preregistered evidence supports more. State limitations with every result.
+6. **Fail closed on consequential ambiguity.** If authority does not uniquely determine a scientific behavior, STOP and surface it; never resolve it inside implementation.
+7. **Separate the stages:** methodology/authority → implementation → candidate construction → candidate audit/freeze → execution authorization → execution → analysis. Passing one stage never authorizes the next.
+8. **Model execution requires an explicit, separate user authorization** recorded as a JSON boolean in a frozen manifest.
+
+## H. Simplification policy
+
+The takeover review concluded that the coverage machinery became disproportionate: about 1.9 MB of CONF1 protocol text, a 17-gate binder and ~325 MB of development evidence for 184 ten-line programs generated from about six templates, and it did not surface the first-order infeasibility in §D. Complexity is now the main threat to internal validity and to explaining the paper.
+
+**Essential for validity (keep):**
+
+- Fresh, newly generated data; hidden cases; pinned compiler reference validation (E1).
+- Exact paired-scaffold equality, token budget and schedule parity (E3).
+- A coverage check that both conditions have the non-treatment ingredients evaluation needs, with **one explicit, prospectively declared treatment exception**.
+- Full-graph novelty (E5): the complete primary function must not appear in training. For this design it reduces to a role-count argument plus exact truth tables.
+- Hidden-case discrimination (E6); consumed-suite overlap reporting (E2/E4).
+- Acquisition gate, five seeds, frozen estimand/threshold/bootstrap, one-pass execution, atomic persistence, boolean authorization.
+
+**Historical complexity that may be replaced (recommended by the Opus review; NOT yet decided):** the occurrence-level typed canonical graph (G-v2), the wire format, B1 binding, D2 four-bucket source accounting, the REFERENCE_ONLY catalog/interface, and the counterfactual intervention engine (V3.5). A plausible replacement is a template-level coverage argument plus mechanical per-instance conformance to template and simple statement-level mutation liveness. Consumed-suite similarity gates could become descriptive (CONF1 adapters never train on consumed suites, so these protect only against designer bias), and Structural Transfer could become non-blocking and descriptive.
+
+Until the re-baseline is frozen, the frozen documents in §E remain the operative authorities. Do not declare them obsolete, and do not implement either the old stack or a replacement.
+
+## I. Dependency roadmap to Attempt 004
+
+| # | Step | Completion condition | Unlocks |
+|---|---|---|---|
+| 1 | **Re-baseline decision brief** (options plus recommendation for the five decisions in §D) | User decides each point | Step 2 |
+| 2 | **Consolidated re-baseline amendment** drafted (one document), independently reviewed and frozen prospectively; must include an on-paper feasibility check that the frozen populations can pass it | Freeze manifest committed | Implementation |
+| 3 | **Implementation**: builder update, compact coverage/E-gate auditors, CONF1 runner/evaluator/analyzer adapted from DEV2R | Code matches frozen spec; reviewed diffs | Validation |
+| 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
+| 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
+| 6 | **Attempt 004 construction** (fresh construction seed) and all audits | All gates PASS, or STOP and record | Freeze |
+| 7 | **Candidate freeze**: hashed manifest, `model_execution_authorized: false` | Committed | Authorization review |
+| 8 | **Pre-execution authorization**: independent review; a single-diff commit flips the boolean | User authorizes | Execution |
+| 9 | **Execution**: 10 cells, acquisition gate, primary/secondary evaluation, one pass | Raw outputs persisted | Analysis |
+| 10 | **Analysis and reporting**: frozen analyzer, report, claims ledger and this file updated | Committed | Next research decision |
+
+## J. Current next action
+
+**Exactly one:** prepare the **CONF1 re-baseline decision brief**: for each of the five decisions in §D, state the options, the scientific trade-offs (construct validity, symmetry, feasibility, explainability) and a recommendation, and confirm feasibility on paper against the frozen 184-specification population.
+
+- **Agent:** project head escalated to **Opus** (it changes treatment and coverage semantics, §M). Delivered to the user in conversation; it is written into the repository only after the user decides, via a later single Codex document task.
+- **Type:** READ-ONLY analysis / DOCUMENT.
+- **Still forbidden:** freezing the wire proposal; implementing graph-v2/B1/D2/RO/E5 or any replacement; modifying frozen authorities; constructing Attempt 004 or any candidate; model loading, training, inference or evaluation; reading prohibited data.
+
+Update this section after every major milestone.
+
+## K. Agent workflow
+
+- **Claude Sonnet**: project brain and reviewer. Reads this file and relevant authorities, reviews results, decides the next action and writes Codex prompts.
+- **Codex**: execution agent. Edits files, implements, tests and reports exactly what it did. Not a scientific decision-maker.
+- **User**: authorization boundary for methodology changes, freezes and any model execution.
+- **Opus**: escalation for consequential methodology and statistics decisions (§M).
+
+Loop:
+1. Sonnet reads `docs/PROJECT_STATE.md` and the authorities relevant to the current step.
+2. Sonnet reviews the previous result.
+3. Sonnet decides exactly one next action (or escalates).
+4. Sonnet gives one complete Codex prompt: expected repository state, scope, allowed files, allowed execution, STOP conditions, validation, then stop.
+5. Codex executes and reports.
+6. The user returns the result.
+7. Sonnet inspects the actual diff or artifact, not just Codex's summary.
+8. This file is updated only when the state materially changes (see below).
+
+## L. Verification language
+
+Use these labels when provenance matters:
+
+- `VERIFIED_FROM_REPOSITORY`: checked directly in code, Git history or tracked files at a stated commit.
+- `VERIFIED_FROM_ARTIFACT`: checked by reading a specific committed artifact (report, manifest, audit).
+- `REPORTED_BY_CODEX`: stated in a Codex report and not yet independently checked.
+- `INFERENCE`: reasoning from verified facts; not itself verified.
+
+## M. Escalate to Opus when
+
+Escalate when a decision could change any of: the research question; the treatment or its definition; the training or evaluation populations; the primary endpoint; preregistered statistics, thresholds or gates; coverage semantics or key granularity; leakage or holdout policy; the claim level; or the interpretation of a consequential positive or negative result. Routine implementation review, test review and documentation stay with Sonnet.
+
+## State update protocol
+
+Update this file when: methodology authority changes; an audit changes the blocker; an implementation tranche is accepted; a candidate is frozen or rejected; model execution occurs; or scientific interpretation changes. Do not update it for trivial refactors. The updating reviewer must inspect the actual committed artifact or diff first, update the HEAD, date and next action at the top, remove statements that are no longer true rather than appending, and keep this file short: point to authorities rather than copying them.
+
+## Repository boundaries and fixed facts
+
+- Research repository: this repository, `https://github.com/AaditHire/Self-Learning-AI`. All research work happens here.
+- GOCO product repository (`C:\Users\Admin\OneDrive\Documents\GitHub\GOCO`) is **strictly read-only**. The research instrument is a pinned compiler snapshot (GOCO commit `6a029b8030f0701fd6d5f7f84c68d4e0c5cb790e`, JAR SHA-256 `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb`). Provenance: `research/manifests/goco_compiler_source.json`.
+- Base model weights are immutable; adapters are versioned and never merged. Mutable runtime state lives in gitignored `.runtime/`.
+- Hardware: Windows 11, RTX 3060 Laptop 6 GB, 16 GB RAM.
+- Methodology and reproducibility background: `docs/research/METHODOLOGY.md`, `docs/research/THREATS_TO_VALIDITY.md`, stage records in `docs/research/stages/`.
