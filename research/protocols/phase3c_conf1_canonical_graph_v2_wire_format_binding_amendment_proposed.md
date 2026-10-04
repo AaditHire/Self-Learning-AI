@@ -96,7 +96,7 @@ Every field is covered by the schemas below: an object's exact field sequence is
 | W21 | PortReference | W | G §4 formal/result/definition ports; §7 |
 | W22 | NODE | W | G §3 exact outer sequence and profiles; §8 |
 | W23 | InputPort | W | G §3 port/datatype/producer_ref; §8 |
-| W24 | ProducerReference / EDGE source_ref | W | Same complete schema, G §§3/4; §9 |
+| W24 | ProducerReference / EDGE source_ref | W | G §§3/4; §9 closes one particular INITIAL/POST committed producer, separately from read reaching metadata |
 | W25 | ActivitySite | W | G §§3/20/27, B1 §8; §8 |
 | W26 | PredicateBinding | W | G §3 tuple wording; §8 |
 | W27 | PredicateDefinitionReference | W | G §8 eight exact definitions; §8 |
@@ -112,7 +112,7 @@ Every field is covered by the schemas below: an object's exact field sequence is
 | W37 | DecodedPackagePayload | W | G §§3/7/19/21/24; §11 |
 | W38 | ExpressionResultPayload | W | G §§3/15/19/21/24; §11 |
 | W39 | InitialPostPayload | W | G §§3/10/19/21; §11 |
-| W40 | CompletionPersistencePayload | W | G §§10/15/19/21; §11 |
+| W40 | CompletionPersistencePayload | W | G §§10/15/19/21; §11 closes all three completion cases and their derived Boolean/reference consistency |
 | W41 | ProvenancePayload | W | G §§2/19/21/25; §11 |
 | W42 | ConsumerReference | W | Actual consuming node/port/type, G §4; §11 |
 | W43 | ATTACHMENT | W | G §24 outer fields retained; §12 |
@@ -130,7 +130,7 @@ Every field is covered by the schemas below: an object's exact field sequence is
 | W55 | ValueAssociationFact | W | G §§7/16/24; §12 |
 | W56 | DefinitionAssociationFact | W | G §§3/10/24; §12 |
 | W57 | OrderRelationFact | W | G §§10/14/15/24; §12 |
-| W58 | CompletionFact | W | G §§10/15/24; §12 |
+| W58 | CompletionFact | W | G §§10/15/24; §12 fixes the same derived persistence Boolean and cross-record agreement |
 | W59 | REQUIREMENT | W | G §20 exact outer sequence; §13 |
 | W60 | Selector | W | G §20 fourteen fields; §13 |
 | W61 | LocalRoles | W | Local semantic roles only, G §20; §13 |
@@ -161,7 +161,7 @@ Every field is covered by the schemas below: an object's exact field sequence is
 | W86 | Scalar/reference atom aliases and list constructors | W | Exact §4 domains, namespace unions, null and list distinctions; no arbitrary JSON leaf |
 | W87 | Role/port/clause/profile enum aliases | W | Complete catalogs in §§5/7–15, including PrimitiveName, SlotRole, StageRole, Direction and SourceCorrespondenceRole |
 
-Audit totals: **109 entries = 22 A + 87 W + 0 SCIENTIFIC_MEANING_UNDERDETERMINED**. All 87 W entries are closed below. Registry counts are schema/policy audit units, not emitted scientific records, capability counts or population enumeration. Union cases, field null matrices and fixed enum members are included explicitly in their registry entries.
+Audit totals: **109 entries = 22 A + 87 W + 0 SCIENTIFIC_MEANING_UNDERDETERMINED**. **WIRE_REPRESENTATION_UNDERDETERMINED repaired = 87** under the revised bindings below. W24/W40/W58 close the two narrowly identified defects; their containing Graph/NODE/InputPort/EDGE/STATE/StateView/ContextualRecord/ATTACHMENT/AttachmentValue types inherit those corrected constraints without new fields or registry entries. Registry counts are schema/policy audit units, not emitted scientific records, capability counts or population enumeration. Union cases, field null matrices and fixed enum members are included explicitly in their registry entries.
 
 ## 4. Type notation and universal rejection rules
 
@@ -317,10 +317,12 @@ ProducerReference is exactly `Object(kind:Name,owner_id:Name,port:PortReference,
 | kind | owner_id / port resolution | component_refs |
 |---|---|---|
 | NODE_OUTPUT_PORT | Exact NodeID; its result or genuine decision/committed-value output port. Attribute references preserve their supplied semantic value without inventing execution. | Explicit null |
-| STATE_DEFINITION_PORT | Exact StateID; port identifies the appropriate state view by its canonical view ordinal. Resolve its WriterIdentity and exact initializer/writer committed port, retaining INITIAL/POST/reaching-definition facts. A state identifier alone supplies no definition. | Explicit null |
+| STATE_DEFINITION_PORT | Exact StateID; port.role is committed_value and port.ordinal is the canonical ordinal of that state's exact G-authorized INITIAL or POST definition view. That view has WriterIdentity SINGLE and identifies exactly one particular initializer/writer committed output. PRE/current/COMPLETED views and REACHING_SET resolution reject. A state identifier alone supplies no definition. | Explicit null |
 | ORDERED_PACKAGE | Exact ContextID of ORDERED_DECODED_PACKAGE; package port, datatype INT4. | Exactly four scalar INT producer references in original field order, equal to that context's component_refs |
 
-STATE_DEFINITION_PORT is an indirection encoding to the already-required state-definition fact, not a new read/producer operation. Where one definition applies it resolves that particular writer; where frozen control requires a reaching-definition set it retains all those writers and their existing control facts without choosing one from an execution. Resolving definition metadata follows WriterIdentity, not the read's own value_ref, so it does not recursively invent a producer. Every constituent writer is an actual selected G writer. The same indirection works for input and edge references, and therefore creates no inconsistency between their payload schemas.
+STATE_DEFINITION_PORT preserves G §4's PARTICULAR producer. Resolve owner_id to the exact STATE, port.ordinal to its INITIAL/POST view, and that view's SINGLE.writer_ids[0] to the exact existing initializer/writer NODE for the same state and placement. The selected view's value_ref must be NODE_OUTPUT_PORT for that writer's committed_value port with ordinal null and component_refs null; datatype equals the committed scalar type and the state's value_type, not the writer statement's UNIT output_type. This direct committed-port reference terminates resolution without a self-reference or indirection cycle. Its definition/port/state/phase/stage correspondence must be the one positively authorized by G. No caller may choose another view/writer, a runtime predecessor, several committed outputs, a summary or a union producer. The five-field outer schema and three reference kinds are unchanged.
+
+Read definition metadata is separate. A PRE/current/consumed-COMPLETED StateView retains its exact SINGLE or REACHING_SET defining_writer_id and its value_ref identifies the actual STATE_VIEW read NODE's result port. The read's state/view/definition correspondence preserves all G-required initializer/reset/set/update writers and their control facts, including empty-body completion. Consumers reference the actual read result using NODE_OUTPUT_PORT; they do not reference its reaching set as a STATE_DEFINITION_PORT. The read's existing stored_value association remains subject to G §3's exact state/view/definition correspondence; this encoding neither chooses a member of its may-reaching set to fill a producer slot nor adds a definition-use edge. An actual STATE_DEFINITION_PORT in any input, edge or context is admitted only for G's independently supplied particular committed definition with mandatory INITIAL/POST metadata. Missing particular-definition correspondence rejects rather than inventing a producer. Legitimate read reaching metadata remains accessible through the existing STATE/view/context facts and B1 STATE/WHOLE, with no new namespace or set-valued value edge.
 
 EDGE retains exactly `Object(edge_id:EdgeID,construction_clause:ClauseReference,occurrence_path:TaggedPath,edge_type:EdgeType,source_ref:ProducerReference,target_node_id:NodeID,target_port:PortReference,value_type:Datatype,source_role:SemanticRole,target_role:SemanticRole,state_id:StateID?,phase_id:PhaseID?,attachment_ids:SetList(AttachmentID),ordering_key:EdgeOrderingKey,task_essential:true,selector_class:"ATOMIC_SELECTOR_REQUIRED")`. Source payload, edge value_type and destination input datatype agree; UNIT rejects. Target is an actual consuming node/port, never a state/context wrapper. Nullable state/phase facts follow the owning clause, not source reachability.
 
@@ -353,13 +355,23 @@ Every payload field has a frozen clause provenance in this exhaustive table. All
 | STATIC_BINDING / StaticBindingPayload | `state_id:StateID?` (same storage identity when this is a storage binding, otherwise null for a pure non-storage name-to-role/definition association, G §§3/9/10/21); `binding_role:SemanticRole` (same bound local role, §§3/10/19); `phase_ids:SetList(PhaseID)` (existing lifetime/membership, §§9/10/21); `definition_refs:List(ProducerReference)` (exact definition associations, §§3/9/10/21). |
 | ORDERED_DECODED_PACKAGE / DecodedPackagePayload | `datatype:"INT4"` (G §§3/7); `component_refs:List(ProducerReference)[4]` (four FIELD_VALUE producer refs in original positions, §§3/4/7); `conversion_refs:List(ProducerReference)[4]` (their exact TO_NUMBER parents, §§7/16/24). |
 | EXPRESSION_RESULT_REFERENCE / ExpressionResultPayload | `producer_ref:ProducerReference` (one actual defining result port, G §§3/15/24); `consumer_refs:List(ConsumerReference)` (actual uses/final display association, §§3/15/21/24). |
-| INITIAL_POST_DEFINITION / InitialPostPayload | `state_id:StateID` (G §§10/21); `view_role:INITIAL/POST` (committed definition, §§3/10); `writer_identity:WriterIdentity` (same actual defining writer(s), §§9/10); `phase_id:PhaseID?` (exact placement or outside-traversal null, §10); `stage_role:StageRole` (same temporal fact, §§10/21); `value_ref:ProducerReference` (committed definition port, §§3/10/24). |
-| COMPLETION_PERSISTENCE / CompletionPersistencePayload | `state_id:StateID` (G §§10/15/21); `completed_phase_id:PhaseID` (same completion, §§10/15); `persisted_phase_ids:SetList(PhaseID)` (existing immutable interval, §§10/15/24); `completed_value_ref:ProducerReference?` (consumed completed read or unused-completion null, §§3/10/15); `consumer_refs:List(ConsumerReference)` (exact later consumption, §§10/15/21); `immutable:Bool` (true for specified persistence, §§10/15/24). |
+| INITIAL_POST_DEFINITION / InitialPostPayload | `state_id:StateID` (G §§10/21); `view_role:INITIAL/POST` (committed definition, §§3/10); `writer_identity:WriterIdentity` (SINGLE, same particular actual defining writer, §§9/10); `phase_id:PhaseID?` (exact placement or outside-traversal null, §10); `stage_role:StageRole` (same temporal fact, §§10/21); `value_ref:ProducerReference` (that one committed definition port, §§3/10/24, resolving under §9). |
+| COMPLETION_PERSISTENCE / CompletionPersistencePayload | `state_id:StateID` (G §§10/15/21); `completed_phase_id:PhaseID` (same completion, §§10/15); `persisted_phase_ids:SetList(PhaseID)` (exact G immutable interval or empty when absent, §§10/15/24); `completed_value_ref:ProducerReference?` (actual consumed completed-read result or unused-completion null, §§3/10/15); `consumer_refs:List(ConsumerReference)` (exact G consumption associations, §§10/15/21); `immutable:Bool` (true iff this exact record represents G's explicit immutable-persistence relation; otherwise false, §§10/15/24). |
 | PROVENANCE / ProvenancePayload | `specification_binding:SpecificationBinding` (same frozen provenance, G §§2/5); `identified_record_ids:SetList(RecordID)` (exact non-requirement records identified, §§19/21); `identified_requirement_ids:SetList(RequirementID)` (exact owner/requirement identity, §21). RequirementID values occur only in the latter list; wrapper addresses do not become support premises. |
 
 STATIC_BINDING adds no execution; definition_refs can be empty only for a genuinely uninitialized static declaration, not for an executed initializer relabeled as context. A non-storage definition association has nonempty exact producer references and state_id null; a storage binding identifies its existing state and its matching local index/indicator/count/result role. The phase list can be empty only when that association has no traversal lifetime. No source variable spelling is serialized. Package components are exactly four distinct original field positions and their corresponding conversions; no sorting/deduplication/assembly/read operation occurs. Expression-result contexts contain references, never executable expression trees or a new carrier. Their consumer list contains precisely the supplied G associations; it is nonempty for the required final-display association.
 
-INITIAL_POST definitions retain their own schema only when the owning G clause actually supplies that association; the schema does not generate a duplicate wrapper for every state/view. Completion-only metadata has no persistence phases/consumers and completed_value_ref null; specified persistence has the exact later phases/consumers, immutable true, and required consumed reference. No Boolean flag permits choosing persistence or its interval. PROVENANCE's copied specification equals the root binding; its two identified lists jointly identify at least one exact record/requirement and create no owner by themselves.
+INITIAL_POST definitions retain their own schema only when the owning G clause actually supplies that association; the schema does not generate a duplicate wrapper for every state/view. The corresponding definition view and payload require the same SINGLE writer and particular committed port; read reaching sets cannot populate this definition-only payload.
+
+Completion encoding first reconstructs the exact clause-authorized completion/consumption/persistence fact from G, then checks these exhaustive wire cases. immutable is a redundant presence/absence encoding of G's explicit immutable-persistence relation, never an input deciding that relation. False is not an independent scientific claim that the state is mutable. There is no third/unknown value, omitted flag or caller-selected Boolean.
+
+| Existing G completion case | immutable | persisted_phase_ids | completed_value_ref | consumer_refs |
+|---|---|---|---|---|
+| Unused completion metadata, no value consumer and no immutable-persistence relation | false | Empty | Explicit null | Empty |
+| Consumed completion without G's immutable-persistence relation, including completed TOTAL display consumption and non-persisted final operands under their owning clauses | false | Empty | Exact NODE_OUTPUT_PORT result of the corresponding actual completed STATE_VIEW read | Nonempty, exactly the G-required consuming ports/associations |
+| TWO_PASS completed-P immutable persistence across the second traversal, G §§10/15 | true | Nonempty, exactly the second traversal's already-frozen persistence interval | Exact NODE_OUTPUT_PORT result of the same completed-P read, retaining its full reaching-definition metadata | Nonempty, exactly G's later completed-P consumption, including its final product operand |
+
+Every case requires the exact existing state_id/completed_phase_id, the matching COMPLETED StateView and its reaching writers, and agreement with STATE.completed_consumer_ids and the corresponding PHASE/TraversalRecord persistence facts. A consumed reference equals that view's actual read-result value_ref and has the state's scalar datatype; consumer ports/types match the same G association. For unused completion the matching view has value_ref null, with its mandatory definition metadata retained. A consumed completion outside a later traversal does not acquire a persisted phase merely because it is consumed. The current frozen immutable relation is TWO_PASS completed P across phase 2; completion of another state, empty-body metadata or ordinary final consumption cannot borrow it. Missing/extra phases, references or consumers and mismatched state/phase/view/Boolean facts reject. These cases constrain only already-authorized records and do not manufacture a wrapper or attachment. PROVENANCE's copied specification equals the root binding; its two identified lists jointly identify at least one exact record/requirement and create no owner by themselves.
 
 Canonical graph construction precedes actual source. These payloads bind the exact canonical association that later B1 ContextCorrespondence must pair with original source facts. They contain no fabricated source ID, source text, empty proof, raw-inventory outcome or placeholder mapping. Actual source identity remains in B1/R's exact independently parsed inventory and typed references; D2 must still establish the complete same-program source/context/owner join. Thus preserving canonical identity does not invent prior source evidence.
 
@@ -387,9 +399,11 @@ The following is the complete AttachmentValue discriminated by the outer kind. O
 | VALUE_ASSOCIATION | ValueAssociationFact = `Object(value:TypedValue?,local_role:SemanticRole,reference_roles:ReferenceLayout)`; scalar value null for a runtime carrier/package association, never a sampled value; exact fixed value when present, G §§7/16/24. |
 | DEFINITION_ASSOCIATION | DefinitionAssociationFact = `Object(local_role:SemanticRole,reference_roles:ReferenceLayout)`; exact one defining expression/write relationship, G §§3/10/24. |
 | ORDER_RELATION | OrderRelationFact = `Object(ordering:StageOrdering,stage_roles:List(StageRole),reference_roles:ReferenceLayout)`; sequence and qualified unordered group retain their scientific meaning, G §§10/14/15/24. |
-| COMPLETION_PERSISTENCE | CompletionFact = `Object(view_role:"COMPLETED",immutable:Bool,reference_roles:ReferenceLayout)`; exact completed source, persistent interval and later consumer, G §§10/15/24. |
+| COMPLETION_PERSISTENCE | CompletionFact = `Object(view_role:"COMPLETED",immutable:Bool,reference_roles:ReferenceLayout)`; exact G-authorized completion/persistence association, G §§10/15/24. immutable is true iff that same canonical fact contains G's explicit immutable-persistence relation, otherwise false, under the exhaustive §11 rule. ReferenceLayout retains only that fact's existing references. |
 
 INITIALIZATION_VALUE's typed constant can be INT or INDICATOR_INT only, with its exact writer/state/placement; an input-dependent value is bound by references and null scalar value, never supplied by an evaluated case. STATE_VIEW includes only the already-required view address, not a new read. ReferenceLayout labels and kind-specific role/type checks disambiguate all associations without promoting any to an atomic relation. An association object is a lossless packaging of mandatory facts, not a new fact supplied merely to avoid null. Known scalar/role facts cannot be dropped, and a value shape belonging to another attachment kind rejects. An independently found frozen profile expressly requiring outer null would need review against this table rather than silently selecting another representation.
+
+CompletionFact uses §11's same derived Boolean in every admitted completion case: absence of G's explicit immutable-persistence relation requires false; TWO_PASS completed-P persistence requires true. False supplies no mutability proof. The attachment's existing owner/references/layout must resolve the precise clause-authorized completed state/view, phase and any interval/consumer; they cannot create or remove persistence. Wherever an attachment and context represent the same canonical completion fact, their Boolean, state/view/phase identity, interval and consumption references must agree with each other and the corresponding STATE/PHASE records. Equality is checked through those existing typed references, not inferred merely from a shared state name or raw reachability. Absence of a duplicate context does not leave the attachment flag free: it is still checked against G and the same state/phase/view facts. This synchronization adds no field/reference family and authorizes no new attachment case.
 
 ## 13. Requirements, selector subobjects and reusable keys
 
@@ -555,7 +569,7 @@ For every row, encoding and decoding preserve the same abstract facts. The commo
 | C07 | Cross-array addressing and non-field collection projections | REPRESENTATION_ONLY | Total representation ordinals below existing within-family orders; no execution/timing rewrite. |
 | C08 | Role/port/clause/reference catalogs | REPRESENTATION_ONLY | Exact addresses/spellings of already-fixed local facts; wrong clause/profile rejects. |
 | C09 | NODE nested types and null matrix | REPRESENTATION_ONLY | Same actual profiles, ports, attribute/site distinction and source semantic associations. |
-| C10 | Shared producer/source reference tagged union | REPRESENTATION_ONLY | Same producer/definition/package and directed consuming use; no package operation or edge. |
+| C10 | Shared producer/source reference tagged union | REPRESENTATION_ONLY | STATE_DEFINITION_PORT selects one INITIAL/POST SINGLE writer's particular committed port; read REACHING_SET metadata remains separate. Same three kinds/five fields, no union producer, runtime choice, package operation or edge. |
 | C11 | Predicate tuple→Object and exact definition reference | REPRESENTATION_ONLY | Same role/name/eight-definition identity; no new predicate or equivalence. |
 | C12 | Embedded ViewAddress and WriterIdentity | REPRESENTATION_ONLY | Addresses existing view facts and retains every already-required reaching writer, no new namespace/read/runtime selection. |
 | C13 | State/phase/stage membership/reference/list encodings | REPRESENTATION_ONLY | Same storage, carries, lifetime, temporal groups and qualified pure-order facts. |
@@ -563,9 +577,9 @@ For every row, encoding and decoding preserve the same abstract facts. The commo
 | C15 | ORDERED_DECODED_PACKAGE payload | REPRESENTATION_ONLY | Same four original fields/conversions and package use, no assembly or reordered domain. |
 | C16 | EXPRESSION_RESULT_REFERENCE payload | REPRESENTATION_ONLY | Same defining result and actual consumers, no extra expression/result carrier. |
 | C17 | INITIAL_POST_DEFINITION payload | REPRESENTATION_ONLY | Same committed definition and state/phase/place, no atomic INITIAL/POST read. |
-| C18 | COMPLETION_PERSISTENCE payload | REPRESENTATION_ONLY | Same completed source/immutable interval/later consumers, no boundary operation. |
+| C18 | COMPLETION_PERSISTENCE payload | REPRESENTATION_ONLY | Exhaustive unused/consumed-without-persistence/TWO_PASS-persistence cases derive one Boolean from G's explicit relation; false records its absence, not mutability. Same completion/interval/consumers, no boundary operation. |
 | C19 | PROVENANCE payload | REPRESENTATION_ONLY | Same specification and identified records/requirements, no fabricated source/proof. |
-| C20 | Thirteen attachment value cases / layouts / nulls | REPRESENTATION_ONLY | Preserves every scalar/role/reference association and scientifically ordered sequence. |
+| C20 | Thirteen attachment value cases / layouts / nulls | REPRESENTATION_ONLY | Preserves every scalar/role/reference association and scientifically ordered sequence; CompletionFact uses the same derived Boolean and exact cross-record completion identity/interval/consumer consistency. |
 | C21 | LocalRoles/PredicateIdentity/ParentCapability/ValueRequirement | REPRESENTATION_ONLY | Same local reusable facts; exact parent/field/state/phase occurrence stays outside keys. |
 | C22 | OutputRequirement/StateViewRole/InputDomainObligation/class rows | REPRESENTATION_ONLY | Same output property/local view/frozen input schema and class predicates, no witness or template addition. |
 | C23 | ScientificEvidenceClass/ObligationScope labels | REPRESENTATION_ONLY | Existing G/D/B1 class/scope meaning only, no new evidence kind or treatment exception. |
@@ -590,6 +604,8 @@ This is internal specification review, not independent approval, a freeze or an 
 | Every nested record/field/type | §3 registry plus §§4–15 complete field/type tables; 109 audited units |
 | Every tagged union | Paths, references, writer identity, domain/attachment values, selector requirements and expressions have exhaustive cases |
 | Every contextual payload | §11 six exact schemas, every field cited to G, no hidden expression/operation |
+| STATE_DEFINITION_PORT_IS_ALWAYS_PARTICULAR | §9 selects an INITIAL/POST view with SINGLE and one direct committed writer port; rejects sets, runtime selection and multi-output resolution. Read WriterIdentity metadata remains separate. |
+| COMPLETION_IMMUTABLE_FLAG_TOTAL_AND_DERIVED | §§11–12 fix true iff G's explicit immutable-persistence relation exists, otherwise false; all three admitted cases fix interval/read/consumer fields. False is no mutability claim; matching CompletionFact/context/state/phase facts agree. |
 | Every selector nested object | §13 exact local roles/predicate/value/output/view/interface/site/marker and explicit nulls |
 | CompleteFunction recursive grammar | §15 exact six leaf/operator variants, eleven pure operators, arity/types/repeats/definitions retained |
 | Equations/initialization/traversals/output | §15 complete supplied dependencies and actual writer/placement; strict PREFIX and TWO_PASS facts intact |
@@ -613,8 +629,22 @@ This is internal specification review, not independent approval, a freeze or an 
 | Choice accounting | 29 representation + 1 interface refinement; zero scientific change/unresolved scientific choice |
 | File/execution boundary | Exactly one prospective Markdown proposal; no implementation/freeze/scientific instances/RO/compiler/model/holdout work |
 
+The following are normative specification rejection/acceptance checks, reviewed as document rules only; no graph instances or scientific fixtures are constructed or executed:
+
+| Threat / supplied interpretation | Required result |
+|---|---|
+| STATE_DEFINITION_PORT resolves a REACHING_SET | REJECT; only an INITIAL/POST SINGLE definition view is admissible. |
+| STATE_DEFINITION_PORT resolves more than one committed writer/output, or selects a runtime predecessor | REJECT; the exact state/view ordinal resolves one fixed committed port under §9. |
+| PRE/current/COMPLETED StateView legitimately retains complete REACHING_SET metadata, with no set-valued producer reference | ACCEPT when all exact G read/definition/control facts are preserved; consumers still reference the actual read result. |
+| Completion-only record carries caller-selected immutable=true | REJECT; no frozen immutable-persistence relation means false. |
+| Completion-only record leaves immutable unconstrained, omitted, null or unknown | REJECT; the mandatory Boolean is uniquely derived. |
+| Frozen TWO_PASS completed-P persistence carries immutable=false or omits its interval/consumer facts | REJECT; the exact G relation requires true and its complete references. |
+| CompletionFact immutable differs from the corresponding completion/persistence context or state/phase fact | REJECT; §§11–12 require exact canonical-fact agreement. |
+| False immutable is treated as an independent proof of mutability | REJECT; it encodes only absence of G's explicit immutable-persistence relation. |
+| Consumed completion without immutable persistence is forced into an empty consumer/null read case or given a later persisted phase | REJECT; §11's consumed-without-persistence case retains the actual read/consumers with false and an empty interval. |
+
 Self-review result: **ALL_GRAPH_V2_WIRE_TYPES_CLOSED**. **SCIENTIFIC_MEANING_UNDERDETERMINED = 0**. No scientific alternative was selected to make serialization convenient. A future independently identified semantic gap, incompatible operative v2 encoding or required E5/B1/D2 redesign remains a STOP; this internal review does not authorize silently repairing it.
 
-Internal outcome: **GRAPH_V2_WIRE_FORMAT_BINDING_COMPLETE_WITHOUT_SCIENTIFIC_CHANGE**.
+Internal outcome: **GRAPH_V2_WIRE_FORMAT_BINDING_REVISED_WITHOUT_SCIENTIFIC_CHANGE**.
 
-Proposal readiness status: **CANONICAL_GRAPH_V2_WIRE_FORMAT_BINDING_PROPOSAL_READY_FOR_INDEPENDENT_REVIEW**. This means a prospective document is ready to review, not that it is frozen or implemented. Do not resume the foundation tranche, graph builder, RO, candidate construction or Attempt 004 in this task. Commit exactly this new proposal and stop; do not modify any existing repository file or create a freeze manifest.
+Proposal readiness status: **CANONICAL_GRAPH_V2_WIRE_FORMAT_BINDING_REVISED_READY_FOR_INDEPENDENT_REVIEW**. This means the two narrow wire repairs and their dependent documentation are ready for independent review, not frozen or implemented. Do not resume the foundation tranche, graph builder, RO, candidate construction or Attempt 004 in this task. Commit exactly this revised proposal and stop; do not modify any other repository file or create a freeze manifest.
