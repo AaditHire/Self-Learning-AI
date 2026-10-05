@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `622b8cd1b5c6a22d9a6ab01de6a25c39d9ea07c1`
+Last verified repository HEAD: `36b9298d4e0c3b6cf881236d2dd4d7b139c1a7f1`
 Last substantive state review: 2026-10-05
-Current project-head model: Claude Sonnet (Opus as optional second opinion)
+Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **methodology re-baselined: R1 FROZEN (prospective, pre-implementation); first implementation task not yet scoped; no implementation, candidate construction or model execution authorized**
+Current phase: **methodology re-baselined: R1 FROZEN; implementation tranche I1 accepted (commit 36b9298); I2 not yet scoped; no candidate construction or model execution authorized**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -57,9 +57,9 @@ All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**
 - **Seeds.** Five paired seeds: 20280117, 20280223, 20280329, 20280411, 20280507. All primary; no selection or substitution.
 - **Acquisition gate.** Every one of the 10 cells must score ≥ 54/60 semantic passes on its own training prompts, or the result is `INDETERMINATE_INSUFFICIENT_ACQUISITION`.
 - **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
-- **Claim limitation.** Even a positive result supports only: *pairwise conjunctive practice beats pairwise additive practice for generating multi-conjunction counting programs in GOCO under this budget*. The primary tasks reuse COMPOSITION's local `hitX*hitY` idiom, so this is bounded local-motif transfer, not general compositional reasoning. Four algebraic graphs, one DSL, one model.
+- **Claim limitation (R1 §2).** Even a positive result supports only: pair-joint indicator-product practice transfers, relative to independent additive practice, to new multi-role multi-term counting programs built from that idiom, in GOCO, under this budget, with one base model (Level B). ISOLATED has no conjunction exposure, so a positive result partly reflects availability of the joint idiom. It does not support general compositional ability, structural transfer, retention or continual learning.
 
-**Status of this design: R1 methodology FROZEN.** No executable CONF1 config exists; the first implementation task is not yet scoped. Implementation, candidate construction and model execution remain unauthorized.
+**Status of this design: R1 methodology FROZEN.** No executable CONF1 config exists. Implementation tranche I1 is accepted (§F); candidate construction and model execution remain unauthorized.
 
 ## D. Current scientific blocker
 
@@ -121,7 +121,7 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 
 VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
 
-After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative; compact auditors and builder changes remain to be scoped by the project head.
+After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative. R1 code lives in `src/self_learning_ai/conf1_r1/` (tranche I1 accepted, commit 36b9298): `primary.py` (hash-verified loader of the 32 primary slots with the R1 §7 array role maps; canonical primary references whose accumulations are spelled `total+=(hitX*hitY).`; expected-output function) and `interp.py` (single-statement-deletion mutator and fail-closed subset interpreter; 0 disagreements with the pinned compiler over 4,780 runs covering 32 references, 804 mutants and 120 training programs). The interpreter is a cross-checked accelerator only: gate verdicts on compilation, timeout and output come from the pinned compiler.
 
 **`src/self_learning_ai/conf1_v3/` (~7,200 lines, last changed 2026-10-02, before G/B1/D2 were frozen):**
 
@@ -172,7 +172,7 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 |---|---|---|---|
 | 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
 | 2 | **DONE — R1 frozen (commit 622b8cd)** | Freeze manifest committed | Implementation |
-| 3 | **NEXT — first implementation task to be scoped by the project head** | Code matches frozen spec; reviewed diffs | Validation |
+| 3 | **IN PROGRESS — implementation I1–I5** (I1 accepted, commit 36b9298; I2 next) | Code matches frozen spec; reviewed diffs | Validation |
 | 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
 | 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
 | 6 | **Attempt 004 construction** (fresh construction seed) and all audits | All gates PASS, or STOP and record | Freeze |
@@ -183,29 +183,29 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 
 ## J. Current next action
 
-Project head scopes the first implementation task (compact auditors and builder changes per R1 §§4-6) as exactly one Codex task.
+Project head completes a bounded independent review of R1, then scopes implementation tranche I2 (primary gates P1, P2, P4(iii)-(iv) and P6 case-selection logic, tested on synthetic fixtures only; running P6 on the real primary slots is Attempt 004 construction and stays unauthorized) as exactly one Codex task.
 
-- **Agent:** Claude Sonnet scopes the first implementation task; Codex executes a separately authorized task afterward.
-- **Type:** DESIGN/PROMPT.
-- **Still forbidden:** candidate construction, Attempt 004, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
+- **Agent:** the project head (Claude Opus 5.5) scopes I2; Codex executes it as a separately authorized task.
+- **Type:** REVIEW + DESIGN/PROMPT.
+- **Still forbidden:** candidate construction, Attempt 004, hidden-case construction, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
 
 Update this section after every major milestone.
 
 ## K. Agent workflow
 
-- **Claude Sonnet**: project head, scientific decision-maker and reviewer under §M. Reads authorities, reviews results, decides the next action and writes Codex prompts.
+- **Project head** (designated by the user; currently Claude Opus 5.5): scientific decision-maker and reviewer under §M. Reads authorities, reviews results, decides the next action and writes Codex prompts. The user may re-designate the project head; the change must be recorded here and in CLAUDE.md.
 - **Codex**: execution agent. Executes the exact authorized scope and reports; stops on ambiguity and never chooses a scientific rule.
 - **User**: exceptional decisions in §M and the final model-execution one-line confirmation after project-head readiness review.
-- **Opus**: optional second opinion when Claude independently judges a consequential issue needs it.
+- **Second opinion**: an independent second opinion (for example from another Claude model) is optional and used only when the project head judges a consequential issue needs it.
 
 Loop:
-1. Sonnet reads `docs/PROJECT_STATE.md` and the authorities relevant to the current step.
-2. Sonnet reviews the previous result.
-3. Sonnet decides exactly one next action; an Opus second opinion is optional under §M.
-4. Sonnet gives one complete Codex prompt: expected repository state, scope, allowed files, allowed execution, STOP conditions, validation, then stop.
+1. The project head reads `docs/PROJECT_STATE.md` and the authorities relevant to the current step.
+2. The project head reviews the previous result.
+3. The project head decides exactly one next action; an independent second opinion is optional under §M.
+4. The project head gives one complete Codex prompt: expected repository state, scope, allowed files, allowed execution, STOP conditions, validation, then stop.
 5. Codex executes and reports.
 6. The user returns the result.
-7. Sonnet inspects the actual diff or artifact, not just Codex's summary.
+7. The project head inspects the actual diff or artifact, not just Codex's summary.
 8. This file is updated only when the state materially changes (see below).
 
 ## L. Verification language
@@ -219,9 +219,9 @@ Use these labels when provenance matters:
 
 ## M. Decision authority
 
-Claude Sonnet decides scientific and methodology questions (treatment, coverage, gates, population repairs and analysis) within the research objective and Level B claim boundary. Decisions stay prospective, preserve negative results, avoid prohibited data and outcome-dependent changes, and fail closed on genuine ambiguity. Codex stops on ambiguity and reports it.
+The designated project head (currently Claude Opus 5.5) decides scientific and methodology questions (treatment, coverage, gates, population repairs and analysis) within the research objective and Level B claim boundary. Decisions stay prospective, preserve negative results, avoid prohibited data and outcome-dependent changes, and fail closed on genuine ambiguity. Codex stops on ambiguity and reports it.
 
-Ask the user only for: (1) a fundamental research-objective change; (2) a genuine value or preference choice that cannot be settled scientifically; (3) major external cost or irreversible consequences, including final confirmatory model-execution authorization after project-head readiness review, presented as a one-line confirmation because it consumes the suite; (4) a choice Claude cannot defensibly determine from the evidence. Opus is an optional second opinion only when Claude independently judges a consequential issue needs it.
+Ask the user only for: (1) a fundamental research-objective change; (2) a genuine value or preference choice that cannot be settled scientifically; (3) major external cost or irreversible consequences, including final confirmatory model-execution authorization after project-head readiness review, presented as a one-line confirmation because it consumes the suite; (4) a choice Claude cannot defensibly determine from the evidence. An independent second opinion (for example from another Claude model) is optional and used only when the project head judges a consequential issue needs it.
 
 ## State update protocol
 
