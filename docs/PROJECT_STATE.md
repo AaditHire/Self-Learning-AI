@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `daf6c89c8995f2d4cd80816a7fa29b91982648cb`
+Last verified repository HEAD: `622b8cd1b5c6a22d9a6ab01de6a25c39d9ea07c1`
 Last substantive state review: 2026-10-05
 Current project-head model: Claude Sonnet (Opus as optional second opinion)
 Current execution agent: Codex
-Current phase: **methodology reopened; R1 re-baseline amendment drafted (PROPOSED, unfrozen), awaiting project-head review; no implementation, candidate construction or model execution authorized**
+Current phase: **methodology re-baselined: R1 FROZEN (prospective, pre-implementation); first implementation task not yet scoped; no implementation, candidate construction or model execution authorized**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -52,14 +52,14 @@ All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**
   - `ISOLATED`: `total+=(hitP+hitQ).`
   - `COMPOSITION`: `total+=(hitP*hitQ).`
   - Prompts differ only in a marked treatment clause. Attempt 003 achieved 60/60 exact scaffold matches and a 0.78% full-token difference (supervised tokens equal).
-- **Evaluation population.** 64 specifications: 32 primary Novel Composition (graphs G1–G4 × 4 rotations × 2 domains; G1=(P∧Q)∨(P∧R), G2=(P∧Q)+(Q∧R)+(R∧S), G3=(P∧Q)+(P∧R)+(P∧S), G4=((P∨Q)∧R)+(Q∧S)); 16 Primitive Sanity (single predicate, offsets 0 or 3); 16 Structural Transfer (PREFIX ordered-pair count and TWO_PASS product of counts). Five hidden cases each. Universe = 120 + 64 = 184 specifications.
+- **Evaluation population.** 64 specifications: 32 primary Novel Composition (graphs G1–G4 × 4 rotations × 2 domains; G1=(P∧Q)∨(P∧R), G2=(P∧Q)+(Q∧R)+(R∧S), G3=(P∧Q)+(P∧R)+(P∧S), G4=((P∨Q)∧R)+(Q∧S)); 16 Primitive Sanity (single predicate, offsets 0 or 3); 16 Structural Transfer (PREFIX ordered-pair count and TWO_PASS product of counts). Five hidden cases each. Universe = 120 + 64 = 184 specifications. R1 (frozen) replaces array G3 with G3P=(P∧Q)+(P∧R) and repairs the array role maps; the primary count stays 32.
 - **Training recipe.** Fresh rank-16 NF4 QLoRA per cell, 180 exposures, 24 optimizer steps, max length 320, fixed final epoch.
 - **Seeds.** Five paired seeds: 20280117, 20280223, 20280329, 20280411, 20280507. All primary; no selection or substitution.
 - **Acquisition gate.** Every one of the 10 cells must score ≥ 54/60 semantic passes on its own training prompts, or the result is `INDETERMINATE_INSUFFICIENT_ACQUISITION`.
 - **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
 - **Claim limitation.** Even a positive result supports only: *pairwise conjunctive practice beats pairwise additive practice for generating multi-conjunction counting programs in GOCO under this budget*. The primary tasks reuse COMPOSITION's local `hitX*hitY` idiom, so this is bounded local-motif transfer, not general compositional reasoning. Four algebraic graphs, one DSL, one model.
 
-**Status of this design: REOPENED.** The protocol's estimand, thresholds and gate were reviewed and are hash-bound by later freezes, but no executable CONF1 config/manifest exists, and the coverage methodology that gates candidate acceptance is internally infeasible (§D).
+**Status of this design: R1 methodology FROZEN.** No executable CONF1 config exists; the first implementation task is not yet scoped. Implementation, candidate construction and model execution remain unauthorized.
 
 ## D. Current scientific blocker
 
@@ -87,9 +87,9 @@ Definite-blocker union: **56/64** evaluation specifications (all 32 primary, all
 - Implementation of graph-v2/B1/D2/wire/RO/E5 machinery is **stopped**; building it would only produce a deterministic coverage FAIL.
 - The wire-format proposal is **not to be frozen** (its two narrow repairs were reviewed as correct, but they serialize a design that cannot pass).
 - **Attempt 004 remains nonexistent and unauthorized.** No candidate construction, model loading, training or evaluation.
-- A **consolidated CONF1 methodology re-baseline** is drafted for prospective project-head review. Decided by the project head and recorded in research/protocols/phase3c_conf1_rebaseline_r1_proposed.md (PROPOSED).
+- A **consolidated CONF1 methodology re-baseline** is adopted and FROZEN by research/protocols/phase3c_conf1_rebaseline_r1_freeze.json.
 
-**Second specification defect:** `research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` records 8 of 16 frozen array primary slots as degenerate; array G3 admits only 2 distinct non-degenerate functions. R1 proposes repaired array role maps and the array G3-to-G3P substitution; all 16 proposed array slots are non-degenerate and pairwise distinct, while numeric slots and the primary count remain unchanged.
+**Second specification defect:** `research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` records 8 of 16 frozen array primary slots as degenerate; array G3 admits only 2 distinct non-degenerate functions. R1 (frozen) adopts repaired array role maps and the array G3-to-G3P substitution; all 16 proposed array slots are non-degenerate and pairwise distinct, while numeric slots and the primary count remain unchanged.
 
 ## E. What is frozen vs proposed vs historical
 
@@ -97,19 +97,20 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 
 | Item | File(s) | Role | Status |
 |---|---|---|---|
-| CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | Reviewed; hash-bound by later freezes; titled "design proposal"; no executable config/manifest. **Reopened** for coverage semantics |
-| Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | FROZEN |
-| AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | FROZEN |
-| Coverage-v3 | `phase3c_conf1_coverage_v3_proposed.md` + `_freeze.json` (+ `phase3c_conf1_coverage_v3_v2_disposition.md`) | Fairness gate V3.1–V3.8, E1–E6 | FROZEN, **shown infeasible with G** |
-| Atomic/activity/output amendment | `phase3c_conf1_coverage_v3_atomic_activity_output_amendment_proposed.md` + `_freeze.json` | Activity/output evidence classes | FROZEN |
-| Paired-scaffold normalization | `phase3c_conf1_paired_scaffold_normalization_proposed.md` + `_freeze.json` | Treatment-symmetry check (E3) | FROZEN; sound and simple |
-| INPUT_DOMAIN case classes | `phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md` + `_freeze.json` | Input-domain coverage | FROZEN |
-| Structural-transfer pair (PREFIX/TWO_PASS) | `phase3c_conf1_structural_transfer_{semantics,topology}_amendment_proposed.md`, `phase3c_conf1_structural_transfer_pair_freeze.json` | Exploratory endpoint definition | FROZEN |
-| REFERENCE_ONLY catalog + interface v2 | `phase3c_conf1_reference_only_catalog_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed_v2.md` + freezes | Proof that extra source constructs are inert | FROZEN; RO implementation paused |
-| Canonical graph recipe v2 ("G") | `phase3c_conf1_canonical_contract_graph_recipe_proposed_v2.md` + `_v2_freeze.json` | Typed canonical graph defining coverage keys | FROZEN, **source of the infeasibility** |
-| Delegated evidence interfaces + B1 binding | `phase3c_conf1_delegated_evidence_interfaces_proposed.md`, `phase3c_conf1_delegated_evidence_interfaces_binding_amendment_proposed.md` + freezes | Report schemas, row formulas | FROZEN |
-| D2 direct-support accounting | `phase3c_conf1_direct_support_accounting_amendment_proposed_v2.md` + `_v2_freeze.json` | Four-bucket source accounting | FROZEN |
-| Graph-v2 wire-format binding | `phase3c_conf1_canonical_graph_v2_wire_format_binding_amendment_proposed.md` | Serialization of G | **PROPOSED / UNFROZEN**, revised at `9887c38`; do not freeze pending re-baseline |
+| CONF1 re-baseline R1 | `phase3c_conf1_rebaseline_r1_proposed.md` + `phase3c_conf1_rebaseline_r1_freeze.json` | Current methodology authority (treatment, catalog, gates, array population repair) | FROZEN |
+| CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | RETAINED; amended by R1 |
+| Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | RETAINED; amended by R1 |
+| AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | DEMOTED to descriptive |
+| Coverage-v3 | `phase3c_conf1_coverage_v3_proposed.md` + `_freeze.json` (+ `phase3c_conf1_coverage_v3_v2_disposition.md`) | Fairness gate V3.1–V3.8, E1–E6 | SUPERSEDED by R1 (freeze manifest still binds bytes) |
+| Atomic/activity/output amendment | `phase3c_conf1_coverage_v3_atomic_activity_output_amendment_proposed.md` + `_freeze.json` | Activity/output evidence classes | SUPERSEDED/HISTORICAL |
+| Paired-scaffold normalization | `phase3c_conf1_paired_scaffold_normalization_proposed.md` + `_freeze.json` | Treatment-symmetry check (E3) | RETAINED |
+| INPUT_DOMAIN case classes | `phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md` + `_freeze.json` | Input-domain coverage | RETAINED |
+| Structural-transfer pair (PREFIX/TWO_PASS) | `phase3c_conf1_structural_transfer_{semantics,topology}_amendment_proposed.md`, `phase3c_conf1_structural_transfer_pair_freeze.json` | Exploratory endpoint definition | semantic definitions retained as exploratory; coverage clauses superseded |
+| REFERENCE_ONLY catalog + interface v2 | `phase3c_conf1_reference_only_catalog_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed_v2.md` + freezes | Proof that extra source constructs are inert | SUPERSEDED by R1 (freeze manifest still binds bytes) |
+| Canonical graph recipe v2 ("G") | `phase3c_conf1_canonical_contract_graph_recipe_proposed_v2.md` + `_v2_freeze.json` | Typed canonical graph defining coverage keys | SUPERSEDED by R1 (freeze manifest still binds bytes) |
+| Delegated evidence interfaces + B1 binding | `phase3c_conf1_delegated_evidence_interfaces_proposed.md`, `phase3c_conf1_delegated_evidence_interfaces_binding_amendment_proposed.md` + freezes | Report schemas, row formulas | SUPERSEDED by R1 (freeze manifest still binds bytes) |
+| D2 direct-support accounting | `phase3c_conf1_direct_support_accounting_amendment_proposed_v2.md` + `_v2_freeze.json` | Four-bucket source accounting | SUPERSEDED by R1 (freeze manifest still binds bytes) |
+| Graph-v2 wire-format binding | `phase3c_conf1_canonical_graph_v2_wire_format_binding_amendment_proposed.md` | Serialization of G | REJECTED; never frozen |
 | Specification coverage feasibility audit | `research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md` | Evidence for §D | NON-NORMATIVE ANALYSIS (accepted as correct) |
 | Development readiness evidence | `research/implementation_notes/` (~325 MB) | Development-only tranches (Boolean mapping, state, essentiality, value/output, RO) | DEVELOPMENT_ONLY; predates G/B1/D2; never scientific evidence |
 | Coverage-v2 (`phase3c_conf1_coverage_v2*`), AST v1 (`phase3c_conf1_ast_adjudication.md`), and superseded v1 proposals (`phase3c_conf1_canonical_contract_graph_recipe_proposed.md`, `phase3c_conf1_direct_support_accounting_amendment_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed.md`) | `research/protocols/` | Earlier methodology | HISTORICAL / SUPERSEDED |
@@ -119,6 +120,8 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 ## F. Current implementation state
 
 VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
+
+After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative; compact auditors and builder changes remain to be scoped by the project head.
 
 **`src/self_learning_ai/conf1_v3/` (~7,200 lines, last changed 2026-10-02, before G/B1/D2 were frozen):**
 
@@ -159,17 +162,17 @@ The takeover review concluded that the coverage machinery became disproportionat
 - Hidden-case discrimination (E6); consumed-suite overlap reporting (E2/E4).
 - Acquisition gate, five seeds, frozen estimand/threshold/bootstrap, one-pass execution, atomic persistence, boolean authorization.
 
-**Simplification decisions:** Decided in R1 (proposed, unfrozen); the frozen documents remain operative until R1 is frozen. R1 §§4–6 and §9 propose catalog conformance and statement-deletion liveness in place of the typed canonical graph, wire format, B1, D2, REFERENCE_ONLY and counterfactual intervention machinery; E2 becomes descriptive and Structural Transfer becomes non-blocking and descriptive.
+Adopted and frozen in R1 (§§4-6, §9).
 
-Until the re-baseline is frozen, the frozen documents in §E remain the operative authorities. Do not declare them obsolete, and do not implement either the old stack or a replacement.
+R1 is the operative methodology authority together with the documents R1 §9 marks RETAINED. Superseded documents are not to be implemented.
 
 ## I. Dependency roadmap to Attempt 004
 
 | # | Step | Completion condition | Unlocks |
 |---|---|---|---|
 | 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
-| 2 | **IN PROGRESS — Consolidated re-baseline amendment**; draft and non-model feasibility evidence committed; project-head review and a single freeze task next | Freeze manifest committed | Implementation |
-| 3 | **Implementation**: builder update, compact coverage/E-gate auditors, CONF1 runner/evaluator/analyzer adapted from DEV2R | Code matches frozen spec; reviewed diffs | Validation |
+| 2 | **DONE — R1 frozen (commit 622b8cd)** | Freeze manifest committed | Implementation |
+| 3 | **NEXT — first implementation task to be scoped by the project head** | Code matches frozen spec; reviewed diffs | Validation |
 | 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
 | 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
 | 6 | **Attempt 004 construction** (fresh construction seed) and all audits | All gates PASS, or STOP and record | Freeze |
@@ -180,11 +183,11 @@ Until the re-baseline is frozen, the frozen documents in §E remain the operativ
 
 ## J. Current next action
 
-Project head reviews the committed R1 draft and independently re-runs the specification enumeration; then one Codex task freezes R1 (or revises it).
+Project head scopes the first implementation task (compact auditors and builder changes per R1 §§4-6) as exactly one Codex task.
 
-- **Agent:** Claude Sonnet reviews; Codex executes a separately scoped freeze or revision task afterward.
-- **Type:** READ-ONLY review / DOCUMENT.
-- **Still forbidden:** freezing the wire proposal; implementing graph-v2/B1/D2/RO/E5 or any replacement; modifying frozen authorities; constructing Attempt 004 or any candidate; model loading, training, inference or evaluation; reading prohibited data.
+- **Agent:** Claude Sonnet scopes the first implementation task; Codex executes a separately authorized task afterward.
+- **Type:** DESIGN/PROMPT.
+- **Still forbidden:** candidate construction, Attempt 004, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
 
 Update this section after every major milestone.
 
