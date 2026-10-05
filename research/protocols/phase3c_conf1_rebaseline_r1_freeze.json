@@ -1,0 +1,64 @@
+{
+  "amendment_is_byte_equal_to_approved_proposal": true,
+  "approved_proposal_commit": "daf6c89c8995f2d4cd80816a7fa29b91982648cb",
+  "approved_proposal_git_blob": "be5a3fd65ce0353ea6807e4343fcd588588e2e09",
+  "approved_proposal_sha256_lf_normalized": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31",
+  "attempt_004_exists_at_freeze": false,
+  "audit_rerun_matched": true,
+  "candidate_construction_authorization_effect": "NONE",
+  "conf1_model_execution_observed_at_freeze": false,
+  "decision_authority": "Project head (Claude Sonnet) under the CLAUDE.md Decision authority rule",
+  "evidence_artifacts": [
+    {
+      "git_blob": "a4826c619c1d5a998206e290292e28cdb8504613",
+      "path": "scripts/audit_phase3c_conf1_r1_specification_feasibility.py",
+      "sha256": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74"
+    },
+    {
+      "git_blob": "5b63d474dd0e94949bd0a8ec916a7556c6ab87d8",
+      "path": "research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json",
+      "sha256": "8342103fe1ce769ced87ec20b0d8ba05a733df9d1080f1d9e5b6d2b644003cf9"
+    },
+    {
+      "git_blob": "e564d0fcc655cd2f01acf74d9769589705deee4c",
+      "path": "research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.md",
+      "sha256": "2c401dc9f6798f5e9e294319cc60ad6e52155b5b93fbe6efddfb11a1ca36cd30"
+    }
+  ],
+  "evidence_commit": "a75d62a4dc983f6abe7604c42b4841003440145b",
+  "freeze_commit_identity": "Git commit containing this manifest; SHA reported after commit creation to avoid self-reference",
+  "frozen_amendment_git_blob": "be5a3fd65ce0353ea6807e4343fcd588588e2e09",
+  "frozen_amendment_path": "research/protocols/phase3c_conf1_rebaseline_r1_proposed.md",
+  "frozen_amendment_sha256_lf_normalized": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31",
+  "frozen_slot_ledger_git_blob": "133c9c7275bcedeaf2474e54e61bae47923508ad",
+  "frozen_slot_ledger_path": "research/protocols/phase3c_conf1_slots.json",
+  "frozen_slot_ledger_sha256_byte_exact": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2",
+  "frozen_slot_ledger_sha256_lf_normalized": "83436eecda3affe813b785e868e3f8936fa59afc35ded0eb6a54290edb41dc88",
+  "hash_policy": "SHA-256 of UTF-8 text with CRLF converted to LF; Git blob ID independently binds committed bytes",
+  "historical_protocol_git_blob": "7ec58f3b4d5fc5827e35e4fbf22712a300240cec",
+  "historical_protocol_path": "research/protocols/phase3c_conf1_proposed_protocol.md",
+  "historical_protocol_sha256_lf_normalized": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920",
+  "implementation_authorization_effect": "NONE",
+  "independent_prospective_review": "project-head review only; no Opus review performed",
+  "model_execution_authorization_effect": "NONE",
+  "phase": "PHASE_3C_CONF1",
+  "r1_primary_count": 32,
+  "retained_manifests": [
+    {
+      "git_blob": "9a54e9b525b1795b10f94bf0d0250ae831e6db74",
+      "path": "research/protocols/phase3c_conf1_paired_scaffold_normalization_freeze.json",
+      "sha256": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2"
+    },
+    {
+      "git_blob": "774eb73150f66d2545ddf270cc2f051eddedc156",
+      "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json",
+      "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "CONF1 re-baseline R1: treatment construct A, OR handling B, capability catalog C, Sanity/Structural status D, machinery supersession E, array primary population repair F, gates P1-P7 and descriptive reporting additions, for future CONF1 candidates only",
+  "slot_ledger_edited": false,
+  "status": "FROZEN_PROSPECTIVE_METHODOLOGY_PRE_ATTEMPT_004",
+  "supersession_rows_verified_against_files": true,
+  "supersession_table_row_count": 28
+}
