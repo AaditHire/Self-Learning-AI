@@ -1,0 +1,15 @@
+# CONF1 R1 implementation clarifications (project head)
+
+Status: project-head clarifications of the frozen R1 amendment (`phase3c_conf1_rebaseline_r1_proposed.md`, SHA-256 `4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31`; freeze manifest `phase3c_conf1_rebaseline_r1_freeze.json`, SHA-256 `58d2ca7a453246ac97aa956be6c499a416bd523abadc65b7a402195b986f96b1`). Recorded 2026-10-05, before any Attempt 004 construction, hidden-case construction or model use. No R1 rule, threshold, population, estimand or gate changes; each item fixes how frozen text is implemented. If an item conflicts with a frozen artifact, the frozen artifact wins and construction STOPs.
+
+C1 Construction seed. All Attempt 004 construction randomness derives from the slot ledger's frozen `construction_seed` 20290123 through the frozen derivations (ledger `candidate_policy`; input-domain amendment). R1 §6 retains the frozen 4096-tuple array pool and ordering, which is generated from that seed. No new seed is introduced. Rejected Attempts 001-003 (no model use) used the same seed; this is disclosed.
+
+C2 Gate oracle. The pinned compiler (GOCO 6a029b8; JAR SHA-256 `42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb`) is the authority for every compile, timeout and output verdict in P2, P4(iii) and P6. The `conf1_r1` interpreter may rank or prefilter candidates only after cross-validation against the compiler; every verdict on a selected or accepted artifact is re-established with the compiler, and any interpreter/compiler disagreement is STOP.
+
+C3 Killed mutant. Relative to a reference that succeeds on all five cases, a single-statement-deletion mutant is killed on a case when the compiler run is not a success (syntax, runtime or other error, or timeout) or its normalized output differs from the reference's. A mutant is killed when it is killed on at least one of the five cases.
+
+C4 Scope of P4(iii)-(v). "Example" in P4(iii)-(v) means a model-facing training example. Deletion liveness of primary canonical references is governed by P6(b). P4(i) applies to both.
+
+C5 Array primary case selection (P6). The pool is the frozen sequence: index 0 is `0|0|0|0`; indices 1..4096 are tuples drawn in order from `random.Random(construction_seed)`, four components each uniform on -16..16 via `randint(-16, 16)`, joined with `|`. Case 1 is index 0. Cases 2-5 are chosen one at a time from unchosen indices 1..4096, each maximizing the cumulative number of satisfied requirements, where the requirements are (a) the 120 unordered pairs of array primary tasks separated by at least one chosen case and (b) every single-statement-deletion mutant of every array primary canonical reference killed by at least one chosen case; ties go to the lowest index. After five cases, (a), (b) and (c) (NEGATIVE_PRESENT, ZERO_PRESENT and POSITIVE_PRESENT each witnessed by at least one case) must all hold, else STOP. The same five inputs serve all 16 array primary tasks.
+
+C6 Numeric primary cases are the frozen (0, 70, 12, 13, 14) for all 16 numeric primary tasks; P6 (a)-(c) are verified on them with the compiler; failure is STOP.
