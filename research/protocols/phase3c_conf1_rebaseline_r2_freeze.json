@@ -1,0 +1,155 @@
+{
+  "amends": [
+    {
+      "path": "research/protocols/phase3c_conf1_rebaseline_r1_freeze.json",
+      "sha256": "58d2ca7a453246ac97aa956be6c499a416bd523abadc65b7a402195b986f96b1"
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_rebaseline_r1_proposed.md",
+      "sha256": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31"
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_slots.json",
+      "sha256": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2"
+    },
+    {
+      "path": "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json",
+      "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a"
+    }
+  ],
+  "attempt_004_exists_at_freeze": false,
+  "candidate_construction_authorization_effect": "NONE",
+  "conf1_model_execution_observed_at_freeze": false,
+  "construction_seed_used_for_any_draw": false,
+  "decision_authority": "Project head (Claude Opus 5.5) under the CLAUDE.md Decision authority rule",
+  "evidence_artifacts": [
+    {
+      "git_blob": "0e2e1900f6544e62ed33027b3d5e46c0a27e6cd3",
+      "path": "scripts/audit_phase3c_conf1_r2_liveness_feasibility.py",
+      "sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254"
+    },
+    {
+      "git_blob": "42c71014a78498a1024f40d35ef59d1f322fe6cb",
+      "path": "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.json",
+      "sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7"
+    },
+    {
+      "git_blob": "b9ad0f4b2c9afc0b49ed87c856495bdb95a0a93f",
+      "path": "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.md",
+      "sha256": "ed431011af56d5161b65af2263ca222fbcb9902cf6d48f10f5fe61a7924bc52a"
+    },
+    {
+      "git_blob": "bad6995223a5f031782fa3e9cfcaefa22bde7c88",
+      "path": "src/self_learning_ai/conf1_r1/gates_primary.py",
+      "sha256": "51fc7de533e789550218b063f437f93eeac16ff0e98c5700e86400deba13335b"
+    },
+    {
+      "git_blob": "10782feba2bbdff445fed95ac5013ff400e53f52",
+      "path": "research/protocols/phase3c_conf1_r1_implementation_clarifications.md",
+      "sha256": "9fbe75fa2caf6a27ecbac943bec6a99f69c87a604669d533b73cc83e3bfcd328"
+    }
+  ],
+  "evidence_commits": [
+    "a58ceb1a1017064a15560bb4ed51c9eca44e7d18",
+    "6192040a7c275a10f369461600070bd56d885130"
+  ],
+  "freeze_commit_identity": "Git commit containing this manifest; SHA reported after commit creation to avoid self-reference",
+  "frozen_amendment_git_blob": "606c9474b5a7cac91f3e5bb0d4152c72c24ef1c2",
+  "frozen_amendment_path": "research/protocols/phase3c_conf1_rebaseline_r2_proposed.md",
+  "frozen_amendment_sha256_lf_normalized": "2fea0bc3846e0ab7da2161a71e53f6073c2c7107c62316d784f61259eb1e3c8c",
+  "hash_policy": "SHA-256 of UTF-8 text with CRLF converted to LF for the amendment; raw-byte SHA-256 for evidence; Git blob IDs bind committed bytes",
+  "implementation_authorization_effect": "NONE",
+  "independent_prospective_review": "Text authored by the project head; evidence produced by Codex at a58ceb1 and verified by the project head against the repository",
+  "model_execution_authorization_effect": "NONE",
+  "non_exempt_domain_equivalent_mutants": [
+    [
+      "CONF1-NC-AR-G1-R3",
+      "primary",
+      14
+    ],
+    [
+      "CONF1-TR-NU-03-V0",
+      "composition",
+      7
+    ],
+    [
+      "CONF1-TR-NU-03-V0",
+      "isolated",
+      7
+    ],
+    [
+      "CONF1-TR-NU-03-V2",
+      "composition",
+      7
+    ],
+    [
+      "CONF1-TR-NU-03-V2",
+      "isolated",
+      7
+    ],
+    [
+      "CONF1-TR-NU-03-V4",
+      "composition",
+      7
+    ],
+    [
+      "CONF1-TR-NU-03-V4",
+      "isolated",
+      7
+    ],
+    [
+      "CONF1-TR-NU-13-V1",
+      "composition",
+      7
+    ],
+    [
+      "CONF1-TR-NU-13-V1",
+      "isolated",
+      7
+    ],
+    [
+      "CONF1-TR-NU-13-V3",
+      "composition",
+      7
+    ],
+    [
+      "CONF1-TR-NU-13-V3",
+      "isolated",
+      7
+    ],
+    [
+      "CONF1-TR-NU-23-V0",
+      "composition",
+      8
+    ],
+    [
+      "CONF1-TR-NU-23-V0",
+      "isolated",
+      8
+    ],
+    [
+      "CONF1-TR-NU-23-V2",
+      "composition",
+      8
+    ],
+    [
+      "CONF1-TR-NU-23-V2",
+      "isolated",
+      8
+    ],
+    [
+      "CONF1-TR-NU-23-V4",
+      "composition",
+      8
+    ],
+    [
+      "CONF1-TR-NU-23-V4",
+      "isolated",
+      8
+    ]
+  ],
+  "phase": "PHASE_3C_CONF1",
+  "schema_version": 1,
+  "scope": "CONF1 amendment R2: domain-equivalent mutant exclusion (R2-A), requirement-directed training-case selection (R2-B), K7 descriptive (R2-C); amends R1, the slot ledger training-case rules and step 2 of the input-domain amendment override, for future CONF1 candidates only",
+  "status": "FROZEN_PROSPECTIVE_METHODOLOGY_PRE_ATTEMPT_004"
+}

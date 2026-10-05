@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `36b9298d4e0c3b6cf881236d2dd4d7b139c1a7f1`
+Last verified repository HEAD: `a58ceb1a1017064a15560bb4ed51c9eca44e7d18`
 Last substantive state review: 2026-10-05
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **methodology re-baselined: R1 FROZEN; implementation tranche I1 accepted (commit 36b9298); I2 not yet scoped; no candidate construction or model execution authorized**
+Current phase: **methodology R1 + R2 FROZEN; implementation tranches I1 and I2 accepted (commits 36b9298, 6192040); I3 next; no candidate construction or model execution authorized**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -98,6 +98,8 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 | Item | File(s) | Role | Status |
 |---|---|---|---|
 | CONF1 re-baseline R1 | `phase3c_conf1_rebaseline_r1_proposed.md` + `phase3c_conf1_rebaseline_r1_freeze.json` | Current methodology authority (treatment, catalog, gates, array population repair) | FROZEN |
+| CONF1 amendment R2 | `phase3c_conf1_rebaseline_r2_proposed.md` + `phase3c_conf1_rebaseline_r2_freeze.json` | Domain-equivalent mutant list, requirement-directed training-case selection, K7 descriptive | FROZEN |
+| R1 implementation clarifications C1–C6 | `phase3c_conf1_r1_implementation_clarifications.md` | Construction seed, compiler gate oracle, killed mutant, P4 scope, array and numeric primary cases | PROJECT-HEAD CLARIFICATIONS (commit 6192040) |
 | CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | RETAINED; amended by R1 |
 | Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | RETAINED; amended by R1 |
 | AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | DEMOTED to descriptive |
@@ -121,7 +123,7 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 
 VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
 
-After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative. R1 code lives in `src/self_learning_ai/conf1_r1/` (tranche I1 accepted, commit 36b9298): `primary.py` (hash-verified loader of the 32 primary slots with the R1 §7 array role maps; canonical primary references whose accumulations are spelled `total+=(hitX*hitY).`; expected-output function) and `interp.py` (single-statement-deletion mutator and fail-closed subset interpreter; 0 disagreements with the pinned compiler over 4,780 runs covering 32 references, 804 mutants and 120 training programs). The interpreter is a cross-checked accelerator only: gate verdicts on compilation, timeout and output come from the pinned compiler.
+After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative. R1 code lives in `src/self_learning_ai/conf1_r1/` (tranche I1 accepted, commit 36b9298): `primary.py` (hash-verified loader of the 32 primary slots with the R1 §7 array role maps; canonical primary references whose accumulations are spelled `total+=(hitX*hitY).`; expected-output function) and `interp.py` (single-statement-deletion mutator and fail-closed subset interpreter; 0 disagreements with the pinned compiler over 4,780 runs covering 32 references, 804 mutants and 120 training programs). The interpreter is a cross-checked accelerator only: gate verdicts on compilation, timeout and output come from the pinned compiler. Tranche I2 is accepted (commit 6192040): `gates_primary.py` implements P1 (via the committed R1 audit definitions), P2/E1, a compiler-backed mutant-kill engine, P6 checks and the C5 array case selector, validated on synthetic inputs only; its synthetic dry run exposed the equivalent-mutant defect fixed by R2.
 
 **`src/self_learning_ai/conf1_v3/` (~7,200 lines, last changed 2026-10-02, before G/B1/D2 were frozen):**
 
@@ -172,10 +174,10 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 |---|---|---|---|
 | 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
 | 2 | **DONE — R1 frozen (commit 622b8cd)** | Freeze manifest committed | Implementation |
-| 3 | **IN PROGRESS — implementation I1–I5** (I1 accepted, commit 36b9298; I2 next) | Code matches frozen spec; reviewed diffs | Validation |
+| 3 | **IN PROGRESS — implementation I1–I5** (I1, I2 accepted: 36b9298, 6192040; I3 next) | Code matches frozen spec; reviewed diffs | Validation |
 | 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
 | 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
-| 6 | **Attempt 004 construction** (fresh construction seed) and all audits | All gates PASS, or STOP and record | Freeze |
+| 6 | **Attempt 004 construction** (frozen ledger construction seed 20290123 per clarification C1; training cases per R2-B) and all audits | All gates PASS, or STOP and record | Freeze |
 | 7 | **Candidate freeze**: hashed manifest, `model_execution_authorized: false` | Committed | Authorization review |
 | 8 | **Pre-execution authorization**: independent review; a single-diff commit flips the boolean | User authorizes | Execution |
 | 9 | **Execution**: 10 cells, acquisition gate, primary/secondary evaluation, one pass | Raw outputs persisted | Analysis |
@@ -183,11 +185,11 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 
 ## J. Current next action
 
-Project head completes a bounded independent review of R1, then scopes implementation tranche I2 (primary gates P1, P2, P4(iii)-(iv) and P6 case-selection logic, tested on synthetic fixtures only; running P6 on the real primary slots is Attempt 004 construction and stays unauthorized) as exactly one Codex task.
+Project head scopes implementation tranche I3: training-side gates under R1 + R2 (P3 budget and token parity, P4(i)-(v) with the R2-A exclusions and the DOMAIN_DISJOINT exemption, the R2-B training-case selector, P5 function-level novelty), validated with synthetic seeds only. Running the selector with the construction seed is Attempt 004 construction and stays unauthorized.
 
-- **Agent:** the project head (Claude Opus 5.5) scopes I2; Codex executes it as a separately authorized task.
-- **Type:** REVIEW + DESIGN/PROMPT.
-- **Still forbidden:** candidate construction, Attempt 004, hidden-case construction, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
+- **Agent:** the project head (Claude Opus 5.5) scopes I3; Codex executes it as a separately authorized task.
+- **Type:** DESIGN/PROMPT.
+- **Still forbidden:** candidate construction, Attempt 004, hidden-case construction, any draw with the construction seed, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
 
 Update this section after every major milestone.
 
