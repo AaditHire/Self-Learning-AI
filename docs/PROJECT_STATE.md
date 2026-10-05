@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `841f5ca4a7b829fb87b7667315de89f0af2cacc2` (the commit before this handoff; the handoff commit adds only this file, `CLAUDE.md`, `AGENTS.md` and a README status line)
-Last substantive state review: 2026-10-05 (Opus takeover review plus the specification-level coverage feasibility audit)
-Current project-head model: Claude Sonnet (Opus as escalation)
+Last verified repository HEAD: `daf6c89c8995f2d4cd80816a7fa29b91982648cb`
+Last substantive state review: 2026-10-05
+Current project-head model: Claude Sonnet (Opus as optional second opinion)
 Current execution agent: Codex
-Current phase: **Phase 3C-CONF1 — methodology reopened; coverage re-baseline required. No implementation, candidate construction or model execution is authorized.**
+Current phase: **methodology reopened; R1 re-baseline amendment drafted (PROPOSED, unfrozen), awaiting project-head review; no implementation, candidate construction or model execution authorized**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -87,7 +87,9 @@ Definite-blocker union: **56/64** evaluation specifications (all 32 primary, all
 - Implementation of graph-v2/B1/D2/wire/RO/E5 machinery is **stopped**; building it would only produce a deterministic coverage FAIL.
 - The wire-format proposal is **not to be frozen** (its two narrow repairs were reviewed as correct, but they serialize a design that cannot pass).
 - **Attempt 004 remains nonexistent and unauthorized.** No candidate construction, model loading, training or evaluation.
-- A **consolidated CONF1 methodology re-baseline** is required before any further implementation. It must decide, prospectively and before any new candidate is generated: (1) the exact treatment construct (is conjunction the treatment?); (2) how OR in G1/G4 is handled; (3) the granularity of coverage keys (operator vs typed role vs exact values); (4) whether Structural Transfer and the sanity offset-3 variant block or are descriptive; (5) which of the existing coverage/accounting layers are retained, simplified or superseded. These are Opus-escalation decisions (§M) requiring user authorization.
+- A **consolidated CONF1 methodology re-baseline** is drafted for prospective project-head review. Decided by the project head and recorded in research/protocols/phase3c_conf1_rebaseline_r1_proposed.md (PROPOSED).
+
+**Second specification defect:** `research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` records 8 of 16 frozen array primary slots as degenerate; array G3 admits only 2 distinct non-degenerate functions. R1 proposes repaired array role maps and the array G3-to-G3P substitution; all 16 proposed array slots are non-degenerate and pairwise distinct, while numeric slots and the primary count remain unchanged.
 
 ## E. What is frozen vs proposed vs historical
 
@@ -142,7 +144,7 @@ VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
 5. **Claim conservatism.** Level B until preregistered evidence supports more. State limitations with every result.
 6. **Fail closed on consequential ambiguity.** If authority does not uniquely determine a scientific behavior, STOP and surface it; never resolve it inside implementation.
 7. **Separate the stages:** methodology/authority → implementation → candidate construction → candidate audit/freeze → execution authorization → execution → analysis. Passing one stage never authorizes the next.
-8. **Model execution requires an explicit, separate user authorization** recorded as a JSON boolean in a frozen manifest.
+8. Model execution requires a frozen manifest with an authorized boolean, set only after project-head readiness review and the user's one-line confirmation.
 
 ## H. Simplification policy
 
@@ -157,7 +159,7 @@ The takeover review concluded that the coverage machinery became disproportionat
 - Hidden-case discrimination (E6); consumed-suite overlap reporting (E2/E4).
 - Acquisition gate, five seeds, frozen estimand/threshold/bootstrap, one-pass execution, atomic persistence, boolean authorization.
 
-**Historical complexity that may be replaced (recommended by the Opus review; NOT yet decided):** the occurrence-level typed canonical graph (G-v2), the wire format, B1 binding, D2 four-bucket source accounting, the REFERENCE_ONLY catalog/interface, and the counterfactual intervention engine (V3.5). A plausible replacement is a template-level coverage argument plus mechanical per-instance conformance to template and simple statement-level mutation liveness. Consumed-suite similarity gates could become descriptive (CONF1 adapters never train on consumed suites, so these protect only against designer bias), and Structural Transfer could become non-blocking and descriptive.
+**Simplification decisions:** Decided in R1 (proposed, unfrozen); the frozen documents remain operative until R1 is frozen. R1 §§4–6 and §9 propose catalog conformance and statement-deletion liveness in place of the typed canonical graph, wire format, B1, D2, REFERENCE_ONLY and counterfactual intervention machinery; E2 becomes descriptive and Structural Transfer becomes non-blocking and descriptive.
 
 Until the re-baseline is frozen, the frozen documents in §E remain the operative authorities. Do not declare them obsolete, and do not implement either the old stack or a replacement.
 
@@ -165,8 +167,8 @@ Until the re-baseline is frozen, the frozen documents in §E remain the operativ
 
 | # | Step | Completion condition | Unlocks |
 |---|---|---|---|
-| 1 | **Re-baseline decision brief** (options plus recommendation for the five decisions in §D) | User decides each point | Step 2 |
-| 2 | **Consolidated re-baseline amendment** drafted (one document), independently reviewed and frozen prospectively; must include an on-paper feasibility check that the frozen populations can pass it | Freeze manifest committed | Implementation |
+| 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
+| 2 | **IN PROGRESS — Consolidated re-baseline amendment**; draft and non-model feasibility evidence committed; project-head review and a single freeze task next | Freeze manifest committed | Implementation |
 | 3 | **Implementation**: builder update, compact coverage/E-gate auditors, CONF1 runner/evaluator/analyzer adapted from DEV2R | Code matches frozen spec; reviewed diffs | Validation |
 | 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
 | 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
@@ -178,25 +180,25 @@ Until the re-baseline is frozen, the frozen documents in §E remain the operativ
 
 ## J. Current next action
 
-**Exactly one:** prepare the **CONF1 re-baseline decision brief**: for each of the five decisions in §D, state the options, the scientific trade-offs (construct validity, symmetry, feasibility, explainability) and a recommendation, and confirm feasibility on paper against the frozen 184-specification population.
+Project head reviews the committed R1 draft and independently re-runs the specification enumeration; then one Codex task freezes R1 (or revises it).
 
-- **Agent:** project head escalated to **Opus** (it changes treatment and coverage semantics, §M). Delivered to the user in conversation; it is written into the repository only after the user decides, via a later single Codex document task.
-- **Type:** READ-ONLY analysis / DOCUMENT.
+- **Agent:** Claude Sonnet reviews; Codex executes a separately scoped freeze or revision task afterward.
+- **Type:** READ-ONLY review / DOCUMENT.
 - **Still forbidden:** freezing the wire proposal; implementing graph-v2/B1/D2/RO/E5 or any replacement; modifying frozen authorities; constructing Attempt 004 or any candidate; model loading, training, inference or evaluation; reading prohibited data.
 
 Update this section after every major milestone.
 
 ## K. Agent workflow
 
-- **Claude Sonnet**: project brain and reviewer. Reads this file and relevant authorities, reviews results, decides the next action and writes Codex prompts.
-- **Codex**: execution agent. Edits files, implements, tests and reports exactly what it did. Not a scientific decision-maker.
-- **User**: authorization boundary for methodology changes, freezes and any model execution.
-- **Opus**: escalation for consequential methodology and statistics decisions (§M).
+- **Claude Sonnet**: project head, scientific decision-maker and reviewer under §M. Reads authorities, reviews results, decides the next action and writes Codex prompts.
+- **Codex**: execution agent. Executes the exact authorized scope and reports; stops on ambiguity and never chooses a scientific rule.
+- **User**: exceptional decisions in §M and the final model-execution one-line confirmation after project-head readiness review.
+- **Opus**: optional second opinion when Claude independently judges a consequential issue needs it.
 
 Loop:
 1. Sonnet reads `docs/PROJECT_STATE.md` and the authorities relevant to the current step.
 2. Sonnet reviews the previous result.
-3. Sonnet decides exactly one next action (or escalates).
+3. Sonnet decides exactly one next action; an Opus second opinion is optional under §M.
 4. Sonnet gives one complete Codex prompt: expected repository state, scope, allowed files, allowed execution, STOP conditions, validation, then stop.
 5. Codex executes and reports.
 6. The user returns the result.
@@ -212,9 +214,11 @@ Use these labels when provenance matters:
 - `REPORTED_BY_CODEX`: stated in a Codex report and not yet independently checked.
 - `INFERENCE`: reasoning from verified facts; not itself verified.
 
-## M. Escalate to Opus when
+## M. Decision authority
 
-Escalate when a decision could change any of: the research question; the treatment or its definition; the training or evaluation populations; the primary endpoint; preregistered statistics, thresholds or gates; coverage semantics or key granularity; leakage or holdout policy; the claim level; or the interpretation of a consequential positive or negative result. Routine implementation review, test review and documentation stay with Sonnet.
+Claude Sonnet decides scientific and methodology questions (treatment, coverage, gates, population repairs and analysis) within the research objective and Level B claim boundary. Decisions stay prospective, preserve negative results, avoid prohibited data and outcome-dependent changes, and fail closed on genuine ambiguity. Codex stops on ambiguity and reports it.
+
+Ask the user only for: (1) a fundamental research-objective change; (2) a genuine value or preference choice that cannot be settled scientifically; (3) major external cost or irreversible consequences, including final confirmatory model-execution authorization after project-head readiness review, presented as a one-line confirmation because it consumes the suite; (4) a choice Claude cannot defensibly determine from the evidence. Opus is an optional second opinion only when Claude independently judges a consequential issue needs it.
 
 ## State update protocol
 

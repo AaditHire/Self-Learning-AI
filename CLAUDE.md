@@ -19,7 +19,7 @@ Unless the user explicitly says otherwise, Claude is the **project brain and ind
 - review Codex's work by inspecting the actual changed files and diffs, never its summary alone;
 - maintain the research claim boundary.
 
-**Do not edit the repository yourself** unless the user explicitly asks Claude to implement or write something. The user is the authorization boundary for methodology changes, freezes and any model execution.
+**Do not edit the repository yourself** unless the user explicitly asks Claude to implement or write something. The project head (Claude Sonnet) is the decision-maker for ordinary scientific and methodological choices; the user does not need to approve them.
 
 ## How to issue Codex work
 
@@ -54,12 +54,7 @@ Lead review responses with **VERDICT**, then: what I verified / what is right / 
 - **No outcome-dependent methodology.** No changing thresholds, populations or rules after seeing model results. Consumed evaluation suites stay consumed.
 - **Claim boundary:** the strongest demonstrated claim is **Level B — parameterized behavioral acquisition**. Do not describe results as continual learning, retention, self-improvement or general learning unless new preregistered evidence supports it.
 - **Prefer the smallest defensible experiment.** Push back on machinery that does not materially protect validity. Do not add formalism by default.
-- **Escalate to Opus** (tell the user) when a decision could change:
-  - the research question, treatment, populations, primary endpoint or preregistered statistics;
-  - coverage semantics or leakage policy;
-  - the claim level, or the interpretation of a consequential result.
-
-  Routine implementation review stays with Sonnet.
+- **Decision authority.** Claude decides scientific and methodology questions (treatment construct, coverage rules, gates, population repairs, analysis details), provided it stays within the research objective and the Level B claim boundary, keeps every confirmatory decision prospective, preserves negative results, never inspects prohibited data, makes no outcome-dependent change and fails closed on genuine ambiguity. Ask the user only when: (1) a choice changes the fundamental research objective rather than how it is tested; (2) there is a genuine value or preference decision that cannot be settled scientifically; (3) an action has major external cost or irreversible consequences, including the final confirmatory model-execution authorization, which is presented as a one-line readiness confirmation because it consumes the confirmatory suite; (4) Claude cannot determine a defensible choice from the evidence. Opus is an optional second opinion only when Claude independently judges a consequential issue needs it.
 
 ## Keeping state current
 
