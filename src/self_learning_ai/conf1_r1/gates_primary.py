@@ -221,8 +221,9 @@ def _population(slots):
     return slots, domain
 
 
-def p6_check(domain_slots, inputs, runner=CompilerRunner) -> dict:
+def p6_check(domain_slots, inputs, runner=CompilerRunner, excluded_mutants=()) -> dict:
     slots, domain = _population(domain_slots)
+    excluded = set(excluded_mutants)
     inputs = tuple(str(value) for value in inputs)
     if len(inputs) != 5:
         raise ValueError("P6 requires exactly five inputs")
@@ -240,6 +241,14 @@ def p6_check(domain_slots, inputs, runner=CompilerRunner) -> dict:
     for slot, source in zip(slots, sources):
         identifier = slot["task_id"]
         matrix = kill_matrix(source, inputs, engine)
+        if excluded:
+            matrix["excluded_r2a"] = [row for row in matrix["mutants"]
+                                      if (identifier, row["index"]) in excluded]
+            matrix["mutants"] = [row for row in matrix["mutants"]
+                                 if (identifier, row["index"]) not in excluded]
+            matrix["unkilled"] = [index for index in matrix["unkilled"]
+                                  if (identifier, index) not in excluded]
+            matrix["status"] = "FAIL" if matrix["unkilled"] else "PASS"
         expected[identifier] = [primary_expected(slot, stdin) for stdin in inputs]
         outputs[identifier] = [outcome[1] for outcome in matrix["reference_outcomes"]]
         for stdin, value, output in zip(inputs, expected[identifier], outputs[identifier]):
@@ -251,13 +260,18 @@ def p6_check(domain_slots, inputs, runner=CompilerRunner) -> dict:
         unkilled.extend({"id": identifier, "index": index} for index in matrix["unkilled"])
     unseparated = [(a["task_id"], b["task_id"]) for a, b in itertools.combinations(slots, 2)
                    if outputs[a["task_id"]] == outputs[b["task_id"]]]
-    return {"status": "FAIL" if unseparated or unkilled or classes["status"] == "FAIL" else "PASS",
+    report = {"status": "FAIL" if unseparated or unkilled or classes["status"] == "FAIL" else "PASS",
             "domain": domain, "inputs": list(inputs), "expected_outputs": expected,
             "reference_outputs": outputs, "unseparated_pairs": unseparated,
             "unkilled_mutants": unkilled, "case_classes": classes, "kill_matrices": kills,
             "pair_requirements": len(slots) * (len(slots) - 1) // 2,
-            "mutant_requirements": sum(matrix["counts"]["total"] for matrix in kills.values()),
+            "mutant_requirements": sum(matrix["counts"]["total"] - len(matrix.get("excluded_r2a", []))
+                                       for matrix in kills.values()),
             "runner_calls": engine.calls - before}
+    if excluded:
+        report["excluded_r2a"] = [{"id": identifier, **row} for identifier, matrix in kills.items()
+                                  for row in matrix["excluded_r2a"]]
+    return report
 
 
 def array_pool(seed: int) -> list[str]:
@@ -266,7 +280,8 @@ def array_pool(seed: int) -> list[str]:
     return ["0|0|0|0", *("|".join(str(rng.randint(-16, 16)) for _ in range(4)) for _ in range(4096))]
 
 
-def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=CompilerRunner) -> dict:
+def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=CompilerRunner,
+                       excluded_mutants=()) -> dict:
     """C5 cumulative greedy, lowest-index ties, then compiler verification.
 
     Scores omit already satisfied requirements, exactly preserving cumulative
@@ -274,6 +289,7 @@ def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=Com
     Smaller explicit pools are supported for synthetic fault-injection fixtures.
     """
     slots, domain = _population(array_slots)
+    excluded = set(excluded_mutants)
     pool = list(pool)
     if domain != "array_reduction" or len(pool) < 5 or pool[0] != "0|0|0|0":
         raise ValueError("Array selector requires an ordered pool beginning with zero and at least five entries")
@@ -283,7 +299,8 @@ def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=Com
     sources = [primary_source(slot) for slot in slots]
     pairs = list(itertools.combinations(range(len(slots)), 2))
     mutations = [(reference, index, mutant) for reference, source in enumerate(sources)
-                 for index, _, mutant in interp.enumerate_mutants(source)[0]]
+                 for index, _, mutant in interp.enumerate_mutants(source)[0]
+                 if (slots[reference]["task_id"], index) not in excluded]
     total = len(pairs) + len(mutations)
     full = (1 << total) - 1
 
@@ -323,7 +340,7 @@ def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=Com
         covered |= best_mask
         counts.append(covered.bit_count())
     inputs = [pool[index] for index in selected]
-    verification = p6_check(slots, inputs, verifier_engine)
+    verification = p6_check(slots, inputs, verifier_engine, excluded_mutants=excluded)
     for source in [*sources, *(mutant for _, _, mutant in mutations)]:
         for stdin in inputs:
             predicted = oracle_engine.run(source, stdin)
@@ -339,6 +356,8 @@ def select_array_cases(array_slots, pool, oracle=InterpreterRunner, verifier=Com
               "unkilled_mutants": verification["unkilled_mutants"], "case_classes": verification["case_classes"],
               "compiler_verification_runs": verifier_engine.calls, "disagreements": 0,
               "oracle_runs": oracle_engine.calls, "verification": verification}
+    if excluded:
+        report["excluded_r2a"] = verification["excluded_r2a"]
     if verification["status"] != "PASS":
         raise GateStop("selected five cases do not meet P6", {"kind": "selection_unsatisfied", **report})
     return report
