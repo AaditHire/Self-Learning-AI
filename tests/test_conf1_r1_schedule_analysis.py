@@ -235,18 +235,18 @@ def test_t3_acquisition(capsys):
         set_pass(row, False)  # Exact-target flags deliberately remain true.
     gate = analysis.acquisition_gate([r for r in records if r["suite"] == "training"])
     assert gate["passed"] is False and gate["cells"][0]["passed"] == 53
-    report = analysis.analyze(records, tasks)
-    assert report["label"] == report["primary"]["label"] == analysis.INDETERMINATE
+    report = analysis.analyze([r for r in records if r["suite"] == "training"], tasks)
+    assert report["label"] == analysis.INDETERMINATE and "primary" not in report
     assert report["descriptive"]["own_training"]["exact_target"]["per_seed"][str(schedule.SEEDS[0])]["isolated"]["passed"] == 60
     first_primary = next(r for r in records if r["group"] == "novel_composition")
     primary_missing = [r for r in records if r is not first_primary]
-    with pytest.raises(GateStop, match="incomplete"):
+    with pytest.raises(GateStop, match="confirmatory records forbidden"):
         analysis.analyze(primary_missing, tasks)
     # Inclusive acquisition boundary.
     set_pass(training[6], True)
     assert analysis.acquisition_gate([r for r in records if r["suite"] == "training"])["passed"] is True
     emit(capsys, "I5a T3d", {"53_semantic_60_exact": report["label"], "54_semantic": "ACQUISITION_PASS",
-                           "missing_primary_even_when_acquisition_fails": "STOP"})
+                           "confirmatory_supplied_when_acquisition_fails": "STOP"})
 
 
 @pytest.mark.parametrize("fault", ["missing", "duplicate", "unknown_task", "unknown_seed", "wrong_block",

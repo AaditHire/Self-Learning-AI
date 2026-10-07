@@ -324,8 +324,17 @@ def descriptive_blocks(records, tasks):
 
 
 def analyze(records, tasks):
+    records = list(records)
+    training_records = [r for r in records if isinstance(r, dict) and r.get("suite") == "training"]
+    acquisition = acquisition_gate(training_records)
+    if not acquisition["passed"]:
+        if len(training_records) != len(records):
+            _stop("confirmatory records forbidden after failed acquisition")
+        indexed = _index(training_records, TRAINING, _keys("training", TRAINING))
+        return {"label": INDETERMINATE, "acquisition": acquisition,
+                "descriptive": {"own_training": _descriptive(indexed, {})["own_training"]},
+                "counts": {"records": len(indexed), "training_slots": 60}}
     indexed, catalog = validate_records(records, tasks)
-    acquisition = _acquisition(indexed)
     primary = _primary(indexed, catalog, acquisition["passed"])
     return {"label": primary["label"], "acquisition": acquisition, "primary": primary,
             "sanity": _sanity(indexed, catalog), "descriptive": _descriptive(indexed, catalog),

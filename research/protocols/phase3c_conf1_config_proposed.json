@@ -1,0 +1,136 @@
+{
+  "phase": "3C-CONF1",
+  "status": "PROPOSED_NOT_FROZEN",
+  "purpose": "Prospective R1/R2 composition-transfer confirmation",
+  "seeds": [
+    20280117,
+    20280223,
+    20280329,
+    20280411,
+    20280507
+  ],
+  "conditions": [
+    "isolated",
+    "composition"
+  ],
+  "base_weights": {
+    "id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+    "revision": "488639f1ff808d1d3d0ba301aef8c11461451ec5",
+    "local_path": ".models/Qwen2.5-Coder-3B-Instruct-488639f",
+    "weight_file_sha256": {
+      "model-00001-of-00002.safetensors": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39",
+      "model-00002-of-00002.safetensors": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+    },
+    "base_policy": "immutable; adapters only; never merge"
+  },
+  "training": {
+    "method": "supervised QLoRA",
+    "quantization": "bitsandbytes NF4 4-bit",
+    "double_quantization": true,
+    "compute_dtype": "float16",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "epochs": 3,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "max_length": 320,
+    "gradient_checkpointing": true,
+    "optimizer": "bitsandbytes PagedAdamW8bit",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "scheduler": "linear",
+    "warmup_steps": 5,
+    "checkpoint_selection": "Final epoch a priori, no performance-based selection"
+  },
+  "evaluation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_input_tokens": 8192,
+    "max_new_tokens": 512,
+    "regression_max_new_tokens": 32,
+    "retry_policy": "none",
+    "manual_repair": false,
+    "compiler_timeout_seconds": 3,
+    "output_limit_bytes_per_stream": 65536
+  },
+  "compiler": {
+    "path": ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar",
+    "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+    "java": ".tools/jdk-25.0.1+8/bin/java.exe"
+  },
+  "tokenizer_file_sha256": {
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+  },
+  "prompt_system_template": "prompts/phase1t_system.txt",
+  "model_execution_authorized": false,
+  "runtime_root": ".runtime/phase3c_conf1/",
+  "prompt_user_template": "prompts/phase1t_user_template.txt",
+  "schedule": {
+    "rule_reference": "phase3c_conf1_implementation_clarifications_c12_c14.md:C12",
+    "epoch_shuffle_seed": "paired_training_seed + 100003 * epoch",
+    "exposures_per_cell": 180,
+    "optimizer_steps_per_cell": 24,
+    "checkpoint_epoch": 3
+  },
+  "evaluation_order": {
+    "rule_reference": "phase3c_conf1_implementation_clarifications_c12_c14.md:C13",
+    "evaluation_seed": 20290307,
+    "task_seed": "first 8 bytes big-endian SHA-256(20290307|<training_seed>|<task_id>) modulo 2^32",
+    "own_training": "ascending neutral slot_id",
+    "confirmatory": [
+      "primary",
+      "primary",
+      "sanity",
+      "structural"
+    ],
+    "dropped_secondary": "skip positions in full 64-position order"
+  },
+  "bootstrap": {
+    "rule_reference": "phase3c_conf1_implementation_clarifications_c12_c14.md:C14",
+    "seed": 20290119,
+    "replicates": 10000,
+    "draw_order": [
+      "seeds",
+      "numeric_blocks",
+      "array_blocks"
+    ],
+    "seed_draws": 5,
+    "blocks_per_domain": 4,
+    "tasks_per_block": 4,
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_method": "linear"
+  },
+  "acquisition": {
+    "minimum_semantic_passes": 54,
+    "training_tasks_per_cell": 60,
+    "cells_required": 10
+  },
+  "primary": {
+    "tasks": 32,
+    "sum_E_threshold": 32,
+    "lower_bound_strictly_greater_than": 0
+  }
+}
