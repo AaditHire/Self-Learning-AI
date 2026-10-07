@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `a58ceb1a1017064a15560bb4ed51c9eca44e7d18`
-Last substantive state review: 2026-10-05
+Last verified repository HEAD: `034ff88d2feb72155ea4f1cc51cd351ac455dcf6`
+Last substantive state review: 2026-10-07
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **methodology R1 + R2 FROZEN; implementation tranches I1 and I2 accepted (commits 36b9298, 6192040); I3 next; no candidate construction or model execution authorized**
+Current phase: **methodology R1 + R2 FROZEN; implementation I1-I5b accepted (step 3 complete); step 4 (synthetic validation and hardening) next; no candidate construction or model execution authorized**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -35,7 +35,7 @@ This file is the single source of truth for current project state. It summarizes
 | 3C-DEV2R v2 | ISOLATED vs COMPOSITION (development) | Novel Composition 10/48 vs 38/48 (+58.3 pp, all 3 seeds positive); Structural Transfer 0/16 everywhere; Primitive Sanity seed differences −37.5 to +62.5 pp | Motivates CONF1; development-consumed |
 | CONF1 Attempts 001–003 | Pre-freeze candidate construction (no model use) | 001: GOCO syntax error; 002: sanity references matched a consumed template; 003: 174 unadjudicated coarse-AST flags and incomplete task-essential coverage audit | All rejected, permanently non-confirmatory |
 | CONF1 methodology (since 003) | Coverage-v2 (abandoned) → Coverage-v3 and ~10 frozen amendments | See §E | Methodology became very large (§H) |
-| CONF1 feasibility audit (2026-10-05) | Can the frozen coverage rules pass on the frozen task population? | **No** — definite blockers in 56/64 evaluation specifications | **Current blocker (§D)** |
+| CONF1 feasibility audit (2026-10-05) | Can the frozen coverage rules pass on the frozen task population? | **No** — definite blockers in 56/64 evaluation specifications | **Resolved historical blocker (§D)** |
 
 Reports: `research/results/PHASE_2B/report.md`, `PHASE_3A/report.md`, `PHASE_3B/report.md`, `PHASE_3C/README.md`, `PHASE_3C_DEV1/report.md`, `PHASE_3C_DEV2_EXECUTION_STOP/report.md`, `PHASE_3C_DEV2R_V2/report.md`, `PHASE_3C_CONF1_PREFREEZE/STOP_report.md`. Full registry: `docs/research/EXPERIMENT_REGISTRY.md`.
 
@@ -59,37 +59,14 @@ All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**
 - **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
 - **Claim limitation (R1 §2).** Even a positive result supports only: pair-joint indicator-product practice transfers, relative to independent additive practice, to new multi-role multi-term counting programs built from that idiom, in GOCO, under this budget, with one base model (Level B). ISOLATED has no conjunction exposure, so a positive result partly reflects availability of the joint idiom. It does not support general compositional ability, structural transfer, retention or continual learning.
 
-**Status of this design: R1 methodology FROZEN.** No executable CONF1 config exists. Implementation tranche I1 is accepted (§F); candidate construction and model execution remain unauthorized.
+**Status of this design: R1 + R2 FROZEN.** The execution config exists only as `research/protocols/phase3c_conf1_config_proposed.json` (status `PROPOSED_NOT_FROZEN`, `model_execution_authorized: false`); candidate construction and model execution remain unauthorized.
 
-## D. Current scientific blocker
+## D. Resolved blocker (historical)
 
-**Finding** (VERIFIED_FROM_ARTIFACT: `research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md`, commit `841f5ca`; independently confirmed against the frozen text by the Opus review). Verdict: **`FROZEN_STACK_COVERAGE_INFEASIBLE_AT_SPECIFICATION_LEVEL`**.
-
-The frozen fairness rule (Coverage-v3 V3.4/V3.6) requires every evaluation-essential atomic capability to be present and active in **both** training conditions; the only exception is the COMPOSITION-only local pair-joint relation ("J"). Symmetric absence is explicitly FAIL. The frozen canonical graph recipe v2 (G) defines those capabilities at a fine typed granularity. Applying G to the frozen training and evaluation constructions gives:
-
-| Blocker | Affected specifications | Status |
-|---|---|---|
-| Independent AND operator required by every primary graph; no training program (either condition) or predicate emits AND; J explicitly cannot satisfy it (G §9, §20; atomic amendment §5) | 32/32 primary | **Proven** (NEITHER) |
-| OR required by G1/G4; absent from both conditions; the frozen OR≡`indicator(add>0)` equivalence is not realized in training | 16 primary | **Proven** |
-| Boolean operand edges into AND/OR | 32 primary | **Proven** |
-| PREFIX: prior-count state read into a MUL operand; MUL(indicator, int) | 8 structural | **Proven** |
-| TWO_PASS: completed-count reads into a MUL operand | 8 structural | **Proven** |
-| Sanity offset-3 accumulator initial value (training offsets are 0,2,4,6,8) | 8 sanity | **Proven** |
-| ADD of two indicators (G2/G3/G4) absent from COMPOSITION; ISOLATED equality underdetermined | 24 primary | COMPOSITION absence proven; full key underdetermined |
-| Mixed/accumulator ADD refinements, composite indicator roles, structural count roles | various | UNDERDETERMINED by frozen text |
-
-Definite-blocker union: **56/64** evaluation specifications (all 32 primary, all 16 structural, 8 sanity). The audit assessed only key-profile existence; activity, case witnesses and source mapping were not assessed, so the remaining 8 are not shown to pass.
-
-**Why this matters scientifically.** The conflict is not a serialization detail. The evaluation tasks need *both* treatment operators (multiplying indicators for conjunction, adding indicator terms) plus Boolean OR, which neither condition trains. Under the frozen rules, conjunction is simultaneously "the treatment" (J, COMPOSITION-only) and "an ordinary capability both conditions must have" (independent AND). Very fine typing (e.g., an exact offset value) also turns trivially novel details into coverage failures. Any implementation that "passes" this gate would have to reinterpret frozen rules, which would be an implementation-dependent scientific choice.
-
-**Consequences (accepted by the project head):**
-
-- Implementation of graph-v2/B1/D2/wire/RO/E5 machinery is **stopped**; building it would only produce a deterministic coverage FAIL.
-- The wire-format proposal is **not to be frozen** (its two narrow repairs were reviewed as correct, but they serialize a design that cannot pass).
-- **Attempt 004 remains nonexistent and unauthorized.** No candidate construction, model loading, training or evaluation.
-- A **consolidated CONF1 methodology re-baseline** is adopted and FROZEN by research/protocols/phase3c_conf1_rebaseline_r1_freeze.json.
-
-**Second specification defect:** `research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` records 8 of 16 frozen array primary slots as degenerate; array G3 admits only 2 distinct non-degenerate functions. R1 (frozen) adopts repaired array role maps and the array G3-to-G3P substitution; all 16 proposed array slots are non-degenerate and pairwise distinct, while numeric slots and the primary count remain unchanged.
+The accepted audit verdict was **`FROZEN_STACK_COVERAGE_INFEASIBLE_AT_SPECIFICATION_LEVEL`** (`research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md`, commit `841f5ca`), with a definite-blocker union of **56/64** evaluation specifications.
+`research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` also recorded 8 of 16 array primary slots as degenerate; array G3 admitted only 2 distinct non-degenerate functions.
+R1 (freeze `622b8cd`) repaired the array population; R1 and R2 (freeze `e0e48de`) replaced the coverage machinery and resolved the blocker.
+Current blocker: none scientific. Remaining work is validation, candidate construction and freeze (§I).
 
 ## E. What is frozen vs proposed vs historical
 
@@ -100,6 +77,10 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 | CONF1 re-baseline R1 | `phase3c_conf1_rebaseline_r1_proposed.md` + `phase3c_conf1_rebaseline_r1_freeze.json` | Current methodology authority (treatment, catalog, gates, array population repair) | FROZEN |
 | CONF1 amendment R2 | `phase3c_conf1_rebaseline_r2_proposed.md` + `phase3c_conf1_rebaseline_r2_freeze.json` | Domain-equivalent mutant list, requirement-directed training-case selection, K7 descriptive | FROZEN |
 | R1 implementation clarifications C1–C6 | `phase3c_conf1_r1_implementation_clarifications.md` | Construction seed, compiler gate oracle, killed mutant, P4 scope, array and numeric primary cases | PROJECT-HEAD CLARIFICATIONS (commit 6192040) |
+| R2 implementation clarifications C7–C9 | `phase3c_conf1_r2_implementation_clarifications.md` | C7 Statement kinds and K-row liveness; C8 P3 implementation; C9 Condition-neutral model-facing identifiers | PROJECT-HEAD CLARIFICATIONS (commit ad29adb) |
+| Implementation clarifications C10–C11 | `phase3c_conf1_implementation_clarifications_c10_c11.md` | C10 P7/E4 overlap; C11 secondary tasks | PROJECT-HEAD CLARIFICATIONS (commit 410e7f2) |
+| Implementation clarifications C12–C14 | `phase3c_conf1_implementation_clarifications_c12_c14.md` | C12 training schedule; C13 evaluation order/RNG/scoring; C14 analysis and bootstrap | PROJECT-HEAD CLARIFICATIONS (commit 9002fd7) |
+| CONF1 proposed execution config | `phase3c_conf1_config_proposed.json` | Execution config (hyperparameters copied from DEV2, CONF1 seeds, C12-C14 references) | PROPOSED_NOT_FROZEN (commit 034ff88) |
 | CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | RETAINED; amended by R1 |
 | Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | RETAINED; amended by R1 |
 | AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | DEMOTED to descriptive |
@@ -117,28 +98,35 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 | Development readiness evidence | `research/implementation_notes/` (~325 MB) | Development-only tranches (Boolean mapping, state, essentiality, value/output, RO) | DEVELOPMENT_ONLY; predates G/B1/D2; never scientific evidence |
 | Coverage-v2 (`phase3c_conf1_coverage_v2*`), AST v1 (`phase3c_conf1_ast_adjudication.md`), and superseded v1 proposals (`phase3c_conf1_canonical_contract_graph_recipe_proposed.md`, `phase3c_conf1_direct_support_accounting_amendment_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed.md`) | `research/protocols/` | Earlier methodology | HISTORICAL / SUPERSEDED |
 | Attempts 001–003 | `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_00{1,2,3}/` | Rejected candidates | HISTORICAL; never confirmatory; never select Attempt 004 content from their outcomes |
-| CONF1 config, schedule, manifest, authorization field | — | Required before execution | MISSING |
+| Frozen candidate manifest with `model_execution_authorized` | produced at Attempt 004 construction and freeze | Required before execution | MISSING (no candidate exists) |
 
 ## F. Current implementation state
 
-VERIFIED_FROM_REPOSITORY at `841f5ca`. Code status, not protocol status.
+VERIFIED_FROM_REPOSITORY at `034ff88`. Code status, not protocol status.
 
-After R1, `src/self_learning_ai/conf1_v3/` is non-authoritative. R1 code lives in `src/self_learning_ai/conf1_r1/` (tranche I1 accepted, commit 36b9298): `primary.py` (hash-verified loader of the 32 primary slots with the R1 §7 array role maps; canonical primary references whose accumulations are spelled `total+=(hitX*hitY).`; expected-output function) and `interp.py` (single-statement-deletion mutator and fail-closed subset interpreter; 0 disagreements with the pinned compiler over 4,780 runs covering 32 references, 804 mutants and 120 training programs). The interpreter is a cross-checked accelerator only: gate verdicts on compilation, timeout and output come from the pinned compiler. Tranche I2 is accepted (commit 6192040): `gates_primary.py` implements P1 (via the committed R1 audit definitions), P2/E1, a compiler-backed mutant-kill engine, P6 checks and the C5 array case selector, validated on synthetic inputs only; its synthetic dry run exposed the equivalent-mutant defect fixed by R2.
+Modules under `src/self_learning_ai/conf1_r1/` unless a full path is shown.
 
-**`src/self_learning_ai/conf1_v3/` (~7,200 lines, last changed 2026-10-02, before G/B1/D2 were frozen):**
+| Modules / scripts | Tranche | Accepted commit | Role |
+|---|---|---|---|
+| `primary.py`, `interp.py` | I1 | `36b9298` | Verified primary slots and canonical references; statement deletion and fail-closed subset interpreter |
+| `gates_primary.py` | I2 | `6192040` | R1 primary gates and deterministic selection; pinned compiler supplies gate verdicts |
+| `training.py` | I3 | `ad29adb` | R1+R2 training gates: P3, P4, R2-B case selector, P5 |
+| `overlap.py`, `secondary.py` | I4a | `410e7f2` | C10 P7/E4 overlap and read-only consumed inventory; C11 secondary definitions and compiler E1 |
+| `candidate.py` | I4b | `2670093` | Candidate builder, R2-A-aware P6 and synthetic dry run; construction requires explicit authorization |
+| `schedule.py`, `analysis.py` | I5a | `9002fd7` | C12/C13 schedule and orders; C14 analyzer; analysis acquisition path corrected in I5b (`034ff88`) |
+| `execution.py`; `scripts/train_phase3c_conf1.py`, `scripts/evaluate_phase3c_conf1.py`, `scripts/analyze_phase3c_conf1.py` | I5b | `034ff88` | Authorization check, create-only checkpoints and one-pass orchestration through injected model callables; real GPU paths written but never run |
 
-| Component (modules) | What it does | Classification |
-|---|---|---|
-| `goco.py`, `core_ir.py` | Parser and typed IR/bounded executor for the builder-generated GOCO subset | Partially reusable (useful for any simpler auditor) |
-| `contracts.py`, `contract_ir.py`, `requirements.py`, `requirement_mapping.py`, `requirement_verifier.py` | Pre-G Coverage-v3 contracts and requirement namespaces | STALE (pre-G key ontology) |
-| `boolean_mapping.py`, `boolean_regions.py`, `boolean_region_checker.py`, `canonical_transport.py`, `transport_verifier.py`, `typed_alignment.py`, `canonical_activity.py`, `semantic_ir.py` | Boolean-region equivalence proofs and transport to semantic keys | STALE; maps `&&` to the J relation, which G-v2 contradicts |
-| `state_*`, `essentiality_*`, `attribute_*`, `projection_*` | Development-only readiness kernels and verifiers | DEVELOPMENT_ONLY; stale |
-| `reference_only_*` | RO inventory/kernel/context/resolution | DEVELOPMENT_ONLY; paused |
-| `coverage.py`, `delegated.py`, `interfaces.py`, `provenance.py`, `binder.py` | Coverage findings, E1–E6 helpers, schema-v1 interfaces, 17-gate binder | STALE relative to B1/D2; binder concept reusable |
+All tranches were validated with synthetic inputs or a fake model only; the real training/generation code paths are statically reviewed only and have never executed.
+`src/self_learning_ai/conf1_v3/` is non-authoritative pre-R1 code, not used by `conf1_r1`.
+DEV2/DEV2R runners are reused by reference: `scripts/train_phase2a_qlora.py` (`TokenDataset`), `src/self_learning_ai/dev2r_evaluation.py` (`evaluate_task`), `src/self_learning_ai/benchmark.py` (`extract_source`).
 
-**Missing entirely:** graph-v2 builder, B1 producers, D2 accounting, wire serializer, E5 producer, CONF1 orchestration, and all CONF1 execution code (training runner, evaluator, scorer, acquisition gate, task-local RNG, atomic persistence/no-retry guard, analyzer with the frozen bootstrap). **No graph-v2/B1/D2 identifiers appear anywhere in `src/`, `scripts/` or `tests/`.**
+**Open hardening items (carried to step 4)**
 
-**Reusable from earlier phases:** `scripts/build_phase3c_conf1_data.py` (produced Attempts 001–003; will need changes after re-baseline), `scripts/phase3c_conf1_structural_overlap_v2.py`, `scripts/audit_phase3c_conf1_references.py` and `scripts/audit_phase3c_conf1_tokens.py` (E1/E2/E4/E3-token style audits), and the DEV2/DEV2R runners (`scripts/train_phase3c_dev2.py`, `scripts/evaluate_phase3c_dev2r.py`, `scripts/analyze_phase3c_dev2r_v2.py`), which executed 588 generations cleanly and are the natural template for CONF1 execution code.
+- H1 AUTHORIZED_STATUSES in execution.py admits the test status SYNTHETIC_EXECUTION_TEST_FIXTURE; production must admit only CANDIDATE_FROZEN.
+- H2 require_execution_authorization treats code_hashes and authority_hashes as optional; a frozen candidate must bind execution.py, the three CONF1 scripts, the reused DEV2/DEV2R modules, the proposed config and both prompt files, and authorization must refuse if any is unbound.
+- H3 A failed acquisition gate is recorded as an incident; run_analysis does not distinguish it from a genuine fault incident.
+- H4 No test checks that the training prompt (TokenDataset) and the evaluation prompt (execution.messages + chat template) render the identical prefix for every slot.
+- H5 The counted I5b pytest run reused a fixture built in an earlier run through an external, non-repository plugin; a clean plugin-free full run is still owed.
 
 ## G. Scientific principles (non-negotiable)
 
@@ -174,8 +162,8 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 |---|---|---|---|
 | 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
 | 2 | **DONE — R1 frozen (commit 622b8cd)** | Freeze manifest committed | Implementation |
-| 3 | **IN PROGRESS — implementation I1–I5** (I1, I2 accepted: 36b9298, 6192040; I3 next) | Code matches frozen spec; reviewed diffs | Validation |
-| 4 | **Synthetic/unit validation**: known-bad fixtures per gate, analyzer known-answer tests, fault injection, RNG-order invariance | All pass; no model | Dry run |
+| 3 | **DONE — implementation I1-I5b** (36b9298, 6192040, ad29adb, 410e7f2, 2670093, 9002fd7, 034ff88) | Code matches frozen spec; reviewed diffs | Validation |
+| 4 | **NEXT — synthetic validation and hardening (H1-H5)** | All pass; no model | Dry run |
 | 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
 | 6 | **Attempt 004 construction** (frozen ledger construction seed 20290123 per clarification C1; training cases per R2-B) and all audits | All gates PASS, or STOP and record | Freeze |
 | 7 | **Candidate freeze**: hashed manifest, `model_execution_authorized: false` | Committed | Authorization review |
@@ -185,11 +173,11 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 
 ## J. Current next action
 
-Project head scopes implementation tranche I3: training-side gates under R1 + R2 (P3 budget and token parity, P4(i)-(v) with the R2-A exclusions and the DOMAIN_DISJOINT exemption, the R2-B training-case selector, P5 function-level novelty), validated with synthetic seeds only. Running the selector with the construction seed is Attempt 004 construction and stays unauthorized.
+The project head scopes step 4: synthetic validation and hardening H1-H5 (§F), executed by Codex as a separately authorized task.
 
-- **Agent:** the project head (Claude Opus 5.5) scopes I3; Codex executes it as a separately authorized task.
+- **Agent:** the project head (Claude Opus 5.5) scopes step 4; Codex executes it.
 - **Type:** DESIGN/PROMPT.
-- **Still forbidden:** candidate construction, Attempt 004, hidden-case construction, any draw with the construction seed, model loading/training/inference/evaluation, reading prohibited data, editing frozen authorities.
+- **Still forbidden:** candidate construction, Attempt 004, any draw with construction seed 20290123, hidden-case construction, model loading/training/inference/evaluation, prohibited data, editing frozen authorities.
 
 Update this section after every major milestone.
 
@@ -207,7 +195,7 @@ Loop:
 4. The project head gives one complete Codex prompt: expected repository state, scope, allowed files, allowed execution, STOP conditions, validation, then stop.
 5. Codex executes and reports.
 6. The user returns the result.
-7. The project head inspects the actual diff or artifact, not just Codex's summary.
+7. The project head inspects the actual diff or artifact, not just Codex's summary, and reports with VERDICT, the per-dimension tracker and a progress bar for the current phase.
 8. This file is updated only when the state materially changes (see below).
 
 ## L. Verification language

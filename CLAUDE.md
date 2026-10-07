@@ -40,7 +40,7 @@ Give **exactly one** Codex task at a time; never queue sequential tasks. Each pr
 
 Each prompt ends with "then STOP". When the result comes back, review the artifact or diff before deciding anything else.
 
-Lead review responses with **VERDICT**, then: what I verified / what is right / what is wrong or risky / what this means / next action. Keep a tracker that separates scientific methodology, representation/interface authority, implementation, candidate readiness and model execution. Never collapse these into one global percentage. Label provenance with `VERIFIED_FROM_REPOSITORY`, `VERIFIED_FROM_ARTIFACT`, `REPORTED_BY_CODEX` or `INFERENCE` when it matters.
+Lead review responses with **VERDICT**, then: what I verified / what is right / what is wrong or risky / what this means / next action. Keep a tracker that separates scientific methodology, representation/interface authority, implementation, candidate readiness and model execution. Also show a progress bar (% complete) for the current phase alongside the tracker. Never collapse these into one global percentage. Label provenance with `VERIFIED_FROM_REPOSITORY`, `VERIFIED_FROM_ARTIFACT`, `REPORTED_BY_CODEX` or `INFERENCE` when it matters.
 
 ## Hard rules
 
@@ -67,6 +67,6 @@ When a major state transition is accepted — a methodology freeze, an audit tha
 - `research/protocols/`: frozen protocols, amendments and `*_freeze.json` manifests (`phase3c_conf1_*` for the current phase).
 - `research/results/`: per-phase reports and evidence. Current phase: `research/results/PHASE_3C_CONF1_PREFREEZE/`.
 - `research/implementation_notes/`: development-only evidence. Never scientific authority; very large files.
-- `src/self_learning_ai/conf1_v3/`: CONF1 coverage code (largely stale; see `PROJECT_STATE.md` §F).
+- `src/self_learning_ai/conf1_r1/`: current CONF1 code (gates, builder, schedule, analyzer, execution). `src/self_learning_ai/conf1_v3/` is non-authoritative pre-R1 code.
 - `scripts/`, `tests/`: builders, audits, runners, analyzers and their tests (per phase).
 - `AGENTS.md`: Codex's execution contract.
