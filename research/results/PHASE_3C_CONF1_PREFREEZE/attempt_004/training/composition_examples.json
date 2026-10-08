@@ -1,0 +1,722 @@
+[
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-01-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-01-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a position congruent to two modulo three; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-01-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-01-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-01-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and an odd position; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-01-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-01-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-01-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a position congruent to two modulo three; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-01-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-01-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-01-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and an odd position; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-01-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-01-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-01-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a position congruent to two modulo three; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-01-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-02-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-02-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and an odd position; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-02-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-02-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-02-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a positive position dividing the input; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-02-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-02-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-02-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and an odd position; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-02-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-02-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-02-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a positive position dividing the input; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-02-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-02-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-02-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and an odd position; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-02-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-03-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-03-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and an odd position; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-03-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-03-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-03-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a position in the first half; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-03-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-03-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-03-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and an odd position; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-03-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-03-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-03-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both an odd position and a position in the first half; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "odd_index",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-03-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%2==1) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-03-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-03-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and an odd position; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "odd_index"
+    ],
+    "slot_id": "CONF1-TR-NU-03-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (i%2==1) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-12-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-12-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a positive position dividing the input; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-12-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-12-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-12-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and a position congruent to two modulo three; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-12-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-12-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-12-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a positive position dividing the input; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-12-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-12-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-12-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and a position congruent to two modulo three; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-12-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-12-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-12-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a positive position dividing the input; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-12-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-13-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-13-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a position in the first half; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-13-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-13-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-13-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and a position congruent to two modulo three; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-13-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-13-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-13-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a position in the first half; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-13-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-13-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-13-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and a position congruent to two modulo three; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "residue_two"
+    ],
+    "slot_id": "CONF1-TR-NU-13-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (i%3==2) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-13-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-13-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position congruent to two modulo three and a position in the first half; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "residue_two",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-13-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (i%3==2) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-23-V0",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-23-V0",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and a position in the first half; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-23-V0",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-23-V1",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-23-V1",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and a positive position dividing the input; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-23-V1",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-23-V2",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-23-V2",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and a position in the first half; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-23-V2",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-23-V3",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-23-V3",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a position in the first half and a positive position dividing the input; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "first_half",
+      "divisor_index"
+    ],
+    "slot_id": "CONF1-TR-NU-23-V3",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { hitP=0. hitQ=0. IF (2*i<=n) { hitP=1. } IF (n%i==0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-NU-23-V4",
+    "family": "numeric_iteration",
+    "model_task_id": "CONF1-TR-NU-23-V4",
+    "prompt": "Read one nonnegative integer. For each item, tally items satisfying both a positive position dividing the input and a position in the first half; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "divisor_index",
+      "first_half"
+    ],
+    "slot_id": "CONF1-TR-NU-23-V4",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=n.\nLOOP (i>=1) { hitP=0. hitQ=0. IF (n%i==0) { hitP=1. } IF (2*i<=n) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-01-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-01-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an even entry; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-01-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-01-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-01-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and a negative entry; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-01-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-01-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-01-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an even entry; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-01-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-01-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-01-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and a negative entry; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-01-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-01-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-01-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an even entry; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-01-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-02-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-02-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and a negative entry; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-02-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-02-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-02-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an entry with square above four; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-02-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-02-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-02-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and a negative entry; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-02-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-02-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-02-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an entry with square above four; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-02-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-02-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-02-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and a negative entry; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-02-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-03-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-03-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and a negative entry; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-03-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-03-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-03-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an entry greater than its zero-based position; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-03-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-03-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-03-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and a negative entry; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-03-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-03-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-03-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both a negative entry and an entry greater than its zero-based position; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "negative_value",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-03-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]<0) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-03-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-03-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and a negative entry; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "negative_value"
+    ],
+    "slot_id": "CONF1-TR-AR-03-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]<0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-12-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-12-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry with square above four; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-12-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-12-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-12-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and an even entry; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-12-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-12-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-12-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry with square above four; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-12-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-12-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-12-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and an even entry; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-12-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-12-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-12-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry with square above four; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-12-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-13-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-13-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry greater than its zero-based position; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-13-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-13-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-13-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and an even entry; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-13-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-13-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-13-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry greater than its zero-based position; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-13-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-13-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-13-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and an even entry; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "even_value"
+    ],
+    "slot_id": "CONF1-TR-AR-13-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]%2==0) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-13-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-13-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an even entry and an entry greater than its zero-based position; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "even_value",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-13-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]%2==0) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-23-V0",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-23-V0",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and an entry greater than its zero-based position; begin at 0 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-23-V0",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-23-V1",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-23-V1",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and an entry with square above four; begin at 2 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-23-V1",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=2.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-23-V2",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-23-V2",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and an entry greater than its zero-based position; begin at 4 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-23-V2",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-23-V3",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-23-V3",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry greater than its zero-based position and an entry with square above four; begin at 6 and print the total.",
+    "semantic_primitives": [
+      "value_exceeds_index",
+      "large_magnitude"
+    ],
+    "slot_id": "CONF1-TR-AR-23-V3",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=6.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { hitP=0. hitQ=0. IF (values[i]>i) { hitP=1. } IF (values[i]*values[i]>4) { hitQ=1. } total+=(hitP*hitQ). }\nDISPLAYNL(total)."
+  },
+  {
+    "example_id": "CONF1-COMPOSITION-TR-AR-23-V4",
+    "family": "array_reduction",
+    "model_task_id": "CONF1-TR-AR-23-V4",
+    "prompt": "Read four signed integers separated by vertical bars. For each item, tally items satisfying both an entry with square above four and an entry greater than its zero-based position; begin at 8 and print the total.",
+    "semantic_primitives": [
+      "large_magnitude",
+      "value_exceeds_index"
+    ],
+    "slot_id": "CONF1-TR-AR-23-V4",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=8.\nNUMBER hitP=0.\nNUMBER hitQ=0.\nNUMBER i=3.\nLOOP (i>=0) { hitP=0. hitQ=0. IF (values[i]*values[i]>4) { hitP=1. } IF (values[i]>i) { hitQ=1. } total+=(hitP*hitQ). i-=1. }\nDISPLAYNL(total)."
+  }
+]

@@ -1,0 +1,886 @@
+[
+  {
+    "block_id": "numeric_iteration:G1",
+    "composition_signature": "numeric_iteration:G1:R0",
+    "family": "numeric_iteration",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these three tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "odd_index",
+      "Q": "residue_two",
+      "R": "divisor_index",
+      "S": "first_half"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-NU-G1-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G1",
+    "composition_signature": "numeric_iteration:G1:R1",
+    "family": "numeric_iteration",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these three tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "residue_two",
+      "Q": "divisor_index",
+      "R": "first_half",
+      "S": "odd_index"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-NU-G1-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G1",
+    "composition_signature": "numeric_iteration:G1:R2",
+    "family": "numeric_iteration",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these three tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "divisor_index",
+      "Q": "first_half",
+      "R": "odd_index",
+      "S": "residue_two"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-NU-G1-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G1",
+    "composition_signature": "numeric_iteration:G1:R3",
+    "family": "numeric_iteration",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these three tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "first_half",
+      "Q": "odd_index",
+      "R": "residue_two",
+      "S": "divisor_index"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-NU-G1-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G2",
+    "composition_signature": "numeric_iteration:G2:R0",
+    "family": "numeric_iteration",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "odd_index",
+      "Q": "residue_two",
+      "R": "divisor_index",
+      "S": "first_half"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-NU-G2-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G2",
+    "composition_signature": "numeric_iteration:G2:R1",
+    "family": "numeric_iteration",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "residue_two",
+      "Q": "divisor_index",
+      "R": "first_half",
+      "S": "odd_index"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-NU-G2-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G2",
+    "composition_signature": "numeric_iteration:G2:R2",
+    "family": "numeric_iteration",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "divisor_index",
+      "Q": "first_half",
+      "R": "odd_index",
+      "S": "residue_two"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-NU-G2-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G2",
+    "composition_signature": "numeric_iteration:G2:R3",
+    "family": "numeric_iteration",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "first_half",
+      "Q": "odd_index",
+      "R": "residue_two",
+      "S": "divisor_index"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-NU-G2-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G3",
+    "composition_signature": "numeric_iteration:G3:R0",
+    "family": "numeric_iteration",
+    "graph": "G3",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "odd_index",
+      "Q": "residue_two",
+      "R": "divisor_index",
+      "S": "first_half"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-NU-G3-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G3",
+    "composition_signature": "numeric_iteration:G3:R1",
+    "family": "numeric_iteration",
+    "graph": "G3",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "residue_two",
+      "Q": "divisor_index",
+      "R": "first_half",
+      "S": "odd_index"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-NU-G3-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G3",
+    "composition_signature": "numeric_iteration:G3:R2",
+    "family": "numeric_iteration",
+    "graph": "G3",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "divisor_index",
+      "Q": "first_half",
+      "R": "odd_index",
+      "S": "residue_two"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-NU-G3-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G3",
+    "composition_signature": "numeric_iteration:G3:R3",
+    "family": "numeric_iteration",
+    "graph": "G3",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add three counts: P with Q, P with R, and P with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "first_half",
+      "Q": "odd_index",
+      "R": "residue_two",
+      "S": "divisor_index"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-NU-G3-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G4",
+    "composition_signature": "numeric_iteration:G4:R0",
+    "family": "numeric_iteration",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: an odd position; Q: a position congruent to two modulo three; R: a positive position dividing the input; S: a position in the first half). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "odd_index",
+      "Q": "residue_two",
+      "R": "divisor_index",
+      "S": "first_half"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-NU-G4-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G4",
+    "composition_signature": "numeric_iteration:G4:R1",
+    "family": "numeric_iteration",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position congruent to two modulo three; Q: a positive position dividing the input; R: a position in the first half; S: an odd position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "residue_two",
+      "Q": "divisor_index",
+      "R": "first_half",
+      "S": "odd_index"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-NU-G4-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G4",
+    "composition_signature": "numeric_iteration:G4:R2",
+    "family": "numeric_iteration",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a positive position dividing the input; Q: a position in the first half; R: an odd position; S: a position congruent to two modulo three). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "divisor_index",
+      "Q": "first_half",
+      "R": "odd_index",
+      "S": "residue_two"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-NU-G4-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "numeric_iteration:G4",
+    "composition_signature": "numeric_iteration:G4:R3",
+    "family": "numeric_iteration",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read one nonnegative integer. Use these four tests (P: a position in the first half; Q: an odd position; R: a position congruent to two modulo three; S: a positive position dividing the input). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "first_half",
+      "Q": "odd_index",
+      "R": "residue_two",
+      "S": "divisor_index"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-NU-G4-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G1",
+    "composition_signature": "array_reduction:G1:R0",
+    "family": "array_reduction",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: a negative entry; Q: an even entry; R: an entry with square above four). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "negative_value",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": null
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-AR-G1-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G1",
+    "composition_signature": "array_reduction:G1:R1",
+    "family": "array_reduction",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an even entry; Q: a negative entry; R: an entry with square above four). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "even_value",
+      "Q": "negative_value",
+      "R": "large_magnitude",
+      "S": null
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-AR-G1-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G1",
+    "composition_signature": "array_reduction:G1:R2",
+    "family": "array_reduction",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an entry with square above four; Q: an even entry; R: an entry greater than its zero-based position). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "large_magnitude",
+      "Q": "even_value",
+      "R": "value_exceeds_index",
+      "S": null
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-AR-G1-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G1",
+    "composition_signature": "array_reduction:G1:R3",
+    "family": "array_reduction",
+    "graph": "G1",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an entry greater than its zero-based position; Q: an even entry; R: an entry with square above four). Count each item once when P and at least one of Q or R holds. Print the total.",
+    "role_predicates": {
+      "P": "value_exceeds_index",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": null
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-AR-G1-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G2",
+    "composition_signature": "array_reduction:G2:R0",
+    "family": "array_reduction",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "negative_value",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-AR-G2-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G2",
+    "composition_signature": "array_reduction:G2:R1",
+    "family": "array_reduction",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry greater than its zero-based position; S: an entry with square above four). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "negative_value",
+      "Q": "even_value",
+      "R": "value_exceeds_index",
+      "S": "large_magnitude"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-AR-G2-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G2",
+    "composition_signature": "array_reduction:G2:R2",
+    "family": "array_reduction",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: a negative entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "even_value",
+      "Q": "negative_value",
+      "R": "large_magnitude",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-AR-G2-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G2",
+    "composition_signature": "array_reduction:G2:R3",
+    "family": "array_reduction",
+    "graph": "G2",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: a negative entry; R: an even entry; S: an entry greater than its zero-based position). Add three counts: P with Q, Q with R, and R with S. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "large_magnitude",
+      "Q": "negative_value",
+      "R": "even_value",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-AR-G2-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G3P",
+    "composition_signature": "array_reduction:G3P:R0",
+    "family": "array_reduction",
+    "graph": "G3P",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: a negative entry; Q: an even entry; R: an entry with square above four). Add two counts: P with Q, and P with R. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "negative_value",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": null
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-AR-G3P-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G3P",
+    "composition_signature": "array_reduction:G3P:R1",
+    "family": "array_reduction",
+    "graph": "G3P",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an even entry; Q: an entry with square above four; R: an entry greater than its zero-based position). Add two counts: P with Q, and P with R. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "even_value",
+      "Q": "large_magnitude",
+      "R": "value_exceeds_index",
+      "S": null
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-AR-G3P-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G3P",
+    "composition_signature": "array_reduction:G3P:R2",
+    "family": "array_reduction",
+    "graph": "G3P",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an entry with square above four; Q: a negative entry; R: an even entry). Add two counts: P with Q, and P with R. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "large_magnitude",
+      "Q": "negative_value",
+      "R": "even_value",
+      "S": null
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-AR-G3P-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G3P",
+    "composition_signature": "array_reduction:G3P:R3",
+    "family": "array_reduction",
+    "graph": "G3P",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these three tests (P: an entry greater than its zero-based position; Q: an even entry; R: an entry with square above four). Add two counts: P with Q, and P with R. An item may contribute more than once. Print the total.",
+    "role_predicates": {
+      "P": "value_exceeds_index",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": null
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-AR-G3P-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G4",
+    "composition_signature": "array_reduction:G4:R0",
+    "family": "array_reduction",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: a negative entry; Q: an even entry; R: an entry with square above four; S: an entry greater than its zero-based position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "negative_value",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 0,
+    "task_id": "CONF1-NC-AR-G4-R0",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G4",
+    "composition_signature": "array_reduction:G4:R1",
+    "family": "array_reduction",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an even entry; Q: an entry with square above four; R: a negative entry; S: an entry greater than its zero-based position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "even_value",
+      "Q": "large_magnitude",
+      "R": "negative_value",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 1,
+    "task_id": "CONF1-NC-AR-G4-R1",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G4",
+    "composition_signature": "array_reduction:G4:R2",
+    "family": "array_reduction",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry with square above four; Q: an even entry; R: a negative entry; S: an entry greater than its zero-based position). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "large_magnitude",
+      "Q": "even_value",
+      "R": "negative_value",
+      "S": "value_exceeds_index"
+    },
+    "rotation": 2,
+    "task_id": "CONF1-NC-AR-G4-R2",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "block_id": "array_reduction:G4",
+    "composition_signature": "array_reduction:G4:R3",
+    "family": "array_reduction",
+    "graph": "G4",
+    "group": "novel_composition",
+    "prompt": "Read four signed integers separated by vertical bars. Use these four tests (P: an entry greater than its zero-based position; Q: an even entry; R: an entry with square above four; S: a negative entry). Add the count satisfying R with P or Q, and the separate count satisfying Q with S. An item may contribute twice. Print the total.",
+    "role_predicates": {
+      "P": "value_exceeds_index",
+      "Q": "even_value",
+      "R": "large_magnitude",
+      "S": "negative_value"
+    },
+    "rotation": 3,
+    "task_id": "CONF1-NC-AR-G4-R3",
+    "used_roles": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ]
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are an odd position; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P0-V0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are an odd position; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P0-V1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a position congruent to two modulo three; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P1-V0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a position congruent to two modulo three; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P1-V1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a positive position dividing the input; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P2-V0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a positive position dividing the input; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P2-V1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a position in the first half; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P3-V0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "primitive_sanity",
+    "prompt": "Read one nonnegative integer. Tally items that are a position in the first half; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-NU-P3-V1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are a negative entry; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P0-V0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are a negative entry; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P0-V1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an even entry; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P1-V0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an even entry; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P1-V1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry with square above four; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P2-V0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry with square above four; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P2-V1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry greater than its zero-based position; begin the tally at 0. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P3-V0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "primitive_sanity",
+    "prompt": "Read four signed integers separated by vertical bars. Tally items that are an entry greater than its zero-based position; begin the tally at 3. Print the final tally.",
+    "task_id": "CONF1-PS-AR-P3-V1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: an odd position; Q: a position congruent to two modulo three). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position congruent to two modulo three; Q: a positive position dividing the input). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a positive position dividing the input; Q: a position in the first half). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R2"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position in the first half; Q: an odd position). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-NU-prefix_running_pair-R3"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: an odd position; Q: a position congruent to two modulo three). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-NU-two_pass_product-R0"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position congruent to two modulo three; Q: a positive position dividing the input). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-NU-two_pass_product-R1"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a positive position dividing the input; Q: a position in the first half). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-NU-two_pass_product-R2"
+  },
+  {
+    "family": "numeric_iteration",
+    "group": "structural_transfer",
+    "prompt": "Read one nonnegative integer. Use tests (P: a position in the first half; Q: an odd position). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-NU-two_pass_product-R3"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: a negative entry; Q: an even entry). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an even entry; Q: an entry with square above four). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry with square above four; Q: an entry greater than its zero-based position). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R2"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry greater than its zero-based position; Q: a negative entry). For each Q item, add the number of earlier P items. Print the sum.",
+    "task_id": "CONF1-ST-AR-prefix_running_pair-R3"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: a negative entry; Q: an even entry). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-AR-two_pass_product-R0"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an even entry; Q: an entry with square above four). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-AR-two_pass_product-R1"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry with square above four; Q: an entry greater than its zero-based position). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-AR-two_pass_product-R2"
+  },
+  {
+    "family": "array_reduction",
+    "group": "structural_transfer",
+    "prompt": "Read four signed integers separated by vertical bars. Use tests (P: an entry greater than its zero-based position; Q: a negative entry). Count P and Q separately, then print the product of their counts.",
+    "task_id": "CONF1-ST-AR-two_pass_product-R3"
+  }
+]
