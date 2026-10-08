@@ -1,0 +1,387 @@
+{
+  "added_authority_entries": [
+    "research/protocols/phase3c_conf1_proposed_protocol.md",
+    "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md",
+    "tests/test_conf1_r1_primary.py",
+    "tests/test_conf1_r1_interp.py",
+    "tests/test_conf1_r1_gates_primary.py",
+    "tests/test_conf1_r1_training.py",
+    "tests/test_conf1_r1_overlap_secondary.py",
+    "tests/test_conf1_r1_candidate.py",
+    "tests/test_conf1_r1_schedule_analysis.py",
+    "tests/test_conf1_r1_execution.py",
+    "scripts/freeze_phase3c_conf1_candidate.py",
+    "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json",
+    "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json",
+    "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json"
+  ],
+  "command": "PYTHONDONTWRITEBYTECODE=1 python scripts/freeze_phase3c_conf1_candidate.py",
+  "environment": {
+    "cuda_header_label": "CUDA UMD Version",
+    "cuda_header_version": "13.3",
+    "driver": "610.74",
+    "executable": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_memory_total": "6144 MiB",
+    "java_executable": "C:\\Users\\Admin\\OneDrive\\Documents\\GitHub\\Self Learning AI\\.tools\\jdk-25.0.1+8\\bin\\java.exe",
+    "java_version": "openjdk version \"25.0.1\" 2025-10-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.1+8 (build 25.0.1+8-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.1+8 (build 25.0.1+8-LTS, mixed mode, sharing)\n",
+    "nvidia_smi_header": "Thu Oct  8 13:47:51 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.74                 KMD Version: 610.74        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n| N/A   62C    P5             17W /   86W |    1492MiB /   6144MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            3120    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A            4736    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           10448    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           10856    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           11084    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           11336    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           11444    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           13392    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           13460    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           14776    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           14804    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           15308    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           16544    C+G   ...mba6cd70vzyy\\ArmouryCrate.exe      N/A      |\n|    0   N/A  N/A           18404    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A           18888    C+G   ....0.4258.62\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           19920    C+G   ...Browser\\Application\\brave.exe      N/A      |\n|    0   N/A  N/A           21864    C+G   ...iles\\Riot Vanguard\\vgtray.exe      N/A      |\n|    0   N/A  N/A           22080    C+G   ...Next\\CNext\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           22332    C+G   ...D\\CNext\\CNext\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           22636    C+G   ...Browser\\Application\\brave.exe      N/A      |\n|    0   N/A  N/A           23256    C+G   ...ce\\root\\Office16\\POWERPNT.EXE      N/A      |\n|    0   N/A  N/A           27980    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           28340    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+    "nvidia_smi_query": "NVIDIA GeForce RTX 3060 Laptop GPU, 610.74, 6144 MiB",
+    "packages": {
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "numpy": "2.2.6",
+      "peft": "0.17.1",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.1",
+      "torch": "2.9.0+cu130",
+      "transformers": "4.57.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "python": "3.13.0",
+    "total_ram_bytes": 16366276608
+  },
+  "expected_result_counts": {
+    "cells": 10,
+    "confirmatory_per_cell": 64,
+    "confirmatory_tasks": 640,
+    "own_training_tasks": 600,
+    "paths": 2494,
+    "secondary_drops": 0
+  },
+  "freeze_script_sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65",
+  "frozen_manifest_sha256": "bda8d4e4453c7bc27ada9d9d115136729138c3aa6e6b60f4721e425f9e680262",
+  "parent_commits": {
+    "c12_c14": "9002fd7375d1e396be99898f9582801db4e77e5d",
+    "construction": "2da5b8523088a8238228b1d6fbb15f314cef9ba4",
+    "i1": "36b9298d4e0c3b6cf881236d2dd4d7b139c1a7f1",
+    "i2": "6192040a7c275a10f369461600070bd56d885130",
+    "i3": "ad29adb804879d4e64da7cd7370f54e1289f1a37",
+    "i4a": "410e7f2adf4eb86150d6a8e70cdf3efa14b892d5",
+    "i4b": "267009347ccc8639abcf7c6628b37e2bab1012c3",
+    "i5a": "9002fd7375d1e396be99898f9582801db4e77e5d",
+    "i5b": "034ff88d2feb72155ea4f1cc51cd351ac455dcf6",
+    "r1_freeze": "622b8cd1b5c6a22d9a6ab01de6a25c39d9ea07c1",
+    "r2_freeze": "e0e48dee9e076e853cafd7734d1bcfe722fa4885",
+    "smoke": "097b74bccc3f4d784d138f8858b98db3b38662f6",
+    "step4": "a456e9f334516824ac8da9ab86f9d7674bcadb79"
+  },
+  "prefreeze_audit": {
+    "a_runtime_absent": true,
+    "b_attempt_commit_history": [
+      "2da5b8523088a8238228b1d6fbb15f314cef9ba4"
+    ],
+    "c_no_model_static_audit": {
+      "allowlist": [
+        {
+          "enclosing_function": "_tokenizer",
+          "file": "src/self_learning_ai/conf1_r1/training.py",
+          "kind": "ImportFrom",
+          "line": 396,
+          "text": "from transformers import AutoTokenizer"
+        },
+        {
+          "enclosing_function": "_tokenizer",
+          "file": "src/self_learning_ai/conf1_r1/training.py",
+          "kind": "Attribute",
+          "line": 397,
+          "text": "AutoTokenizer.from_pretrained"
+        }
+      ],
+      "allowlist_rationale": "C8 P3 token counting loads the hash-pinned tokenizer only; no weights, inference or gradient",
+      "audited_files": [
+        "src/self_learning_ai/conf1_r1/candidate.py",
+        "src/self_learning_ai/conf1_r1/gates_primary.py",
+        "src/self_learning_ai/conf1_r1/training.py",
+        "src/self_learning_ai/conf1_r1/overlap.py",
+        "src/self_learning_ai/conf1_r1/secondary.py",
+        "src/self_learning_ai/conf1_r1/primary.py",
+        "src/self_learning_ai/conf1_r1/interp.py",
+        "src/self_learning_ai/conf1_r1/schedule.py",
+        "src/self_learning_ai/conf1_r1/__init__.py",
+        "scripts/build_phase3c_conf1_candidate.py",
+        "scripts/build_phase3c_conf1_data.py",
+        "scripts/audit_phase3c_conf1_r2_liveness_feasibility.py",
+        "scripts/audit_phase3c_conf1_r1_specification_feasibility.py",
+        "scripts/design_phase3c_conf1.py",
+        "scripts/build_phase2b_data.py",
+        "scripts/validate_phase2b_data.py",
+        "src/self_learning_ai/compiler.py",
+        "src/self_learning_ai/benchmark.py"
+      ],
+      "checks": {
+        "TOKENIZER_HASHES_referenced_before_import": true,
+        "import_only_AutoTokenizer": true,
+        "keyword_constants": {
+          "local_files_only": true,
+          "trust_remote_code": true
+        }
+      },
+      "occurrences": [
+        {
+          "enclosing_function": "_tokenizer",
+          "file": "src/self_learning_ai/conf1_r1/training.py",
+          "kind": "ImportFrom",
+          "line": 396,
+          "text": "from transformers import AutoTokenizer"
+        },
+        {
+          "enclosing_function": "_tokenizer",
+          "file": "src/self_learning_ai/conf1_r1/training.py",
+          "kind": "Attribute",
+          "line": 397,
+          "text": "AutoTokenizer.from_pretrained"
+        }
+      ],
+      "passed": true
+    },
+    "d_smoke_status": "INFRASTRUCTURE_SMOKE_NON_SCIENTIFIC_CONSUMED_DEV2_DATA",
+    "e_no_conf1_runtime": true,
+    "e_runtime_directory_names": [
+      "attr908-first-evidence-draft",
+      "phase3b",
+      "phase3c",
+      "phase3c_conf1_smoke",
+      "phase3c_dev1",
+      "phase3c_dev2",
+      "phase3c_dev2r"
+    ],
+    "scope_note": "phase3c_conf1_smoke contains authorized consumed-DEV2 smoke artifacts; it is not CONF1 execution."
+  },
+  "prefreeze_manifest_sha256": "2f59b59f372ccd6f54529415881c3e2940e7969cffbc31b418946204852c087a",
+  "primary_blocks": {
+    "array_reduction:G1": {
+      "composition_signatures": [
+        "array_reduction:G1:R0",
+        "array_reduction:G1:R1",
+        "array_reduction:G1:R2",
+        "array_reduction:G1:R3"
+      ],
+      "family": "array_reduction",
+      "task_ids": [
+        "CONF1-NC-AR-G1-R0",
+        "CONF1-NC-AR-G1-R1",
+        "CONF1-NC-AR-G1-R2",
+        "CONF1-NC-AR-G1-R3"
+      ]
+    },
+    "array_reduction:G2": {
+      "composition_signatures": [
+        "array_reduction:G2:R0",
+        "array_reduction:G2:R1",
+        "array_reduction:G2:R2",
+        "array_reduction:G2:R3"
+      ],
+      "family": "array_reduction",
+      "task_ids": [
+        "CONF1-NC-AR-G2-R0",
+        "CONF1-NC-AR-G2-R1",
+        "CONF1-NC-AR-G2-R2",
+        "CONF1-NC-AR-G2-R3"
+      ]
+    },
+    "array_reduction:G3P": {
+      "composition_signatures": [
+        "array_reduction:G3P:R0",
+        "array_reduction:G3P:R1",
+        "array_reduction:G3P:R2",
+        "array_reduction:G3P:R3"
+      ],
+      "family": "array_reduction",
+      "task_ids": [
+        "CONF1-NC-AR-G3P-R0",
+        "CONF1-NC-AR-G3P-R1",
+        "CONF1-NC-AR-G3P-R2",
+        "CONF1-NC-AR-G3P-R3"
+      ]
+    },
+    "array_reduction:G4": {
+      "composition_signatures": [
+        "array_reduction:G4:R0",
+        "array_reduction:G4:R1",
+        "array_reduction:G4:R2",
+        "array_reduction:G4:R3"
+      ],
+      "family": "array_reduction",
+      "task_ids": [
+        "CONF1-NC-AR-G4-R0",
+        "CONF1-NC-AR-G4-R1",
+        "CONF1-NC-AR-G4-R2",
+        "CONF1-NC-AR-G4-R3"
+      ]
+    },
+    "numeric_iteration:G1": {
+      "composition_signatures": [
+        "numeric_iteration:G1:R0",
+        "numeric_iteration:G1:R1",
+        "numeric_iteration:G1:R2",
+        "numeric_iteration:G1:R3"
+      ],
+      "family": "numeric_iteration",
+      "task_ids": [
+        "CONF1-NC-NU-G1-R0",
+        "CONF1-NC-NU-G1-R1",
+        "CONF1-NC-NU-G1-R2",
+        "CONF1-NC-NU-G1-R3"
+      ]
+    },
+    "numeric_iteration:G2": {
+      "composition_signatures": [
+        "numeric_iteration:G2:R0",
+        "numeric_iteration:G2:R1",
+        "numeric_iteration:G2:R2",
+        "numeric_iteration:G2:R3"
+      ],
+      "family": "numeric_iteration",
+      "task_ids": [
+        "CONF1-NC-NU-G2-R0",
+        "CONF1-NC-NU-G2-R1",
+        "CONF1-NC-NU-G2-R2",
+        "CONF1-NC-NU-G2-R3"
+      ]
+    },
+    "numeric_iteration:G3": {
+      "composition_signatures": [
+        "numeric_iteration:G3:R0",
+        "numeric_iteration:G3:R1",
+        "numeric_iteration:G3:R2",
+        "numeric_iteration:G3:R3"
+      ],
+      "family": "numeric_iteration",
+      "task_ids": [
+        "CONF1-NC-NU-G3-R0",
+        "CONF1-NC-NU-G3-R1",
+        "CONF1-NC-NU-G3-R2",
+        "CONF1-NC-NU-G3-R3"
+      ]
+    },
+    "numeric_iteration:G4": {
+      "composition_signatures": [
+        "numeric_iteration:G4:R0",
+        "numeric_iteration:G4:R1",
+        "numeric_iteration:G4:R2",
+        "numeric_iteration:G4:R3"
+      ],
+      "family": "numeric_iteration",
+      "task_ids": [
+        "CONF1-NC-NU-G4-R0",
+        "CONF1-NC-NU-G4-R1",
+        "CONF1-NC-NU-G4-R2",
+        "CONF1-NC-NU-G4-R3"
+      ]
+    }
+  },
+  "smoke_comparison": {
+    "bitsandbytes": {
+      "current": "0.50.2",
+      "equal": true,
+      "smoke": "0.50.2"
+    },
+    "driver": {
+      "current": "610.74",
+      "equal": true,
+      "smoke": "610.74"
+    },
+    "gpu": {
+      "current": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "equal": true,
+      "smoke": "NVIDIA GeForce RTX 3060 Laptop GPU"
+    },
+    "peft": {
+      "current": "0.17.1",
+      "equal": true,
+      "smoke": "0.17.1"
+    },
+    "torch": {
+      "current": "2.9.0+cu130",
+      "equal": true,
+      "smoke": "2.9.0+cu130"
+    },
+    "transformers": {
+      "current": "4.57.1",
+      "equal": true,
+      "smoke": "4.57.1"
+    }
+  },
+  "start_head": "2da5b8523088a8238228b1d6fbb15f314cef9ba4",
+  "status": "CANDIDATE_FROZEN_MODEL_EXECUTION_NOT_AUTHORIZED",
+  "validation": {
+    "V1": {
+      "added_authorities": [
+        "research/protocols/phase3c_conf1_proposed_protocol.md",
+        "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md",
+        "tests/test_conf1_r1_primary.py",
+        "tests/test_conf1_r1_interp.py",
+        "tests/test_conf1_r1_gates_primary.py",
+        "tests/test_conf1_r1_training.py",
+        "tests/test_conf1_r1_overlap_secondary.py",
+        "tests/test_conf1_r1_candidate.py",
+        "tests/test_conf1_r1_schedule_analysis.py",
+        "tests/test_conf1_r1_execution.py",
+        "scripts/freeze_phase3c_conf1_candidate.py",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json"
+      ],
+      "added_keys": [
+        "schema_version",
+        "prefreeze_manifest_sha256",
+        "construction_commit",
+        "freeze"
+      ],
+      "changed_existing_keys": [
+        "status"
+      ],
+      "passed": true
+    },
+    "V2": {
+      "cli": {
+        "scripts/analyze_phase3c_conf1.py": {
+          "exit_code": 2,
+          "stderr": "STOP: CONF1 model execution is not explicitly authorized\n",
+          "stdout": ""
+        },
+        "scripts/evaluate_phase3c_conf1.py": {
+          "exit_code": 2,
+          "stderr": "STOP: CONF1 model execution is not explicitly authorized\n",
+          "stdout": ""
+        },
+        "scripts/train_phase3c_conf1.py": {
+          "exit_code": 2,
+          "stderr": "STOP: CONF1 model execution is not explicitly authorized\n",
+          "stdout": ""
+        }
+      },
+      "passed": true,
+      "real_refusal": "STOP: CONF1 model execution is not explicitly authorized"
+    },
+    "V3": {
+      "negative_refusal": "STOP: manifest file hash mismatch",
+      "passed": true,
+      "real_boolean": false,
+      "simulated_authorization": "accepted",
+      "temporary_copies_deleted": true
+    },
+    "V4": {
+      "authority_entries": 33,
+      "code_entries": 28,
+      "inventory_entries": 77,
+      "passed": true,
+      "payload_entries": 9
+    },
+    "V5": {
+      "conf1_runtime_absent": true,
+      "existing_code_test_protocol_changes": [],
+      "git_diff_check": "passed",
+      "passed": true,
+      "py_compile": "passed; pyc in deleted external temporary directory",
+      "scope_paths_before_report": [
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/candidate_manifest.json",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json",
+        "scripts/freeze_phase3c_conf1_candidate.py"
+      ]
+    }
+  },
+  "wall_seconds": 13.740561500000695
+}

@@ -24,6 +24,11 @@
       "verification": "byte-exact",
       "verified_sha256": "d314bf168ea53c1f4a6ba0f1dc1f41a2fdd68be0fc6ba615a032a560e3c47b92"
     },
+    "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md": {
+      "sha256": "0829e8ad8d4716fd43fd3d49198504a1c345324673933a23d2933161ff859612",
+      "verification": "byte-exact",
+      "verified_sha256": "0829e8ad8d4716fd43fd3d49198504a1c345324673933a23d2933161ff859612"
+    },
     "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json": {
       "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a",
       "verification": "byte-exact",
@@ -43,6 +48,11 @@
       "sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0",
       "verification": "LF-normalized",
       "verified_sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0"
+    },
+    "research/protocols/phase3c_conf1_proposed_protocol.md": {
+      "sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920",
+      "verification": "byte-exact",
+      "verified_sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920"
     },
     "research/protocols/phase3c_conf1_r1_implementation_clarifications.md": {
       "sha256": "9fbe75fa2caf6a27ecbac943bec6a99f69c87a604669d533b73cc83e3bfcd328",
@@ -79,10 +89,25 @@
       "verification": "byte-exact",
       "verified_sha256": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2"
     },
+    "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json": {
+      "sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05",
+      "verification": "byte-exact",
+      "verified_sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05"
+    },
+    "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json": {
+      "sha256": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62",
+      "verification": "byte-exact",
+      "verified_sha256": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62"
+    },
     "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.json": {
       "sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7",
       "verification": "byte-exact",
       "verified_sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7"
+    },
+    "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json": {
+      "sha256": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b",
+      "verification": "byte-exact",
+      "verified_sha256": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b"
     },
     "scripts/audit_phase3c_conf1_r1_specification_feasibility.py": {
       "sha256": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74",
@@ -93,6 +118,51 @@
       "sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254",
       "verification": "byte-exact",
       "verified_sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254"
+    },
+    "scripts/freeze_phase3c_conf1_candidate.py": {
+      "sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65",
+      "verification": "byte-exact",
+      "verified_sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65"
+    },
+    "tests/test_conf1_r1_candidate.py": {
+      "sha256": "4b21e0621ca75f190847f77c81336d8d598794a2c80602b54c07830ea3b12d51",
+      "verification": "byte-exact",
+      "verified_sha256": "4b21e0621ca75f190847f77c81336d8d598794a2c80602b54c07830ea3b12d51"
+    },
+    "tests/test_conf1_r1_execution.py": {
+      "sha256": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5",
+      "verification": "byte-exact",
+      "verified_sha256": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5"
+    },
+    "tests/test_conf1_r1_gates_primary.py": {
+      "sha256": "6e6b764e964fa18c781c810f02b821ade88b64d96af14d0e3f47d5f1ee3bf846",
+      "verification": "byte-exact",
+      "verified_sha256": "6e6b764e964fa18c781c810f02b821ade88b64d96af14d0e3f47d5f1ee3bf846"
+    },
+    "tests/test_conf1_r1_interp.py": {
+      "sha256": "e8c0e9a8fcdd3f287fc82e91f557b14197fe4bc5aa3439663d15930c5321962e",
+      "verification": "byte-exact",
+      "verified_sha256": "e8c0e9a8fcdd3f287fc82e91f557b14197fe4bc5aa3439663d15930c5321962e"
+    },
+    "tests/test_conf1_r1_overlap_secondary.py": {
+      "sha256": "ecbd7be0ddd38f1206bb9e613a631c765ee5f5008d612ba2637606af5dacef0f",
+      "verification": "byte-exact",
+      "verified_sha256": "ecbd7be0ddd38f1206bb9e613a631c765ee5f5008d612ba2637606af5dacef0f"
+    },
+    "tests/test_conf1_r1_primary.py": {
+      "sha256": "38a0857f402b3c4bd093c871e6d7458cc296dba97361d182589534fe36db9c23",
+      "verification": "byte-exact",
+      "verified_sha256": "38a0857f402b3c4bd093c871e6d7458cc296dba97361d182589534fe36db9c23"
+    },
+    "tests/test_conf1_r1_schedule_analysis.py": {
+      "sha256": "a7d2e9e959eb779b9edf966fbda3c05de191b6999cad4c383c00fc85d01a8de4",
+      "verification": "byte-exact",
+      "verified_sha256": "a7d2e9e959eb779b9edf966fbda3c05de191b6999cad4c383c00fc85d01a8de4"
+    },
+    "tests/test_conf1_r1_training.py": {
+      "sha256": "75350ae9f7c2c4fa010f1f7601bc2711e2e5b8b2fdd2fbe392e58c7bdb6d0f29",
+      "verification": "byte-exact",
+      "verified_sha256": "75350ae9f7c2c4fa010f1f7601bc2711e2e5b8b2fdd2fbe392e58c7bdb6d0f29"
     }
   },
   "code_hashes": {
@@ -126,6 +196,7 @@
     "src/self_learning_ai/dev2r_evaluation.py": "8120bad8356481d31ed39cad22af73ff55bce2fe550fc49f6209f6b0eec617ff"
   },
   "compiler_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+  "construction_commit": "2da5b8523088a8238228b1d6fbb15f314cef9ba4",
   "construction_seed": 20290123,
   "counts": {
     "evaluation": 64,
@@ -152,6 +223,772 @@
     "training/isolated_cases.json": "a31d8cffcd6765117e2143a1ccfcdbbd7527b1ff9979e03212c378aae1d4c691",
     "training/isolated_examples.json": "4ad3e0a00709b21b52390b4d85028196c31fec5a9fce6218f42701c353ddadff"
   },
+  "freeze": {
+    "analysis": {
+      "BOOTSTRAP_SEED": 20290119,
+      "DRAW_COUNT": 10000,
+      "acquisition": {
+        "cells_required": 10,
+        "minimum": 54,
+        "tasks_per_cell": 60
+      },
+      "bootstrap": {
+        "blocks_per_domain": 4,
+        "draw_order": [
+          "seeds",
+          "numeric_blocks",
+          "array_blocks"
+        ],
+        "quantile_method": "linear",
+        "quantiles": [
+          0.025,
+          0.975
+        ],
+        "seed_draws": 5,
+        "tasks_per_block": 4
+      },
+      "heterogeneity": {
+        "both_domains_positive": true,
+        "every_seed_nonnegative": true,
+        "minimum_positive_blocks": 6,
+        "minimum_positive_seeds": 4,
+        "source": "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md:C14"
+      },
+      "heterogeneity_suffix": "_WITH_HETEROGENEITY",
+      "labels": [
+        "INDETERMINATE_INSUFFICIENT_ACQUISITION",
+        "CONFIRMATORY_SUPPORT_UNDER_CONF1",
+        "NOT_CONFIRMED_UNDER_CONF1"
+      ],
+      "lower_bound_strictly_greater_than": 0,
+      "sanity": {
+        "mean_minimum_pp": -10,
+        "minimum_kept": 12,
+        "per_seed_minimum_pp": -25
+      },
+      "sum_E_minimum": 32
+    },
+    "audit_outputs": {
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/construction_log.json": "e3a5996e19a4fcc24fd77dfcfd1a68fdb9fcf4bcfa1b32f412a1e4aa5b672688",
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/gates/gate_report.json": "410d6a6a5213848f287145de0cd10d89ec524e858f11b81285deecd5cd87535c",
+      "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62",
+      "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.json": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7",
+      "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b"
+    },
+    "checkpoints": {
+      "patterns": [
+        "training/<seed>/<condition>.json",
+        "evaluations/<seed>/<condition>/training/<slot>.raw.json",
+        "evaluations/<seed>/<condition>/training/<slot>.score.json",
+        "evaluations/<seed>/<condition>/confirmatory/<task_id>.raw.json",
+        "evaluations/<seed>/<condition>/confirmatory/<task_id>.score.json",
+        "acquisition_gate.json",
+        "confirmatory_complete.json",
+        "analysis.json",
+        "output_inventory.json"
+      ],
+      "runtime_root": ".runtime/phase3c_conf1"
+    },
+    "counts": {
+      "evaluation": 64,
+      "evaluation_cases": 320,
+      "primary": 32,
+      "sanity_kept": 16,
+      "secondary_dropped": 0,
+      "secondary_kept": 32,
+      "training": {
+        "composition": 60,
+        "isolated": 60
+      },
+      "training_cases": 600
+    },
+    "environment": {
+      "cuda_header_label": "CUDA UMD Version",
+      "cuda_header_version": "13.3",
+      "driver": "610.74",
+      "executable": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "gpu_memory_total": "6144 MiB",
+      "java_executable": "C:\\Users\\Admin\\OneDrive\\Documents\\GitHub\\Self Learning AI\\.tools\\jdk-25.0.1+8\\bin\\java.exe",
+      "java_version": "openjdk version \"25.0.1\" 2025-10-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.1+8 (build 25.0.1+8-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.1+8 (build 25.0.1+8-LTS, mixed mode, sharing)\n",
+      "nvidia_smi_header": "Thu Oct  8 13:47:51 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.74                 KMD Version: 610.74        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n| N/A   62C    P5             17W /   86W |    1492MiB /   6144MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            3120    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A            4736    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           10448    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           10856    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           11084    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           11336    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           11444    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           13392    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           13460    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           14776    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           14804    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           15308    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           16544    C+G   ...mba6cd70vzyy\\ArmouryCrate.exe      N/A      |\n|    0   N/A  N/A           18404    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A           18888    C+G   ....0.4258.62\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           19920    C+G   ...Browser\\Application\\brave.exe      N/A      |\n|    0   N/A  N/A           21864    C+G   ...iles\\Riot Vanguard\\vgtray.exe      N/A      |\n|    0   N/A  N/A           22080    C+G   ...Next\\CNext\\RadeonSoftware.exe      N/A      |\n|    0   N/A  N/A           22332    C+G   ...D\\CNext\\CNext\\AMDRSSrcExt.exe      N/A      |\n|    0   N/A  N/A           22636    C+G   ...Browser\\Application\\brave.exe      N/A      |\n|    0   N/A  N/A           23256    C+G   ...ce\\root\\Office16\\POWERPNT.EXE      N/A      |\n|    0   N/A  N/A           27980    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           28340    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+      "nvidia_smi_query": "NVIDIA GeForce RTX 3060 Laptop GPU, 610.74, 6144 MiB",
+      "packages": {
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2",
+        "numpy": "2.2.6",
+        "peft": "0.17.1",
+        "safetensors": "0.6.2",
+        "tokenizers": "0.22.1",
+        "torch": "2.9.0+cu130",
+        "transformers": "4.57.1"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "python": "3.13.0",
+      "total_ram_bytes": 16366276608
+    },
+    "expected_result_ids": {
+      "counts": {
+        "cells": 10,
+        "confirmatory_per_cell": 64,
+        "confirmatory_tasks": 640,
+        "own_training_tasks": 600,
+        "paths": 2494,
+        "secondary_drops": 0
+      },
+      "path": "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json",
+      "sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05"
+    },
+    "generation": {
+      "cases_per_task": {
+        "source": "src/self_learning_ai/dev2r_evaluation.py:59",
+        "value": 5
+      },
+      "compiler_timeout_seconds": {
+        "source": "research/protocols/phase3c_conf1_config_proposed.json:72",
+        "value": 3
+      },
+      "do_sample": {
+        "source": "scripts/evaluate_phase3c_conf1.py:69",
+        "value": false
+      },
+      "evaluation_seed": {
+        "source": "src/self_learning_ai/conf1_r1/schedule.py:21",
+        "value": 20290307
+      },
+      "extractor": {
+        "source": "src/self_learning_ai/conf1_r1/execution.py:403",
+        "value": "self_learning_ai.benchmark.extract_source (first fence)"
+      },
+      "max_new_tokens": {
+        "source": "research/protocols/phase3c_conf1_config_proposed.json:68",
+        "value": 512
+      },
+      "num_beams": {
+        "source": "scripts/evaluate_phase3c_conf1.py:69",
+        "value": 1
+      },
+      "pad_token_id": {
+        "source": "scripts/evaluate_phase3c_conf1.py:70",
+        "value": "eos_token_id"
+      },
+      "system_prompt": {
+        "source": "src/self_learning_ai/conf1_r1/execution.py:206",
+        "value": "prompts/phase1t_system.txt"
+      },
+      "task_rng_rule": {
+        "source": "src/self_learning_ai/conf1_r1/schedule.py:77",
+        "value": "First 8 bytes big-endian SHA-256(20290307|training_seed|task_id) modulo 2^32; reset Python/NumPy/Torch CPU/CUDA before generation"
+      },
+      "user_prompt": {
+        "source": "src/self_learning_ai/conf1_r1/execution.py:207",
+        "value": "prompts/phase1t_user_template.txt"
+      }
+    },
+    "hash_policy": "Byte-exact for binaries, adapters and all new entries; LF normalization only where an existing authority entry declares it. Inventory sha256 and sizes always identify disk bytes.",
+    "inventory": {
+      ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar": {
+        "bytes": 212005,
+        "policy": "byte-exact",
+        "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/.gitattributes": {
+        "bytes": 1519,
+        "policy": "byte-exact",
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/LICENSE": {
+        "bytes": 7388,
+        "policy": "byte-exact",
+        "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/README.md": {
+        "bytes": 5271,
+        "policy": "byte-exact",
+        "sha256": "eb21b99af3631b35f79edc886755aa3358098ab72b97d018f1978a3f04e4a362"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/config.json": {
+        "bytes": 661,
+        "policy": "byte-exact",
+        "sha256": "8f85440a3222d18772e964b1ef0b4b1574a1c5e6260c99aa23fcddd05c28b8ae"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/generation_config.json": {
+        "bytes": 243,
+        "policy": "byte-exact",
+        "sha256": "fdaccbcb02f3e1e7914ccb0f69ebe899071ffd27cf825166d823163e156870f2"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/merges.txt": {
+        "bytes": 1671839,
+        "policy": "byte-exact",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/model-00001-of-00002.safetensors": {
+        "bytes": 4957560304,
+        "policy": "byte-exact",
+        "sha256": "5b684409377e037e5ed75d680a070126e841dab17e8cb9a818868deadf01ab39"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/model-00002-of-00002.safetensors": {
+        "bytes": 1214366696,
+        "policy": "byte-exact",
+        "sha256": "8bc5227aae6174eaf0b589fd4fbeb0de046a1fc951a67f2d2538acad811e1068"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/model.safetensors.index.json": {
+        "bytes": 35581,
+        "policy": "byte-exact",
+        "sha256": "7b85f79fd7612df2e5d7f03d7f92d65c8967f790a331146ca7f45658823060d3"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer.json": {
+        "bytes": 7031645,
+        "policy": "byte-exact",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer_config.json": {
+        "bytes": 7305,
+        "policy": "byte-exact",
+        "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/vocab.json": {
+        "bytes": 2776833,
+        "policy": "byte-exact",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "prompts/phase1t_system.txt": {
+        "bytes": 337,
+        "policy": "byte-exact",
+        "sha256": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754"
+      },
+      "prompts/phase1t_user_template.txt": {
+        "bytes": 30,
+        "policy": "byte-exact",
+        "sha256": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7"
+      },
+      "research/protocols/phase3c_conf1_config_proposed.json": {
+        "bytes": 3988,
+        "policy": "byte-exact",
+        "sha256": "c8ccd84361dc038e64da91eb30acf7b8a6587445b956373671b79735a7362d83"
+      },
+      "research/protocols/phase3c_conf1_implementation_clarifications_c10_c11.md": {
+        "bytes": 2992,
+        "policy": "byte-exact",
+        "sha256": "d314bf168ea53c1f4a6ba0f1dc1f41a2fdd68be0fc6ba615a032a560e3c47b92"
+      },
+      "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md": {
+        "bytes": 4657,
+        "policy": "byte-exact",
+        "sha256": "0829e8ad8d4716fd43fd3d49198504a1c345324673933a23d2933161ff859612"
+      },
+      "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json": {
+        "bytes": 4201,
+        "policy": "byte-exact",
+        "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a"
+      },
+      "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md": {
+        "bytes": 16901,
+        "policy": "LF-normalized",
+        "sha256": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e"
+      },
+      "research/protocols/phase3c_conf1_paired_scaffold_normalization_freeze.json": {
+        "bytes": 2093,
+        "policy": "byte-exact",
+        "sha256": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2"
+      },
+      "research/protocols/phase3c_conf1_paired_scaffold_normalization_proposed.md": {
+        "bytes": 14114,
+        "policy": "LF-normalized",
+        "sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0"
+      },
+      "research/protocols/phase3c_conf1_proposed_protocol.md": {
+        "bytes": 39663,
+        "policy": "byte-exact",
+        "sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920"
+      },
+      "research/protocols/phase3c_conf1_r1_implementation_clarifications.md": {
+        "bytes": 3134,
+        "policy": "byte-exact",
+        "sha256": "9fbe75fa2caf6a27ecbac943bec6a99f69c87a604669d533b73cc83e3bfcd328"
+      },
+      "research/protocols/phase3c_conf1_r2_implementation_clarifications.md": {
+        "bytes": 4053,
+        "policy": "byte-exact",
+        "sha256": "43849d3fdf8c33a0243f416ace9e3006eb864e87b26356bb6268e092e76b75ff"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r1_freeze.json": {
+        "bytes": 3873,
+        "policy": "byte-exact",
+        "sha256": "58d2ca7a453246ac97aa956be6c499a416bd523abadc65b7a402195b986f96b1"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r1_proposed.md": {
+        "bytes": 30126,
+        "policy": "LF-normalized",
+        "sha256": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r2_freeze.json": {
+        "bytes": 4783,
+        "policy": "byte-exact",
+        "sha256": "e498f31a66caeb19633bdf1a229716b8942dd180c16910dac1246c5d93693375"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r2_proposed.md": {
+        "bytes": 8590,
+        "policy": "LF-normalized",
+        "sha256": "2fea0bc3846e0ab7da2161a71e53f6073c2c7107c62316d784f61259eb1e3c8c"
+      },
+      "research/protocols/phase3c_conf1_slots.json": {
+        "bytes": 47968,
+        "policy": "byte-exact",
+        "sha256": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/construction_log.json": {
+        "bytes": 5483575,
+        "policy": "byte-exact",
+        "sha256": "e3a5996e19a4fcc24fd77dfcfd1a68fdb9fcf4bcfa1b32f412a1e4aa5b672688"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/evaluation/hidden_cases.json": {
+        "bytes": 39307,
+        "policy": "byte-exact",
+        "sha256": "d57712309f176228800509fcf8645ac568e6d121302de6a72db45a55cf76be2c"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/evaluation/references.json": {
+        "bytes": 26528,
+        "policy": "byte-exact",
+        "sha256": "fe7705bdcc8e664fa4268667f68925d09a65b7b8f1b2b231399d861994f4e7c7"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/evaluation/tasks.json": {
+        "bytes": 33770,
+        "policy": "byte-exact",
+        "sha256": "cdd7771b32b7b8062f9c461f4fdf57a7a263e03b38eedeaa3ba53a06d5c59646"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/gates/gate_report.json": {
+        "bytes": 10107369,
+        "policy": "byte-exact",
+        "sha256": "410d6a6a5213848f287145de0cd10d89ec524e858f11b81285deecd5cd87535c"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/training/composition_cases.json": {
+        "bytes": 36201,
+        "policy": "byte-exact",
+        "sha256": "f5ea46d6a86d83696e05c00d4a6758d5eaeb49fd7308334151cba9e4a6c3245f"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/training/composition_examples.json": {
+        "bytes": 48975,
+        "policy": "byte-exact",
+        "sha256": "d833b944c82f6b8a8d49c20a200cbb5bb40aeb4c993a29215d6cbac6846e5a2d"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/training/isolated_cases.json": {
+        "bytes": 36158,
+        "policy": "byte-exact",
+        "sha256": "a31d8cffcd6765117e2143a1ccfcdbbd7527b1ff9979e03212c378aae1d4c691"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/training/isolated_examples.json": {
+        "bytes": 48315,
+        "policy": "byte-exact",
+        "sha256": "4ad3e0a00709b21b52390b4d85028196c31fec5a9fce6218f42701c353ddadff"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json": {
+        "bytes": 198425,
+        "policy": "byte-exact",
+        "sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json": {
+        "bytes": 29724,
+        "policy": "byte-exact",
+        "sha256": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.json": {
+        "bytes": 2426481,
+        "policy": "byte-exact",
+        "sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json": {
+        "bytes": 74514,
+        "policy": "byte-exact",
+        "sha256": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b"
+      },
+      "scripts/analyze_phase3c_conf1.py": {
+        "bytes": 1032,
+        "policy": "byte-exact",
+        "sha256": "0da4bbd407a31115ea6d3a4cfb96cffbb00257d8c56d550ac94a4efab779a24a"
+      },
+      "scripts/audit_phase3c_conf1_r1_specification_feasibility.py": {
+        "bytes": 19670,
+        "policy": "byte-exact",
+        "sha256": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74"
+      },
+      "scripts/audit_phase3c_conf1_r2_liveness_feasibility.py": {
+        "bytes": 31505,
+        "policy": "byte-exact",
+        "sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254"
+      },
+      "scripts/build_phase2b_data.py": {
+        "bytes": 67080,
+        "policy": "byte-exact",
+        "sha256": "13ee82a45e61c798cef850f4886d594d876cd9aae00b71b439c239a34e688954"
+      },
+      "scripts/build_phase3c_conf1_candidate.py": {
+        "bytes": 1792,
+        "policy": "byte-exact",
+        "sha256": "9540a49b4eabae13b19eb30d15b6a6727bfa3578460d30a2e2ec26d74431a422"
+      },
+      "scripts/build_phase3c_conf1_data.py": {
+        "bytes": 14550,
+        "policy": "byte-exact",
+        "sha256": "bfbd0f7d4b9b981e38097fca4e7e14f40107f530f9a315f6118ae0a8dc5cb124"
+      },
+      "scripts/design_phase3c_conf1.py": {
+        "bytes": 11768,
+        "policy": "byte-exact",
+        "sha256": "997ad40d55309e0b0a658a6b615e378626168a282244d459d68dfbe0f66433bf"
+      },
+      "scripts/evaluate_phase3c_conf1.py": {
+        "bytes": 4846,
+        "policy": "byte-exact",
+        "sha256": "a6dc6e9ef0e4684c401baabffde63a266a1f0beee55a8d0d65162c2ced54ae64"
+      },
+      "scripts/freeze_phase3c_conf1_candidate.py": {
+        "bytes": 29826,
+        "policy": "byte-exact",
+        "sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65"
+      },
+      "scripts/train_phase2a_qlora.py": {
+        "bytes": 11828,
+        "policy": "byte-exact",
+        "sha256": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964"
+      },
+      "scripts/train_phase3c_conf1.py": {
+        "bytes": 7808,
+        "policy": "byte-exact",
+        "sha256": "a357a7fc6c135e535572b0c9579ccf8d93369564976d2e823e1a3aaa47cceccb"
+      },
+      "scripts/validate_phase2b_data.py": {
+        "bytes": 12591,
+        "policy": "byte-exact",
+        "sha256": "e1f6f23349389d1765076a50e68a6857ca85251f7abf784a97fe3ccc82efbeb1"
+      },
+      "src/self_learning_ai/benchmark.py": {
+        "bytes": 6356,
+        "policy": "byte-exact",
+        "sha256": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a"
+      },
+      "src/self_learning_ai/compiler.py": {
+        "bytes": 6264,
+        "policy": "byte-exact",
+        "sha256": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c"
+      },
+      "src/self_learning_ai/conf1_r1/__init__.py": {
+        "bytes": 78,
+        "policy": "byte-exact",
+        "sha256": "a0f6fe6dc2b495a3631a0cfccd016efa1375ee4802efc85af03c659f7d139170"
+      },
+      "src/self_learning_ai/conf1_r1/analysis.py": {
+        "bytes": 18918,
+        "policy": "byte-exact",
+        "sha256": "07aa040f17fae404a35f45173ac566aa15742ba63bd914f3aa76fdf62fe3cb85"
+      },
+      "src/self_learning_ai/conf1_r1/candidate.py": {
+        "bytes": 21746,
+        "policy": "byte-exact",
+        "sha256": "3432f7960a2f57e0ce3e3f8f8f5445bd5129541555d09a7fe02c8b37a4f51087"
+      },
+      "src/self_learning_ai/conf1_r1/execution.py": {
+        "bytes": 21408,
+        "policy": "byte-exact",
+        "sha256": "51378f1ee42eb04c9d7d557913bc21400c4f7fcd3064035ec4538e529e9a6203"
+      },
+      "src/self_learning_ai/conf1_r1/gates_primary.py": {
+        "bytes": 17789,
+        "policy": "byte-exact",
+        "sha256": "5a61d496cddf0b03ba0ab74efbe66e1285caa41042b66459b8bf3fddfef79c9e"
+      },
+      "src/self_learning_ai/conf1_r1/interp.py": {
+        "bytes": 17214,
+        "policy": "byte-exact",
+        "sha256": "99c58611e9ad9b6f9cf484bf806124a81f4feeab7e7ab282fd3f522ced3a7dce"
+      },
+      "src/self_learning_ai/conf1_r1/overlap.py": {
+        "bytes": 20826,
+        "policy": "byte-exact",
+        "sha256": "affac0811d56df814f78b5b9347a95124a6e5475311d054a397d6aad183b5964"
+      },
+      "src/self_learning_ai/conf1_r1/primary.py": {
+        "bytes": 9790,
+        "policy": "byte-exact",
+        "sha256": "e19ac6a03dccbfb83c6e2321a2f3a2230983c4241fe2bf53be58d1da12617e25"
+      },
+      "src/self_learning_ai/conf1_r1/schedule.py": {
+        "bytes": 5079,
+        "policy": "byte-exact",
+        "sha256": "0daded9a380e8cc044b0907d5e9476f86b53efc0447ce138909bd0f340eda5c5"
+      },
+      "src/self_learning_ai/conf1_r1/secondary.py": {
+        "bytes": 3712,
+        "policy": "byte-exact",
+        "sha256": "fe84a46855aef2b5d767e48ab3ea28eb851e31b0843209ac80e0c5ec9234570f"
+      },
+      "src/self_learning_ai/conf1_r1/training.py": {
+        "bytes": 28520,
+        "policy": "byte-exact",
+        "sha256": "a73848be931857c01088d877a1b9722c2b715ab388421df7acc518717dd1dc87"
+      },
+      "src/self_learning_ai/dev2r_evaluation.py": {
+        "bytes": 5714,
+        "policy": "byte-exact",
+        "sha256": "8120bad8356481d31ed39cad22af73ff55bce2fe550fc49f6209f6b0eec617ff"
+      },
+      "tests/test_conf1_r1_candidate.py": {
+        "bytes": 13753,
+        "policy": "byte-exact",
+        "sha256": "4b21e0621ca75f190847f77c81336d8d598794a2c80602b54c07830ea3b12d51"
+      },
+      "tests/test_conf1_r1_execution.py": {
+        "bytes": 37224,
+        "policy": "byte-exact",
+        "sha256": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5"
+      },
+      "tests/test_conf1_r1_gates_primary.py": {
+        "bytes": 8664,
+        "policy": "byte-exact",
+        "sha256": "6e6b764e964fa18c781c810f02b821ade88b64d96af14d0e3f47d5f1ee3bf846"
+      },
+      "tests/test_conf1_r1_interp.py": {
+        "bytes": 9890,
+        "policy": "byte-exact",
+        "sha256": "e8c0e9a8fcdd3f287fc82e91f557b14197fe4bc5aa3439663d15930c5321962e"
+      },
+      "tests/test_conf1_r1_overlap_secondary.py": {
+        "bytes": 14557,
+        "policy": "byte-exact",
+        "sha256": "ecbd7be0ddd38f1206bb9e613a631c765ee5f5008d612ba2637606af5dacef0f"
+      },
+      "tests/test_conf1_r1_primary.py": {
+        "bytes": 8337,
+        "policy": "byte-exact",
+        "sha256": "38a0857f402b3c4bd093c871e6d7458cc296dba97361d182589534fe36db9c23"
+      },
+      "tests/test_conf1_r1_schedule_analysis.py": {
+        "bytes": 24254,
+        "policy": "byte-exact",
+        "sha256": "a7d2e9e959eb779b9edf966fbda3c05de191b6999cad4c383c00fc85d01a8de4"
+      },
+      "tests/test_conf1_r1_training.py": {
+        "bytes": 11372,
+        "policy": "byte-exact",
+        "sha256": "75350ae9f7c2c4fa010f1f7601bc2711e2e5b8b2fdd2fbe392e58c7bdb6d0f29"
+      }
+    },
+    "parent_commits": {
+      "c12_c14": "9002fd7375d1e396be99898f9582801db4e77e5d",
+      "construction": "2da5b8523088a8238228b1d6fbb15f314cef9ba4",
+      "i1": "36b9298d4e0c3b6cf881236d2dd4d7b139c1a7f1",
+      "i2": "6192040a7c275a10f369461600070bd56d885130",
+      "i3": "ad29adb804879d4e64da7cd7370f54e1289f1a37",
+      "i4a": "410e7f2adf4eb86150d6a8e70cdf3efa14b892d5",
+      "i4b": "267009347ccc8639abcf7c6628b37e2bab1012c3",
+      "i5a": "9002fd7375d1e396be99898f9582801db4e77e5d",
+      "i5b": "034ff88d2feb72155ea4f1cc51cd351ac455dcf6",
+      "r1_freeze": "622b8cd1b5c6a22d9a6ab01de6a25c39d9ea07c1",
+      "r2_freeze": "e0e48dee9e076e853cafd7734d1bcfe722fa4885",
+      "smoke": "097b74bccc3f4d784d138f8858b98db3b38662f6",
+      "step4": "a456e9f334516824ac8da9ab86f9d7674bcadb79"
+    },
+    "primary_blocks": {
+      "array_reduction:G1": {
+        "composition_signatures": [
+          "array_reduction:G1:R0",
+          "array_reduction:G1:R1",
+          "array_reduction:G1:R2",
+          "array_reduction:G1:R3"
+        ],
+        "family": "array_reduction",
+        "task_ids": [
+          "CONF1-NC-AR-G1-R0",
+          "CONF1-NC-AR-G1-R1",
+          "CONF1-NC-AR-G1-R2",
+          "CONF1-NC-AR-G1-R3"
+        ]
+      },
+      "array_reduction:G2": {
+        "composition_signatures": [
+          "array_reduction:G2:R0",
+          "array_reduction:G2:R1",
+          "array_reduction:G2:R2",
+          "array_reduction:G2:R3"
+        ],
+        "family": "array_reduction",
+        "task_ids": [
+          "CONF1-NC-AR-G2-R0",
+          "CONF1-NC-AR-G2-R1",
+          "CONF1-NC-AR-G2-R2",
+          "CONF1-NC-AR-G2-R3"
+        ]
+      },
+      "array_reduction:G3P": {
+        "composition_signatures": [
+          "array_reduction:G3P:R0",
+          "array_reduction:G3P:R1",
+          "array_reduction:G3P:R2",
+          "array_reduction:G3P:R3"
+        ],
+        "family": "array_reduction",
+        "task_ids": [
+          "CONF1-NC-AR-G3P-R0",
+          "CONF1-NC-AR-G3P-R1",
+          "CONF1-NC-AR-G3P-R2",
+          "CONF1-NC-AR-G3P-R3"
+        ]
+      },
+      "array_reduction:G4": {
+        "composition_signatures": [
+          "array_reduction:G4:R0",
+          "array_reduction:G4:R1",
+          "array_reduction:G4:R2",
+          "array_reduction:G4:R3"
+        ],
+        "family": "array_reduction",
+        "task_ids": [
+          "CONF1-NC-AR-G4-R0",
+          "CONF1-NC-AR-G4-R1",
+          "CONF1-NC-AR-G4-R2",
+          "CONF1-NC-AR-G4-R3"
+        ]
+      },
+      "numeric_iteration:G1": {
+        "composition_signatures": [
+          "numeric_iteration:G1:R0",
+          "numeric_iteration:G1:R1",
+          "numeric_iteration:G1:R2",
+          "numeric_iteration:G1:R3"
+        ],
+        "family": "numeric_iteration",
+        "task_ids": [
+          "CONF1-NC-NU-G1-R0",
+          "CONF1-NC-NU-G1-R1",
+          "CONF1-NC-NU-G1-R2",
+          "CONF1-NC-NU-G1-R3"
+        ]
+      },
+      "numeric_iteration:G2": {
+        "composition_signatures": [
+          "numeric_iteration:G2:R0",
+          "numeric_iteration:G2:R1",
+          "numeric_iteration:G2:R2",
+          "numeric_iteration:G2:R3"
+        ],
+        "family": "numeric_iteration",
+        "task_ids": [
+          "CONF1-NC-NU-G2-R0",
+          "CONF1-NC-NU-G2-R1",
+          "CONF1-NC-NU-G2-R2",
+          "CONF1-NC-NU-G2-R3"
+        ]
+      },
+      "numeric_iteration:G3": {
+        "composition_signatures": [
+          "numeric_iteration:G3:R0",
+          "numeric_iteration:G3:R1",
+          "numeric_iteration:G3:R2",
+          "numeric_iteration:G3:R3"
+        ],
+        "family": "numeric_iteration",
+        "task_ids": [
+          "CONF1-NC-NU-G3-R0",
+          "CONF1-NC-NU-G3-R1",
+          "CONF1-NC-NU-G3-R2",
+          "CONF1-NC-NU-G3-R3"
+        ]
+      },
+      "numeric_iteration:G4": {
+        "composition_signatures": [
+          "numeric_iteration:G4:R0",
+          "numeric_iteration:G4:R1",
+          "numeric_iteration:G4:R2",
+          "numeric_iteration:G4:R3"
+        ],
+        "family": "numeric_iteration",
+        "task_ids": [
+          "CONF1-NC-NU-G4-R0",
+          "CONF1-NC-NU-G4-R1",
+          "CONF1-NC-NU-G4-R2",
+          "CONF1-NC-NU-G4-R3"
+        ]
+      }
+    },
+    "schedule": {
+      "P3_token_totals": {
+        "composition": {
+          "examples": 60,
+          "full": 15286,
+          "max_full": 294,
+          "supervised": 7531
+        },
+        "isolated": {
+          "examples": 60,
+          "full": 15166,
+          "max_full": 292,
+          "supervised": 7531
+        }
+      },
+      "SEEDS": [
+        20280117,
+        20280223,
+        20280329,
+        20280411,
+        20280507
+      ],
+      "cell_order": [
+        {
+          "condition": "isolated",
+          "seed": 20280117
+        },
+        {
+          "condition": "composition",
+          "seed": 20280117
+        },
+        {
+          "condition": "isolated",
+          "seed": 20280223
+        },
+        {
+          "condition": "composition",
+          "seed": 20280223
+        },
+        {
+          "condition": "isolated",
+          "seed": 20280329
+        },
+        {
+          "condition": "composition",
+          "seed": 20280329
+        },
+        {
+          "condition": "isolated",
+          "seed": 20280411
+        },
+        {
+          "condition": "composition",
+          "seed": 20280411
+        },
+        {
+          "condition": "isolated",
+          "seed": 20280507
+        },
+        {
+          "condition": "composition",
+          "seed": 20280507
+        }
+      ],
+      "exposures_per_cell": 180,
+      "exposures_per_condition": 900,
+      "optimizer_steps_per_cell": 24,
+      "optimizer_steps_per_condition": 120,
+      "schedule_hash_serialization": "indent=2, sort_keys=True, ensure_ascii=False, allow_nan=False, UTF-8 LF, trailing newline",
+      "training_schedule_sha256": {
+        "20280117": "c45a53c31243c28cd239dd3f036e822b345d7ce95ddd0138b2df233876b9f5c2",
+        "20280223": "dccda5fce3bb590c27e4fa67d4e43de3d3ed00a8b622b89322a51d134a2721ae",
+        "20280329": "91834acb7d7e6cbb1b0817f2404c39ae5abdd83dcb84bfc1fd9577524991897b",
+        "20280411": "a220526e34afde6df115198c6a1214cd497bf8836d682eb44db0d03a36ab5c4b",
+        "20280507": "e6fb220114e2dc184d9e2ddf34be393c4622576d7aeea73939a464bdbe1dc53b"
+      }
+    }
+  },
   "gate_summary": {
     "AUTHORITIES": "PASS",
     "CONSUMED_INVENTORY": "PASS",
@@ -175,7 +1012,9 @@
   "label": "CONF1_CONSTRUCTION",
   "model_execution_authorized": false,
   "phase": "PHASE_3C_CONF1",
-  "status": "CANDIDATE_GATES_PASSED_NOT_FROZEN",
+  "prefreeze_manifest_sha256": "2f59b59f372ccd6f54529415881c3e2940e7969cffbc31b418946204852c087a",
+  "schema_version": "PHASE_3C_CONF1_FREEZE_1",
+  "status": "CANDIDATE_FROZEN",
   "tokenizer_hashes": {
     "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
     "tokenizer_config.json": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
