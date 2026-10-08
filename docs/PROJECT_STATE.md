@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `034ff88d2feb72155ea4f1cc51cd351ac455dcf6`
-Last substantive state review: 2026-10-07
+Last verified repository HEAD: `c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`
+Last substantive state review: 2026-10-08
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **methodology R1 + R2 FROZEN; implementation I1-I5b accepted (step 3 complete); step 4 (synthetic validation and hardening) next; no candidate construction or model execution authorized**
+Current phase: **R1 + R2 frozen; implementation accepted; Attempt 004 constructed (2da5b85) and frozen (c4aa4bdcc9586821ae2286e3f5f18efaa71d1374); model execution NOT authorized; step 8 (project-head readiness review, then the user's one-line authorization) next**
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 
@@ -59,14 +59,14 @@ All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**
 - **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
 - **Claim limitation (R1 §2).** Even a positive result supports only: pair-joint indicator-product practice transfers, relative to independent additive practice, to new multi-role multi-term counting programs built from that idiom, in GOCO, under this budget, with one base model (Level B). ISOLATED has no conjunction exposure, so a positive result partly reflects availability of the joint idiom. It does not support general compositional ability, structural transfer, retention or continual learning.
 
-**Status of this design: R1 + R2 FROZEN.** The execution config exists only as `research/protocols/phase3c_conf1_config_proposed.json` (status `PROPOSED_NOT_FROZEN`, `model_execution_authorized: false`); candidate construction and model execution remain unauthorized.
+**Status of this design: R1 + R2 FROZEN; Attempt 004 FROZEN.** Its manifest binds `research/protocols/phase3c_conf1_config_proposed.json` and the execution inputs. The candidate manifest remains `model_execution_authorized: false`; step 8 is next. Freeze evidence: `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/freeze_report.json`.
 
 ## D. Resolved blocker (historical)
 
 The accepted audit verdict was **`FROZEN_STACK_COVERAGE_INFEASIBLE_AT_SPECIFICATION_LEVEL`** (`research/results/PHASE_3C_CONF1_PREFREEZE/specification_coverage_feasibility_audit.md`, commit `841f5ca`), with a definite-blocker union of **56/64** evaluation specifications.
 `research/results/PHASE_3C_CONF1_PREFREEZE/r1_specification_feasibility.json` also recorded 8 of 16 array primary slots as degenerate; array G3 admitted only 2 distinct non-degenerate functions.
 R1 (freeze `622b8cd`) repaired the array population; R1 and R2 (freeze `e0e48de`) replaced the coverage machinery and resolved the blocker.
-Current blocker: none scientific. Remaining work is validation, candidate construction and freeze (§I).
+Current blocker: none scientific. Remaining pre-execution work is the project-head readiness review and the user's one-line authorization (§I).
 
 ## E. What is frozen vs proposed vs historical
 
@@ -80,7 +80,7 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 | R2 implementation clarifications C7–C9 | `phase3c_conf1_r2_implementation_clarifications.md` | C7 Statement kinds and K-row liveness; C8 P3 implementation; C9 Condition-neutral model-facing identifiers | PROJECT-HEAD CLARIFICATIONS (commit ad29adb) |
 | Implementation clarifications C10–C11 | `phase3c_conf1_implementation_clarifications_c10_c11.md` | C10 P7/E4 overlap; C11 secondary tasks | PROJECT-HEAD CLARIFICATIONS (commit 410e7f2) |
 | Implementation clarifications C12–C14 | `phase3c_conf1_implementation_clarifications_c12_c14.md` | C12 training schedule; C13 evaluation order/RNG/scoring; C14 analysis and bootstrap | PROJECT-HEAD CLARIFICATIONS (commit 9002fd7) |
-| CONF1 proposed execution config | `phase3c_conf1_config_proposed.json` | Execution config (hyperparameters copied from DEV2, CONF1 seeds, C12-C14 references) | PROPOSED_NOT_FROZEN (commit 034ff88) |
+| CONF1 execution config | `phase3c_conf1_config_proposed.json` | Execution config (hyperparameters copied from DEV2, CONF1 seeds, C12-C14 references) | File retains PROPOSED_NOT_FROZEN; exact bytes bound in frozen Attempt 004 (c4aa4bd) |
 | CONF1 design protocol (estimand, thresholds, gate, bootstrap, scaffold) | `phase3c_conf1_proposed_protocol.md` | Scientific design | RETAINED; amended by R1 |
 | Semantic slot ledger | `phase3c_conf1_slots.json` | 184-specification population | RETAINED; amended by R1 |
 | AST adjudication v2 | `phase3c_conf1_ast_adjudication_v2.md` | Consumed-template overlap rule (E2) | DEMOTED to descriptive |
@@ -98,11 +98,11 @@ All under `research/protocols/` unless noted. "Frozen" means a freeze manifest b
 | Development readiness evidence | `research/implementation_notes/` (~325 MB) | Development-only tranches (Boolean mapping, state, essentiality, value/output, RO) | DEVELOPMENT_ONLY; predates G/B1/D2; never scientific evidence |
 | Coverage-v2 (`phase3c_conf1_coverage_v2*`), AST v1 (`phase3c_conf1_ast_adjudication.md`), and superseded v1 proposals (`phase3c_conf1_canonical_contract_graph_recipe_proposed.md`, `phase3c_conf1_direct_support_accounting_amendment_proposed.md`, `phase3c_conf1_reference_only_interface_clarification_proposed.md`) | `research/protocols/` | Earlier methodology | HISTORICAL / SUPERSEDED |
 | Attempts 001–003 | `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_00{1,2,3}/` | Rejected candidates | HISTORICAL; never confirmatory; never select Attempt 004 content from their outcomes |
-| Frozen candidate manifest with `model_execution_authorized` | produced at Attempt 004 construction and freeze | Required before execution | MISSING (no candidate exists) |
+| Frozen candidate manifest with `model_execution_authorized` | `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004/candidate_manifest.json` | Frozen inputs and required execution authorization | CANDIDATE_FROZEN (c4aa4bd); boolean false |
 
 ## F. Current implementation state
 
-VERIFIED_FROM_REPOSITORY at `034ff88`. Code status, not protocol status.
+VERIFIED_FROM_REPOSITORY at `c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`. Code status, not protocol status.
 
 Modules under `src/self_learning_ai/conf1_r1/` unless a full path is shown.
 
@@ -114,19 +114,11 @@ Modules under `src/self_learning_ai/conf1_r1/` unless a full path is shown.
 | `overlap.py`, `secondary.py` | I4a | `410e7f2` | C10 P7/E4 overlap and read-only consumed inventory; C11 secondary definitions and compiler E1 |
 | `candidate.py` | I4b | `2670093` | Candidate builder, R2-A-aware P6 and synthetic dry run; construction requires explicit authorization |
 | `schedule.py`, `analysis.py` | I5a | `9002fd7` | C12/C13 schedule and orders; C14 analyzer; analysis acquisition path corrected in I5b (`034ff88`) |
-| `execution.py`; `scripts/train_phase3c_conf1.py`, `scripts/evaluate_phase3c_conf1.py`, `scripts/analyze_phase3c_conf1.py` | I5b | `034ff88` | Authorization check, create-only checkpoints and one-pass orchestration through injected model callables; real GPU paths written but never run |
+| `execution.py`; `scripts/train_phase3c_conf1.py`, `scripts/evaluate_phase3c_conf1.py`, `scripts/analyze_phase3c_conf1.py` | I5b | `034ff88` | Authorization check, create-only checkpoints and one-pass orchestration; GPU paths exercised only in the consumed-DEV2 smoke run |
 
-All tranches were validated with synthetic inputs or a fake model only; the real training/generation code paths are statically reviewed only and have never executed.
+H1-H5 closed in step 4 (`a456e9f`): 254 tests passed in the plugin-free counted run. Real GPU paths ran once in a non-scientific consumed-DEV2 smoke run (`097b74b`). The freeze writer is `scripts/freeze_phase3c_conf1_candidate.py` (`c4aa4bd`). V1-V5 and the prefreeze no-model audit passed; see `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/freeze_report.json`.
 `src/self_learning_ai/conf1_v3/` is non-authoritative pre-R1 code, not used by `conf1_r1`.
 DEV2/DEV2R runners are reused by reference: `scripts/train_phase2a_qlora.py` (`TokenDataset`), `src/self_learning_ai/dev2r_evaluation.py` (`evaluate_task`), `src/self_learning_ai/benchmark.py` (`extract_source`).
-
-**Open hardening items (carried to step 4)**
-
-- H1 AUTHORIZED_STATUSES in execution.py admits the test status SYNTHETIC_EXECUTION_TEST_FIXTURE; production must admit only CANDIDATE_FROZEN.
-- H2 require_execution_authorization treats code_hashes and authority_hashes as optional; a frozen candidate must bind execution.py, the three CONF1 scripts, the reused DEV2/DEV2R modules, the proposed config and both prompt files, and authorization must refuse if any is unbound.
-- H3 A failed acquisition gate is recorded as an incident; run_analysis does not distinguish it from a genuine fault incident.
-- H4 No test checks that the training prompt (TokenDataset) and the evaluation prompt (execution.messages + chat template) render the identical prefix for every slot.
-- H5 The counted I5b pytest run reused a fixture built in an earlier run through an external, non-repository plugin; a clean plugin-free full run is still owed.
 
 ## G. Scientific principles (non-negotiable)
 
@@ -163,21 +155,21 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 | 1 | **DONE — Re-baseline decisions** | Project-head decisions recorded in the committed R1 proposal | Step 2 |
 | 2 | **DONE — R1 frozen (commit 622b8cd)** | Freeze manifest committed | Implementation |
 | 3 | **DONE — implementation I1-I5b** (36b9298, 6192040, ad29adb, 410e7f2, 2670093, 9002fd7, 034ff88) | Code matches frozen spec; reviewed diffs | Validation |
-| 4 | **NEXT — synthetic validation and hardening (H1-H5)** | All pass; no model | Dry run |
-| 5 | **Static conformance + end-to-end dry run** with a fake model | Independent code-vs-spec review passes | Candidate construction |
-| 6 | **Attempt 004 construction** (frozen ledger construction seed 20290123 per clarification C1; training cases per R2-B) and all audits | All gates PASS, or STOP and record | Freeze |
-| 7 | **Candidate freeze**: hashed manifest, `model_execution_authorized: false` | Committed | Authorization review |
-| 8 | **Pre-execution authorization**: independent review; a single-diff commit flips the boolean | User authorizes | Execution |
+| 4 | **DONE — synthetic validation and hardening H1-H5** (`a456e9f`) | 254 tests passed, plugin-free; no model | Conformance review |
+| 5 | **DONE — static conformance review CONFORMS; infrastructure smoke** (`097b74b`) | Review accepted; one non-scientific real-model cell on consumed DEV2 | Candidate construction |
+| 6 | **DONE — Attempt 004 construction** (`2da5b85`; seed 20290123) | All 18 candidate gates PASS | Freeze |
+| 7 | **DONE — candidate freeze** (`c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`) | Hashed manifest; `model_execution_authorized: false` | Authorization review |
+| 8 | **NEXT — pre-execution authorization**: project-head readiness review, then the user's one-line confirmation | Separate Codex task makes the single-line boolean diff only after confirmation | Execution |
 | 9 | **Execution**: 10 cells, acquisition gate, primary/secondary evaluation, one pass | Raw outputs persisted | Analysis |
 | 10 | **Analysis and reporting**: frozen analyzer, report, claims ledger and this file updated | Committed | Next research decision |
 
 ## J. Current next action
 
-The project head scopes step 4: synthetic validation and hardening H1-H5 (§F), executed by Codex as a separately authorized task.
+Next action: the project head's readiness review of frozen Attempt 004 (step 8), then the user's one-line confirmation. Only after that does a separate Codex task make the single-line `model_execution_authorized` boolean diff.
 
-- **Agent:** the project head (Claude Opus 5.5) scopes step 4; Codex executes it.
-- **Type:** DESIGN/PROMPT.
-- **Still forbidden:** candidate construction, Attempt 004, any draw with construction seed 20290123, hidden-case construction, model loading/training/inference/evaluation, prohibited data, editing frozen authorities.
+- **Agent:** the project head (Claude Opus 5.5) reviews readiness; the user authorizes execution after that review.
+- **Type:** READINESS REVIEW / AUTHORIZATION.
+- **Still forbidden:** setting the boolean, any model use on CONF1 data, editing any bound file, and prohibited data.
 
 Update this section after every major milestone.
 
