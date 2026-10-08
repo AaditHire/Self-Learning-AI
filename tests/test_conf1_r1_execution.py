@@ -11,6 +11,8 @@ import hashlib
 import json
 import os
 import random
+import shutil
+import types
 import runpy
 import subprocess
 import sys
@@ -114,6 +116,34 @@ def test_t7_atomic(tmp_path, capsys):
     emit(capsys, "T7", child("atomic", tmp_path / "unused", tmp_path / "result"))
 
 
+BOUND_PATHS = sorted({p.relative_to(ROOT).as_posix() for p in (ROOT / "src/self_learning_ai/conf1_r1").glob("*.py")} | {
+    "scripts/train_phase3c_conf1.py", "scripts/evaluate_phase3c_conf1.py", "scripts/analyze_phase3c_conf1.py",
+    "scripts/train_phase2a_qlora.py", "scripts/validate_phase2b_data.py", "src/self_learning_ai/dev2r_evaluation.py",
+    "src/self_learning_ai/benchmark.py", "src/self_learning_ai/compiler.py",
+    "research/protocols/phase3c_conf1_config_proposed.json", "prompts/phase1t_system.txt", "prompts/phase1t_user_template.txt"})
+
+
+@pytest.mark.parametrize("bound_path", BOUND_PATHS)
+def test_h2_each_binding(bound_path, tmp_path, capsys):
+    emit(capsys, "H2", child("binding:" + bound_path, tmp_path / "fixture", tmp_path / "result"))
+
+
+def test_h4_prompt_parity(synthetic_candidate, tmp_path, capsys):
+    result = child("parity", synthetic_candidate, tmp_path / "result")
+    assert result["training_rows_checked"] == 120 and result["mismatches"] == 0
+    emit(capsys, "H4", result)
+
+
+@pytest.mark.parametrize("fault", [f"F{i}" for i in range(1, 8)])
+def test_h5_fault_matrix(fault, synthetic_candidate, tmp_path, capsys):
+    emit(capsys, fault, child("matrix:" + fault, synthetic_candidate, tmp_path / "result"))
+
+
+@pytest.mark.parametrize("fault", ["lock", "missing_training", "bad_training_receipt", "missing_gate", "changed_gate", "missing_complete", "count_mismatch"])
+def test_h3_analysis_preconditions(fault, synthetic_candidate, tmp_path, capsys):
+    emit(capsys, "H3", child("analysis-precondition:" + fault, synthetic_candidate, tmp_path / "result"))
+
+
 def test_t9_static(tmp_path, capsys):
     import py_compile
     scripts = [ROOT / f"scripts/{kind}_phase3c_conf1.py" for kind in ("train", "evaluate", "analyze")]
@@ -153,11 +183,17 @@ def worker(action, candidate, out):
     sys.addaudithook(fixture_guard)
     # The mandated builder uses AutoTokenizer. Permit that tokenizer-only path
     # with all model backends disabled; execution/CLI workers block all four.
-    if action == "build":
+    if action in ("build", "parity"):
         os.environ.update(USE_TORCH="0", USE_TF="0", USE_FLAX="0")
     for name in HEAVY:
-        if action != "build" or name != "transformers":
+        if name not in ({"transformers", "torch"} if action == "parity" else {"transformers"} if action == "build" else set()):
             sys.modules[name] = None
+    def no_weights_or_cuda(event, args):
+        if event == "v1.cuda_initialization":
+            raise AssertionError("CUDA initialization forbidden")
+        if event == "open" and isinstance(args[0], (str, bytes, os.PathLike)):
+            assert not os.fsdecode(args[0]).lower().endswith(".safetensors"), "weight file forbidden"
+    sys.addaudithook(no_weights_or_cuda)
     from self_learning_ai.conf1_r1 import execution as ex, analysis as an, schedule as sc
     from self_learning_ai.conf1_r1.gates_primary import GateStop
     out.mkdir(parents=True)
@@ -190,34 +226,31 @@ def worker(action, candidate, out):
         (candidate / "candidate_manifest.json").write_text(json.dumps(fixture, indent=2), encoding="utf-8")
         save({"seed": 900001, "status": result["status"], "counts": result["counts"]})
         return
+    def authorization_manifest():
+        candidate.mkdir(exist_ok=True)
+        (candidate / "payload.json").write_text("{}", encoding="utf-8")
+        cfg = ex.read(ROOT / "research/protocols/phase3c_conf1_config_proposed.json")
+        prompt = "research/protocols/phase3c_conf1_slots.json"
+        return {"phase": "PHASE_3C_CONF1", "construction_seed": 900001,
+                "status": "SYNTHETIC_EXECUTION_TEST_FIXTURE", "model_execution_authorized": True,
+                "file_sha256": {"payload.json": ex.sha256(candidate / "payload.json")},
+                "code_hashes": {name: ex.sha256(ROOT / name) for name in ex.execution_bound_files()},
+                "authority_hashes": {prompt: {"sha256": ex.sha256(ROOT / prompt)}},
+                "compiler_sha256": cfg["compiler"]["sha256"], "tokenizer_hashes": cfg["tokenizer_file_sha256"]}
+
     if action == "authorization":
-        candidate.mkdir()
+        assert ex.AUTHORIZED_STATUSES == frozenset({"CANDIDATE_FROZEN"})
+        assert ex.AUTHORIZED_CONSTRUCTION_SEEDS == frozenset({20290123})
+        base = authorization_manifest()
         manifest_path = candidate / "candidate_manifest.json"
-        payload = candidate / "payload.json"
-        payload.write_text("{}", encoding="utf-8")
-        base = {"status": "SYNTHETIC_EXECUTION_TEST_FIXTURE", "model_execution_authorized": True,
-                "file_sha256": {"payload.json": ex.sha256(payload)}}
+        def write(value):
+            manifest_path.write_text(json.dumps(value), encoding="utf-8")
         refused = [stop(lambda: ex.require_execution_authorization(candidate))]
-        for value in (False, "true", 1, None):
-            manifest_path.write_text(json.dumps(dict(base, model_execution_authorized=value)), encoding="utf-8")
+        for value in (True, "20290123", 20290124):
+            write(base | {"status": "CANDIDATE_FROZEN", "construction_seed": value})
             refused.append(stop(lambda: ex.require_execution_authorization(candidate)))
-        manifest_path.write_text(json.dumps(dict(base, status="PROPOSED_NOT_FROZEN")), encoding="utf-8")
+        write(base)
         refused.append(stop(lambda: ex.require_execution_authorization(candidate)))
-        manifest_path.write_text(json.dumps(base), encoding="utf-8")
-        assert ex.require_execution_authorization(candidate) == base
-        payload.write_text('{"tampered":true}', encoding="utf-8")
-        refused.append(stop(lambda: ex.require_execution_authorization(candidate), "hash mismatch"))
-        payload.write_text("{}", encoding="utf-8")
-        prompt = "prompts/phase1t_system.txt"
-        for changes in (
-                {"code_hashes": {prompt: "0" * 64}},
-                {"authority_hashes": {prompt: {"sha256": ex.sha256(ROOT / prompt),
-                    "verified_sha256": "0" * 64, "verification": "byte-exact"}}},
-                {"compiler_sha256": "0" * 64},
-                {"tokenizer_hashes": {"tokenizer.json": "0" * 64}}):
-            manifest_path.write_text(json.dumps(base | changes), encoding="utf-8")
-            refused.append(stop(lambda: ex.require_execution_authorization(candidate), "hash mismatch"))
-        manifest_path.write_text(json.dumps(dict(base, model_execution_authorized=False)), encoding="utf-8")
         exits = {}
         for kind in ("train", "evaluate", "analyze"):
             sys.argv = [kind, "--candidate-dir", str(candidate), "--check-authorization-only"]
@@ -227,9 +260,60 @@ def worker(action, candidate, out):
                 assert exc.code == 2
                 exits[kind] = exc.code
             else:
-                raise AssertionError("script did not refuse")
+                raise AssertionError("script did not refuse synthetic authorized fixture")
         assert all(sys.modules[name] is None for name in HEAVY)
-        save({"authorization_refusals": len(refused), "script_exit_codes": exits, "ImportError": False})
+        ex.AUTHORIZED_STATUSES = frozenset({"SYNTHETIC_EXECUTION_TEST_FIXTURE"})
+        ex.AUTHORIZED_CONSTRUCTION_SEEDS = frozenset({900001})
+        write(base)
+        assert ex.require_execution_authorization(candidate) == base
+        for value in (False, "true", 1, None):
+            write(base | {"model_execution_authorized": value})
+            refused.append(stop(lambda: ex.require_execution_authorization(candidate)))
+        for changes in ({"phase": "WRONG"}, {"status": "PROPOSED_NOT_FROZEN"}):
+            write(base | changes)
+            refused.append(stop(lambda: ex.require_execution_authorization(candidate)))
+        for field in ("code_hashes", "authority_hashes", "compiler_sha256", "tokenizer_hashes", "file_sha256"):
+            incomplete = dict(base)
+            incomplete.pop(field)
+            write(incomplete)
+            refused.append(stop(lambda: ex.require_execution_authorization(candidate), "mandatory"))
+        write(base)
+        (candidate / "payload.json").write_text('{"tampered":true}', encoding="utf-8")
+        refused.append(stop(lambda: ex.require_execution_authorization(candidate), "hash mismatch"))
+        save({"production_statuses": ["CANDIDATE_FROZEN"], "production_construction_seeds": [20290123],
+              "authorization_refusals": len(refused), "script_exit_codes": exits, "ImportError": False})
+        return
+
+    if action.startswith("binding:"):
+        name = action.split(":", 1)[1]
+        base = authorization_manifest()
+        ex.AUTHORIZED_STATUSES = frozenset({"SYNTHETIC_EXECUTION_TEST_FIXTURE"})
+        ex.AUTHORIZED_CONSTRUCTION_SEEDS = frozenset({900001})
+        manifest_path = candidate / "candidate_manifest.json"
+        missing = json.loads(json.dumps(base))
+        missing["code_hashes"].pop(name, None)
+        missing["authority_hashes"].pop(name, None)
+        manifest_path.write_text(json.dumps(missing), encoding="utf-8")
+        stop(lambda: ex.require_execution_authorization(candidate), "missing execution bindings")
+        replica = out / "repo-copy"
+        cfg = ex.read(ROOT / "research/protocols/phase3c_conf1_config_proposed.json")
+        copied = set(ex.execution_bound_files()) | {cfg["compiler"]["path"]} | {
+            cfg["base_weights"]["local_path"] + "/" + key for key in cfg["tokenizer_file_sha256"]}
+        for file in copied:
+            target = replica / file
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes((ROOT / file).read_bytes())
+        target = replica / name
+        raw = target.read_bytes()
+        target.write_bytes(bytes([raw[0] ^ 1]) + raw[1:])
+        manifest_path.write_text(json.dumps(base), encoding="utf-8")
+        ex.ROOT = replica
+        stop(lambda: ex.require_execution_authorization(candidate), "hash mismatch")
+        (replica / "src/self_learning_ai/conf1_r1/new_module.py").write_text("# fixture", encoding="utf-8")
+        assert "src/self_learning_ai/conf1_r1/new_module.py" in ex.execution_bound_files()
+        stop(lambda: ex.require_execution_authorization(candidate), "missing execution bindings")
+        save({"path": name, "missing_refused": True, "one_byte_tamper_refused": True,
+              "dynamic_new_module_refused": True, "tampered_repository_files": 0})
         return
     if action == "atomic":
         count = 0
@@ -259,6 +343,8 @@ def worker(action, candidate, out):
               "temporary_files_remaining": 0})
         return
 
+    ex.AUTHORIZED_STATUSES = frozenset({"SYNTHETIC_EXECUTION_TEST_FIXTURE"})
+    ex.AUTHORIZED_CONSTRUCTION_SEEDS = frozenset({900001})
     path, manifest, tasks, examples, cases = ex._candidate(candidate)
     runtime = out / "runtime"
     calls = []
@@ -270,6 +356,157 @@ def worker(action, candidate, out):
             assert row["messages"][1]["content"] == f"Task {row['model_task_id']}\n\n{row['prompt']}"
             assert row["example_id"] not in row["messages"][1]["content"]
         return {"exposures": 180, "optimizer_steps": 24, "losses": [0.25] * 180}
+
+    if action == "parity":
+        import torch
+        def cuda_forbidden(*args, **kwargs):
+            sys.audit("v1.cuda_initialization")
+        torch.cuda.init = cuda_forbidden
+        torch.cuda._lazy_init = cuda_forbidden
+        if hasattr(torch._C, "_cuda_init"):
+            torch._C._cuda_init = cuda_forbidden
+        from transformers import AutoTokenizer
+        cfg = ex.read(ROOT / "research/protocols/phase3c_conf1_config_proposed.json")
+        model_path = ROOT / cfg["base_weights"]["local_path"]
+        for name, digest in cfg["tokenizer_file_sha256"].items():
+            assert ex.sha256(model_path / name) == digest
+        tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
+        # Import the unchanged TokenDataset module, with unused model/adapter
+        # constructors replaced by refusal stubs. Only CPU Dataset is exercised.
+        def unused(*args, **kwargs):
+            raise AssertionError("model/adapter API forbidden in parity test")
+        peft_stub = types.ModuleType("peft")
+        for name in ("LoraConfig", "get_peft_model", "prepare_model_for_kbit_training"):
+            setattr(peft_stub, name, unused)
+        sys.modules["peft"] = peft_stub
+        sys.modules["bitsandbytes"] = types.ModuleType("bitsandbytes")
+        transformers_stub = types.ModuleType("transformers")
+        for name in ("AutoModelForCausalLM", "BitsAndBytesConfig", "get_linear_schedule_with_warmup"):
+            setattr(transformers_stub, name, unused)
+        transformers_stub.AutoTokenizer = AutoTokenizer
+        sys.modules["transformers"] = transformers_stub
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from train_phase2a_qlora import TokenDataset
+        maximum = checked = 0
+        for condition in sc.CONDITIONS:
+            system, rows = ex.training_rows(list(examples[condition].values()), sc.SLOT_IDS)
+            for row in rows:
+                item = TokenDataset([row], tokenizer, system, 320)[0]
+                prefix_length = sum(label == -100 for label in item["labels"])
+                prompt_ids = item["input_ids"][:prefix_length]
+                evaluated = ex.encode_prompt(tokenizer, ex.messages(row["model_task_id"], row["prompt"]))
+                if prompt_ids != evaluated:
+                    evidence = {"slot": row["model_task_id"], "condition": condition,
+                                "training_decoded": tokenizer.decode(prompt_ids),
+                                "evaluation_decoded": tokenizer.decode(evaluated)}
+                    save({"STOP": "H4 parity mismatch", **evidence})
+                    raise GateStop("H4 parity mismatch", evidence)
+                checked += 1
+                maximum = max(maximum, len(item["input_ids"]))
+        evaluation_lengths = [len(ex.encode_prompt(tokenizer, ex.messages(t["task_id"], t["prompt"]))) for t in tasks]
+        assert max(evaluation_lengths) <= 8192
+        assert not torch.cuda.is_initialized()
+        save({"training_rows_checked": checked, "mismatches": 0, "max_training_full_length": maximum,
+              "evaluation_tasks_checked": len(tasks), "max_evaluation_prompt_length": max(evaluation_lengths),
+              "weights_opened": 0, "CUDA_initialized": False, "TokenDataset_module": "scripts/train_phase2a_qlora.py"})
+        return
+
+    if action.startswith(("matrix:", "analysis-precondition:")):
+        fault = action.split(":", 1)[1]
+        def fast_score(raw, task, selected, target, checkpoint_dir):
+            return {"passed": True, "compile_ok": True, "exact_target": True,
+                    "case_outcomes": [{"passed": True, "execution_ok": True,
+                                       "expected_stdout": c["expected_stdout"]} for c in selected]}
+        def fail(*args):
+            raise RuntimeError("INJECTED_" + fault)
+        model_calls = 0
+        def fake_generate(*args):
+            nonlocal model_calls
+            model_calls += 1
+            if fault == "F2":
+                return fail()
+            return "FAKE_RAW"
+        if action.startswith("analysis-precondition:"):
+            ex.run_training_cells(candidate, good_train, runtime_root=runtime)
+            ex.run_own_training(candidate, fake_generate, fast_score, reset=random.seed, runtime_root=runtime)
+            store = ex.CheckpointStore(runtime)
+            stem = f"training/{sc.SEEDS[0]}/{sc.CONDITIONS[0]}"
+            if fault == "lock":
+                store.path("stray.lock").write_text("reservation", encoding="utf-8")
+            elif fault == "missing_training":
+                store.path(stem + ".json").unlink()
+            elif fault == "bad_training_receipt":
+                store.path(stem + ".sha256.json").write_text('{"sha256":"WRONG"}', encoding="utf-8")
+            elif fault == "missing_gate":
+                store.path("acquisition_gate.json").unlink()
+            elif fault == "changed_gate":
+                gate = ex.read(store.path("acquisition_gate.json"))
+                gate["passed"] = False
+                store.path("acquisition_gate.json").write_text(json.dumps(gate), encoding="utf-8")
+            elif fault == "count_mismatch":
+                store.write("confirmatory_complete.json", {"records": 10 * len(tasks), "tasks_per_cell": len(tasks)})
+            elif fault != "missing_complete":
+                raise AssertionError(fault)
+            reason = stop(lambda: ex.run_analysis(candidate, runtime))
+            assert (runtime / "incidents").exists() and not (runtime / "analysis.json").exists()
+            save({"fault": fault, "reason": reason, "analysis_refused": True,
+                  "incident_written": True, "analysis_written": False})
+            return
+        if fault == "F1":
+            train_calls = 0
+            def fail_train(*args):
+                nonlocal train_calls
+                train_calls += 1
+                return fail()
+            stage = lambda: ex.run_training_cells(candidate, fail_train, runtime_root=runtime)
+        else:
+            ex.run_training_cells(candidate, good_train, runtime_root=runtime)
+            scorer = fast_score
+            if fault == "F3":
+                scorer = fail
+            if fault == "F5":
+                def scorer(*args):
+                    raise GateStop("compiler infrastructure fault", {"phase": "system"})
+            original_write = ex.CheckpointStore.write
+            if fault == "F4":
+                def fail_receipt(self, name, value):
+                    if name.endswith(".score.sha256.json"):
+                        raise OSError("INJECTED_F4_RECEIPT_WRITE")
+                    return original_write(self, name, value)
+                ex.CheckpointStore.write = fail_receipt
+            stage = lambda: ex.run_own_training(candidate, fake_generate, scorer, reset=random.seed, runtime_root=runtime)
+            if fault in ("F6", "F7"):
+                stage()
+                if fault == "F6":
+                    raw_path = next(runtime.glob("evaluations/*/*/training/*.raw.json"))
+                    raw = raw_path.read_bytes()
+                    raw_path.write_bytes(bytes([raw[0] ^ 1]) + raw[1:])
+                else:
+                    (runtime / "stray.tmp-INJECTED_F7").write_text("partial", encoding="utf-8")
+                stage = lambda: ex.run_analysis(candidate, runtime)
+        reason = stop(stage)
+        if fault == "F6":
+            assert "raw checkpoint hash mismatch" in reason
+        if fault == "F7":
+            assert "incident-free" in reason
+        incidents = list((runtime / "incidents").glob("*.json"))
+        assert incidents and not (runtime / "analysis.json").exists()
+        previous = train_calls if fault == "F1" else model_calls
+        stop(stage)
+        assert (train_calls if fault == "F1" else model_calls) == previous
+        stop(lambda: ex.run_analysis(candidate, runtime), "incident-free")
+        assert not (runtime / "analysis.json").exists()
+        if fault == "F1":
+            assert list((runtime / "training").rglob("*.started.json")) and train_calls == 1
+        if fault == "F2":
+            assert not list(runtime.glob("evaluations/*/*/training/*.raw.json"))
+        if fault == "F4":
+            assert len(list(runtime.glob("evaluations/*/*/training/*.score.json"))) == 1
+            assert not list(runtime.glob("evaluations/*/*/training/*.score.sha256.json"))
+        save({"fault": fault, "first_reason": reason, "incident_written": True,
+              "retry_refused": True, "new_model_calls_on_retry": 0, "analysis_refused": True,
+              "generation_calls": model_calls, "training_calls": train_calls if fault == "F1" else 10})
+        return
 
     if action == "training":
         result = ex.run_training_cells(candidate, good_train, runtime_root=runtime)
@@ -388,17 +625,29 @@ def worker(action, candidate, out):
               "literal_fence_fallback": "PASS", "historical_extractor_unchanged": True})
         return
     if action == "acquisition":
+        ex.run_training_cells(candidate, good_train, runtime_root=runtime)
         bad_ids = set(sc.SLOT_IDS[:7])
         original_generate = generate
         def fail_seven(seed, condition, task, messages):
             raw = original_generate(seed, condition, task, messages)
             return "DISPLAYNL(99999)." if seed == sc.SEEDS[0] and condition == "isolated" and task["task_id"] in bad_ids else raw
-        stop(lambda: ex.run_own_training(candidate, fail_seven, score, reset=random.seed, runtime_root=runtime), an.INDETERMINATE)
+        try:
+            ex.run_own_training(candidate, fail_seven, score, reset=random.seed, runtime_root=runtime)
+        except ex.AcquisitionFailed as exc:
+            assert an.INDETERMINATE in str(exc)
+        else:
+            raise AssertionError("AcquisitionFailed required")
         assert len(generated) == 600
         gate = ex.read(runtime / "acquisition_gate.json")
         assert gate["cells"][0]["passed"] == 53 and gate["passed"] is False
-        stop(lambda: ex.run_confirmatory(candidate, fail_seven, score, reset=random.seed, runtime_root=runtime))
+        assert not (runtime / "incidents").exists()
+        assert gate["outcome"] == an.INDETERMINATE
         assert len(generated) == 600 and not list(runtime.glob("evaluations/*/*/confirmatory/*"))
+        planted_runtime = out / "G2"
+        shutil.copytree(runtime, planted_runtime)
+        ex.CheckpointStore(planted_runtime).write("evaluations/20280117/isolated/confirmatory/planted.raw.json", {})
+        stop(lambda: ex.run_analysis(candidate, planted_runtime), "confirmatory checkpoints forbidden")
+        assert (planted_runtime / "incidents").exists() and not (planted_runtime / "analysis.json").exists()
         report = ex.run_analysis(candidate, runtime)
         assert report["label"] == an.INDETERMINATE and "primary" not in report
         training_records = ex._score_records(ex.CheckpointStore(runtime), "training")
@@ -406,7 +655,9 @@ def worker(action, candidate, out):
         stop(lambda: an.analyze(training_records + [extra], tasks), "confirmatory records forbidden")
         save({"label": report["label"], "generation_calls": len(generated), "confirmatory_calls": 0,
               "first_cell_passes": 53, "training_records": 600, "primary_analysis": False,
-              "confirmatory_records_after_FAIL": "STOP", "distinct_compiler_runs": len(cache)})
+              "confirmatory_records_after_FAIL": "STOP", "distinct_compiler_runs": len(cache),
+              "G1": {"AcquisitionFailed": True, "incident": False, "analysis": an.INDETERMINATE},
+              "G2": {"planted_confirmatory_refused": True, "incident": True, "analysis_written": False}})
         return
     raise AssertionError("unknown worker action")
 

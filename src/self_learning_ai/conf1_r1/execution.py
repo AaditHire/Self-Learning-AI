@@ -21,7 +21,26 @@ from self_learning_ai.conf1_r1 import analysis, schedule
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_RUNTIME = ROOT / ".runtime/phase3c_conf1"
-AUTHORIZED_STATUSES = frozenset({"CANDIDATE_FROZEN", "SYNTHETIC_EXECUTION_TEST_FIXTURE"})
+AUTHORIZED_STATUSES = frozenset({"CANDIDATE_FROZEN"})
+AUTHORIZED_CONSTRUCTION_SEEDS = frozenset({20290123})
+EXECUTION_BOUND_FILES = frozenset({
+    "scripts/train_phase3c_conf1.py", "scripts/evaluate_phase3c_conf1.py",
+    "scripts/analyze_phase3c_conf1.py", "scripts/train_phase2a_qlora.py",
+    "scripts/validate_phase2b_data.py", "src/self_learning_ai/dev2r_evaluation.py",
+    "src/self_learning_ai/benchmark.py", "src/self_learning_ai/compiler.py",
+    "research/protocols/phase3c_conf1_config_proposed.json",
+    "prompts/phase1t_system.txt", "prompts/phase1t_user_template.txt",
+} | {p.relative_to(ROOT).as_posix() for p in (ROOT / "src/self_learning_ai/conf1_r1").glob("*.py")})
+
+
+def execution_bound_files():
+    """Resolve the full binding set at each call, including newly added modules."""
+    return EXECUTION_BOUND_FILES | frozenset(
+        p.relative_to(ROOT).as_posix() for p in (ROOT / "src/self_learning_ai/conf1_r1").glob("*.py"))
+
+
+class AcquisitionFailed(GateStop):
+    """Terminal insufficient-acquisition outcome; not an infrastructure incident."""
 
 
 def sha256(path):
@@ -45,8 +64,19 @@ def require_execution_authorization(candidate_dir):
     try:
         manifest = read(candidate / "candidate_manifest.json")
         if (not isinstance(manifest, dict) or manifest.get("model_execution_authorized") is not True
-                or manifest.get("status") not in AUTHORIZED_STATUSES):
+                or manifest.get("status") not in AUTHORIZED_STATUSES
+                or manifest.get("phase") != "PHASE_3C_CONF1"
+                or type(manifest.get("construction_seed")) is not int
+                or manifest["construction_seed"] not in AUTHORIZED_CONSTRUCTION_SEEDS):
             raise GateStop("CONF1 model execution is not explicitly authorized")
+        for field in ("code_hashes", "authority_hashes", "tokenizer_hashes", "file_sha256"):
+            if not isinstance(manifest.get(field), dict) or not manifest[field]:
+                raise GateStop("missing mandatory manifest hashes", {"field": field})
+        if not isinstance(manifest.get("compiler_sha256"), str) or not manifest["compiler_sha256"]:
+            raise GateStop("missing mandatory manifest hashes", {"field": "compiler_sha256"})
+        missing = execution_bound_files() - (manifest["code_hashes"].keys() | manifest["authority_hashes"].keys())
+        if missing:
+            raise GateStop("missing execution bindings", {"paths": sorted(missing)})
         files = manifest.get("file_sha256")
         if not isinstance(files, dict) or not files:
             raise GateStop("candidate manifest has no payload hashes")
@@ -179,6 +209,19 @@ def messages(task_id, prompt):
             {"role": "user", "content": template.format(task_id=task_id, task_prompt=prompt)}]
 
 
+def training_rows(examples, slot_ids):
+    """C9 rows for the unchanged TokenDataset prompt construction."""
+    by_slot = {row["model_task_id"]: row for row in examples}
+    system = (ROOT / "prompts/phase1t_system.txt").read_text(encoding="utf-8").strip()
+    return system, [dict(by_slot[tid], example_id=tid) for tid in slot_ids]
+
+
+def encode_prompt(tokenizer, messages):
+    """C13/DEV2R generation prefix with default special-token handling."""
+    rendered = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    return tokenizer(rendered, truncation=False)["input_ids"]
+
+
 def _fault(store, stage, exc):
     store.incident(stage, exc)
     if isinstance(exc, GateStop):
@@ -263,10 +306,14 @@ def run_own_training(candidate, generate, score, *, reset, runtime_root=DEFAULT_
                 records.append(_task(store, seed, condition, "training", task, cases[condition][row["example_id"]],
                                      row["target"], generate, score, reset))
         gate = analysis.acquisition_gate(records)
+        if not gate["passed"]:
+            gate = dict(gate, outcome=analysis.INDETERMINATE)
         store.write("acquisition_gate.json", gate)
         if not gate["passed"]:
-            raise GateStop(analysis.INDETERMINATE, gate)
+            raise AcquisitionFailed(analysis.INDETERMINATE, gate)
         return gate
+    except AcquisitionFailed:
+        raise
     except Exception as exc:
         _fault(store, "own_training", exc)
 
@@ -303,13 +350,33 @@ def run_analysis(candidate, runtime_root=DEFAULT_RUNTIME):
     try:
         if store.path("analysis.json").exists():
             raise GateStop("existing analysis checkpoint; retry forbidden")
+        if store.path("incidents").exists() or any(
+                p.name.endswith(".lock") or ".tmp-" in p.name for p in store.root.rglob("*")):
+            raise GateStop("analysis requires an incident-free, complete runtime")
         _, _, tasks, _, _ = _candidate(candidate)
-        records = _score_records(store, "training") + _score_records(store, "confirmatory")
-        for row in records:
-            stem = f"evaluations/{row['seed']}/{row['condition']}/{row['suite']}/{row['task_id']}"
-            if sha256(store.path(stem + ".raw.json")) != row["raw_sha256"]:
-                raise GateStop("raw checkpoint hash mismatch")
-        report = analysis.analyze(records, tasks)
+        for cell in schedule.cell_order():
+            stem = f"training/{cell['seed']}/{cell['condition']}"
+            record = store.path(stem + ".json")
+            if sha256(record) != read(store.path(stem + ".sha256.json"))["sha256"]:
+                raise GateStop("training cell record hash mismatch", {"path": str(record)})
+        training = _score_records(store, "training")
+        gate = analysis.acquisition_gate(training)
+        if not gate["passed"]:
+            gate = dict(gate, outcome=analysis.INDETERMINATE)
+        if read(store.path("acquisition_gate.json")) != gate:
+            raise GateStop("acquisition gate checkpoint mismatch")
+        confirmatory = []
+        if not gate["passed"]:
+            if store.path("confirmatory.started.json").exists() or any(
+                    store.root.glob("evaluations/*/*/confirmatory/*")) or store.path("confirmatory_complete.json").exists():
+                raise GateStop("confirmatory checkpoints forbidden after failed acquisition")
+        else:
+            complete = read(store.path("confirmatory_complete.json"))
+            confirmatory = _score_records(store, "confirmatory")
+            expected = 10 * len(tasks)
+            if len(confirmatory) != expected or complete != {"records": expected, "tasks_per_cell": len(tasks)}:
+                raise GateStop("incomplete confirmatory checkpoint population")
+        report = analysis.analyze(training + confirmatory, tasks)
         store.write("analysis.json", report)
         inventory = {p.relative_to(store.root).as_posix(): sha256(p) for p in sorted(store.root.rglob("*.json"))}
         store.write("output_inventory.json", inventory)

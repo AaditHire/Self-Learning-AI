@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from self_learning_ai.conf1_r1.execution import (
-    DEFAULT_RUNTIME, GateStop, compiler_score, read, require_execution_authorization,
+    DEFAULT_RUNTIME, AcquisitionFailed, GateStop, compiler_score, encode_prompt, read, require_execution_authorization,
     run_confirmatory, run_own_training, sha256,
 )
 
@@ -59,9 +59,10 @@ def generator(cfg, runtime):
             # Loading an adapter can consume RNG; reapply C13 after cell load.
             from self_learning_ai.conf1_r1.schedule import task_rng_seed
             reset(task_rng_seed(seed, task["task_id"]))
-        rendered = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = tokenizer(rendered, return_tensors="pt", truncation=False).to("cuda:0")
-        length = int(inputs["input_ids"].shape[1])
+        ids = encode_prompt(tokenizer, messages)
+        inputs = {"input_ids": torch.tensor([ids], dtype=torch.long, device="cuda:0"),
+                  "attention_mask": torch.ones((1, len(ids)), dtype=torch.long, device="cuda:0")}
+        length = len(ids)
         if length > cfg["evaluation"]["max_input_tokens"]:
             raise GateStop("evaluation input token limit exceeded")
         with torch.inference_mode():
@@ -91,6 +92,8 @@ def main():
         score = compiler_score(compiler)
         run_own_training(args.candidate_dir, generate, score, reset=reset)
         run_confirmatory(args.candidate_dir, generate, score, reset=reset)
+    except AcquisitionFailed as exc:
+        parser.exit(3, "INDETERMINATE_INSUFFICIENT_ACQUISITION; run_confirmatory was not called\n")
     except GateStop as exc:
         parser.exit(2, str(exc) + "\n")
 

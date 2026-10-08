@@ -1,0 +1,2030 @@
+{
+  "CUDA_used": false,
+  "H1": {
+    "ImportError": false,
+    "authorization_refusals": 17,
+    "production_construction_seeds": [
+      20290123
+    ],
+    "production_statuses": [
+      "CANDIDATE_FROZEN"
+    ],
+    "script_exit_codes": {
+      "analyze": 2,
+      "evaluate": 2,
+      "train": 2
+    },
+    "wall_seconds": 0.3512127999999848
+  },
+  "H2": {
+    "bound_file_count": 22,
+    "dynamic_module_binding": true,
+    "future_config_freeze_policy": "Keep proposed config byte-identical; later separate freeze manifest binds its hash, without editing its status field.",
+    "mandatory_hash_fields": [
+      "code_hashes",
+      "authority_hashes",
+      "compiler_sha256",
+      "tokenizer_hashes",
+      "file_sha256"
+    ],
+    "per_file_evidence": [
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "prompts/phase1t_system.txt",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.26220089999969787
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "prompts/phase1t_user_template.txt",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.263705100000152
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "research/protocols/phase3c_conf1_config_proposed.json",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.23344230000020616
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "scripts/analyze_phase3c_conf1.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3606455000008282
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "scripts/evaluate_phase3c_conf1.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.27135049999924377
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "scripts/train_phase2a_qlora.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3277411999997639
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "scripts/train_phase3c_conf1.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3265281000003597
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "scripts/validate_phase2b_data.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.2518228999997518
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/benchmark.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.2897061000003305
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/compiler.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.2520770999999513
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/__init__.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3205003000002762
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/analysis.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.30246320000060223
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/candidate.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.24679030000061175
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/execution.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3501612000000023
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/gates_primary.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.2882969000002049
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/interp.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.19109089999983553
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/overlap.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.2765951999999743
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/primary.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.22149739999986195
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/schedule.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.3541015000000698
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/secondary.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.19577690000005532
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/conf1_r1/training.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.19075789999988046
+      },
+      {
+        "dynamic_new_module_refused": true,
+        "missing_refused": true,
+        "one_byte_tamper_refused": true,
+        "path": "src/self_learning_ai/dev2r_evaluation.py",
+        "tampered_repository_files": 0,
+        "wall_seconds": 0.20546809999996185
+      }
+    ],
+    "proposed_config_sha256": "c8ccd84361dc038e64da91eb30acf7b8a6587445b956373671b79735a7362d83"
+  },
+  "H3": {
+    "G1": {
+      "AcquisitionFailed": true,
+      "analysis": "INDETERMINATE_INSUFFICIENT_ACQUISITION",
+      "incident": false
+    },
+    "G2": {
+      "analysis_written": false,
+      "incident": true,
+      "planted_confirmatory_refused": true
+    },
+    "analysis_precondition_refusals": [
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "count_mismatch",
+        "incident_written": true,
+        "reason": "STOP: incomplete confirmatory checkpoint population",
+        "wall_seconds": 64.49130219999915
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "missing_complete",
+        "incident_written": true,
+        "reason": "STOP: execution fault",
+        "wall_seconds": 61.06462509999983
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "changed_gate",
+        "incident_written": true,
+        "reason": "STOP: acquisition gate checkpoint mismatch",
+        "wall_seconds": 51.39236080000046
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "missing_gate",
+        "incident_written": true,
+        "reason": "STOP: execution fault",
+        "wall_seconds": 49.21556909999981
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "bad_training_receipt",
+        "incident_written": true,
+        "reason": "STOP: training cell record hash mismatch",
+        "wall_seconds": 48.43173900000056
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "missing_training",
+        "incident_written": true,
+        "reason": "STOP: execution fault",
+        "wall_seconds": 47.55086759999995
+      },
+      {
+        "analysis_refused": true,
+        "analysis_written": false,
+        "fault": "lock",
+        "incident_written": true,
+        "reason": "STOP: analysis requires an incident-free, complete runtime",
+        "wall_seconds": 46.40358030000061
+      }
+    ],
+    "confirmatory_calls": 0,
+    "generation_calls": 600
+  },
+  "H4": {
+    "CUDA_initialized": false,
+    "TokenDataset_module": "scripts/train_phase2a_qlora.py",
+    "evaluation_tasks_checked": 64,
+    "max_evaluation_prompt_length": 166,
+    "max_training_full_length": 294,
+    "mismatches": 0,
+    "training_rows_checked": 120,
+    "wall_seconds": 17.422043599999597,
+    "weights_opened": 0
+  },
+  "H5": {
+    "G1": {
+      "AcquisitionFailed": true,
+      "analysis": "INDETERMINATE_INSUFFICIENT_ACQUISITION",
+      "incident": false
+    },
+    "G2": {
+      "analysis_written": false,
+      "incident": true,
+      "planted_confirmatory_refused": true
+    },
+    "clean_plugin_free_run": true,
+    "earlier_fixture_cache_or_temp_reused": false,
+    "fault_matrix": {
+      "F1": {
+        "analysis_refused": true,
+        "fault": "F1",
+        "first_reason": "STOP: execution fault",
+        "generation_calls": 0,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 1,
+        "wall_seconds": 0.7229209999995874
+      },
+      "F2": {
+        "analysis_refused": true,
+        "fault": "F2",
+        "first_reason": "STOP: execution fault",
+        "generation_calls": 1,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 1.596422800000255
+      },
+      "F3": {
+        "analysis_refused": true,
+        "fault": "F3",
+        "first_reason": "STOP: execution fault",
+        "generation_calls": 1,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 1.4008655999996336
+      },
+      "F4": {
+        "analysis_refused": true,
+        "fault": "F4",
+        "first_reason": "STOP: execution fault",
+        "generation_calls": 1,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 1.3944572000000335
+      },
+      "F5": {
+        "analysis_refused": true,
+        "fault": "F5",
+        "first_reason": "STOP: compiler infrastructure fault",
+        "generation_calls": 1,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 1.000619800000095
+      },
+      "F6": {
+        "analysis_refused": true,
+        "fault": "F6",
+        "first_reason": "STOP: raw checkpoint hash mismatch",
+        "generation_calls": 600,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 58.306564999999864
+      },
+      "F7": {
+        "analysis_refused": true,
+        "fault": "F7",
+        "first_reason": "STOP: analysis requires an incident-free, complete runtime",
+        "generation_calls": 600,
+        "incident_written": true,
+        "new_model_calls_on_retry": 0,
+        "retry_refused": true,
+        "training_calls": 10,
+        "wall_seconds": 47.12664289999975
+      }
+    }
+  },
+  "I5b_plugin_identity": {
+    "description": "Local unversioned Python module; no installed distribution or declared version.",
+    "loaded_in_counted_run": false,
+    "module": "i5b_recovery_plugin",
+    "package": null,
+    "packaged": false,
+    "source_sha256": "e1b27e187f19b5256a318a1c4d19e0cbae034a5aa87a0122e9b7b72fdaa20f3b",
+    "version": null
+  },
+  "candidate_test_assertions_changed": [],
+  "checks": {
+    "T9_no_top_level_heavy_imports": "PASS in counted invocation",
+    "git_diff_check": "PASS",
+    "scope": "Five unchanged V1 code/test files plus this new evidence JSON only.",
+    "three_scripts_py_compile": "PASS; external PYTHONPYCACHEPREFIX"
+  },
+  "counted_invocations": [
+    {
+      "I5b_recovery_plugin_loaded": false,
+      "command": "python -m pytest -p no:cacheprovider tests/test_conf1_r1_primary.py tests/test_conf1_r1_interp.py tests/test_conf1_r1_gates_primary.py tests/test_conf1_r1_training.py tests/test_conf1_r1_overlap_secondary.py tests/test_conf1_r1_candidate.py -q -rA --durations=25",
+      "environment": {
+        "PYTEST_ADDOPTS": "-o addopts=",
+        "PYTEST_DEBUG_TEMPROOT": "C:\\Users\\Admin\\AppData\\Local\\Temp\\conf1-v1r-counted-327f78f0afc5429f87135d43ed1c46fb\\invocation1",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+        "PYTEST_PLUGINS": null,
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": null,
+        "USE_FLAX": "0",
+        "USE_TF": "0",
+        "USE_TORCH": "0"
+      },
+      "error_count": 0,
+      "external_plugins_disabled": true,
+      "fail_count": 0,
+      "fresh_fixture_and_temp_root": true,
+      "interrupted_or_resumed": false,
+      "pass_count": 182,
+      "per_test_outcomes": [
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_verified_slots_and_preserved_numeric_fields",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_hash_verification_rejects_tampered_copy[phase3c_conf1_rebaseline_r1_proposed.md-R1 LF-normalized SHA-256 mismatch]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_hash_verification_rejects_tampered_copy[phase3c_conf1_slots.json-Ledger byte-exact SHA-256 mismatch]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_proposal_hash_is_lf_normalized",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_slot_id_verification_after_hash_check",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_boolean_contributions_exhaustively",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_uses_explicit_roles_and_ignores_rotation_metadata",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G3-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G3-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G3-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G3-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-NU-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G3P-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G3P-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G3P-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G3P-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_expected_matches_interpreter_on_twelve_seeded_inputs[CONF1-NC-AR-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_shared_text_equals_unchanged_builder",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G3-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G3-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G3-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G3-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-NU-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G3P-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G3P-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G3P-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G3P-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_primary.py::test_every_reference_satisfies_rcf_and_exact_accumulations[CONF1-NC-AR-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[A]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[B]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[C]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[D]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[E]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_observed_compiler_probes[F]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_scanner_periods_strings_blocks_and_preorder_deletion",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G3-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G3-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G3-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G3-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-NU-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G1-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G1-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G1-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G1-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G2-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G2-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G2-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G2-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G3P-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G3P-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G3P-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G3P-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G4-R0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G4-R1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G4-R2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_mutants_stable_complete_and_exactly_one_span_removed[CONF1-NC-AR-G4-R3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. IF (x==0) { x=1.]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[DISPLAYNL(missing).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. IF (x<0) { DISPLAYNL(missing). }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. WHILE (x<1) { x+=1. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. DISPLAYNL(x/2).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. IF (x==0 && x<1) { x=1. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. DISPLAY(x).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[IMPORT strings. SENTENCE x=\"unterminated.]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[SENTENCE x=\"1\". NUMBER n=strings.TO_NUMBER(x). DISPLAYNL(n).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[IMPORT strings. SENTENCE x=\"1\". NUMBER n=strings.UNKNOWN(x). DISPLAYNL(n).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[IMPORT strings. SENTENCE x=\"1\". SENTENCE[] a=strings.SPLIT(x,\",\").]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER[] x=[1,2]. DISPLAYNL(x[-1]).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. NUMBER x=1.]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. LOOP (NUMBER i=1 TILL i<2, j++) { x+=1. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_fail_closed[NUMBER x=0. IF (x) { x=1. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_reverse_loop_timeout_and_signed_remainder",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_interp.py::test_all_references_mutants_and_training_against_pinned_compiler",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t1_p1_matches_committed_functions",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t2_pre_r1_array_degeneracy",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t3_deletion_liveness",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t4_p2_wrong_expected_and_bad_source",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t5_p6_pair_and_class_failures",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t6_oracle_fault_stops",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_explicit_pool_order_and_lowest_index_ties",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t7_synthetic_array_selection",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_gates_primary.py::test_t8_synthetic_numeric_check",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t1_all_units_classify",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t1_known_bad_units_fail[total-=hitP.]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t1_known_bad_units_fail[IF (hitP==1 && hitQ==1) { total+=1. }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t1_known_bad_units_fail[LOOP (NUMBER i=1 TILL i<=n, i++) { }]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t1_known_bad_units_fail[DISPLAY(total).]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t2_paired_scaffold",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t2_known_bad_scaffolds_fail[condition_header]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t2_known_bad_scaffolds_fail[predicate]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t2_known_bad_scaffolds_fail[offset]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t2_known_bad_scaffolds_fail[case_input]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t3_exact_runner_token_parity",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t4_five_seed_regression",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t5_compiler_verification",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t6_catalog_liveness",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t7_primary_novelty",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t7_training_pair_function_fails",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t8_exhaustive_r2a_subset",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_training.py::test_t9_fault_oracle_stops",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t1_inventory",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t2_actual_noncase_overlap",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t3_known_bad[a]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t3_known_bad[b]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t3_known_bad[primary_training_b]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t3_case_identity_requires_specification_match",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t3_secondary_drop_preserves_primary",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t4_synthetic_case_overlap",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t5_secondary_e1_compiler",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_t6_historical_condition_ids",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unknown_schema_stops[benchmark/phase2a/development_hidden_tests.json-obj0]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unknown_schema_stops[benchmark/phase2a/development_references.json-obj1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unknown_schema_stops[data/phase2a/training_examples.json-obj2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unknown_file_family_stops_before_read",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unexpected_entry_stops_before_corpus_reads[benchmark-unexpected]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unexpected_entry_stops_before_corpus_reads[data-unexpected.txt]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unexpected_entry_stops_before_corpus_reads[benchmark/phase1r-unexpected.txt]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_overlap_secondary.py::test_unexpected_entry_stops_before_corpus_reads[data/phase2a-nested]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t1_refusals_before_work",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t2_full_dry_run",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t3_manifest_integrity_and_repo_snapshot",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t4_primary_gate_fault",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t5_r2a_synthetic_primary_selection",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_default_gate_reports_byte_identical",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_candidate.py::test_t6_canonical_format",
+          "outcome": "PASSED"
+        }
+      ],
+      "plugin_header": null,
+      "plugin_header_observation": "No plugins: header in the quiet counted-run output.",
+      "process": {
+        "ended": "2026-10-08T06:02:53.4682341Z",
+        "exit_code": 0,
+        "started": "2026-10-08T04:19:16.4141838Z",
+        "temp_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\conf1-v1r-counted-327f78f0afc5429f87135d43ed1c46fb\\invocation1",
+        "wall_seconds": 6217.046378
+      },
+      "pytest_version_output": "pytest 9.1.1",
+      "pytest_wall_seconds": 6215.33,
+      "stdout_sha256": "0f160a7342d2d0304a684f7ed350d17545b533e3a5bacbbb06b642ed483d4e7d",
+      "warning_count": 8
+    },
+    {
+      "I5b_recovery_plugin_loaded": false,
+      "command": "python -m pytest -p no:cacheprovider tests/test_conf1_r1_schedule_analysis.py tests/test_conf1_r1_execution.py -q -rA --durations=25",
+      "environment": {
+        "PYTEST_ADDOPTS": "-o addopts=",
+        "PYTEST_DEBUG_TEMPROOT": "C:\\Users\\Admin\\AppData\\Local\\Temp\\conf1-v1r-counted-327f78f0afc5429f87135d43ed1c46fb\\invocation2",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+        "PYTEST_PLUGINS": null,
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": null,
+        "USE_FLAX": "0",
+        "USE_TF": "0",
+        "USE_TORCH": "0"
+      },
+      "error_count": 0,
+      "external_plugins_disabled": true,
+      "fail_count": 0,
+      "fresh_fixture_and_temp_root": true,
+      "interrupted_or_resumed": false,
+      "pass_count": 72,
+      "per_test_outcomes": [
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t1_schedule",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t2_rng_and_order",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_all_pass_and_zero",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_integer_boundary",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_acquisition",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[missing]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[duplicate]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[unknown_task]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[unknown_seed]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[wrong_block]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[nonboolean]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[four_cases]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[incoherent_pass]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[changed_expected]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_record_refusals[unknown_metadata]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_heterogeneity[negative_seed]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_heterogeneity[nonpositive_domain]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_heterogeneity[three_blocks]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_heterogeneity[three_positive_seeds]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_sanity[boundary]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_sanity[mean_failure]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_sanity[seed_failure]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_sanity[eleven_kept]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t3_sanity[none_kept]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_descriptive_and_clarification",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t4_independent_bootstrap",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_schedule_analysis.py::test_t5_seed_audit",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t1_authorization",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t2_happy_path",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t3_acquisition_failure",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t4_fault",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t5_rng",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t6_training",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t7_atomic",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[prompts/phase1t_system.txt]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[prompts/phase1t_user_template.txt]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[research/protocols/phase3c_conf1_config_proposed.json]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[scripts/analyze_phase3c_conf1.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[scripts/evaluate_phase3c_conf1.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[scripts/train_phase2a_qlora.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[scripts/train_phase3c_conf1.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[scripts/validate_phase2b_data.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/benchmark.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/compiler.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/__init__.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/analysis.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/candidate.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/execution.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/gates_primary.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/interp.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/overlap.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/primary.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/schedule.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/secondary.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/conf1_r1/training.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h2_each_binding[src/self_learning_ai/dev2r_evaluation.py]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h4_prompt_parity",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F1]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F2]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F3]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F4]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F5]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F6]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h5_fault_matrix[F7]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[lock]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[missing_training]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[bad_training_receipt]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[missing_gate]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[changed_gate]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[missing_complete]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_h3_analysis_preconditions[count_mismatch]",
+          "outcome": "PASSED"
+        },
+        {
+          "nodeid": "tests/test_conf1_r1_execution.py::test_t9_static",
+          "outcome": "PASSED"
+        }
+      ],
+      "plugin_header": null,
+      "plugin_header_observation": "No plugins: header in the quiet counted-run output.",
+      "process": {
+        "ended": "2026-10-08T05:34:17.2795417Z",
+        "exit_code": 0,
+        "started": "2026-10-08T04:19:16.4141713Z",
+        "temp_root": "C:\\Users\\Admin\\AppData\\Local\\Temp\\conf1-v1r-counted-327f78f0afc5429f87135d43ed1c46fb\\invocation2",
+        "wall_seconds": 4500.8563781
+      },
+      "pytest_version_output": "pytest 9.1.1",
+      "pytest_wall_seconds": 4499.31,
+      "stdout_sha256": "772ded855b319b0a5158694c5794a0eeea75c8e532b5caa8567101425174e207",
+      "warning_count": 0
+    }
+  ],
+  "counted_run": "V1-R",
+  "git_metadata_after": {
+    ".git/FETCH_HEAD": "bbbe741c31735aa9add842a8938bd203171a69a2904a5a8f4799d4d2314cd1e0",
+    ".git/logs/refs/remotes/origin/HEAD": "0b98d5fef3bac75d3b4059721868b08494d2d1ea7e300193484ad9f1b30381c5",
+    ".git/refs/remotes/origin/HEAD": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+  },
+  "git_metadata_before": {
+    ".git/FETCH_HEAD": "bbbe741c31735aa9add842a8938bd203171a69a2904a5a8f4799d4d2314cd1e0",
+    ".git/logs/refs/remotes/origin/HEAD": "0b98d5fef3bac75d3b4059721868b08494d2d1ea7e300193484ad9f1b30381c5",
+    ".git/refs/remotes/origin/HEAD": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+  },
+  "invocations_ran_concurrently_in_isolated_temp_roots": true,
+  "model_weights_loaded": false,
+  "no_code_or_test_edits_in_V1_R": true,
+  "prohibited_data_opened": false,
+  "real_training_or_generation_run": false,
+  "remaining_uncertainty": "I5b used an unpackaged unversioned local plugin module, so no package name/version exists; module identity and source hash recorded.",
+  "repository_changes_during_counted_run": [],
+  "repository_file_metadata_snapshot_count": 5492,
+  "split_reason": "Existing schedule-analysis test installs a process-wide audit hook excluding compiler/tokenizer files needed by earlier files; whole-file split as authorized.",
+  "start_HEAD": "b79fbb221b68d8923e3511fe30a3c837def15ed9",
+  "status": "SYNTHETIC_VALIDATION_ONLY_NO_MODEL",
+  "tested_code_test_sha256": {
+    "scripts/evaluate_phase3c_conf1.py": "a6dc6e9ef0e4684c401baabffde63a266a1f0beee55a8d0d65162c2ced54ae64",
+    "scripts/train_phase3c_conf1.py": "a357a7fc6c135e535572b0c9579ccf8d93369564976d2e823e1a3aaa47cceccb",
+    "src/self_learning_ai/conf1_r1/candidate.py": "3432f7960a2f57e0ce3e3f8f8f5445bd5129541555d09a7fe02c8b37a4f51087",
+    "src/self_learning_ai/conf1_r1/execution.py": "51378f1ee42eb04c9d7d557913bc21400c4f7fcd3064035ec4538e529e9a6203",
+    "tests/test_conf1_r1_execution.py": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5"
+  },
+  "unchanged_allowed_files": [
+    "scripts/analyze_phase3c_conf1.py",
+    "tests/test_conf1_r1_candidate.py"
+  ],
+  "v1_stop": {
+    "V1_R_is_the_counted_run": true,
+    "background_fetch_disabled_for_V1_R": "Reported by user; verified three Git metadata hashes and full repository file metadata stayed unchanged during this run.",
+    "counted": false,
+    "project_head_attribution": "Periodic background git fetch by a Git app/editor on the user machine, per the V1-R project-head decision.",
+    "reason": "First V1 counted attempt stopped when strict repository snapshot detected .git/FETCH_HEAD, .git/refs/remotes/origin/HEAD and .git/logs/refs/remotes/origin/HEAD changes."
+  },
+  "versions": {
+    "pytest": "9.1.1",
+    "python": "3.13.0",
+    "transformers": "4.57.1"
+  },
+  "worker_evidence": [
+    {
+      "concurrent_writers_succeeded": 1,
+      "fsync_calls": 4,
+      "overwrite_refused": true,
+      "temporary_files_remaining": 0,
+      "wall_seconds": 0.08742809999966994
+    },
+    {
+      "cell_order": [
+        [
+          20280117,
+          "isolated"
+        ],
+        [
+          20280117,
+          "composition"
+        ],
+        [
+          20280223,
+          "isolated"
+        ],
+        [
+          20280223,
+          "composition"
+        ],
+        [
+          20280329,
+          "isolated"
+        ],
+        [
+          20280329,
+          "composition"
+        ],
+        [
+          20280411,
+          "isolated"
+        ],
+        [
+          20280411,
+          "composition"
+        ],
+        [
+          20280507,
+          "isolated"
+        ],
+        [
+          20280507,
+          "composition"
+        ]
+      ],
+      "cells_called_once": 10,
+      "fault_call_counts": {
+        "179_exposures": 1,
+        "23_steps": 1,
+        "NaN_loss": 1
+      },
+      "wall_seconds": 1.7765894000003755
+    },
+    {
+      "identical_per_task_outputs": true,
+      "outputs_sha256": "7004db6582dbe74350fa0bef81e585746af179017e466ead2febf3700bccc350",
+      "paired_condition_seeds_equal": true,
+      "seeds": [
+        1462765213,
+        1015580928,
+        605452187,
+        3762258475,
+        3760210542,
+        3008466945,
+        2866472605,
+        2034811677
+      ],
+      "tasks": 8,
+      "wall_seconds": 2.3234987000005276
+    },
+    {
+      "generation_calls": 1,
+      "incident": {
+        "error_type": "RuntimeError",
+        "evidence": {},
+        "reason": "INJECTED_AFTER_RAW_BEFORE_SCORE",
+        "stage": "own_training",
+        "status": "STOP"
+      },
+      "raw_checkpoints": 1,
+      "score_checkpoints": 0,
+      "wall_seconds": 0.6432394999992539
+    },
+    {
+      "G1": {
+        "AcquisitionFailed": true,
+        "analysis": "INDETERMINATE_INSUFFICIENT_ACQUISITION",
+        "incident": false
+      },
+      "G2": {
+        "analysis_written": false,
+        "incident": true,
+        "planted_confirmatory_refused": true
+      },
+      "confirmatory_calls": 0,
+      "confirmatory_records_after_FAIL": "STOP",
+      "distinct_compiler_runs": 635,
+      "first_cell_passes": 53,
+      "generation_calls": 600,
+      "label": "INDETERMINATE_INSUFFICIENT_ACQUISITION",
+      "primary_analysis": false,
+      "training_records": 600,
+      "wall_seconds": 225.18402199999946
+    },
+    {
+      "acquisition_counts": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "confirmatory_records": 640,
+      "distinct_compiler_runs": 931,
+      "first_fence": "PASS",
+      "generation_calls": 1240,
+      "historical_extractor_unchanged": true,
+      "interval": [
+        1.0,
+        1.0
+      ],
+      "label": "CONFIRMATORY_SUPPORT_UNDER_CONF1",
+      "literal_fence_fallback": "PASS",
+      "output_hashes_verified": 7474,
+      "sum_E": 160,
+      "wall_seconds": 380.47152179999966
+    },
+    {
+      "ImportError": false,
+      "authorization_refusals": 17,
+      "production_construction_seeds": [
+        20290123
+      ],
+      "production_statuses": [
+        "CANDIDATE_FROZEN"
+      ],
+      "script_exit_codes": {
+        "analyze": 2,
+        "evaluate": 2,
+        "train": 2
+      },
+      "wall_seconds": 0.3512127999999848
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F7",
+      "first_reason": "STOP: analysis requires an incident-free, complete runtime",
+      "generation_calls": 600,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 47.12664289999975
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F6",
+      "first_reason": "STOP: raw checkpoint hash mismatch",
+      "generation_calls": 600,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 58.306564999999864
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F5",
+      "first_reason": "STOP: compiler infrastructure fault",
+      "generation_calls": 1,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 1.000619800000095
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F4",
+      "first_reason": "STOP: execution fault",
+      "generation_calls": 1,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 1.3944572000000335
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F3",
+      "first_reason": "STOP: execution fault",
+      "generation_calls": 1,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 1.4008655999996336
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F2",
+      "first_reason": "STOP: execution fault",
+      "generation_calls": 1,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 10,
+      "wall_seconds": 1.596422800000255
+    },
+    {
+      "analysis_refused": true,
+      "fault": "F1",
+      "first_reason": "STOP: execution fault",
+      "generation_calls": 0,
+      "incident_written": true,
+      "new_model_calls_on_retry": 0,
+      "retry_refused": true,
+      "training_calls": 1,
+      "wall_seconds": 0.7229209999995874
+    },
+    {
+      "CUDA_initialized": false,
+      "TokenDataset_module": "scripts/train_phase2a_qlora.py",
+      "evaluation_tasks_checked": 64,
+      "max_evaluation_prompt_length": 166,
+      "max_training_full_length": 294,
+      "mismatches": 0,
+      "training_rows_checked": 120,
+      "wall_seconds": 17.422043599999597,
+      "weights_opened": 0
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "count_mismatch",
+      "incident_written": true,
+      "reason": "STOP: incomplete confirmatory checkpoint population",
+      "wall_seconds": 64.49130219999915
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "missing_complete",
+      "incident_written": true,
+      "reason": "STOP: execution fault",
+      "wall_seconds": 61.06462509999983
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "changed_gate",
+      "incident_written": true,
+      "reason": "STOP: acquisition gate checkpoint mismatch",
+      "wall_seconds": 51.39236080000046
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "missing_gate",
+      "incident_written": true,
+      "reason": "STOP: execution fault",
+      "wall_seconds": 49.21556909999981
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "bad_training_receipt",
+      "incident_written": true,
+      "reason": "STOP: training cell record hash mismatch",
+      "wall_seconds": 48.43173900000056
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "missing_training",
+      "incident_written": true,
+      "reason": "STOP: execution fault",
+      "wall_seconds": 47.55086759999995
+    },
+    {
+      "analysis_refused": true,
+      "analysis_written": false,
+      "fault": "lock",
+      "incident_written": true,
+      "reason": "STOP: analysis requires an incident-free, complete runtime",
+      "wall_seconds": 46.40358030000061
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/primary.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.22149739999986195
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/overlap.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.2765951999999743
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/interp.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.19109089999983553
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/gates_primary.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.2882969000002049
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/execution.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3501612000000023
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/candidate.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.24679030000061175
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/analysis.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.30246320000060223
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/__init__.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3205003000002762
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/dev2r_evaluation.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.20546809999996185
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/training.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.19075789999988046
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/secondary.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.19577690000005532
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/conf1_r1/schedule.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3541015000000698
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/compiler.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.2520770999999513
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "src/self_learning_ai/benchmark.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.2897061000003305
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "scripts/validate_phase2b_data.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.2518228999997518
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "scripts/train_phase3c_conf1.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3265281000003597
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "scripts/train_phase2a_qlora.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3277411999997639
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "scripts/evaluate_phase3c_conf1.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.27135049999924377
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "scripts/analyze_phase3c_conf1.py",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.3606455000008282
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "research/protocols/phase3c_conf1_config_proposed.json",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.23344230000020616
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "prompts/phase1t_user_template.txt",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.263705100000152
+    },
+    {
+      "dynamic_new_module_refused": true,
+      "missing_refused": true,
+      "one_byte_tamper_refused": true,
+      "path": "prompts/phase1t_system.txt",
+      "tampered_repository_files": 0,
+      "wall_seconds": 0.26220089999969787
+    },
+    {
+      "counts": {
+        "evaluation": 64,
+        "evaluation_cases": 320,
+        "primary": 32,
+        "sanity_kept": 16,
+        "secondary_dropped": 0,
+        "secondary_kept": 32,
+        "training": {
+          "composition": 60,
+          "isolated": 60
+        },
+        "training_cases": 600
+      },
+      "seed": 900001,
+      "status": "CANDIDATE_GATES_PASSED_NOT_FROZEN",
+      "wall_seconds": 3320.5059957000003
+    }
+  ]
+}

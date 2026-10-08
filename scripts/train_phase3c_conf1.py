@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from self_learning_ai.conf1_r1.execution import (
-    DEFAULT_RUNTIME, GateStop, read, require_execution_authorization, run_training_cells, sha256,
+    DEFAULT_RUNTIME, GateStop, read, require_execution_authorization, run_training_cells, sha256, training_rows,
 )
 
 
@@ -73,13 +73,11 @@ def trainer(cfg, runtime):
             lora_dropout=lora["dropout"], bias=lora["bias"], task_type="CAUSAL_LM", target_modules=lora["target_modules"]))
         if not any(p.requires_grad for p in model.parameters()):
             raise GateStop("no trainable adapter parameters")
-        by_slot = {row["model_task_id"]: row for row in examples}
-        system = examples[0]["messages"][0]["content"]
-        # Reused TokenDataset accepts example_id: supply the C9 model ID in
-        # that field in a fresh row, preserving the actual record ID separately.
-        loaders = [DataLoader(TokenDataset([dict(by_slot[tid], example_id=tid) for tid in epoch["slot_ids"]],
-                    tokenizer, system, train["max_length"]), batch_size=1, shuffle=False,
-                    collate_fn=collator(tokenizer.pad_token_id)) for epoch in schedule["epochs"]]
+        loaders = []
+        for epoch in schedule["epochs"]:
+            system, rows = training_rows(examples, epoch["slot_ids"])
+            loaders.append(DataLoader(TokenDataset(rows, tokenizer, system, train["max_length"]),
+                batch_size=1, shuffle=False, collate_fn=collator(tokenizer.pad_token_id)))
         optimizer = bnb.optim.PagedAdamW8bit((p for p in model.parameters() if p.requires_grad),
             lr=train["learning_rate"], betas=tuple(train["adam_betas"]), eps=train["adam_epsilon"],
             weight_decay=train["weight_decay"])

@@ -16,6 +16,7 @@ from pathlib import Path
 
 from self_learning_ai.conf1_r1 import gates_primary as gates, interp, overlap, secondary, training
 from self_learning_ai.conf1_r1.gates_primary import ROOT, CompilerRunner, GateStop, _memo
+from self_learning_ai.conf1_r1.execution import EXECUTION_BOUND_FILES, execution_bound_files
 from self_learning_ai.conf1_r1.primary import load_primary_slots, primary_expected, primary_prompt, primary_source
 
 
@@ -107,6 +108,8 @@ def _authorities():
         code["scripts/" + name] = _sha(ROOT / "scripts" / name)
     for name in ("compiler.py", "benchmark.py"):
         code["src/self_learning_ai/" + name] = _sha(ROOT / "src/self_learning_ai" / name)
+    for name in EXECUTION_BOUND_FILES | execution_bound_files():
+        code[name] = _sha(ROOT / name)
     return {"status": "PASS", "authority_hashes": hashes, "code_hashes": code,
             "compiler_sha256": gates.JAR_SHA256, "tokenizer_hashes": training.TOKENIZER_HASHES,
             "ledger": ledger, "r2_manifest": r2, "audit_domain_disjoint_equivalents": disjoint}
