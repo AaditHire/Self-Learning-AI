@@ -8,10 +8,12 @@ optimizer_steps and a nonempty losses list, plus optional lineage diagnostics.
 """
 from __future__ import annotations
 
+import errno
 import hashlib
 import json
 import math
 import os
+import time
 import uuid
 from pathlib import Path
 from types import FunctionType
@@ -21,6 +23,7 @@ from self_learning_ai.conf1_r1 import analysis, schedule
 
 ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_RUNTIME = ROOT / ".runtime/phase3c_conf1"
+C15_REVIEWED_INCIDENT = "research/protocols/phase3c_conf1_c15_reviewed_incident.json"
 AUTHORIZED_STATUSES = frozenset({"CANDIDATE_FROZEN"})
 AUTHORIZED_CONSTRUCTION_SEEDS = frozenset({20290123})
 EXECUTION_BOUND_FILES = frozenset({
@@ -254,6 +257,15 @@ def run_training_cells(candidate, train_cell, *, runtime_root=DEFAULT_RUNTIME):
         _fault(store, "training", exc)
 
 
+def _score_row(seed, condition, suite, tid, flags, raw_hash, rng_seed):
+    metadata = analysis.TRAINING[tid] if suite == "training" else analysis.CANONICAL[tid]
+    row = {k: metadata[k] for k in ("task_id", "family", "group", "graph", "block_id") if k in metadata}
+    row.update(flags)
+    row.update(seed=seed, condition=condition, suite=suite, task_id=tid, raw_sha256=raw_hash, rng_seed=rng_seed)
+    analysis._row(row, analysis.TRAINING | analysis.CANONICAL)
+    return row
+
+
 def _task(store, seed, condition, suite, task, cases, target, generate, score, reset):
     tid = task["task_id"]
     stem = f"evaluations/{seed}/{condition}/{suite}/{tid}"
@@ -269,11 +281,7 @@ def _task(store, seed, condition, suite, task, cases, target, generate, score, r
     raw_hash = store.write(stem + ".raw.json", {"raw_generation": raw, "rng_seed": rng_seed,
                                                 "seed": seed, "condition": condition, "task_id": tid})
     flags = score(raw, task, cases, target, store.path(stem + ".compiler"))
-    metadata = analysis.TRAINING[tid] if suite == "training" else analysis.CANONICAL[tid]
-    row = {k: metadata[k] for k in ("task_id", "family", "group", "graph", "block_id") if k in metadata}
-    row.update(flags)
-    row.update(seed=seed, condition=condition, suite=suite, task_id=tid, raw_sha256=raw_hash, rng_seed=rng_seed)
-    analysis._row(row, analysis.TRAINING | analysis.CANONICAL)
+    row = _score_row(seed, condition, suite, tid, flags, raw_hash, rng_seed)
     digest = store.write(stem + ".score.json", row)
     store.write(stem + ".score.sha256.json", {"sha256": digest})
     return row
@@ -345,13 +353,138 @@ def run_confirmatory(candidate, generate, score, *, reset, runtime_root=DEFAULT_
         _fault(store, "confirmatory", exc)
 
 
+def c15_reviewed_incident(manifest):
+    """Read only the fixed, byte-exact manifest-bound C15 decision."""
+    try:
+        info = manifest["authority_hashes"].get(C15_REVIEWED_INCIDENT)
+        path = ROOT / C15_REVIEWED_INCIDENT
+        if (not isinstance(info, dict) or info.get("verification") != "byte-exact"
+                or info.get("sha256") != sha256(path)
+                or info.get("verified_sha256") != sha256(path)):
+            raise GateStop("C15 reviewed incident is missing or not hash-bound")
+        return read(path)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise GateStop("C15 reviewed incident is missing or not hash-bound") from exc
+
+
+def _c15_incident(store, reviewed):
+    files = list(store.path("incidents").iterdir())
+    incident = store.path(reviewed["incident"])
+    if (reviewed.get("amendment") != "C15" or files != [incident]
+            or not incident.is_file() or sha256(incident) != reviewed["incident_sha256"]):
+        raise GateStop("C15 reviewed incident mismatch")
+
+
+def _c15_marker(reviewed, raw_hash):
+    return {"amendment": "C15", "incident": reviewed["incident"],
+            "incident_sha256": reviewed["incident_sha256"], "resume_index": reviewed["resume_index"],
+            "resume_task": reviewed["resume_task"], "raw_sha256": raw_hash}
+
+
+def run_confirmatory_c15_continuation(candidate, generate, score, *, reset, reviewed_incident,
+                                     runtime_root=DEFAULT_RUNTIME):
+    """One reviewed continuation; reuse the persisted generation at index 128."""
+    store = CheckpointStore(runtime_root)
+    try:
+        path, _, tasks, _, _ = _candidate(candidate)
+        reviewed = reviewed_incident
+        _c15_incident(store, reviewed)
+        if any(p.name.endswith(".lock") or ".tmp-" in p.name for p in store.root.rglob("*")):
+            raise GateStop("C15 runtime has a lock or temporary file")
+        if read(store.path("confirmatory.started.json")) != {"status": "STARTED"}:
+            raise GateStop("C15 confirmatory start marker mismatch")
+        gate = read(store.path("acquisition_gate.json"))
+        verified_gate = analysis.acquisition_gate(_score_records(store, "training"))
+        if not gate["passed"] or gate != verified_gate:
+            raise GateStop("confirmatory execution requires a verified acquisition PASS")
+        marker = "confirmatory_c15_continuation.started.json"
+        if store.path("confirmatory_complete.json").exists() or store.path(marker).exists():
+            raise GateStop("C15 continuation already started or complete")
+        catalog = {t["task_id"]: t for t in tasks}
+        order = schedule.confirmatory_order({g: [t["task_id"] for t in tasks if t["group"] == g]
+                                             for g in schedule.GROUPS})
+        entries = [(c["seed"], c["condition"], tid) for c in schedule.cell_order() for tid in order]
+        resume = reviewed["resume_index"]
+        selected = reviewed["resume_task"]
+        if (len(entries) != 640 or type(resume) is not int or resume != 128
+                or entries[resume] != (selected["seed"], selected["condition"], selected["task_id"])):
+            raise GateStop("C15 resume index or frozen task mismatch")
+        allowed = set()
+        for index, (seed, condition, tid) in enumerate(entries):
+            stem = f"evaluations/{seed}/{condition}/confirmatory/{tid}"
+            if index > resume:
+                continue
+            names = [stem + ".started.json", stem + ".raw.json"]
+            compiler_dir = stem + ".compiler"
+            compiler_names = [compiler_dir + "/" + tid + ".generation.json"]
+            if index < resume:
+                names += [stem + ".score.json", stem + ".score.sha256.json"]
+                compiler_names += [compiler_dir + "/" + tid + ".primary.json"]
+            for name in names + compiler_names:
+                if not store.path(name).is_file():
+                    raise GateStop("C15 missing pre-existing artifact", {"path": name})
+                allowed.add(store.path(name))
+            if not store.path(compiler_dir).is_dir():
+                raise GateStop("C15 missing compiler checkpoint")
+            allowed.add(store.path(compiler_dir))
+            raw = read(store.path(stem + ".raw.json"))
+            if any(raw.get(k) != v for k, v in {"seed": seed, "condition": condition,
+                    "task_id": tid, "rng_seed": schedule.task_rng_seed(seed, tid)}.items()):
+                raise GateStop("C15 raw metadata mismatch")
+            if index < resume:
+                scored = store.path(stem + ".score.json")
+                if (sha256(scored) != read(store.path(stem + ".score.sha256.json"))["sha256"]
+                        or sha256(store.path(stem + ".raw.json")) != read(scored)["raw_sha256"]):
+                    raise GateStop("C15 pre-existing score or raw hash mismatch")
+        directories = set(store.root.glob("evaluations/*/*/confirmatory"))
+        expected_directories = {store.path(f"evaluations/{seed}/{condition}/confirmatory")
+                                for seed, condition, _ in entries[:resume + 1]}
+        actual = {p for d in directories for p in d.rglob("*")}
+        if directories != expected_directories or actual != allowed:
+            raise GateStop("C15 unexpected confirmatory artifact")
+        seed, condition, tid = entries[resume]
+        stem = f"evaluations/{seed}/{condition}/confirmatory/{tid}"
+        raw_path = store.path(stem + ".raw.json")
+        raw = read(raw_path)
+        raw_hash = sha256(raw_path)
+        cases = read(path / "evaluation/hidden_cases.json")
+        store.write(marker, _c15_marker(reviewed, raw_hash))
+        flags = score(raw["raw_generation"], catalog[tid], cases[tid], None,
+                      store.path(stem + ".compiler-c15"))
+        row = _score_row(seed, condition, "confirmatory", tid, flags, raw_hash, raw["rng_seed"])
+        digest = store.write(stem + ".score.json", row)
+        store.write(stem + ".score.sha256.json", {"sha256": digest})
+        for seed, condition, tid in entries[resume + 1:]:
+            _task(store, seed, condition, "confirmatory", catalog[tid], cases[tid], None,
+                  generate, score, reset)
+        records = _score_records(store, "confirmatory")
+        if len(records) != 640:
+            raise GateStop("C15 incomplete confirmatory population")
+        analysis.validate_records(_score_records(store, "training") + records, tasks)
+        store.write("confirmatory_complete.json", {"records": 640, "tasks_per_cell": 64})
+        return records
+    except Exception as exc:
+        _fault(store, "confirmatory_c15", exc)
+
+
 def run_analysis(candidate, runtime_root=DEFAULT_RUNTIME):
     store = CheckpointStore(runtime_root)
     try:
         if store.path("analysis.json").exists():
             raise GateStop("existing analysis checkpoint; retry forbidden")
-        if store.path("incidents").exists() or any(
-                p.name.endswith(".lock") or ".tmp-" in p.name for p in store.root.rglob("*")):
+        if store.path("incidents").exists():
+            try:
+                manifest = require_execution_authorization(candidate)
+                reviewed = c15_reviewed_incident(manifest)
+                _c15_incident(store, reviewed)
+                task = reviewed["resume_task"]
+                raw_path = store.path(f"evaluations/{task['seed']}/{task['condition']}/confirmatory/"
+                                      f"{task['task_id']}.raw.json")
+                if read(store.path("confirmatory_c15_continuation.started.json")) != _c15_marker(reviewed, sha256(raw_path)):
+                    raise GateStop("C15 continuation marker mismatch")
+            except Exception as exc:
+                raise GateStop("analysis requires an incident-free, complete runtime or reviewed C15 continuation") from exc
+        if any(p.name.endswith(".lock") or ".tmp-" in p.name for p in store.root.rglob("*")):
             raise GateStop("analysis requires an incident-free, complete runtime")
         _, _, tasks, _, _ = _candidate(candidate)
         for cell in schedule.cell_order():
@@ -403,9 +536,47 @@ def compiler_score(compiler):
         source = extract_source(raw)
         adapted = dict(task, development_group=task["group"], archetype=task.get("graph", task["group"]),
                        semantic_primitives=["CONF1"], composition_signature=task["group"], required_regex=[])
-        result = evaluate(compiler=compiler, task=adapted, cases=cases,
-                          raw_generation=raw, generation_metadata={},
-                          adapter_identity={"condition": "CONF1"}, checkpoint_dir=checkpoint_dir)
+        from self_learning_ai.dev2r_evaluation import atomic_new_json
+        attempts = []
+        retried = False
+
+        class SystemRetries:
+            case_index = 0
+
+            def run(self, source, stdin):
+                nonlocal retried
+                index = self.case_index
+                self.case_index += 1
+                for number in range(1, 4):
+                    if number > 1:
+                        retried = True
+                        time.sleep(2 if number == 2 else 10)
+                    try:
+                        result = compiler.run(source, stdin)
+                    except OSError as exc:
+                        if exc.errno != errno.EINVAL:
+                            raise
+                        attempts.append({"case_index": index, "attempt_number": number, "einval": True})
+                        if number == 3:
+                            raise
+                        continue
+                    attempt = {"case_index": index, "attempt_number": number, "einval": False,
+                               "is_system": result.phase == "system", "exit_code": result.exit_code,
+                               "timed_out": result.timed_out, "elapsed_ms": result.elapsed_ms}
+                    if attempt["is_system"]:
+                        attempt["stderr"] = result.stderr[:200]
+                    attempts.append(attempt)
+                    if result.phase != "system":
+                        return result
+                return result
+
+        try:
+            result = evaluate(compiler=SystemRetries(), task=adapted, cases=cases,
+                              raw_generation=raw, generation_metadata={},
+                              adapter_identity={"condition": "CONF1"}, checkpoint_dir=checkpoint_dir)
+        finally:
+            if retried:
+                atomic_new_json(Path(checkpoint_dir) / "c15_system_retries.json", {"attempts": attempts})
         flags = result["score"]
         if any(c["phase"] == "system" for c in flags["case_results"]):
             raise GateStop("compiler infrastructure fault", flags)

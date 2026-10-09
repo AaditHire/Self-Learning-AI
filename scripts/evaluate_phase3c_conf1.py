@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from self_learning_ai.conf1_r1.execution import (
     DEFAULT_RUNTIME, AcquisitionFailed, GateStop, compiler_score, encode_prompt, read, require_execution_authorization,
-    run_confirmatory, run_own_training, sha256,
+    c15_reviewed_incident, run_confirmatory_c15_continuation, run_confirmatory, run_own_training, sha256,
 )
 
 
@@ -76,9 +76,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidate-dir", type=Path, required=True)
     parser.add_argument("--check-authorization-only", action="store_true")
+    parser.add_argument("--c15-continue-confirmatory", action="store_true")
     args = parser.parse_args()
     try:
         manifest = require_execution_authorization(args.candidate_dir)
+        reviewed = c15_reviewed_incident(manifest) if args.c15_continue_confirmatory else None
         if args.check_authorization_only:
             print("CONF1 authorization PASS; no model imported")
             return
@@ -90,8 +92,12 @@ def main():
             output_limit_bytes=cfg["evaluation"]["output_limit_bytes_per_stream"])
         generate, reset = generator(cfg, DEFAULT_RUNTIME)
         score = compiler_score(compiler)
-        run_own_training(args.candidate_dir, generate, score, reset=reset)
-        run_confirmatory(args.candidate_dir, generate, score, reset=reset)
+        if args.c15_continue_confirmatory:
+            run_confirmatory_c15_continuation(args.candidate_dir, generate, score, reset=reset,
+                                             reviewed_incident=reviewed)
+        else:
+            run_own_training(args.candidate_dir, generate, score, reset=reset)
+            run_confirmatory(args.candidate_dir, generate, score, reset=reset)
     except AcquisitionFailed as exc:
         parser.exit(3, "INDETERMINATE_INSUFFICIENT_ACQUISITION; run_confirmatory was not called\n")
     except GateStop as exc:
