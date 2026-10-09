@@ -125,6 +125,7 @@ B training or post-B evaluation.
 | EXP-0055–EXP-0057 | Matched 20% A replay B continuation, 12 replacements/epoch | same respective seeds | PROPOSED / NOT EXECUTED |
 | EXP-0058 | Base, pre-B, post-naive, post-replay frozen A/B evaluations and transitions | all three | PROPOSED / NOT EXECUTED |
 | EXP-0059 | Frozen 64-item non-GOCO regression at all conditions | all three | PROPOSED / NOT EXECUTED |
+| EXP-0060 | Phase 3C-CONF1, Attempt 004; freeze `c4aa4bd`; authorizations `4c1d0b6` and `7a2e022`; amendment C15 `611cdc2`/`8eb836c`; execution record `a1ec61c`; report `research/results/PHASE_3C_CONF1/report.md`; execution record `research/results/PHASE_3C_CONF1/execution/execution_record.json` | 20280117, 20280223, 20280329, 20280411, 20280507 (paired) | COMPLETE / NOT_CONFIRMED_UNDER_CONF1 |
 
 Phase 3C model execution code, hardware record, and per-run artifact lineage
 must be frozen and independently reviewed before those proposed records run.

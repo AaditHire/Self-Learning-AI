@@ -247,3 +247,20 @@ continual-learning claim is currently justified.
   does not establish task-level forgetting prevention, broad continual
   learning, optimal replay ratio, self-learning, or lifelong learning. Full
   record: `research/results/PHASE_3B/report.md`.
+
+## CLM-013
+
+- **Proposed claim:** under a matched-budget design, pairwise joint-predicate (COMPOSITION) practice improves Novel Composition pass@1 over independent-predicate (ISOLATED) practice, by the preregistered +20 pp target.
+- **Evidence required:** the frozen Phase 3C-CONF1 protocol. Five paired seeds and 32 fresh Novel Composition tasks, with one greedy pass. Support requires a mean paired difference of at least +20 pp and a 95% bootstrap lower bound above 0.
+- **Experiment:** Phase 3C-CONF1, Attempt 004. Freeze c4aa4bd; authorizations 4c1d0b6 and 7a2e022; amendment C15 611cdc2/8eb836c; execution record a1ec61c.
+- **Status:** TESTED ONCE; NOT CONFIRMED UNDER CONF1.
+- **Supporting results:** `research/results/PHASE_3C_CONF1/execution/analysis.json` and `research/results/PHASE_3C_CONF1/report.md`.
+  - Mean difference +5.0 pp (95% interval −5.0 to +20.0); ΣE = 8 of the 32 needed.
+  - Pooled passes: ISOLATED 7/160, COMPOSITION 15/160.
+  - Sanity NONCATASTROPHIC. Structural Transfer 0/80 in both conditions.
+- **Possible confounders:** One model, one recipe and one GOCO domain. Five seeds and 32 primary tasks. Seed-task observations are correlated. The +20 pp target was chosen prospectively but is coarse for floor-level rates. CUDA nondeterminism. Prompt semantics and target loss geometry differ by construction between conditions. The run was resumed under amendment C15. The resume was reviewed and outcome-blind, but it is still a deviation from an uninterrupted single pass.
+- **Currently justified:** **Justified:** under the frozen CONF1 design, the observed COMPOSITION − ISOLATED Novel Composition difference was +5.0 pp, with a 95% interval of −5.0 to +20.0. The preregistered confirmatory label is `NOT_CONFIRMED_UNDER_CONF1`. Both conditions learned their training sets but rarely solved novel compositions (7/160 and 15/160), and neither solved Structural Transfer (0/80).
+- **Not justified:**
+  - that composition practice has no effect;
+  - that it has a ≥20 pp effect;
+  - any claim about the DEV2R effect's generality, continual learning, retention or self-learning.

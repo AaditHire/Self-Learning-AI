@@ -159,19 +159,17 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 | 5 | **DONE — static conformance review CONFORMS; infrastructure smoke** (`097b74b`) | Review accepted; one non-scientific real-model cell on consumed DEV2 | Candidate construction |
 | 6 | **DONE — Attempt 004 construction** (`2da5b85`; seed 20290123) | All 18 candidate gates PASS | Freeze |
 | 7 | **DONE — candidate freeze** (`c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`) | Hashed manifest; `model_execution_authorized: false` | Authorization review |
-| 8 | **C15 implemented and re-frozen; continuation authorization pending**: E1-R2 stopped at confirmatory task 129/640 with an infrastructure fault (Windows EINVAL in the scorer). C15 implementation: `611cdc2dd1764723450342b11b7672252eb97d86`; re-freeze: `8eb836c353d8c14c1906bc73359649cfdce83ed6`; new manifest SHA-256: `8c48cfe3aa1789e817808254643e2902ed4939823bb4ff271b862d59e46ea68a` (`model_execution_authorized: false`). Open test-hygiene items, all pre-existing: the schedule_analysis audit hook breaks single-process suite runs; F1/F2 (DEV2R v2 manifest tests); F3/F4 (Coverage-v3 population_guard); F5 (`.gitattributes` is pinned by the Phase 3C execution manifest). | The continuation model run awaits aadit's new one-line authorization | Reviewed C15 continuation |
-| 9 | **Execution**: 10 cells, acquisition gate, primary/secondary evaluation, one pass | Raw outputs persisted | Analysis |
-| 10 | **Analysis and reporting**: frozen analyzer, report, claims ledger and this file updated | Committed | Next research decision |
+| 8 | **DONE — C15 implemented, re-frozen and continuation authorized** (`611cdc2`, `8eb836c`, `7a2e022`). Open test-hygiene items, all pre-existing: the schedule_analysis audit hook breaks single-process suite runs; F1/F2 (DEV2R v2 manifest tests); F3/F4 (Coverage-v3 population_guard); F5 (`.gitattributes` is pinned by the Phase 3C execution manifest). | Completed | Execution |
+| 9 | **DONE — execution**: continuation executed once, exit 0; runtime 7,578 files; execution record `a1ec61c` | Raw outputs persisted | Analysis |
+| 10 | **DONE — analysis and reporting**: label `NOT_CONFIRMED_UNDER_CONF1`; report `research/results/PHASE_3C_CONF1/report.md`; CLM-013 | Completed | Next research decision |
 
 ## J. Current next action
 
-Next action: the project head's readiness review of frozen Attempt 004 (step 8), then the user's one-line confirmation. Only after that does a separate Codex task make the single-line `model_execution_authorized` boolean diff.
-
-- **Agent:** the project head (Claude Opus 5.5) reviews readiness; the user authorizes execution after that review.
-- **Type:** READINESS REVIEW / AUTHORIZATION.
-- **Still forbidden:** setting the boolean, any model use on CONF1 data, editing any bound file, and prohibited data.
-
-Update this section after every major milestone.
+- **Next action:** next research decision after CONF1 (project head plan), in a new phase.
+- **Agent:** the project head proposes the plan; the user decides.
+- **Type:** PLANNING.
+- **Still forbidden:** any further use of CONF1 confirmatory data for model selection or tuning; edits to frozen CONF1 artifacts; the sealed final-paper holdout.
+- **Preserve:** .runtime/phase3c_conf1 (git-ignored) holds the raw outputs hashed by execution/output_inventory.json. Do not delete it.
 
 ## K. Agent workflow
 
