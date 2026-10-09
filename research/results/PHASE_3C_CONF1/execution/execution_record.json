@@ -1,0 +1,351 @@
+{
+  "C15_disclosures": {
+    "model_cell_3_loading": "at frozen-order index 129 rather than 128",
+    "new_confirmatory_generations": 511,
+    "prior_confirmatory_scores_recomputed": false,
+    "task_128_raw_reused": true,
+    "task_128_scoring_checkpoint": "fresh .compiler-c15 checkpoint"
+  },
+  "authorization_checks": [
+    {
+      "command": [
+        "python",
+        "scripts/evaluate_phase3c_conf1.py",
+        "--candidate-dir",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004",
+        "--check-authorization-only",
+        "--c15-continue-confirmatory"
+      ],
+      "end_utc": "2026-10-09T11:34:57.003573+00:00",
+      "exit_code": 0,
+      "start_utc": "2026-10-09T11:34:56.526852+00:00",
+      "stderr": "",
+      "stdout": "CONF1 authorization PASS; no model imported\n",
+      "wall_seconds": 0.4767218999986653
+    },
+    {
+      "command": [
+        "python",
+        "scripts/analyze_phase3c_conf1.py",
+        "--candidate-dir",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004",
+        "--check-authorization-only"
+      ],
+      "end_utc": "2026-10-09T11:34:57.366372+00:00",
+      "exit_code": 0,
+      "start_utc": "2026-10-09T11:34:57.004306+00:00",
+      "stderr": "",
+      "stdout": "CONF1 authorization PASS; no model imported\n",
+      "wall_seconds": 0.3620740999976988
+    }
+  ],
+  "authorizations": {
+    "C15_continuation": {
+      "commit": "7a2e02239c0c488c19cea2e737220cd32700f2f9",
+      "manifest_sha256": "0c25f8809af58429d0b2a49b135190ff0c45b2d2c78c6bfe856feb927861a342"
+    },
+    "E1_R2": {
+      "commit": "4c1d0b64a21d450f718a9334faefcd336e7ff1d0",
+      "manifest_sha256": "d10895fb3a236e49c82e6bae09b0b5e05a2b62f43d929ab3c9fc80e7e1e1ecfb"
+    }
+  },
+  "c15_commits": {
+    "implementation": "611cdc2dd1764723450342b11b7672252eb97d86",
+    "project_state": "b3b30b976e3dd568e7fe548a5ca4778ef9765aff",
+    "refreeze": "8eb836c353d8c14c1906bc73359649cfdce83ed6"
+  },
+  "commands": {
+    "analyze": {
+      "child_pid": 23432,
+      "command": [
+        "python",
+        "scripts/analyze_phase3c_conf1.py",
+        "--candidate-dir",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004"
+      ],
+      "end_utc": "2026-10-09T16:08:11.604516+00:00",
+      "exit_code": 0,
+      "start_utc": "2026-10-09T16:07:48.679392+00:00",
+      "wall_seconds": 22.92513059999328,
+      "wrapper_pid": 33288
+    },
+    "evaluate": {
+      "child_pid": 35720,
+      "command": [
+        "python",
+        "scripts/evaluate_phase3c_conf1.py",
+        "--candidate-dir",
+        "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004",
+        "--c15-continue-confirmatory"
+      ],
+      "end_utc": "2026-10-09T16:04:44.074414+00:00",
+      "exit_code": 0,
+      "start_utc": "2026-10-09T11:35:37.540327+00:00",
+      "wall_seconds": 16141.216919500002,
+      "wrapper_pid": 28500
+    }
+  },
+  "completion_checks": {
+    "confirmatory_complete": {
+      "records": 640,
+      "tasks_per_cell": 64
+    },
+    "confirmatory_score_files": 640,
+    "continuation_marker": {
+      "amendment": "C15",
+      "incident": "incidents/25dc8143d8ed456797a7c657ac7d9716.json",
+      "incident_sha256": "8563276e0f24ad726f9508e15ca449d759a6718748cf6f6cc9e0d7a4fa4d0db9",
+      "raw_sha256": "ba0acebbd081444ee14d7f326e7c318b8f26e6ce70bd4fd1b36ba2ed3f8f9f81",
+      "resume_index": 128,
+      "resume_task": {
+        "condition": "isolated",
+        "seed": 20280223,
+        "task_id": "CONF1-NC-AR-G1-R0"
+      }
+    },
+    "incident_files": 1,
+    "locks_or_temps": [],
+    "observed_utc": "2026-10-09T16:07:42.924519+00:00",
+    "original_incident_sha256": "8563276e0f24ad726f9508e15ca449d759a6718748cf6f6cc9e0d7a4fa4d0db9",
+    "retry_logs": []
+  },
+  "copied_files": {
+    "acquisition_gate.json": {
+      "bytes": 1614,
+      "runtime_path": "acquisition_gate.json",
+      "sha256": "553c697bfa715cb4c4eefcb591d6e04902b4d694e7ac70c05e2641538ec4518b"
+    },
+    "analysis.json": {
+      "bytes": 301831,
+      "runtime_path": "analysis.json",
+      "sha256": "95c8a766e88f6bceb341426b4b0df74c3eda724c20401f8859b478672f12c22e"
+    },
+    "confirmatory_c15_continuation.started.json": {
+      "bytes": 396,
+      "runtime_path": "confirmatory_c15_continuation.started.json",
+      "sha256": "b993574b60d62861d2e74515b6e273b53ace810cfb076059773c4f6c947c1058"
+    },
+    "confirmatory_complete.json": {
+      "bytes": 45,
+      "runtime_path": "confirmatory_complete.json",
+      "sha256": "38d022e813418f8f25df0836c5a2caf89e3e544d50d1c942393c40cc98666e51"
+    },
+    "incidents/25dc8143d8ed456797a7c657ac7d9716.json": {
+      "bytes": 138,
+      "runtime_path": "incidents/25dc8143d8ed456797a7c657ac7d9716.json",
+      "sha256": "8563276e0f24ad726f9508e15ca449d759a6718748cf6f6cc9e0d7a4fa4d0db9"
+    },
+    "output_inventory.json": {
+      "bytes": 1191381,
+      "runtime_path": "output_inventory.json",
+      "sha256": "8432fb4f0b32a54d9d1ab286ba9165a4c5e6f2fb022a85ea0504f4fea72b0542"
+    },
+    "training/20280117/composition.json": {
+      "bytes": 17123,
+      "runtime_path": "training/20280117/composition.json",
+      "sha256": "914b045594c1712a786d9f7f1015c0df91182c54ad788d1cdc99f633c934fdcd"
+    },
+    "training/20280117/composition.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280117/composition.sha256.json",
+      "sha256": "1c37195c878574f106618c90441a2380e88bdb8d2234c05ccc804f34eb9e544d"
+    },
+    "training/20280117/isolated.json": {
+      "bytes": 17122,
+      "runtime_path": "training/20280117/isolated.json",
+      "sha256": "61f2ccf6850da27679ad9f6618f6a28a24df83195637c612e94b7343114acc92"
+    },
+    "training/20280117/isolated.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280117/isolated.sha256.json",
+      "sha256": "d40ea510ba8c521de3371befb48c79ae0d701e90b3018030dd34502be9c9d5cb"
+    },
+    "training/20280223/composition.json": {
+      "bytes": 17143,
+      "runtime_path": "training/20280223/composition.json",
+      "sha256": "b4e8fc37ce7c03006696ff28b92fa969cdcf4067ad673e270397bebc2a5b8435"
+    },
+    "training/20280223/composition.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280223/composition.sha256.json",
+      "sha256": "bc5e6e780c1b21372df21553c9643a9383911dcedab148bfbc0b8efefb89b21a"
+    },
+    "training/20280223/isolated.json": {
+      "bytes": 17116,
+      "runtime_path": "training/20280223/isolated.json",
+      "sha256": "7715a3cf2ec4cc04f9b85913ab046db5c83fe0bad5fdd5c8456c8b9d32b2d313"
+    },
+    "training/20280223/isolated.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280223/isolated.sha256.json",
+      "sha256": "c43e41ee45a501422f70d72569913ee13d30590df8666f092eadcf030ceb437d"
+    },
+    "training/20280329/composition.json": {
+      "bytes": 17110,
+      "runtime_path": "training/20280329/composition.json",
+      "sha256": "ce5c1d8c3c18129fe3d88d8af3a3a13502ea669d6fc6f35c1d2aca07f1161299"
+    },
+    "training/20280329/composition.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280329/composition.sha256.json",
+      "sha256": "4d75aff4f7d2f21a63f81ce25b4d304470d656b1b3e62b54ebb57c76b041c64f"
+    },
+    "training/20280329/isolated.json": {
+      "bytes": 17123,
+      "runtime_path": "training/20280329/isolated.json",
+      "sha256": "06dd47436d6abc094af3f1102bd8540a6197c5d4561acdd923049c9be9e449b6"
+    },
+    "training/20280329/isolated.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280329/isolated.sha256.json",
+      "sha256": "733907156c7b4880133e0891ee87fdd674ae28b72b8cb47216cf3c81d66a1817"
+    },
+    "training/20280411/composition.json": {
+      "bytes": 17124,
+      "runtime_path": "training/20280411/composition.json",
+      "sha256": "95204c28715b8af7023afb1de7cc6da804697474c37f8048bcee404aae4f1d2d"
+    },
+    "training/20280411/composition.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280411/composition.sha256.json",
+      "sha256": "7a821df972363c21b17d5172b31ec1ccf5d5fc2ae4f9125f38d1eb623cc6b4db"
+    },
+    "training/20280411/isolated.json": {
+      "bytes": 17126,
+      "runtime_path": "training/20280411/isolated.json",
+      "sha256": "b822f90fcfe6b90b0e24322019d383250da5c91a683cfd7253eaec939c9b9944"
+    },
+    "training/20280411/isolated.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280411/isolated.sha256.json",
+      "sha256": "c5846ea3bf0a07f94c41bc51094f4cf64dd1c8fec74f4e4aa4b3a92c55dd28bc"
+    },
+    "training/20280507/composition.json": {
+      "bytes": 17127,
+      "runtime_path": "training/20280507/composition.json",
+      "sha256": "666a93842f7b3d1e01dbb38f11344eaccb66c94453070d9edbc9f6ee7ebb0f7f"
+    },
+    "training/20280507/composition.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280507/composition.sha256.json",
+      "sha256": "04c49ad85d0a8baf3016f7507dc9add08243ad26305672c0fea141e02e73c5ee"
+    },
+    "training/20280507/isolated.json": {
+      "bytes": 17114,
+      "runtime_path": "training/20280507/isolated.json",
+      "sha256": "256c31c2a5bed7e786c170bc6c0578a1a272b9f4c0fde9cb48ae293d3c156b7e"
+    },
+    "training/20280507/isolated.sha256.json": {
+      "bytes": 83,
+      "runtime_path": "training/20280507/isolated.sha256.json",
+      "sha256": "0339f31d442f5976a7fd35e9f243feafec5a372f77c0ffb25d7abd6a64075584"
+    }
+  },
+  "created_utc": "2026-10-09T16:09:58.268978+00:00",
+  "expected_result_completeness": {
+    "authority": "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json",
+    "expected_paths": 2494,
+    "missing_paths": [],
+    "present_paths": 2494
+  },
+  "label": "NOT_CONFIRMED_UNDER_CONF1",
+  "machine_after": {
+    "observed_utc": "2026-10-09T16:08:10.9501175Z",
+    "powercfg": {
+      "hibernate_query": [
+        "Power Scheme GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)",
+        "  Subgroup GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (Sleep)",
+        "    GUID Alias: SUB_SLEEP",
+        "    Power Setting GUID: 9d7815a6-7ee4-497e-8888-515a05f02364  (Hibernate after)",
+        "      GUID Alias: HIBERNATEIDLE",
+        "      Minimum Possible Setting: 0x00000000",
+        "      Maximum Possible Setting: 0xffffffff",
+        "      Possible Settings increment: 0x00000001",
+        "      Possible Settings units: Seconds",
+        "    Current AC Power Setting Index: 0x00000000",
+        "    Current DC Power Setting Index: 0x00000e10",
+        ""
+      ],
+      "hibernate_timeout_ac_seconds": 0,
+      "standby_query": [
+        "Power Scheme GUID: 27fa6203-3987-4dcc-918d-748559d549ec  (Performance)",
+        "  Subgroup GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (Sleep)",
+        "    GUID Alias: SUB_SLEEP",
+        "    Power Setting GUID: 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (Sleep after)",
+        "      GUID Alias: STANDBYIDLE",
+        "      Minimum Possible Setting: 0x00000000",
+        "      Maximum Possible Setting: 0xffffffff",
+        "      Possible Settings increment: 0x00000001",
+        "      Possible Settings units: Seconds",
+        "    Current AC Power Setting Index: 0x00000000",
+        "    Current DC Power Setting Index: 0x000000f0",
+        ""
+      ],
+      "standby_timeout_ac_seconds": 0
+    },
+    "windows_update": {
+      "ActiveHoursEnd": 2,
+      "ActiveHoursStart": 8,
+      "PauseQualityUpdatesEndTime": "2026-10-15T09:23:00Z",
+      "PauseUpdatesExpiryTime": "2026-10-15T09:23:00Z",
+      "RebootPending": false,
+      "RebootRequired": false
+    }
+  },
+  "machine_before": {
+    "ACLineStatus": 1,
+    "BatteryLifePercent": 62,
+    "M5_user_confirmation": "GitHub Desktop is closed; repository is idle",
+    "gpu_compute_only_processes": 0,
+    "gpu_memory_header_MiB": 1438,
+    "gpu_memory_used_MiB": 1436,
+    "gpu_process_count": 23,
+    "gpu_process_types": [
+      "C+G"
+    ],
+    "gpu_python_processes": 0,
+    "hibernate_timeout_ac_seconds": 0,
+    "power_scheme_guid": "27fa6203-3987-4dcc-918d-748559d549ec",
+    "standby_timeout_ac_seconds": 0,
+    "windows_update": {
+      "ActiveHoursEnd": 2,
+      "ActiveHoursStart": 8,
+      "PauseQualityUpdatesEndTime": "2026-10-15T09:23:00Z",
+      "PauseUpdatesExpiryTime": "2026-10-15T09:23:00Z",
+      "RebootPending": false,
+      "RebootRequired": false,
+      "c1": true,
+      "c2": true,
+      "c3": true,
+      "observed_local": "2026-10-09T17:04:05.2064129+05:30",
+      "observed_utc": "2026-10-09T11:34:05.2024668Z"
+    }
+  },
+  "output_inventory_entries": 7537,
+  "power_preparation": {
+    "commands": [
+      "powercfg /change standby-timeout-ac 0",
+      "powercfg /change hibernate-timeout-ac 0"
+    ],
+    "exit_codes": [
+      0,
+      0
+    ],
+    "hibernate_timeout_ac_seconds": 0,
+    "standby_timeout_ac_seconds": 0
+  },
+  "power_restoration_required": {
+    "commands": [
+      "powercfg /change standby-timeout-ac 0",
+      "powercfg /change hibernate-timeout-ac 0"
+    ],
+    "hibernate_timeout_ac_seconds": 0,
+    "standby_timeout_ac_seconds": 0
+  },
+  "runtime_file_counts": {
+    "after": 7578,
+    "before": 4504
+  },
+  "runtime_inventory_before_sha256": "d0e9095fcc4a54e2d1348461cebcf863d6ca148dec69fa984640c4cdb9717012",
+  "schema_version": "PHASE_3C_CONF1_E2_EXECUTION_RECORD_1"
+}
