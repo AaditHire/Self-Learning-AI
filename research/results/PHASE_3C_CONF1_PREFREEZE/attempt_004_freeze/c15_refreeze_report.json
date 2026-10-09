@@ -1,0 +1,603 @@
+{
+  "added_authority_entries": {
+    "research/protocols/phase3c_conf1_c15_reviewed_incident.json": {
+      "sha256": "a828399a9f1ff246ff8fcf4312ed1ec7150188d8fd6c13ef9e2345718111df2a",
+      "verification": "byte-exact",
+      "verified_sha256": "a828399a9f1ff246ff8fcf4312ed1ec7150188d8fd6c13ef9e2345718111df2a"
+    },
+    "research/protocols/phase3c_conf1_implementation_clarifications_c15.md": {
+      "sha256": "dd012d80863c06534b7d606784912b7eeace242203c8f06e7438876720afc01a",
+      "verification": "byte-exact",
+      "verified_sha256": "dd012d80863c06534b7d606784912b7eeace242203c8f06e7438876720afc01a"
+    },
+    "scripts/refreeze_phase3c_conf1_c15.py": {
+      "sha256": "fa67735a8edb386b3973719b8133dd7bfc8961f3f42b4ba5b21bd524007bcae1",
+      "verification": "byte-exact",
+      "verified_sha256": "fa67735a8edb386b3973719b8133dd7bfc8961f3f42b4ba5b21bd524007bcae1"
+    },
+    "tests/test_conf1_r1_c15.py": {
+      "sha256": "887cee3cc8293d367fe300e3263cc86f7be6b690daa00c16ac1844b2982d1f79",
+      "verification": "byte-exact",
+      "verified_sha256": "887cee3cc8293d367fe300e3263cc86f7be6b690daa00c16ac1844b2982d1f79"
+    }
+  },
+  "changed_code_hashes": {
+    "scripts/evaluate_phase3c_conf1.py": {
+      "new": "f2a5af6cb7960c685a619b84d2a3339a221898f9315bc3ae0404983973a0a455",
+      "old": "a6dc6e9ef0e4684c401baabffde63a266a1f0beee55a8d0d65162c2ced54ae64"
+    },
+    "src/self_learning_ai/conf1_r1/execution.py": {
+      "new": "92e31dc1215fe4641675b58f5685bf6221f9c9816beaaa6edd2f8c877066bdc3",
+      "old": "51378f1ee42eb04c9d7d557913bc21400c4f7fcd3064035ec4538e529e9a6203"
+    }
+  },
+  "checks": {
+    "code_hashes": {
+      "prompts/phase1t_system.txt": {
+        "new": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+        "old": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+        "passed": true
+      },
+      "prompts/phase1t_user_template.txt": {
+        "new": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+        "old": "ec5d8ce7d6249b7936e2e928e28c95f4c9c137a292fb8229b21ea6c07ddb4df7",
+        "passed": true
+      },
+      "research/protocols/phase3c_conf1_config_proposed.json": {
+        "new": "c8ccd84361dc038e64da91eb30acf7b8a6587445b956373671b79735a7362d83",
+        "old": "c8ccd84361dc038e64da91eb30acf7b8a6587445b956373671b79735a7362d83",
+        "passed": true
+      },
+      "scripts/analyze_phase3c_conf1.py": {
+        "new": "0da4bbd407a31115ea6d3a4cfb96cffbb00257d8c56d550ac94a4efab779a24a",
+        "old": "0da4bbd407a31115ea6d3a4cfb96cffbb00257d8c56d550ac94a4efab779a24a",
+        "passed": true
+      },
+      "scripts/audit_phase3c_conf1_r1_specification_feasibility.py": {
+        "new": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74",
+        "old": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74",
+        "passed": true
+      },
+      "scripts/audit_phase3c_conf1_r2_liveness_feasibility.py": {
+        "new": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254",
+        "old": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254",
+        "passed": true
+      },
+      "scripts/build_phase2b_data.py": {
+        "new": "13ee82a45e61c798cef850f4886d594d876cd9aae00b71b439c239a34e688954",
+        "old": "13ee82a45e61c798cef850f4886d594d876cd9aae00b71b439c239a34e688954",
+        "passed": true
+      },
+      "scripts/build_phase3c_conf1_candidate.py": {
+        "new": "9540a49b4eabae13b19eb30d15b6a6727bfa3578460d30a2e2ec26d74431a422",
+        "old": "9540a49b4eabae13b19eb30d15b6a6727bfa3578460d30a2e2ec26d74431a422",
+        "passed": true
+      },
+      "scripts/build_phase3c_conf1_data.py": {
+        "new": "bfbd0f7d4b9b981e38097fca4e7e14f40107f530f9a315f6118ae0a8dc5cb124",
+        "old": "bfbd0f7d4b9b981e38097fca4e7e14f40107f530f9a315f6118ae0a8dc5cb124",
+        "passed": true
+      },
+      "scripts/design_phase3c_conf1.py": {
+        "new": "997ad40d55309e0b0a658a6b615e378626168a282244d459d68dfbe0f66433bf",
+        "old": "997ad40d55309e0b0a658a6b615e378626168a282244d459d68dfbe0f66433bf",
+        "passed": true
+      },
+      "scripts/evaluate_phase3c_conf1.py": {
+        "new": "f2a5af6cb7960c685a619b84d2a3339a221898f9315bc3ae0404983973a0a455",
+        "old": "a6dc6e9ef0e4684c401baabffde63a266a1f0beee55a8d0d65162c2ced54ae64",
+        "passed": true
+      },
+      "scripts/train_phase2a_qlora.py": {
+        "new": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+        "old": "38d666db724441ced30ec8948c7b2a4ba15e0100a1a1b522140320a8bafc0964",
+        "passed": true
+      },
+      "scripts/train_phase3c_conf1.py": {
+        "new": "a357a7fc6c135e535572b0c9579ccf8d93369564976d2e823e1a3aaa47cceccb",
+        "old": "a357a7fc6c135e535572b0c9579ccf8d93369564976d2e823e1a3aaa47cceccb",
+        "passed": true
+      },
+      "scripts/validate_phase2b_data.py": {
+        "new": "e1f6f23349389d1765076a50e68a6857ca85251f7abf784a97fe3ccc82efbeb1",
+        "old": "e1f6f23349389d1765076a50e68a6857ca85251f7abf784a97fe3ccc82efbeb1",
+        "passed": true
+      },
+      "src/self_learning_ai/benchmark.py": {
+        "new": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+        "old": "070aa8c3322bd95038db38b181f8a9336bed73063e7b112c574134324d3a596a",
+        "passed": true
+      },
+      "src/self_learning_ai/compiler.py": {
+        "new": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+        "old": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/__init__.py": {
+        "new": "a0f6fe6dc2b495a3631a0cfccd016efa1375ee4802efc85af03c659f7d139170",
+        "old": "a0f6fe6dc2b495a3631a0cfccd016efa1375ee4802efc85af03c659f7d139170",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/analysis.py": {
+        "new": "07aa040f17fae404a35f45173ac566aa15742ba63bd914f3aa76fdf62fe3cb85",
+        "old": "07aa040f17fae404a35f45173ac566aa15742ba63bd914f3aa76fdf62fe3cb85",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/candidate.py": {
+        "new": "3432f7960a2f57e0ce3e3f8f8f5445bd5129541555d09a7fe02c8b37a4f51087",
+        "old": "3432f7960a2f57e0ce3e3f8f8f5445bd5129541555d09a7fe02c8b37a4f51087",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/execution.py": {
+        "new": "92e31dc1215fe4641675b58f5685bf6221f9c9816beaaa6edd2f8c877066bdc3",
+        "old": "51378f1ee42eb04c9d7d557913bc21400c4f7fcd3064035ec4538e529e9a6203",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/gates_primary.py": {
+        "new": "5a61d496cddf0b03ba0ab74efbe66e1285caa41042b66459b8bf3fddfef79c9e",
+        "old": "5a61d496cddf0b03ba0ab74efbe66e1285caa41042b66459b8bf3fddfef79c9e",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/interp.py": {
+        "new": "99c58611e9ad9b6f9cf484bf806124a81f4feeab7e7ab282fd3f522ced3a7dce",
+        "old": "99c58611e9ad9b6f9cf484bf806124a81f4feeab7e7ab282fd3f522ced3a7dce",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/overlap.py": {
+        "new": "affac0811d56df814f78b5b9347a95124a6e5475311d054a397d6aad183b5964",
+        "old": "affac0811d56df814f78b5b9347a95124a6e5475311d054a397d6aad183b5964",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/primary.py": {
+        "new": "e19ac6a03dccbfb83c6e2321a2f3a2230983c4241fe2bf53be58d1da12617e25",
+        "old": "e19ac6a03dccbfb83c6e2321a2f3a2230983c4241fe2bf53be58d1da12617e25",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/schedule.py": {
+        "new": "0daded9a380e8cc044b0907d5e9476f86b53efc0447ce138909bd0f340eda5c5",
+        "old": "0daded9a380e8cc044b0907d5e9476f86b53efc0447ce138909bd0f340eda5c5",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/secondary.py": {
+        "new": "fe84a46855aef2b5d767e48ab3ea28eb851e31b0843209ac80e0c5ec9234570f",
+        "old": "fe84a46855aef2b5d767e48ab3ea28eb851e31b0843209ac80e0c5ec9234570f",
+        "passed": true
+      },
+      "src/self_learning_ai/conf1_r1/training.py": {
+        "new": "a73848be931857c01088d877a1b9722c2b715ab388421df7acc518717dd1dc87",
+        "old": "a73848be931857c01088d877a1b9722c2b715ab388421df7acc518717dd1dc87",
+        "passed": true
+      },
+      "src/self_learning_ai/dev2r_evaluation.py": {
+        "new": "8120bad8356481d31ed39cad22af73ff55bce2fe550fc49f6209f6b0eec617ff",
+        "old": "8120bad8356481d31ed39cad22af73ff55bce2fe550fc49f6209f6b0eec617ff",
+        "passed": true
+      }
+    },
+    "compiler_unchanged": {
+      "passed": true,
+      "sha256": "e10a7bacf43a287d7a180a831842f16eead8d1331bba9f4c3a5cacbceb8beb4c"
+    },
+    "execution_bindings": {
+      "passed": true,
+      "paths": [
+        "prompts/phase1t_system.txt",
+        "prompts/phase1t_user_template.txt",
+        "research/protocols/phase3c_conf1_config_proposed.json",
+        "scripts/analyze_phase3c_conf1.py",
+        "scripts/evaluate_phase3c_conf1.py",
+        "scripts/train_phase2a_qlora.py",
+        "scripts/train_phase3c_conf1.py",
+        "scripts/validate_phase2b_data.py",
+        "src/self_learning_ai/benchmark.py",
+        "src/self_learning_ai/compiler.py",
+        "src/self_learning_ai/conf1_r1/__init__.py",
+        "src/self_learning_ai/conf1_r1/analysis.py",
+        "src/self_learning_ai/conf1_r1/candidate.py",
+        "src/self_learning_ai/conf1_r1/execution.py",
+        "src/self_learning_ai/conf1_r1/gates_primary.py",
+        "src/self_learning_ai/conf1_r1/interp.py",
+        "src/self_learning_ai/conf1_r1/overlap.py",
+        "src/self_learning_ai/conf1_r1/primary.py",
+        "src/self_learning_ai/conf1_r1/schedule.py",
+        "src/self_learning_ai/conf1_r1/secondary.py",
+        "src/self_learning_ai/conf1_r1/training.py",
+        "src/self_learning_ai/dev2r_evaluation.py"
+      ]
+    },
+    "existing_authority_hashes": {
+      ".artifacts/compiler/goco-compiler-6a029b8-deterministic.jar": {
+        "passed": true,
+        "sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb",
+        "verification": "byte-exact",
+        "verified_sha256": "42478b3500ff31df65f411e4072f578be5fede844020392a664eb89865b2a2fb"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer.json": {
+        "passed": true,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "verification": "byte-exact",
+        "verified_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      ".models/Qwen2.5-Coder-3B-Instruct-488639f/tokenizer_config.json": {
+        "passed": true,
+        "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+        "verification": "byte-exact",
+        "verified_sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4"
+      },
+      "prompts/phase1t_system.txt": {
+        "passed": true,
+        "sha256": "b428211aa219aebac615541af5dea75dde91f10a2fbb315d9fc769559540b754",
+        "verification": "recorded runner input"
+      },
+      "research/protocols/phase3c_conf1_implementation_clarifications_c10_c11.md": {
+        "passed": true,
+        "sha256": "d314bf168ea53c1f4a6ba0f1dc1f41a2fdd68be0fc6ba615a032a560e3c47b92",
+        "verification": "byte-exact",
+        "verified_sha256": "d314bf168ea53c1f4a6ba0f1dc1f41a2fdd68be0fc6ba615a032a560e3c47b92"
+      },
+      "research/protocols/phase3c_conf1_implementation_clarifications_c12_c14.md": {
+        "passed": true,
+        "sha256": "0829e8ad8d4716fd43fd3d49198504a1c345324673933a23d2933161ff859612",
+        "verification": "byte-exact",
+        "verified_sha256": "0829e8ad8d4716fd43fd3d49198504a1c345324673933a23d2933161ff859612"
+      },
+      "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_freeze.json": {
+        "passed": true,
+        "sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a",
+        "verification": "byte-exact",
+        "verified_sha256": "de4a353d58515b5c53210664ea1a642731ac6f1734f23afef4ae512fb8c2627a"
+      },
+      "research/protocols/phase3c_conf1_input_domain_case_classes_and_training_amendment_proposed.md": {
+        "passed": true,
+        "sha256": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e",
+        "verification": "LF-normalized",
+        "verified_sha256": "bb59ad7cf4cb22c2492427a1fa5a78b0d81398ab16fb0a9cb8229d8c9489182e"
+      },
+      "research/protocols/phase3c_conf1_paired_scaffold_normalization_freeze.json": {
+        "passed": true,
+        "sha256": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2",
+        "verification": "byte-exact",
+        "verified_sha256": "ff1a9610b10ff559ac1859361fb7a31668210ed33e97c2864e592981bd9cfea2"
+      },
+      "research/protocols/phase3c_conf1_paired_scaffold_normalization_proposed.md": {
+        "passed": true,
+        "sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0",
+        "verification": "LF-normalized",
+        "verified_sha256": "ef6063d39319d8b3bd3dbe6bdaa93b474217fa4c37d50ef43dfed5afc8da1fc0"
+      },
+      "research/protocols/phase3c_conf1_proposed_protocol.md": {
+        "passed": true,
+        "sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920",
+        "verification": "byte-exact",
+        "verified_sha256": "11e40c821fa26e5a687cea8b8a9a0aa5a0b0c388eae31c99de9814ab2bd80920"
+      },
+      "research/protocols/phase3c_conf1_r1_implementation_clarifications.md": {
+        "passed": true,
+        "sha256": "9fbe75fa2caf6a27ecbac943bec6a99f69c87a604669d533b73cc83e3bfcd328",
+        "verification": "byte-exact",
+        "verified_sha256": "9fbe75fa2caf6a27ecbac943bec6a99f69c87a604669d533b73cc83e3bfcd328"
+      },
+      "research/protocols/phase3c_conf1_r2_implementation_clarifications.md": {
+        "passed": true,
+        "sha256": "43849d3fdf8c33a0243f416ace9e3006eb864e87b26356bb6268e092e76b75ff",
+        "verification": "byte-exact",
+        "verified_sha256": "43849d3fdf8c33a0243f416ace9e3006eb864e87b26356bb6268e092e76b75ff"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r1_freeze.json": {
+        "passed": true,
+        "sha256": "58d2ca7a453246ac97aa956be6c499a416bd523abadc65b7a402195b986f96b1",
+        "verification": "byte-exact",
+        "verified_sha256": "58d2ca7a453246ac97aa956be6c499a416bd523abadc65b7a402195b986f96b1"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r1_proposed.md": {
+        "passed": true,
+        "sha256": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31",
+        "verification": "LF-normalized",
+        "verified_sha256": "4e0ca5c576746ab51fce3414085fd698003a37f745dcb2004cdf8d8c14b3af31"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r2_freeze.json": {
+        "passed": true,
+        "sha256": "e498f31a66caeb19633bdf1a229716b8942dd180c16910dac1246c5d93693375",
+        "verification": "byte-exact",
+        "verified_sha256": "e498f31a66caeb19633bdf1a229716b8942dd180c16910dac1246c5d93693375"
+      },
+      "research/protocols/phase3c_conf1_rebaseline_r2_proposed.md": {
+        "passed": true,
+        "sha256": "2fea0bc3846e0ab7da2161a71e53f6073c2c7107c62316d784f61259eb1e3c8c",
+        "verification": "LF-normalized",
+        "verified_sha256": "2fea0bc3846e0ab7da2161a71e53f6073c2c7107c62316d784f61259eb1e3c8c"
+      },
+      "research/protocols/phase3c_conf1_slots.json": {
+        "passed": true,
+        "sha256": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2",
+        "verification": "byte-exact",
+        "verified_sha256": "5fe76fbc02e9f65174327199c2004f7e51f19a7f3866ae15709744c5274415c2"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/expected_result_ids.json": {
+        "passed": true,
+        "sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05",
+        "verification": "byte-exact",
+        "verified_sha256": "3d908a2f8ec8198c8c8001370ef67efd02a5e5cc434818cd3cc80fc601a77a05"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/infrastructure_smoke.json": {
+        "passed": true,
+        "sha256": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62",
+        "verification": "byte-exact",
+        "verified_sha256": "3348d6cce3039ca0952a287706c8bd0c8db012881c12a09f8bc266d7b6e6eb62"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/r2_liveness_feasibility.json": {
+        "passed": true,
+        "sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7",
+        "verification": "byte-exact",
+        "verified_sha256": "69dd9efb7de72f5bddb1effdad5aee468ca0e425499087356bdc69d5d2a733f7"
+      },
+      "research/results/PHASE_3C_CONF1_PREFREEZE/step4_synthetic_validation.json": {
+        "passed": true,
+        "sha256": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b",
+        "verification": "byte-exact",
+        "verified_sha256": "f647e5b9f37c16c0cfa631ad81b5acf26fc39766fd0ec30adf871ea81f532b2b"
+      },
+      "scripts/audit_phase3c_conf1_r1_specification_feasibility.py": {
+        "passed": true,
+        "sha256": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74",
+        "verification": "byte-exact",
+        "verified_sha256": "7a30d1b733d2881fc806925e05c79c493582a65f36cd91dfdbe21ec0d124ca74"
+      },
+      "scripts/audit_phase3c_conf1_r2_liveness_feasibility.py": {
+        "passed": true,
+        "sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254",
+        "verification": "byte-exact",
+        "verified_sha256": "2de6cb5cd17c60e878cf630c550c54c3fcfa3a599d8e99569f43cd359f73a254"
+      },
+      "scripts/freeze_phase3c_conf1_candidate.py": {
+        "passed": true,
+        "sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65",
+        "verification": "byte-exact",
+        "verified_sha256": "53ad1f5c8cac32e5d3443ad1d8e7bf45aea0e370d209e59cd499b16ddcaabd65"
+      },
+      "tests/test_conf1_r1_candidate.py": {
+        "passed": true,
+        "sha256": "4b21e0621ca75f190847f77c81336d8d598794a2c80602b54c07830ea3b12d51",
+        "verification": "byte-exact",
+        "verified_sha256": "4b21e0621ca75f190847f77c81336d8d598794a2c80602b54c07830ea3b12d51"
+      },
+      "tests/test_conf1_r1_execution.py": {
+        "passed": true,
+        "sha256": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5",
+        "verification": "byte-exact",
+        "verified_sha256": "c9dd87d2a159c3cd4e32c453fba1adef3a364b599a6b0db762544bbe1c91d9d5"
+      },
+      "tests/test_conf1_r1_gates_primary.py": {
+        "passed": true,
+        "sha256": "6e6b764e964fa18c781c810f02b821ade88b64d96af14d0e3f47d5f1ee3bf846",
+        "verification": "byte-exact",
+        "verified_sha256": "6e6b764e964fa18c781c810f02b821ade88b64d96af14d0e3f47d5f1ee3bf846"
+      },
+      "tests/test_conf1_r1_interp.py": {
+        "passed": true,
+        "sha256": "e8c0e9a8fcdd3f287fc82e91f557b14197fe4bc5aa3439663d15930c5321962e",
+        "verification": "byte-exact",
+        "verified_sha256": "e8c0e9a8fcdd3f287fc82e91f557b14197fe4bc5aa3439663d15930c5321962e"
+      },
+      "tests/test_conf1_r1_overlap_secondary.py": {
+        "passed": true,
+        "sha256": "ecbd7be0ddd38f1206bb9e613a631c765ee5f5008d612ba2637606af5dacef0f",
+        "verification": "byte-exact",
+        "verified_sha256": "ecbd7be0ddd38f1206bb9e613a631c765ee5f5008d612ba2637606af5dacef0f"
+      },
+      "tests/test_conf1_r1_primary.py": {
+        "passed": true,
+        "sha256": "38a0857f402b3c4bd093c871e6d7458cc296dba97361d182589534fe36db9c23",
+        "verification": "byte-exact",
+        "verified_sha256": "38a0857f402b3c4bd093c871e6d7458cc296dba97361d182589534fe36db9c23"
+      },
+      "tests/test_conf1_r1_schedule_analysis.py": {
+        "passed": true,
+        "sha256": "a7d2e9e959eb779b9edf966fbda3c05de191b6999cad4c383c00fc85d01a8de4",
+        "verification": "byte-exact",
+        "verified_sha256": "a7d2e9e959eb779b9edf966fbda3c05de191b6999cad4c383c00fc85d01a8de4"
+      },
+      "tests/test_conf1_r1_training.py": {
+        "passed": true,
+        "sha256": "75350ae9f7c2c4fa010f1f7601bc2711e2e5b8b2fdd2fbe392e58c7bdb6d0f29",
+        "verification": "byte-exact",
+        "verified_sha256": "75350ae9f7c2c4fa010f1f7601bc2711e2e5b8b2fdd2fbe392e58c7bdb6d0f29"
+      }
+    },
+    "ignored_at_end": {
+      "baseline_paths": 7146,
+      "baseline_sha256": "63bacc91ac1b3b6b82986bbfc8cb35a271dde09bf7cb7e660194482e0c99b6dc",
+      "current_paths": 7146,
+      "new_ignored_paths": 0,
+      "passed": true
+    },
+    "ignored_at_start": {
+      "baseline_paths": 7146,
+      "baseline_sha256": "63bacc91ac1b3b6b82986bbfc8cb35a271dde09bf7cb7e660194482e0c99b6dc",
+      "current_paths": 7146,
+      "new_ignored_paths": 0,
+      "passed": true
+    },
+    "no_model_imports": {
+      "forbidden_modules_loaded": [],
+      "passed": true
+    },
+    "other_manifest_fields_unchanged": {
+      "canonical_bytes_equal": true,
+      "passed": true
+    },
+    "previous_manifest": {
+      "canonical": true,
+      "model_execution_authorized": true,
+      "passed": true,
+      "sha256": "d10895fb3a236e49c82e6bae09b0b5e05a2b62f43d929ab3c9fc80e7e1e1ecfb",
+      "status": "CANDIDATE_FROZEN"
+    },
+    "start": {
+      "branch": "main",
+      "head": "611cdc2dd1764723450342b11b7672252eb97d86",
+      "no_modified_paths": true,
+      "no_other_untracked_paths": true,
+      "no_staged_paths": true,
+      "passed": true,
+      "status": [
+        "?? scripts/refreeze_phase3c_conf1_c15.py"
+      ]
+    }
+  },
+  "implementation_commit": "611cdc2dd1764723450342b11b7672252eb97d86",
+  "new_manifest_sha256": "8c48cfe3aa1789e817808254643e2902ed4939823bb4ff271b862d59e46ea68a",
+  "previous_manifest_sha256": "d10895fb3a236e49c82e6bae09b0b5e05a2b62f43d929ab3c9fc80e7e1e1ecfb",
+  "status": "C15_REFROZEN_MODEL_EXECUTION_NOT_AUTHORIZED",
+  "validation": {
+    "V1": {
+      "passed": true,
+      "refusal": "STOP: CONF1 model execution is not explicitly authorized"
+    },
+    "V2": {
+      "external_copy_deleted": true,
+      "full_verification": "accepted",
+      "passed": true,
+      "repo_files_verified_in_place": true
+    },
+    "V3": {
+      "passed": true,
+      "unchanged_file_sha256": {
+        "construction_log.json": "e3a5996e19a4fcc24fd77dfcfd1a68fdb9fcf4bcfa1b32f412a1e4aa5b672688",
+        "evaluation/hidden_cases.json": "d57712309f176228800509fcf8645ac568e6d121302de6a72db45a55cf76be2c",
+        "evaluation/references.json": "fe7705bdcc8e664fa4268667f68925d09a65b7b8f1b2b231399d861994f4e7c7",
+        "evaluation/tasks.json": "cdd7771b32b7b8062f9c461f4fdf57a7a263e03b38eedeaa3ba53a06d5c59646",
+        "gates/gate_report.json": "410d6a6a5213848f287145de0cd10d89ec524e858f11b81285deecd5cd87535c",
+        "training/composition_cases.json": "f5ea46d6a86d83696e05c00d4a6758d5eaeb49fd7308334151cba9e4a6c3245f",
+        "training/composition_examples.json": "d833b944c82f6b8a8d49c20a200cbb5bb40aeb4c993a29215d6cbac6846e5a2d",
+        "training/isolated_cases.json": "a31d8cffcd6765117e2143a1ccfcdbbd7527b1ff9979e03212c378aae1d4c691",
+        "training/isolated_examples.json": "4ad3e0a00709b21b52390b4d85028196c31fec5a9fce6218f42701c353ddadff"
+      }
+    },
+    "V4": {
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_conf1_r1_execution.py",
+        "-k",
+        "t1 or h2",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=C:\\Users\\Admin\\conf1-c15-pytest\\v4-20261009T110735508906Z",
+        "--junitxml=C:\\Users\\Admin\\conf1-c15-pytest\\v4-20261009T110735508906Z.xml",
+        "-v"
+      ],
+      "environment": {
+        "PYTEST_ADDOPTS": "-o addopts=",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "C:\\Users\\Admin\\OneDrive\\Documents\\GitHub\\Self Learning AI\\src"
+      },
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "junit": "C:\\Users\\Admin\\conf1-c15-pytest\\v4-20261009T110735508906Z.xml",
+      "log": "C:\\Users\\Admin\\conf1-c15-pytest\\v4-20261009T110735508906Z.log",
+      "passed": true,
+      "passed_count": 23,
+      "skips": 0,
+      "tests": [
+        {
+          "id": "tests.test_conf1_r1_execution::test_t1_authorization",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[prompts/phase1t_system.txt]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[prompts/phase1t_user_template.txt]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[research/protocols/phase3c_conf1_config_proposed.json]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[scripts/analyze_phase3c_conf1.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[scripts/evaluate_phase3c_conf1.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[scripts/train_phase2a_qlora.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[scripts/train_phase3c_conf1.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[scripts/validate_phase2b_data.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/benchmark.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/compiler.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/__init__.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/analysis.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/candidate.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/execution.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/gates_primary.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/interp.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/overlap.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/primary.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/schedule.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/secondary.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/conf1_r1/training.py]",
+          "result": "PASS"
+        },
+        {
+          "id": "tests.test_conf1_r1_execution::test_h2_each_binding[src/self_learning_ai/dev2r_evaluation.py]",
+          "result": "PASS"
+        }
+      ]
+    }
+  },
+  "wall_seconds": 20.11703320000015
+}
