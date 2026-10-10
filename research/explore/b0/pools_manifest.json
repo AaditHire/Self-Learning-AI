@@ -1,0 +1,146 @@
+{
+  "label": "EXPLORATORY",
+  "construction_seed": 20291010,
+  "probe_seed": 20291011,
+  "shuffle_seed": 20291012,
+  "model_id_seed": 20291013,
+  "model_ids_unique": true,
+  "survivor_counts": {
+    "atom_single": {
+      "numeric_iteration": 72,
+      "array_reduction": 72
+    },
+    "atom_isolated": {
+      "array_reduction": 90,
+      "numeric_iteration": 90
+    },
+    "pair_and": {
+      "numeric_iteration": 90,
+      "array_reduction": 75
+    },
+    "graph": {
+      "array_reduction": 18,
+      "numeric_iteration": 48
+    }
+  },
+  "counts": {
+    "dev": {
+      "atom_single": {
+        "numeric_iteration": 24,
+        "array_reduction": 24
+      },
+      "atom_isolated": {
+        "numeric_iteration": 24,
+        "array_reduction": 24
+      },
+      "pair_and": {
+        "numeric_iteration": 48,
+        "array_reduction": 48
+      },
+      "graph": {
+        "numeric_iteration": 34,
+        "array_reduction": 14
+      }
+    },
+    "sealed": {
+      "atom_single": {
+        "numeric_iteration": 8,
+        "array_reduction": 8
+      },
+      "atom_isolated": {
+        "numeric_iteration": 8,
+        "array_reduction": 8
+      },
+      "pair_and": {
+        "numeric_iteration": 16,
+        "array_reduction": 16
+      },
+      "graph": {
+        "numeric_iteration": 14,
+        "array_reduction": 4
+      }
+    }
+  },
+  "sha256": {
+    "dev_pool.json": "24d2ed81799c6dd9dd005dd331b0bb1896b24ccf67e15a21667be4c09d3bcc35",
+    "sealed/sealed_pool.json": "f6e51f6b223475e3f5c1d5e7fa20da0b51a9367d6398bcb1afa38d4ba39d1f7a"
+  },
+  "dedup": {
+    "excluded": {
+      "atom_single": {
+        "CONF1_overlap": 16,
+        "dead": 0,
+        "degenerate": 0,
+        "duplicate": 0
+      },
+      "atom_isolated": {
+        "CONF1_overlap": 60,
+        "dead": 0,
+        "degenerate": 0,
+        "duplicate": 0
+      },
+      "pair_and": {
+        "CONF1_overlap": 60,
+        "dead": 15,
+        "degenerate": 0,
+        "duplicate": 0
+      },
+      "graph": {
+        "CONF1_overlap": 59,
+        "dead": 0,
+        "degenerate": 18,
+        "duplicate": 49
+      }
+    },
+    "cross_pool_overlap_by_category": {
+      "atom_single": 0,
+      "atom_isolated": 0,
+      "pair_and": 0,
+      "graph": 0
+    },
+    "graph_primary_overlap": 0
+  },
+  "graph_strata": {
+    "numeric_iteration/G1": {
+      "survivors": 8,
+      "dev": 6,
+      "sealed": 2
+    },
+    "numeric_iteration/G2": {
+      "survivors": 8,
+      "dev": 6,
+      "sealed": 2
+    },
+    "numeric_iteration/G3P": {
+      "survivors": 12,
+      "dev": 8,
+      "sealed": 4
+    },
+    "numeric_iteration/G4": {
+      "survivors": 20,
+      "dev": 14,
+      "sealed": 6
+    },
+    "array_reduction/G1": {
+      "survivors": 7,
+      "dev": 5,
+      "sealed": 2
+    },
+    "array_reduction/G2": {
+      "survivors": 1,
+      "dev": 1,
+      "sealed": 0
+    },
+    "array_reduction/G3P": {
+      "survivors": 2,
+      "dev": 2,
+      "sealed": 0
+    },
+    "array_reduction/G4": {
+      "survivors": 8,
+      "dev": 6,
+      "sealed": 2
+    }
+  },
+  "references_validated": 322
+}
