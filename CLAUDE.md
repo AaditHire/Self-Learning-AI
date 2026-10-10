@@ -56,6 +56,19 @@ Lead review responses with **VERDICT**, then: what I verified / what is right / 
 - **Prefer the smallest defensible experiment.** Push back on machinery that does not materially protect validity. Do not add formalism by default.
 - **Decision authority.** Claude decides scientific and methodology questions (treatment construct, coverage rules, gates, population repairs, analysis details), provided it stays within the research objective and the Level B claim boundary, keeps every confirmatory decision prospective, preserves negative results, never inspects prohibited data, makes no outcome-dependent change and fails closed on genuine ambiguity. Ask the user only when: (1) a choice changes the fundamental research objective rather than how it is tested; (2) there is a genuine value or preference decision that cannot be settled scientifically; (3) an action has major external cost or irreversible consequences, including the final confirmatory model-execution authorization, which is presented as a one-line readiness confirmation because it consumes the confirmatory suite; (4) Claude cannot determine a defensible choice from the evidence. An independent second opinion (for example from another Claude model) is optional and used only when the project head judges a consequential issue needs it.
 
+## Two-lane workflow (from 2026-10-10)
+
+- Exploration lane: for finding effects and failures fast. One dev data pool per
+  study, plus a sealed confirmation pool generated in the same call, hashed, and
+  never evaluated during exploration. Every run (including failures) is appended
+  to research/explore/run_log.jsonl. No freezes, amendments, coverage or AST
+  machinery. Results are labelled EXPLORATORY and are never evidence for a claim.
+  A Codex task may be a whole sweep.
+- Confirmation lane: only for ideas that pass exploration gates. A one-page
+  preregistration (hypothesis, metric, threshold, baselines, seeds, models,
+  analysis, sealed-pool hash) and one frozen run. Negative results are reported.
+- Never evaluate on a sealed pool or on any consumed CONF1/DEV suite.
+
 ## Keeping state current
 
 When a major state transition is accepted — a methodology freeze, an audit that changes the blocker, an accepted implementation tranche, a candidate frozen or rejected, model execution, or a changed interpretation — update `docs/PROJECT_STATE.md` (directly if the user asks Claude to, otherwise via a Codex task). Follow its "State update protocol": replace stale statements instead of appending, update HEAD, date and next action, and keep it short. Do not put changing project status into this file, `AGENTS.md` or `README.md`.

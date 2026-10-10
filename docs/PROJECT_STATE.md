@@ -4,7 +4,9 @@ Last verified repository HEAD: `c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`
 Last substantive state review: 2026-10-08
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **R1 + R2 frozen; implementation accepted; Attempt 004 constructed (2da5b85) and frozen (c4aa4bdcc9586821ae2286e3f5f18efaa71d1374); model execution NOT authorized; step 8 (project-head readiness review, then the user's one-line authorization) next**
+Current phase: **Phase 4 exploration, direction B, step B0-F (feasibility)**
+
+Two-lane workflow: see AGENTS.md, §Two-lane workflow (from 2026-10-10); exploration and literature review: research/explore/README.md.
 
 This file is the single source of truth for current project state. It summarizes and points; the files it names are the authorities. If this file conflicts with a frozen artifact, the artifact wins and this file must be corrected.
 

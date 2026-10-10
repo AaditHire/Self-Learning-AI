@@ -24,6 +24,19 @@ You are the **execution agent** for a preregistered ML research repository. You 
 - Treat `DEVELOPMENT_ONLY` and `HISTORICAL` / superseded outputs (for example `research/implementation_notes/`, rejected attempts) as non-authoritative. They are never scientific evidence for a gate.
 - Do not update `docs/PROJECT_STATE.md`, `CLAUDE.md` or this file unless the task explicitly authorizes it.
 
+## Two-lane workflow (from 2026-10-10)
+
+- Exploration lane: for finding effects and failures fast. One dev data pool per
+  study, plus a sealed confirmation pool generated in the same call, hashed, and
+  never evaluated during exploration. Every run (including failures) is appended
+  to research/explore/run_log.jsonl. No freezes, amendments, coverage or AST
+  machinery. Results are labelled EXPLORATORY and are never evidence for a claim.
+  A Codex task may be a whole sweep.
+- Confirmation lane: only for ideas that pass exploration gates. A one-page
+  preregistration (hypothesis, metric, threshold, baselines, seeds, models,
+  analysis, sealed-pool hash) and one frozen run. Negative results are reported.
+- Never evaluate on a sealed pool or on any consumed CONF1/DEV suite.
+
 ## Git discipline
 
 - Respect clean-start and clean-end requirements when a task specifies them.
