@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `c4aa4bdcc9586821ae2286e3f5f18efaa71d1374`
-Last substantive state review: 2026-10-08
+Last verified repository HEAD: `8abdccc06b86cb1d4c8848ce7291845587e38fdf`
+Last substantive state review: 2026-10-10
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: **Phase 4 exploration, direction B, step B0-F (feasibility)**
+Current phase: Phase 4 (exploration lane): direction B, continual composition by RL. Step 2: diverse-format atoms (P2)
 
 Two-lane workflow: see AGENTS.md, §Two-lane workflow (from 2026-10-10); exploration and literature review: research/explore/README.md.
 
@@ -61,7 +61,7 @@ All earlier evaluation suites (Phase 1–3C, DEV1, DEV2, DEV2R) are **consumed**
 - **Primary endpoint.** Mean over seeds of the paired COMPOSITION − ISOLATED pass@1 on the 32 primary tasks (one greedy generation; pass = compile + all 5 cases). `CONFIRMATORY_SUPPORT_UNDER_CONF1` requires a point estimate ≥ +20 pp **and** a 95% two-way bootstrap interval (10,000 replicates, RNG seed 20290119, resampling seeds and whole graph blocks within domain) with lower bound > 0. Otherwise `NOT_CONFIRMED_UNDER_CONF1`. Heterogeneity and sanity qualifications are reported, not vetoes.
 - **Claim limitation (R1 §2).** Even a positive result supports only: pair-joint indicator-product practice transfers, relative to independent additive practice, to new multi-role multi-term counting programs built from that idiom, in GOCO, under this budget, with one base model (Level B). ISOLATED has no conjunction exposure, so a positive result partly reflects availability of the joint idiom. It does not support general compositional ability, structural transfer, retention or continual learning.
 
-**Status of this design: R1 + R2 FROZEN; Attempt 004 FROZEN.** Its manifest binds `research/protocols/phase3c_conf1_config_proposed.json` and the execution inputs. The candidate manifest remains `model_execution_authorized: false`; step 8 is next. Freeze evidence: `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/freeze_report.json`.
+**Status of this design: R1 + R2 FROZEN; Attempt 004 FROZEN.** Its manifest binds `research/protocols/phase3c_conf1_config_proposed.json` and the execution inputs. Freeze evidence: `research/results/PHASE_3C_CONF1_PREFREEZE/attempt_004_freeze/freeze_report.json`.
 
 ## D. Resolved blocker (historical)
 
@@ -167,7 +167,7 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 
 ## J. Current next action
 
-- **Next action:** next research decision after CONF1 (project head plan), in a new phase.
+Next action: P2 diverse-format atom SFT and reward-signal re-check (EXPLORATORY).
 - **Agent:** the project head proposes the plan; the user decides.
 - **Type:** PLANNING.
 - **Still forbidden:** any further use of CONF1 confirmatory data for model selection or tuning; edits to frozen CONF1 artifacts; the sealed final-paper holdout.

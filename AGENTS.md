@@ -19,7 +19,7 @@ You are the **execution agent** for a preregistered ML research repository. You 
   - `research/protocols/phase3c_conf1_v3_synthetic_expected_labels.json`;
   - attempt `hidden_cases.json` files;
   - model outcome files a task does not name.
-- **Never construct CONF1 Attempt 004 or any candidate, load a model, train, generate or run scientific evaluation** without an explicit task authorization. Model execution additionally requires a frozen manifest with `"model_execution_authorized": true` set by an authorized commit.
+- **Never construct CONF1 Attempt 004 or any candidate, load a model, train, generate or run scientific evaluation** without an explicit task authorization. Model execution additionally requires a frozen manifest with `"model_execution_authorized": true` set by an authorized commit. Exception: an exploration-lane task (see Two-lane workflow) may load, generate and train when the task explicitly authorizes it; no frozen manifest applies.
 - Never modify frozen protocols, freeze manifests, consumed suites, preserved results or adapters. Never write to the separate GOCO product repository.
 - Treat `DEVELOPMENT_ONLY` and `HISTORICAL` / superseded outputs (for example `research/implementation_notes/`, rejected attempts) as non-authoritative. They are never scientific evidence for a gate.
 - Do not update `docs/PROJECT_STATE.md`, `CLAUDE.md` or this file unless the task explicitly authorizes it.

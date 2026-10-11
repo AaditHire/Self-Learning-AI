@@ -16,10 +16,7 @@ results. Start with [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).
   the confirmatory Phase 2B, adapters raised held-out GOCO pass@1 from 0% to
   roughly 51–55% without documentation in the prompt. Continual learning and
   retention have **not** been demonstrated.
-- **Current phase:** Phase 3C-CONF1, a preregistered test of whether
-  compositional training practice improves novel-composition program
-  generation. Its methodology is being re-baselined; no CONF1 model
-  execution has occurred.
+Current phase: Phase 4 exploration (see docs/PROJECT_STATE.md). CONF1 closed: NOT_CONFIRMED_UNDER_CONF1.
 
 [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) is the authoritative,
 current description of project status. The
