@@ -1,0 +1,41 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291014,
+  "f2_sample_seed": 20291012,
+  "counts": {
+    "training": {
+      "atom_single": 160,
+      "atom_isolated": 240
+    },
+    "eval_w5": {
+      "atom_single_w5": 16,
+      "atom_isolated_w5": 16
+    }
+  },
+  "family_counts": {
+    "atom_single": {
+      "numeric_iteration": 80,
+      "array_reduction": 80
+    },
+    "atom_isolated": {
+      "numeric_iteration": 120,
+      "array_reduction": 120
+    }
+  },
+  "training_wordings": [
+    "W1",
+    "W2",
+    "W3",
+    "W4"
+  ],
+  "evaluation_wording": "W5",
+  "training_offset_range": [
+    20,
+    39
+  ],
+  "references_validated": 400,
+  "sha256": {
+    "train.json": "89b4d87e8cfdaa8031712aac8b8c6fbf6397812fccef5e1bd4a3ec99cf980587",
+    "eval_w5.json": "4faf468beb9a06886544aa694dad97ad77ff07e3472c58cd8afe530634e5f419"
+  }
+}

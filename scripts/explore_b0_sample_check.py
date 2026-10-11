@@ -190,6 +190,8 @@ def main():
     sys.stderr.reconfigure(newline="\n")
     parser = argparse.ArgumentParser()
     parser.add_argument("--tag")
+    parser.add_argument("--adapter", type=Path, default=ADAPTER)
+    parser.add_argument("--extra", type=Path)
     args = parser.parse_args()
     if args.tag and (not args.tag.isascii() or not all(c.isalnum() or c in "-_" for c in args.tag)):
         parser.error("tag must contain only ASCII letters, digits, hyphens or underscores")
@@ -201,33 +203,46 @@ def main():
         if runtime.exists() or summary_path.exists():
             raise FileExistsError("run folder or summary already exists")
         preflight = gpu_preflight()
-        before = hashes(ADAPTER)
+        adapter = args.adapter.resolve()
+        before = hashes(adapter)
+        if not before:
+            raise FileNotFoundError(f"adapter has no files: {adapter}")
         pool = load_dev_pool()
         rows = sample_prompts(pool)
-        model, tokenizer, cfg = load_model()
+        base_count = len(rows)
+        if args.extra:
+            extra = load_dev_pool(args.extra)
+            if any(row["category"] in CATEGORIES for row in extra):
+                raise ValueError("extra rows must use extra categories")
+            rows.extend(extra)
+        categories = list(dict.fromkeys(row["category"] for row in rows))
+        model, tokenizer, cfg = load_model(adapter)
         runtime.mkdir(parents=True)
         records = []
-        for row in rows:
+        for index, row in enumerate(rows):
             _, _, raw = completions(model, tokenizer, row, 8, 0.8, cfg["evaluation"]["max_new_tokens"])
             scores = [score_program(text, row["cases"]) for text in raw]
             _, _, greedy = completions(model, tokenizer, row, 1, 0, cfg["evaluation"]["max_new_tokens"])
             record = dict(task_id=row["task_id"], model_task_id=row["model_task_id"], category=row["category"],
                           family=row["family"], graph=row.get("graph"), raw_samples=raw, scores=scores,
                           greedy_raw=greedy[0], greedy_score=score_program(greedy[0], row["cases"]))
-            write_json(runtime / f"{row['model_task_id']}.json", record)
+            filename = (f"{row['model_task_id']}.json" if index < base_count else
+                        f"extra_{index - base_count:04d}_{row['model_task_id']}.json")
+            write_json(runtime / filename, record)
             records.append(record)
-            print(f"F2 {len(records)}/64 {row['task_id']}: {sum(s['all_pass'] for s in scores)}/8", flush=True)
-        if before != hashes(ADAPTER):
+            print(f"F2 {len(records)}/{len(rows)} {row['task_id']} {row['category']}: {sum(s['all_pass'] for s in scores)}/8", flush=True)
+        if before != hashes(adapter):
             raise RuntimeError("STOP: source adapter changed")
         summary = dict(label="EXPLORATORY", seed=20291012, preflight=preflight,
-                       model=cfg["base_weights"], adapter=ADAPTER.relative_to(ROOT).as_posix(),
+                       model=cfg["base_weights"], adapter=adapter.relative_to(ROOT).as_posix() if adapter.is_relative_to(ROOT) else adapter.as_posix(),
                        adapter_hashes=before, source_adapter_unchanged=True,
                        tag=args.tag,
+                       extra=args.extra.as_posix() if args.extra else None,
                        generation_settings=dict(sampled=effective_settings(model, tokenizer, 8, 0.8, cfg["evaluation"]["max_new_tokens"]),
                                                 greedy=effective_settings(model, tokenizer, 1, 0, cfg["evaluation"]["max_new_tokens"])),
-                       categories={c: metrics([r for r in records if r["category"] == c]) for c in CATEGORIES},
+                       categories={c: metrics([r for r in records if r["category"] == c]) for c in categories},
                        graphs={g: metrics([r for r in records if r["graph"] == g]) for g in GRAPHS},
-                       prompt_counts={c: {f: sum(r["category"] == c and r["family"] == f for r in records) for f in FAMILIES} for c in CATEGORIES},
+                       prompt_counts={c: {f: sum(r["category"] == c and r["family"] == f for r in records) for f in FAMILIES} for c in categories},
                        seconds=time.perf_counter() - started)
         write_json(summary_path, summary)
         append_run(dict(run="b0_f2", status="PASS", summary=summary))
