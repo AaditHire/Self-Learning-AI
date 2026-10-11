@@ -1,0 +1,6700 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291015,
+  "stages": {
+    "1": {
+      "name": "numeric loops",
+      "templates": [
+        "square_stride",
+        "affine_recurrence",
+        "odd_cube_sum",
+        "descending_product",
+        "linear_term_sum",
+        "nonmultiple_count",
+        "even_minus_odd",
+        "cubic_offset_sum"
+      ]
+    },
+    "2": {
+      "name": "strings",
+      "templates": [
+        "upper_reverse",
+        "replace_lower",
+        "trim_lower_suffix",
+        "reverse_replace",
+        "replace_vowel",
+        "count_letter",
+        "string_length_class",
+        "contains_label"
+      ]
+    },
+    "3": {
+      "name": "arrays",
+      "templates": [
+        "threshold_weighted",
+        "indexed_difference",
+        "negative_square",
+        "pairwise_products",
+        "weighted_four",
+        "count_even_five",
+        "absolute_sum_three",
+        "range_three"
+      ]
+    },
+    "4": {
+      "name": "delimited fields",
+      "templates": [
+        "swap_tag",
+        "count_fields",
+        "case_join",
+        "contains_branch",
+        "tagged_pair",
+        "two_labeled_lines",
+        "case_pair",
+        "length_product"
+      ]
+    }
+  },
+  "templates": {
+    "square_stride": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0",
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "2": [
+          "0",
+          "4",
+          "6",
+          "9",
+          "12"
+        ],
+        "3": [
+          "0",
+          "5",
+          "7",
+          "11",
+          "15"
+        ],
+        "4": [
+          "0",
+          "6",
+          "8",
+          "13",
+          "18"
+        ],
+        "5": [
+          "0",
+          "7",
+          "9",
+          "15",
+          "21"
+        ],
+        "6": [
+          "0",
+          "8",
+          "10",
+          "17",
+          "24"
+        ],
+        "7": [
+          "0",
+          "9",
+          "11",
+          "19",
+          "27"
+        ],
+        "8": [
+          "0",
+          "10",
+          "12",
+          "21",
+          "30"
+        ],
+        "9": [
+          "0",
+          "11",
+          "13",
+          "23",
+          "33"
+        ],
+        "10": [
+          "0",
+          "12",
+          "14",
+          "25",
+          "36"
+        ],
+        "11": [
+          "0",
+          "13",
+          "15",
+          "27",
+          "39"
+        ],
+        "12": [
+          "0",
+          "14",
+          "16",
+          "29",
+          "42"
+        ],
+        "13": [
+          "0",
+          "15",
+          "17",
+          "31",
+          "45"
+        ],
+        "14": [
+          "0",
+          "16",
+          "18",
+          "33",
+          "48"
+        ],
+        "15": [
+          "0",
+          "17",
+          "19",
+          "35",
+          "51"
+        ]
+      }
+    },
+    "affine_recurrence": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "2": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "3": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "4": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "5": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "6": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "7": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "8": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "9": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "10": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "11": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "12": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "13": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "14": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "15": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    "odd_cube_sum": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "2": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "3": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "4": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "5": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "6": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "7": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "8": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "9": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "10": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "11": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "12": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "13": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "14": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ],
+        "15": [
+          "0",
+          "1",
+          "2",
+          "5",
+          "8"
+        ]
+      }
+    },
+    "descending_product": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "2": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "3": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "4": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "5": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "6": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "7": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "8": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "9": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "10": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "11": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "12": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "13": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "14": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "15": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ]
+      }
+    },
+    "linear_term_sum": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            0,
+            2,
+            5
+          ],
+          "added": [
+            1,
+            3
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "2": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "3": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "4": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "5": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "6": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "7": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "8": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "9": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "10": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "11": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "12": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "13": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "14": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "15": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ]
+      }
+    },
+    "nonmultiple_count": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            0,
+            2,
+            5
+          ],
+          "added": [
+            1,
+            3
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "2": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "3": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "4": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "5": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "6": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "7": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "8": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "9": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "10": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "11": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "12": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "13": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "14": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "15": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ]
+      }
+    },
+    "even_minus_odd": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            0,
+            2,
+            5
+          ],
+          "added": [
+            1,
+            3
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "2": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "3": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "4": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "5": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "6": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "7": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "8": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "9": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "10": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "11": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "12": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "13": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "14": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "15": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ]
+      }
+    },
+    "cubic_offset_sum": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            0,
+            2,
+            5
+          ],
+          "added": [
+            1,
+            3
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "2": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "3": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "4": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "5": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "6": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "7": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "8": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "9": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "10": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "11": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "12": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "13": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "14": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ],
+        "15": [
+          "0",
+          "2",
+          "5",
+          "1",
+          "3"
+        ]
+      }
+    },
+    "upper_reverse": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "2": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "3": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "4": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "5": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "6": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "7": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "8": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "9": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "10": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "11": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "12": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "13": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "14": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ],
+        "15": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "a"
+        ]
+      }
+    },
+    "replace_lower": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "aaZ"
+        ],
+        "2": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "bbZ"
+        ],
+        "3": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ccZ"
+        ],
+        "4": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ddZ"
+        ],
+        "5": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "eeZ"
+        ],
+        "6": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ffZ"
+        ],
+        "7": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ggZ"
+        ],
+        "8": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "hhZ"
+        ],
+        "9": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "iiZ"
+        ],
+        "10": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "jjZ"
+        ],
+        "11": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "kkZ"
+        ],
+        "12": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "llZ"
+        ],
+        "13": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "mmZ"
+        ],
+        "14": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "nnZ"
+        ],
+        "15": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ooZ"
+        ]
+      }
+    },
+    "trim_lower_suffix": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "2": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "3": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "4": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "5": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "6": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "7": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "8": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "9": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "10": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "11": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "12": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "13": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "14": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ],
+        "15": [
+          " Alpha ",
+          "GoCo",
+          "  xyz",
+          "Hello world  ",
+          " a "
+        ]
+      }
+    },
+    "reverse_replace": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "aaZ"
+        ],
+        "2": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "bbZ"
+        ],
+        "3": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ccZ"
+        ],
+        "4": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ddZ"
+        ],
+        "5": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "eeZ"
+        ],
+        "6": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ffZ"
+        ],
+        "7": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ggZ"
+        ],
+        "8": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "hhZ"
+        ],
+        "9": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "iiZ"
+        ],
+        "10": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "jjZ"
+        ],
+        "11": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "kkZ"
+        ],
+        "12": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "llZ"
+        ],
+        "13": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "mmZ"
+        ],
+        "14": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "nnZ"
+        ],
+        "15": [
+          "alpha",
+          "GoCo",
+          "xyz",
+          "Hello world",
+          "ooZ"
+        ]
+      }
+    },
+    "replace_vowel": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            "seaside",
+            "bananas",
+            "uvwxyzABC"
+          ],
+          "added": [
+            "Mixed CASE",
+            "abcdefghijklmno"
+          ]
+        },
+        {
+          "kind": "character_substitution",
+          "original": "[\"a\",\"e\",\"i\",\"o\",\"u\"][k-1]",
+          "replacement": "\"abcdefghijklmno\"[k-1]"
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "2": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "3": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "4": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "5": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "6": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "7": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "8": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "9": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "10": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "11": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "12": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "13": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "14": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "15": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ]
+      }
+    },
+    "count_letter": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            "seaside",
+            "bananas",
+            "uvwxyzABC"
+          ],
+          "added": [
+            "Mixed CASE",
+            "abcdefghijklmno"
+          ]
+        },
+        {
+          "kind": "character_substitution",
+          "original": "[\"a\",\"e\",\"i\",\"o\",\"u\"][k-1]",
+          "replacement": "\"abcdefghijklmno\"[k-1]"
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "2": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "3": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "4": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "5": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "6": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "7": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "8": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "9": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "10": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "11": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "12": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "13": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "14": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "15": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ]
+      }
+    },
+    "string_length_class": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            "GoCo",
+            "alpha beta",
+            "XyZ"
+          ],
+          "added": [
+            "Mixed CASE",
+            "abcdefghijklmno"
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "2": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "3": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "4": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "5": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "6": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "7": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "8": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "9": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "10": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "11": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "12": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "13": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "14": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "15": [
+          "GoCo",
+          "alpha beta",
+          "XyZ",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ]
+      }
+    },
+    "contains_label": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            "seaside",
+            "bananas",
+            "uvwxyzABC"
+          ],
+          "added": [
+            "Mixed CASE",
+            "abcdefghijklmno"
+          ]
+        },
+        {
+          "kind": "character_substitution",
+          "original": "[\"a\",\"e\",\"i\",\"o\",\"u\"][k-1]",
+          "replacement": "\"abcdefghijklmno\"[k-1]"
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "2": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "3": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "4": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "5": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "6": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "7": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "8": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "9": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "10": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "11": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "12": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "13": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "14": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ],
+        "15": [
+          "seaside",
+          "bananas",
+          "uvwxyzABC",
+          "Mixed CASE",
+          "abcdefghijklmno"
+        ]
+      }
+    },
+    "threshold_weighted": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0|1|2|3",
+          "1|2|-2|4",
+          "6|3|2|0",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "2": [
+          "0|1|2|3",
+          "2|3|-2|5",
+          "7|4|3|1",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "3": [
+          "0|1|2|3",
+          "3|4|-2|6",
+          "8|5|4|2",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "4": [
+          "0|1|2|3",
+          "4|5|-2|7",
+          "9|6|5|3",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "5": [
+          "0|1|2|3",
+          "5|6|-2|8",
+          "10|7|6|4",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "6": [
+          "0|1|2|3",
+          "6|7|-2|9",
+          "11|8|7|5",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "7": [
+          "0|1|2|3",
+          "7|8|-2|10",
+          "12|9|8|6",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "8": [
+          "0|1|2|3",
+          "8|9|-2|11",
+          "13|10|9|7",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "9": [
+          "0|1|2|3",
+          "9|10|-2|12",
+          "14|11|10|8",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "10": [
+          "0|1|2|3",
+          "10|11|-2|13",
+          "15|12|11|9",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "11": [
+          "0|1|2|3",
+          "11|12|-2|14",
+          "16|13|12|10",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "12": [
+          "0|1|2|3",
+          "12|13|-2|15",
+          "17|14|13|11",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "13": [
+          "0|1|2|3",
+          "13|14|-2|16",
+          "18|15|14|12",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "14": [
+          "0|1|2|3",
+          "14|15|-2|17",
+          "19|16|15|13",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ],
+        "15": [
+          "0|1|2|3",
+          "15|16|-2|18",
+          "20|17|16|14",
+          "-4|-3|-2|-1",
+          "10|0|10|0"
+        ]
+      }
+    },
+    "indexed_difference": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "2": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "3": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "4": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "5": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "6": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "7": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "8": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "9": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "10": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "11": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "12": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "13": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "14": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "15": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ]
+      }
+    },
+    "negative_square": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "2": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "3": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "4": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "5": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "6": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "7": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "8": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "9": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "10": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "11": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "12": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "13": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "14": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ],
+        "15": [
+          "0|1|2|3",
+          "-1|0|-2|4",
+          "-3|-2|-1|-4",
+          "5|5|5|5",
+          "0|-5|0|2"
+        ]
+      }
+    },
+    "pairwise_products": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "2": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "3": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "4": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "5": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "6": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "7": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "8": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "9": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "10": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "11": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "12": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "13": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "14": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ],
+        "15": [
+          "0|1|2|3",
+          "4|0|-2|8",
+          "-5|3|3|-2",
+          "1|1|1|1",
+          "9|-2|5|0"
+        ]
+      }
+    },
+    "weighted_four": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              -2,
+              0,
+              5,
+              1
+            ],
+            [
+              4,
+              -1,
+              2,
+              -3
+            ]
+          ],
+          "added": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "2": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "3": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "4": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "5": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "6": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "7": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "8": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "9": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "10": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "11": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "12": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "13": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "14": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ],
+        "15": [
+          "1|2|3|4",
+          "-2|0|5|1",
+          "4|-1|2|-3",
+          "0|0|0|0",
+          "2|2|2|2"
+        ]
+      }
+    },
+    "count_even_five": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              -2,
+              0,
+              5,
+              1,
+              -4
+            ],
+            [
+              4,
+              -1,
+              2,
+              -3,
+              8
+            ]
+          ],
+          "added": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "2": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "3": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "4": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "5": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "6": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "7": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "8": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "9": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "10": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "11": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "12": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "13": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "14": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ],
+        "15": [
+          "1|2|3|4|5",
+          "-2|0|5|1|-4",
+          "4|-1|2|-3|8",
+          "0|0|0|0|0",
+          "2|2|2|2|2"
+        ]
+      }
+    },
+    "absolute_sum_three": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              -2,
+              0,
+              5
+            ],
+            [
+              4,
+              -1,
+              2
+            ]
+          ],
+          "added": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "2": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "3": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "4": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "5": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "6": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "7": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "8": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "9": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "10": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "11": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "12": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "13": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "14": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "15": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ]
+      }
+    },
+    "range_three": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              -2,
+              0,
+              5
+            ],
+            [
+              4,
+              -1,
+              2
+            ]
+          ],
+          "added": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "2": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "3": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "4": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "5": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "6": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "7": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "8": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "9": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "10": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "11": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "12": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "13": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "14": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ],
+        "15": [
+          "1|2|3",
+          "-2|0|5",
+          "4|-1|2",
+          "0|0|0",
+          "2|2|2"
+        ]
+      }
+    },
+    "swap_tag": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "2": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "3": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "4": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "5": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "6": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "7": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "8": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "9": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "10": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "11": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "12": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "13": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "14": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ],
+        "15": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "x|y",
+          "cat|dog"
+        ]
+      }
+    },
+    "count_fields": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "aa|x",
+          "cat|a"
+        ],
+        "2": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "bb|x",
+          "cat|b"
+        ],
+        "3": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "cc|x",
+          "cat|c"
+        ],
+        "4": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "dd|x",
+          "cat|d"
+        ],
+        "5": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "ee|x",
+          "cat|e"
+        ],
+        "6": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "ff|x",
+          "cat|f"
+        ],
+        "7": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "gg|x",
+          "cat|g"
+        ],
+        "8": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "hh|x",
+          "cat|h"
+        ],
+        "9": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "ii|x",
+          "cat|i"
+        ],
+        "10": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "jj|x",
+          "cat|j"
+        ],
+        "11": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "kk|x",
+          "cat|k"
+        ],
+        "12": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "ll|x",
+          "cat|l"
+        ],
+        "13": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "mm|x",
+          "cat|m"
+        ],
+        "14": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "nn|x",
+          "cat|n"
+        ],
+        "15": [
+          "A|B",
+          "red|BLUE",
+          "hello|world",
+          "oo|x",
+          "cat|o"
+        ]
+      }
+    },
+    "case_join": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "2": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "3": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "4": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "5": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "6": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "7": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "8": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "9": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "10": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "11": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "12": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "13": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "14": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "15": [
+          "A|B",
+          "red|BLUE",
+          "hello|WORLD",
+          "x|y",
+          "Cat|Dog"
+        ]
+      }
+    },
+    "contains_branch": {
+      "source": "3A:build",
+      "adjustments": [],
+      "case_inputs": {
+        "1": [
+          "a|x",
+          "a|a",
+          "hello|WORLD",
+          "x|a",
+          "aa|ab"
+        ],
+        "2": [
+          "b|x",
+          "b|b",
+          "hello|WORLD",
+          "x|b",
+          "ba|bb"
+        ],
+        "3": [
+          "c|x",
+          "c|c",
+          "hello|WORLD",
+          "x|c",
+          "ca|cb"
+        ],
+        "4": [
+          "d|x",
+          "d|d",
+          "hello|WORLD",
+          "x|d",
+          "da|db"
+        ],
+        "5": [
+          "e|x",
+          "e|e",
+          "hello|WORLD",
+          "x|e",
+          "ea|eb"
+        ],
+        "6": [
+          "f|x",
+          "f|f",
+          "hello|WORLD",
+          "x|f",
+          "fa|fb"
+        ],
+        "7": [
+          "g|x",
+          "g|g",
+          "hello|WORLD",
+          "x|g",
+          "ga|gb"
+        ],
+        "8": [
+          "h|x",
+          "h|h",
+          "hello|WORLD",
+          "x|h",
+          "ha|hb"
+        ],
+        "9": [
+          "i|x",
+          "i|i",
+          "hello|WORLD",
+          "x|i",
+          "ia|ib"
+        ],
+        "10": [
+          "j|x",
+          "j|j",
+          "hello|WORLD",
+          "x|j",
+          "ja|jb"
+        ],
+        "11": [
+          "k|x",
+          "k|k",
+          "hello|WORLD",
+          "x|k",
+          "ka|kb"
+        ],
+        "12": [
+          "l|x",
+          "l|l",
+          "hello|WORLD",
+          "x|l",
+          "la|lb"
+        ],
+        "13": [
+          "m|x",
+          "m|m",
+          "hello|WORLD",
+          "x|m",
+          "ma|mb"
+        ],
+        "14": [
+          "n|x",
+          "n|n",
+          "hello|WORLD",
+          "x|n",
+          "na|nb"
+        ],
+        "15": [
+          "o|x",
+          "o|o",
+          "hello|WORLD",
+          "x|o",
+          "oa|ob"
+        ]
+      }
+    },
+    "tagged_pair": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "Red",
+              "BLUE"
+            ],
+            [
+              "hello world",
+              "ok"
+            ]
+          ],
+          "added": [
+            [
+              "x",
+              "y"
+            ],
+            [
+              "Cat",
+              "Dog"
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "2": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "3": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "4": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "5": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "6": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "7": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "8": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "9": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "10": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "11": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "12": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "13": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "14": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "15": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ]
+      }
+    },
+    "two_labeled_lines": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "Red",
+              "BLUE"
+            ],
+            [
+              "hello world",
+              "ok"
+            ]
+          ],
+          "added": [
+            [
+              "x",
+              "y"
+            ],
+            [
+              "Cat",
+              "Dog"
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "2": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "3": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "4": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "5": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "6": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "7": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "8": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "9": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "10": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "11": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "12": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "13": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "14": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "15": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ]
+      }
+    },
+    "case_pair": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "Red",
+              "BLUE"
+            ],
+            [
+              "hello world",
+              "ok"
+            ]
+          ],
+          "added": [
+            [
+              "x",
+              "y"
+            ],
+            [
+              "Cat",
+              "Dog"
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "2": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "3": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "4": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "5": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "6": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "7": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "8": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "9": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "10": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "11": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "12": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "13": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "14": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "15": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ]
+      }
+    },
+    "length_product": {
+      "source": "2B:build_training",
+      "adjustments": [
+        {
+          "kind": "case_extension",
+          "original": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "Red",
+              "BLUE"
+            ],
+            [
+              "hello world",
+              "ok"
+            ]
+          ],
+          "added": [
+            [
+              "x",
+              "y"
+            ],
+            [
+              "Cat",
+              "Dog"
+            ]
+          ]
+        }
+      ],
+      "case_inputs": {
+        "1": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "2": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "3": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "4": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "5": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "6": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "7": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "8": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "9": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "10": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "11": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "12": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "13": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "14": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ],
+        "15": [
+          "A|B",
+          "Red|BLUE",
+          "hello world|ok",
+          "x|y",
+          "Cat|Dog"
+        ]
+      }
+    }
+  },
+  "replacements": [
+    {
+      "stage": 2,
+      "original": "char_at",
+      "replacement": "string_length_class",
+      "failure": {
+        "reason": "reference failure",
+        "k": 1,
+        "score": {
+          "compiled": true,
+          "cases_passed": 4,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "success"
+        }
+      }
+    }
+  ],
+  "k_splits": {
+    "square_stride": {
+      "train": [
+        10,
+        1,
+        12,
+        14,
+        6,
+        13,
+        9,
+        11,
+        3
+      ],
+      "dev": [
+        4,
+        2,
+        15
+      ],
+      "sealed": [
+        8,
+        7,
+        5
+      ]
+    },
+    "affine_recurrence": {
+      "train": [
+        13,
+        9,
+        2,
+        14,
+        11,
+        3,
+        5,
+        4,
+        1
+      ],
+      "dev": [
+        10,
+        15,
+        12
+      ],
+      "sealed": [
+        8,
+        6,
+        7
+      ]
+    },
+    "odd_cube_sum": {
+      "train": [
+        11,
+        2,
+        6,
+        5,
+        14,
+        1,
+        13,
+        15,
+        10
+      ],
+      "dev": [
+        4,
+        12,
+        8
+      ],
+      "sealed": [
+        9,
+        7,
+        3
+      ]
+    },
+    "descending_product": {
+      "train": [
+        9,
+        2,
+        10,
+        13,
+        4,
+        7,
+        11,
+        3,
+        5
+      ],
+      "dev": [
+        8,
+        6,
+        1
+      ],
+      "sealed": [
+        15,
+        12,
+        14
+      ]
+    },
+    "linear_term_sum": {
+      "train": [
+        14,
+        10,
+        3,
+        2,
+        12,
+        1,
+        4,
+        13,
+        6
+      ],
+      "dev": [
+        15,
+        8,
+        9
+      ],
+      "sealed": [
+        7,
+        5,
+        11
+      ]
+    },
+    "nonmultiple_count": {
+      "train": [
+        15,
+        3,
+        12,
+        14,
+        11,
+        5,
+        6,
+        10,
+        7
+      ],
+      "dev": [
+        8,
+        2,
+        9
+      ],
+      "sealed": [
+        13,
+        4,
+        1
+      ]
+    },
+    "even_minus_odd": {
+      "train": [
+        11,
+        10,
+        1,
+        6,
+        3,
+        8,
+        14,
+        2,
+        15
+      ],
+      "dev": [
+        5,
+        7,
+        13
+      ],
+      "sealed": [
+        12,
+        4,
+        9
+      ]
+    },
+    "cubic_offset_sum": {
+      "train": [
+        11,
+        12,
+        3,
+        6,
+        7,
+        4,
+        13,
+        10,
+        15
+      ],
+      "dev": [
+        5,
+        1,
+        9
+      ],
+      "sealed": [
+        8,
+        2,
+        14
+      ]
+    },
+    "upper_reverse": {
+      "train": [
+        5,
+        14,
+        10,
+        9,
+        15,
+        3,
+        12,
+        7,
+        4
+      ],
+      "dev": [
+        8,
+        11,
+        13
+      ],
+      "sealed": [
+        1,
+        6,
+        2
+      ]
+    },
+    "replace_lower": {
+      "train": [
+        6,
+        4,
+        2,
+        14,
+        9,
+        15,
+        8,
+        1,
+        7
+      ],
+      "dev": [
+        13,
+        10,
+        5
+      ],
+      "sealed": [
+        11,
+        12,
+        3
+      ]
+    },
+    "trim_lower_suffix": {
+      "train": [
+        8,
+        12,
+        13,
+        7,
+        6,
+        14,
+        15,
+        3,
+        9
+      ],
+      "dev": [
+        1,
+        4,
+        11
+      ],
+      "sealed": [
+        10,
+        5,
+        2
+      ]
+    },
+    "reverse_replace": {
+      "train": [
+        15,
+        4,
+        10,
+        11,
+        2,
+        6,
+        5,
+        7,
+        9
+      ],
+      "dev": [
+        14,
+        13,
+        3
+      ],
+      "sealed": [
+        12,
+        8,
+        1
+      ]
+    },
+    "replace_vowel": {
+      "train": [
+        2,
+        11,
+        9,
+        3,
+        1,
+        13,
+        12,
+        14,
+        4
+      ],
+      "dev": [
+        8,
+        10,
+        5
+      ],
+      "sealed": [
+        15,
+        6,
+        7
+      ]
+    },
+    "count_letter": {
+      "train": [
+        11,
+        7,
+        10,
+        4,
+        8,
+        1,
+        13,
+        5,
+        12
+      ],
+      "dev": [
+        9,
+        3,
+        14
+      ],
+      "sealed": [
+        2,
+        15,
+        6
+      ]
+    },
+    "string_length_class": {
+      "train": [
+        2,
+        13,
+        1,
+        10,
+        4,
+        6,
+        15,
+        5,
+        12
+      ],
+      "dev": [
+        9,
+        8,
+        11
+      ],
+      "sealed": [
+        3,
+        7,
+        14
+      ]
+    },
+    "contains_label": {
+      "train": [
+        4,
+        2,
+        14,
+        1,
+        5,
+        7,
+        3,
+        15,
+        12
+      ],
+      "dev": [
+        11,
+        6,
+        10
+      ],
+      "sealed": [
+        13,
+        9,
+        8
+      ]
+    },
+    "threshold_weighted": {
+      "train": [
+        13,
+        5,
+        4,
+        7,
+        9,
+        6,
+        10,
+        8,
+        11
+      ],
+      "dev": [
+        12,
+        3,
+        14
+      ],
+      "sealed": [
+        1,
+        2,
+        15
+      ]
+    },
+    "indexed_difference": {
+      "train": [
+        3,
+        8,
+        7,
+        12,
+        4,
+        13,
+        10,
+        2,
+        14
+      ],
+      "dev": [
+        6,
+        11,
+        15
+      ],
+      "sealed": [
+        9,
+        1,
+        5
+      ]
+    },
+    "negative_square": {
+      "train": [
+        4,
+        13,
+        12,
+        1,
+        9,
+        2,
+        8,
+        5,
+        14
+      ],
+      "dev": [
+        7,
+        15,
+        6
+      ],
+      "sealed": [
+        3,
+        11,
+        10
+      ]
+    },
+    "pairwise_products": {
+      "train": [
+        12,
+        14,
+        13,
+        10,
+        3,
+        4,
+        7,
+        6,
+        11
+      ],
+      "dev": [
+        8,
+        5,
+        2
+      ],
+      "sealed": [
+        15,
+        1,
+        9
+      ]
+    },
+    "weighted_four": {
+      "train": [
+        6,
+        7,
+        15,
+        13,
+        8,
+        9,
+        12,
+        11,
+        14
+      ],
+      "dev": [
+        3,
+        5,
+        10
+      ],
+      "sealed": [
+        2,
+        1,
+        4
+      ]
+    },
+    "count_even_five": {
+      "train": [
+        8,
+        13,
+        14,
+        2,
+        9,
+        5,
+        4,
+        15,
+        6
+      ],
+      "dev": [
+        12,
+        7,
+        10
+      ],
+      "sealed": [
+        11,
+        3,
+        1
+      ]
+    },
+    "absolute_sum_three": {
+      "train": [
+        12,
+        11,
+        4,
+        2,
+        9,
+        8,
+        14,
+        15,
+        13
+      ],
+      "dev": [
+        6,
+        5,
+        7
+      ],
+      "sealed": [
+        3,
+        10,
+        1
+      ]
+    },
+    "range_three": {
+      "train": [
+        9,
+        7,
+        6,
+        15,
+        10,
+        8,
+        4,
+        2,
+        3
+      ],
+      "dev": [
+        12,
+        13,
+        11
+      ],
+      "sealed": [
+        14,
+        5,
+        1
+      ]
+    },
+    "swap_tag": {
+      "train": [
+        11,
+        6,
+        15,
+        9,
+        5,
+        14,
+        7,
+        1,
+        4
+      ],
+      "dev": [
+        2,
+        12,
+        13
+      ],
+      "sealed": [
+        8,
+        3,
+        10
+      ]
+    },
+    "count_fields": {
+      "train": [
+        7,
+        13,
+        2,
+        1,
+        5,
+        10,
+        8,
+        9,
+        4
+      ],
+      "dev": [
+        11,
+        12,
+        6
+      ],
+      "sealed": [
+        15,
+        14,
+        3
+      ]
+    },
+    "case_join": {
+      "train": [
+        10,
+        2,
+        12,
+        3,
+        1,
+        14,
+        11,
+        7,
+        13
+      ],
+      "dev": [
+        9,
+        6,
+        8
+      ],
+      "sealed": [
+        15,
+        4,
+        5
+      ]
+    },
+    "contains_branch": {
+      "train": [
+        10,
+        9,
+        1,
+        8,
+        6,
+        3,
+        15,
+        11,
+        2
+      ],
+      "dev": [
+        12,
+        5,
+        13
+      ],
+      "sealed": [
+        4,
+        14,
+        7
+      ]
+    },
+    "tagged_pair": {
+      "train": [
+        9,
+        2,
+        6,
+        8,
+        11,
+        13,
+        7,
+        12,
+        5
+      ],
+      "dev": [
+        14,
+        15,
+        1
+      ],
+      "sealed": [
+        4,
+        3,
+        10
+      ]
+    },
+    "two_labeled_lines": {
+      "train": [
+        3,
+        13,
+        7,
+        9,
+        10,
+        6,
+        4,
+        1,
+        15
+      ],
+      "dev": [
+        8,
+        2,
+        14
+      ],
+      "sealed": [
+        11,
+        12,
+        5
+      ]
+    },
+    "case_pair": {
+      "train": [
+        6,
+        14,
+        9,
+        10,
+        11,
+        13,
+        1,
+        12,
+        2
+      ],
+      "dev": [
+        8,
+        3,
+        4
+      ],
+      "sealed": [
+        15,
+        5,
+        7
+      ]
+    },
+    "length_product": {
+      "train": [
+        1,
+        7,
+        13,
+        11,
+        3,
+        10,
+        14,
+        2,
+        4
+      ],
+      "dev": [
+        15,
+        5,
+        12
+      ],
+      "sealed": [
+        6,
+        8,
+        9
+      ]
+    }
+  },
+  "max_training_tokens": 236,
+  "counts": {
+    "train": {
+      "1": 72,
+      "2": 72,
+      "3": 72,
+      "4": 72
+    },
+    "dev": {
+      "1": 24,
+      "2": 24,
+      "3": 24,
+      "4": 24
+    },
+    "sealed": {
+      "1": 24,
+      "2": 24,
+      "3": 24,
+      "4": 24
+    }
+  },
+  "split_metadata": {
+    "train": [
+      {
+        "model_id": "EXPL-A1-0113",
+        "prompt_sha256": "05fecab221c3268bdf612744b31a21353796eeaa226cd904af8424c935ff1485"
+      },
+      {
+        "model_id": "EXPL-A1-0264",
+        "prompt_sha256": "937ed822ee5d27cb438c5b63813ddbf2391404373fa9b0e2550b76563551810f"
+      },
+      {
+        "model_id": "EXPL-A1-0301",
+        "prompt_sha256": "494335432dba7d0b7d853cb6557617703e4cbfb98d065cf659ce0b834ee37a47"
+      },
+      {
+        "model_id": "EXPL-A1-0448",
+        "prompt_sha256": "49dffa0a795d4aae668e369e788ff105b914ce6621a588a2516d54a331f10dc6"
+      },
+      {
+        "model_id": "EXPL-A1-0276",
+        "prompt_sha256": "d4dfd90ac9b233972265f4ab15133ef3a167c7b241f83df772a443bc86651aae"
+      },
+      {
+        "model_id": "EXPL-A1-0015",
+        "prompt_sha256": "ed42d0ebdda431853c0ec12f3444330d6f16adfcc2b1f8d977890e578fdab02d"
+      },
+      {
+        "model_id": "EXPL-A1-0389",
+        "prompt_sha256": "3894a77c2fe1b17d7a71d631e81ce41cf295854600bd44dea46d07a3fd26cc3f"
+      },
+      {
+        "model_id": "EXPL-A1-0471",
+        "prompt_sha256": "a58c35b9457f8725d24899004f2cda264130237d1b4c4b3705b29df3d69e9104"
+      },
+      {
+        "model_id": "EXPL-A1-0384",
+        "prompt_sha256": "78c50027cc43eaee8eac0498f753fb420ab8529270c4b539303d1055d5601616"
+      },
+      {
+        "model_id": "EXPL-A1-0356",
+        "prompt_sha256": "54e1f74f7e680b615f4a5b9ca48759f19210c7d7273b4325ea334c2a66401e50"
+      },
+      {
+        "model_id": "EXPL-A1-0368",
+        "prompt_sha256": "babaf433ccd4305628a78fca4a8169ddfb37a1d28b41f0c27eb541afe016e000"
+      },
+      {
+        "model_id": "EXPL-A1-0474",
+        "prompt_sha256": "4ba56b397ed171cfaabb2b06631313e758be98a6192cc4affbfb0208158aa183"
+      },
+      {
+        "model_id": "EXPL-A1-0363",
+        "prompt_sha256": "09635a529097d3082838dece36a50315390bde2b30612933cfeae31543521cab"
+      },
+      {
+        "model_id": "EXPL-A1-0321",
+        "prompt_sha256": "7f31b268415d9653b2a6719e48ee1b688742713380832f8fcf9acce6cce0e642"
+      },
+      {
+        "model_id": "EXPL-A1-0208",
+        "prompt_sha256": "6b19576d4321f637c37230d77f75120cf8a0734d96031333cd1bd7cce7cc1cb2"
+      },
+      {
+        "model_id": "EXPL-A1-0466",
+        "prompt_sha256": "6fb4184f90f996ad006a8f3fafd725e784b7fe013ede53cd9833adfed52ffe5d"
+      },
+      {
+        "model_id": "EXPL-A1-0180",
+        "prompt_sha256": "7f854edb541d3d2a8253d6ad6dd503a75f5ac2dfaa556ce6442729ec840af832"
+      },
+      {
+        "model_id": "EXPL-A1-0432",
+        "prompt_sha256": "ec83d9ec4a89e56bdedcc3f7b45b6157106550e6e72395d33bc3cbaef229edd8"
+      },
+      {
+        "model_id": "EXPL-A1-0071",
+        "prompt_sha256": "75ff546af9e1b94894527f9884f00f771802ca429674223d900db0ce39688e51"
+      },
+      {
+        "model_id": "EXPL-A1-0005",
+        "prompt_sha256": "4669580b322852550a7aa28dde7666374cfa24ff1858ac8add98cef638e40089"
+      },
+      {
+        "model_id": "EXPL-A1-0182",
+        "prompt_sha256": "65dd2afe9df712872332e91db9afc0ac20268c7dac521b31b86234bbcc28ef84"
+      },
+      {
+        "model_id": "EXPL-A1-0189",
+        "prompt_sha256": "a3fbb6003ce2a49265385451f293ab93bcb393dab7095906b1d658224802a0ab"
+      },
+      {
+        "model_id": "EXPL-A1-0176",
+        "prompt_sha256": "7e44ef09d34991d973e67e2e19f6578f1b8109dd4de38a76b44077d8275871e4"
+      },
+      {
+        "model_id": "EXPL-A1-0352",
+        "prompt_sha256": "540925ad98f52bc5d231a528107dd656780a9685711ff5e657501dab6c71dedc"
+      },
+      {
+        "model_id": "EXPL-A1-0299",
+        "prompt_sha256": "75ecea8855b05fa03a0044053d8e348f8e74bf36f979835503ffe1751f26102b"
+      },
+      {
+        "model_id": "EXPL-A1-0309",
+        "prompt_sha256": "49568b258fe3e776e1aa0a8f0d5ff2f907e5a3f293b0946ec9f706e6e0bc5b97"
+      },
+      {
+        "model_id": "EXPL-A1-0476",
+        "prompt_sha256": "f09971e3d0d22e6254c25037d63b98f467952907d2d4e52396a0a757c3747768"
+      },
+      {
+        "model_id": "EXPL-A1-0446",
+        "prompt_sha256": "8853875858442b27d438527fdc5806923ada6e77c6b89ad2d5e4e88f9cb515f5"
+      },
+      {
+        "model_id": "EXPL-A1-0250",
+        "prompt_sha256": "27ef21a5ad3e939b98230ef63507fa6e53a92bbfb916735af250ca1e116efacf"
+      },
+      {
+        "model_id": "EXPL-A1-0272",
+        "prompt_sha256": "47e84bfc223bdeb6de04a64a2e82d05c5b5a3c178498da12ccf77e25fc110005"
+      },
+      {
+        "model_id": "EXPL-A1-0312",
+        "prompt_sha256": "d388cc8e2f3f1bd0b8f962fba53a7d206d8789926c8bf7497ff8f01020d87cb1"
+      },
+      {
+        "model_id": "EXPL-A1-0242",
+        "prompt_sha256": "bb47095ee09a60f5532a4921c9b8190542f571d2db472443042060772920db6c"
+      },
+      {
+        "model_id": "EXPL-A1-0146",
+        "prompt_sha256": "879b1e1dcc19b1a2f7e6561914c890ba032e6713808d308aca6971d903cd2284"
+      },
+      {
+        "model_id": "EXPL-A1-0304",
+        "prompt_sha256": "a2202d86a220f981b18dbda4a860c7d650ac4a70ff432e9e85f776c360a00918"
+      },
+      {
+        "model_id": "EXPL-A1-0375",
+        "prompt_sha256": "2e6e7c6ffa7ff051f637f97d94a314624e2dbe233607848cd991fe69376a9d80"
+      },
+      {
+        "model_id": "EXPL-A1-0157",
+        "prompt_sha256": "08ec437d850c055ce147cd6cf46ab06c6cb925c4e25de508e18da69403f20f9a"
+      },
+      {
+        "model_id": "EXPL-A1-0023",
+        "prompt_sha256": "f6a31330f355421ae96b966ea2d1b73b3118ea4b3d57ec6df021c13d79d29943"
+      },
+      {
+        "model_id": "EXPL-A1-0185",
+        "prompt_sha256": "3af19dd202c09eabbb98ca4cf888af1f4ffb98aa969887429df98f2afe0a7143"
+      },
+      {
+        "model_id": "EXPL-A1-0402",
+        "prompt_sha256": "4df694ab2c6b0437590a1c9ccbb6df851148446ceec3f2cb88b56a7385b317ea"
+      },
+      {
+        "model_id": "EXPL-A1-0228",
+        "prompt_sha256": "ee1eeb436cd6e8cccdc554eac1c8eca0ec3a928e985f11c5aa4caf662aae065e"
+      },
+      {
+        "model_id": "EXPL-A1-0342",
+        "prompt_sha256": "d0f030ec4cfa52de134ce62b1528ef7a34395886e82714fabd63bd6b6bb1b238"
+      },
+      {
+        "model_id": "EXPL-A1-0175",
+        "prompt_sha256": "0d8550705c7d8db1bbf75c3488346adf9c4c27d0302779478d0bf0d23fef0b5f"
+      },
+      {
+        "model_id": "EXPL-A1-0300",
+        "prompt_sha256": "87c0beafa4783a3ace9eb984f7d6fbce68cfe97257b5d8aa572ceacdea56caa1"
+      },
+      {
+        "model_id": "EXPL-A1-0470",
+        "prompt_sha256": "40d1cb37a2fa58a1959603755f27999188fe8ea83d7ee9488cae2769ea0d5646"
+      },
+      {
+        "model_id": "EXPL-A1-0011",
+        "prompt_sha256": "0f436fbcc9a0dff409dcf511138e43bc594b6935d892ff330ec0b2b2eecb8149"
+      },
+      {
+        "model_id": "EXPL-A1-0156",
+        "prompt_sha256": "aad1eecbabb1af3181b6ea09c67191df4a0a808d878b1b85474a1b55266b92c1"
+      },
+      {
+        "model_id": "EXPL-A1-0053",
+        "prompt_sha256": "d0dec1b428021b6f7c87056acefe0cc0e2e3f6254aa7973a94bc263cb177b779"
+      },
+      {
+        "model_id": "EXPL-A1-0135",
+        "prompt_sha256": "47e302a251d09af03fa495db814804060dfa8c6ad52936f8e40d913da505e399"
+      },
+      {
+        "model_id": "EXPL-A1-0094",
+        "prompt_sha256": "7d155e9424e4df6e5dec55a83f3ef8d9a5c11e9f89c68544a67fd3f3ab31ded1"
+      },
+      {
+        "model_id": "EXPL-A1-0319",
+        "prompt_sha256": "613cacca5c94721f02ca8b675fb2e404b5e784da6e98fd7fd27789cbdb348da0"
+      },
+      {
+        "model_id": "EXPL-A1-0390",
+        "prompt_sha256": "30d0c1bca6500783e20d940f4d0a248f6b2e07710f23b590d371caaf9d1033ee"
+      },
+      {
+        "model_id": "EXPL-A1-0249",
+        "prompt_sha256": "a22ad98852144520aacb0343281503e22803887dbcabb8627d56045215f185f6"
+      },
+      {
+        "model_id": "EXPL-A1-0190",
+        "prompt_sha256": "8e13538b8ad1df4edba222c9742b293530d80265ae2b94af40efb15b5925df06"
+      },
+      {
+        "model_id": "EXPL-A1-0196",
+        "prompt_sha256": "e4615a4889c84636e4c6594670f7b1dc52a67e4cf0112787f6313fc8dc0c75f7"
+      },
+      {
+        "model_id": "EXPL-A1-0403",
+        "prompt_sha256": "86f56f32abf55e740608e97de7b6fb5c8f1a33d17357d694484f7439b62ac999"
+      },
+      {
+        "model_id": "EXPL-A1-0172",
+        "prompt_sha256": "0c1498f2ff145108ec90dd961680696db9e422b53b373eac125643f0cb01d97b"
+      },
+      {
+        "model_id": "EXPL-A1-0359",
+        "prompt_sha256": "f0f1d3270372513b636e1ac7a32326e8f1523d379f812fd7747f94cf6d91f7ab"
+      },
+      {
+        "model_id": "EXPL-A1-0472",
+        "prompt_sha256": "993159a59c5ba3874db7e21adbaec4cc84460a081b925b3279ef1f866f1f986a"
+      },
+      {
+        "model_id": "EXPL-A1-0203",
+        "prompt_sha256": "6fc8c543e76b035e3feffc68096f505e3194ffde64954ec48b6148a25151468a"
+      },
+      {
+        "model_id": "EXPL-A1-0424",
+        "prompt_sha256": "e232906729840d1d0fa875ba132e0e5eaefe00af0b0aeec24e6510b3b204f0ec"
+      },
+      {
+        "model_id": "EXPL-A1-0468",
+        "prompt_sha256": "d3d1de4597be1cf4c157e8b3c53aeac2640c5b21041cccbea1f70c8718a16bc0"
+      },
+      {
+        "model_id": "EXPL-A1-0031",
+        "prompt_sha256": "f9c8e834efc33901bb18bb7db81d0cc023309257a25ca8e5bf9546f9d9295094"
+      },
+      {
+        "model_id": "EXPL-A1-0360",
+        "prompt_sha256": "489faac08f3b918a1b1c01a250a44ede43108e3f59a18c3e4331acfddb08c5b6"
+      },
+      {
+        "model_id": "EXPL-A1-0038",
+        "prompt_sha256": "12fa9d150a4c6014d2a3c85a658e5df8f5eb20933e531536407ccbb8fcb2f99e"
+      },
+      {
+        "model_id": "EXPL-A1-0083",
+        "prompt_sha256": "d0fc791d2bdd32a31da07daaa2da6d11c3e2442a8fccf1be039f770be88ea21f"
+      },
+      {
+        "model_id": "EXPL-A1-0139",
+        "prompt_sha256": "16f9c6bb2e7f2f77a614ef9c97600bd005009546a753c3daa38e98ca3df20d70"
+      },
+      {
+        "model_id": "EXPL-A1-0334",
+        "prompt_sha256": "90882eee2dd0e7e00adc9e4ab82c6089501ab7942568a57c760aac2600d72e1f"
+      },
+      {
+        "model_id": "EXPL-A1-0041",
+        "prompt_sha256": "dba6ffe7a24e264c71f40ed74fdfb00e231e535fef051abdfa4f03e8c1d4fbb2"
+      },
+      {
+        "model_id": "EXPL-A1-0064",
+        "prompt_sha256": "c8e9ca27a68d945395b1f161296d325aea53170dfbb9432a3025f7a3cb2c14f6"
+      },
+      {
+        "model_id": "EXPL-A1-0013",
+        "prompt_sha256": "80fd1a9a5ea04ec35a53444ba19db6d0dcd844b10aa92c636ef6ab85f0cfe02c"
+      },
+      {
+        "model_id": "EXPL-A1-0431",
+        "prompt_sha256": "0b3646808528a4b539d2f1809a7567fd9832e96fc17828154b7006ce4084178b"
+      },
+      {
+        "model_id": "EXPL-A1-0004",
+        "prompt_sha256": "809d1cd521c6a33b60c6bee92f21e5071ef833c27e3358cecdc023790bd18b7f"
+      },
+      {
+        "model_id": "EXPL-A1-0118",
+        "prompt_sha256": "d11cf3e26e4794204ef9d6ea898c536a97a9970fb156b36c43a38d7698bac1c1"
+      },
+      {
+        "model_id": "EXPL-A1-0154",
+        "prompt_sha256": "b4b65072dccdf05c82a77bb0dbdee40cc9f1b462299954651837a2606c77fc49"
+      },
+      {
+        "model_id": "EXPL-A1-0033",
+        "prompt_sha256": "c1f5eb0ef2787aceec125677bf79a5ee69c278ab1df3452600dcbb4bfe40d4d9"
+      },
+      {
+        "model_id": "EXPL-A1-0048",
+        "prompt_sha256": "413e4b1adb185ad264b79c43ef22b01d1de8f14f8f1ef53c89b8863b22caf2b4"
+      },
+      {
+        "model_id": "EXPL-A1-0110",
+        "prompt_sha256": "1bbce2431f58dcd6ec803c435a3b127476157271be74b0c49459926e58b9f6f2"
+      },
+      {
+        "model_id": "EXPL-A1-0435",
+        "prompt_sha256": "8d7848f4fa7e5d210125b468ec64f3fe737644b1f2e5f9f162cd2ae84d20db55"
+      },
+      {
+        "model_id": "EXPL-A1-0263",
+        "prompt_sha256": "a7d5095c5b19c6681e0f3d934fdf373a439e626dcc1507daba55ae582b1d93af"
+      },
+      {
+        "model_id": "EXPL-A1-0284",
+        "prompt_sha256": "09997a72bbd7692676414023dd49da69902f64790eb2b741e19f047716ea0a09"
+      },
+      {
+        "model_id": "EXPL-A1-0457",
+        "prompt_sha256": "bdadf1536c2a8da34a3b2d787b1fd064fb8acb6c15473e236b387d0192bead3c"
+      },
+      {
+        "model_id": "EXPL-A1-0151",
+        "prompt_sha256": "5a28ca4a5feb20c1f6b32ea0882ca5532f292733a213684c3254a7e6572bff44"
+      },
+      {
+        "model_id": "EXPL-A1-0285",
+        "prompt_sha256": "358b9e5ef2a97f189b9d5a20ad6bb051ad5203272edb605ce08cf9b615e4893d"
+      },
+      {
+        "model_id": "EXPL-A1-0241",
+        "prompt_sha256": "6c166f60c90e28e93b7bd46f27ec94e55fcb88a916dc0ea1dacbb9a4df785278"
+      },
+      {
+        "model_id": "EXPL-A1-0056",
+        "prompt_sha256": "6703174d910e5e7a9677843b766ea8b3ccf131cc9fc76c2c40efc56d9cad9f76"
+      },
+      {
+        "model_id": "EXPL-A1-0086",
+        "prompt_sha256": "0a8e8fc9fe7d8e33075e3c3567252739ba83c55577b33361752b60ddc699333d"
+      },
+      {
+        "model_id": "EXPL-A1-0369",
+        "prompt_sha256": "140340d9e3961f9e74291c29183234656f8c4b81b5c4c542135cbed4628082f6"
+      },
+      {
+        "model_id": "EXPL-A1-0428",
+        "prompt_sha256": "17937da370bc64ce10fa9d6209b986a6a8d68008605ef745b58272c762ad4f53"
+      },
+      {
+        "model_id": "EXPL-A1-0103",
+        "prompt_sha256": "557d98e28cd3183d7e78246c8dcb35cfa42c1f8eda1adcee586c888027468488"
+      },
+      {
+        "model_id": "EXPL-A1-0335",
+        "prompt_sha256": "2442e957fd6cbb4138bfb5bb018c8f8d95ad27a3714cb014192219a89b1a29dc"
+      },
+      {
+        "model_id": "EXPL-A1-0456",
+        "prompt_sha256": "2e53a13f1ccd32f88a1582b27c68d179431efe93e09a5b2c04cd29ca94ab0cbe"
+      },
+      {
+        "model_id": "EXPL-A1-0237",
+        "prompt_sha256": "f9528d140c728206b386d3b01f9fc8f7c30bde7542b0a89617ae87df59d5f943"
+      },
+      {
+        "model_id": "EXPL-A1-0420",
+        "prompt_sha256": "fabd1f847da8e706a2b43807834a3e9d6596b06c5bfda321bb0a29fbd1c96995"
+      },
+      {
+        "model_id": "EXPL-A1-0106",
+        "prompt_sha256": "6d306e1776009b2b6410d09c722883c387f2427ac99ffcc439a8e92f066da05c"
+      },
+      {
+        "model_id": "EXPL-A1-0089",
+        "prompt_sha256": "f0cedac14c136f51d232943a8eee1d63f3108a2fce9fd77578e1b241980f0ab0"
+      },
+      {
+        "model_id": "EXPL-A1-0406",
+        "prompt_sha256": "d8496164d5ab0397d7a0081067da86802969e782649555d920bf293b9fc4df2d"
+      },
+      {
+        "model_id": "EXPL-A1-0292",
+        "prompt_sha256": "84671f461bc4463f2b2db52347da1c308b52b130845868892159e91c1961ed09"
+      },
+      {
+        "model_id": "EXPL-A1-0355",
+        "prompt_sha256": "bb4bdc928ad2cf21a8ace047b8ff66b5f2d21aac24d95864527a1d54594a65e5"
+      },
+      {
+        "model_id": "EXPL-A1-0383",
+        "prompt_sha256": "9eb7b034ac9e20e829488e4b0ad1f0e023f98377671e3ae7ed6f72c296c6a22a"
+      },
+      {
+        "model_id": "EXPL-A1-0042",
+        "prompt_sha256": "69a6e9230a6d6b0155acfa90005f4c75144144e1f2c3f225074c5a383db3a889"
+      },
+      {
+        "model_id": "EXPL-A1-0174",
+        "prompt_sha256": "c891e5c52faff2531c24316ed7cfc1df78a0bd787a2a2788bf13f94c287e709e"
+      },
+      {
+        "model_id": "EXPL-A1-0429",
+        "prompt_sha256": "bd62a9ca5903bd44657dc580b0d35bdfdaa88964d0e9867fc26fdf27c281464b"
+      },
+      {
+        "model_id": "EXPL-A1-0014",
+        "prompt_sha256": "67bcdc905ea28410ba07a3b4ad8a5fd0b23d2abef25509c76380f12b2c76f71e"
+      },
+      {
+        "model_id": "EXPL-A1-0273",
+        "prompt_sha256": "923e9520394c2b64de47c1349034b801a79ea0a7b164d898a1df20d4ff002c98"
+      },
+      {
+        "model_id": "EXPL-A1-0267",
+        "prompt_sha256": "e090a5a3c1e9666103366639a63e4170a9ff4001b5ea04d8a2e849c061c0ade8"
+      },
+      {
+        "model_id": "EXPL-A1-0187",
+        "prompt_sha256": "71e4dc746091c9062000fecc9c9b15cfab4eeebe9b3e0802ec61b4580776b5d1"
+      },
+      {
+        "model_id": "EXPL-A1-0088",
+        "prompt_sha256": "67f8c23c3ad9b7437a52ef1d8bdae8153e957d4283bb00279a3f3d1b2664192e"
+      },
+      {
+        "model_id": "EXPL-A1-0211",
+        "prompt_sha256": "e7d5f6fed23721b15a3977ab94a81bbf0aec7740919797cca5230db5085718b8"
+      },
+      {
+        "model_id": "EXPL-A1-0032",
+        "prompt_sha256": "5d0841ac7ccc225f4c686fb8ff67a1e3ad696dd94ba952835e45972a5fa251c5"
+      },
+      {
+        "model_id": "EXPL-A1-0234",
+        "prompt_sha256": "34f251f3800e1ec88ae314dd57ecfb9d4d83ff4863f511b73735ee95569aec7f"
+      },
+      {
+        "model_id": "EXPL-A1-0186",
+        "prompt_sha256": "1ee94731751e4d997c96936c38eef838995263e6902e597b8c029fc89baea499"
+      },
+      {
+        "model_id": "EXPL-A1-0317",
+        "prompt_sha256": "8c5a7eb93c541b651da2dd7f059fa0fb32c59802d9b40cd6639c98a5d79cd5bb"
+      },
+      {
+        "model_id": "EXPL-A1-0122",
+        "prompt_sha256": "1baf39adc4da47726ab98cdc939f0179ed57d6c1dc9f526f180950aa1d07896e"
+      },
+      {
+        "model_id": "EXPL-A1-0238",
+        "prompt_sha256": "511b7f5f7f0f74768d4b1d2b103ceb27b8b4cb0817dd98826cdf789a254d7f75"
+      },
+      {
+        "model_id": "EXPL-A1-0070",
+        "prompt_sha256": "ada9a749af9c4086686782b901938b05070caa452f3d0611427c3064acd58120"
+      },
+      {
+        "model_id": "EXPL-A1-0286",
+        "prompt_sha256": "7ab866a90e9ba3ae089d87ce5ed8ae10e2975b3c30ed86c39a43019f02d74743"
+      },
+      {
+        "model_id": "EXPL-A1-0266",
+        "prompt_sha256": "b016c34cb85880408269003ff01ed5a4f34e34b090bf46ffd4e26f120d79726a"
+      },
+      {
+        "model_id": "EXPL-A1-0469",
+        "prompt_sha256": "a449050f0864c7659e99c54c54110fa1acbcc54bc357c7dfc1f1b81ab613efd6"
+      },
+      {
+        "model_id": "EXPL-A1-0000",
+        "prompt_sha256": "c7d721b6708b286d06c2fe77dd2a9780602e097bd2280d9e2f6150c5ec9d46eb"
+      },
+      {
+        "model_id": "EXPL-A1-0179",
+        "prompt_sha256": "2b5bdf89c935e9f0f182d23b8c7172cd9a41ecc6f49a5c164c996fd80af34149"
+      },
+      {
+        "model_id": "EXPL-A1-0288",
+        "prompt_sha256": "1be3d8a291f2e47c667aba38a78f37aef6ac89fa80011af3e35d94b53ec3b2ee"
+      },
+      {
+        "model_id": "EXPL-A1-0310",
+        "prompt_sha256": "567c495e564f2c683037aecc4ce0ce4b1e8ecaa4e888bf3f7b8145777399e803"
+      },
+      {
+        "model_id": "EXPL-A1-0095",
+        "prompt_sha256": "7c5aefea9f7f803f61682ff1b620bcc05c51d9b6328553d779ac67fa5dfd1ab4"
+      },
+      {
+        "model_id": "EXPL-A1-0231",
+        "prompt_sha256": "707ddc373090f672c7f6c235864108af6ced1584a64753d9b97fc9321b06af98"
+      },
+      {
+        "model_id": "EXPL-A1-0364",
+        "prompt_sha256": "4da3bde16e5635e818db5a83d04af7649f73be491e534ecfcbd3914d4cf49b94"
+      },
+      {
+        "model_id": "EXPL-A1-0398",
+        "prompt_sha256": "c6e5dd400a93a4a63e560ffd348f8e020f22d549c8ad20b976f82317401eb2bb"
+      },
+      {
+        "model_id": "EXPL-A1-0298",
+        "prompt_sha256": "dd7ca8b971c3907c8820f1d47be490b85ce8252d0f7fad0fc682889e345f2806"
+      },
+      {
+        "model_id": "EXPL-A1-0327",
+        "prompt_sha256": "f2a8bdbf9aa90ed818d18b0843c18c0cc6ca88d5796ec14b7424f1411d72cb17"
+      },
+      {
+        "model_id": "EXPL-A1-0442",
+        "prompt_sha256": "5ba177df236dfedb786d4e6b2639211ea553be24666ac68916e7d560fd6b731c"
+      },
+      {
+        "model_id": "EXPL-A1-0443",
+        "prompt_sha256": "86ed8ec66313851f6de4498dba60bdbc2f293735366194178d0a3b95e1acc6be"
+      },
+      {
+        "model_id": "EXPL-A1-0243",
+        "prompt_sha256": "16b12f2057050abb0bb1d8fe2068d6c51feee9101ca91d46b4d80d38f62a5583"
+      },
+      {
+        "model_id": "EXPL-A1-0002",
+        "prompt_sha256": "48782fc8f0a71f4531fc5fe1505718758393d5c53095b6e86ae304d9d4b208d6"
+      },
+      {
+        "model_id": "EXPL-A1-0072",
+        "prompt_sha256": "3ebd3fc17d681868e702248834287c89f64b38f370ddf75898f1b88ebd560edd"
+      },
+      {
+        "model_id": "EXPL-A1-0439",
+        "prompt_sha256": "c1ac131ec2807438bd0ee1c3ac90dc9210d6568eff18e9a85c17a546a2cf9665"
+      },
+      {
+        "model_id": "EXPL-A1-0422",
+        "prompt_sha256": "173046b522dcaf8df7e709bd60a0c48be3b1613ee9752c9fd600ceb25cdf44f4"
+      },
+      {
+        "model_id": "EXPL-A1-0127",
+        "prompt_sha256": "c7c543dae95b7dc45ab250c8f27a2f14627be657d0a605d572bb45adb7c6f7e6"
+      },
+      {
+        "model_id": "EXPL-A1-0112",
+        "prompt_sha256": "e0d8ecda22abfbb2e4abf010a395b1356562f16a99aa3a7fce28de278dc4821a"
+      },
+      {
+        "model_id": "EXPL-A1-0130",
+        "prompt_sha256": "3bb277e4ca5a1dcf6dbeadcc2b60cce6fc7ca73023d584308177fb8f6df829aa"
+      },
+      {
+        "model_id": "EXPL-A1-0025",
+        "prompt_sha256": "4192049bc5d26e4e5936c401769b8425159cd370c2e4f3fda44e2244bfd4df1d"
+      },
+      {
+        "model_id": "EXPL-A1-0259",
+        "prompt_sha256": "21a58a88ce165458d9fdf00c268bb1da23b60fd005d9498dde4faf67839013b2"
+      },
+      {
+        "model_id": "EXPL-A1-0003",
+        "prompt_sha256": "051a6f145423cd25221799e057d2dde9cf364e5f10afcc70fdeef1bfd5bc7ec9"
+      },
+      {
+        "model_id": "EXPL-A1-0114",
+        "prompt_sha256": "2703abc1b8f4ae0a7ac647eb908ed97cc241c36be8bb78ff75c45689c82cac61"
+      },
+      {
+        "model_id": "EXPL-A1-0291",
+        "prompt_sha256": "de2b86ba313d86c78c1b4833b519571ead6c39a75585429d17fb50714a562e51"
+      },
+      {
+        "model_id": "EXPL-A1-0391",
+        "prompt_sha256": "93a5fffafeb9e01d7dac982d37da282c814c925e464e070823dd1bc6916aa78b"
+      },
+      {
+        "model_id": "EXPL-A1-0120",
+        "prompt_sha256": "9bc745a6d285060cf6a071e68592121a4c12a2f4d0ebf07f1478ac5a2fc53651"
+      },
+      {
+        "model_id": "EXPL-A1-0148",
+        "prompt_sha256": "5abffb7d7ba123157d2b1efa65b0d69ab6f2302413277d2deea48e961280d425"
+      },
+      {
+        "model_id": "EXPL-A1-0412",
+        "prompt_sha256": "d36b336df1124cb13395289e52998b744dca06515592a8049bd0b99f155cf66a"
+      },
+      {
+        "model_id": "EXPL-A1-0415",
+        "prompt_sha256": "8aea1e9a3728394b07e5a9c4f24310ab3cf4d4365a54c3e299b00e9e50b45f75"
+      },
+      {
+        "model_id": "EXPL-A1-0039",
+        "prompt_sha256": "f55ce4509ef0bcbb5ffe3714e9b9e0c4d7734c81410d034d9e53593734982045"
+      },
+      {
+        "model_id": "EXPL-A1-0230",
+        "prompt_sha256": "157c20ba85f7cf9ca4424eb8f90c815e66fa7269361da5b9217724074f6db460"
+      },
+      {
+        "model_id": "EXPL-A1-0329",
+        "prompt_sha256": "6065d85a999654b5d2fa4e9193d8843751a54a2c8f619dcab495179b6a745ed1"
+      },
+      {
+        "model_id": "EXPL-A1-0350",
+        "prompt_sha256": "078f84af2008c3a13f27a05c1a9a07804dce568cd62aa534286e2edfe95831d9"
+      },
+      {
+        "model_id": "EXPL-A1-0028",
+        "prompt_sha256": "08ce8535bafc93555e0484bcd7bfd6cfef37b219e867c13433b6b09cc7e2a256"
+      },
+      {
+        "model_id": "EXPL-A1-0193",
+        "prompt_sha256": "a7d626fa7739b4f08c6ffb52e4aaee692c36cd5912989995e30005a88d9ba256"
+      },
+      {
+        "model_id": "EXPL-A1-0222",
+        "prompt_sha256": "0bd716b05c92194b434d941b64f356cae45c14e81555dd817393663c3c06378c"
+      },
+      {
+        "model_id": "EXPL-A1-0467",
+        "prompt_sha256": "8291a67dd1b4105677d405ae5fddc4e9fb0ea445478f9c997aa1bee29d7155e6"
+      },
+      {
+        "model_id": "EXPL-A1-0425",
+        "prompt_sha256": "1b93e1ac847289ec4c84f0ea0c666f37625b95879f304b2f87b44c9cc2f33589"
+      },
+      {
+        "model_id": "EXPL-A1-0212",
+        "prompt_sha256": "48bdabeb0ae0d0f18484278f55b904dca236e618b71550e663d2e934c9cb7c51"
+      },
+      {
+        "model_id": "EXPL-A1-0030",
+        "prompt_sha256": "d64f9a72fa09f1f671f8a7e346561b3e416c6b5845d3c3d71ddd7390d09bb73d"
+      },
+      {
+        "model_id": "EXPL-A1-0021",
+        "prompt_sha256": "3f5bfba21baa20656523bb6c80c4b990e22176551c06d104f156edc9720dd2b7"
+      },
+      {
+        "model_id": "EXPL-A1-0136",
+        "prompt_sha256": "97bc6e5f03a8c16dcd5922aac21e9cd7521760f5aff99787127876e58645acf8"
+      },
+      {
+        "model_id": "EXPL-A1-0338",
+        "prompt_sha256": "0fbac924b67c68f94fdaa15fc1ea2a38cb44b9a8db18c29552e22165d9eaa94f"
+      },
+      {
+        "model_id": "EXPL-A1-0045",
+        "prompt_sha256": "1423747bbadc58df60443d425db283cb569ff91bd4914a89e8c7ee81ad625c3c"
+      },
+      {
+        "model_id": "EXPL-A1-0008",
+        "prompt_sha256": "372635ff6daa1db1f88f1a437d4367e6f8fb91893052ad7c7c4ade582a16907b"
+      },
+      {
+        "model_id": "EXPL-A1-0188",
+        "prompt_sha256": "af8a312fd09b7a699c21c06ef397e8f2ddc17b9a0231365e39acca07e79d4a41"
+      },
+      {
+        "model_id": "EXPL-A1-0302",
+        "prompt_sha256": "2d99ea77b15f77a380d8b9330f32687f7070ccf3b4b1304e1b47f728c540f6f0"
+      },
+      {
+        "model_id": "EXPL-A1-0437",
+        "prompt_sha256": "ee6fa6fca732abd839aff08cafe2f45f518a27e543abb1fdc1e6e9fa27e04ca4"
+      },
+      {
+        "model_id": "EXPL-A1-0440",
+        "prompt_sha256": "4bb71e5e98263c46ecf6c7490a5ea5d408681b7c3d8d253d7a31d8972597e64d"
+      },
+      {
+        "model_id": "EXPL-A1-0333",
+        "prompt_sha256": "ab747094b05fd6619d8b6864d6dbb58324d2db98795514234423d0c731a8f378"
+      },
+      {
+        "model_id": "EXPL-A1-0396",
+        "prompt_sha256": "4a97b739923217e56b0a075087c5ff983ea8f7096999b8daa75629207bd65183"
+      },
+      {
+        "model_id": "EXPL-A1-0090",
+        "prompt_sha256": "dee0853323a29eeaa04dd7c9c6f7942a2d551f385a1323ebd8423228a729c9fd"
+      },
+      {
+        "model_id": "EXPL-A1-0401",
+        "prompt_sha256": "79a1db422e161c7611ab9526066669c2ef5483afe29cd3771853e9c56ab9baa0"
+      },
+      {
+        "model_id": "EXPL-A1-0080",
+        "prompt_sha256": "d9d1d6f8633fc6c9c0ac6a7c67a6de21e52174630f7ba2313f4f206e32b6ffbc"
+      },
+      {
+        "model_id": "EXPL-A1-0381",
+        "prompt_sha256": "e0cf3d980616643a7fa2f75949bcf3daf10cd1182c7e7ba9606854ec314a1ece"
+      },
+      {
+        "model_id": "EXPL-A1-0100",
+        "prompt_sha256": "8586781ebec53e920aa6327558092fc698c9d9e913489957ff5a76f9ea9bd196"
+      },
+      {
+        "model_id": "EXPL-A1-0043",
+        "prompt_sha256": "98e8b29c79f8043f83961b898c391cddbbe473bf9e4dcd950c3308e71a45c507"
+      },
+      {
+        "model_id": "EXPL-A1-0462",
+        "prompt_sha256": "e4a49313d49fc04f092517fe800309cef0269687832036c479c1dedbe49a9557"
+      },
+      {
+        "model_id": "EXPL-A1-0016",
+        "prompt_sha256": "497b315f8942686889bd39938fcd5aaf27bd643bb5f40a0d5faa7384ea78adc6"
+      },
+      {
+        "model_id": "EXPL-A1-0245",
+        "prompt_sha256": "ddb239fb8db4ded0bf613f8d5e4b21a69f6bafbe20c94cdb7c66ac517170031d"
+      },
+      {
+        "model_id": "EXPL-A1-0074",
+        "prompt_sha256": "0e6dc83b634d1d9d0bb938b932f7f450bdcd2a775b5f78e8354395443e5ed607"
+      },
+      {
+        "model_id": "EXPL-A1-0246",
+        "prompt_sha256": "4f21b75b2b4f370f7d4d643ba1b06cd0c9c4b2e4374cdacf70eaaa4632d5000d"
+      },
+      {
+        "model_id": "EXPL-A1-0404",
+        "prompt_sha256": "4e9e4d206588530b5c9013596aa463405030502ba3072dd1dea4fc85a3b30708"
+      },
+      {
+        "model_id": "EXPL-A1-0149",
+        "prompt_sha256": "73bfb07715bf30e84cd00eb055319ea3502f98f5c157758573f098a95bb2b3e3"
+      },
+      {
+        "model_id": "EXPL-A1-0210",
+        "prompt_sha256": "08fa9d985b804d02b7f96dc9c013d8dc0cd143e8a1406c71599c6052745814f9"
+      },
+      {
+        "model_id": "EXPL-A1-0318",
+        "prompt_sha256": "6029bf59285ec69888d6b85ff1c526c0eeb49881ac3314b7d297eec02778500a"
+      },
+      {
+        "model_id": "EXPL-A1-0161",
+        "prompt_sha256": "40ae0499588fed3d6d1524ca028c93d39b4f05293d74639f3830644ee53e6869"
+      },
+      {
+        "model_id": "EXPL-A1-0101",
+        "prompt_sha256": "973168c880aee7ea6011fa6d7853b15500ed090fbba4a39037d2a8f0d97857c5"
+      },
+      {
+        "model_id": "EXPL-A1-0078",
+        "prompt_sha256": "09dc0e96664e5fbef4a556b66e894ebe702158e7fd87a955c117da55d5959372"
+      },
+      {
+        "model_id": "EXPL-A1-0108",
+        "prompt_sha256": "01234be951b71a988cc2a5c1106868a2e604a4914511e108e6df82af4d3541bd"
+      },
+      {
+        "model_id": "EXPL-A1-0170",
+        "prompt_sha256": "8a8e9a7c8648bb4d54ea3686851befaf988286321026cbc4904989281429ce44"
+      },
+      {
+        "model_id": "EXPL-A1-0226",
+        "prompt_sha256": "a46defd92d83aadb83c568a4eb4441f8095590e674ed28032ac797afdf7d3566"
+      },
+      {
+        "model_id": "EXPL-A1-0207",
+        "prompt_sha256": "a7d84ffccf781dfa066c359125e7a64f572780e29bdc737ce624963e2ceb30c8"
+      },
+      {
+        "model_id": "EXPL-A1-0460",
+        "prompt_sha256": "b8989f1075473d1a5df192e1e7a2e76cab852999a5a7cf4be564b224b37ea3ab"
+      },
+      {
+        "model_id": "EXPL-A1-0205",
+        "prompt_sha256": "a68d6a8cb1abddfecf7480253cdf7e2053cca1056f5c22a41f17cdeded9f109e"
+      },
+      {
+        "model_id": "EXPL-A1-0107",
+        "prompt_sha256": "40ec9ef71b0b83ac5676137d1d738513a19a93d57e7c181f93b12c90b3c14fe1"
+      },
+      {
+        "model_id": "EXPL-A1-0240",
+        "prompt_sha256": "4361c881284cdc63853d5db6f8bb3c879669b5abcd47d32c99ad30e4b7f620e0"
+      },
+      {
+        "model_id": "EXPL-A1-0221",
+        "prompt_sha256": "7dbbbdf1bd4f19fa14e8441163d08b17fb011a831bc6c9f6dbffddcb3fc88635"
+      },
+      {
+        "model_id": "EXPL-A1-0307",
+        "prompt_sha256": "96663a3ecc6691dc6e2a85be5d73460ac6ccdd2d61b2cb104e4e6abc1699af8a"
+      },
+      {
+        "model_id": "EXPL-A1-0337",
+        "prompt_sha256": "59820f42916a7751688d13c7ea8488d940a71ed374aabebf92df281a2fd67b2e"
+      },
+      {
+        "model_id": "EXPL-A1-0204",
+        "prompt_sha256": "89ebc2a187e24d360739b87d97c859b80f6bd95a9dc0f4b3f3903f545d9b8186"
+      },
+      {
+        "model_id": "EXPL-A1-0194",
+        "prompt_sha256": "8905a6b82bab8ad5b3bc043866bf3a6e39119cd7c133fa383bcb07ed35e3adad"
+      },
+      {
+        "model_id": "EXPL-A1-0351",
+        "prompt_sha256": "4df738f38a868cf370f84352f68c325cb65584ccf9ad1988304c51fd8e060995"
+      },
+      {
+        "model_id": "EXPL-A1-0393",
+        "prompt_sha256": "1d67ed47c15e8cd1af668ef63b315a502f983c546dc180d247a5f4536423c114"
+      },
+      {
+        "model_id": "EXPL-A1-0060",
+        "prompt_sha256": "9efbc2cceeff35987dc6eff1c1de74618088358aca37460b69cd1ac18f79be63"
+      },
+      {
+        "model_id": "EXPL-A1-0055",
+        "prompt_sha256": "5ab3705a18ecf1174f076a9b08d319fe9aee5ee7cce4bfd186708697cf2121f8"
+      },
+      {
+        "model_id": "EXPL-A1-0426",
+        "prompt_sha256": "140271698568210c960fc722271f02ee7aa7cd01a686dfe070605d3982a34e65"
+      },
+      {
+        "model_id": "EXPL-A1-0453",
+        "prompt_sha256": "ffe3ec52b5ce4805eb6f0deff6fda79a5957c1deaed24b855ec4afdea2a44910"
+      },
+      {
+        "model_id": "EXPL-A1-0075",
+        "prompt_sha256": "997274258ed2284407442cc3d5686ba3fa1dc40350a2155eed897d3de7dd02be"
+      },
+      {
+        "model_id": "EXPL-A1-0322",
+        "prompt_sha256": "814fbd3c8b211d46ad10d6df1b6957c3466c7885e3c71fcc0fc4da2d0760dcf2"
+      },
+      {
+        "model_id": "EXPL-A1-0126",
+        "prompt_sha256": "6eec49bf55bdb4256615452f4876265338b99f7d15d28d23eef4dcebba52c5e0"
+      },
+      {
+        "model_id": "EXPL-A1-0192",
+        "prompt_sha256": "be4db62a8b44dad011698390c28711c978e4320f635b9b3625acbd2d9727339e"
+      },
+      {
+        "model_id": "EXPL-A1-0052",
+        "prompt_sha256": "832a6e2ce720dc67d600b655e1ec26fc5614bba0373681f6541a54abdd83aee8"
+      },
+      {
+        "model_id": "EXPL-A1-0141",
+        "prompt_sha256": "e97b6978c43f1760551fbd14f5188c4d2a5256d1e9549130e8413e001e3ee266"
+      },
+      {
+        "model_id": "EXPL-A1-0274",
+        "prompt_sha256": "2190759ecaffb8727fd0d51cb57389ac9fb0de1a2e0a53f3631692c3757c794e"
+      },
+      {
+        "model_id": "EXPL-A1-0115",
+        "prompt_sha256": "7043a80974ebc6bb81131cc1245ce4f77b5a98ce034a2a8000059f60809cf2f7"
+      },
+      {
+        "model_id": "EXPL-A1-0057",
+        "prompt_sha256": "8da69c62268ef1500ace65f5af51c30e9e1f97b51c69ac54a112106a5e66cabd"
+      },
+      {
+        "model_id": "EXPL-A1-0262",
+        "prompt_sha256": "7cca86e14afab601f54e2e90233508e7677bedd01ee7c33ded24d9d1c1743b8d"
+      },
+      {
+        "model_id": "EXPL-A1-0082",
+        "prompt_sha256": "20c4c04940b8b98aa272624342ad8841ceb4616792426c78042f6d09f4979670"
+      },
+      {
+        "model_id": "EXPL-A1-0239",
+        "prompt_sha256": "e1dded68e258ecf9ba0ef202cd7056dd36b2cfdd1353127b0bd29df522d8c70d"
+      },
+      {
+        "model_id": "EXPL-A1-0191",
+        "prompt_sha256": "3c88cae7af16e0b3437225cafafc4e24fc315ed372473e584f2e4a88fcc52983"
+      },
+      {
+        "model_id": "EXPL-A1-0218",
+        "prompt_sha256": "109ed519df908bafef0501ee5b6df45d83486e36da80adcc640197335e9a168c"
+      },
+      {
+        "model_id": "EXPL-A1-0278",
+        "prompt_sha256": "2236e6bfdda32e57c6bfb275271fcecc73ea69f84712eec562f955b8afaf2b94"
+      },
+      {
+        "model_id": "EXPL-A1-0111",
+        "prompt_sha256": "daacba991927b244068f60735a3c8604194a8bd9f61c6aa05a98a483f4022f33"
+      },
+      {
+        "model_id": "EXPL-A1-0040",
+        "prompt_sha256": "f2327a9b8d25b81284692888bbcfe7d313e54be10cc202f4d81b7e55660df8af"
+      },
+      {
+        "model_id": "EXPL-A1-0150",
+        "prompt_sha256": "979e78da1cc836301dc32c85e7454d2cb21b9a13f2dfeb4f94743d13d43ae917"
+      },
+      {
+        "model_id": "EXPL-A1-0044",
+        "prompt_sha256": "fc88097967af2ea71c0ad4d1452cc3b0b7d2f33c9b7e3266126133601b4778cc"
+      },
+      {
+        "model_id": "EXPL-A1-0382",
+        "prompt_sha256": "9e8becb76111d003ba63fde910ea0b37b8d59dc8b5cb77b4cb865feba863796c"
+      },
+      {
+        "model_id": "EXPL-A1-0006",
+        "prompt_sha256": "c5621a41fa92ddc8884b474af49fd3bfc9002450cda306d2d0e2c7a02f27dbd9"
+      },
+      {
+        "model_id": "EXPL-A1-0400",
+        "prompt_sha256": "c8812c532ee99b335fe0663c17463d829d640304ae6c27248c2ca885452ea5c7"
+      },
+      {
+        "model_id": "EXPL-A1-0019",
+        "prompt_sha256": "5cdb20287ca4d03501b601e9771584c9a0de856318029d499675246d0a623619"
+      },
+      {
+        "model_id": "EXPL-A1-0109",
+        "prompt_sha256": "3b36ac966c25a3b9aaccf9acd36f0eb4af4e5786ea31a2fcdaf7e750c0dbea4c"
+      },
+      {
+        "model_id": "EXPL-A1-0061",
+        "prompt_sha256": "9f4ede83b355237b88f9e628a509edf739145f0c470721901a373b0f40f826da"
+      },
+      {
+        "model_id": "EXPL-A1-0119",
+        "prompt_sha256": "a1a8f31674400817b0c7b485ffb689a7368febc55a12fe4a3b7d731856e000d7"
+      },
+      {
+        "model_id": "EXPL-A1-0413",
+        "prompt_sha256": "0a83680250e31a01ef0c498c17f0d19ea6f48e8990036282feae6486cf2ab59b"
+      },
+      {
+        "model_id": "EXPL-A1-0270",
+        "prompt_sha256": "ad5e2ab4a515d155edebc3435f93c7ddff6d44bb31166205d9fff70faa5dccdd"
+      },
+      {
+        "model_id": "EXPL-A1-0169",
+        "prompt_sha256": "aaf0b4d2c90fe25322c556383b0fec474764e4606a345a9253dafd272bc2147e"
+      },
+      {
+        "model_id": "EXPL-A1-0423",
+        "prompt_sha256": "8dda68186dc4456fe36a351da7e6f3e9c95cf3b3f15c5be2970359419a772cd6"
+      },
+      {
+        "model_id": "EXPL-A1-0296",
+        "prompt_sha256": "250231acaa155345ff54dd12547002ce9fbac56848568b620c9f40d0dfe728d7"
+      },
+      {
+        "model_id": "EXPL-A1-0365",
+        "prompt_sha256": "a0cd1bc99d84315eaff7fb3692094978f00b4255125d5289ab89e791e4eb500e"
+      },
+      {
+        "model_id": "EXPL-A1-0326",
+        "prompt_sha256": "21ac82a97613d6adbbe8b66b555dc0a348ba9a94414692a1fb2447b658603aa6"
+      },
+      {
+        "model_id": "EXPL-A1-0260",
+        "prompt_sha256": "a34c4bd6de8e31ba830119fb58f38a5b7e76ca318e44b8da22086de6c6ed697c"
+      },
+      {
+        "model_id": "EXPL-A1-0331",
+        "prompt_sha256": "8b23dd72ee692e178c940e52b4d7be3075f7c97a43dfc8c3c7e17efe9580df5d"
+      },
+      {
+        "model_id": "EXPL-A1-0199",
+        "prompt_sha256": "b38dd63caba66c9fe46ee18bbf79bf70c582580fb6d80cd297ef10cbb93d075c"
+      },
+      {
+        "model_id": "EXPL-A1-0361",
+        "prompt_sha256": "dbe90b631dc75005c8aed4634ded17716aadfbfce077b140754bb01a1d11cbbc"
+      },
+      {
+        "model_id": "EXPL-A1-0461",
+        "prompt_sha256": "053e8feccf8905379706f410063f1d896fabdb5bec211fcd764c2928ea61e484"
+      },
+      {
+        "model_id": "EXPL-A1-0184",
+        "prompt_sha256": "36413d84add124742d4e9c2b476e0ff9a24d8d166cfdd6dd83ef3b6ae4e7dac9"
+      },
+      {
+        "model_id": "EXPL-A1-0339",
+        "prompt_sha256": "08905296e67945189b6b0bcf017e3bb44ef17a8ca708034642e7d5b83f98b818"
+      },
+      {
+        "model_id": "EXPL-A1-0081",
+        "prompt_sha256": "b2b26c8425e82a0fe933104a5558dba7f6304b4c665d910eaeba52fac9684bdc"
+      },
+      {
+        "model_id": "EXPL-A1-0252",
+        "prompt_sha256": "d31e472561a2c8617fdf785ba96ad1cb8b7f0f21341609308ca7de221d4f18d6"
+      },
+      {
+        "model_id": "EXPL-A1-0251",
+        "prompt_sha256": "c741cbf6765d4169dcf215adfb82ed885a0869bc1f1cd9168a6a32f875449a42"
+      },
+      {
+        "model_id": "EXPL-A1-0407",
+        "prompt_sha256": "c41ee6cde8c0419de7f206b660e5b43106d832b660aa897ae5e5d47ef63303b1"
+      },
+      {
+        "model_id": "EXPL-A1-0098",
+        "prompt_sha256": "650f8c237c3047f9b95cbb8874adfbb859ddda1175ae785be157dc8019cf2da7"
+      },
+      {
+        "model_id": "EXPL-A1-0051",
+        "prompt_sha256": "68131687df296aab08388076c31539e0879d3a720fb8790d7052c4e010e9a5ec"
+      },
+      {
+        "model_id": "EXPL-A1-0137",
+        "prompt_sha256": "a95a1496c512eb9475a26a49ded59feb3d142cde56ba0f53718e24eac6a4da73"
+      },
+      {
+        "model_id": "EXPL-A1-0247",
+        "prompt_sha256": "cb5ae978f831e603ffed883f7bd2351b4abcbfbe0c91741fc1bfe8db74635819"
+      },
+      {
+        "model_id": "EXPL-A1-0166",
+        "prompt_sha256": "95a098d172c57745067b3b384f96cfaf6d09000c7b022a93c9077b2d0ef50dfd"
+      },
+      {
+        "model_id": "EXPL-A1-0330",
+        "prompt_sha256": "8902916d16ebc125c9c0fb74744809538928c85c88b28559978c18f2d78c6c2a"
+      },
+      {
+        "model_id": "EXPL-A1-0275",
+        "prompt_sha256": "b797086f9066820e4b5619e32a02318ee68193578abdd86824da5d128ed23ea0"
+      },
+      {
+        "model_id": "EXPL-A1-0165",
+        "prompt_sha256": "f41770de7e1658fa94893ffa69928ca40780f4050582e020ef7fb7a452b9e10f"
+      },
+      {
+        "model_id": "EXPL-A1-0198",
+        "prompt_sha256": "456a2411d52fca3579ffad7c629a2c218b30a28dbcf6520de451a71184d7aa62"
+      },
+      {
+        "model_id": "EXPL-A1-0102",
+        "prompt_sha256": "8e93426abc4c0bd14f1226a5a01e3ef47105b36885547e4de44ea9944faf370d"
+      },
+      {
+        "model_id": "EXPL-A1-0020",
+        "prompt_sha256": "ef58a0c2dd37f7f52d396f03c16e1b9687a1d48ab4ec1ae71c32cc2ddd38e3de"
+      },
+      {
+        "model_id": "EXPL-A1-0017",
+        "prompt_sha256": "c808257ca14ba5555fbb167fae4d9bae0e617392940e21d854843604ca030084"
+      },
+      {
+        "model_id": "EXPL-A1-0164",
+        "prompt_sha256": "03539b5b1b40b89fef485d8628dc21137d67393bcf128de3424a08b52108c60f"
+      },
+      {
+        "model_id": "EXPL-A1-0220",
+        "prompt_sha256": "072eeda5c5233b4efb2805b9c5b14a14d30796664b13fbafc6654f945b34c7f8"
+      },
+      {
+        "model_id": "EXPL-A1-0153",
+        "prompt_sha256": "b9460e87834e20403a2ff8109de9fff7a207cb383b8eaf40847345c3535c8e01"
+      },
+      {
+        "model_id": "EXPL-A1-0067",
+        "prompt_sha256": "7c4b1486230311e41ccf746dff291b1724f6d825a4ebaa6cce3ba7240b68ee4d"
+      },
+      {
+        "model_id": "EXPL-A1-0405",
+        "prompt_sha256": "88e36ac9e2ee208f1126a77356dc42cdd584827c2e73a6f8aa865b6b8fc3655d"
+      },
+      {
+        "model_id": "EXPL-A1-0142",
+        "prompt_sha256": "17779908e7c2bb189301d3d20d2c00c2244b83b1a7d23daf97ac717d99aa0b35"
+      },
+      {
+        "model_id": "EXPL-A1-0323",
+        "prompt_sha256": "9e30dab58e88a822c7bbd2602e943e8eb4598db204e82edc5b08872921fac8fe"
+      },
+      {
+        "model_id": "EXPL-A1-0315",
+        "prompt_sha256": "7973d4c2b73368ae614e933d62ecefbe8e1fda8c536f27a4058519afc6a94e03"
+      },
+      {
+        "model_id": "EXPL-A1-0145",
+        "prompt_sha256": "465864054e565c97e46089a8dc88c772f40f438df6d951a7f344627946be6a4f"
+      },
+      {
+        "model_id": "EXPL-A1-0316",
+        "prompt_sha256": "72de4d35a2de343040cfe2b24ced88e3f7da059268760debe807374e99f8d2a6"
+      },
+      {
+        "model_id": "EXPL-A1-0124",
+        "prompt_sha256": "0394793e1d7510581a9a868c6774304e2d9004ceccd6ff19b85782692d1eac5a"
+      },
+      {
+        "model_id": "EXPL-A1-0374",
+        "prompt_sha256": "0bcbdea8a893e326936945c78830d85902397417c01318346cf8c583ac81be92"
+      },
+      {
+        "model_id": "EXPL-A1-0261",
+        "prompt_sha256": "92bd8804268f77d27d59a9365f61896823e18d7a48d1d61d6a4a31112e5c5355"
+      },
+      {
+        "model_id": "EXPL-A1-0478",
+        "prompt_sha256": "b76483ca14d2e226d651af17cb628770c29b16cb837f7ea91cec659907080afd"
+      },
+      {
+        "model_id": "EXPL-A1-0132",
+        "prompt_sha256": "9071590a3fb3c81d98dcb1845eea41f58b963372bd9ae7cf6ebad07f57b3f4ef"
+      },
+      {
+        "model_id": "EXPL-A1-0313",
+        "prompt_sha256": "cb66444481b1d4026ebd2ced716baefb776f7ad2114b9665ffb94af60582b975"
+      },
+      {
+        "model_id": "EXPL-A1-0325",
+        "prompt_sha256": "53b83dc48618c7b609c6e7eadd11a6ba174e8132635b17a6cb6a28b747bc6d4c"
+      },
+      {
+        "model_id": "EXPL-A1-0372",
+        "prompt_sha256": "faf21d940233a17ba60c01f950aaccd836339e2e670432009907945650e20e23"
+      },
+      {
+        "model_id": "EXPL-A1-0229",
+        "prompt_sha256": "89931d578878352356cab0423c7347e614585d5423c3632fc644031495e0b867"
+      },
+      {
+        "model_id": "EXPL-A1-0200",
+        "prompt_sha256": "6e2863e61d20b64eb4f07b38a761e9c2d9a4f165905ad1ad98773b5306a5c332"
+      },
+      {
+        "model_id": "EXPL-A1-0345",
+        "prompt_sha256": "fca4512149feac861876828e2d384091bf4498edc95b40da32a3a076d7e6a3f1"
+      },
+      {
+        "model_id": "EXPL-A1-0034",
+        "prompt_sha256": "c5a7f9d2808e50c2c2ce18c25d3a06dfae08628ec92bc4aec3afdb44abaf0f6f"
+      },
+      {
+        "model_id": "EXPL-A1-0427",
+        "prompt_sha256": "cea1cc1618cf81be2abd16ed5a2a03eb1cc896d9bd18c514fcf3b6acb42321de"
+      },
+      {
+        "model_id": "EXPL-A1-0311",
+        "prompt_sha256": "36ff76fb969bdd6e541e4cd2be58500673321484a62e1a3385cf7e13097dc210"
+      },
+      {
+        "model_id": "EXPL-A1-0097",
+        "prompt_sha256": "4394e01d21e24cb176a556e179c5c8711f72f94367e93c3a956938fca2485ab5"
+      }
+    ],
+    "dev": [
+      {
+        "model_id": "EXPL-A1-0416",
+        "prompt_sha256": "86c1dd084d44de25a2c6172190892a0c102c8f3bbb99108171b99e1f55dee9d3"
+      },
+      {
+        "model_id": "EXPL-A1-0376",
+        "prompt_sha256": "8bc2b3f3e43473763dd08e6a50362551c2911dc7d166816bc65ad3497e733fa4"
+      },
+      {
+        "model_id": "EXPL-A1-0447",
+        "prompt_sha256": "cb157ab45f833bf7e3afc18097b826df782218918ec0bb5337d7f258f0c37192"
+      },
+      {
+        "model_id": "EXPL-A1-0131",
+        "prompt_sha256": "9ecdcbe279d7a0c982dae4e901ae8581d746770ec5fd72c84446fd3fa52fec22"
+      },
+      {
+        "model_id": "EXPL-A1-0254",
+        "prompt_sha256": "1849f508d9f3b17fe83c66307979d58341337f1fdc5f15e005c7d4b99e30789d"
+      },
+      {
+        "model_id": "EXPL-A1-0215",
+        "prompt_sha256": "8541b5deab4f8c3a2088c56a2dc7b8d67ab8f4e6cfd048ccb4e1974e0b3609de"
+      },
+      {
+        "model_id": "EXPL-A1-0394",
+        "prompt_sha256": "1a8678f95b812bde913f9ccde47596820ecc373adf8c166f525572c5464302de"
+      },
+      {
+        "model_id": "EXPL-A1-0418",
+        "prompt_sha256": "7295d2f1135c2a9a8f278e119353f5ce24daa6b292dd28d7dd3f61cc2f335180"
+      },
+      {
+        "model_id": "EXPL-A1-0092",
+        "prompt_sha256": "28be77259579c3cabff90fc2a1683d5f66bfc63f1f4b9189dc57355c1e5c1efd"
+      },
+      {
+        "model_id": "EXPL-A1-0214",
+        "prompt_sha256": "34e0ccf6ecd7e2adff43a452c3b979426668e1256542595507a4e3a2152bec82"
+      },
+      {
+        "model_id": "EXPL-A1-0147",
+        "prompt_sha256": "d2251d7d8dca50f189fd07bc0b13a0b3035a32df54f3af567e750c6678f6c671"
+      },
+      {
+        "model_id": "EXPL-A1-0079",
+        "prompt_sha256": "5f1812cd77fdff59453e2d7aa9563385abd79afda45af8bba02334a1e357bf38"
+      },
+      {
+        "model_id": "EXPL-A1-0076",
+        "prompt_sha256": "88ba3dfc70068fe205ef17d210e9fa3f70da1fc53b6bd1dfc39433cc7c229720"
+      },
+      {
+        "model_id": "EXPL-A1-0183",
+        "prompt_sha256": "1da12df3c9951f09ec41866e1a2a30fa8c45e2fa1d398c2360233f0fcddb4bc7"
+      },
+      {
+        "model_id": "EXPL-A1-0463",
+        "prompt_sha256": "cabc60d89fea8f2732a058155446bef3fd57df02c768825959377adaddf87d4c"
+      },
+      {
+        "model_id": "EXPL-A1-0358",
+        "prompt_sha256": "cfed53a1c511e06f0537e200d1c6ddca8efdb6536a63a33db36ce36f2e01e22e"
+      },
+      {
+        "model_id": "EXPL-A1-0377",
+        "prompt_sha256": "100dfaf2df7f35121f1ab2ad6701ef973ada37f6da375197d40fa061e1ac78f0"
+      },
+      {
+        "model_id": "EXPL-A1-0459",
+        "prompt_sha256": "59397d6aca8057b95207920bb0d62da92afff40330c8fdfba1c354ee713daf3a"
+      },
+      {
+        "model_id": "EXPL-A1-0024",
+        "prompt_sha256": "ede1909abee9e70d6e8dfa3c7515e192c09d032cbf3ae7f021aed8c755ff93b0"
+      },
+      {
+        "model_id": "EXPL-A1-0244",
+        "prompt_sha256": "371816a634fe6320e10fddd1b273fef77451e45466f7fcd0d42ae217fc118e77"
+      },
+      {
+        "model_id": "EXPL-A1-0213",
+        "prompt_sha256": "2b4a9ad1aff268efcfbf52c5467af20ded6f1b896b6aa68edcff2f8a70a15fc8"
+      },
+      {
+        "model_id": "EXPL-A1-0479",
+        "prompt_sha256": "15853c3c9626970113cdf0ab1dd87bd353e504368c8e020e85f17a018e49ab02"
+      },
+      {
+        "model_id": "EXPL-A1-0320",
+        "prompt_sha256": "c4089471bab793796c0686079845701d967a78df30d236948d72df7e01e26125"
+      },
+      {
+        "model_id": "EXPL-A1-0445",
+        "prompt_sha256": "c8596cdeb192ce84f1afa602a6ed2204ea39fd784f85d257ca5323cd61a0c571"
+      },
+      {
+        "model_id": "EXPL-A1-0138",
+        "prompt_sha256": "4db31bfa06ab2fd5e2ed48909a2be758cf9253c4151117f4c17deb0df41efce0"
+      },
+      {
+        "model_id": "EXPL-A1-0464",
+        "prompt_sha256": "ab2816b5b1e572d0edf8af113a045144b01ab0ed9fc6b6671e6ebac3f124dc60"
+      },
+      {
+        "model_id": "EXPL-A1-0162",
+        "prompt_sha256": "03c7c08d71740e638821183135cc6a47d995764f9a5957d13905f958c9df36af"
+      },
+      {
+        "model_id": "EXPL-A1-0349",
+        "prompt_sha256": "0e31fdeb49587275ab89b52b89fcab8079fe2f54852d760be5b73b357210f12b"
+      },
+      {
+        "model_id": "EXPL-A1-0451",
+        "prompt_sha256": "cd3226772953e692a63b9c31b760da82a174758cd149f68fb10416a60470ce9e"
+      },
+      {
+        "model_id": "EXPL-A1-0441",
+        "prompt_sha256": "75999404f538fda82adf723c1e371a088b3e5ae1d476630d332e49ef77f342fc"
+      },
+      {
+        "model_id": "EXPL-A1-0465",
+        "prompt_sha256": "49398e20372377dc50d81c0b07e55e8a8d50ba961755290c68aee351e995e3b1"
+      },
+      {
+        "model_id": "EXPL-A1-0227",
+        "prompt_sha256": "c47a1cf29bb4ccee025649f326f3d3d0f2fce339c25b78b80e861a110dd1aa5c"
+      },
+      {
+        "model_id": "EXPL-A1-0160",
+        "prompt_sha256": "3063e57d5b27c5b50436b5bc021ba65717027d3a17057bb704080ad99f08ad4b"
+      },
+      {
+        "model_id": "EXPL-A1-0455",
+        "prompt_sha256": "317b80b5168a1e6116ac824464e59e55f40b0555859d9bbe24eb8396e28b5d83"
+      },
+      {
+        "model_id": "EXPL-A1-0077",
+        "prompt_sha256": "258b20e9b5c4bc8377da4e38fb5705e65487e951189be06d5378f1d213054a73"
+      },
+      {
+        "model_id": "EXPL-A1-0036",
+        "prompt_sha256": "4dd7c8fd28731f034982576c0fda6ddf2166a856f09267df96d1cd9b0cd0fc49"
+      },
+      {
+        "model_id": "EXPL-A1-0093",
+        "prompt_sha256": "0c5ecbc5c831d89e94ffc8032a1dfd81e278cb249c1dd874937d40fda9baf20e"
+      },
+      {
+        "model_id": "EXPL-A1-0477",
+        "prompt_sha256": "c50063a941a34b0340450ab573d56feb88447036cc009a2213b738abb67adee2"
+      },
+      {
+        "model_id": "EXPL-A1-0171",
+        "prompt_sha256": "ab3385f02147480da2c00c8a16bba2223fd3fa3d793532cd0a0f646efc25fef8"
+      },
+      {
+        "model_id": "EXPL-A1-0454",
+        "prompt_sha256": "c6af57f1ae46ca4ed932bebae771af899347890ae5d2cba3c92eb902aff1f14c"
+      },
+      {
+        "model_id": "EXPL-A1-0395",
+        "prompt_sha256": "6b5b64cccb5c6878b6d7cd05af19cc11d3e8c2d48513dbe82331bf886c04a835"
+      },
+      {
+        "model_id": "EXPL-A1-0225",
+        "prompt_sha256": "be419386fb200fe4a31ec9ed3461be3540969ea54bf5c7b0644388c2c73f73c1"
+      },
+      {
+        "model_id": "EXPL-A1-0206",
+        "prompt_sha256": "f71ee54aaaf719cf817220c8f91afae922f4908639af5a2bc6aedf2e92cb8ac4"
+      },
+      {
+        "model_id": "EXPL-A1-0233",
+        "prompt_sha256": "711603c74f9734c70a1d6e379bf393a68d0b65bd86c69e03ea44a4c342c0a014"
+      },
+      {
+        "model_id": "EXPL-A1-0258",
+        "prompt_sha256": "713ae8a30b02d73081679e15ffbdf65a254ba8d20b342ecf6a3be41fc6be17da"
+      },
+      {
+        "model_id": "EXPL-A1-0293",
+        "prompt_sha256": "72e33f00d29cc198c59ec8812dd698092ad07991f9c6b12bdd1031d124c15008"
+      },
+      {
+        "model_id": "EXPL-A1-0473",
+        "prompt_sha256": "4e1b1491379745690eb0d1abaef3d634f2459f148ac392c44a52f05371d13129"
+      },
+      {
+        "model_id": "EXPL-A1-0308",
+        "prompt_sha256": "1f91f756bd39939744b10690939cf75d2d37b72f9401e658e28510f534f79a08"
+      },
+      {
+        "model_id": "EXPL-A1-0091",
+        "prompt_sha256": "2d192bcb8e66858ffcbedae891d517c52b29dae08491bcf297a331bb64873b9f"
+      },
+      {
+        "model_id": "EXPL-A1-0287",
+        "prompt_sha256": "a988d3368a7e07ba83a1106ae98ff914facee66c7d1c7885208dc839dcfa909a"
+      },
+      {
+        "model_id": "EXPL-A1-0177",
+        "prompt_sha256": "93579561becf573e5effc2c6d59e7c3360fb25810bac85b2d1efb623cd5b65d6"
+      },
+      {
+        "model_id": "EXPL-A1-0305",
+        "prompt_sha256": "025fd85c13cecebfb3d5b40f542b7812d8b606646dca4dd5034f19a2b4a6edca"
+      },
+      {
+        "model_id": "EXPL-A1-0209",
+        "prompt_sha256": "e20de5b662dfa89bf70f5f0426b3312f4dc824465fac3542e92d344f3a40c1f0"
+      },
+      {
+        "model_id": "EXPL-A1-0392",
+        "prompt_sha256": "8f8e43151b5bb3ed4c77e610bc14de069041994ae91e05c8ae6862a041bc6eb2"
+      },
+      {
+        "model_id": "EXPL-A1-0009",
+        "prompt_sha256": "dca8ddb7270f975c57a75537fb5060e6f275e7c448bfca3b858741fc688ca6db"
+      },
+      {
+        "model_id": "EXPL-A1-0256",
+        "prompt_sha256": "d86c0c67e341c49d116745c5b8c26838cf7f06c540c02e534f58b448d5d89ae6"
+      },
+      {
+        "model_id": "EXPL-A1-0195",
+        "prompt_sha256": "7fe91f6fa475df3c9e9681f9709269de5417dcb20e3260d5b0162532bf4ca9a3"
+      },
+      {
+        "model_id": "EXPL-A1-0388",
+        "prompt_sha256": "0cf6dcd8518577e10f833d91bbfe0552c06389669bd2a4f420aa95b6d4046a09"
+      },
+      {
+        "model_id": "EXPL-A1-0197",
+        "prompt_sha256": "2e5350f8c5d86293334a73757462e8c15e6f64abc7ac70767dfba127176bbcb4"
+      },
+      {
+        "model_id": "EXPL-A1-0037",
+        "prompt_sha256": "6b840d912db5b15ffb6c5cbbafc0b4e8ec83bc361bcec595667f40043521a889"
+      },
+      {
+        "model_id": "EXPL-A1-0049",
+        "prompt_sha256": "1031433774d2f0015f5e6620d7da11f8e5828e2732b79fe7b2dddf783e2e7875"
+      },
+      {
+        "model_id": "EXPL-A1-0084",
+        "prompt_sha256": "4dbe646c50937634db31286e4964d9d3a4601aca752a3429d370e1c408ffaff4"
+      },
+      {
+        "model_id": "EXPL-A1-0294",
+        "prompt_sha256": "0299cf1bf25e7523d74fba09e065b9159cd7dcd91fae03744fa79074a8d283b9"
+      },
+      {
+        "model_id": "EXPL-A1-0155",
+        "prompt_sha256": "4c20cb1c5f598c096e5bc9e6f6710fcc3c242b6b4a87315dd0b79af40777d340"
+      },
+      {
+        "model_id": "EXPL-A1-0167",
+        "prompt_sha256": "2ee72932e60f3a043a2d99d1df9c51c8bc5f19bf94c73312bdf8eb9af7c4e565"
+      },
+      {
+        "model_id": "EXPL-A1-0022",
+        "prompt_sha256": "2f802ebe05afde102e754b81d3b12aec9601907f1244e0dcf682fd60b75a9546"
+      },
+      {
+        "model_id": "EXPL-A1-0027",
+        "prompt_sha256": "7dad72f8cd9e94e739a56c97021c47d84a2daf3a530c3eedafa231b4a9f9e16f"
+      },
+      {
+        "model_id": "EXPL-A1-0001",
+        "prompt_sha256": "38dbf819b786918c63bc720e86089d969da1d2437ca818ff8e69d1a936cf6db7"
+      },
+      {
+        "model_id": "EXPL-A1-0385",
+        "prompt_sha256": "86cdaeddc61a96a689a37032eafcd85d358fb8a8002ddbd265d399dbb0129226"
+      },
+      {
+        "model_id": "EXPL-A1-0444",
+        "prompt_sha256": "06eb36d90264cca0a4cd627f50a1621b02f2e851036a293ad0d93f2927547f81"
+      },
+      {
+        "model_id": "EXPL-A1-0269",
+        "prompt_sha256": "f99528ded04bf2dd248a3873f68682bd6451a45eed4d449ae05ff5a1f887b0f5"
+      },
+      {
+        "model_id": "EXPL-A1-0289",
+        "prompt_sha256": "7c01fd1baaf12d585b54a6fbd539035f974de715798c3426520e5a5be053cccc"
+      },
+      {
+        "model_id": "EXPL-A1-0163",
+        "prompt_sha256": "bbeb4b60b5f5724ed28832a09e4ed9c1bf1e7745a507162343b54c90cdfb903a"
+      },
+      {
+        "model_id": "EXPL-A1-0283",
+        "prompt_sha256": "821160296c503e1e1ef578f780048aab45c3274e12b456ebb94be06ce8d3c282"
+      },
+      {
+        "model_id": "EXPL-A1-0282",
+        "prompt_sha256": "b1ae4d030d8e43df4e1a3758517e462883f59b2173e012cdb14e9440e133e046"
+      },
+      {
+        "model_id": "EXPL-A1-0216",
+        "prompt_sha256": "4d2a016fba4d6597c1df3617be3f5ad25cef5c1f4bafc2c948d2f433accdb88e"
+      },
+      {
+        "model_id": "EXPL-A1-0449",
+        "prompt_sha256": "80947bf3024daf8e8483492f8e99f13e6b9320647622528eae435c6de5b8fb2b"
+      },
+      {
+        "model_id": "EXPL-A1-0235",
+        "prompt_sha256": "ca7935ef1e8a7023513170ce6b41ef268341e12d13134ec1b52a259c3016b5cd"
+      },
+      {
+        "model_id": "EXPL-A1-0125",
+        "prompt_sha256": "602450e0a33fee125cd7f7ba2a1081f9003227e0b2dd6b9a0eac07cac59249f5"
+      },
+      {
+        "model_id": "EXPL-A1-0059",
+        "prompt_sha256": "75470394ac3d70f75d73709772f26b261b658eff612e2a4a5bc77dda509faf14"
+      },
+      {
+        "model_id": "EXPL-A1-0370",
+        "prompt_sha256": "82e2b32a1c592c2ed90fe94e0a58c640faf2c9db1d3eecebfb1caf0357eacafa"
+      },
+      {
+        "model_id": "EXPL-A1-0353",
+        "prompt_sha256": "e8a1cabdc24481008cbdc1a3a57828ed97e16cf313fe2584c721049739a7d225"
+      },
+      {
+        "model_id": "EXPL-A1-0066",
+        "prompt_sha256": "04a237b967873fbb1c129ea04326a7eb195524fdf556135c4797c42f0238a080"
+      },
+      {
+        "model_id": "EXPL-A1-0380",
+        "prompt_sha256": "b8eb6f387815c01675b9cca4b6b3145c03b2869e8184a9e00e313a299a439e1f"
+      },
+      {
+        "model_id": "EXPL-A1-0047",
+        "prompt_sha256": "de6aa3c67308e8a0e329b50082c832e401d9d6667c2b9a42ae9e3df18e5540dd"
+      },
+      {
+        "model_id": "EXPL-A1-0143",
+        "prompt_sha256": "ce35b519baa83ba6d7b565e59afd85c44c5518614b3048700af4348b6527d7e1"
+      },
+      {
+        "model_id": "EXPL-A1-0332",
+        "prompt_sha256": "ef2ec72eee4f6812e52e15b92dbb3d4b18f4b89f44db32b252d51100a4bcaa22"
+      },
+      {
+        "model_id": "EXPL-A1-0007",
+        "prompt_sha256": "0fd95d07a643f9f481168347c50b9443786915ef12ed8bdf6d56a1b65f66748f"
+      },
+      {
+        "model_id": "EXPL-A1-0104",
+        "prompt_sha256": "e405c83e578b6ded0c77d0c8b84a521a686f325cee5967cad3e6f426573e5bdf"
+      },
+      {
+        "model_id": "EXPL-A1-0366",
+        "prompt_sha256": "d1fe113b0d49f0148ac5a042113adac98bd326917cc93a4a29ce540f46e663fb"
+      },
+      {
+        "model_id": "EXPL-A1-0062",
+        "prompt_sha256": "186816b44f78c922b609267a06417af27381b3e7777ab8d71257585a818516ef"
+      },
+      {
+        "model_id": "EXPL-A1-0387",
+        "prompt_sha256": "2e844e84c19905b9f09b125c3269a0497536175e6501ddb17ce52856e4985f5b"
+      },
+      {
+        "model_id": "EXPL-A1-0050",
+        "prompt_sha256": "a6190ce719ed1b09bca57d6c9b2eaf4ee04a2b5d5e42f7275f6f6cafdd945af7"
+      },
+      {
+        "model_id": "EXPL-A1-0065",
+        "prompt_sha256": "8d787ba41dc2d723c7894d5aa6f7fc1860a158ca918c20d38c9994a32fced327"
+      },
+      {
+        "model_id": "EXPL-A1-0085",
+        "prompt_sha256": "3c364ff20607f1da1638a090481090fa76aeef51e8cfbaebee656cf3ebbfb5d5"
+      },
+      {
+        "model_id": "EXPL-A1-0277",
+        "prompt_sha256": "3bcbedb3e501ca56d79397bfc500da1f4e04acfa73cf267772b36e64da68afe3"
+      }
+    ],
+    "sealed": [
+      {
+        "model_id": "EXPL-A1-0069",
+        "prompt_sha256": "b6af7eae622f0fc3a9cfbad10076251b23ac421e9d43dbbc6906e0008617cdb1"
+      },
+      {
+        "model_id": "EXPL-A1-0417",
+        "prompt_sha256": "fc79e91e4b5349b8393104d59b29220334a93d3437a79a6ef36e24676375c157"
+      },
+      {
+        "model_id": "EXPL-A1-0362",
+        "prompt_sha256": "32d026a80f14153bae2b862c5af4948ea4825815cfb85f8892f41192385840f7"
+      },
+      {
+        "model_id": "EXPL-A1-0173",
+        "prompt_sha256": "a7fb85982f666af4ca61e92a6662bd23699cf4d5b9463191c1aa52d668268871"
+      },
+      {
+        "model_id": "EXPL-A1-0373",
+        "prompt_sha256": "87170399c03318fdd52a583a2f8e88cf069b71a6b1cda4a470c52598c6ad11bd"
+      },
+      {
+        "model_id": "EXPL-A1-0217",
+        "prompt_sha256": "898b4ac9b6aeba44a8d742b0220dec9d4da530f34307e74bf2b487acc013203e"
+      },
+      {
+        "model_id": "EXPL-A1-0035",
+        "prompt_sha256": "2cfb63a4046fb9d2a4b6bf98f55636df13b36acaf9c631d8226cb0b4cce278df"
+      },
+      {
+        "model_id": "EXPL-A1-0178",
+        "prompt_sha256": "f9bf21c8df3077b086eca1715bcfff597f9de7b65938edbb9cc9354a59499874"
+      },
+      {
+        "model_id": "EXPL-A1-0121",
+        "prompt_sha256": "38da427deb395b2408277ec2d87b01e727003c321a6ded7b79ed1552a1128ec2"
+      },
+      {
+        "model_id": "EXPL-A1-0346",
+        "prompt_sha256": "f0509b2434acd80a96852b149f7d9c53e0a2fa213e38be493034d4e6d03c000b"
+      },
+      {
+        "model_id": "EXPL-A1-0116",
+        "prompt_sha256": "2cd2825914d4b433f1a4fd80cc8961c9971fde0c8ad72a375a2adc439ff1653f"
+      },
+      {
+        "model_id": "EXPL-A1-0063",
+        "prompt_sha256": "b29b683eb430e2557a2ffc44117239c260033995169e7a06b9e3ca51b60458f3"
+      },
+      {
+        "model_id": "EXPL-A1-0357",
+        "prompt_sha256": "06fea865c2b5276c5c60fa9c3c7459d9c388bebfa5a3345d8aba8a7798b19106"
+      },
+      {
+        "model_id": "EXPL-A1-0438",
+        "prompt_sha256": "ca7bfac698912a23995b8134e0bd338fdb1661da1a4d1ddde2bd3b98ebcb29b5"
+      },
+      {
+        "model_id": "EXPL-A1-0223",
+        "prompt_sha256": "8bc0b8fca8a18e86c493463e23158f71fd2e6ab2cfb4d86005a0fa803597ac3d"
+      },
+      {
+        "model_id": "EXPL-A1-0371",
+        "prompt_sha256": "2322b7e59cc0df414623ac31e6e70c4700aca8ab92abac36f1270c62522bd1db"
+      },
+      {
+        "model_id": "EXPL-A1-0328",
+        "prompt_sha256": "d76c37174594722a2bd1e50e7a01897590d4b1f7117d4103b262d7a336f157b7"
+      },
+      {
+        "model_id": "EXPL-A1-0232",
+        "prompt_sha256": "b97a7dc487835c4fe391c1c24fffaf2fc9a319d8020bf496faed5584add1e266"
+      },
+      {
+        "model_id": "EXPL-A1-0133",
+        "prompt_sha256": "df9c7e410ec0cf1e8b5b41d2a893a6b6227550273f7f70e1bb050f6159a04d29"
+      },
+      {
+        "model_id": "EXPL-A1-0458",
+        "prompt_sha256": "d41b95fc26668f63f310a7c39a56231b143c23aae93549b1ae54df7b9c4d1a93"
+      },
+      {
+        "model_id": "EXPL-A1-0475",
+        "prompt_sha256": "cf5b4e2a33878c1fb45bf6ea6771222f7df963e98a7b6f84867b917ebb6f31f5"
+      },
+      {
+        "model_id": "EXPL-A1-0271",
+        "prompt_sha256": "3f46e6f11637bae9a666f374c5740b8ef1a9d5e3faccc99e360758e0c96b70a6"
+      },
+      {
+        "model_id": "EXPL-A1-0399",
+        "prompt_sha256": "8e1fae0a82c8d108e3bf7d5abeace5ff979d11166121fbf6f3f476b9d378daf4"
+      },
+      {
+        "model_id": "EXPL-A1-0433",
+        "prompt_sha256": "bf4e7434491af3e1be7b7e8f0d785acd36009ac7901c3863fcaa2b100096f78e"
+      },
+      {
+        "model_id": "EXPL-A1-0219",
+        "prompt_sha256": "eb27a911268b41103398f00deb89c45455338df9ff4301f1cc36cfbdee995104"
+      },
+      {
+        "model_id": "EXPL-A1-0336",
+        "prompt_sha256": "6c010555fed1d417dfa9c08236b287470cec3e6dd06be74de0a9c541715a8db2"
+      },
+      {
+        "model_id": "EXPL-A1-0253",
+        "prompt_sha256": "67f67cb0a88eb342e913cb0c40c013e7e453e6290bba002045ef925ede24bbb4"
+      },
+      {
+        "model_id": "EXPL-A1-0421",
+        "prompt_sha256": "ac171ad1c6b793fe228ee09e2f518783aaab1b169023fe2862066a9a9a36254d"
+      },
+      {
+        "model_id": "EXPL-A1-0202",
+        "prompt_sha256": "df052955f7214fa6793dbbbaddf2ffbdba5a74aedadb796b5fa2de0617a10f4c"
+      },
+      {
+        "model_id": "EXPL-A1-0344",
+        "prompt_sha256": "a4d3309756c70c5a71b9e7c274934b25581372643921c9dd3e098c306c6ac9f6"
+      },
+      {
+        "model_id": "EXPL-A1-0343",
+        "prompt_sha256": "25384db53fe4fc02d62d9cd52e73387f60731e2ddfb8f116b65d34691e8cf28c"
+      },
+      {
+        "model_id": "EXPL-A1-0279",
+        "prompt_sha256": "f13db90461dc2ddc4ef45a9f3b150fca52c4c9633fecdd6c66af46def651c8e0"
+      },
+      {
+        "model_id": "EXPL-A1-0280",
+        "prompt_sha256": "ba2657c6a0d8ec79185420f159bb829ab5fc82916c1410b09b700d7b28b22f6b"
+      },
+      {
+        "model_id": "EXPL-A1-0408",
+        "prompt_sha256": "a2c8cd6ac7ac49f1e4810779e163cd53453cb1fa782388af56ccc547b85aeede"
+      },
+      {
+        "model_id": "EXPL-A1-0073",
+        "prompt_sha256": "0af3651e59197217fb9fd05a2d07be3ec851e7ef1618670fd9ff994f1cf4c289"
+      },
+      {
+        "model_id": "EXPL-A1-0348",
+        "prompt_sha256": "d7cb631dab62d8fc678f3be6f2b58bc7990263ff199c224e95da19f92b3e1ec9"
+      },
+      {
+        "model_id": "EXPL-A1-0397",
+        "prompt_sha256": "841bb20b33cc01c0f2c559f7ae76d46dabf061b526710a22676cb8566f501162"
+      },
+      {
+        "model_id": "EXPL-A1-0029",
+        "prompt_sha256": "e6113cdba308e241ef1a4eb296d904fa43938df59f8065cb86c289b2a4505fba"
+      },
+      {
+        "model_id": "EXPL-A1-0144",
+        "prompt_sha256": "51406b8806cd9e0035416d4b9aa7dc3d41b30decec3dc2d6cecc5d1ea0077c99"
+      },
+      {
+        "model_id": "EXPL-A1-0265",
+        "prompt_sha256": "d18e50da4d9048c52333970ff06812bfece15bbef202796092197a123c757062"
+      },
+      {
+        "model_id": "EXPL-A1-0419",
+        "prompt_sha256": "66242f55343a123db69cc714dd79e9cb9ec3813652059726985562757af590bb"
+      },
+      {
+        "model_id": "EXPL-A1-0303",
+        "prompt_sha256": "f7cb20aa0b0efa9b84af11971bee96fe656e527ac655c5f0756cde79ac2ea1b8"
+      },
+      {
+        "model_id": "EXPL-A1-0058",
+        "prompt_sha256": "9cd749e461f7a91b471f8cccd54651207b8b77287c641f531c31c639fcafaeb6"
+      },
+      {
+        "model_id": "EXPL-A1-0450",
+        "prompt_sha256": "487ae9a135e951ea0f0f38710191ae9d53d5110ba92d76f7449a1b19e3752a49"
+      },
+      {
+        "model_id": "EXPL-A1-0010",
+        "prompt_sha256": "03484127a8f5439aa3c1e3d18771417fef6e4e7971be9774e3c10694a2af04d4"
+      },
+      {
+        "model_id": "EXPL-A1-0324",
+        "prompt_sha256": "24812b5761db3f1b5458378f1e547be4fb899fd806e6d02da2cf13b4a4aeef3a"
+      },
+      {
+        "model_id": "EXPL-A1-0105",
+        "prompt_sha256": "a9b0404cce4b46c8b35f391e2f991202be22a20ed765ff4bbb8ef2a67d661f15"
+      },
+      {
+        "model_id": "EXPL-A1-0181",
+        "prompt_sha256": "b81126975db2ab5b48db677b468aa93bef1a464f026bfbe535634f85ebc26b76"
+      },
+      {
+        "model_id": "EXPL-A1-0340",
+        "prompt_sha256": "32bb7194182b0a34fad8b66ab118495913a23b87a8f5b72fb1876210e3f51975"
+      },
+      {
+        "model_id": "EXPL-A1-0281",
+        "prompt_sha256": "77b4e8c4036d6cfcc02ed49b06f2e86cd084a1610d41e6aec0119950fe02db0f"
+      },
+      {
+        "model_id": "EXPL-A1-0411",
+        "prompt_sha256": "e316b0347a7b74fa41f0520bfb7c93cb0d8f54364ef537abe5bb2070f228cc4b"
+      },
+      {
+        "model_id": "EXPL-A1-0201",
+        "prompt_sha256": "b6dab4d219ae683a3881441e9d26122ab3a777651b3bb8b50373286aa2cf6a2a"
+      },
+      {
+        "model_id": "EXPL-A1-0434",
+        "prompt_sha256": "e8a109f173e9793b55e329df75589ab877d2e993cd692c28a2e35eb5bebe56ca"
+      },
+      {
+        "model_id": "EXPL-A1-0123",
+        "prompt_sha256": "ff8f2fcb3348e03331e69b98d35e079093a86d0b2673b5d64b988a00f896db79"
+      },
+      {
+        "model_id": "EXPL-A1-0378",
+        "prompt_sha256": "d5ffdbee714813ff0ecbf41d3e1a687e1edd12fdaea9cc514a5a2c2773039a95"
+      },
+      {
+        "model_id": "EXPL-A1-0087",
+        "prompt_sha256": "7fb3fbceb614a37e61e73459658c2c48c59f320c566742f4d5ebb180c06e744d"
+      },
+      {
+        "model_id": "EXPL-A1-0347",
+        "prompt_sha256": "893199fc0b0c13be7a2ebe88b1e4a89b53a5a7d5e0e0f27f56382ff568240375"
+      },
+      {
+        "model_id": "EXPL-A1-0068",
+        "prompt_sha256": "8edbbd9ee9845f2d0e52a77de946d917d86393a920f1d246a3f78dab54a8cb0e"
+      },
+      {
+        "model_id": "EXPL-A1-0099",
+        "prompt_sha256": "7dbf89a9ca701624bf7c0c2b93994a4dd9690dbbd8bac13b153b24ad505c3133"
+      },
+      {
+        "model_id": "EXPL-A1-0414",
+        "prompt_sha256": "3194376f1e3f2596321b30d87bfceac5bda9b4c52cf7a57f4a6fb320b137044a"
+      },
+      {
+        "model_id": "EXPL-A1-0409",
+        "prompt_sha256": "5001e7cff25d7159ad1eb6fbf983855605a0949b85301a80fc66a88cc280e032"
+      },
+      {
+        "model_id": "EXPL-A1-0054",
+        "prompt_sha256": "050d4062e5db9b53b5191fff57f1d5b40e337d76f26ab673c9fb6d1344a0a09a"
+      },
+      {
+        "model_id": "EXPL-A1-0410",
+        "prompt_sha256": "eef57ba0cfe71b66aa0d26d615433cab3265000df4272aeafff3e1f075737cd8"
+      },
+      {
+        "model_id": "EXPL-A1-0129",
+        "prompt_sha256": "66e3b6fd400e2fad6b2761bfb71cd9582fc083909259b01d1831df791e94a9e5"
+      },
+      {
+        "model_id": "EXPL-A1-0168",
+        "prompt_sha256": "25c0cb6a5df7f4ca151167ed6be62706c4f1b887f94b497e3b1dad78b31cc710"
+      },
+      {
+        "model_id": "EXPL-A1-0379",
+        "prompt_sha256": "9cc4d69178dbec807372e28042e410989ea28cc779632595e4535c1a5f3af9cb"
+      },
+      {
+        "model_id": "EXPL-A1-0117",
+        "prompt_sha256": "135f2fd4c39b6c0fab82a7f74329d9f9ca74b08ef471fcba264e93fae3fb45a5"
+      },
+      {
+        "model_id": "EXPL-A1-0452",
+        "prompt_sha256": "f809e3f8a843cf8a57f2f29c29b9539aaad766512e5e74e1f6ccc31234050993"
+      },
+      {
+        "model_id": "EXPL-A1-0159",
+        "prompt_sha256": "1ab91b7591004d558473d13ddf5274505e25bd8565bbcb4dbed96114876612f2"
+      },
+      {
+        "model_id": "EXPL-A1-0295",
+        "prompt_sha256": "c21b256a719bf7cbddf51f25d0fcb767cf60060d9215e3ef11264524d5e1e462"
+      },
+      {
+        "model_id": "EXPL-A1-0257",
+        "prompt_sha256": "1b7caeefdcfc707266034f4e758121077284971c444c27ae46f7e93e2eec3856"
+      },
+      {
+        "model_id": "EXPL-A1-0436",
+        "prompt_sha256": "2de9c8380fe07f9460effac9c96332f63285902b86e6712fe62d6a64a1e9a4e2"
+      },
+      {
+        "model_id": "EXPL-A1-0290",
+        "prompt_sha256": "0569abec37d40a5c3fbd379d32dfcac94cc39e5f1e3ae5474b4452a5e8bb9897"
+      },
+      {
+        "model_id": "EXPL-A1-0341",
+        "prompt_sha256": "36598bbf23f6e1c26a40ca2834b875fea6b21cff097f7b759649c400a468792e"
+      },
+      {
+        "model_id": "EXPL-A1-0367",
+        "prompt_sha256": "9774874fe0a2f6b6830ab7cb9ffc1196695b56cf869c0e8c02d4ce389a4933fd"
+      },
+      {
+        "model_id": "EXPL-A1-0152",
+        "prompt_sha256": "41dced89c7b9cb2c4d1f7644a3a35b11cd1f905da2fa850a19aa5e80808dc190"
+      },
+      {
+        "model_id": "EXPL-A1-0236",
+        "prompt_sha256": "17b9c140e900a802a3f8a666bb8e0449aeddbf46ec5975aec05829f836fbaf98"
+      },
+      {
+        "model_id": "EXPL-A1-0158",
+        "prompt_sha256": "4e1e20638e0fb77ee29a39932c56d68bb613600e384640a8c3f2df988bbbc924"
+      },
+      {
+        "model_id": "EXPL-A1-0430",
+        "prompt_sha256": "562918963d78a1876583fd776f0d0ebd8604569aae37e3374ab87ab8fbefcd3b"
+      },
+      {
+        "model_id": "EXPL-A1-0255",
+        "prompt_sha256": "6879c051dce84b75bbd4b7cd9f5d0e1f338a31246a58fac6010bd3cb7d50d332"
+      },
+      {
+        "model_id": "EXPL-A1-0314",
+        "prompt_sha256": "8115e34919953a3ec584c53e747b37575e74190102d0b21babbc911df8dfffb0"
+      },
+      {
+        "model_id": "EXPL-A1-0096",
+        "prompt_sha256": "9bf0e42b50c7d0cded1fbd27108fa794ac944583cd56639a2e358e0d87497df9"
+      },
+      {
+        "model_id": "EXPL-A1-0046",
+        "prompt_sha256": "2dd308a172125ef65ac3c43e9efb64ee392f05b65b485f998213a42f442ba4e6"
+      },
+      {
+        "model_id": "EXPL-A1-0386",
+        "prompt_sha256": "c1f7ebf56ea278175b780d031bfac5bd4ad04e9d54da81234554726c8fb0fde9"
+      },
+      {
+        "model_id": "EXPL-A1-0306",
+        "prompt_sha256": "ac6dc10cc7e78e7648e9e33253bcacfc7f42deb1c464ec5c1e0dbb801a3d7efc"
+      },
+      {
+        "model_id": "EXPL-A1-0134",
+        "prompt_sha256": "ac2937afd396a316aa3d40439862d14938047e3b3b9d37de0c58dd2d2f0b0642"
+      },
+      {
+        "model_id": "EXPL-A1-0224",
+        "prompt_sha256": "62780208e0d5a4d283b30437028eef53c723eda70a8a66939c0e4620543cc698"
+      },
+      {
+        "model_id": "EXPL-A1-0140",
+        "prompt_sha256": "de11109597564ebf6ceaf4a91594ec42e075d737d95f01c111538e60b02da580"
+      },
+      {
+        "model_id": "EXPL-A1-0128",
+        "prompt_sha256": "5f03bcf2c5c9c5de19bf6f542bdf1fd44c0ca3f9a67d64c5227d18141239b2d7"
+      },
+      {
+        "model_id": "EXPL-A1-0012",
+        "prompt_sha256": "327cf65542e19da741144c9d5daab9da66130b133c1ef8ce8ad51fc487601aaf"
+      },
+      {
+        "model_id": "EXPL-A1-0268",
+        "prompt_sha256": "8a39f69ae82bf58870a51c200ea88fbebda35ef18846a9337e2d91b0000b33b8"
+      },
+      {
+        "model_id": "EXPL-A1-0026",
+        "prompt_sha256": "72c477163a43edcbf6a2f5b00f8b7cc8e268e8ff8bd528f84d8671145d5b303c"
+      },
+      {
+        "model_id": "EXPL-A1-0297",
+        "prompt_sha256": "050b1132fa52676d81051fcccdd18fe11757fe72b61f5f8ba4c5acce66b2ae13"
+      },
+      {
+        "model_id": "EXPL-A1-0248",
+        "prompt_sha256": "9a078bb18292d1a3c4e035d8c56421c394811642b332d384cdf6adbdf89d5e69"
+      },
+      {
+        "model_id": "EXPL-A1-0018",
+        "prompt_sha256": "1fb233818c0a1186c1ce3b3238a7b8829b1d54ac856f412597478e9aa106a72c"
+      },
+      {
+        "model_id": "EXPL-A1-0354",
+        "prompt_sha256": "53028c6cd8367a2469af30d586556b12412756ce953030719662e0332272cbea"
+      }
+    ]
+  },
+  "sha256": {
+    "stream_train.json": "8d1b021e077fc9eb5959922a05957fd058cbb42598580224af9190ff801d37cd",
+    "stream_dev.json": "e4cfc6a0b31b33ce03f6af07fbf905131f4dbed387f21e29689d529ec8b36876",
+    "sealed/stream_sealed.json": "80ab6986f098de1c12bb1b36aacb1dbdfc6f576f3b6483564b301e4472df33eb"
+  }
+}

@@ -36,7 +36,7 @@ def train(args):
     import peft
     import torch
     import transformers
-    from peft import PeftModel, prepare_model_for_kbit_training
+    from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
     from torch.utils.data import DataLoader
     from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, get_linear_schedule_with_warmup
     from train_phase2a_qlora import TokenDataset, collator
@@ -47,16 +47,18 @@ def train(args):
     before_base = {name: sha256(model_path / name) for name in pinned}
     if before_base != pinned or sha256(ROOT / cfg["compiler"]["path"]) != cfg["compiler"]["sha256"]:
         raise RuntimeError("STOP pinned model/tokenizer/compiler hash mismatch")
-    before_adapter = hashes(ADAPTER)
-    if not before_adapter:
+    source_adapter = None if args.fresh_lora else args.init_adapter.resolve()
+    before_adapter = {} if args.fresh_lora else hashes(source_adapter)
+    if not args.fresh_lora and not before_adapter:
         raise FileNotFoundError("source adapter missing")
     adapter_init, adapter_final = runtime / "adapter_init", runtime / "adapter_final"
-    shutil.copytree(ADAPTER, adapter_init)
-    if hashes(adapter_init) != before_adapter:
-        raise RuntimeError("STOP byte-exact adapter copy hash mismatch")
-    random.seed(SEED)
-    torch.manual_seed(SEED)
-    torch.cuda.manual_seed_all(SEED)
+    if not args.fresh_lora:
+        shutil.copytree(source_adapter, adapter_init)
+        if hashes(adapter_init) != before_adapter:
+            raise RuntimeError("STOP byte-exact adapter copy hash mismatch")
+    random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
     torch.cuda.empty_cache()
     tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
     tokenizer.pad_token = tokenizer.eos_token
@@ -74,7 +76,14 @@ def train(args):
     model.config.use_cache = False
     model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True,
                                             gradient_checkpointing_kwargs={"use_reentrant": False})
-    model = PeftModel.from_pretrained(model, adapter_init, is_trainable=True)
+    if args.fresh_lora:
+        lora = json.loads((ROOT / "research/protocols/phase3a_config.json").read_bytes())["training"]["lora"]
+        torch.manual_seed(args.seed)
+        torch.cuda.manual_seed_all(args.seed)
+        model = get_peft_model(model, LoraConfig(r=lora["rank"], lora_alpha=lora["alpha"],
+            lora_dropout=lora["dropout"], bias=lora["bias"], task_type="CAUSAL_LM", target_modules=lora["target_modules"]))
+    else:
+        model = PeftModel.from_pretrained(model, adapter_init, is_trainable=True)
     parameters = [p for p in model.parameters() if p.requires_grad]
     if not parameters:
         raise RuntimeError("STOP no trainable adapter parameters")
@@ -89,7 +98,7 @@ def train(args):
     train_started = time.perf_counter()
     for epoch in range(3):
         order = list(range(len(dataset)))
-        random.Random(SEED + 100003 * epoch).shuffle(order)
+        random.Random(args.seed + 100003 * epoch).shuffle(order)
         orders.append([rows[i]["example_id"] for i in order])
         loader = DataLoader(dataset, batch_size=1, sampler=order, collate_fn=collator(tokenizer.pad_token_id))
         for micro, batch in enumerate(loader, 1):
@@ -125,15 +134,17 @@ def train(args):
             raw = path.read_bytes()
             if b"\r\n" in raw:
                 path.write_bytes(raw.replace(b"\r\n", b"\n"))
-    if hashes(ADAPTER) != before_adapter or hashes(adapter_init) != before_adapter:
+    if not args.fresh_lora and (hashes(source_adapter) != before_adapter or hashes(adapter_init) != before_adapter):
         raise RuntimeError("STOP source or initialization adapter changed")
     after_base = {name: sha256(model_path / name) for name in pinned}
     if after_base != before_base:
         raise RuntimeError("STOP immutable base/tokenizer changed")
-    summary = dict(label="EXPLORATORY", seed=SEED, preflight=preflight,
+    summary = dict(label="EXPLORATORY", seed=args.seed, preflight=preflight,
                    data=args.data.as_posix(), data_sha256=sha256(args.data), examples=len(rows),
-                   source_adapter=ADAPTER.as_posix(), source_adapter_hashes=before_adapter,
-                   source_adapter_unchanged=True, adapter_init_hashes=hashes(adapter_init),
+                   source_adapter=source_adapter.as_posix() if source_adapter else None, source_adapter_hashes=before_adapter,
+                   source_adapter_unchanged=True if not args.fresh_lora else None,
+                   source_adapter_check="skipped_fresh_lora" if args.fresh_lora else "PASS",
+                   fresh_lora=args.fresh_lora, adapter_init_hashes=hashes(adapter_init),
                    adapter_final=adapter_final.as_posix(), adapter_final_hashes=hashes(adapter_final),
                    base_hashes_before=before_base, base_hashes_after=after_base,
                    recipe=dict(quantization="NF4", compute_dtype="fp16", double_quant=True,
@@ -141,7 +152,7 @@ def train(args):
                                betas=[0.9, 0.999], epsilon=1e-8, weight_decay=0,
                                scheduler="linear", warmup_steps=5, max_grad_norm=1.0,
                                micro_batch_size=1, gradient_accumulation_steps=8, epochs=3, max_length=320,
-                               epoch_shuffle_seeds=[SEED + 100003 * e for e in range(3)]),
+                               epoch_shuffle_seeds=[args.seed + 100003 * e for e in range(3)]),
                    exposures=exposures, optimizer_steps=steps, losses=losses, log=log, epoch_orders=orders,
                    first_loss=losses[0], last_loss=losses[-1],
                    peak_gpu_allocated_bytes=int(torch.cuda.max_memory_allocated()),
@@ -152,22 +163,32 @@ def train(args):
                                     peft=peft.__version__, bitsandbytes=bnb.__version__,
                                     cuda=torch.version.cuda, gpu=torch.cuda.get_device_name(0)))
     write_json(summary_path, summary)
-    append_run(dict(run="da_sft", status="PASS", summary=summary))
+    append_run(dict(run=args.run_name, status="PASS", summary=summary))
     print(f"SFT PASS: first={losses[0]}, last={losses[-1]}, minutes={summary['seconds'] / 60}", flush=True)
+
+
+def argument_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data", type=Path, required=True)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / ".runtime/explore/da_sft")
+    parser.add_argument("--summary", type=Path, default=ROOT / "research/explore/da/sft_summary.json")
+    parser.add_argument("--seed", type=int, default=SEED)
+    parser.add_argument("--run-name", default="da_sft")
+    initialization = parser.add_mutually_exclusive_group()
+    initialization.add_argument("--init-adapter", type=Path, default=ADAPTER)
+    initialization.add_argument("--fresh-lora", action="store_true")
+    return parser
 
 
 def main():
     sys.stdout.reconfigure(newline="\n")
     sys.stderr.reconfigure(newline="\n")
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data", type=Path, required=True)
-    parser.add_argument("--output-dir", type=Path, default=ROOT / ".runtime/explore/da_sft")
-    parser.add_argument("--summary", type=Path, default=ROOT / "research/explore/da/sft_summary.json")
+    parser = argument_parser()
     args = parser.parse_args()
     try:
         train(args)
     except Exception as exc:
-        append_run(dict(run="da_sft", status="FAIL", error=repr(exc), preflight=getattr(exc, "preflight", None)))
+        append_run(dict(run=args.run_name, seed=args.seed, status="FAIL", error=repr(exc), preflight=getattr(exc, "preflight", None)))
         raise
 
 

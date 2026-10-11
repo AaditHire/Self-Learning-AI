@@ -1,0 +1,3362 @@
+[
+  {
+    "stage": 1,
+    "template": "square_stride",
+    "k": 8,
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 10; print the total plus 8.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "10\n",
+        "expected_stdout": "108.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "12\n",
+        "expected_stdout": "108.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "21\n",
+        "expected_stdout": "508.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "30\n",
+        "expected_stdout": "1408.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0069",
+    "task_id": "EXPL-A1-S1-square_stride-08"
+  },
+  {
+    "stage": 1,
+    "template": "square_stride",
+    "k": 7,
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 9; print the total plus 7.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "9\n",
+        "expected_stdout": "88.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "11\n",
+        "expected_stdout": "88.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "19\n",
+        "expected_stdout": "412.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "27\n",
+        "expected_stdout": "1141.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0417",
+    "task_id": "EXPL-A1-S1-square_stride-07"
+  },
+  {
+    "stage": 1,
+    "template": "square_stride",
+    "k": 5,
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 7; print the total plus 5.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "7\n",
+        "expected_stdout": "54.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "9\n",
+        "expected_stdout": "54.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "15\n",
+        "expected_stdout": "250.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "21\n",
+        "expected_stdout": "691.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0362",
+    "task_id": "EXPL-A1-S1-square_stride-05"
+  },
+  {
+    "stage": 1,
+    "template": "affine_recurrence",
+    "k": 8,
+    "prompt": "Read nonnegative n. Start x at 8; repeat n times: double x and add 10. Print x.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "26.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "62.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "134.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "4\n",
+        "expected_stdout": "278.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0173",
+    "task_id": "EXPL-A1-S1-affine_recurrence-08"
+  },
+  {
+    "stage": 1,
+    "template": "affine_recurrence",
+    "k": 6,
+    "prompt": "Read nonnegative n. Start x at 6; repeat n times: double x and add 8. Print x.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "20.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "48.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "104.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "4\n",
+        "expected_stdout": "216.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0373",
+    "task_id": "EXPL-A1-S1-affine_recurrence-06"
+  },
+  {
+    "stage": 1,
+    "template": "affine_recurrence",
+    "k": 7,
+    "prompt": "Read nonnegative n. Start x at 7; repeat n times: double x and add 9. Print x.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "23.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "55.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "119.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "4\n",
+        "expected_stdout": "247.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0217",
+    "task_id": "EXPL-A1-S1-affine_recurrence-07"
+  },
+  {
+    "stage": 1,
+    "template": "odd_cube_sum",
+    "k": 9,
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 9.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "-9.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "-8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "-8.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5\n",
+        "expected_stdout": "144.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "8\n",
+        "expected_stdout": "487.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0035",
+    "task_id": "EXPL-A1-S1-odd_cube_sum-09"
+  },
+  {
+    "stage": 1,
+    "template": "odd_cube_sum",
+    "k": 7,
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 7.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "-7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "-6.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "-6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5\n",
+        "expected_stdout": "146.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "8\n",
+        "expected_stdout": "489.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0178",
+    "task_id": "EXPL-A1-S1-odd_cube_sum-07"
+  },
+  {
+    "stage": 1,
+    "template": "odd_cube_sum",
+    "k": 3,
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "-3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "-2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "-2.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5\n",
+        "expected_stdout": "150.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "8\n",
+        "expected_stdout": "493.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0121",
+    "task_id": "EXPL-A1-S1-odd_cube_sum-03"
+  },
+  {
+    "stage": 1,
+    "template": "descending_product",
+    "k": 15,
+    "prompt": "Read nonnegative n. Multiply the values 15+i for i from 0 up to but not including n; print the product minus n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "238.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "4077.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "5\n",
+        "expected_stdout": "1395355.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0346",
+    "task_id": "EXPL-A1-S1-descending_product-15"
+  },
+  {
+    "stage": 1,
+    "template": "descending_product",
+    "k": 12,
+    "prompt": "Read nonnegative n. Multiply the values 12+i for i from 0 up to but not including n; print the product minus n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "154.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "2181.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "5\n",
+        "expected_stdout": "524155.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0116",
+    "task_id": "EXPL-A1-S1-descending_product-12"
+  },
+  {
+    "stage": 1,
+    "template": "descending_product",
+    "k": 14,
+    "prompt": "Read nonnegative n. Multiply the values 14+i for i from 0 up to but not including n; print the product minus n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "208.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "3357.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "5\n",
+        "expected_stdout": "1028155.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0063",
+    "task_id": "EXPL-A1-S1-descending_product-14"
+  },
+  {
+    "stage": 1,
+    "template": "linear_term_sum",
+    "k": 7,
+    "prompt": "Read nonnegative n and sum 3*i+7 for i=1..n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "23.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "80.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "39.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0357",
+    "task_id": "EXPL-A1-S1-linear_term_sum-07"
+  },
+  {
+    "stage": 1,
+    "template": "linear_term_sum",
+    "k": 5,
+    "prompt": "Read nonnegative n and sum 3*i+5 for i=1..n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "19.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "70.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "33.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0438",
+    "task_id": "EXPL-A1-S1-linear_term_sum-05"
+  },
+  {
+    "stage": 1,
+    "template": "linear_term_sum",
+    "k": 11,
+    "prompt": "Read nonnegative n and sum 3*i+11 for i=1..n.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "31.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "100.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "51.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0223",
+    "task_id": "EXPL-A1-S1-linear_term_sum-11"
+  },
+  {
+    "stage": 1,
+    "template": "nonmultiple_count",
+    "k": 13,
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 15.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "3.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0371",
+    "task_id": "EXPL-A1-S1-nonmultiple_count-13"
+  },
+  {
+    "stage": 1,
+    "template": "nonmultiple_count",
+    "k": 4,
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 6.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "3.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0328",
+    "task_id": "EXPL-A1-S1-nonmultiple_count-04"
+  },
+  {
+    "stage": 1,
+    "template": "nonmultiple_count",
+    "k": 1,
+    "prompt": "Read nonnegative n and count values 1..n not divisible by 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "2.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0232",
+    "task_id": "EXPL-A1-S1-nonmultiple_count-01"
+  },
+  {
+    "stage": 1,
+    "template": "even_minus_odd",
+    "k": 12,
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 12.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "10.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0133",
+    "task_id": "EXPL-A1-S1-even_minus_odd-12"
+  },
+  {
+    "stage": 1,
+    "template": "even_minus_odd",
+    "k": 4,
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 4.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "2.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0458",
+    "task_id": "EXPL-A1-S1-even_minus_odd-04"
+  },
+  {
+    "stage": 1,
+    "template": "even_minus_odd",
+    "k": 9,
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 9.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "7.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0475",
+    "task_id": "EXPL-A1-S1-even_minus_odd-09"
+  },
+  {
+    "stage": 1,
+    "template": "cubic_offset_sum",
+    "k": 8,
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 8.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "233.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "44.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0271",
+    "task_id": "EXPL-A1-S1-cubic_offset_sum-08"
+  },
+  {
+    "stage": 1,
+    "template": "cubic_offset_sum",
+    "k": 2,
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 2.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "227.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "38.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0399",
+    "task_id": "EXPL-A1-S1-cubic_offset_sum-02"
+  },
+  {
+    "stage": 1,
+    "template": "cubic_offset_sum",
+    "k": 14,
+    "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 14.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "23.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "239.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "50.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0433",
+    "task_id": "EXPL-A1-S1-cubic_offset_sum-14"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 1,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'a'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAa"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGa"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXa"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHa"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Aa"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0219",
+    "task_id": "EXPL-A1-S2-upper_reverse-01"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 6,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'f'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAf"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGf"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXf"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHf"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Af"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0336",
+    "task_id": "EXPL-A1-S2-upper_reverse-06"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 2,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'b'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAb"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGb"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXb"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHb"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ab"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0253",
+    "task_id": "EXPL-A1-S2-upper_reverse-02"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 11,
+    "prompt": "Read text. Replace every 'k' with '#', then lowercase the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "kkZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0421",
+    "task_id": "EXPL-A1-S2-replace_lower-11"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 12,
+    "prompt": "Read text. Replace every 'l' with '#', then lowercase the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "a#pha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "he##o wor#d"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "llZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0202",
+    "task_id": "EXPL-A1-S2-replace_lower-12"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 3,
+    "prompt": "Read text. Replace every 'c' with '#', then lowercase the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ccZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0344",
+    "task_id": "EXPL-A1-S2-replace_lower-03"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 10,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'j'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphaj"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocoj"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzj"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldj"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "aj"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0343",
+    "task_id": "EXPL-A1-S2-trim_lower_suffix-10"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 5,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'e'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphae"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocoe"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyze"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worlde"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ae"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0279",
+    "task_id": "EXPL-A1-S2-trim_lower_suffix-05"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 2,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'b'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphab"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocob"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzb"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldb"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ab"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0280",
+    "task_id": "EXPL-A1-S2-trim_lower_suffix-02"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 12,
+    "prompt": "Read text. Reverse it, then replace each 'l' with '!'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahp!a"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "d!row o!!eH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "llZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0408",
+    "task_id": "EXPL-A1-S2-reverse_replace-12"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 8,
+    "prompt": "Read text. Reverse it, then replace each 'h' with '!'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "a!pla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "hhZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0073",
+    "task_id": "EXPL-A1-S2-reverse_replace-08"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 1,
+    "prompt": "Read text. Reverse it, then replace each 'a' with '!'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "!hpl!"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "aaZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0348",
+    "task_id": "EXPL-A1-S2-reverse_replace-01"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 15,
+    "prompt": "Read text and replace every 'o' with '#'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmn#"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0397",
+    "task_id": "EXPL-A1-S2-replace_vowel-15"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 6,
+    "prompt": "Read text and replace every 'f' with '#'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcde#ghijklmno"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0029",
+    "task_id": "EXPL-A1-S2-replace_vowel-06"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 7,
+    "prompt": "Read text and replace every 'g' with '#'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdef#hijklmno"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0144",
+    "task_id": "EXPL-A1-S2-replace_vowel-07"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 2,
+    "prompt": "Read text and print how many times 'b' occurs, plus 2.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "3.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0265",
+    "task_id": "EXPL-A1-S2-count_letter-02"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 15,
+    "prompt": "Read text and print how many times 'o' occurs, plus 15.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0419",
+    "task_id": "EXPL-A1-S2-count_letter-15"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 6,
+    "prompt": "Read text and print how many times 'f' occurs, plus 6.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "7.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0303",
+    "task_id": "EXPL-A1-S2-count_letter-06"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 3,
+    "prompt": "Read text; lowercase it and print LONG3 if length is at least 7, else the lowercase text.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG3"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG3"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG3"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0058",
+    "task_id": "EXPL-A1-S2-string_length_class-03"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 7,
+    "prompt": "Read text; lowercase it and print LONG7 if length is at least 11, else the lowercase text.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG7"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0450",
+    "task_id": "EXPL-A1-S2-string_length_class-07"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 14,
+    "prompt": "Read text; lowercase it and print LONG14 if length is at least 18, else the lowercase text.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmno"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0010",
+    "task_id": "EXPL-A1-S2-string_length_class-14"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 13,
+    "prompt": "Read text and print HAS13 if it contains 'mm', otherwise NO13.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO13"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO13"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO13"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO13"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO13"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0324",
+    "task_id": "EXPL-A1-S2-contains_label-13"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 9,
+    "prompt": "Read text and print HAS9 if it contains 'ii', otherwise NO9.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO9"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO9"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO9"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO9"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO9"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0105",
+    "task_id": "EXPL-A1-S2-contains_label-09"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 8,
+    "prompt": "Read text and print HAS8 if it contains 'hh', otherwise NO8.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO8"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO8"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO8"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO8"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO8"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0181",
+    "task_id": "EXPL-A1-S2-contains_label-08"
+  },
+  {
+    "stage": 3,
+    "template": "threshold_weighted",
+    "k": 1,
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 1; add twice each kept value; print the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1|2|-2|4\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "6|3|2|0\n",
+        "expected_stdout": "22.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "-4|-3|-2|-1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "10|0|10|0\n",
+        "expected_stdout": "40.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0340",
+    "task_id": "EXPL-A1-S3-threshold_weighted-01"
+  },
+  {
+    "stage": 3,
+    "template": "threshold_weighted",
+    "k": 2,
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 2; add twice each kept value; print the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2|3|-2|5\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "7|4|3|1\n",
+        "expected_stdout": "28.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "-4|-3|-2|-1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "10|0|10|0\n",
+        "expected_stdout": "40.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0281",
+    "task_id": "EXPL-A1-S3-threshold_weighted-02"
+  },
+  {
+    "stage": 3,
+    "template": "threshold_weighted",
+    "k": 15,
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 15; add twice each kept value; print the result.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "15|16|-2|18\n",
+        "expected_stdout": "68.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "20|17|16|14\n",
+        "expected_stdout": "106.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "-4|-3|-2|-1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "10|0|10|0\n",
+        "expected_stdout": "0.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0411",
+    "task_id": "EXPL-A1-S3-threshold_weighted-15"
+  },
+  {
+    "stage": 3,
+    "template": "indexed_difference",
+    "k": 9,
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 9 times the third minus the second.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "-14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "54.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0201",
+    "task_id": "EXPL-A1-S3-indexed_difference-09"
+  },
+  {
+    "stage": 3,
+    "template": "indexed_difference",
+    "k": 1,
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 1 times the third minus the second.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "-2.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0434",
+    "task_id": "EXPL-A1-S3-indexed_difference-01"
+  },
+  {
+    "stage": 3,
+    "template": "indexed_difference",
+    "k": 5,
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 5 times the third minus the second.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "-6.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "26.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0123",
+    "task_id": "EXPL-A1-S3-indexed_difference-05"
+  },
+  {
+    "stage": 3,
+    "template": "negative_square",
+    "k": 3,
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-1|0|-2|4\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-3|-2|-1|-4\n",
+        "expected_stdout": "33.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5|5|5|5\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "0|-5|0|2\n",
+        "expected_stdout": "28.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0378",
+    "task_id": "EXPL-A1-S3-negative_square-03"
+  },
+  {
+    "stage": 3,
+    "template": "negative_square",
+    "k": 11,
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 11.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-1|0|-2|4\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-3|-2|-1|-4\n",
+        "expected_stdout": "41.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5|5|5|5\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "0|-5|0|2\n",
+        "expected_stdout": "36.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0087",
+    "task_id": "EXPL-A1-S3-negative_square-11"
+  },
+  {
+    "stage": 3,
+    "template": "negative_square",
+    "k": 10,
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 10.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-1|0|-2|4\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-3|-2|-1|-4\n",
+        "expected_stdout": "40.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5|5|5|5\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "0|-5|0|2\n",
+        "expected_stdout": "35.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0347",
+    "task_id": "EXPL-A1-S3-negative_square-10"
+  },
+  {
+    "stage": 3,
+    "template": "pairwise_products",
+    "k": 15,
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 15.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "47.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "34.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "5.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0068",
+    "task_id": "EXPL-A1-S3-pairwise_products-15"
+  },
+  {
+    "stage": 3,
+    "template": "pairwise_products",
+    "k": 1,
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 1.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "33.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "20.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "-9.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0099",
+    "task_id": "EXPL-A1-S3-pairwise_products-01"
+  },
+  {
+    "stage": 3,
+    "template": "pairwise_products",
+    "k": 9,
+    "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 9.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "41.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "28.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "-1.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0414",
+    "task_id": "EXPL-A1-S3-pairwise_products-09"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 2,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+2*v3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "22.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0409",
+    "task_id": "EXPL-A1-S3-weighted_four-02"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 1,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+1*v3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "18.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "14.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0054",
+    "task_id": "EXPL-A1-S3-weighted_four-01"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 4,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+4*v3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "30.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "-4.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "20.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0410",
+    "task_id": "EXPL-A1-S3-weighted_four-04"
+  },
+  {
+    "stage": 3,
+    "template": "count_even_five",
+    "k": 11,
+    "prompt": "Read five numbers into an array, count even entries, then add 11.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4|5\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1|-4\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3|8\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0|0\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2|2\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0129",
+    "task_id": "EXPL-A1-S3-count_even_five-11"
+  },
+  {
+    "stage": 3,
+    "template": "count_even_five",
+    "k": 3,
+    "prompt": "Read five numbers into an array, count even entries, then add 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4|5\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1|-4\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3|8\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0|0\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2|2\n",
+        "expected_stdout": "8.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0168",
+    "task_id": "EXPL-A1-S3-count_even_five-03"
+  },
+  {
+    "stage": 3,
+    "template": "count_even_five",
+    "k": 1,
+    "prompt": "Read five numbers into an array, count even entries, then add 1.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4|5\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1|-4\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3|8\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0|0\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2|2\n",
+        "expected_stdout": "6.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0379",
+    "task_id": "EXPL-A1-S3-count_even_five-01"
+  },
+  {
+    "stage": 3,
+    "template": "absolute_sum_three",
+    "k": 3,
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "9.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0117",
+    "task_id": "EXPL-A1-S3-absolute_sum_three-03"
+  },
+  {
+    "stage": 3,
+    "template": "absolute_sum_three",
+    "k": 10,
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 10.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0452",
+    "task_id": "EXPL-A1-S3-absolute_sum_three-10"
+  },
+  {
+    "stage": 3,
+    "template": "absolute_sum_three",
+    "k": 1,
+    "prompt": "Read three numbers into an array and print the sum of absolute values plus 1.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "7.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0159",
+    "task_id": "EXPL-A1-S3-absolute_sum_three-01"
+  },
+  {
+    "stage": 3,
+    "template": "range_three",
+    "k": 14,
+    "prompt": "Read three numbers into an array and print max-min plus 14.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "21.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "19.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "14.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0295",
+    "task_id": "EXPL-A1-S3-range_three-14"
+  },
+  {
+    "stage": 3,
+    "template": "range_three",
+    "k": 5,
+    "prompt": "Read three numbers into an array and print max-min plus 5.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "5.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0257",
+    "task_id": "EXPL-A1-S3-range_three-05"
+  },
+  {
+    "stage": 3,
+    "template": "range_three",
+    "k": 1,
+    "prompt": "Read three numbers into an array and print max-min plus 1.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2\n",
+        "expected_stdout": "1.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0436",
+    "task_id": "EXPL-A1-S3-range_three-01"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 8,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'h'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ah"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redh"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloh"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xh"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/cath"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0290",
+    "task_id": "EXPL-A1-S4-swap_tag-08"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 3,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'c'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ac"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redc"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloc"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xc"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catc"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0341",
+    "task_id": "EXPL-A1-S4-swap_tag-03"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 10,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'j'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Aj"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redj"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloj"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xj"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catj"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0367",
+    "task_id": "EXPL-A1-S4-swap_tag-10"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 15,
+    "prompt": "Read left|right as text fields. Count 'o' in each field and print the total plus 15.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "oo|x\n",
+        "expected_stdout": "17.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|o\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0152",
+    "task_id": "EXPL-A1-S4-count_fields-15"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 14,
+    "prompt": "Read left|right as text fields. Count 'n' in each field and print the total plus 14.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "nn|x\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|n\n",
+        "expected_stdout": "15.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0236",
+    "task_id": "EXPL-A1-S4-count_fields-14"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 3,
+    "prompt": "Read left|right as text fields. Count 'c' in each field and print the total plus 3.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "cc|x\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|c\n",
+        "expected_stdout": "5.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0158",
+    "task_id": "EXPL-A1-S4-count_fields-03"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 15,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'o'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bo"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:blueo"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldo"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yo"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogo"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0430",
+    "task_id": "EXPL-A1-S4-case_join-15"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 4,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'd'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bd"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:blued"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldd"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yd"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogd"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0255",
+    "task_id": "EXPL-A1-S4-case_join-04"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 5,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'e'.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:be"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluee"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worlde"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:ye"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:doge"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0314",
+    "task_id": "EXPL-A1-S4-case_join-05"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 4,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'd' and right contains 'd'; otherwise print NO.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "d|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "d|d\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|d\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "da|db\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0096",
+    "task_id": "EXPL-A1-S4-contains_branch-04"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 14,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'n' and right contains 'n'; otherwise print NO.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "n|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "n|n\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|n\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "na|nb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0046",
+    "task_id": "EXPL-A1-S4-contains_branch-14"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 7,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'g' and right contains 'g'; otherwise print NO.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "g|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "g|g\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|g\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ga|gb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0386",
+    "task_id": "EXPL-A1-S4-contains_branch-07"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 4,
+    "prompt": "Read first|second and print <4:first>[second].",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<4:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<4:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<4:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<4:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<4:Cat>[Dog]"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0306",
+    "task_id": "EXPL-A1-S4-tagged_pair-04"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 3,
+    "prompt": "Read first|second and print <3:first>[second].",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<3:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<3:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<3:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<3:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<3:Cat>[Dog]"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0134",
+    "task_id": "EXPL-A1-S4-tagged_pair-03"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 10,
+    "prompt": "Read first|second and print <10:first>[second].",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<10:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<10:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<10:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<10:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<10:Cat>[Dog]"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0224",
+    "task_id": "EXPL-A1-S4-tagged_pair-10"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 11,
+    "prompt": "Read first|second and print X11=first then Y11=second on separate lines.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X11=A\nY11=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X11=Red\nY11=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X11=hello world\nY11=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X11=x\nY11=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X11=Cat\nY11=Dog"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0140",
+    "task_id": "EXPL-A1-S4-two_labeled_lines-11"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 12,
+    "prompt": "Read first|second and print X12=first then Y12=second on separate lines.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X12=A\nY12=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X12=Red\nY12=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X12=hello world\nY12=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X12=x\nY12=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X12=Cat\nY12=Dog"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0128",
+    "task_id": "EXPL-A1-S4-two_labeled_lines-12"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 5,
+    "prompt": "Read first|second and print X5=first then Y5=second on separate lines.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X5=A\nY5=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X5=Red\nY5=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X5=hello world\nY5=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X5=x\nY5=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X5=Cat\nY5=Dog"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0012",
+    "task_id": "EXPL-A1-S4-two_labeled_lines-05"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 15,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 15.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/15"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/15"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/15"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/15"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/15"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0268",
+    "task_id": "EXPL-A1-S4-case_pair-15"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 5,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 5.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/5"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/5"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/5"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/5"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/5"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0026",
+    "task_id": "EXPL-A1-S4-case_pair-05"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 7,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 7.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/7"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/7"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/7"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/7"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/7"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0297",
+    "task_id": "EXPL-A1-S4-case_pair-07"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 6,
+    "prompt": "Read first|second and print the product of their lengths plus 6.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "18.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "28.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "15.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0248",
+    "task_id": "EXPL-A1-S4-length_product-06"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 8,
+    "prompt": "Read first|second and print the product of their lengths plus 8.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "20.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "30.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "17.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0018",
+    "task_id": "EXPL-A1-S4-length_product-08"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 9,
+    "prompt": "Read first|second and print the product of their lengths plus 9.",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "21.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "31.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "18.0"
+      }
+    ],
+    "model_task_id": "EXPL-A1-0354",
+    "task_id": "EXPL-A1-S4-length_product-09"
+  }
+]
