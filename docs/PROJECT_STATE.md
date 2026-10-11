@@ -1,10 +1,10 @@
 # Project state — Self-Learning AI
 
-Last verified repository HEAD: `8abdccc06b86cb1d4c8848ce7291845587e38fdf`
-Last substantive state review: 2026-10-10
+Last verified repository HEAD: `b528a87eedaa812078daaa5caa57636818bbd534`
+Last substantive state review: 2026-10-11
 Current project-head model: Claude Opus 5.5 (designated by the user 2026-10-05; previous project head: Claude Sonnet)
 Current execution agent: Codex
-Current phase: Phase 4 (exploration lane): direction B, continual composition by RL. Step 2: diverse-format atoms (P2)
+Current phase: Phase 4 (exploration lane). Direction B (continual composition by RL) stopped at Gate DA; next: direction A, Step 1 forgetting stream (EXPLORATORY).
 
 Two-lane workflow: see AGENTS.md, §Two-lane workflow (from 2026-10-10); exploration and literature review: research/explore/README.md.
 
@@ -167,7 +167,17 @@ R1 is the operative methodology authority together with the documents R1 §9 mar
 
 ## J. Current next action
 
-Next action: P2 diverse-format atom SFT and reward-signal re-check (EXPLORATORY).
+Next action: Phase 4 direction A, Step 1: build a 4-stage task stream (at least 8 templates per stage) and check Gate G1 (naive training acquires each stage to at least 60% and forgets at least 50 pp).
+
+**Phase 4, direction B: stopped at Gate DA (2026-10-11, EXPLORATORY)**
+
+- P1 (commit 8abdccc): Gate F. F1 PASS (G=8 GRPO step fits in 6 GB). F2 FAIL: pair_and groups with reward signal 18.75% (< 25%); atom_single greedy 0%.
+- P2 (commit b528a87eedaa812078daaa5caa57636818bbd534): diverse-format atom SFT (W1-W4, offsets 20-39, 400 rows) from a copy of the CONF1 ISOLATED adapter.
+  atom_single 100%, atom_isolated 100%, held-out wording W5 about 100%; pair_and sample pass 0%, groups with signal 6.25%; graph 0.
+- Gate DA (pre-set: pair_and signal >= 25%, atom_single greedy >= 50%, atom_isolated greedy >= 80%): FAIL on pair_and.
+- Reading: the atoms are fully usable, including under new wording, but AND-composition never appears even in 8 samples, so a compiler-reward RL signal is absent at this scale. Usable atoms were not sufficient for composition to emerge.
+- Consequence (pre-set rule): direction B stops; direction A next.
+
 - **Agent:** the project head proposes the plan; the user decides.
 - **Type:** PLANNING.
 - **Still forbidden:** any further use of CONF1 confirmatory data for model selection or tuning; edits to frozen CONF1 artifacts; the sealed final-paper holdout.
