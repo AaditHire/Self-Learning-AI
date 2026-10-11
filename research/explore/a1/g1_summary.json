@@ -1,0 +1,43 @@
+{
+  "label": "EXPLORATORY",
+  "gate": "G1",
+  "acquisition_threshold": 0.6,
+  "forgetting_threshold_pp": 50,
+  "seeds": {
+    "20291016": {
+      "acquisition": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.9583333333333334
+      },
+      "final_forgetting_pp": {
+        "1": 100.0,
+        "2": 37.5,
+        "3": 95.83333333333334
+      },
+      "mean_final_forgetting_pp": 77.77777777777779,
+      "acquisition_pass": true,
+      "forgetting_pass": true,
+      "passed": true
+    },
+    "20291017": {
+      "acquisition": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.9166666666666666
+      },
+      "final_forgetting_pp": {
+        "1": 100.0,
+        "2": 50.0,
+        "3": 100.0
+      },
+      "mean_final_forgetting_pp": 83.33333333333333,
+      "acquisition_pass": true,
+      "forgetting_pass": true,
+      "passed": true
+    }
+  },
+  "verdict": "PASS"
+}
