@@ -89,14 +89,14 @@ def train(args):
         raise RuntimeError("STOP no trainable adapter parameters")
     optimizer = bnb.optim.PagedAdamW8bit(parameters, lr=2e-4, betas=(0.9, 0.999), eps=1e-8, weight_decay=0)
     steps_per_epoch = math.ceil(len(dataset) / 8)
-    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=5, num_training_steps=3 * steps_per_epoch)
+    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=args.epochs * steps_per_epoch)
     torch.cuda.reset_peak_memory_stats()
     model.train()
     optimizer.zero_grad(set_to_none=True)
     losses, log, orders = [], [], []
     exposures = steps = 0
     train_started = time.perf_counter()
-    for epoch in range(3):
+    for epoch in range(args.epochs):
         order = list(range(len(dataset)))
         random.Random(args.seed + 100003 * epoch).shuffle(order)
         orders.append([rows[i]["example_id"] for i in order])
@@ -122,9 +122,9 @@ def train(args):
                               grad_norm=grad, learning_rate=scheduler.get_last_lr()[0],
                               seconds=time.perf_counter() - train_started)
                 log.append(record)
-                print(f"SFT {steps}/{3 * steps_per_epoch} epoch={epoch} loss={record['mean_micro_loss']:.6f}", flush=True)
+                print(f"SFT {steps}/{args.epochs * steps_per_epoch} epoch={epoch} loss={record['mean_micro_loss']:.6f}", flush=True)
     train_seconds = time.perf_counter() - train_started
-    if exposures != 3 * len(dataset) or steps != 3 * steps_per_epoch:
+    if exposures != args.epochs * len(dataset) or steps != args.epochs * steps_per_epoch:
         raise RuntimeError("STOP exposure/optimizer-step mismatch")
     model.save_pretrained(adapter_final, safe_serialization=True)
     tokenizer.save_pretrained(adapter_final)
@@ -150,9 +150,9 @@ def train(args):
                    recipe=dict(quantization="NF4", compute_dtype="fp16", double_quant=True,
                                use_reentrant=False, optimizer="PagedAdamW8bit", learning_rate=2e-4,
                                betas=[0.9, 0.999], epsilon=1e-8, weight_decay=0,
-                               scheduler="linear", warmup_steps=5, max_grad_norm=1.0,
-                               micro_batch_size=1, gradient_accumulation_steps=8, epochs=3, max_length=320,
-                               epoch_shuffle_seeds=[args.seed + 100003 * e for e in range(3)]),
+                               scheduler="linear", warmup_steps=args.warmup_steps, max_grad_norm=1.0,
+                               micro_batch_size=1, gradient_accumulation_steps=8, epochs=args.epochs, max_length=320,
+                               epoch_shuffle_seeds=[args.seed + 100003 * e for e in range(args.epochs)]),
                    exposures=exposures, optimizer_steps=steps, losses=losses, log=log, epoch_orders=orders,
                    first_loss=losses[0], last_loss=losses[-1],
                    peak_gpu_allocated_bytes=int(torch.cuda.max_memory_allocated()),
@@ -174,6 +174,8 @@ def argument_parser():
     parser.add_argument("--summary", type=Path, default=ROOT / "research/explore/da/sft_summary.json")
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--run-name", default="da_sft")
+    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--warmup-steps", type=int, default=5)
     initialization = parser.add_mutually_exclusive_group()
     initialization.add_argument("--init-adapter", type=Path, default=ADAPTER)
     initialization.add_argument("--fresh-lora", action="store_true")

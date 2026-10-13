@@ -23,9 +23,13 @@ def child(command, seed, stage, operation):
         raise RuntimeError(f"STOP child {operation} stage {stage} exited {result.returncode}")
 
 
-def stream(seed):
-    output = DATA / str(seed)
-    runtime = ROOT / ".runtime/explore/a1" / str(seed)
+def stream_paths(seed, method="naive"):
+    return ((DATA / str(seed), ROOT / ".runtime/explore/a1" / str(seed)) if method == "naive" else
+            (ROOT / "research/explore/a2/opr" / str(seed), ROOT / ".runtime/explore/a2/opr" / str(seed)))
+
+
+def stream(seed, method="naive"):
+    output, runtime = stream_paths(seed, method)
     if output.exists() or runtime.exists():
         raise FileExistsError("seed outputs already exist")
     rows = load_dev_pool(DATA / "stream_train.json")
@@ -34,12 +38,19 @@ def stream(seed):
         selected = [r for r in rows if r["stage"] == stage]
         if len(selected) != 72:
             raise ValueError("STOP expected 72 training rows per stage")
+        if method == "opr" and stage > 1:
+            replay_path = output / f"replay_stage{stage}.json"
+            child([ROOT / "scripts/explore_opr_sample.py", "--seed", seed, "--stage", stage,
+                   "--adapter", runtime / f"stage{stage - 1}/adapter_final", "--output", replay_path],
+                  seed, stage, "replay")
+            selected += load_dev_pool(replay_path)["rows"]
         train_rows = output / f"train_rows_stage{stage}.json"
         write_json(train_rows, selected)
         stage_runtime = runtime / f"stage{stage}"
         train_summary = output / f"train_stage{stage}.json"
         command = [ROOT / "scripts/explore_sft.py", "--seed", seed, "--data", train_rows,
-                   "--output-dir", stage_runtime, "--summary", train_summary, "--run-name", "a1_train"]
+                   "--output-dir", stage_runtime, "--summary", train_summary, "--run-name",
+                   "a1_train" if method == "naive" else "a2_opr_train"]
         command += (["--fresh-lora"] if stage == 1 else
                     ["--init-adapter", runtime / f"stage{stage - 1}/adapter_final"])
         child(command, seed, stage, "train")
@@ -59,7 +70,7 @@ def stream(seed):
                   training={s: {key: t[key] for key in ("first_loss", "last_loss", "peak_gpu_allocated_bytes",
                                                        "peak_gpu_reserved_bytes", "seconds", "training_seconds")} for s, t in training.items()})
     write_json(output / "results.json", result)
-    append_run(dict(run="a1_stream", status="PASS", summary=result))
+    append_run(dict(run="a1_stream" if method == "naive" else "a2_opr_stream", status="PASS", summary=result))
     print(f"A1 STREAM PASS seed={seed}", flush=True)
 
 
@@ -79,18 +90,25 @@ def gate():
     return summary
 
 
+def argument_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--seed", type=int, choices=(20291016, 20291017, 20291018), required=True)
+    parser.add_argument("--method", choices=("naive", "opr"), default="naive")
+    return parser
+
+
 def main():
     sys.stdout.reconfigure(newline="\n")
     sys.stderr.reconfigure(newline="\n")
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--seed", type=int, choices=(20291016, 20291017), required=True)
+    parser = argument_parser()
     args = parser.parse_args()
     try:
-        stream(args.seed)
-        if args.seed == 20291017:
+        stream(args.seed, args.method)
+        if args.seed == 20291017 and args.method == "naive":
             print(json.dumps(gate()), flush=True)
     except Exception as exc:
-        append_run(dict(run="a1_stream", seed=args.seed, status="FAIL", error=repr(exc)))
+        append_run(dict(run="a1_stream" if args.method == "naive" else "a2_opr_stream",
+                        seed=args.seed, status="FAIL", error=repr(exc)))
         raise
 
 
