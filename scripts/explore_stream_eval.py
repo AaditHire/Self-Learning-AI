@@ -53,7 +53,7 @@ def evaluate(args):
                    greedy_settings=effective_settings(model, tokenizer, 1, 0, cfg["evaluation"]["max_new_tokens"]),
                    seconds=time.perf_counter() - started)
     write_json(args.summary, summary)
-    append_run(dict(run="a1_eval", status="PASS", summary=summary))
+    append_run(dict(run=args.run_name, status="PASS", summary=summary))
     print(f"A1 EVAL PASS stages={args.stages}", flush=True)
 
 
@@ -64,11 +64,12 @@ def main():
     for name in ("adapter", "rows", "out-dir", "summary"):
         parser.add_argument(f"--{name}", type=Path, required=True)
     parser.add_argument("--stages", required=True)
+    parser.add_argument("--run-name", default="a1_eval")
     args = parser.parse_args()
     try:
         evaluate(args)
     except Exception as exc:
-        append_run(dict(run="a1_eval", status="FAIL", error=repr(exc), preflight=getattr(exc, "preflight", None)))
+        append_run(dict(run=args.run_name, status="FAIL", error=repr(exc), preflight=getattr(exc, "preflight", None)))
         raise
 
 

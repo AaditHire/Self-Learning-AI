@@ -79,7 +79,7 @@ def sample(args):
     result = dict(label="EXPLORATORY", seed=args.seed, stage=args.stage, sampling_seed=sampling_seed,
                   preflight=preflight, rows=replay, earlier_stages=summaries, records=records)
     write_json(args.output, result)
-    append_run(dict(run="a2_opr_sample", status="PASS", summary=result))
+    append_run(dict(run=args.run_name, status="PASS", summary=result))
 
 
 def main():
@@ -90,11 +90,12 @@ def main():
     parser.add_argument("--stage", type=int, choices=(2, 3, 4), required=True)
     parser.add_argument("--adapter", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--run-name", default="a2_opr_sample")
     args = parser.parse_args()
     try:
         sample(args)
     except Exception as exc:
-        append_run(dict(run="a2_opr_sample", seed=args.seed, stage=args.stage, status="FAIL",
+        append_run(dict(run=args.run_name, seed=args.seed, stage=args.stage, status="FAIL",
                         error=repr(exc), preflight=getattr(exc, "preflight", None)))
         raise
 

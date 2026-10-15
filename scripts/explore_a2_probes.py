@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from explore_a1_build import port
-from explore_a1_stream import child
+from explore_a1_stream import child, stream_paths
 from explore_b0_sample_check import completions, generation_kwargs, gpu_preflight, hashes, load_model, prompt_ids
 from self_learning_ai.explore.pools import load_dev_pool, write_json
 from self_learning_ai.explore.runlog import append_run
@@ -166,11 +166,12 @@ def probes(seed):
     print(f"PROBES PASS seed={seed}", flush=True)
 
 
-def gate_g2():
+def gate_g2(rank=None):
     seeds = {}
     for seed in SEEDS:
-        naive = load_dev_pool(DATA / str(seed) / "results.json")
-        output = ROOT / "research/explore/a2/opr" / str(seed)
+        naive_output = DATA / str(seed) if rank is None else stream_paths(seed, "naive", rank)[0]
+        naive = load_dev_pool(naive_output / "results.json")
+        output = ROOT / "research/explore/a2/opr" / str(seed) if rank is None else stream_paths(seed, "opr", rank)[0]
         opr = load_dev_pool(output / "results.json")
         c = sum(naive["accuracy_matrix"][s][s] for s in range(3)) / 3
         f = sum(opr["accuracy_matrix"][3][:3]) / 3
@@ -182,33 +183,47 @@ def gate_g2():
                                 naive_final_retention=sum(naive["accuracy_matrix"][3][:3]) / 3,
                                 opr_acquisition=opr["acquisition"], replay=replay,
                                 passed=100 * (c - f) >= 15)
+        if rank is not None:
+            seeds[str(seed)]["regime_valid"] = all(naive["accuracy_matrix"][s][s] >= 0.60 for s in range(4))
     result = dict(label="EXPLORATORY", gate="G2", ceiling_is_proxy=True, threshold_pp=15,
                   rule="gap >= 15 pp in all three seeds", seeds=seeds,
                   verdict="PASS" if all(s["passed"] for s in seeds.values()) else "FAIL")
-    write_json(ROOT / "research/explore/a2/g2_summary.json", result)
-    append_run(dict(run="a2_g2", status="PASS", summary=result))
+    output = ROOT / "research/explore/a2/g2_summary.json"
+    if rank is not None:
+        result.update(lora_rank=rank, regime_valid_all=all(s["regime_valid"] for s in seeds.values()))
+        output = ROOT / f"research/explore/a2/r{rank}/g2_summary.json"
+    write_json(output, result)
+    append_run(dict(run="a2_g2" if rank is None else f"a2_g2_r{rank}", status="PASS", summary=result))
     return result
+
+
+def argument_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--seed", type=int, choices=SEEDS)
+    parser.add_argument("--generation-only", action="store_true")
+    gates = parser.add_mutually_exclusive_group()
+    gates.add_argument("--g2", action="store_true")
+    gates.add_argument("--g2-rank", type=int)
+    return parser
 
 
 def main():
     sys.stdout.reconfigure(newline="\n")
     sys.stderr.reconfigure(newline="\n")
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--seed", type=int, choices=SEEDS)
-    parser.add_argument("--generation-only", action="store_true")
-    parser.add_argument("--g2", action="store_true")
+    parser = argument_parser()
     args = parser.parse_args()
-    if not args.g2 and args.seed is None:
+    if not args.g2 and args.g2_rank is None and args.seed is None:
         parser.error("--seed required for probes")
     try:
-        if args.g2:
-            print(gate_g2(), flush=True)
+        if args.g2 or args.g2_rank is not None:
+            print(gate_g2(args.g2_rank), flush=True)
         elif args.generation_only:
             generation(args.seed)
         else:
             probes(args.seed)
     except Exception as exc:
-        append_run(dict(run="a2_g2" if args.g2 else "a2_probes", seed=args.seed,
+        run = ("a2_g2" if args.g2 else f"a2_g2_r{args.g2_rank}") if args.g2 or args.g2_rank is not None else "a2_probes"
+        append_run(dict(run=run, seed=args.seed,
                         operation="generation" if args.generation_only else "orchestration", status="FAIL",
                         error=repr(exc), preflight=getattr(exc, "preflight", None)))
         raise

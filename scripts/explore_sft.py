@@ -26,6 +26,12 @@ def sha256(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
+def lora_settings(rank=16):
+    lora = json.loads((ROOT / "research/protocols/phase3a_config.json").read_bytes())["training"]["lora"]
+    return dict(r=rank, lora_alpha=2 * rank, lora_dropout=lora["dropout"],
+                bias=lora["bias"], task_type="CAUSAL_LM", target_modules=lora["target_modules"])
+
+
 def train(args):
     started = time.perf_counter()
     runtime, summary_path = args.output_dir.resolve(), args.summary.resolve()
@@ -77,11 +83,9 @@ def train(args):
     model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True,
                                             gradient_checkpointing_kwargs={"use_reentrant": False})
     if args.fresh_lora:
-        lora = json.loads((ROOT / "research/protocols/phase3a_config.json").read_bytes())["training"]["lora"]
         torch.manual_seed(args.seed)
         torch.cuda.manual_seed_all(args.seed)
-        model = get_peft_model(model, LoraConfig(r=lora["rank"], lora_alpha=lora["alpha"],
-            lora_dropout=lora["dropout"], bias=lora["bias"], task_type="CAUSAL_LM", target_modules=lora["target_modules"]))
+        model = get_peft_model(model, LoraConfig(**lora_settings(args.lora_rank)))
     else:
         model = PeftModel.from_pretrained(model, adapter_init, is_trainable=True)
     parameters = [p for p in model.parameters() if p.requires_grad]
@@ -152,6 +156,8 @@ def train(args):
                                betas=[0.9, 0.999], epsilon=1e-8, weight_decay=0,
                                scheduler="linear", warmup_steps=args.warmup_steps, max_grad_norm=1.0,
                                micro_batch_size=1, gradient_accumulation_steps=8, epochs=args.epochs, max_length=320,
+                               lora_rank=model.peft_config["default"].r,
+                               lora_alpha=model.peft_config["default"].lora_alpha,
                                epoch_shuffle_seeds=[args.seed + 100003 * e for e in range(args.epochs)]),
                    exposures=exposures, optimizer_steps=steps, losses=losses, log=log, epoch_orders=orders,
                    first_loss=losses[0], last_loss=losses[-1],
@@ -176,6 +182,7 @@ def argument_parser():
     parser.add_argument("--run-name", default="da_sft")
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--warmup-steps", type=int, default=5)
+    parser.add_argument("--lora-rank", type=int, default=16)
     initialization = parser.add_mutually_exclusive_group()
     initialization.add_argument("--init-adapter", type=Path, default=ADAPTER)
     initialization.add_argument("--fresh-lora", action="store_true")
