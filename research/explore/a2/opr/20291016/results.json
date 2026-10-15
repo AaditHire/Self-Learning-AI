@@ -1,0 +1,486 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291016,
+  "accuracy_matrix": [
+    [
+      1.0,
+      null,
+      null,
+      null
+    ],
+    [
+      1.0,
+      1.0,
+      null,
+      null
+    ],
+    [
+      0.9583333333333334,
+      1.0,
+      1.0,
+      null
+    ],
+    [
+      0.875,
+      1.0,
+      0.875,
+      0.875
+    ]
+  ],
+  "acquisition": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.875
+  },
+  "final_forgetting_pp": {
+    "1": 12.5,
+    "2": 0.0,
+    "3": 12.5
+  },
+  "mean_final_forgetting_pp": 8.333333333333334,
+  "checkpoints": {
+    "1": {
+      "1": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "square_stride": {
+            "passed": 3,
+            "total": 3
+          },
+          "affine_recurrence": {
+            "passed": 3,
+            "total": 3
+          },
+          "odd_cube_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "descending_product": {
+            "passed": 3,
+            "total": 3
+          },
+          "linear_term_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "nonmultiple_count": {
+            "passed": 3,
+            "total": 3
+          },
+          "even_minus_odd": {
+            "passed": 3,
+            "total": 3
+          },
+          "cubic_offset_sum": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      }
+    },
+    "2": {
+      "1": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "square_stride": {
+            "passed": 3,
+            "total": 3
+          },
+          "affine_recurrence": {
+            "passed": 3,
+            "total": 3
+          },
+          "odd_cube_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "descending_product": {
+            "passed": 3,
+            "total": 3
+          },
+          "linear_term_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "nonmultiple_count": {
+            "passed": 3,
+            "total": 3
+          },
+          "even_minus_odd": {
+            "passed": 3,
+            "total": 3
+          },
+          "cubic_offset_sum": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "2": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "upper_reverse": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_lower": {
+            "passed": 3,
+            "total": 3
+          },
+          "trim_lower_suffix": {
+            "passed": 3,
+            "total": 3
+          },
+          "reverse_replace": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_vowel": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_letter": {
+            "passed": 3,
+            "total": 3
+          },
+          "string_length_class": {
+            "passed": 3,
+            "total": 3
+          },
+          "contains_label": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      }
+    },
+    "3": {
+      "1": {
+        "tasks": 24,
+        "pass_rate": 0.9583333333333334,
+        "mean_partial_reward": 0.9666666666666667,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "square_stride": {
+            "passed": 3,
+            "total": 3
+          },
+          "affine_recurrence": {
+            "passed": 3,
+            "total": 3
+          },
+          "odd_cube_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "descending_product": {
+            "passed": 2,
+            "total": 3
+          },
+          "linear_term_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "nonmultiple_count": {
+            "passed": 3,
+            "total": 3
+          },
+          "even_minus_odd": {
+            "passed": 3,
+            "total": 3
+          },
+          "cubic_offset_sum": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "2": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "upper_reverse": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_lower": {
+            "passed": 3,
+            "total": 3
+          },
+          "trim_lower_suffix": {
+            "passed": 3,
+            "total": 3
+          },
+          "reverse_replace": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_vowel": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_letter": {
+            "passed": 3,
+            "total": 3
+          },
+          "string_length_class": {
+            "passed": 3,
+            "total": 3
+          },
+          "contains_label": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "3": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "threshold_weighted": {
+            "passed": 3,
+            "total": 3
+          },
+          "indexed_difference": {
+            "passed": 3,
+            "total": 3
+          },
+          "negative_square": {
+            "passed": 3,
+            "total": 3
+          },
+          "pairwise_products": {
+            "passed": 3,
+            "total": 3
+          },
+          "weighted_four": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_even_five": {
+            "passed": 3,
+            "total": 3
+          },
+          "absolute_sum_three": {
+            "passed": 3,
+            "total": 3
+          },
+          "range_three": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      }
+    },
+    "4": {
+      "1": {
+        "tasks": 24,
+        "pass_rate": 0.875,
+        "mean_partial_reward": 0.875,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "square_stride": {
+            "passed": 3,
+            "total": 3
+          },
+          "affine_recurrence": {
+            "passed": 3,
+            "total": 3
+          },
+          "odd_cube_sum": {
+            "passed": 0,
+            "total": 3
+          },
+          "descending_product": {
+            "passed": 3,
+            "total": 3
+          },
+          "linear_term_sum": {
+            "passed": 3,
+            "total": 3
+          },
+          "nonmultiple_count": {
+            "passed": 3,
+            "total": 3
+          },
+          "even_minus_odd": {
+            "passed": 3,
+            "total": 3
+          },
+          "cubic_offset_sum": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "2": {
+        "tasks": 24,
+        "pass_rate": 1.0,
+        "mean_partial_reward": 1.0,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "upper_reverse": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_lower": {
+            "passed": 3,
+            "total": 3
+          },
+          "trim_lower_suffix": {
+            "passed": 3,
+            "total": 3
+          },
+          "reverse_replace": {
+            "passed": 3,
+            "total": 3
+          },
+          "replace_vowel": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_letter": {
+            "passed": 3,
+            "total": 3
+          },
+          "string_length_class": {
+            "passed": 3,
+            "total": 3
+          },
+          "contains_label": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "3": {
+        "tasks": 24,
+        "pass_rate": 0.875,
+        "mean_partial_reward": 0.875,
+        "compile_failure_rate": 0.125,
+        "per_template": {
+          "threshold_weighted": {
+            "passed": 3,
+            "total": 3
+          },
+          "indexed_difference": {
+            "passed": 3,
+            "total": 3
+          },
+          "negative_square": {
+            "passed": 3,
+            "total": 3
+          },
+          "pairwise_products": {
+            "passed": 3,
+            "total": 3
+          },
+          "weighted_four": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_even_five": {
+            "passed": 3,
+            "total": 3
+          },
+          "absolute_sum_three": {
+            "passed": 0,
+            "total": 3
+          },
+          "range_three": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      },
+      "4": {
+        "tasks": 24,
+        "pass_rate": 0.875,
+        "mean_partial_reward": 0.875,
+        "compile_failure_rate": 0.0,
+        "per_template": {
+          "swap_tag": {
+            "passed": 3,
+            "total": 3
+          },
+          "count_fields": {
+            "passed": 3,
+            "total": 3
+          },
+          "case_join": {
+            "passed": 3,
+            "total": 3
+          },
+          "contains_branch": {
+            "passed": 3,
+            "total": 3
+          },
+          "tagged_pair": {
+            "passed": 0,
+            "total": 3
+          },
+          "two_labeled_lines": {
+            "passed": 3,
+            "total": 3
+          },
+          "case_pair": {
+            "passed": 3,
+            "total": 3
+          },
+          "length_product": {
+            "passed": 3,
+            "total": 3
+          }
+        }
+      }
+    }
+  },
+  "training": {
+    "1": {
+      "first_loss": 2.761842727661133,
+      "last_loss": 0.07291930168867111,
+      "peak_gpu_allocated_bytes": 3337534464,
+      "peak_gpu_reserved_bytes": 3728736256,
+      "seconds": 216.2673528999985,
+      "training_seconds": 192.82539279999764
+    },
+    "2": {
+      "first_loss": 2.222383737564087,
+      "last_loss": 0.0004938552738167346,
+      "peak_gpu_allocated_bytes": 3347909120,
+      "peak_gpu_reserved_bytes": 3785359360,
+      "seconds": 309.5185814999968,
+      "training_seconds": 284.5943905999993
+    },
+    "3": {
+      "first_loss": 1.186544418334961,
+      "last_loss": 0.0033001084811985493,
+      "peak_gpu_allocated_bytes": 3470628864,
+      "peak_gpu_reserved_bytes": 3783262208,
+      "seconds": 369.8134076000024,
+      "training_seconds": 345.1776032000016
+    },
+    "4": {
+      "first_loss": 0.06300728023052216,
+      "last_loss": 0.0014417768688872457,
+      "peak_gpu_allocated_bytes": 3470727168,
+      "peak_gpu_reserved_bytes": 3730833408,
+      "seconds": 372.6843273000013,
+      "training_seconds": 347.819736700003
+    }
+  }
+}

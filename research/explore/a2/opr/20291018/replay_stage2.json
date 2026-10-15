@@ -1,0 +1,1463 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291018,
+  "stage": 2,
+  "sampling_seed": 20293037,
+  "preflight": {
+    "ac_power": true,
+    "this_run_chain": [
+      {
+        "ProcessId": 28272,
+        "ParentProcessId": 27360,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 27360,
+        "ParentProcessId": 29788,
+        "Name": "python.exe"
+      }
+    ],
+    "other_python_processes": [],
+    "gpu_compute_processes": "2216, [Insufficient Permissions]\n10804, C:\\Windows\\explorer.exe\n9656, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13968, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n13940, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n14748, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n12584, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n17764, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.45\\msedgewebview2.exe\n20652, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n21520, C:\\Program Files\\Riot Vanguard\\vgtray.exe\n22584, C:\\Program Files\\AMD\\CNext\\CNext\\AMDRSSrcExt.exe\n22592, C:\\Program Files\\AMD\\CNext\\CNext\\RadeonSoftware.exe\n4180, C:\\Windows\\System32\\ApplicationFrameHost.exe\n17028, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24964, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n23848, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n27688, C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe\n5124, C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe\n22632, C:\\Windows\\System32\\ShellHost.exe",
+    "gpu_samples": [
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 5.0,
+        "raw": "995, 6144, 5"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 5.0,
+        "raw": "995, 6144, 5"
+      }
+    ],
+    "max_memory_used_mib": 995.0,
+    "mean_utilization_gpu_percent": 2.0,
+    "memory_threshold_mib": 1600,
+    "utilization_record_only": true
+  },
+  "rows": [
+    {
+      "stage": 1,
+      "template": "nonmultiple_count",
+      "k": 10,
+      "prompt": "Read nonnegative n and count values 1..n not divisible by 12.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 12 != 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "5.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "3.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0190"
+    },
+    {
+      "stage": 1,
+      "template": "nonmultiple_count",
+      "k": 11,
+      "prompt": "Read nonnegative n and count values 1..n not divisible by 13.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 13 != 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "5.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "3.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0319"
+    },
+    {
+      "stage": 1,
+      "template": "nonmultiple_count",
+      "k": 3,
+      "prompt": "Read nonnegative n and count values 1..n not divisible by 5.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 != 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "4.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "3.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0053"
+    },
+    {
+      "stage": 1,
+      "template": "cubic_offset_sum",
+      "k": 7,
+      "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 7.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 7.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "7.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "16.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "232.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "8.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "43.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0041"
+    },
+    {
+      "stage": 1,
+      "template": "affine_recurrence",
+      "k": 14,
+      "prompt": "Read nonnegative n. Start x at 14; repeat n times: double x and add 16. Print x.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "14.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "44.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "104.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "3\n",
+          "expected_stdout": "224.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "4\n",
+          "expected_stdout": "464.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0363"
+    },
+    {
+      "stage": 1,
+      "template": "odd_cube_sum",
+      "k": 6,
+      "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 6.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 6).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "-6.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "-5.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "-5.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "5\n",
+          "expected_stdout": "147.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "8\n",
+          "expected_stdout": "490.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0182"
+    },
+    {
+      "stage": 1,
+      "template": "cubic_offset_sum",
+      "k": 15,
+      "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 15.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "15.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "24.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "240.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "16.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "51.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0004"
+    },
+    {
+      "stage": 1,
+      "template": "even_minus_odd",
+      "k": 15,
+      "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 15.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "15.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "16.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "14.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "13.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0360"
+    },
+    {
+      "stage": 1,
+      "template": "affine_recurrence",
+      "k": 3,
+      "prompt": "Read nonnegative n. Start x at 3; repeat n times: double x and add 5. Print x.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "3.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "11.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "27.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "3\n",
+          "expected_stdout": "59.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "4\n",
+          "expected_stdout": "123.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0208"
+    },
+    {
+      "stage": 1,
+      "template": "square_stride",
+      "k": 3,
+      "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 5; print the total plus 3.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%5==0) { total+=i*i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "3.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "5\n",
+          "expected_stdout": "28.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "7\n",
+          "expected_stdout": "28.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "11\n",
+          "expected_stdout": "128.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "15\n",
+          "expected_stdout": "353.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0384"
+    },
+    {
+      "stage": 1,
+      "template": "cubic_offset_sum",
+      "k": 3,
+      "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 3.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "3.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "228.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "4.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "39.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0139"
+    },
+    {
+      "stage": 1,
+      "template": "linear_term_sum",
+      "k": 6,
+      "prompt": "Read nonnegative n and sum 3*i+6 for i=1..n.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 6. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "21.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "75.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "9.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "36.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0011"
+    },
+    {
+      "stage": 1,
+      "template": "square_stride",
+      "k": 6,
+      "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 8; print the total plus 6.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "6.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "8\n",
+          "expected_stdout": "70.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "10\n",
+          "expected_stdout": "70.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "17\n",
+          "expected_stdout": "326.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "24\n",
+          "expected_stdout": "902.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0276"
+    },
+    {
+      "stage": 1,
+      "template": "descending_product",
+      "k": 10,
+      "prompt": "Read nonnegative n. Multiply the values 10+i for i from 0 up to but not including n; print the product minus n.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "9.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "108.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "3\n",
+          "expected_stdout": "1317.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "5\n",
+          "expected_stdout": "240235.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0272"
+    },
+    {
+      "stage": 1,
+      "template": "linear_term_sum",
+      "k": 4,
+      "prompt": "Read nonnegative n and sum 3*i+4 for i=1..n.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "17.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "65.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "7.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "30.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0300"
+    },
+    {
+      "stage": 1,
+      "template": "linear_term_sum",
+      "k": 12,
+      "prompt": "Read nonnegative n and sum 3*i+12 for i=1..n.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 12. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "33.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "105.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "15.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "54.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0342"
+    },
+    {
+      "stage": 1,
+      "template": "nonmultiple_count",
+      "k": 14,
+      "prompt": "Read nonnegative n and count values 1..n not divisible by 16.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 16 != 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "5.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "3.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0094"
+    },
+    {
+      "stage": 1,
+      "template": "odd_cube_sum",
+      "k": 2,
+      "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 2.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 2).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "-2.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "-1.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "-1.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "5\n",
+          "expected_stdout": "151.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "8\n",
+          "expected_stdout": "494.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0005"
+    }
+  ],
+  "earlier_stages": {
+    "1": {
+      "prompts_drawn": 18,
+      "verified": 18,
+      "over_length_dropped": 0,
+      "retained": 18,
+      "pass_counts_per_sample": [
+        15,
+        18,
+        17,
+        16
+      ]
+    }
+  },
+  "records": [
+    {
+      "example_id": "EXPL-A1-0190",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nNUMBER number.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { INPUT(number). IF (number % 12 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 12 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 12 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nNUMBER number.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { INPUT(number). IF (number % 12 != 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": false,
+          "cases_passed": 0,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "syntax"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": false,
+          "cases_passed": 0,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "syntax"
+        }
+      ],
+      "first_passing_sample": 1,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0319",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 13 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 13 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nNUMBER number = 1.\nLOOP (TILL (number <= n, number++) { IF (number % 13 != 0) { count += 1. } }.\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 13 != 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": false,
+          "cases_passed": 0,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "syntax"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0053",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nNUMBER number.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { INPUT(number). IF (number % 5 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 != 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": false,
+          "cases_passed": 0,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "syntax"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 1,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0041",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 7.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 7.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 7.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 7.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0363",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=14.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+16. }\nDISPLAYNL(x)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0182",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 6).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER cube=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { cube=i*i*i. IF (i%2!=0) { total+=cube. } }\nDISPLAYNL(total-6).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 6).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 6)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0004",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0360",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 15.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0208",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=3.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+5. }\nDISPLAYNL(x)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0384",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%5==0) { total+=i*i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 == 0) { total += i * i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=3.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%5==0) { total+=i*i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 5 == 0) { total += i * i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0139",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 3.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0011",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 6. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 6. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 6. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 6. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0276",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%8==0) { total+=i*i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0272",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0300",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 4. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0342",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 12. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 12. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 12. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += 3 * i + 12. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0094",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 16 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 16 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 16 != 0) { count += 1. } }\nDISPLAYNL(count).",
+        "NUMBER n.\nINPUT(n).\nNUMBER count = 0.\nNUMBER number.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { INPUT(number). IF (number % 16 != 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": false,
+          "cases_passed": 0,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "syntax"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0005",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER cube=0.\nNUMBER odd=1.\nLOOP (NUMBER i=1 TILL i<=n, i++) { cube=odd*odd*odd. IF (odd%2!=0) { total+=cube. } odd+=2. }\nDISPLAYNL(total-2).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 2).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER cube=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { cube=i*i*i. IF (i%2!=0) { total+=cube. } }\nDISPLAYNL(total-2).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 0.\nNUMBER cube = 0.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { cube = i * i * i. IF (i % 2 != 0) { total += cube. } }\nDISPLAYNL(total - 2)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 2,
+          "cases_total": 5,
+          "all_pass": false,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 1,
+      "over_length_dropped": false
+    }
+  ]
+}

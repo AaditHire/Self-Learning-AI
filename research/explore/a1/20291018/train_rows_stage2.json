@@ -1,0 +1,2522 @@
+[
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 5,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'e'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAe"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGe"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXe"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHe"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ae"
+      }
+    ],
+    "example_id": "EXPL-A1-0118"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 14,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"n\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAn"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGn"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXn"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHn"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "An"
+      }
+    ],
+    "example_id": "EXPL-A1-0154"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 10,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'j'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAj"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGj"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXj"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHj"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Aj"
+      }
+    ],
+    "example_id": "EXPL-A1-0033"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 9,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'i'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"i\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAi"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGi"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXi"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHi"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ai"
+      }
+    ],
+    "example_id": "EXPL-A1-0048"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 15,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'o'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"o\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAo"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGo"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXo"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHo"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ao"
+      }
+    ],
+    "example_id": "EXPL-A1-0110"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 3,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'c'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"c\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAc"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGc"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXc"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHc"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ac"
+      }
+    ],
+    "example_id": "EXPL-A1-0435"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 12,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"l\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAl"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGl"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXl"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHl"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Al"
+      }
+    ],
+    "example_id": "EXPL-A1-0263"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 7,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'g'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"g\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAg"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGg"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXg"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHg"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ag"
+      }
+    ],
+    "example_id": "EXPL-A1-0284"
+  },
+  {
+    "stage": 2,
+    "template": "upper_reverse",
+    "k": 4,
+    "prompt": "Read text. Reverse it, convert it to uppercase, and append 'd'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"d\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "AHPLAd"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "OCOGd"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "ZYXd"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "DLROW OLLEHd"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "a\n",
+        "expected_stdout": "Ad"
+      }
+    ],
+    "example_id": "EXPL-A1-0457"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 6,
+    "prompt": "Read text. Replace every 'f' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"f\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ffZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0151"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 4,
+    "prompt": "Read text. Replace every 'd' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello worl#"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ddZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0285"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 2,
+    "prompt": "Read text. Replace every 'b' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"b\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "bbZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0241"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 14,
+    "prompt": "Read text. Replace every 'n' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"n\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "nnZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0056"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 9,
+    "prompt": "Read text. Replace every 'i' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"i\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "iiZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0086"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 15,
+    "prompt": "Read text. Replace every 'o' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"o\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "g#c#"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hell# w#rld"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ooZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0369"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 8,
+    "prompt": "Read text. Replace every 'h' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"h\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alp#a"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "hhZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0428"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 1,
+    "prompt": "Read text. Replace every 'a' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"a\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "#lph#"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "aaZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0103"
+  },
+  {
+    "stage": 2,
+    "template": "replace_lower",
+    "k": 7,
+    "prompt": "Read text. Replace every 'g' with '#', then lowercase the result.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "alpha"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "hello world"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ggZ\n",
+        "expected_stdout": "##z"
+      }
+    ],
+    "example_id": "EXPL-A1-0335"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 8,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'h'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"h\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphah"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocoh"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzh"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldh"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ah"
+      }
+    ],
+    "example_id": "EXPL-A1-0456"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 12,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"l\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphal"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocol"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzl"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldl"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "al"
+      }
+    ],
+    "example_id": "EXPL-A1-0237"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 13,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'm'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"m\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alpham"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocom"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzm"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldm"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "am"
+      }
+    ],
+    "example_id": "EXPL-A1-0420"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 7,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'g'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"g\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphag"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocog"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzg"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldg"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ag"
+      }
+    ],
+    "example_id": "EXPL-A1-0106"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 6,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'f'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"f\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphaf"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocof"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzf"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldf"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "af"
+      }
+    ],
+    "example_id": "EXPL-A1-0089"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 14,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"n\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphan"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocon"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzn"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldn"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "an"
+      }
+    ],
+    "example_id": "EXPL-A1-0406"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 15,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'o'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"o\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphao"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocoo"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzo"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldo"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ao"
+      }
+    ],
+    "example_id": "EXPL-A1-0292"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 3,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'c'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"c\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphac"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gococ"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzc"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldc"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ac"
+      }
+    ],
+    "example_id": "EXPL-A1-0355"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 9,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'i'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"i\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphai"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocoi"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzi"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldi"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "ai"
+      }
+    ],
+    "example_id": "EXPL-A1-0383"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 15,
+    "prompt": "Read text. Reverse it, then replace each 'o' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"o\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "!C!G"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlr!w !lleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ooZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0042"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 4,
+    "prompt": "Read text. Reverse it, then replace each 'd' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"d\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "!lrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ddZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0174"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 10,
+    "prompt": "Read text. Reverse it, then replace each 'j' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"j\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "jjZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0429"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 11,
+    "prompt": "Read text. Reverse it, then replace each 'k' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"k\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "kkZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0014"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 2,
+    "prompt": "Read text. Reverse it, then replace each 'b' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"b\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "bbZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0273"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 6,
+    "prompt": "Read text. Reverse it, then replace each 'f' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"f\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ffZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0267"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 5,
+    "prompt": "Read text. Reverse it, then replace each 'e' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"e\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow oll!H"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "eeZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0187"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 7,
+    "prompt": "Read text. Reverse it, then replace each 'g' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"g\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ggZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0088"
+  },
+  {
+    "stage": 2,
+    "template": "reverse_replace",
+    "k": 9,
+    "prompt": "Read text. Reverse it, then replace each 'i' with '!'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE reversed=strings.REVERSE(text).\nDISPLAYNL(strings.REPLACE(reversed,\"i\",\"!\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "alpha\n",
+        "expected_stdout": "ahpla"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "oCoG"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "xyz\n",
+        "expected_stdout": "zyx"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world\n",
+        "expected_stdout": "dlrow olleH"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "iiZ\n",
+        "expected_stdout": "Z!!"
+      }
+    ],
+    "example_id": "EXPL-A1-0211"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 2,
+    "prompt": "Read text and replace every 'b' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"b\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "#ananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "a#cdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0032"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 11,
+    "prompt": "Read text and replace every 'k' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"k\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghij#lmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0234"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 9,
+    "prompt": "Read text and replace every 'i' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"i\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seas#de"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "M#xed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefgh#jklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0186"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 3,
+    "prompt": "Read text and replace every 'c' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"c\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "ab#defghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0317"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 1,
+    "prompt": "Read text and replace every 'a' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"a\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "se#side"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "b#n#n#s"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "#bcdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0122"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 13,
+    "prompt": "Read text and replace every 'm' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"m\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijkl#no"
+      }
+    ],
+    "example_id": "EXPL-A1-0238"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 12,
+    "prompt": "Read text and replace every 'l' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"l\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijk#mno"
+      }
+    ],
+    "example_id": "EXPL-A1-0070"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 14,
+    "prompt": "Read text and replace every 'n' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"n\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "ba#a#as"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklm#o"
+      }
+    ],
+    "example_id": "EXPL-A1-0286"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 4,
+    "prompt": "Read text and replace every 'd' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"d\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seasi#e"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixe# CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abc#efghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0266"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 11,
+    "prompt": "Read text and print how many times 'k' occurs, plus 11.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"k\")+11).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "12.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0469"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 7,
+    "prompt": "Read text and print how many times 'g' occurs, plus 7.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"g\")+7).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "8.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0000"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 10,
+    "prompt": "Read text and print how many times 'j' occurs, plus 10.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "11.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0179"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 4,
+    "prompt": "Read text and print how many times 'd' occurs, plus 4.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"d\")+4).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "5.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0288"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 8,
+    "prompt": "Read text and print how many times 'h' occurs, plus 8.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"h\")+8).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "9.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0310"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 1,
+    "prompt": "Read text and print how many times 'a' occurs, plus 1.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"a\")+1).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "2.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0095"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 13,
+    "prompt": "Read text and print how many times 'm' occurs, plus 13.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"m\")+13).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "14.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0231"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 5,
+    "prompt": "Read text and print how many times 'e' occurs, plus 5.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"e\")+5).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "6.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0364"
+  },
+  {
+    "stage": 2,
+    "template": "count_letter",
+    "k": 12,
+    "prompt": "Read text and print how many times 'l' occurs, plus 12.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"l\")+12).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "13.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0398"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 2,
+    "prompt": "Read text; lowercase it and print LONG2 if length is at least 6, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=6) { DISPLAYNL(\"LONG2\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG2"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG2"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG2"
+      }
+    ],
+    "example_id": "EXPL-A1-0298"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 13,
+    "prompt": "Read text; lowercase it and print LONG13 if length is at least 17, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0327"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 1,
+    "prompt": "Read text; lowercase it and print LONG1 if length is at least 5, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=5) { DISPLAYNL(\"LONG1\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG1"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG1"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG1"
+      }
+    ],
+    "example_id": "EXPL-A1-0442"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 10,
+    "prompt": "Read text; lowercase it and print LONG10 if length is at least 14, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=14) { DISPLAYNL(\"LONG10\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG10"
+      }
+    ],
+    "example_id": "EXPL-A1-0443"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 4,
+    "prompt": "Read text; lowercase it and print LONG4 if length is at least 8, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=8) { DISPLAYNL(\"LONG4\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG4"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG4"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG4"
+      }
+    ],
+    "example_id": "EXPL-A1-0243"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 6,
+    "prompt": "Read text; lowercase it and print LONG6 if length is at least 10, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=10) { DISPLAYNL(\"LONG6\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG6"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG6"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG6"
+      }
+    ],
+    "example_id": "EXPL-A1-0002"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 15,
+    "prompt": "Read text; lowercase it and print LONG15 if length is at least 19, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=19) { DISPLAYNL(\"LONG15\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0072"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 5,
+    "prompt": "Read text; lowercase it and print LONG5 if length is at least 9, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=9) { DISPLAYNL(\"LONG5\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "LONG5"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "LONG5"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "LONG5"
+      }
+    ],
+    "example_id": "EXPL-A1-0439"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 12,
+    "prompt": "Read text; lowercase it and print LONG12 if length is at least 16, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=16) { DISPLAYNL(\"LONG12\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0422"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 4,
+    "prompt": "Read text and print HAS4 if it contains 'dd', otherwise NO4.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"dd\")) { DISPLAYNL(\"HAS4\"). } ELSE { DISPLAYNL(\"NO4\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO4"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO4"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO4"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO4"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO4"
+      }
+    ],
+    "example_id": "EXPL-A1-0127"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 2,
+    "prompt": "Read text and print HAS2 if it contains 'bb', otherwise NO2.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"bb\")) { DISPLAYNL(\"HAS2\"). } ELSE { DISPLAYNL(\"NO2\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO2"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO2"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO2"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO2"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO2"
+      }
+    ],
+    "example_id": "EXPL-A1-0112"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 14,
+    "prompt": "Read text and print HAS14 if it contains 'nn', otherwise NO14.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"nn\")) { DISPLAYNL(\"HAS14\"). } ELSE { DISPLAYNL(\"NO14\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO14"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO14"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO14"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO14"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO14"
+      }
+    ],
+    "example_id": "EXPL-A1-0130"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 1,
+    "prompt": "Read text and print HAS1 if it contains 'aa', otherwise NO1.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"aa\")) { DISPLAYNL(\"HAS1\"). } ELSE { DISPLAYNL(\"NO1\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO1"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO1"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO1"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO1"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO1"
+      }
+    ],
+    "example_id": "EXPL-A1-0025"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 5,
+    "prompt": "Read text and print HAS5 if it contains 'ee', otherwise NO5.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"ee\")) { DISPLAYNL(\"HAS5\"). } ELSE { DISPLAYNL(\"NO5\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO5"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO5"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO5"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO5"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO5"
+      }
+    ],
+    "example_id": "EXPL-A1-0259"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 7,
+    "prompt": "Read text and print HAS7 if it contains 'gg', otherwise NO7.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"gg\")) { DISPLAYNL(\"HAS7\"). } ELSE { DISPLAYNL(\"NO7\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO7"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO7"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO7"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO7"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO7"
+      }
+    ],
+    "example_id": "EXPL-A1-0003"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 3,
+    "prompt": "Read text and print HAS3 if it contains 'cc', otherwise NO3.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"cc\")) { DISPLAYNL(\"HAS3\"). } ELSE { DISPLAYNL(\"NO3\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO3"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO3"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO3"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO3"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO3"
+      }
+    ],
+    "example_id": "EXPL-A1-0114"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 15,
+    "prompt": "Read text and print HAS15 if it contains 'oo', otherwise NO15.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"oo\")) { DISPLAYNL(\"HAS15\"). } ELSE { DISPLAYNL(\"NO15\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO15"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO15"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO15"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO15"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO15"
+      }
+    ],
+    "example_id": "EXPL-A1-0291"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 12,
+    "prompt": "Read text and print HAS12 if it contains 'll', otherwise NO12.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"ll\")) { DISPLAYNL(\"HAS12\"). } ELSE { DISPLAYNL(\"NO12\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO12"
+      }
+    ],
+    "example_id": "EXPL-A1-0391"
+  }
+]

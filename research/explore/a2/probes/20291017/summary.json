@@ -1,0 +1,630 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291017,
+  "stages": {
+    "1": {
+      "forgotten_set_size": 24,
+      "prefix": {
+        "total": 24,
+        "recovered": 0,
+        "compile_failure_rate": 0.9166666666666666
+      },
+      "cue": {
+        "total": 24,
+        "recovered": 0,
+        "compile_failure_rate": 0.625
+      },
+      "latest_scaffold_beyond_prefix": 0,
+      "per_template": {
+        "square_stride": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "affine_recurrence": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "odd_cube_sum": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "descending_product": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 0.3333333333333333
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "linear_term_sum": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "nonmultiple_count": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "even_minus_odd": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "cubic_offset_sum": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        }
+      },
+      "relearn": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 0.875,
+          "mean_partial_reward": 0.9249999999999999,
+          "compile_failure_rate": 0.0,
+          "per_template": {
+            "square_stride": {
+              "passed": 3,
+              "total": 3
+            },
+            "affine_recurrence": {
+              "passed": 3,
+              "total": 3
+            },
+            "odd_cube_sum": {
+              "passed": 0,
+              "total": 3
+            },
+            "descending_product": {
+              "passed": 3,
+              "total": 3
+            },
+            "linear_term_sum": {
+              "passed": 3,
+              "total": 3
+            },
+            "nonmultiple_count": {
+              "passed": 3,
+              "total": 3
+            },
+            "even_minus_odd": {
+              "passed": 3,
+              "total": 3
+            },
+            "cubic_offset_sum": {
+              "passed": 3,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 24,
+          "recovered": 21,
+          "compile_failure_rate": 0.0
+        },
+        "optimizer_steps": 5
+      },
+      "fresh_control": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 0.0,
+          "mean_partial_reward": 0.0,
+          "compile_failure_rate": 1.0,
+          "per_template": {
+            "square_stride": {
+              "passed": 0,
+              "total": 3
+            },
+            "affine_recurrence": {
+              "passed": 0,
+              "total": 3
+            },
+            "odd_cube_sum": {
+              "passed": 0,
+              "total": 3
+            },
+            "descending_product": {
+              "passed": 0,
+              "total": 3
+            },
+            "linear_term_sum": {
+              "passed": 0,
+              "total": 3
+            },
+            "nonmultiple_count": {
+              "passed": 0,
+              "total": 3
+            },
+            "even_minus_odd": {
+              "passed": 0,
+              "total": 3
+            },
+            "cubic_offset_sum": {
+              "passed": 0,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 24,
+          "recovered": 0,
+          "compile_failure_rate": 1.0
+        },
+        "optimizer_steps": 5
+      }
+    },
+    "2": {
+      "forgotten_set_size": 12,
+      "prefix": {
+        "total": 12,
+        "recovered": 0,
+        "compile_failure_rate": 1.0
+      },
+      "cue": {
+        "total": 12,
+        "recovered": 9,
+        "compile_failure_rate": 0.25
+      },
+      "latest_scaffold_beyond_prefix": 0,
+      "per_template": {
+        "upper_reverse": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 3,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "replace_lower": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 3,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "trim_lower_suffix": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "reverse_replace": {
+          "prefix": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          },
+          "cue": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          }
+        },
+        "replace_vowel": {
+          "prefix": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          },
+          "cue": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          }
+        },
+        "count_letter": {
+          "prefix": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          },
+          "cue": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          }
+        },
+        "string_length_class": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 3,
+            "compile_failure_rate": 0.0
+          }
+        },
+        "contains_label": {
+          "prefix": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          },
+          "cue": {
+            "total": 0,
+            "recovered": 0,
+            "compile_failure_rate": null
+          }
+        }
+      },
+      "relearn": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 1.0,
+          "mean_partial_reward": 1.0,
+          "compile_failure_rate": 0.0,
+          "per_template": {
+            "upper_reverse": {
+              "passed": 3,
+              "total": 3
+            },
+            "replace_lower": {
+              "passed": 3,
+              "total": 3
+            },
+            "trim_lower_suffix": {
+              "passed": 3,
+              "total": 3
+            },
+            "reverse_replace": {
+              "passed": 3,
+              "total": 3
+            },
+            "replace_vowel": {
+              "passed": 3,
+              "total": 3
+            },
+            "count_letter": {
+              "passed": 3,
+              "total": 3
+            },
+            "string_length_class": {
+              "passed": 3,
+              "total": 3
+            },
+            "contains_label": {
+              "passed": 3,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 12,
+          "recovered": 12,
+          "compile_failure_rate": 0.0
+        },
+        "optimizer_steps": 5
+      },
+      "fresh_control": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 0.0,
+          "mean_partial_reward": 0.0,
+          "compile_failure_rate": 1.0,
+          "per_template": {
+            "upper_reverse": {
+              "passed": 0,
+              "total": 3
+            },
+            "replace_lower": {
+              "passed": 0,
+              "total": 3
+            },
+            "trim_lower_suffix": {
+              "passed": 0,
+              "total": 3
+            },
+            "reverse_replace": {
+              "passed": 0,
+              "total": 3
+            },
+            "replace_vowel": {
+              "passed": 0,
+              "total": 3
+            },
+            "count_letter": {
+              "passed": 0,
+              "total": 3
+            },
+            "string_length_class": {
+              "passed": 0,
+              "total": 3
+            },
+            "contains_label": {
+              "passed": 0,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 12,
+          "recovered": 0,
+          "compile_failure_rate": 1.0
+        },
+        "optimizer_steps": 5
+      }
+    },
+    "3": {
+      "forgotten_set_size": 24,
+      "prefix": {
+        "total": 24,
+        "recovered": 0,
+        "compile_failure_rate": 0.875
+      },
+      "cue": {
+        "total": 24,
+        "recovered": 0,
+        "compile_failure_rate": 1.0
+      },
+      "latest_scaffold_beyond_prefix": 0,
+      "per_template": {
+        "threshold_weighted": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 0.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "indexed_difference": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "negative_square": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "pairwise_products": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "weighted_four": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "count_even_five": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "absolute_sum_three": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        },
+        "range_three": {
+          "prefix": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          },
+          "cue": {
+            "total": 3,
+            "recovered": 0,
+            "compile_failure_rate": 1.0
+          }
+        }
+      },
+      "relearn": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 1.0,
+          "mean_partial_reward": 1.0,
+          "compile_failure_rate": 0.0,
+          "per_template": {
+            "threshold_weighted": {
+              "passed": 3,
+              "total": 3
+            },
+            "indexed_difference": {
+              "passed": 3,
+              "total": 3
+            },
+            "negative_square": {
+              "passed": 3,
+              "total": 3
+            },
+            "pairwise_products": {
+              "passed": 3,
+              "total": 3
+            },
+            "weighted_four": {
+              "passed": 3,
+              "total": 3
+            },
+            "count_even_five": {
+              "passed": 3,
+              "total": 3
+            },
+            "absolute_sum_three": {
+              "passed": 3,
+              "total": 3
+            },
+            "range_three": {
+              "passed": 3,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 24,
+          "recovered": 24,
+          "compile_failure_rate": 0.0
+        },
+        "optimizer_steps": 5
+      },
+      "fresh_control": {
+        "stage_metrics": {
+          "tasks": 24,
+          "pass_rate": 0.0,
+          "mean_partial_reward": 0.0,
+          "compile_failure_rate": 1.0,
+          "per_template": {
+            "threshold_weighted": {
+              "passed": 0,
+              "total": 3
+            },
+            "indexed_difference": {
+              "passed": 0,
+              "total": 3
+            },
+            "negative_square": {
+              "passed": 0,
+              "total": 3
+            },
+            "pairwise_products": {
+              "passed": 0,
+              "total": 3
+            },
+            "weighted_four": {
+              "passed": 0,
+              "total": 3
+            },
+            "count_even_five": {
+              "passed": 0,
+              "total": 3
+            },
+            "absolute_sum_three": {
+              "passed": 0,
+              "total": 3
+            },
+            "range_three": {
+              "passed": 0,
+              "total": 3
+            }
+          }
+        },
+        "forgotten_set": {
+          "total": 24,
+          "recovered": 0,
+          "compile_failure_rate": 1.0
+        },
+        "optimizer_steps": 5
+      }
+    }
+  }
+}

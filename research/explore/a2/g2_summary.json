@@ -1,0 +1,307 @@
+{
+  "label": "EXPLORATORY",
+  "gate": "G2",
+  "ceiling_is_proxy": true,
+  "threshold_pp": 15,
+  "rule": "gap >= 15 pp in all three seeds",
+  "seeds": {
+    "20291016": {
+      "ceiling_proxy": 1.0,
+      "opr_final_retention": 0.9166666666666666,
+      "gap_pp": 8.333333333333337,
+      "naive_final_retention": 0.2222222222222222,
+      "opr_acquisition": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.875
+      },
+      "replay": {
+        "2": {
+          "1": {
+            "prompts_drawn": 18,
+            "verified": 18,
+            "over_length_dropped": 0,
+            "retained": 18,
+            "pass_counts_per_sample": [
+              17,
+              18,
+              18,
+              17
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "3": {
+          "1": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              9,
+              9,
+              9,
+              9
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              9,
+              9,
+              9,
+              9
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "4": {
+          "1": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          },
+          "3": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          }
+        }
+      },
+      "passed": false
+    },
+    "20291017": {
+      "ceiling_proxy": 1.0,
+      "opr_final_retention": 0.9027777777777778,
+      "gap_pp": 9.722222222222221,
+      "naive_final_retention": 0.16666666666666666,
+      "opr_acquisition": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.875
+      },
+      "replay": {
+        "2": {
+          "1": {
+            "prompts_drawn": 18,
+            "verified": 18,
+            "over_length_dropped": 0,
+            "retained": 18,
+            "pass_counts_per_sample": [
+              18,
+              18,
+              18,
+              18
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "3": {
+          "1": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              8,
+              8,
+              9,
+              9
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              9,
+              9,
+              9,
+              9
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "4": {
+          "1": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              5
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              5,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          },
+          "3": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          }
+        }
+      },
+      "passed": false
+    },
+    "20291018": {
+      "ceiling_proxy": 0.9861111111111112,
+      "opr_final_retention": 0.9027777777777778,
+      "gap_pp": 8.333333333333337,
+      "naive_final_retention": 0.125,
+      "opr_acquisition": {
+        "1": 0.9583333333333334,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.875
+      },
+      "replay": {
+        "2": {
+          "1": {
+            "prompts_drawn": 18,
+            "verified": 18,
+            "over_length_dropped": 0,
+            "retained": 18,
+            "pass_counts_per_sample": [
+              15,
+              18,
+              17,
+              16
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "3": {
+          "1": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              9,
+              9,
+              8,
+              9
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 9,
+            "verified": 9,
+            "over_length_dropped": 0,
+            "retained": 9,
+            "pass_counts_per_sample": [
+              9,
+              9,
+              9,
+              9
+            ],
+            "verification_rate": 1.0
+          }
+        },
+        "4": {
+          "1": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              5,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          },
+          "2": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          },
+          "3": {
+            "prompts_drawn": 6,
+            "verified": 6,
+            "over_length_dropped": 0,
+            "retained": 6,
+            "pass_counts_per_sample": [
+              6,
+              6,
+              6,
+              6
+            ],
+            "verification_rate": 1.0
+          }
+        }
+      },
+      "passed": false
+    }
+  },
+  "verdict": "FAIL"
+}

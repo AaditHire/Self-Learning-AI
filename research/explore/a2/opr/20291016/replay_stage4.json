@@ -1,0 +1,1487 @@
+{
+  "label": "EXPLORATORY",
+  "seed": 20291016,
+  "stage": 4,
+  "sampling_seed": 20295035,
+  "preflight": {
+    "ac_power": true,
+    "this_run_chain": [
+      {
+        "ProcessId": 20912,
+        "ParentProcessId": 4340,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 4340,
+        "ParentProcessId": 29788,
+        "Name": "python.exe"
+      }
+    ],
+    "other_python_processes": [],
+    "gpu_compute_processes": "2216, [Insufficient Permissions]\n10804, C:\\Windows\\explorer.exe\n9656, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13968, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n13940, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n14748, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n12584, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n17764, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.45\\msedgewebview2.exe\n20652, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n21520, C:\\Program Files\\Riot Vanguard\\vgtray.exe\n22584, C:\\Program Files\\AMD\\CNext\\CNext\\AMDRSSrcExt.exe\n22592, C:\\Program Files\\AMD\\CNext\\CNext\\RadeonSoftware.exe\n4180, C:\\Windows\\System32\\ApplicationFrameHost.exe\n17028, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24964, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n23848, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n27688, C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe\n5124, C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe\n22632, C:\\Windows\\System32\\ShellHost.exe",
+    "gpu_samples": [
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 3.0,
+        "raw": "995, 6144, 3"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      }
+    ],
+    "max_memory_used_mib": 995.0,
+    "mean_utilization_gpu_percent": 0.6,
+    "memory_threshold_mib": 1600,
+    "utilization_record_only": true
+  },
+  "rows": [
+    {
+      "stage": 1,
+      "template": "square_stride",
+      "k": 13,
+      "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 15; print the total plus 13.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 13.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 15 == 0) { total += i * i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "13.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "15\n",
+          "expected_stdout": "238.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "17\n",
+          "expected_stdout": "238.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "31\n",
+          "expected_stdout": "1138.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "45\n",
+          "expected_stdout": "3163.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0015"
+    },
+    {
+      "stage": 1,
+      "template": "cubic_offset_sum",
+      "k": 12,
+      "prompt": "Read nonnegative n, sum the cubes from 1 through n, then add 12.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 12.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "21.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "237.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "13.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "48.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0083"
+    },
+    {
+      "stage": 1,
+      "template": "affine_recurrence",
+      "k": 5,
+      "prompt": "Read nonnegative n. Start x at 5; repeat n times: double x and add 7. Print x.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER x=5.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+7. }\nDISPLAYNL(x).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "5.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "17.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "41.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "3\n",
+          "expected_stdout": "89.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "4\n",
+          "expected_stdout": "185.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0466"
+    },
+    {
+      "stage": 1,
+      "template": "even_minus_odd",
+      "k": 1,
+      "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 1.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "-2.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "-1.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0359"
+    },
+    {
+      "stage": 1,
+      "template": "even_minus_odd",
+      "k": 11,
+      "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 11.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 11.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "11.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "2\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "5\n",
+          "expected_stdout": "8.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1\n",
+          "expected_stdout": "10.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "3\n",
+          "expected_stdout": "9.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0403"
+    },
+    {
+      "stage": 1,
+      "template": "descending_product",
+      "k": 10,
+      "prompt": "Read nonnegative n. Multiply the values 10+i for i from 0 up to but not including n; print the product minus n.",
+      "target": "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0\n",
+          "expected_stdout": "1.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "1\n",
+          "expected_stdout": "9.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "2\n",
+          "expected_stdout": "108.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "3\n",
+          "expected_stdout": "1317.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "5\n",
+          "expected_stdout": "240235.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0272"
+    },
+    {
+      "stage": 2,
+      "template": "string_length_class",
+      "k": 13,
+      "prompt": "Read text; lowercase it and print LONG13 if length is at least 17, else the lowercase text.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low = strings.LOWER(text).\nIF (strings.LENGTH(low)>=17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "GoCo\n",
+          "expected_stdout": "goco"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "alpha beta\n",
+          "expected_stdout": "alpha beta"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "XyZ\n",
+          "expected_stdout": "xyz"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Mixed CASE\n",
+          "expected_stdout": "mixed case"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "abcdefghijklmno\n",
+          "expected_stdout": "abcdefghijklmno"
+        }
+      ],
+      "example_id": "EXPL-A1-0327"
+    },
+    {
+      "stage": 2,
+      "template": "count_letter",
+      "k": 10,
+      "prompt": "Read text and print how many times 'j' occurs, plus 10.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "seaside\n",
+          "expected_stdout": "10.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "bananas\n",
+          "expected_stdout": "10.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "uvwxyzABC\n",
+          "expected_stdout": "10.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Mixed CASE\n",
+          "expected_stdout": "10.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "abcdefghijklmno\n",
+          "expected_stdout": "11.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0179"
+    },
+    {
+      "stage": 2,
+      "template": "replace_lower",
+      "k": 4,
+      "prompt": "Read text. Replace every 'd' with '#', then lowercase the result.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "alpha\n",
+          "expected_stdout": "alpha"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "GoCo\n",
+          "expected_stdout": "goco"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "xyz\n",
+          "expected_stdout": "xyz"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Hello world\n",
+          "expected_stdout": "hello worl#"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "ddZ\n",
+          "expected_stdout": "##z"
+        }
+      ],
+      "example_id": "EXPL-A1-0285"
+    },
+    {
+      "stage": 2,
+      "template": "upper_reverse",
+      "k": 5,
+      "prompt": "Read text. Reverse it, convert it to uppercase, and append 'e'.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "alpha\n",
+          "expected_stdout": "AHPLAe"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "GoCo\n",
+          "expected_stdout": "OCOGe"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "xyz\n",
+          "expected_stdout": "ZYXe"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Hello world\n",
+          "expected_stdout": "DLROW OLLEHe"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "a\n",
+          "expected_stdout": "Ae"
+        }
+      ],
+      "example_id": "EXPL-A1-0118"
+    },
+    {
+      "stage": 2,
+      "template": "upper_reverse",
+      "k": 10,
+      "prompt": "Read text. Reverse it, convert it to uppercase, and append 'j'.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "alpha\n",
+          "expected_stdout": "AHPLAj"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "GoCo\n",
+          "expected_stdout": "OCOGj"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "xyz\n",
+          "expected_stdout": "ZYXj"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Hello world\n",
+          "expected_stdout": "DLROW OLLEHj"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "a\n",
+          "expected_stdout": "Aj"
+        }
+      ],
+      "example_id": "EXPL-A1-0033"
+    },
+    {
+      "stage": 2,
+      "template": "replace_lower",
+      "k": 7,
+      "prompt": "Read text. Replace every 'g' with '#', then lowercase the result.",
+      "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "alpha\n",
+          "expected_stdout": "alpha"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "GoCo\n",
+          "expected_stdout": "goco"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "xyz\n",
+          "expected_stdout": "xyz"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "Hello world\n",
+          "expected_stdout": "hello world"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "ggZ\n",
+          "expected_stdout": "##z"
+        }
+      ],
+      "example_id": "EXPL-A1-0335"
+    },
+    {
+      "stage": 3,
+      "template": "pairwise_products",
+      "k": 12,
+      "prompt": "Read four pipe-delimited numbers into an array; multiply first by last and second by third; print their sum plus 12.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]*values[3]+values[1]*values[2]+12).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0|1|2|3\n",
+          "expected_stdout": "14.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "4|0|-2|8\n",
+          "expected_stdout": "44.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "-5|3|3|-2\n",
+          "expected_stdout": "31.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "1|1|1|1\n",
+          "expected_stdout": "14.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "9|-2|5|0\n",
+          "expected_stdout": "2.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0401"
+    },
+    {
+      "stage": 3,
+      "template": "count_even_five",
+      "k": 13,
+      "prompt": "Read five numbers into an array, count even entries, then add 13.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=13.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "1|2|3|4|5\n",
+          "expected_stdout": "15.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "-2|0|5|1|-4\n",
+          "expected_stdout": "16.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "4|-1|2|-3|8\n",
+          "expected_stdout": "16.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "0|0|0|0|0\n",
+          "expected_stdout": "18.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "2|2|2|2|2\n",
+          "expected_stdout": "18.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0226"
+    },
+    {
+      "stage": 3,
+      "template": "range_three",
+      "k": 2,
+      "prompt": "Read three numbers into an array and print max-min plus 2.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER[] values=[a,b,c].\nNUMBER hi=values[0].\nNUMBER lo=values[0].\nLOOP (NUMBER i=1 TILL i<3, i++) { IF (values[i]>hi) { hi=values[i]. } IF (values[i]<lo) { lo=values[i]. } }\nDISPLAYNL(hi-lo+2).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "1|2|3\n",
+          "expected_stdout": "4.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "-2|0|5\n",
+          "expected_stdout": "9.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "4|-1|2\n",
+          "expected_stdout": "7.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "0|0|0\n",
+          "expected_stdout": "2.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "2|2|2\n",
+          "expected_stdout": "2.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0115"
+    },
+    {
+      "stage": 3,
+      "template": "count_even_five",
+      "k": 9,
+      "prompt": "Read five numbers into an array, count even entries, then add 9.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=9.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "1|2|3|4|5\n",
+          "expected_stdout": "11.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "-2|0|5|1|-4\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "4|-1|2|-3|8\n",
+          "expected_stdout": "12.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "0|0|0|0|0\n",
+          "expected_stdout": "14.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "2|2|2|2|2\n",
+          "expected_stdout": "14.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0205"
+    },
+    {
+      "stage": 3,
+      "template": "threshold_weighted",
+      "k": 10,
+      "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 10; add twice each kept value; print the result.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0|1|2|3\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "10|11|-2|13\n",
+          "expected_stdout": "48.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "15|12|11|9\n",
+          "expected_stdout": "76.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "-4|-3|-2|-1\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "10|0|10|0\n",
+          "expected_stdout": "0.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0329"
+    },
+    {
+      "stage": 3,
+      "template": "threshold_weighted",
+      "k": 6,
+      "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 6; add twice each kept value; print the result.",
+      "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+      "cases": [
+        {
+          "case_id": "case-1",
+          "stdin": "0|1|2|3\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-2",
+          "stdin": "6|7|-2|9\n",
+          "expected_stdout": "32.0"
+        },
+        {
+          "case_id": "case-3",
+          "stdin": "11|8|7|5\n",
+          "expected_stdout": "52.0"
+        },
+        {
+          "case_id": "case-4",
+          "stdin": "-4|-3|-2|-1\n",
+          "expected_stdout": "0.0"
+        },
+        {
+          "case_id": "case-5",
+          "stdin": "10|0|10|0\n",
+          "expected_stdout": "40.0"
+        }
+      ],
+      "example_id": "EXPL-A1-0230"
+    }
+  ],
+  "earlier_stages": {
+    "1": {
+      "prompts_drawn": 6,
+      "verified": 6,
+      "over_length_dropped": 0,
+      "retained": 6,
+      "pass_counts_per_sample": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "2": {
+      "prompts_drawn": 6,
+      "verified": 6,
+      "over_length_dropped": 0,
+      "retained": 6,
+      "pass_counts_per_sample": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "3": {
+      "prompts_drawn": 6,
+      "verified": 6,
+      "over_length_dropped": 0,
+      "retained": 6,
+      "pass_counts_per_sample": [
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "records": [
+    {
+      "example_id": "EXPL-A1-0015",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 13.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 15 == 0) { total += i * i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 13.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 15 == 0) { total += i * i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 13.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 15 == 0) { total += i * i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 13.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 15 == 0) { total += i * i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0083",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 12.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 12.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 12.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { total += i * i * i. }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 12.\nLOOP (NUMBER i=1 TILL i<=n, i++) { total += i*i*i. }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0466",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER x=5.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+7. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x=5.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+7. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x = 5.\nLOOP (NUMBER i = 0 TILL i < n, i++) { x = x * 2 + 7. }\nDISPLAYNL(x).",
+        "NUMBER n.\nINPUT(n).\nNUMBER x = 5.\nLOOP (NUMBER i = 0 TILL i < n, i++) { x = x * 2 + 7. }\nDISPLAYNL(x)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0359",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 1.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0403",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 11.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 11.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total=11.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+        "NUMBER n.\nINPUT(n).\nNUMBER total = 11.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0272",
+      "stage": 1,
+      "samples": [
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product = 1.\nLOOP (NUMBER i = 0 TILL i < n, i++) { product *= i + 10. }\nDISPLAYNL(product - n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n).",
+        "NUMBER n.\nINPUT(n).\nNUMBER product=1.\nLOOP (NUMBER i=0 TILL i<n, i++) { product*=i+10. }\nDISPLAYNL(product-n)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0327",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low = strings.LOWER(text).\nIF (strings.LENGTH(low)>=17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low = strings.LOWER(text).\nIF (strings.LENGTH(low)>=17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low = strings.LOWER(text).\nIF (strings.LENGTH(low) >= 17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=17) { DISPLAYNL(\"LONG13\"). } ELSE { DISPLAYNL(low). }"
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0179",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.COUNT(text,\"j\")+10)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0285",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"d\",\"#\")))."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0118",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"e\"))."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0033",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\")).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.UPPER(strings.REVERSE(text)),\"j\"))."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0335",
+      "stage": 2,
+      "samples": [
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\"))).",
+        "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.LOWER(strings.REPLACE(text,\"g\",\"#\")))."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0401",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]*values[3]+values[1]*values[2]+12).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values = [a,b,c,d].\nDISPLAYNL(values[0]*values[3] + values[1]*values[2] + 12).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]*values[3]+values[1]*values[2]+12).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]*values[3]+values[1]*values[2]+12)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0226",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=13.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=13.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=13.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=13.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0115",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER[] values=[a,b,c].\nNUMBER hi=values[0].\nNUMBER lo=values[0].\nLOOP (NUMBER i=1 TILL i<3, i++) { IF (values[i]>hi) { hi=values[i]. } IF (values[i]<lo) { lo=values[i]. } }\nDISPLAYNL(hi-lo+2).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+2).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+2).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nIMPORT math.\nNUMBER[] values=[a,b,c].\nNUMBER hi=math.MAX(values[0],math.MAX(values[1],values[2])).\nNUMBER lo=math.MIN(values[0],math.MIN(values[1],values[2])).\nDISPLAYNL(hi-lo+2)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0205",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=9.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=9.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=9.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER e = strings.TO_NUMBER(parts[4]).\nNUMBER[] values=[a,b,c,d,e].\nNUMBER count=9.\nLOOP (NUMBER i=0 TILL i<5, i++) { IF (values[i] % 2 == 0) { count += 1. } }\nDISPLAYNL(count)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0329",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>10) { total+=2*values[i]. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    },
+    {
+      "example_id": "EXPL-A1-0230",
+      "stage": 3,
+      "samples": [
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { total+=2*values[i]. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { total += 2 * values[i]. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nNUMBER current=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { current=values[i]. IF (current>6) { total+=2*current. } }\nDISPLAYNL(total).",
+        "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>6) { total+=2*values[i]. } }\nDISPLAYNL(total)."
+      ],
+      "scores": [
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        },
+        {
+          "compiled": true,
+          "cases_passed": 5,
+          "cases_total": 5,
+          "all_pass": true,
+          "phase": "success"
+        }
+      ],
+      "first_passing_sample": 0,
+      "over_length_dropped": false
+    }
+  ]
+}

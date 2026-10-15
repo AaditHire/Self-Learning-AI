@@ -1,0 +1,306 @@
+{
+  "label": "EXPLORATORY",
+  "preflight": {
+    "ac_power": true,
+    "this_run_chain": [
+      {
+        "ProcessId": 1772,
+        "ParentProcessId": 4340,
+        "Name": "python.exe"
+      },
+      {
+        "ProcessId": 4340,
+        "ParentProcessId": 29788,
+        "Name": "python.exe"
+      }
+    ],
+    "other_python_processes": [],
+    "gpu_compute_processes": "2216, [Insufficient Permissions]\n10804, C:\\Windows\\explorer.exe\n9656, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13968, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n13940, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n14748, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n12584, C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA Overlay.exe\n17764, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.45\\msedgewebview2.exe\n20652, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n21520, C:\\Program Files\\Riot Vanguard\\vgtray.exe\n22584, C:\\Program Files\\AMD\\CNext\\CNext\\AMDRSSrcExt.exe\n22592, C:\\Program Files\\AMD\\CNext\\CNext\\RadeonSoftware.exe\n4180, C:\\Windows\\System32\\ApplicationFrameHost.exe\n17028, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24964, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n23848, C:\\Program Files\\WindowsApps\\Claude_2.37337.1.0_x64__pzs8sxrjxfjjc\\app\\claude.exe\n27688, C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe\n5124, C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe\n22632, C:\\Windows\\System32\\ShellHost.exe",
+    "gpu_samples": [
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 5.0,
+        "raw": "995, 6144, 5"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      },
+      {
+        "memory_used_mib": 995.0,
+        "memory_total_mib": 6144.0,
+        "utilization_gpu_percent": 0.0,
+        "raw": "995, 6144, 0"
+      }
+    ],
+    "max_memory_used_mib": 995.0,
+    "mean_utilization_gpu_percent": 1.0,
+    "memory_threshold_mib": 1600,
+    "utilization_record_only": true
+  },
+  "adapter": "C:/Users/Admin/OneDrive/Documents/GitHub/Self Learning AI/.runtime/explore/a2/opr/20291016/stage4/adapter_final",
+  "adapter_hashes": {
+    "adapter_config.json": "7b5a66ec8d8d01f80a86cbc8cde4d97538800f20ed0ed9f84f89355c28ae3a0f",
+    "adapter_model.safetensors": "22725b828e7ccba4329f2c5f90007698b03258612bd3566438a3d7a696888bb0",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "chat_template.jinja": "8aa40ce145adb73cb3a75194dc0224702a95850ec5275cabb728496bbd749fc6",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "README.md": "d57074ffa614ffdc5a177baac04ae02dc41881a87c3a83e811f30c5d00af1d00",
+    "special_tokens_map.json": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "a45f7187fa83d693ecb5c7ab7dc574649d9fb7f1404708b51dbb4afbfc822a22",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "adapter_unchanged": true,
+  "rows": "C:/Users/Admin/OneDrive/Documents/GitHub/Self Learning AI/research/explore/a1/stream_dev.json",
+  "stages": {
+    "1": {
+      "tasks": 24,
+      "pass_rate": 0.875,
+      "mean_partial_reward": 0.875,
+      "compile_failure_rate": 0.0,
+      "per_template": {
+        "square_stride": {
+          "passed": 3,
+          "total": 3
+        },
+        "affine_recurrence": {
+          "passed": 3,
+          "total": 3
+        },
+        "odd_cube_sum": {
+          "passed": 0,
+          "total": 3
+        },
+        "descending_product": {
+          "passed": 3,
+          "total": 3
+        },
+        "linear_term_sum": {
+          "passed": 3,
+          "total": 3
+        },
+        "nonmultiple_count": {
+          "passed": 3,
+          "total": 3
+        },
+        "even_minus_odd": {
+          "passed": 3,
+          "total": 3
+        },
+        "cubic_offset_sum": {
+          "passed": 3,
+          "total": 3
+        }
+      }
+    },
+    "2": {
+      "tasks": 24,
+      "pass_rate": 1.0,
+      "mean_partial_reward": 1.0,
+      "compile_failure_rate": 0.0,
+      "per_template": {
+        "upper_reverse": {
+          "passed": 3,
+          "total": 3
+        },
+        "replace_lower": {
+          "passed": 3,
+          "total": 3
+        },
+        "trim_lower_suffix": {
+          "passed": 3,
+          "total": 3
+        },
+        "reverse_replace": {
+          "passed": 3,
+          "total": 3
+        },
+        "replace_vowel": {
+          "passed": 3,
+          "total": 3
+        },
+        "count_letter": {
+          "passed": 3,
+          "total": 3
+        },
+        "string_length_class": {
+          "passed": 3,
+          "total": 3
+        },
+        "contains_label": {
+          "passed": 3,
+          "total": 3
+        }
+      }
+    },
+    "3": {
+      "tasks": 24,
+      "pass_rate": 0.875,
+      "mean_partial_reward": 0.875,
+      "compile_failure_rate": 0.125,
+      "per_template": {
+        "threshold_weighted": {
+          "passed": 3,
+          "total": 3
+        },
+        "indexed_difference": {
+          "passed": 3,
+          "total": 3
+        },
+        "negative_square": {
+          "passed": 3,
+          "total": 3
+        },
+        "pairwise_products": {
+          "passed": 3,
+          "total": 3
+        },
+        "weighted_four": {
+          "passed": 3,
+          "total": 3
+        },
+        "count_even_five": {
+          "passed": 3,
+          "total": 3
+        },
+        "absolute_sum_three": {
+          "passed": 0,
+          "total": 3
+        },
+        "range_three": {
+          "passed": 3,
+          "total": 3
+        }
+      }
+    },
+    "4": {
+      "tasks": 24,
+      "pass_rate": 0.875,
+      "mean_partial_reward": 0.875,
+      "compile_failure_rate": 0.0,
+      "per_template": {
+        "swap_tag": {
+          "passed": 3,
+          "total": 3
+        },
+        "count_fields": {
+          "passed": 3,
+          "total": 3
+        },
+        "case_join": {
+          "passed": 3,
+          "total": 3
+        },
+        "contains_branch": {
+          "passed": 3,
+          "total": 3
+        },
+        "tagged_pair": {
+          "passed": 0,
+          "total": 3
+        },
+        "two_labeled_lines": {
+          "passed": 3,
+          "total": 3
+        },
+        "case_pair": {
+          "passed": 3,
+          "total": 3
+        },
+        "length_product": {
+          "passed": 3,
+          "total": 3
+        }
+      }
+    }
+  },
+  "greedy_settings": {
+    "max_length": 20,
+    "max_new_tokens": 512,
+    "min_length": 0,
+    "min_new_tokens": null,
+    "early_stopping": false,
+    "max_time": null,
+    "stop_strings": null,
+    "do_sample": false,
+    "num_beams": 1,
+    "use_cache": true,
+    "cache_implementation": null,
+    "cache_config": null,
+    "return_legacy_cache": null,
+    "prefill_chunk_size": null,
+    "temperature": 0.7,
+    "top_k": 20,
+    "top_p": 0.8,
+    "min_p": null,
+    "typical_p": 1.0,
+    "epsilon_cutoff": 0.0,
+    "eta_cutoff": 0.0,
+    "repetition_penalty": 1.05,
+    "encoder_repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "renormalize_logits": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "sequence_bias": null,
+    "token_healing": false,
+    "guidance_scale": null,
+    "watermarking_config": null,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "output_logits": null,
+    "return_dict_in_generate": false,
+    "pad_token_id": 151645,
+    "bos_token_id": 151643,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "encoder_no_repeat_ngram_size": 0,
+    "decoder_start_token_id": null,
+    "is_assistant": false,
+    "num_assistant_tokens": 20,
+    "num_assistant_tokens_schedule": "constant",
+    "assistant_confidence_threshold": 0.4,
+    "prompt_lookup_num_tokens": null,
+    "max_matching_ngram_size": null,
+    "assistant_early_exit": null,
+    "assistant_lookbehind": 10,
+    "target_lookbehind": 10,
+    "disable_compile": false,
+    "low_memory": null,
+    "penalty_alpha": null,
+    "dola_layers": null,
+    "diversity_penalty": 0.0,
+    "num_beam_groups": 1,
+    "constraints": null,
+    "force_words_ids": null,
+    "_from_model_config": false,
+    "transformers_version": "4.57.1"
+  },
+  "seconds": 926.4987586999996
+}

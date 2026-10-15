@@ -1,0 +1,3152 @@
+[
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 11,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'k'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"k\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ak"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redk"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/hellok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xk"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catk"
+      }
+    ],
+    "example_id": "EXPL-A1-0262"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 6,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'f'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"f\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Af"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redf"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/hellof"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xf"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catf"
+      }
+    ],
+    "example_id": "EXPL-A1-0082"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 15,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'o'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"o\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ao"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redo"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloo"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xo"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/cato"
+      }
+    ],
+    "example_id": "EXPL-A1-0239"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 9,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'i'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"i\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ai"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redi"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloi"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xi"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/cati"
+      }
+    ],
+    "example_id": "EXPL-A1-0191"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 5,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'e'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"e\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ae"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/rede"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloe"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xe"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/cate"
+      }
+    ],
+    "example_id": "EXPL-A1-0218"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 14,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'n'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"n\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/An"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redn"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/hellon"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xn"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catn"
+      }
+    ],
+    "example_id": "EXPL-A1-0278"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 7,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'g'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"g\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ag"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redg"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/hellog"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xg"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catg"
+      }
+    ],
+    "example_id": "EXPL-A1-0111"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 1,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'a'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"a\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Aa"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/reda"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/helloa"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xa"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/cata"
+      }
+    ],
+    "example_id": "EXPL-A1-0040"
+  },
+  {
+    "stage": 4,
+    "template": "swap_tag",
+    "k": 4,
+    "prompt": "Read left|right as text fields. Print right, then '/', then left, then 'd'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(right,\"/\"),left),\"d\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "B/Ad"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "BLUE/redd"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "world/hellod"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "y/xd"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|dog\n",
+        "expected_stdout": "dog/catd"
+      }
+    ],
+    "example_id": "EXPL-A1-0150"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 7,
+    "prompt": "Read left|right as text fields. Count 'g' in each field and print the total plus 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"g\")+strings.COUNT(right,\"g\")+7).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "gg|x\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|g\n",
+        "expected_stdout": "8.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0044"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 13,
+    "prompt": "Read left|right as text fields. Count 'm' in each field and print the total plus 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"m\")+strings.COUNT(right,\"m\")+13).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "mm|x\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|m\n",
+        "expected_stdout": "14.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0382"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 2,
+    "prompt": "Read left|right as text fields. Count 'b' in each field and print the total plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"b\")+strings.COUNT(right,\"b\")+2).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "bb|x\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|b\n",
+        "expected_stdout": "3.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0006"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 1,
+    "prompt": "Read left|right as text fields. Count 'a' in each field and print the total plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"a\")+strings.COUNT(right,\"a\")+1).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "aa|x\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|a\n",
+        "expected_stdout": "3.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0400"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 5,
+    "prompt": "Read left|right as text fields. Count 'e' in each field and print the total plus 5.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"e\")+strings.COUNT(right,\"e\")+5).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "ee|x\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|e\n",
+        "expected_stdout": "6.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0019"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 10,
+    "prompt": "Read left|right as text fields. Count 'j' in each field and print the total plus 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"j\")+strings.COUNT(right,\"j\")+10).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "jj|x\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|j\n",
+        "expected_stdout": "11.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0109"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 8,
+    "prompt": "Read left|right as text fields. Count 'h' in each field and print the total plus 8.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"h\")+strings.COUNT(right,\"h\")+8).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "hh|x\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|h\n",
+        "expected_stdout": "9.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0061"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 9,
+    "prompt": "Read left|right as text fields. Count 'i' in each field and print the total plus 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"i\")+strings.COUNT(right,\"i\")+9).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "ii|x\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|i\n",
+        "expected_stdout": "10.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0119"
+  },
+  {
+    "stage": 4,
+    "template": "count_fields",
+    "k": 4,
+    "prompt": "Read left|right as text fields. Count 'd' in each field and print the total plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.COUNT(left,\"d\")+strings.COUNT(right,\"d\")+4).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|world\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "dd|x\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "cat|d\n",
+        "expected_stdout": "5.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0413"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 10,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'j'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"j\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bj"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluej"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldj"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yj"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogj"
+      }
+    ],
+    "example_id": "EXPL-A1-0270"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 2,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'b'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"b\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bb"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:blueb"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldb"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yb"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogb"
+      }
+    ],
+    "example_id": "EXPL-A1-0169"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 12,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'l'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"l\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bl"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluel"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldl"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yl"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogl"
+      }
+    ],
+    "example_id": "EXPL-A1-0423"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 3,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'c'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"c\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bc"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluec"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldc"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yc"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogc"
+      }
+    ],
+    "example_id": "EXPL-A1-0296"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 1,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'a'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"a\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:ba"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluea"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worlda"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:ya"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:doga"
+      }
+    ],
+    "example_id": "EXPL-A1-0365"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 14,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'n'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"n\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bn"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluen"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldn"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yn"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogn"
+      }
+    ],
+    "example_id": "EXPL-A1-0326"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 11,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'k'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"k\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bk"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluek"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldk"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yk"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogk"
+      }
+    ],
+    "example_id": "EXPL-A1-0260"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 7,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'g'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"g\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bg"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:blueg"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldg"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:yg"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogg"
+      }
+    ],
+    "example_id": "EXPL-A1-0331"
+  },
+  {
+    "stage": 4,
+    "template": "case_join",
+    "k": 13,
+    "prompt": "Read left|right as text fields. Print uppercase left, a colon, then lowercase right, followed by 'm'.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(left),\":\"),strings.LOWER(right)),\"m\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A:bm"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "red|BLUE\n",
+        "expected_stdout": "RED:bluem"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "HELLO:worldm"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X:ym"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT:dogm"
+      }
+    ],
+    "example_id": "EXPL-A1-0199"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 10,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'j' and right contains 'j'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"j\") AND strings.CONTAINS(right,\"j\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "j|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "j|j\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|j\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ja|jb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0361"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 9,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'i' and right contains 'i'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"i\") AND strings.CONTAINS(right,\"i\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "i|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "i|i\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|i\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ia|ib\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0461"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 1,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'a' and right contains 'a'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"a\") AND strings.CONTAINS(right,\"a\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "a|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "a|a\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|a\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "aa|ab\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0184"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 8,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'h' and right contains 'h'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"h\") AND strings.CONTAINS(right,\"h\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "h|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "h|h\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|h\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ha|hb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0339"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 6,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'f' and right contains 'f'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"f\") AND strings.CONTAINS(right,\"f\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "f|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "f|f\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|f\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "fa|fb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0081"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 3,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'c' and right contains 'c'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"c\") AND strings.CONTAINS(right,\"c\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "c|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "c|c\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|c\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ca|cb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0252"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 15,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'o' and right contains 'o'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"o\") AND strings.CONTAINS(right,\"o\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "o|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "o|o\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|o\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "oa|ob\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0251"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 11,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'k' and right contains 'k'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"k\") AND strings.CONTAINS(right,\"k\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "k|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "k|k\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|k\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ka|kb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0407"
+  },
+  {
+    "stage": 4,
+    "template": "contains_branch",
+    "k": 2,
+    "prompt": "Read left|right as text fields. Print YES if left contains 'b' and right contains 'b'; otherwise print NO.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE left = parts[0].\nSENTENCE right = parts[1].\nIF (strings.CONTAINS(left,\"b\") AND strings.CONTAINS(right,\"b\")) { DISPLAYNL(\"YES\"). } ELSE { DISPLAYNL(\"NO\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "b|x\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "b|b\n",
+        "expected_stdout": "YES"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello|WORLD\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|b\n",
+        "expected_stdout": "NO"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "ba|bb\n",
+        "expected_stdout": "YES"
+      }
+    ],
+    "example_id": "EXPL-A1-0098"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 9,
+    "prompt": "Read first|second and print <9:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<9:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<9:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<9:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<9:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<9:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<9:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0051"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 2,
+    "prompt": "Read first|second and print <2:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<2:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<2:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<2:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<2:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<2:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<2:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0137"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 6,
+    "prompt": "Read first|second and print <6:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<6:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<6:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<6:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<6:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<6:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<6:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0247"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 8,
+    "prompt": "Read first|second and print <8:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<8:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<8:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<8:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<8:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<8:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<8:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0166"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 11,
+    "prompt": "Read first|second and print <11:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<11:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<11:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<11:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<11:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<11:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<11:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0330"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 13,
+    "prompt": "Read first|second and print <13:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<13:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<13:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<13:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<13:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<13:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<13:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0275"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 7,
+    "prompt": "Read first|second and print <7:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<7:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<7:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<7:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<7:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<7:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<7:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0165"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 12,
+    "prompt": "Read first|second and print <12:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<12:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<12:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<12:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<12:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<12:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<12:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0198"
+  },
+  {
+    "stage": 4,
+    "template": "tagged_pair",
+    "k": 5,
+    "prompt": "Read first|second and print <5:first>[second].",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.CONCAT(\"<5:\", first), \">[\"), second), \"]\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "<5:A>[B]"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "<5:Red>[BLUE]"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "<5:hello world>[ok]"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "<5:x>[y]"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "<5:Cat>[Dog]"
+      }
+    ],
+    "example_id": "EXPL-A1-0102"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 3,
+    "prompt": "Read first|second and print X3=first then Y3=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X3=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y3=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X3=A\nY3=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X3=Red\nY3=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X3=hello world\nY3=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X3=x\nY3=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X3=Cat\nY3=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0020"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 13,
+    "prompt": "Read first|second and print X13=first then Y13=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X13=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y13=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X13=A\nY13=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X13=Red\nY13=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X13=hello world\nY13=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X13=x\nY13=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X13=Cat\nY13=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0017"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 7,
+    "prompt": "Read first|second and print X7=first then Y7=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X7=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y7=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X7=A\nY7=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X7=Red\nY7=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X7=hello world\nY7=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X7=x\nY7=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X7=Cat\nY7=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0164"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 9,
+    "prompt": "Read first|second and print X9=first then Y9=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X9=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y9=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X9=A\nY9=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X9=Red\nY9=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X9=hello world\nY9=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X9=x\nY9=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X9=Cat\nY9=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0220"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 10,
+    "prompt": "Read first|second and print X10=first then Y10=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X10=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y10=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X10=A\nY10=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X10=Red\nY10=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X10=hello world\nY10=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X10=x\nY10=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X10=Cat\nY10=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0153"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 6,
+    "prompt": "Read first|second and print X6=first then Y6=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X6=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y6=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X6=A\nY6=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X6=Red\nY6=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X6=hello world\nY6=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X6=x\nY6=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X6=Cat\nY6=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0067"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 4,
+    "prompt": "Read first|second and print X4=first then Y4=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X4=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y4=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X4=A\nY4=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X4=Red\nY4=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X4=hello world\nY4=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X4=x\nY4=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X4=Cat\nY4=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0405"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 1,
+    "prompt": "Read first|second and print X1=first then Y1=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X1=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y1=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X1=A\nY1=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X1=Red\nY1=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X1=hello world\nY1=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X1=x\nY1=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X1=Cat\nY1=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0142"
+  },
+  {
+    "stage": 4,
+    "template": "two_labeled_lines",
+    "k": 15,
+    "prompt": "Read first|second and print X15=first then Y15=second on separate lines.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(\"X15=\",first)).\nDISPLAYNL(strings.CONCAT(\"Y15=\",second)).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "X15=A\nY15=B"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "X15=Red\nY15=BLUE"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "X15=hello world\nY15=ok"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X15=x\nY15=y"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "X15=Cat\nY15=Dog"
+      }
+    ],
+    "example_id": "EXPL-A1-0323"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 6,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 6.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/6\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/6"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/6"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/6"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/6"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/6"
+      }
+    ],
+    "example_id": "EXPL-A1-0315"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 14,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/14\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/14"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/14"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/14"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/14"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/14"
+      }
+    ],
+    "example_id": "EXPL-A1-0145"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 9,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 9.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/9\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/9"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/9"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/9"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/9"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/9"
+      }
+    ],
+    "example_id": "EXPL-A1-0316"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 10,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/10\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/10"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/10"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/10"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/10"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/10"
+      }
+    ],
+    "example_id": "EXPL-A1-0124"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 11,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/11\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/11"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/11"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/11"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/11"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/11"
+      }
+    ],
+    "example_id": "EXPL-A1-0374"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 13,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/13\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/13"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/13"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/13"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/13"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/13"
+      }
+    ],
+    "example_id": "EXPL-A1-0261"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 1,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/1\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/1"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/1"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/1"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/1"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/1"
+      }
+    ],
+    "example_id": "EXPL-A1-0478"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 12,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 12.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/12\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/12"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/12"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/12"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/12"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/12"
+      }
+    ],
+    "example_id": "EXPL-A1-0132"
+  },
+  {
+    "stage": 4,
+    "template": "case_pair",
+    "k": 2,
+    "prompt": "Read first|second and print uppercase first, a slash, then lowercase second and marker 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.CONCAT(strings.CONCAT(strings.CONCAT(strings.UPPER(first), \"/\"), strings.LOWER(second)), \"/2\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "A/b/2"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "RED/blue/2"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "HELLO WORLD/ok/2"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "X/y/2"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "CAT/dog/2"
+      }
+    ],
+    "example_id": "EXPL-A1-0313"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 1,
+    "prompt": "Read first|second and print the product of their lengths plus 1.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+1).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "23.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "2.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "10.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0325"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 7,
+    "prompt": "Read first|second and print the product of their lengths plus 7.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+7).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "19.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "29.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "8.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "16.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0372"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 13,
+    "prompt": "Read first|second and print the product of their lengths plus 13.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+13).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "25.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "35.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "22.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0229"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 11,
+    "prompt": "Read first|second and print the product of their lengths plus 11.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+11).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "23.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "33.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "20.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0200"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 3,
+    "prompt": "Read first|second and print the product of their lengths plus 3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+3).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "25.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "12.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0345"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 10,
+    "prompt": "Read first|second and print the product of their lengths plus 10.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+10).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "22.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "32.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "19.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0034"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 14,
+    "prompt": "Read first|second and print the product of their lengths plus 14.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+14).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "26.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "36.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "23.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0427"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 2,
+    "prompt": "Read first|second and print the product of their lengths plus 2.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+2).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "24.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "11.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0311"
+  },
+  {
+    "stage": 4,
+    "template": "length_product",
+    "k": 4,
+    "prompt": "Read first|second and print the product of their lengths plus 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nSENTENCE first = parts[0].\nSENTENCE second = parts[1].\nDISPLAYNL(strings.LENGTH(first)*strings.LENGTH(second)+4).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "A|B\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "Red|BLUE\n",
+        "expected_stdout": "16.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "hello world|ok\n",
+        "expected_stdout": "26.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "x|y\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "Cat|Dog\n",
+        "expected_stdout": "13.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0097"
+  },
+  {
+    "stage": 1,
+    "template": "affine_recurrence",
+    "k": 1,
+    "prompt": "Read nonnegative n. Start x at 1; repeat n times: double x and add 3. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x = 1.\nLOOP (NUMBER i = 0 TILL i < n, i++) { x = x * 2 + 3. }\nDISPLAYNL(x).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "1.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "13.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "29.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "4\n",
+        "expected_stdout": "61.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0432"
+  },
+  {
+    "stage": 1,
+    "template": "square_stride",
+    "k": 12,
+    "prompt": "Read nonnegative n; for i from 1 through n, add i*i only when i is divisible by 14; print the total plus 12.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=12.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%14==0) { total+=i*i. } }\nDISPLAYNL(total).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "12.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "14\n",
+        "expected_stdout": "208.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "16\n",
+        "expected_stdout": "208.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "29\n",
+        "expected_stdout": "992.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "42\n",
+        "expected_stdout": "2756.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0301"
+  },
+  {
+    "stage": 1,
+    "template": "affine_recurrence",
+    "k": 4,
+    "prompt": "Read nonnegative n. Start x at 4; repeat n times: double x and add 6. Print x.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER x=4.\nLOOP (NUMBER i=0 TILL i<n, i++) { x=x*2+6. }\nDISPLAYNL(x).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "14.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "34.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "3\n",
+        "expected_stdout": "74.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "4\n",
+        "expected_stdout": "154.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0180"
+  },
+  {
+    "stage": 1,
+    "template": "even_minus_odd",
+    "k": 10,
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 10.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total = 10.\nLOOP (NUMBER i = 1 TILL i <= n, i++) { IF (i % 2 == 0) { total += i. } ELSE { total -= i. } }\nDISPLAYNL(total).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "10.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "11.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "8.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0172"
+  },
+  {
+    "stage": 1,
+    "template": "odd_cube_sum",
+    "k": 14,
+    "prompt": "Read nonnegative n; sum the cubes of odd i from 1 through n, then subtract 14.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=0.\nNUMBER cube=0.\nLOOP (NUMBER i=1 TILL i<=n, i++) { cube=i*i*i. IF (i%2!=0) { total+=cube. } }\nDISPLAYNL(total-14).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "-14.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "1\n",
+        "expected_stdout": "-13.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "2\n",
+        "expected_stdout": "-13.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5\n",
+        "expected_stdout": "139.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "8\n",
+        "expected_stdout": "482.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0176"
+  },
+  {
+    "stage": 1,
+    "template": "even_minus_odd",
+    "k": 6,
+    "prompt": "Read nonnegative n; add evens and subtract odds from 1 through n, then add 6.",
+    "target": "NUMBER n.\nINPUT(n).\nNUMBER total=6.\nLOOP (NUMBER i=1 TILL i<=n, i++) { IF (i%2==0) { total+=i. } ELSE { total-=i. } }\nDISPLAYNL(total).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0\n",
+        "expected_stdout": "6.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "2\n",
+        "expected_stdout": "7.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "5\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1\n",
+        "expected_stdout": "5.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "3\n",
+        "expected_stdout": "4.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0472"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 14,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'n'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text, \" \")), \"n\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphan"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocon"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzn"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldn"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "an"
+      }
+    ],
+    "example_id": "EXPL-A1-0406"
+  },
+  {
+    "stage": 2,
+    "template": "contains_label",
+    "k": 12,
+    "prompt": "Read text and print HAS12 if it contains 'll', otherwise NO12.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nIF (strings.CONTAINS(text,\"ll\")) { DISPLAYNL(\"HAS12\"). } ELSE { DISPLAYNL(\"NO12\"). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "NO12"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "NO12"
+      }
+    ],
+    "example_id": "EXPL-A1-0391"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 12,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'l'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"l\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphal"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocol"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzl"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldl"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "al"
+      }
+    ],
+    "example_id": "EXPL-A1-0237"
+  },
+  {
+    "stage": 2,
+    "template": "string_length_class",
+    "k": 15,
+    "prompt": "Read text; lowercase it and print LONG15 if length is at least 19, else the lowercase text.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nSENTENCE low=strings.LOWER(text).\nIF (strings.LENGTH(low)>=19) { DISPLAYNL(\"LONG15\"). } ELSE { DISPLAYNL(low). }",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "GoCo\n",
+        "expected_stdout": "goco"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "alpha beta\n",
+        "expected_stdout": "alpha beta"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "XyZ\n",
+        "expected_stdout": "xyz"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "mixed case"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijklmno"
+      }
+    ],
+    "example_id": "EXPL-A1-0072"
+  },
+  {
+    "stage": 2,
+    "template": "trim_lower_suffix",
+    "k": 6,
+    "prompt": "Read text. Trim spaces from both ends, lowercase it, and append 'f'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.CONCAT(strings.LOWER(strings.TRIM(text,\" \")),\"f\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": " Alpha \n",
+        "expected_stdout": "alphaf"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "GoCo\n",
+        "expected_stdout": "gocof"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "  xyz\n",
+        "expected_stdout": "xyzf"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Hello world  \n",
+        "expected_stdout": "hello worldf"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": " a \n",
+        "expected_stdout": "af"
+      }
+    ],
+    "example_id": "EXPL-A1-0089"
+  },
+  {
+    "stage": 2,
+    "template": "replace_vowel",
+    "k": 13,
+    "prompt": "Read text and replace every 'm' with '#'.",
+    "target": "IMPORT strings.\nSENTENCE text.\nINPUT(text).\nDISPLAYNL(strings.REPLACE(text,\"m\",\"#\")).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "seaside\n",
+        "expected_stdout": "seaside"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "bananas\n",
+        "expected_stdout": "bananas"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "uvwxyzABC\n",
+        "expected_stdout": "uvwxyzABC"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "Mixed CASE\n",
+        "expected_stdout": "Mixed CASE"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "abcdefghijklmno\n",
+        "expected_stdout": "abcdefghijkl#no"
+      }
+    ],
+    "example_id": "EXPL-A1-0238"
+  },
+  {
+    "stage": 3,
+    "template": "negative_square",
+    "k": 4,
+    "prompt": "Read four pipe-delimited numbers into an array; sum squares of negative entries, then add 4.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=4.\nNUMBER current=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { current=values[i]. IF (current<0) { total+=current*current. } }\nDISPLAYNL(total).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-1|0|-2|4\n",
+        "expected_stdout": "9.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-3|-2|-1|-4\n",
+        "expected_stdout": "34.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "5|5|5|5\n",
+        "expected_stdout": "4.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "0|-5|0|2\n",
+        "expected_stdout": "29.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0045"
+  },
+  {
+    "stage": 3,
+    "template": "indexed_difference",
+    "k": 12,
+    "prompt": "Read four pipe-delimited numbers into an array. Print the last minus the first, plus 12 times the third minus the second.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[3]-values[0]+12*(values[2]-values[1])).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "15.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|0|-2|8\n",
+        "expected_stdout": "-20.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "-5|3|3|-2\n",
+        "expected_stdout": "3.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "1|1|1|1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "9|-2|5|0\n",
+        "expected_stdout": "75.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0425"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 8,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+8*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0] + 2 * values[1] + 3 * values[2] + 8 * values[3]).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "46.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "21.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "-16.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "28.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0318"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 13,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+13*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]+2*values[1]+3*values[2]+13*values[3]).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "66.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "26.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "-31.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "38.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0210"
+  },
+  {
+    "stage": 3,
+    "template": "weighted_four",
+    "k": 14,
+    "prompt": "Read four pipe-delimited numbers into an array and print v0+2*v1+3*v2+14*v3.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nDISPLAYNL(values[0]+2*values[1]+3*values[2]+14*values[3]).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "1|2|3|4\n",
+        "expected_stdout": "70.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "-2|0|5|1\n",
+        "expected_stdout": "27.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "4|-1|2|-3\n",
+        "expected_stdout": "-34.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "0|0|0|0\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "2|2|2|2\n",
+        "expected_stdout": "40.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0108"
+  },
+  {
+    "stage": 3,
+    "template": "threshold_weighted",
+    "k": 4,
+    "prompt": "Read four pipe-delimited numbers. Keep values strictly greater than 4; add twice each kept value; print the result.",
+    "target": "IMPORT strings.\nSENTENCE line.\nINPUT(line).\nSENTENCE[] parts = strings.SPLIT(line, \"|\").\nNUMBER a = strings.TO_NUMBER(parts[0]).\nNUMBER b = strings.TO_NUMBER(parts[1]).\nNUMBER c = strings.TO_NUMBER(parts[2]).\nNUMBER d = strings.TO_NUMBER(parts[3]).\nNUMBER[] values=[a,b,c,d].\nNUMBER total=0.\nLOOP (NUMBER i=0 TILL i<4, i++) { IF (values[i]>4) { total += 2*values[i]. } }\nDISPLAYNL(total).",
+    "cases": [
+      {
+        "case_id": "case-1",
+        "stdin": "0|1|2|3\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-2",
+        "stdin": "4|5|-2|7\n",
+        "expected_stdout": "24.0"
+      },
+      {
+        "case_id": "case-3",
+        "stdin": "9|6|5|3\n",
+        "expected_stdout": "40.0"
+      },
+      {
+        "case_id": "case-4",
+        "stdin": "-4|-3|-2|-1\n",
+        "expected_stdout": "0.0"
+      },
+      {
+        "case_id": "case-5",
+        "stdin": "10|0|10|0\n",
+        "expected_stdout": "40.0"
+      }
+    ],
+    "example_id": "EXPL-A1-0412"
+  }
+]
